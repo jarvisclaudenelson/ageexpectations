@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '9–12 Month Old Development: What to Expect';
+const description = 'What to expect from your 9 to 12 month old: early walking, first words, and growing cognitive skills — with AAP-backed guidance.';
+
+const faqs = [
+  {
+    question: 'When will my baby start talking?',
+    answer: 'Most babies say their first intentional words, like "Mama," "Dada," or "No," around their first birthday. Every baby is different — some may start earlier at 10 months, while others wait until 14 months. The key is to look for consistent use of sounds or words to label objects or people.'
+  },
+  {
+    question: 'How much sleep does my 11-month-old need?',
+    answer: 'At 9–12 months, most babies need about 11–14 hours of sleep total, including one or two naps during the day. By 12 months, many are transitioning to one long afternoon nap, but some still benefit from a short morning nap as well.'
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/9-12-months/',
+});
+
+const faqData = faqSchema(faqs);
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '9–12 Months' }]}>
+  <h1>9–12 Month Old Development: What to Expect</h1>
+  <p>The transition into the first year is full of milestones as your baby prepares to become a toddler. You'll see growth in language, mobility, and social skills.</p>
+  <h2>Key Milestones</h2>
+  <ul>
+    <li>Cruising (walking while holding onto furniture)</li>
+    <li>Standing alone momentarily</li>
+    <li>First intentional words (Mama, Dada)</li>
+    <li>Waving "bye-bye" and playing patty-cake</li>
+  </ul>
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a class="topic-card" href={`/ages/9-12-months/${topic.slug}/`}>
+        {topic.label}
+      </a>
+    ))}
+  </div>
+</BaseLayout>

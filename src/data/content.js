@@ -20,6 +20,13 @@ export const articles = [
     pubDate: '2025-01-15',
   },
   {
+    title: '1–3 Month Old Development: What to Expect',
+    description: 'What to expect from your 1 to 3 month old: first social smiles, following objects with their eyes, and growing physical strength — with AAP-backed guidance.',
+    path: '/ages/1-3-months/',
+    pubDate: '2026-03-09',
+    image: '/images/2026-03-09-pin-1-3m.png',
+  },
+  {
     title: '3–6 Month Old Development: What to Expect',
     description: 'What to expect from your 3–6 month old — social smiling, rolling over, babbling, reaching and grasping, and signs of readiness for solid foods.',
     path: '/ages/3-6-months/',
@@ -39,6 +46,13 @@ export const articles = [
     path: '/ages/6-9-months/',
     pubDate: '2026-03-09',
     image: '/images/2026-03-09-pin-6-9m.png',
+  },
+  {
+    title: '9–12 Month Old Development: What to Expect',
+    description: 'What to expect from your 9 to 12 month old: early walking, first words, and growing cognitive skills — with AAP-backed guidance.',
+    path: '/ages/9-12-months/',
+    pubDate: '2026-03-09',
+    image: '/images/2026-03-09-pin-9-12m.png',
   },
   {
     title: '12–18 Month Old Development: What to Expect',

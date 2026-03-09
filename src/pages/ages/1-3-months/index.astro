@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '1–3 Month Old Development: What to Expect';
+const description = 'What to expect from your 1 to 3 month old: first social smiles, following objects with their eyes, and growing physical strength — with AAP-backed guidance.';
+
+const faqs = [
+  {
+    question: 'When will my baby first smile?',
+    answer: 'Most babies develop their first "social smile" — a smile in response to your face or voice — between 6 and 8 weeks. Before then, you may see reflexive smiles during sleep, but the social smile is a major milestone in emotional bonding.'
+  },
+  {
+    question: 'Is it normal for my 2-month-old to cry more in the evening?',
+    answer: 'Yes. Many babies experience a "witching hour" or period of increased fussiness in the late afternoon or evening. This is often due to overstimulation or a developing nervous system. Soothing techniques like rhythmic rocking, swaddling, or a warm bath can help.'
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/1-3-months/',
+});
+
+const faqData = faqSchema(faqs);
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '1–3 Months' }]}>
+  <h1>1–3 Month Old Development: What to Expect</h1>
+  <p>The first three months are a period of rapid growth and transition from the "fourth trimester" into early infancy. Your baby is beginning to interact more with their environment and with you.</p>
+  <h2>Key Milestones</h2>
+  <ul>
+    <li>Social smiling (6-8 weeks)</li>
+    <li>Following moving objects with eyes</li>
+    <li>Pushing up on arms during tummy time</li>
+    <li>Opening and shutting hands</li>
+  </ul>
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a class="topic-card" href={`/ages/1-3-months/${topic.slug}/`}>
+        {topic.label}
+      </a>
+    ))}
+  </div>
+</BaseLayout>
