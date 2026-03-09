@@ -11,7 +11,11 @@ export function GET(context) {
       description: article.description,
       link: article.path,
       pubDate: new Date(article.pubDate),
+      customData: article.image ? `<media:content url="${context.site.origin}${article.image}" medium="image" />` : '',
     })),
     customData: '<language>en-us</language>',
+    xmlns: {
+      media: 'http://search.yahoo.com/mrss/',
+    },
   });
 }
