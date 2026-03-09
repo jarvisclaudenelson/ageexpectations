@@ -1,242 +1,155 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "12-18 Month Milestones: Development Checklist",
-  "description": "What developmental milestones should your 12-18 month old achieve? Learn about physical, cognitive, and language development from the CDC milestone guidelines.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '12–18 Month Milestones: What to Expect and Signs of Progress';
+const description = 'Most toddlers walk independently by 12–15 months, say 5–10 words by 18 months, and begin pointing, stacking blocks, and drinking from a cup. Here are the key milestones and when to talk to your pediatrician.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What milestones should my 12-month-old have?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At 12 months, most babies say 1-3 words, pull to stand, and show interest in other children. The CDC milestone checklist includes specific markers for this age."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When do toddlers start walking?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most toddlers take first independent steps between 12-15 months, with walking well established by 18 months. Some walk as early as 9 months or as late as 18 months."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is object permanence in toddlers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Object permanence is the understanding that objects continue to exist even when they can't be seen. It develops around 8-12 months and allows toddlers to search for hidden toys."
-      }
-    }
-  ]
-};
+const faqs = [
+  { question: 'Is it normal if my 15-month-old isn\'t walking yet?', answer: 'Yes, this is within the normal range. According to the CDC, most children walk independently between 12 and 18 months, with the average around 12–15 months. Some perfectly healthy toddlers do not take their first independent steps until 16 or even 17 months. What matters more is progression — if your child is pulling to stand, cruising along furniture, and showing interest in moving, they are likely on their way. Talk to your pediatrician if your child is not standing with support at all by 12 months or not walking independently by 18 months.' },
+  { question: 'How many words should my 18-month-old say?', answer: 'The AAP and CDC milestone guidelines indicate that most 18-month-olds say between 5 and 20 words, with an average around 5–10 recognizable words. However, there is enormous variation at this age. Some 18-month-olds say 50 words while others say only 3–5 but understand far more. Receptive language — understanding words, following simple directions, and pointing to named objects — is an equally important indicator. If your child has fewer than 5 words at 18 months but understands language well and uses gestures, your pediatrician will likely monitor their progress. If they have no words at all and limited gestures, evaluation is recommended.' },
+  { question: 'When should my toddler be able to stack blocks?', answer: 'Most toddlers can stack two blocks by 12–14 months and three to four blocks by 18 months. Block stacking is a fine motor milestone that also reflects cognitive development — your child must understand spatial relationships, practice hand-eye coordination, and exercise patience. If your child is not interested in stacking blocks specifically, look for other fine motor skills like putting objects into containers, turning pages in a board book, or using a pincer grasp to pick up small foods. These indicate similar developmental progress.' },
+  { question: 'Is it normal for my 14-month-old to not point at things yet?', answer: 'Pointing typically emerges between 9 and 14 months. If your child is 14 months old and not yet pointing, it is worth paying attention to but not necessarily cause for alarm. There are two types of pointing to watch for: imperative pointing (pointing at something they want) and declarative pointing (pointing at something interesting to share the experience with you). Declarative pointing is considered a particularly important social milestone. The AAP recommends discussing it with your pediatrician if your child is not pointing or using other gestures like waving or reaching by 15 months.' },
+  { question: 'My 13-month-old still crawls instead of walking. Should I be concerned?', answer: 'Not at this age. Many 13-month-olds are still primarily crawlers, especially if they are fast and efficient at it. Some toddlers become such skilled crawlers that they have little motivation to walk until 14–16 months. As long as your child is pulling to stand and cruising along furniture, their gross motor development is progressing normally. Encourage walking by placing toys on low furniture just out of reach and offering your fingers for them to hold while they practice. Avoid walkers with wheels, which the AAP recommends against for safety reasons.' },
+];
+
+const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/12-18-months/milestones/' });
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '12–18 Months', href: '/ages/12-18-months/' }, { label: 'Milestones' }]}>
+  <h1>12–18 Month Milestones: What to Expect and Signs of Progress</h1>
 
-<BaseLayout title="12-18 Month Milestones: Development Checklist" description="Complete developmental milestone checklist for 12-18 month olds. Physical, cognitive, and language milestones from CDC guidelines." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>12-18 Month Milestones: Development Checklist</h1>
-      <p class="article-meta">Ages 12-18 months · Updated March 2026</p>
-    </header>
+  <p>Somewhere between their first birthday and eighteen months, your child crosses one of the great thresholds of early life: they stop being a baby and become a toddler. The transformation is breathtaking. In just six months, most children go from taking tentative steps while gripping your fingers to walking — and sometimes running — on their own. They begin to say real words, follow simple instructions, and show you that they have a mind full of ideas they are desperate to communicate.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/12-18-months/">Overview</a>
-      <a href="/ages/12-18-months/milestones/">Milestones</a>
-      <a href="/ages/12-18-months/sleep/">Sleep</a>
-      <a href="/ages/12-18-months/behavior/">Behavior</a>
-      <a href="/ages/12-18-months/feeding/">Feeding</a>
-      <a href="/ages/12-18-months/language/">Language</a>
-    </div>
+  <p>If you are wondering whether your child is hitting their milestones "on time," you are in good company. This guide covers every major milestone between 12 and 18 months, explains the normal range for each, and tells you exactly when the AAP and CDC recommend seeking guidance from your pediatrician.</p>
 
-    <div class="article-content">
-      <p>Your toddler is hitting milestones at what can feel like warp speed — walking, talking, climbing, and developing a personality that makes them uniquely themselves. This guide breaks down what to expect and when, based on CDC developmental milestones and AAP guidelines.</p>
+  <h2>Gross Motor Milestones: What to Expect for Walking and Movement</h2>
 
-      <p>Remember: children develop at their own pace. These ranges represent typical development, not rigid deadlines. However, certain delays warrant discussion with your pediatrician.</p>
+  <p><strong>Walking</strong> is the headline milestone of this age range, and it has one of the widest normal windows of any developmental skill. According to the CDC's updated milestone checklist, most children walk independently between 12 and 15 months, and nearly all children are walking by 18 months. Here is what the typical progression looks like:</p>
 
-      <h2>12 Month Milestones (End of First Year)</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Pulls to stand using furniture</li>
-        <li>May take first independent steps (cruising along furniture is common)</li>
-        <li>Pincer grasp (thumb and forefinger) well-developed</li>
-        <li>Can stack 2 blocks</li>
-        <li>Feeds self finger foods</li>
-        <li>Uses fingers to point at things</li>
-      </ul>
+  <ul>
+    <li><strong>12 months:</strong> Most babies are pulling to stand and cruising along furniture. Some are taking their first independent steps.</li>
+    <li><strong>13–14 months:</strong> Many toddlers are walking independently, though their gait is wide-legged and unsteady. Falls are frequent and normal.</li>
+    <li><strong>15–16 months:</strong> Walking becomes more confident. Your child may start to squat down to pick up a toy and stand back up without falling.</li>
+    <li><strong>17–18 months:</strong> Most toddlers walk well and may begin to run (more of a fast, stiff-legged walk at first). Some attempt to walk backward or walk while carrying objects.</li>
+  </ul>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Says 1-3 words (mama, dada, or other sounds)</li>
-        <li>Understands "no"</li>
-        <li>Waves bye-bye</li>
-        <li>Responds to simple verbal requests</li>
-        <li>Babbles with intonation (sounds like speech)</li>
-      </ul>
+  <p>Beyond walking, other gross motor milestones to watch for during this period include climbing onto low furniture, bending over to pick up objects, and attempting to kick a ball (though coordinated kicking usually comes closer to 18–24 months).</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Finds hidden objects easily</li>
-        <li>Understands object permanence</li>
-        <li>Imitates actions of others</li>
-        <li>Explores objects in different ways (shakes, throws, bangs)</li>
-        <li>Starts to use objects correctly (brush hair, drink from cup)</li>
-      </ul>
+  <h2>Language Milestones: Signs of Progress from First Words to Early Vocabulary</h2>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Shows stranger anxiety</li>
-        <li>Plays simple interactive games (pat-a-cake)</li>
-        <li>Has specific preferences (favorite toys, foods)</li>
-        <li>May cry when parent leaves</li>
-        <li>Extends arm/leg to help with dressing</li>
-      </ul>
+  <p>Language development between 12 and 18 months is a mix of spoken words and nonverbal communication — and the nonverbal piece is just as important as the words themselves.</p>
 
-      <h2>15 Month Milestones</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Walks independently (most children)</li>
-        <li>Squats to pick up toys</li>
-        <li>Climbs on furniture</li>
-        <li>Stacks 3-4 blocks</li>
-        <li>Uses spoon (messy but intentional)</li>
-        <li>Scribbles with crayon</li>
-      </ul>
+  <p><strong>Spoken language:</strong> Most 12-month-olds say 1–3 recognizable words, often "mama," "dada," and one other word like "ball" or "dog." By 18 months, the average toddler says about 5–10 words, though there is significant variability. The AAP notes that some 18-month-olds say 50 or more words, while others are closer to 5. Both can be within the normal range.</p>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Says 3-6 words consistently</li>
-        <li>Points to show wants (pointing becomes more intentional)</li>
-        <li>Follows simple directions without gestures</li>
-        <li>Understands "no"</li>
-      </ul>
+  <p><strong>Receptive language:</strong> Your child should be understanding far more than they can say. By 12–14 months, most toddlers can follow simple one-step commands ("Give me the ball"), point to familiar objects when named ("Where's the dog?"), and respond consistently to their own name. By 18 months, most toddlers understand 50 or more words even if they can only say a handful.</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Identifies objects by pointing</li>
-        <li>Matches similar objects (two balls)</li>
-        <li>Explores environment actively</li>
-        <li>Tests cause and effect deliberately</li>
-      </ul>
+  <p><strong>Gestures:</strong> Pointing is one of the most important milestones of this period. Most children begin pointing between 9 and 14 months. The CDC lists pointing at something interesting to show you (declarative pointing) as a key milestone by 18 months. Other important gestures include waving bye-bye, shaking the head for "no," and raising arms to be picked up.</p>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Shows affection to familiar people</li>
-        <li>May have brief separations without major distress</li>
-        <li>Plays alongside other children (parallel play)</li>
-        <li>Shows preferences and opinions</li>
-      </ul>
+  <h2>Fine Motor Milestones: What to Expect for Hands and Coordination</h2>
 
-      <h2>18 Month Milestones</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Walks well independently</li>
-        <li>Begins to run (still unsteady)</li>
-        <li>Kicks a ball forward</li>
-        <li>Walks up stairs with hand held</li>
-        <li>Stacks 4-6 blocks</li>
-        <li>Uses spoon and fork</li>
-        <li>Helps with undressing</li>
-      </ul>
+  <p>Your toddler's hand skills are becoming increasingly precise between 12 and 18 months. Key milestones include:</p>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Says 3-10 words (sometimes more)</li>
-        <li>Vocabulary of 5+ words is typical (fewer may warrant discussion)</li>
-        <li>Points to body parts when asked</li>
-        <li>Shakes head no</li>
-        <li>Says "no" or shakes head to express refusal</li>
-        <li>Follows two-step instructions</li>
-      </ul>
+  <ul>
+    <li><strong>Stacking blocks:</strong> Most toddlers can stack two blocks by 12–14 months and three to four blocks by 18 months. This requires hand-eye coordination, spatial awareness, and the patience to balance one object on top of another.</li>
+    <li><strong>Scribbling:</strong> Give your child a thick crayon and paper, and by about 13–15 months, most will make spontaneous marks. This is the very beginning of the fine motor pathway that eventually leads to drawing and writing.</li>
+    <li><strong>Drinking from a cup:</strong> By 12–15 months, most toddlers can drink from an open cup with some help (expect spills). The AAP recommends transitioning away from bottles by 12–15 months. Sippy cups and straw cups are useful tools during this transition.</li>
+    <li><strong>Using a spoon:</strong> Most 12–18 month olds will attempt to use a spoon, though they are far more successful getting food to their mouths with their hands. Self-feeding with a spoon typically becomes more reliable closer to 18–24 months.</li>
+    <li><strong>Turning pages:</strong> Your child may begin turning pages in board books, usually several pages at a time rather than one by one. Turning single pages develops closer to 24 months.</li>
+  </ul>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Points to pictures in book</li>
-        <li>Knows what ordinary objects are for (phone, brush)</li>
-        <li>Mimics household activities</li>
-        <li>Finds completely hidden objects</li>
-        <li>Follows one-step commands with gesture</li>
-      </ul>
+  <h2>Cognitive Milestones: Signs of Growing Understanding</h2>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>May have temper tantrums</li>
-        <li>Shows defiant behavior (the "no" phase)</li>
-        <li>Engages in parallel play</li>
-        <li>May show affection to pets</li>
-        <li>Explores alone with parent nearby</li>
-      </ul>
+  <p>Between 12 and 18 months, your child's thinking becomes visibly more sophisticated. You will see evidence of this in their play and daily interactions:</p>
 
-      <h2>Red Flags at 18 Months</h2>
-      <p>The American Academy of Pediatrics recommends discussing these with your pediatrician:</p>
-      <ul>
-        <li>Not walking independently</li>
-        <li>Fewer than 5 words</li>
-        <li>No two-word phrases (like "more milk")</li>
-        <li>Doesn't point to show others what they want</li>
-        <li>Doesn't understand simple instructions</li>
-        <li>No interest in interactive games</li>
-        <li>Loss of previously learned skills</li>
-        <li>Limited eye contact</li>
-      </ul>
+  <ul>
+    <li><strong>Object permanence is well established:</strong> Your child knows that a toy hidden under a blanket is still there and will look for it. They may also begin to figure out where you have hidden an object even if you move it between two hiding spots.</li>
+    <li><strong>Simple pretend play emerges:</strong> By 15–18 months, many toddlers begin holding a toy phone to their ear, "feeding" a doll, or pretending to drink from an empty cup. The CDC lists early pretend play as a milestone by 18 months.</li>
+    <li><strong>Cause and effect:</strong> Your child is deeply interested in what happens when they push a button, flip a switch, or drop something. Repetitive cause-and-effect play (dropping food off the high chair, pressing a button that makes noise) is a sign of healthy cognitive development.</li>
+    <li><strong>Simple problem-solving:</strong> You may see your child try to figure out how to reach a toy that is out of reach, use a stick to pull something closer, or pull a string to bring a toy toward them.</li>
+  </ul>
 
-      <h2>What If My Child Is Behind?</h2>
-      <p>First, try not to panic. Some children develop skills in spurts, and minor variations are normal. However, early intervention is incredibly effective. If you're concerned:</p>
-      <ul>
-        <li>Talk to your pediatrician — they can assess whether evaluation is needed</li>
-        <li>Early intervention services (through your state's program) can provide support</li>
-        <li>CDC's "Learn the Signs. Act Early." program has free resources</li>
-        <li>Trust your gut — parents often sense when something isn't right</li>
-      </ul>
+  <h2>Social-Emotional Milestones: What to Expect for Connection and Feelings</h2>
 
-      <h2>Supporting Development</h2>
-      <p>You don't need fancy toys or elaborate activities. What works:</p>
-      <ul>
-        <li><strong>Read together:</strong> Books build language and bond</li>
-        <li><strong>Talk to your toddler:</strong> Narrate your day, name objects</li>
-        <li><strong>Allow exploration:</strong> Safe environments to climb, crawl, explore</li>
-        <li><strong>Respond to their words:</strong> Building vocabulary happens through interaction</li>
-        <li><strong>Play together:</strong> Follow their lead in play</li>
-        <li><strong>Establish routines:</strong> Predictability supports development</li>
-      </ul>
+  <p>Your toddler's social and emotional world is becoming richer and more complex. According to both the AAP and CDC, typical social-emotional milestones at this age include:</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My child isn't walking at 15 months. Is this normal?</p>
-          <p class="faq-answer">Many children walk by 15 months, but walking anytime between 9-18 months is considered typical. If your child isn't walking by 18 months, talk to your pediatrician. Some children skip crawling entirely and go straight to walking.</p>
-        </div>
+  <ul>
+    <li>Showing affection toward familiar people (hugging, cuddling, kissing)</li>
+    <li>Playing simple interactive games like peek-a-boo and pat-a-cake</li>
+    <li>Showing separation anxiety when a primary caregiver leaves — this typically peaks between 12 and 18 months</li>
+    <li>Displaying stranger wariness, which is a healthy sign of attachment</li>
+    <li>Imitating adult actions during play (stirring a pot, talking on a phone)</li>
+    <li>Showing early empathy — looking concerned when another child cries</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">My 18-month-old only says a few words. Should I be worried?</p>
-          <p class="faq-answer">The typical range is 3-10 words at 18 months. The AAP considers fewer than 5 words worth discussing with your pediatrician. Many late talkers catch up, but it's worth getting checked.</p>
-        </div>
+  <h2>Milestone Checklist at a Glance</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">When do children start engaging in pretend play?</p>
-          <p class="faq-answer">Simple pretend play (like feeding a doll) typically emerges around 15-18 months. More elaborate pretend scenarios develop around 2 years.</p>
-        </div>
+  <p>Here is a summary of the milestones most children reach between 12 and 18 months, based on current AAP and CDC guidelines:</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Is it normal for my toddler to be socling?</p>
-          <p class="faq-answer">It's common but typically brief and followed by resolution. Frequent or intense tantrums might indicate frustration, hunger, tiredness, or overstimulation. Ensuring basic needs are met often helps.</p>
-        </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Domain</th>
+        <th>By 12 Months</th>
+        <th>By 18 Months</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gross motor</td>
+        <td>Pulls to stand, cruises</td>
+        <td>Walks independently</td>
+      </tr>
+      <tr>
+        <td>Fine motor</td>
+        <td>Pincer grasp, stacks 2 blocks</td>
+        <td>Stacks 3–4 blocks, scribbles, uses cup</td>
+      </tr>
+      <tr>
+        <td>Language (spoken)</td>
+        <td>1–3 words</td>
+        <td>5–10+ words</td>
+      </tr>
+      <tr>
+        <td>Language (receptive)</td>
+        <td>Follows simple commands</td>
+        <td>Understands 50+ words, identifies body parts</td>
+      </tr>
+      <tr>
+        <td>Cognitive</td>
+        <td>Object permanence, cause-and-effect play</td>
+        <td>Simple pretend play, basic problem-solving</td>
+      </tr>
+      <tr>
+        <td>Social-emotional</td>
+        <td>Separation anxiety, shows affection</td>
+        <td>Imitates adults, early empathy, plays interactively</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions About 12–18 Month Milestones</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-    </div>
-  </article>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The AAP recommends formal developmental screening at the 12-month and 18-month well-child visits. Between those visits, contact your pediatrician if your child:</p>
+    <ul>
+      <li>Is not standing with support by 12 months</li>
+      <li>Is not walking independently by 18 months</li>
+      <li>Has no words at all by 16 months</li>
+      <li>Does not point at things or use gestures to communicate by 15 months</li>
+      <li>Does not follow simple instructions like "give me that" by 15–18 months</li>
+      <li>Does not make eye contact or respond to their name consistently</li>
+      <li>Loses skills they previously had — saying fewer words, becoming less social, or stopping gestures they used to make</li>
+    </ul>
+    <p>Developmental regression — losing skills a child once had — is always a reason to call your pediatrician promptly. For any other concerns, do not wait for the next well-child visit. Early intervention services (available in every U.S. state for children under 3) are most effective when started early. You do not need a diagnosis to request an evaluation, and your pediatrician can help you access these services.</p>
+  </div>
 </BaseLayout>

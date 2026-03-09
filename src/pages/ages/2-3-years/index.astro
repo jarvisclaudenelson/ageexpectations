@@ -1,194 +1,94 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "2-3 Year Old Development: The Terrible or Wonderful Twos",
-  "description": "Your 2-3 year old is developing independence, language, and big emotions. Learn about developmental milestones, behavior, sleep, and what to expect.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '2–3 Year Old Development: What to Expect';
+const description = 'A complete guide to 2–3 year old development covering milestones, behavior, sleep, feeding, language, play, and red flags, based on AAP and CDC guidelines.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is normal behavior for a 2-year-old?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Two-year-olds are known for independence, defiance, and testing boundaries. They may say 'no' frequently, have tantrums, and want to do things themselves. This is normal development."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many words should a 2-year-old say?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most 2-year-olds have a vocabulary of 50+ words and are starting to combine two words together. By age 3, vocabularies typically reach 200+ words."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is potty training supposed to be this hard?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Potty training varies widely. Some children are ready at 2, others not until 3 or later. Most take several months to fully master it. Patience and positive reinforcement work better than pressure."
-      }
-    }
-  ]
-};
+const faqs = [
+  { question: 'What should a 2-year-old be able to do?', answer: 'By age 2, most children can run (though they may fall often), kick a ball, walk up stairs with support, say 2-word phrases like "want milk," follow simple instructions, and begin sorting shapes and colors. They engage in simple pretend play and can turn pages in a book. The CDC milestone checklist notes that children who are not using 2-word phrases by 24 months should be evaluated.' },
+  { question: 'Is it normal for a 2-year-old to not talk much?', answer: 'There is a wide range of normal for language at age 2. Some toddlers use 50 or more words and short phrases, while others are slower to talk but understand a great deal. However, if your child uses fewer than 25 words by 24 months, does not combine words, or does not seem to understand simple requests, talk to your pediatrician. Early speech-language evaluation can make a meaningful difference.' },
+  { question: 'What are signs of developmental delay in a 2–3 year old?', answer: 'Signs that warrant a conversation with your pediatrician include not using 2-word phrases by age 2, not following simple instructions, losing skills they previously had, not making eye contact, extreme difficulty separating from caregivers, not engaging in pretend play by age 3, or inability to walk steadily. The AAP recommends developmental screening at the 24- and 30-month well-child visits.' },
+  { question: 'When do toddlers stop having tantrums?', answer: 'Tantrums are a normal part of development that peak between ages 2 and 3. Most children have fewer and less intense tantrums by age 4 as their language skills and emotional regulation improve. Tantrums that are very frequent (more than 5 per day), last longer than 25 minutes, or involve self-injury should be discussed with your pediatrician.' },
+];
+
+const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/2-3-years/' });
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '2–3 Years' }]}>
+  <h1>2–3 Year Old Development: What to Expect</h1>
 
-<BaseLayout title="2-3 Years: Toddler Development & Milestones" description="The terrible twos — or wonderful twos. Learn about 2-3 year old development, milestones, behavior, language, sleep, and what to expect at this age." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>2-3 Year Old Development: What to Expect</h1>
-      <p class="article-meta">Ages 24-36 months · Updated March 2026</p>
-    </header>
+  <p>If you're parenting a child between the ages of 2 and 3, you already know: life is never boring. This is the age of first full sentences, fierce independence, towering block structures, and spectacular meltdowns over a broken cracker. It can feel chaotic, but nearly everything your toddler is doing — even the parts that test your patience — is a sign of healthy, rapid development.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/2-3-years/">Overview</a>
-      <a href="/ages/2-3-years/milestones/">Milestones</a>
-      <a href="/ages/2-3-years/sleep/">Sleep</a>
-      <a href="/ages/2-3-years/behavior/">Behavior</a>
-      <a href="/ages/2-3-years/language/">Language</a>
-      <a href="/ages/2-3-years/feeding/">Feeding</a>
-    </div>
+  <p>This guide provides a comprehensive overview of what to expect during the 2–3 year old stage across every major developmental domain. Each section links to a detailed topic page with deeper clinical context, practical strategies, and clear guidance on when to consult your pediatrician. Our information is based on current AAP (American Academy of Pediatrics) recommendations and CDC developmental milestone checklists.</p>
 
-    <div class="article-content">
-      <p>The ages of 2 and 3 are often called the "terrible twos" — but many parents also call them the "wonderful twos." Your child is developing a real personality, forming sentences, and becoming more independent. It's intense, but it's also incredibly fun.</p>
+  <h2>What to Expect: An Overview of 2–3 Year Old Development</h2>
 
-      <p>Your 2-3-year-old is learning they are a separate person with opinions, preferences, and the ability to affect the world around them. This discovery leads to both amazing moments and challenging ones.</p>
+  <p>Between ages 2 and 3, your child is making enormous strides in every area of development. Here's a quick look at each domain:</p>
 
-      <h2>Physical Development</h2>
-      <p>Your toddler is becoming more coordinated and physical:</p>
-      <ul>
-        <li><strong>Running:</strong> More steady, can start and stop</li>
-        <li><strong>Climbing:</strong> Confident on playground equipment</li>
-        <li><strong>Kicking:</strong> Can kick a ball forward</li>
-        <li><strong>Stairs:</strong> Going up and down with help</li>
-        <li><strong>Jumping:</strong> Both feet together</li>
-        <li><strong>Fine motor:</strong> Scribbling, building with blocks, using spoon</li>
-        <li><strong>Self-care:</strong> Beginning to dress/undress with help</li>
-      </ul>
+  <ul>
+    <li><strong>Motor skills:</strong> Running, climbing, kicking a ball, walking up and down stairs. Fine motor skills advance to turning pages, stacking blocks, and beginning to use utensils with increasing coordination.</li>
+    <li><strong>Language:</strong> Vocabulary explodes from roughly 50 words at age 2 to 200–1,000 words by age 3. Two-word phrases become 3–4 word sentences. Your child begins to ask "why?" — a lot.</li>
+    <li><strong>Cognitive:</strong> Sorting by shape and color, completing simple puzzles, understanding the concept of "two," engaging in pretend play that grows more elaborate over time.</li>
+    <li><strong>Social-emotional:</strong> A strong desire for autonomy ("I do it myself!"), peak tantrum frequency, emerging empathy, and the gradual shift from parallel play to interactive play with peers.</li>
+    <li><strong>Self-care:</strong> Many children show readiness for toilet training during this window. They can help with dressing, washing hands with guidance, and feeding themselves with a spoon and fork.</li>
+  </ul>
 
-      <h2>Cognitive Development</h2>
-      <p>Thinking skills are advancing rapidly:</p>
-      <ul>
-        <li><strong>Pretend play:</strong> Engages in imaginative play</li>
-        <li><strong>Problem solving:</strong> Tries different solutions</li>
-        <li><strong>Sorting:</strong> Can sort by shape and color</li>
-        <li><strong>Memory:</strong> Remembers stories and songs</li>
-        <li><strong>Following directions:</strong> Can follow 2-3 step instructions</li>
-        <li><strong>Names items:</strong> Identifies colors, shapes</li>
-      </ul>
+  <h2>Explore Topics for 2–3 Year Olds</h2>
 
-      <h2>Language Explosion</h2>
-      <p>The language leap between 2 and 3 is often dramatic:</p>
-      <ul>
-        <li><strong>Vocabulary:</strong> 50+ words at 2; 200+ by 3</li>
-        <li><strong>Word combinations:</strong> Two-word phrases at 2; sentences at 3</li>
-        <li><strong>Questions:</strong> Starts asking "why?" and "what?"</li>
-        <li><strong>Conversations:</strong> Can have back-and-forth exchanges</li>
-        <li><strong>Speech clarity:</strong> About 50% understandable at 2; 75%+ at 3</li>
-      </ul>
+  <p>Select a topic below to dive into detailed, evidence-based guidance for this age range:</p>
 
-      <h2>Social & Emotional Development</h2>
-      <p>This is a critical period for emotional development:</p>
-      <ul>
-        <li><strong>Identity:</strong> Showing off, seeking approval</li>
-        <li><strong>Empathy:</strong> Beginning to notice others' feelings</li>
-        <li><strong>Parallel play:</strong> Plays alongside other children</li>
-        <li><strong>Testing limits:</strong> Pushes boundaries to learn rules</li>
-        <li><strong>Emotional range:</strong> Full range of emotions visible</li>
-        <li><strong>Imagination:</strong> Imaginary friends common</li>
-      </ul>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/2-3-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
 
-      <h2>Behavior & Discipline</h2>
-      <p>Behavior at this age is driven by development, not defiance:</p>
-      <ul>
-        <li><strong>Tantrums:</strong> Peak around 18-36 months</li>
-        <li><strong>Saying no:</strong> Testing independence</li>
-        <li><strong>Possessiveness:</strong> "Mine!" is common</li>
-        <li><strong>Nighttime fears:</strong> Imaginary creatures appear</li>
-        <li><strong>Resistance:</strong> May resist routines they once enjoyed</li>
-      </ul>
+  <h2>Is This Normal? What to Expect and What to Watch For</h2>
 
-      <h2>Potty Training</h2>
-      <p>Most children show readiness between 18 months and 3 years:</p>
-      <ul>
-        <li><strong>Signs of readiness:</strong> Interest in toilet, staying dry, can pull pants up/down</li>
-        <li><strong>Timeline:</strong> Takes 3-6 months typically</li>
-        <li><strong>Daytime first:</strong> Nighttime control often comes later</li>
-        <li><strong>Approach:</strong> Positive, pressure-free works best</li>
-      </ul>
+  <p>One of the most common questions parents of 2–3 year olds ask is some variation of "is this normal?" The short answer: almost always, yes. Toddlers in this age range are supposed to be impulsive, emotional, messy, and relentlessly curious. That said, there are specific patterns worth paying attention to.</p>
 
-      <h2>Sleep</h2>
-      <p>Sleep needs and patterns at this age:</p>
-      <ul>
-        <li><strong>Total sleep:</strong> 11-14 hours per 24 hours</li>
-        <li><strong>Nap:</strong> Most still need 1 nap (1-3 hours)</li>
-        <li><strong>Bedtime:</strong> Typically 7-8pm</li>
-        <li><strong>Issues:</strong> Night wakings, resistance, nightmares may appear</li>
-      </ul>
+  <p>The <strong>CDC's developmental milestone checklist</strong> provides a helpful benchmark. At the 2-year well-child visit, your pediatrician will screen for milestones like using 2-word phrases, following 2-step instructions, and engaging in simple pretend play. At the 30-month visit, the AAP recommends additional screening for autism spectrum disorder. These aren't pass/fail tests — they're tools to identify children who might benefit from early support.</p>
 
-      <h2>Feeding</h2>
-      <p>Eating patterns at this age:</p>
-      <ul>
-        <li><strong>Appetite changes:</strong> Decreased appetite is normal</li>
-        <li><strong>Picky eating:</strong> Often peaks at this age</li>
-        <li><strong>Portions:</strong> Small — follow their lead</li>
-        <li><strong>Mealtime chaos:</strong> Playing with food is normal exploration</li>
-        <li><strong>Milk:</strong> Whole milk or alternatives through age 2</li>
-      </ul>
+  <p>Key things to look for that suggest healthy development between ages 2 and 3:</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">Is the "terrible twos" inevitable?</p>
-          <p class="faq-answer">All toddlers test limits and have big emotions — that's universal. But "terrible" vs. "wonderful" often depends on temperament, parenting approaches, and support. The challenging phases do pass.</p>
-        </div>
+  <ul>
+    <li>Steady growth in vocabulary and sentence length</li>
+    <li>Increasing independence in self-care tasks</li>
+    <li>Interest in other children, even if play is still mostly parallel</li>
+    <li>Pretend play that becomes more creative over time</li>
+    <li>Improving coordination — fewer falls, better control of utensils and crayons</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">My 2-year-old doesn't talk much. Is this normal?</p>
-          <p class="faq-answer">A vocabulary of 50+ words and two-word combinations is typical at 2. If your child has fewer than 50 words or isn't combining words, talk to your pediatrician.</p>
-        </div>
+  <h2>Signs of Possible Delay: When Development Looks Different</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">When should we start potty training?</p>
-          <p class="faq-answer">Most children are ready between 18 months and 3 years. Look for: staying dry for 1-2 hours, interest in the toilet, ability to pull pants down, and discomfort with wet diapers.</p>
-        </div>
+  <p>No two children develop on exactly the same timeline, and variation is expected. However, certain signs may indicate a need for professional evaluation. According to the AAP and CDC, red flags for 2–3 year olds include:</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler hits and bites. Is this normal?</p>
-          <p class="faq-answer">Yes, it's common but not acceptable. Toddlers lack impulse control and language. With consistent teaching, these behaviors typically decrease significantly by age 3-4.</p>
-        </div>
+  <ul>
+    <li>Not using 2-word phrases by 24 months</li>
+    <li>Not following simple instructions (e.g., "pick up the ball and bring it to me")</li>
+    <li>Loss of skills the child previously had (regression)</li>
+    <li>Not walking steadily or frequent falls after age 2</li>
+    <li>Little interest in other children or caregivers</li>
+    <li>No pretend play by age 3</li>
+    <li>Extreme difficulty with transitions or changes in routine beyond what's typical</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">Should my 3-year-old be able to share?</p>
-          <p class="faq-answer">True sharing — understanding that others have feelings about giving up a toy — develops around 3-4 years. Before that, "turn-taking" is more realistic than sharing.</p>
-        </div>
+  <p>If you notice any of these patterns, bring them up at your next well-child visit — or sooner. Early intervention services (available through your state's Part C or Part B program) can make a significant difference, and earlier is always better.</p>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The AAP recommends developmental screening at 9, 18, and 30 months, with autism-specific screening at 18 and 24 months. Beyond scheduled screenings, contact your pediatrician if your 2–3 year old is not meeting milestones listed above, has lost previously acquired skills, has tantrums that are unusually severe or frequent (lasting more than 25 minutes, occurring more than 5 times a day, or involving self-injury), or if something simply feels off to you. Parental instinct is a valid and valuable data point. You do not need to wait for a scheduled visit to raise concerns.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions About 2–3 Year Old Development</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Fewer than 50 words at 2 years</li>
-          <li>No two-word phrases by 2 years</li>
-          <li>Not responding to their name</li>
-          <li>No interest in other children</li>
-          <li>Loss of previously acquired skills</li>
-          <li>Not walking well by 2 years</li>
-          <li>Limited eye contact</li>
-          <li>No pretend play by 2.5 years</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+    ))}
+  </div>
 </BaseLayout>

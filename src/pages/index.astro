@@ -1,94 +1,80 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ageRanges, groupLabels } from '../data/ages.js';
+import { articleSchema, faqSchema } from '../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "AgeExpectations",
-  "description": "Evidence-based parenting guidance by age — milestones, sleep, behavior, and what to expect at every stage.",
-  "url": "https://ageexpectations.com"
-};
+const title = 'Child Development by Age: What to Expect from Newborn to 18 Years';
+const description = 'AgeExpectations.com is a free parenting reference covering developmental milestones, sleep, feeding, behavior, and red flags for every age from newborn through 18 years, based on AAP and CDC guidelines.';
+
+const groups = {};
+for (const age of ageRanges) {
+  if (!groups[age.group]) groups[age.group] = [];
+  groups[age.group].push(age);
+}
+const groupOrder = ['infant', 'toddler', 'preschool', 'school', 'preteen', 'teen'];
+
+const faqs = [
+  { question: 'What are developmental milestones?', answer: 'Developmental milestones are behaviors and skills that most children reach by a certain age. They include physical abilities like rolling over and walking, language skills like babbling and forming sentences, cognitive skills like problem-solving, and social-emotional skills like smiling and sharing. The CDC and AAP publish milestone checklists to help parents and pediatricians track development.' },
+  { question: 'When should I worry about my child\'s development?', answer: 'Every child develops at their own pace, and a range of timing is normal. However, you should talk to your pediatrician if your child is not meeting multiple milestones for their age, loses skills they previously had (regression), or if your instinct tells you something is off. Early intervention services are available in every U.S. state for children under 3.' },
+  { question: 'Is this site a substitute for medical advice?', answer: 'No. AgeExpectations.com provides general developmental information based on published guidelines from the AAP and CDC. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your child\'s pediatrician with specific concerns.' },
+];
+
+const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/' });
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema}>
+  <h1>What to Expect at Every Age: A Parent's Guide to Child Development</h1>
 
-<BaseLayout title="Parenting Milestones & What to Expect" description="Evidence-based parenting guidance by age. Find developmental milestones, sleep patterns, behavior tips, and health guidance for every stage — newborn to teen." schema={schema}>
-  <div class="article">
-    <div class="hero">
-      <h1>What to Expect, When You Don't Know What to Expect</h1>
-      <p>Evidence-based parenting guidance organized by age. Find reliable information on milestones, sleep, feeding, behavior, and development — the stuff that keeps parents up at night.</p>
-    </div>
+  <p>Parenting is a journey of constant change. One month your baby is sleeping around the clock; the next, they're pulling themselves up on furniture and babbling new sounds. <strong>AgeExpectations.com</strong> is a free, evidence-based reference designed to help you understand what's typical at every stage — from the newborn days through the teenage years.</p>
 
-    <h2>Choose Your Child's Age</h2>
-    <div class="age-grid">
-      <a href="/ages/0-1-month/" class="age-card">
-        <h3>Newborn (0-1 mo)</h3>
-        <p>First month essentials</p>
-      </a>
-      <a href="/ages/1-3-months/" class="age-card">
-        <h3>1-3 Months</h3>
-        <p>The fourth trimester</p>
-      </a>
-      <a href="/ages/3-6-months/" class="age-card">
-        <h3>3-6 Months</h3>
-        <p>Growing and curious</p>
-      </a>
-      <a href="/ages/6-9-months/" class="age-card">
-        <h3>6-9 Months</h3>
-        <p>On the move</p>
-      </a>
-      <a href="/ages/9-12-months/" class="age-card">
-        <h3>9-12 Months</h3>
-        <p>Almost walking</p>
-      </a>
-      <a href="/ages/12-18-months/" class="age-card">
-        <h3>12-18 Months</h3>
-        <p>The toddler years begin</p>
-      </a>
-      <a href="/ages/18-24-months/" class="age-card">
-        <h3>18-24 Months</h3>
-        <p>Big emotions</p>
-      </a>
-      <a href="/ages/2-3-years/" class="age-card">
-        <h3>2-3 Years</h3>
-        <p>Terrible or wonderful</p>
-      </a>
-      <a href="/ages/3-4-years/" class="age-card">
-        <h3>3-4 Years</h3>
-        <p>Preschooler</p>
-      </a>
-      <a href="/ages/4-5-years/" class="age-card">
-        <h3>4-5 Years</h3>
-        <p>Pre-kindergarten</p>
-      </a>
-      <a href="/ages/5-6-years/" class="age-card">
-        <h3>5-6 Years</h3>
-        <p>Kindergarten age</p>
-      </a>
-      <a href="/ages/6-8-years/" class="age-card">
-        <h3>6-8 Years</h3>
-        <p>Early elementary</p>
-      </a>
-      <a href="/ages/8-10-years/" class="age-card">
-        <h3>8-10 Years</h3>
-        <p>Upper elementary</p>
-      </a>
-      <a href="/ages/10-12-years/" class="age-card">
-        <h3>10-12 Years</h3>
-        <p>Pre-teen</p>
-      </a>
-      <a href="/ages/12-14-years/" class="age-card">
-        <h3>12-14 Years</h3>
-        <p>Early teen</p>
-      </a>
-      <a href="/ages/14-18-years/" class="age-card">
-        <h3>14-18 Years</h3>
-        <p>Teen years</p>
-      </a>
-    </div>
+  <p>Every article on this site covers the key topics parents ask about most: <strong>developmental milestones, sleep, feeding and nutrition, behavior and emotions, language and communication, play and learning, health and safety, and red flags</strong> that may warrant a conversation with your pediatrician.</p>
 
-    <div class="faq-section">
-      <h2>Why AgeExpectations?</h2>
-      <p>Parenting advice is everywhere — but not all of it is reliable. We summarize evidence-based guidance from the American Academy of Pediatrics (AAP), CDC, and peer-reviewed research into practical, easy-to-understand pages organized by age.</p>
-      <p>Each page covers what developmental milestones to expect, common concerns parents have, and red flags worth mentioning to your pediatrician.</p>
+  <h2>How to Use This Site</h2>
+  <p>Find your child's age range below and explore the topics that matter most to you right now. Each article includes practical guidance, typical ranges, a "Is This Normal?" FAQ, and clear guidance on when to seek professional input. Our information references current AAP (American Academy of Pediatrics) guidelines and CDC developmental milestone checklists.</p>
+
+  <h2>Browse by Age</h2>
+  {groupOrder.map(group => (
+    <div>
+      <h3>{groupLabels[group]}</h3>
+      <div class="age-grid">
+        {groups[group]?.map(age => (
+          <a href={`/ages/${age.slug}/`} class="age-card">{age.label}</a>
+        ))}
+      </div>
     </div>
+  ))}
+
+  <h2>What Are Developmental Milestones?</h2>
+  <p>Developmental milestones are skills and behaviors that most children demonstrate by a certain age. They span four major domains:</p>
+  <ul>
+    <li><strong>Gross and fine motor:</strong> rolling, sitting, walking, drawing, buttoning</li>
+    <li><strong>Language and communication:</strong> cooing, babbling, first words, sentences, conversation</li>
+    <li><strong>Cognitive:</strong> object permanence, problem-solving, imaginative play, abstract thinking</li>
+    <li><strong>Social-emotional:</strong> smiling, attachment, sharing, empathy, independence</li>
+  </ul>
+  <p>Milestones are guideposts, not deadlines. Children develop at their own pace, and there is a wide range of "normal." However, consistent delays across multiple areas — or loss of previously acquired skills — should always be discussed with your pediatrician.</p>
+
+  <h2>Signs of Healthy Development vs. Red Flags</h2>
+  <p>It's natural to compare your child to others or to worry when they don't hit a milestone "on time." Most variations are perfectly normal. Red flags are patterns that suggest a child may benefit from evaluation or early intervention. These include:</p>
+  <ul>
+    <li>Not meeting several milestones for their age group</li>
+    <li>Losing skills they previously had (developmental regression)</li>
+    <li>Lack of eye contact or social engagement appropriate for age</li>
+    <li>Significant difficulty with feeding, sleeping, or daily routines beyond what's expected</li>
+  </ul>
+
+  <div class="callout">
+    <h2>A Note About This Site</h2>
+    <p>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. The information here is based on publicly available guidelines from the AAP and CDC. Always consult your child's pediatrician or healthcare provider for personalized guidance.</p>
   </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
 </BaseLayout>

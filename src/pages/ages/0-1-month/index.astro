@@ -1,201 +1,132 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Newborn Care: 0-1 Month Development & What to Expect",
-  "description": "Your first month with a newborn. Learn about feeding, sleep patterns, development, crying, and when to call the pediatrician.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = 'Newborn Development (0–1 Month): What to Expect';
+const description = 'In the first month of life, newborns develop primitive reflexes, begin to focus their vision at 8–12 inches, recognize their parent\'s voice, and establish early feeding and sleep patterns — here is what to expect week by week.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much should a newborn sleep?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Newborns sleep 14-17 hours per day, typically in 2-4 hour stretches. They don't have a day/night rhythm yet, so night waking is normal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should I feed my newborn?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Newborns typically eat every 2-3 hours, or 8-12 times per 24 hours. Breastfed babies may eat more frequently. Watch for hunger cues rather than the clock."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it normal for newborns to cry a lot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, newborns cry 1-4 hours per day. Crying peaks around 6 weeks and decreases by 3-4 months. It's their primary way to communicate needs."
-      }
-    }
-  ]
-};
+const faqs = [
+  {
+    question: 'Is it normal for my newborn to lose weight after birth?',
+    answer: 'Yes. Most healthy newborns lose 5–7% of their birth weight in the first few days of life (up to 10% for breastfed babies) as they adjust to feeding outside the womb. The AAP considers this normal as long as the baby regains their birth weight by 10–14 days of age. Your pediatrician will track your baby\'s weight at early well-child visits to make sure feeding is going well.',
+  },
+  {
+    question: 'Is it normal for my newborn to sleep all the time?',
+    answer: 'Newborns typically sleep 14–17 hours per day, often in stretches of 2–4 hours around the clock. It can feel like your baby sleeps constantly, and that is perfectly normal in the first month. Babies should wake regularly to feed — at least 8–12 times in 24 hours for breastfed newborns. If your baby is unusually difficult to wake for feedings or seems excessively sleepy, contact your pediatrician.',
+  },
+  {
+    question: 'When can my newborn see me?',
+    answer: 'Newborns can see from birth, but their vision is blurry and limited to about 8–12 inches — roughly the distance from your arms to your face during feeding. They are drawn to high-contrast patterns (especially the edges of faces) and prefer to look at human faces over other objects. By the end of the first month, most babies can briefly follow a slowly moving object with their eyes. Full visual acuity does not develop until around 6 months of age.',
+  },
+  {
+    question: 'Is it normal for my newborn to have jerky movements?',
+    answer: 'Yes. Newborn movements often appear jerky, trembling, or uncoordinated because their nervous system is still maturing. You may also notice the Moro (startle) reflex — when your baby suddenly extends their arms and legs in response to a sudden noise or sensation of falling. These involuntary movements are completely normal and gradually become smoother over the first 3–4 months. If trembling or jitteriness is constant, occurs when the baby is calm, or seems extreme, mention it to your pediatrician.',
+  },
+  {
+    question: 'What are the signs that my newborn is getting enough to eat?',
+    answer: 'Signs of adequate feeding include: 6 or more wet diapers per day by day 5 of life, 3–4 or more stools per day in the early weeks (breastfed babies), your baby seems satisfied after feedings, and your baby is gaining weight steadily after the initial post-birth weight loss. The AAP recommends a pediatrician visit within 3–5 days of birth (or 1–2 days after hospital discharge) to check weight and feeding.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/0-1-month/',
+});
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'Newborn (0–1 Month)' },
+  ]}
+>
+  <h1>Newborn Development (0–1 Month): What to Expect</h1>
 
-<BaseLayout title="Newborn Care: 0-1 Month Development & Milestones" description="First month with your newborn. Learn about feeding, sleep, development, crying, diaper counts, and when to call your pediatrician." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>Newborn Care: Your First Month</h1>
-      <p class="article-meta">Ages 0-1 month · Updated March 2026</p>
-    </header>
+  <p>Bringing a newborn home is one of life's most profound transitions — and one of its most disorienting. Your baby sleeps in short bursts, feeds around the clock, and communicates almost entirely through crying. It can be hard to know what is "normal" when everything feels new. The good news: your newborn is already developing in remarkable ways, even in these earliest days.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/0-1-month/">Overview</a>
-      <a href="/ages/0-1-month/milestones/">Milestones</a>
-      <a href="/ages/0-1-month/sleep/">Sleep</a>
-      <a href="/ages/0-1-month/feeding/">Feeding</a>
-      <a href="/ages/0-1-month/health/">Health</a>
-    </div>
+  <p>This overview covers the key areas of newborn development during the first month of life, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC. Explore the topic pages below for deeper dives into specific areas like sleep, feeding, and milestones.</p>
 
-    <div class="article-content">
-      <p>The first month with a newborn is equal parts magical and overwhelming. Your baby is adjusting to life outside the womb, and you're adjusting to being a parent. Here's what to expect during these early weeks.</p>
+  <h2>Explore Newborn Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/0-1-month/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
 
-      <h2>What Newborns Look Like</h2>
-      <p>Newborns don't look like the babies in commercials — and that's completely normal:</p>
-      <ul>
-        <li><strong>Head shape:</strong> May be cone-shaped from birth canal (rounds out in days)</li>
-        <li><strong>Skin:</strong> May be peeling, blotchy, or have birthmarks</li>
-        <li><strong>Eyes:</strong> Color often changes over first months</li>
-        <li><strong>Hair:</strong> May have lots, little, or none — and it may fall out</li>
-        <li><strong>Weight:</strong> Loses 5-10% of birth weight initially, regains by 2 weeks</li>
-        <li><strong>Belly button:</strong> Umbilical cord stump falls off in 1-3 weeks</li>
-      </ul>
+  <h2>Newborn Reflexes: What to Expect in the First Month</h2>
 
-      <h2>Physical Development</h2>
-      <p>Your newborn's movements are reflexive at this stage:</p>
-      <ul>
-        <li><strong>Rooting reflex:</strong> Turns head toward touch on cheek</li>
-        <li><strong>Sucking reflex:</strong> Automatically sucks when mouth touched</li>
-        <li><strong>Grasp reflex:</strong> Holds onto your finger</li>
-        <li><strong>Moro reflex:</strong> Startles with arms out when startled</li>
-        <li><strong>Vision:</strong> Sees best 8-12 inches away; prefers faces</li>
-        <li><strong>Hearing:</strong> Recognizes your voice from the womb</li>
-      </ul>
+  <p>Newborns arrive equipped with a set of primitive reflexes — involuntary responses that are hardwired into the nervous system. Your pediatrician will check for these reflexes during your baby's first exams. The major newborn reflexes include:</p>
 
-      <h2>Feeding Your Newborn</h2>
-      <p>Feeding is the primary activity of the first month:</p>
-      <ul>
-        <li><strong>Frequency:</strong> Every 2-3 hours, or 8-12 times per 24 hours</li>
-        <li><strong>Hunger cues:</strong> Rooting, sucking motions, hand-to-mouth</li>
-        <li><strong>Fullness cues:</strong> Turning away, falling asleep, relaxed hands</li>
-        <li><strong>Amount:</strong> Breastfed babies nurse on demand; formula-fed typically 1.5-3 oz per feeding</li>
-      </ul>
+  <ul>
+    <li><strong>Rooting reflex:</strong> When you stroke your baby's cheek or the corner of their mouth, they will turn toward the touch and open their mouth. This helps them find the breast or bottle for feeding.</li>
+    <li><strong>Sucking reflex:</strong> When something touches the roof of the baby's mouth, they will begin to suck. This reflex is essential for feeding and is present even before birth.</li>
+    <li><strong>Moro (startle) reflex:</strong> A sudden noise, movement, or sensation of falling causes the baby to throw their arms and legs outward, then pull them back in. This reflex is strongest in the first month and typically fades by 3–4 months.</li>
+    <li><strong>Grasp reflex:</strong> Place your finger in your newborn's palm and they will curl their fingers tightly around it. This palmar grasp reflex is involuntary and usually fades around 3–4 months as voluntary grasping develops.</li>
+    <li><strong>Stepping reflex:</strong> If you hold your baby upright with their feet touching a flat surface, they may make stepping motions. This reflex disappears around 2 months and is not related to actual walking readiness.</li>
+  </ul>
 
-      <h2>Sleep Patterns</h2>
-      <p>Newborn sleep is very different from adult sleep:</p>
-      <ul>
-        <li><strong>Total sleep:</strong> 14-17 hours per 24 hours</li>
-        <li><strong>Sleep cycles:</strong> 50-60 minutes (vs. 90 for adults)</li>
-        <li><strong>Day/night confusion:</strong> Common — no circadian rhythm yet</li>
-        <li><strong>Waking:</strong> Every 2-4 hours to feed is normal</li>
-        <li><strong>Safe sleep:</strong> Back sleeping, firm surface, no loose bedding</li>
-      </ul>
+  <p>The presence and strength of these reflexes are important indicators of healthy neurological development. Your pediatrician will assess them as part of routine newborn exams.</p>
 
-      <h2>Crying</h2>
-      <p>Crying is your baby's primary communication method:</p>
-      <ul>
-        <li><strong>Normal amount:</strong> 1-4 hours per day</li>
-        <li><strong>Common reasons:</strong> Hunger, tiredness, diaper, temperature, overstimulation</li>
-        <li><strong>Peak crying:</strong> Around 6 weeks, then decreases</li>
-        <li><strong>Colic:</strong> Defined as crying 3+ hours/day, 3+ days/week, for 3+ weeks</li>
-      </ul>
+  <h2>Vision and Hearing: What Your Newborn Can Sense</h2>
 
-      <h2>Diaper Output</h2>
-      <p>Diaper counts help confirm adequate feeding:</p>
-      <ul>
-        <li><strong>Wet diapers:</strong> 6+ per day after day 4</li>
-        <li><strong>Dirty diapers:</strong> 3-4+ per day initially; may decrease after first month</li>
-        <li><strong>Color:</strong> Yellow or tan stools are normal; black meconium in first days</li>
-        <li><strong>Urine:</strong> Should be pale yellow, not dark</li>
-      </ul>
+  <p>Newborn senses are functional but still developing rapidly:</p>
 
-      <h2>Bonding and Development</h2>
-      <p>Even in the first month, your baby is learning about you:</p>
-      <ul>
-        <li><strong>Recognizes your voice:</strong> Talk and sing to your baby</li>
-        <li><strong>Prefers faces:</strong> Make eye contact during feedings</li>
-        <li><strong>Responds to touch:</strong> Skin-to-skin contact is beneficial</li>
-        <li><strong>Can track objects:</strong> Slowly move toys 8-12 inches from face</li>
-        <li><strong>Startles to sound:</strong> Normal reflex, not fear</li>
-      </ul>
+  <ul>
+    <li><strong>Vision:</strong> Newborns can see, but their visual focus is limited to about 8–12 inches — just far enough to see your face during feeding. They are attracted to high-contrast patterns, edges, and especially human faces. By the end of the first month, most babies can briefly follow a slow-moving object with their eyes. Color vision develops gradually over the first few months.</li>
+    <li><strong>Hearing:</strong> Hearing is well-developed at birth. Newborns recognize their mother's voice from the womb and prefer it to unfamiliar voices. They startle at loud sounds (the Moro reflex) and may turn toward familiar voices. All newborns in the United States receive a hearing screening before hospital discharge, per AAP guidelines.</li>
+    <li><strong>Smell and taste:</strong> Newborns have a strong sense of smell and can recognize the scent of their mother's breast milk within the first days of life. They show a preference for sweet tastes, which may be an evolutionary adaptation to encourage breastfeeding.</li>
+  </ul>
 
-      <h2>Postpartum Recovery for Parents</h2>
-      <p>Your recovery matters too:</p>
-      <ul>
-        <li><strong>Rest:</strong> Sleep when baby sleeps when possible</li>
-        <li><strong>Help:</strong> Accept offers of meals, cleaning, or childcare</li>
-        <li><strong>Emotions:</strong> Baby blues are common; postpartum depression needs treatment</li>
-        <li><strong>Physical recovery:</strong> Varies by delivery type</li>
-        <li><strong>Feeding support:</strong> Lactation consultants can help</li>
-      </ul>
+  <h2>Feeding Patterns in the First Month</h2>
 
-      <h2>Safe Sleep Guidelines</h2>
-      <p>Follow AAP safe sleep recommendations:</p>
-      <ul>
-        <li>Always place baby on their back to sleep</li>
-        <li>Use a firm, flat sleep surface (crib, bassinet, pack-n-play)</li>
-        <li>No loose bedding, pillows, bumpers, or toys in sleep area</li>
-        <li>Room-share (not bed-share) for at least 6 months</li>
-        <li>Keep room at comfortable temperature</li>
-        <li>Avoid overheating</li>
-      </ul>
+  <p>Feeding is the central activity of a newborn's day. Whether breastfeeding or formula-feeding, the AAP offers these general guidelines for the first month:</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My newborn sleeps all day and is awake all night. Is this normal?</p>
-          <p class="faq-answer">Yes, this is very common. Newborns don't have a circadian rhythm yet. It typically takes 6-8 weeks (sometimes longer) for day/night patterns to emerge. Keep days bright and active, nights dark and quiet.</p>
-        </div>
+  <ul>
+    <li><strong>Breastfed babies</strong> typically feed 8–12 times in 24 hours (roughly every 2–3 hours), including through the night. Frequent feeding is normal and helps establish milk supply.</li>
+    <li><strong>Formula-fed babies</strong> usually eat 6–8 times in 24 hours (roughly every 3–4 hours), consuming about 2–3 ounces per feeding in the early weeks, gradually increasing to 4 ounces by the end of the first month.</li>
+    <li>The AAP recommends exclusive breastfeeding for approximately the first 6 months, with continued breastfeeding alongside solid foods for 2 years or beyond. However, fed is best — the most important thing is that your baby is eating enough and gaining weight.</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">How do I know if my baby is getting enough milk?</p>
-          <p class="faq-answer">Signs include: 6+ wet diapers per day after day 4, regular dirty diapers, seeming satisfied after feeds, gaining weight (regain birth weight by 2 weeks), and alert periods between feeds.</p>
-        </div>
+  <h2>Sleep in the First Month</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">My baby cries for hours every evening. Is this colic?</p>
-          <p class="faq-answer">Evening fussiness is very common. True colic is defined as crying 3+ hours/day, 3+ days/week, for 3+ weeks. If you're concerned, talk to your pediatrician. The crying typically peaks at 6 weeks and improves by 3-4 months.</p>
-        </div>
+  <p>Newborns sleep a lot — typically 14–17 hours per day — but in short, unpredictable stretches of 2–4 hours. They do not yet have a circadian rhythm, so there is no difference between "day" and "night" for them. The AAP's safe sleep guidelines recommend placing your baby on their back on a firm, flat surface for every sleep, room-sharing without bed-sharing for at least the first 6 months, and keeping the sleep area free of loose bedding, bumpers, and soft objects.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Should I wake my baby to feed?</p>
-          <p class="faq-answer">In the first 2 weeks, yes — wake every 2-3 hours to ensure adequate intake and weight gain. After your baby has regained birth weight and your pediatrician gives the okay, you can let them sleep longer stretches.</p>
-        </div>
+  <p>For a full guide to newborn sleep patterns, safe sleep practices, and common questions, see our <a href="/ages/0-1-month/sleep/">Newborn Sleep</a> page.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Is it okay to let my baby sleep in a swing or car seat?</p>
-          <p class="faq-answer">Babies should not sleep in swings, car seats, or other inclined devices for extended periods. These positions can restrict breathing. For sleep, use a firm, flat surface like a crib or bassinet.</p>
-        </div>
+  <h2>Bonding and Social-Emotional Development</h2>
+
+  <p>Even in the first weeks of life, your baby is beginning to form the attachment relationships that will shape their social-emotional development for years to come. Newborns are comforted by skin-to-skin contact, the sound of a familiar voice, and gentle rocking or swaying. They communicate their needs through crying — which is their only language right now.</p>
+
+  <p>Responding consistently to your baby's cries is not "spoiling" them. Research cited by the AAP consistently shows that responsive caregiving in the newborn period builds a secure attachment foundation. By the end of the first month, your baby may begin to show brief moments of alertness, locking eyes with you during feeding and turning toward your voice.</p>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About Newborn Development</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
+    ))}
+  </div>
 
-      <div class="red-flags">
-        <h3>When to Call Your Pediatrician</h3>
-        <ul>
-          <li>Fever of 100.4°F (38°C) or higher</li>
-          <li>Refusing to eat or very sleepy/hard to wake</li>
-          <li>Fewer than 6 wet diapers per day after day 4</li>
-          <li>Bloody or black stools (after meconium passes)</li>
-          <li>Green vomit (not just spit-up)</li>
-          <li>Breathing difficulties or very fast breathing</li>
-          <li>Blue or gray color around lips or face</li>
-          <li>Jaundice (yellowing) that worsens or spreads</li>
-          <li>Not gaining weight</li>
-          <li>Excessive crying you can't soothe</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The AAP recommends a well-child visit within 3–5 days of birth (or 1–2 days after hospital discharge), followed by visits at 1 month, 2 months, and regularly thereafter. Between visits, contact your pediatrician or seek medical attention if you notice:</p>
+    <ul>
+      <li>Fever of 100.4 degrees F (38 degrees C) or higher in a baby under 2 months — this is always an emergency</li>
+      <li>Refusing to feed or feeding significantly less than usual</li>
+      <li>Fewer than 6 wet diapers per day after day 5</li>
+      <li>Yellow skin or eyes (jaundice) that is worsening or appeared after hospital discharge</li>
+      <li>Excessive sleepiness or difficulty waking for feedings</li>
+      <li>Constant, inconsolable crying that is different from your baby's usual patterns</li>
+      <li>Absence of expected reflexes (not startling at loud sounds, not grasping, not rooting)</li>
+      <li>Any breathing difficulty — flared nostrils, grunting, chest retractions, or pauses longer than 20 seconds</li>
+    </ul>
+    <p>Trust your instincts. If something feels wrong, it is always appropriate to call your pediatrician. No one knows your baby better than you do.</p>
+  </div>
 </BaseLayout>

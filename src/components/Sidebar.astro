@@ -1,0 +1,28 @@
+---
+import { ageRanges, groupLabels } from '../data/ages.js';
+
+const currentPath = Astro.url.pathname;
+
+// Group ages
+const groups = {};
+for (const age of ageRanges) {
+  if (!groups[age.group]) groups[age.group] = [];
+  groups[age.group].push(age);
+}
+const groupOrder = ['infant', 'toddler', 'preschool', 'school', 'preteen', 'teen'];
+---
+<aside class="sidebar" id="sidebar">
+  <div class="close-btn"><a href="#" aria-label="Close navigation">&times; Close</a></div>
+  <nav aria-label="Age range navigation">
+    {groupOrder.map(group => (
+      <div>
+        <div class="group-label">{groupLabels[group]}</div>
+        {groups[group]?.map(age => {
+          const href = `/ages/${age.slug}/`;
+          const isActive = currentPath.startsWith(href);
+          return <a href={href} class={isActive ? 'active' : ''}>{age.shortLabel}</a>;
+        })}
+      </div>
+    ))}
+  </nav>
+</aside>

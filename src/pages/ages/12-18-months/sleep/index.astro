@@ -1,211 +1,129 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "12-18 Month Sleep: Schedule, Regression & Tips",
-  "description": "How much sleep does a 12-18 month old need? Learn about nap transitions, sleep regression, bedtime routines, and tips for better toddler sleep.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '12\u201318 Month Sleep Guide: What to Expect and Is It Normal?';
+const description = 'Most toddlers aged 12\u201318 months need 11\u201314 hours of total sleep and transition from two naps to one by 15\u201318 months. Learn what to expect, how to handle the 18-month sleep regression, and when to talk to your pediatrician.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much sleep does an 18-month-old need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Toddlers aged 12-18 months need 11-14 hours of sleep per 24 hours, typically including 1-2 naps during the day."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When do toddlers drop from two naps to one?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most children transition from two naps to one between 14-18 months, though some do it earlier or later. Watch for signs like refusing one of the naps or being cranky after the morning nap."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the 18-month sleep regression?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The 18-month sleep regression is a common phase where toddlers suddenly start waking more at night, fighting bedtime, or cutting their naps short. It's often linked to developmental leaps, language development, and separation anxiety."
-      }
-    }
-  ]
-};
+const breadcrumbs = [
+  { label: '12\u201318 Months', href: '/ages/12-18-months/' },
+  { label: 'Sleep' },
+];
+
+const faqs = [
+  {
+    question: 'Is it normal for my 14-month-old to still take two naps?',
+    answer: 'Yes, completely normal. While some toddlers drop to one nap as early as 12 months, many children continue taking two naps until 15\u201318 months. The transition is gradual. Signs your child is ready for one nap include consistently fighting or skipping the second nap, taking a long time to fall asleep at bedtime, or waking very early in the morning. Follow your child\u2019s lead rather than forcing the transition by a specific date.',
+  },
+  {
+    question: 'Is it normal for my 18-month-old to suddenly start waking at night again?',
+    answer: 'Yes. The 18-month sleep regression is one of the most common disruptions parents face. It\u2019s driven by a combination of language development, growing independence, separation anxiety, and sometimes teething of canines or first molars. Most regressions last 2\u20136 weeks. Staying consistent with your bedtime routine and avoiding introducing new sleep associations (like bringing your toddler into your bed for the first time) will help you get through it.',
+  },
+  {
+    question: 'What are signs of a sleep problem vs. normal toddler sleep?',
+    answer: 'Normal toddler sleep includes occasional night waking, brief protests at bedtime, and some variation night to night. Signs of a potential sleep problem include loud snoring or gasping during sleep (which may indicate obstructive sleep apnea), consistently taking more than 45 minutes to fall asleep, total sleep that falls well below 11 hours in 24 hours on a regular basis, or extreme daytime irritability that interferes with eating and play. Discuss these patterns with your pediatrician.',
+  },
+  {
+    question: 'Is it normal for my toddler to need a specific routine or object to fall asleep?',
+    answer: 'Absolutely. Toddlers thrive on predictability, and a consistent bedtime routine helps signal that sleep is coming. Many children this age develop a strong attachment to a comfort object like a small blanket or stuffed animal. The AAP considers a single small lovey safe for most children over 12 months. A predictable routine \u2014 such as bath, pajamas, book, song, bed \u2014 is one of the most effective sleep strategies at this age.',
+  },
+  {
+    question: 'Should I sleep train my 12\u201318-month-old?',
+    answer: 'Sleep training is a personal decision, and many evidence-based methods are considered safe for toddlers over 12 months. Research published in Pediatrics has found that graduated extinction and bedtime fading do not cause long-term stress or harm to the parent-child relationship. However, sleep training is not required. Some families prefer gentler approaches, and some toddlers learn to self-soothe without formal training. Talk to your pediatrician about which approach fits your family.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-18-months/sleep/',
+});
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={breadcrumbs}>
+  <h1>12&ndash;18 Month Sleep Guide: What to Expect and Is It Normal?</h1>
 
-<BaseLayout title="12-18 Month Sleep: Schedule, Regression & Tips" description="Sleep guide for 12-18 month olds. Nap schedules, 18-month sleep regression, bedtime routines, and how much sleep your toddler needs." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>12-18 Month Sleep: What to Expect</h1>
-      <p class="article-meta">Ages 12-18 months · Updated March 2026</p>
-    </header>
+  <p>If you feel like your toddler's sleep just started getting predictable and now everything is changing again, you are not alone. The stretch between 12 and 18 months brings some of the biggest sleep transitions of early childhood &mdash; most notably the shift from two naps to one and the notoriously tricky 18-month sleep regression. The good news: these changes are signs of healthy development, and understanding what's happening can help you respond with confidence.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/12-18-months/">Overview</a>
-      <a href="/ages/12-18-months/milestones/">Milestones</a>
-      <a href="/ages/12-18-months/sleep/">Sleep</a>
-      <a href="/ages/12-18-months/behavior/">Behavior</a>
-      <a href="/ages/12-18-months/feeding/">Feeding</a>
-      <a href="/ages/12-18-months/language/">Language</a>
-    </div>
+  <h2>How Much Sleep Does a 12&ndash;18-Month-Old Need?</h2>
 
-    <div class="article-content">
-      <p>Sleep at this age can feel like a rollercoaster — just when you think you've figured it out, the 18-month sleep regression hits. This is normal. Your toddler is going through massive developmental changes that affect their sleep, and there's a lot you can do to navigate it.</p>
+  <p>The American Academy of Pediatrics (AAP), based on guidelines from the American Academy of Sleep Medicine, recommends that children aged 12&ndash;18 months get <strong>11&ndash;14 hours of total sleep per 24 hours</strong>, including naps. Most toddlers in this range sleep about 10&ndash;12 hours at night and take 1&ndash;2 naps during the day totaling 2&ndash;3 hours.</p>
 
-      <h2>How Much Sleep Does a 12-18 Month Old Need?</h2>
-      <p>The National Sleep Foundation recommends:</p>
-      <ul>
-        <li><strong>Total sleep:</strong> 11-14 hours per 24 hours</li>
-        <li><strong>Night sleep:</strong> About 11 hours (typically overnight)</li>
-        <li><strong>Day sleep:</strong> 2-3 hours (1-2 naps)</li>
-      </ul>
+  <p>These numbers are a guideline, not a rigid prescription. Some children thrive on 11 hours of total sleep, while others consistently need closer to 14. What matters most is that your toddler is generally well-rested: alert during wake windows, able to engage in play and feeding, and not excessively irritable throughout the day.</p>
 
-      <h2>The Nap Transition: Two Naps to One</h2>
-      <p>This is one of the biggest sleep changes you'll navigate between 12-18 months. Most children drop to one nap between 14-18 months, though the transition can be messy.</p>
+  <h2>What to Expect: The Transition from Two Naps to One</h2>
 
-      <h3>Signs Your Toddler Is Ready to Drop a Nap</h3>
-      <ul>
-        <li>Refusing the morning nap consistently</li>
-        <li>Taking a long time to fall asleep for one nap</li>
-        <li>Waking very early after the morning nap</li>
-        <li>Being cranky in the late afternoon (overtired)</li>
-        <li>Playing in their crib for 30+ minutes at one nap time</li>
-      </ul>
+  <p>One of the defining sleep milestones of this period is the <strong>two-to-one nap transition</strong>. Most children drop their second nap somewhere between 15 and 18 months, though some make the shift as early as 12 months and others hold onto two naps until close to age 2.</p>
 
-      <h3>How to Handle the Transition</h3>
-      <p>The transition typically takes 2-4 weeks. During this time:</p>
-      <ul>
-        <li>Push the morning nap later (around 9:30-10am)</li>
-        <li>Keep the afternoon nap (early afternoon, 12:30-2pm)</li>
-        <li>Adjust bedtime earlier if needed (to prevent overtiredness)</li>
-        <li>Once one nap is solid, drop the other</li>
-        <li>Most toddlers settle into a single nap around 1-3pm</li>
-      </ul>
+  <p>Signs your toddler may be ready for one nap include:</p>
+  <ul>
+    <li>Consistently fighting or refusing the afternoon nap for two or more weeks</li>
+    <li>Taking significantly longer to fall asleep at bedtime</li>
+    <li>Waking earlier than usual in the morning</li>
+    <li>Seeming happy and well-rested even on days when they skip the second nap</li>
+  </ul>
 
-      <h2>The 18-Month Sleep Regression</h2>
-      <p>Just when sleep was improving, many parents notice a regression around 18 months. This is extremely common and usually temporary.</p>
+  <p>The transition is rarely smooth. Expect a few weeks of inconsistency &mdash; some days your child will need two naps, and other days one nap will be enough. During this period, it helps to offer an earlier lunch and shift the single nap to midday (typically around 12:00&ndash;1:00 p.m.). You may also need to move bedtime earlier by 30&ndash;60 minutes on one-nap days to prevent overtiredness.</p>
 
-      <h3>What Causes It?</h3>
-      <ul>
-        <li><strong>Language explosion:</strong> Their brain is processing new words, even in sleep</li>
-        <li><strong>Separation anxiety:</strong> Peaks around this age</li>
-        <li><strong>Autonomy push:</strong> Testing boundaries extends to sleep</li>
-        <li><strong>Developmental leaps:</strong> New physical skills (running, climbing)</li>
-        <li><strong>Teething:</strong> Many get molars around 18 months</li>
-      </ul>
+  <h2>Signs of the 18-Month Sleep Regression</h2>
 
-      <h3>How Long Does It Last?</h3>
-      <p>Typically 2-6 weeks. The key is staying consistent with your routines while being flexible about what your toddler needs.</p>
+  <p>The <strong>18-month sleep regression</strong> catches many families off guard because it often hits right when parents thought they had sleep figured out. This regression is fueled by a perfect storm of developmental changes:</p>
 
-      <h2>Sample Sleep Schedules</h2>
+  <ul>
+    <li><strong>Language explosion:</strong> Your toddler's brain is processing new words at a rapid pace, which can make it harder to "turn off" at night.</li>
+    <li><strong>Separation anxiety:</strong> A normal developmental peak around 18 months makes bedtime goodbyes feel harder.</li>
+    <li><strong>Growing independence:</strong> Your toddler is learning to say "no" and assert preferences &mdash; including about going to bed.</li>
+    <li><strong>Teething:</strong> Canines and first molars often arrive between 16 and 20 months, causing discomfort.</li>
+  </ul>
 
-      <h3>12-14 Months (Two Naps)</h3>
-      <ul>
-        <li>Wake: 6:30-7:00 AM</li>
-        <li>Morning nap: 9:30-10:00 AM (1-1.5 hours)</li>
-        <li>Afternoon nap: 2:00-2:30 PM (1-1.5 hours)</li>
-        <li>Bedtime: 7:00-7:30 PM</li>
-      </ul>
+  <p>During a regression, you may see increased night waking, bedtime resistance, shorter naps, or early morning waking. Most regressions last <strong>2&ndash;6 weeks</strong>. The most effective strategy is consistency: maintain your established bedtime routine, avoid introducing new sleep crutches, and offer brief comfort when needed without creating new habits you'll need to undo later.</p>
 
-      <h3>15-18 Months (Transitioning or One Nap)</h3>
-      <ul>
-        <li>Wake: 6:30-7:00 AM</li>
-        <li>Nap: 12:30-2:30 PM (1.5-2.5 hours)</li>
-        <li>Bedtime: 7:00-7:30 PM</li>
-      </ul>
+  <h2>Night Waking: What's Normal at This Age?</h2>
 
-      <h2>Bedtime Routines That Work</h2>
-      <p>A consistent routine signals to your toddler that it's time to wind down:</p>
-      <ul>
-        <li><strong>Same order every night:</strong> Bath, book, song, bed</li>
-        <li><strong>20-30 minutes:</strong> Long enough to be effective, short enough to hold attention</li>
-        <li><strong>Calm activities:</strong> Avoid rough play or screens</li>
-        <li><strong>Dim lights:</strong> Help trigger melatonin production</li>
-        <li><strong>Same time:</strong> Consistency helps regulate their body clock</li>
-      </ul>
+  <p>Many parents assume that once a child reaches 12 months, they should be sleeping through the night without interruption. In reality, <strong>brief night wakings are a normal part of sleep architecture at every age</strong> &mdash; adults wake briefly between sleep cycles too, but usually don't remember it. The difference with toddlers is whether they can resettle independently.</p>
 
-      <h2>Common Sleep Problems & Solutions</h2>
+  <p>Occasional night waking is normal and expected. Your toddler may wake due to teething pain, a bad dream, illness, or simply the transition between sleep cycles. What to watch for is a <em>pattern</em> of frequent, prolonged wakings that leave your child chronically overtired during the day. If your toddler wakes multiple times every night and cannot fall back to sleep without extended parental intervention, it may be worth discussing sleep strategies with your pediatrician.</p>
 
-      <h3>Night Wakings</h3>
-      <p>It's normal for toddlers to wake occasionally. However, if it's frequent:</p>
-      <ul>
-        <li>Ensure they're getting enough daytime sleep (overtiredness causes more night wakings)</li>
-        <li>Check room temperature (cool is better — 65-68°F)</li>
-        <li>Review feeding schedule (hunger can cause wakings)</li>
-        <li>Keep responses brief and boring (don't turn on lights or play)</li>
-      </ul>
+  <h2>Sleep Training Considerations for 12&ndash;18 Months</h2>
 
-      <h3>Fighting Bedtime</h3>
-      <ul>
-        <li>Ensure adequate awake time before bed (4-5 hours for one-nap toddlers)</li>
-        <li>Check for overtiredness — being too tired makes falling harder</li>
-        <li>Offer controlled choices: "Which book first?" or "Which stuffed animal?"</li>
-        <li>Stay calm and consistent — your reaction matters</li>
-      </ul>
+  <p>If your toddler has difficulty falling asleep independently or relies on feeding, rocking, or your presence to fall asleep, you may be considering sleep training. Multiple studies, including a well-cited 2016 study in <em>Pediatrics</em>, have found that behavioral sleep interventions such as <strong>graduated extinction</strong> (checking at increasing intervals) and <strong>bedtime fading</strong> (gradually shifting bedtime earlier) are safe and effective. These studies found no negative effects on the child's stress levels, emotional development, or parent-child attachment.</p>
 
-      <h3>Early Morning Wakings</h3>
-      <ul>
-        <li>If waking before 6am, check if they're getting enough night sleep</li>
-        <li>Blackout curtains can help</li>
-        <li>Wait a few minutes — some toddlers resettle</li>
-        <li>Keep the room dark and boring</li>
-      </ul>
+  <p>Sleep training is not one-size-fits-all. Some families prefer more gradual approaches, such as the chair method (sitting near the crib and slowly moving farther away over several nights) or pick-up/put-down. The best method is one that parents can implement consistently and that respects their child's temperament.</p>
 
-      <h2>Safe Sleep Reminders</h2>
-      <ul>
-        <li>Continue placing toddler on their back to sleep</li>
-        <li>Use a firm, flat mattress with a fitted sheet</li>
-        <li>Keep soft objects and bedding out of the crib</li>
-        <li>Maintain a comfortable room temperature</li>
-        <li>Crib should be bare — no pillows, bumpers, or toys</li>
-      </ul>
+  <p>Regardless of method, a few strategies help at this age:</p>
+  <ul>
+    <li>Keep a consistent 15&ndash;30-minute bedtime routine (bath, pajamas, books, a song)</li>
+    <li>Put your toddler in the crib drowsy but awake when possible</li>
+    <li>Keep the room dark, cool (68&ndash;72&deg;F / 20&ndash;22&deg;C), and free of screens</li>
+    <li>Offer a comfort object if your child has one &mdash; the AAP considers a small lovey appropriate after 12 months</li>
+  </ul>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">Is the 18-month sleep regression real?</p>
-          <p class="faq-answer">Yes, it's very common. Most toddlers experience some sleep disruption around 18 months due to developmental leaps, language explosion, and separation anxiety. Stay consistent and it typically passes in 2-6 weeks.</p>
-        </div>
+  <h2>Creating a Sleep-Friendly Environment</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler still wakes 2-3 times at night. Is this normal?</p>
-          <p class="faq-answer">Some night waking is normal, but frequent wakings can often be reduced. Ensure adequate daytime sleep, review feeding, and keep middle-of-the-night interactions boring. If concerned, talk to your pediatrician.</p>
-        </div>
+  <p>The AAP's safe sleep guidelines still apply in the second year of life. Your toddler should continue sleeping in a <strong>crib with a firm, flat mattress</strong> and a fitted sheet. Avoid pillows, heavy blankets, and bumper pads. Most children are not ready for a toddler bed until at least age 2, and many families wait until closer to age 3 &mdash; there is no rush unless your child is consistently climbing out of the crib and at risk of falling.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">When can I transition to a toddler bed?</p>
-          <p class="faq-answer">Most children aren't ready until 2.5-3 years. Signs of readiness include climbing out of the crib, being potty trained, or showing interest in a "big kid" bed. Moving too early can cause more sleep problems.</p>
-        </div>
+  <p>White noise, blackout curtains, and a consistent room temperature all support better sleep quality. Screen time should end at least one hour before bed, per AAP media guidelines.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler won't sleep without me. What should I do?</p>
-          <p class="faq-answer">This is common and stems from separation anxiety. Try leaving for brief periods and returning, sitting next to the crib instead of holding, or using a lovey (if over 12 months and safe). Consistency is key.</p>
-        </div>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Most sleep challenges at this age are developmental and temporary. However, contact your pediatrician if your toddler:</p>
+    <ul>
+      <li>Snores loudly, gasps, or pauses breathing during sleep (possible obstructive sleep apnea)</li>
+      <li>Consistently gets fewer than 11 hours of total sleep and appears chronically overtired</li>
+      <li>Has experienced a significant regression in sleep that lasts more than 6 weeks</li>
+      <li>Shows signs of extreme distress at bedtime that are not improving with consistent routines</li>
+      <li>Has frequent, prolonged night terrors or sleepwalking episodes</li>
+    </ul>
+    <p>Your pediatrician can rule out medical causes (such as ear infections, reflux, or sleep-disordered breathing) and refer you to a pediatric sleep specialist if needed.</p>
+  </div>
+
+  <section class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Snoring, gasping, or breathing difficulties during sleep</li>
-          <li>Sleep apnea symptoms (pauses in breathing)</li>
-          <li>Persistent difficulty sleeping despite consistent routines</li>
-          <li>Excessive daytime sleepiness</li>
-          <li>Sleep terrors (screaming, thrashing but not awake)</li>
-          <li>Any concerns about breathing during sleep</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+    ))}
+  </section>
 </BaseLayout>

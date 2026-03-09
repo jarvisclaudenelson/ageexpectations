@@ -1,253 +1,152 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "5-6 Year Milestones: Kindergarten Development Checklist",
-  "description": "Complete developmental milestones checklist for 5-6 year olds. Physical, cognitive, language, and social-emotional milestones for kindergarten age.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
+const title = '5–6 Year Old Milestones: What to Expect and Signs of School Readiness';
+const description = 'Key milestones for 5 to 6 year olds: counting to 10+, writing letters, hopping and skipping, dressing independently, telling stories, cooperative play, and signs of kindergarten readiness.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 5-year-old to not read yet?',
+    answer: 'Yes, this is very common and within the range of normal development. While some 5-year-olds read simple books, many are still learning letter sounds and building the pre-reading skills that make fluent reading possible. The AAP and most reading researchers emphasize that many children don\'t read independently until age 6 or 7. What\'s important at age 5 is interest in books, letter recognition, and understanding that print has meaning.'
+  },
+  {
+    question: 'What to expect with handwriting at this age?',
+    answer: 'Most 5-year-olds can write their first name and some familiar letters, but the writing may be large, uneven, and include reversed letters — particularly b/d, p/q, and some numbers. This is developmentally normal and typically resolves by age 7. Fine motor control is still developing, so keep writing activities fun and low-pressure. If your child can hold a pencil with a functional grip and is making attempts to write, they\'re on track.'
+  },
+  {
+    question: 'Is it normal for my child to struggle with losing at games?',
+    answer: 'Absolutely. Understanding how to lose gracefully is a skill that takes years to develop. At 5 to 6, children are beginning to grasp rules and competition, but their emotional regulation isn\'t mature enough to handle disappointment calmly every time. Tears, frustration, and "that\'s not fair" are all typical responses. Practice with low-stakes games and focus on modeling good sportsmanship rather than expecting it consistently.'
+  },
+  {
+    question: 'Signs my child might need extra support starting school?',
+    answer: 'Some signs that may indicate a need for additional evaluation include: difficulty separating from caregivers that doesn\'t improve after the first few weeks, inability to follow classroom routines with typical adult guidance, speech that is difficult for unfamiliar adults to understand, significant difficulty holding a pencil or using scissors, avoiding interaction with other children, or frequent and intense behavioral outbursts that disrupt learning. Your pediatrician and the school\'s support team can help determine next steps.'
+  },
+  {
+    question: 'Is it normal for my 6-year-old to still mix up letters like b and d?',
+    answer: 'Yes. Letter reversals are extremely common at ages 5 and 6 and are a normal part of learning to write. The brain is still developing the directional processing skills needed to consistently distinguish mirror-image letters. Most children outgrow reversals by age 7 to 8. If reversals persist beyond second grade or are accompanied by significant reading difficulty, discuss a dyslexia screening with your pediatrician or school.'
   }
-};
+];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What milestones should a 5-year-old achieve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At 5, most children can hop on one foot, write some letters, count to 20, tell simple stories, and play cooperatively with rules. They should be mostly understandable when speaking."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should a 6-year-old be able to do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At 6, most children can skip, print letters and numbers, read simple words, tell time to the hour, and follow multi-step directions. They have established friendships and can manage emotions with support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When do children learn to read?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most children learn to read between ages 5-7. Some read earlier, some later — both can be normal. Kindergarten and first grade are when formal reading instruction typically begins."
-      }
-    }
-  ]
-};
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/milestones/',
+});
+
+const faqData = faqSchema(faqs);
 ---
 
-<BaseLayout title="5-6 Year Milestones: Kindergarten Development Checklist" description="Complete developmental milestones checklist for 5-6 year olds. Physical, cognitive, language, and social milestones for kindergarten age." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>5-6 Year Milestones: Development Checklist</h1>
-      <p class="article-meta">Ages 5-6 years · Updated March 2026</p>
-    </header>
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '5–6 Years', href: '/ages/5-6-years/' }, { label: 'Milestones' }]}>
 
-    <div class="topic-nav">
-      <a href="/ages/5-6-years/">Overview</a>
-      <a href="/ages/5-6-years/milestones/">Milestones</a>
-      <a href="/ages/5-6-years/sleep/">Sleep</a>
-      <a href="/ages/5-6-years/behavior/">Behavior</a>
-      <a href="/ages/5-6-years/school/">School</a>
-    </div>
+  <h1>5–6 Year Old Milestones: What to Expect and Signs of School Readiness</h1>
 
-    <div class="article-content">
-      <p>The years between 5 and 6 bring remarkable changes as children transition from preschoolers to students. This guide covers the developmental milestones to expect, based on CDC and AAP guidelines.</p>
+  <p>Watching your five- or six-year-old get ready for school — packing their own backpack, chattering about their friends, sounding out a word on a cereal box — you can see just how far they've come. But you might also wonder: are they where they should be? This guide walks through the major milestones for this age, what school readiness actually looks like, and when a conversation with your pediatrician makes sense.</p>
 
-      <h2>5 Year Milestones</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Stands on one foot for 10 seconds or longer</li>
-        <li>Hops; may be able to skip</li>
-        <li>Can do a somersault</li>
-        <li>Uses a fork and spoon and sometimes a table knife</li>
-        <li>Can use the toilet on their own</li>
-        <li>Swings and climbs</li>
-        <li>Copies triangle and other geometric patterns</li>
-        <li>Draws a person with body and limbs</li>
-        <li>Prints some letters or numbers</li>
-      </ul>
+  <h2>Cognitive Milestones: Signs of Academic Readiness</h2>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Speaks very clearly</li>
-        <li>Tells a simple story using full sentences</li>
-        <li>Uses future tense ("Grandma will be here")</li>
-        <li>Says name and address</li>
-        <li>Understands rhyming</li>
-        <li>Knows about things used every day (money, food, appliances)</li>
-        <li>Vocabulary of 2,000+ words</li>
-      </ul>
+  <h3>Counting and Number Sense</h3>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Counts 10 or more things</li>
-        <li>Can draw a person with at least 6 body parts</li>
-        <li>Can print some letters or numbers</li>
-        <li>Copies a triangle and other geometric shapes</li>
-        <li>Knows about things used every day (money, food, appliances)</li>
-        <li>Understands the concept of time (morning, afternoon, tomorrow)</li>
-        <li>Can follow 2-3 step instructions</li>
-      </ul>
+  <p>By age 5, most children can count to 10 or higher with confidence, and many can count to 20 or beyond. More importantly, they're developing one-to-one correspondence — understanding that each number word matches one object. They can tell you which group has "more" and are beginning to understand simple addition and subtraction using physical objects ("If I take one away, how many are left?").</p>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Wants to please friends</li>
-        <li>Wants to be like friends</li>
-        <li>More likely to agree with rules</li>
-        <li>Likes to sing, dance, and act</li>
-        <li>Is aware of gender</li>
-        <li>Can tell what's real and what's make-believe</li>
-        <li>Shows more independence</li>
-        <li>Is sometimes demanding and sometimes very cooperative</li>
-      </ul>
+  <p>By 6, many children can count to 100, recognize written numerals to 20 or more, and solve basic addition problems. The CDC's developmental milestones note that early math skills at this age lay the groundwork for mathematical thinking throughout school.</p>
 
-      <h2>6 Year Milestones</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Can skip, gallop, and jump rope</li>
-        <li>Can ride a bike (some without training wheels)</li>
-        <li>Prints letters and numbers clearly</li>
-        <li>Copies complex shapes</li>
-        <li>Ties shoelaces (with practice)</li>
-        <li>Uses utensils proficiently</li>
-        <li>Dresses self completely</li>
-        <li>Bathes self (with supervision)</li>
-      </ul>
+  <h3>Writing Letters and Numbers</h3>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Speaks in complex sentences</li>
-        <li>Can tell and retell stories in sequence</li>
-        <li>Understands jokes and riddles</li>
-        <li>Asks questions to gain information</li>
-        <li>Uses most speech sounds correctly</li>
-        <li>May stutter when excited or upset (usually temporary)</li>
-        <li>Enjoys wordplay and rhymes</li>
-      </ul>
+  <p>Most 5-year-olds can write their first name and copy or write several letters of the alphabet. Letter formation is often large and imperfect — reversed letters (especially b, d, p, and q) are completely normal at this stage. By 6, children typically write most uppercase and lowercase letters, their full name, and some simple words. Number writing follows a similar pattern: recognizable but not always neat, with occasional reversals.</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Counts to 100 by ones and tens</li>
-        <li>Recognizes and writes numbers to 20</li>
-        <li>Knows basic addition and subtraction</li>
-        <li>Understands concepts of time (yesterday, today, tomorrow)</li>
-        <li>Can tell time to the hour</li>
-        <li>Knows days of the week</li>
-        <li>Understands cause and effect</li>
-        <li>Can group objects by multiple characteristics</li>
-      </ul>
+  <p>The key fine motor milestone isn't perfect penmanship — it's a functional pencil grip and the willingness to attempt writing. Children who are drawing pictures, labeling their artwork, and experimenting with letters are right on track.</p>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Has established friendships</li>
-        <li>Understands rules and fair play</li>
-        <li>Shows empathy for others</li>
-        <li>Can manage emotions with support</li>
-        <li>Seeks approval from adults</li>
-        <li>May be critical of self and others</li>
-        <li>Enjoys group activities and games</li>
-        <li>Can separate from parents for school</li>
-      </ul>
+  <h3>Telling Stories and Understanding Time</h3>
 
-      <h2>Reading Readiness</h2>
-      <p>Before formal reading instruction, children typically show:</p>
-      <ul>
-        <li>Interest in books and stories</li>
-        <li>Recognizes own name in print</li>
-        <li>Knows some letters and their sounds</li>
-        <li>Understands that print carries meaning</li>
-        <li>Can retell a simple story</li>
-        <li>Recognizes some common words (stop, exit, their name)</li>
-      </ul>
-      <p>Some children read before kindergarten; others learn in first grade. Both are within the normal range.</p>
+  <p>Five- and six-year-olds love to tell stories — about their day, about a movie they watched, about an elaborate imaginary adventure. These narratives become more organized over the year, with a beginning, middle, and end. The ability to retell a story in sequence is an important language and cognitive milestone that supports reading comprehension later on.</p>
 
-      <h2>Math Concepts</h2>
-      <p>Early math skills include:</p>
-      <ul>
-        <li>Counts objects accurately</li>
-        <li>Recognizes written numbers</li>
-        <li>Understands one-to-one correspondence</li>
-        <li>Sorts objects by attributes</li>
-        <li>Recognizes simple patterns</li>
-        <li>Understands "more" and "less"</li>
-        <li>Knows basic shapes</li>
-      </ul>
+  <p>Understanding time concepts is emerging at this age. Most 5-to-6-year-olds understand "yesterday," "today," and "tomorrow," know the days of the week (even if the order isn't perfect), and can describe events as happening "in the morning" or "after lunch." They're beginning to understand waiting and can grasp simple explanations of "in five minutes" — though their patience may not always match their understanding.</p>
 
-      <h2>Fine Motor Development</h2>
-      <p>Hand skills important for school:</p>
-      <ul>
-        <li>Holds pencil with tripod grip</li>
-        <li>Draws recognizable pictures</li>
-        <li>Writes some letters and numbers</li>
-        <li>Uses scissors to cut along lines</li>
-        <li>Colors within lines</li>
-        <li>Manages buttons, zippers, snaps</li>
-        <li>Pours without spilling</li>
-      </ul>
+  <h2>Physical Milestones: What to Expect with Coordination</h2>
 
-      <h2>Red Flags: When to Be Concerned</h2>
-      <p>Talk to your pediatrician if your child:</p>
-      <ul>
-        <li>Can't jump in place or hop on one foot</li>
-        <li>Can't draw a circle, square, or simple person</li>
-        <li>Can't brush teeth, wash and dry hands, or get undressed</li>
-        <li>Can't use the toilet independently</li>
-        <li>Can't retell a favorite story</li>
-        <li>Speech is not understandable to strangers</li>
-        <li>Can't follow two-part instructions</li>
-        <li>Doesn't play with other children</li>
-        <li>Extreme behavior (fearful, aggressive, shy, withdrawn)</li>
-        <li>Can't correctly name colors</li>
-        <li>Can't understand the difference between real and make-believe</li>
-        <li>Doesn't talk about daily activities or experiences</li>
-      </ul>
+  <h3>Gross Motor Skills</h3>
 
-      <h2>Supporting Development</h2>
-      <p>Activities that help 5-6 year olds thrive:</p>
-      <ul>
-        <li><strong>Reading together:</strong> Daily reading builds literacy skills</li>
-        <li><strong>Games:</strong> Board games teach turn-taking and rules</li>
-        <li><strong>Physical play:</strong> Running, climbing, bike riding</li>
-        <li><strong>Arts and crafts:</strong> Drawing, cutting, building</li>
-        <li><strong>Chores:</strong> Age-appropriate tasks build responsibility</li>
-        <li><strong>Conversation:</strong> Talk about their day, answer questions</li>
-        <li><strong>Playdates:</strong> Social skills develop through interaction</li>
-      </ul>
+  <p>The physical confidence of a 5-to-6-year-old is a joy to watch. Key gross motor milestones include:</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My child can't read yet at 6. Should I be worried?</p>
-          <p class="faq-answer">No — most children learn to read between ages 5-7. If your child is progressing in other areas and shows interest in books, they're likely on track. First grade is when many children really take off with reading.</p>
-        </div>
+  <ul>
+    <li><strong>Hopping and skipping:</strong> Most 5-year-olds can hop on one foot for several seconds and many can skip. By 6, skipping is usually smooth and confident.</li>
+    <li><strong>Catching and throwing:</strong> Children can catch a ball thrown from several feet away and throw with reasonable aim. These skills support participation in group sports and recess games.</li>
+    <li><strong>Riding a bike:</strong> Many children learn to ride a two-wheeler (without training wheels) between ages 5 and 6, though the timing varies widely and is influenced by practice and interest.</li>
+    <li><strong>Climbing and balancing:</strong> Playground equipment that was once intimidating becomes manageable. Monkey bars, climbing walls, and balance beams are age-appropriate challenges.</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">My kindergartener still reverses letters. Is this dyslexia?</p>
-          <p class="faq-answer">Letter reversals are very common through age 7 and are usually not a sign of dyslexia. Children are still learning the visual forms of letters. If reversals persist beyond second grade or come with other concerns, discuss with your pediatrician.</p>
-        </div>
+  <h3>Fine Motor Skills and Self-Care</h3>
 
-        <div class="faq-item">
-          <p class="faq-question">Should my 5-year-old know all their letters?</p>
-          <p class="faq-answer">Recognition of some letters (especially those in their name) is helpful, but knowing all letters is not required for kindergarten success. Kindergarten is designed to teach letter recognition and sounds.</p>
-        </div>
+  <p>Fine motor development at this age directly supports school readiness:</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My child is left-handed. Should I try to change this?</p>
-          <p class="faq-answer">No — handedness is determined by the brain and should not be changed. Left-handed children may need left-handed scissors and may write with a different pencil grip, but they develop normally.</p>
-        </div>
+  <ul>
+    <li><strong>Dresses independently:</strong> Buttons, zippers, and snaps are manageable (tying shoes usually comes closer to age 6 or 7). Choosing and putting on their own clothes is a daily demonstration of independence.</li>
+    <li><strong>Uses scissors:</strong> Cutting along a line with reasonable accuracy is expected by kindergarten entry.</li>
+    <li><strong>Draws with detail:</strong> A person drawn by a 5-year-old typically has a head, body, arms, legs, and facial features. By 6, drawings include more detail — fingers, clothing, backgrounds.</li>
+    <li><strong>Self-care independence:</strong> Using the bathroom independently, washing hands, and brushing teeth (with supervision for thoroughness) are expected by this age.</li>
+  </ul>
+
+  <h2>Social-Emotional Milestones: Signs of Growing Maturity</h2>
+
+  <h3>Cooperative Play and Friendships</h3>
+
+  <p>By 5 to 6, parallel play has given way to truly cooperative play. Children plan games together, assign roles, negotiate rules, and work through disagreements — sometimes with adult help, sometimes on their own. Friendships become more stable and specific; your child may talk about a "best friend" and show loyalty to their social group.</p>
+
+  <p>The AAP notes that cooperative play is one of the most important social milestones of early childhood. It requires perspective-taking, communication, impulse control, and emotional regulation — all working together in real time.</p>
+
+  <h3>Following Multi-Step Instructions</h3>
+
+  <p>A critical milestone for school readiness is the ability to follow two- and three-step instructions: "Put your lunchbox in your cubby, hang up your coat, and sit at your desk." This skill requires working memory, attention, and sequencing — all of which are developing rapidly at this age. Most kindergarteners can follow multi-step directions consistently by mid-year, though they may need reminders and repetition early on.</p>
+
+  <h3>Understanding Rules and Fairness</h3>
+
+  <p>Five- and six-year-olds care deeply about rules. They'll tell you (and everyone else) when someone breaks one. This isn't tattling for the sake of it — it reflects a growing moral understanding. Children at this age understand that rules exist for a reason, feel genuine distress when things seem "unfair," and are developing the capacity to follow rules even when an adult isn't watching.</p>
+
+  <h2>CDC Milestone Checklist: A Quick Reference for 5–6 Years</h2>
+
+  <p>Based on the CDC's developmental milestone resources, children at 5 to 6 years are generally expected to:</p>
+
+  <ul>
+    <li>Count 10 or more objects</li>
+    <li>Print some letters and numbers</li>
+    <li>Copy a triangle and other geometric shapes</li>
+    <li>Know about things used every day (money, food, appliances)</li>
+    <li>Hop and possibly skip</li>
+    <li>Use a fork, spoon, and sometimes a knife</li>
+    <li>Use the toilet independently</li>
+    <li>Swing and climb</li>
+    <li>Tell a simple story with a beginning, middle, and end</li>
+    <li>Say their full name and address</li>
+    <li>Play cooperatively with other children</li>
+    <li>Distinguish fantasy from reality most of the time</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-    </div>
-  </article>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The transition to school is a natural time to assess your child's development more closely. Talk to your pediatrician if your 5-to-6-year-old:</p>
+    <ul>
+      <li>Cannot tell you about their daily activities using sentences</li>
+      <li>Shows no interest in letters, numbers, or being read to</li>
+      <li>Cannot follow two-step instructions without visual cues</li>
+      <li>Is unable to draw a recognizable person (head, body, limbs)</li>
+      <li>Has difficulty playing with other children or is consistently rejected by peers</li>
+      <li>Cannot dress, eat, or use the bathroom without significant adult help</li>
+      <li>Seems extremely anxious about school or separation for more than the first few weeks</li>
+      <li>Has speech that is difficult for unfamiliar adults to understand</li>
+    </ul>
+    <p>Schools also offer screening and evaluation services under federal law (IDEA). If your child is struggling, you can request an evaluation through your school district at no cost. Your pediatrician can guide you through this process and help coordinate any outside therapies — such as speech, occupational therapy, or behavioral support — that may be recommended.</p>
+  </div>
+
 </BaseLayout>

@@ -1,250 +1,118 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "2-3 Year Language Development: Speech Milestones",
-  "description": "Language explosion at 2-3 years. Learn about vocabulary growth, sentence development, speech clarity, and when to seek help for speech delays.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '2–3 Year Old Language Development: What to Expect and Signs of Progress';
+const description = 'Between ages 2 and 3, most children go from speaking around 50 words to 200–1,000 words, combining words into short sentences, and beginning to ask "why?" — here is what to expect and when to talk to your pediatrician.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How many words should a 2-year-old say?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most 2-year-olds have a vocabulary of 50+ words and are starting to combine two words together. By age 3, vocabularies typically reach 200+ words."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I worry about speech delay?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Talk to your pediatrician if your child has fewer than 50 words at 2 years, no two-word phrases by 2, or if you can't understand at least 50% of their speech by age 2."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it normal for my 3-year-old to stutter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Some disfluency is normal between 2-5 years as language develops rapidly. However, if stuttering persists longer than 6 months, worsens, or is accompanied by tension, consult a speech therapist."
-      }
-    }
-  ]
-};
+const faqs = [
+  {
+    question: 'Is it normal for my 2-year-old to not be talking yet?',
+    answer: 'Some 2-year-olds are "late talkers" who understand language well but use fewer than 50 words. About 15–20% of 2-year-olds fall into this category, and roughly half catch up on their own by age 3. However, the AAP recommends a speech-language evaluation if your child has fewer than 50 words by 24 months or is not combining two words together (e.g., "more milk"). Early intervention can make a significant difference, so it is always worth discussing concerns with your pediatrician.',
+  },
+  {
+    question: 'What are signs of a language delay in a 2–3 year old?',
+    answer: 'Signs to watch for include: using fewer than 50 words by age 2, not combining two words by 24 months, difficulty following simple one-step directions, loss of words or skills previously acquired, not pointing to objects or pictures when named, limited interest in communicating with others, and strangers being unable to understand any of your child\'s speech by age 2. The CDC milestone checklist recommends discussing any of these patterns with your child\'s doctor.',
+  },
+  {
+    question: 'Is it normal for my toddler to stutter?',
+    answer: 'Mild disfluency — repeating sounds, syllables, or words — is very common between ages 2 and 3 as children learn to form longer sentences. This developmental stuttering usually resolves on its own within a few months. However, talk to your pediatrician or a speech-language pathologist if the stuttering lasts longer than 6 months, seems to be getting worse, involves visible tension or struggle, or if your child avoids speaking because of it.',
+  },
+  {
+    question: 'How many words should a 3-year-old say?',
+    answer: 'Most 3-year-olds have a vocabulary of 200 to 1,000 words and speak in sentences of three to four words. They can typically name familiar objects, use pronouns like "I," "me," and "you," ask questions, and carry on a simple conversation. A familiar listener should understand roughly 75% of what a 3-year-old says. If your child has significantly fewer words or is difficult to understand, discuss it with your pediatrician.',
+  },
+  {
+    question: 'Is it normal for my 2-year-old to mix up pronouns?',
+    answer: 'Yes, this is completely normal. Pronouns are one of the trickiest parts of language for toddlers because the correct word changes depending on who is speaking. Many 2-year-olds refer to themselves by name or say "me want" instead of "I want." Most children sort out basic pronoun use (I, me, you) by around age 3, with more complex pronouns (he, she, they) falling into place between 3 and 4.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/2-3-years/language/',
+});
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '2–3 Years', href: '/ages/2-3-years/' },
+    { label: 'Language & Communication' },
+  ]}
+>
+  <h1>2–3 Year Old Language Development: What to Expect and Signs of Progress</h1>
 
-<BaseLayout title="2-3 Year Language Development: Speech Milestones" description="Language development guide for 2-3 year olds. Vocabulary growth, sentence development, speech clarity, and when to seek help for speech delays." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>2-3 Year Language Development: Speech Milestones</h1>
-      <p class="article-meta">Ages 24-36 months · Updated March 2026</p>
-    </header>
+  <p>If you have a toddler between the ages of 2 and 3, you are probably witnessing one of the most dramatic leaps in all of childhood development: the language explosion. One week your child seems to have a handful of go-to words; a few weeks later, new words are appearing daily and getting strung together in combinations you have never heard before. It is thrilling, occasionally hilarious, and — for many parents — a source of quiet worry when things do not seem to be moving as fast as expected.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/2-3-years/">Overview</a>
-      <a href="/ages/2-3-years/milestones/">Milestones</a>
-      <a href="/ages/2-3-years/sleep/">Sleep</a>
-      <a href="/ages/2-3-years/behavior/">Behavior</a>
-      <a href="/ages/2-3-years/language/">Language</a>
-      <a href="/ages/2-3-years/feeding/">Feeding</a>
-    </div>
+  <p>Here is what the research says about language development during this stage, what the typical range looks like, and how to know when it might be worth talking to your pediatrician.</p>
 
-    <div class="article-content">
-      <p>The language explosion between ages 2 and 3 is one of the most dramatic developmental leaps you'll witness. Your child goes from simple words to complex sentences, and their ability to express themselves transforms their world — and yours.</p>
+  <h2>What to Expect: The Vocabulary Explosion from 2 to 3</h2>
 
-      <h2>Language Milestones by Age</h2>
+  <p>The difference between a typical 2-year-old's language and a typical 3-year-old's language is enormous. According to the American Academy of Pediatrics (AAP) and the CDC's updated developmental milestone checklists, here is a general picture of what happens during this year:</p>
 
-      <h3>24 Months (2 Years)</h3>
-      <ul>
-        <li>Vocabulary of 50+ words</li>
-        <li>Combines two words ("more milk," "daddy go")</li>
-        <li>Uses words to request and protest</li>
-        <li>Points to named objects</li>
-        <li>Follows simple 1-2 step instructions</li>
-        <li>Speech is about 50% understandable to strangers</li>
-        <li>Uses pronouns: me, mine, you</li>
-      </ul>
+  <ul>
+    <li><strong>At age 2:</strong> Most children use at least 50 words and are beginning to put two words together ("more juice," "daddy go," "big truck"). They can follow simple one-step instructions ("Give me the ball") and point to objects or pictures when you name them.</li>
+    <li><strong>By age 2½:</strong> Vocabulary grows rapidly — many children are adding several new words per week. Two-word phrases become more frequent and varied, and some children begin using three-word combinations.</li>
+    <li><strong>By age 3:</strong> Most children have a vocabulary of 200 to 1,000 words and speak in sentences of three to four (or more) words. They ask questions, use pronouns (I, me, you), describe things they see, and can carry on a simple back-and-forth conversation.</li>
+  </ul>
 
-      <h3>30 Months (2.5 Years)</h3>
-      <ul>
-        <li>Vocabulary of 100+ words</li>
-        <li>Uses 2-3 word sentences</li>
-        <li>Asks "what" and "where" questions</li>
-        <li>Uses action words (run, jump, eat)</li>
-        <li>Speech is 60-70% understandable</li>
-        <li>Uses plurals (sometimes incorrectly)</li>
-        <li>Follows 2-3 step instructions</li>
-      </ul>
+  <p>This rapid growth is sometimes called the "vocabulary explosion" or "word spurt," and it is one of the hallmarks of the toddler years.</p>
 
-      <h3>36 Months (3 Years)</h3>
-      <ul>
-        <li>Vocabulary of 200+ words</li>
-        <li>Speaks in 3-4 word sentences</li>
-        <li>Asks "why" questions constantly</li>
-        <li>75% understandable to strangers</li>
-        <li>Uses pronouns: I, you, me, we</li>
-        <li>Can tell simple stories</li>
-        <li>Understands opposites (hot/cold, up/down)</li>
-        <li>Follows 3-step instructions</li>
-      </ul>
+  <h2>Signs of Typical Language Progress at This Age</h2>
 
-      <h2>The Language Explosion</h2>
-      <p>Between 18 months and 3 years, children typically learn 5-10 new words per day. This rapid growth is driven by:</p>
-      <ul>
-        <li>Brain development in language centers</li>
-        <li>Increased social interaction</li>
-        <li>Cognitive growth enabling word association</li>
-        <li>Imitation of caregivers</li>
-        <li>Need to communicate needs and desires</li>
-      </ul>
+  <p>Every child follows their own timeline, but the AAP and CDC highlight several language milestones parents can look for between ages 2 and 3:</p>
 
-      <h2>Speech Sound Development</h2>
-      <p>Speech clarity improves significantly between 2-3 years:</p>
-      <ul>
-        <li><strong>Age 2:</strong> About 50% understandable to strangers</li>
-        <li><strong>Age 2.5:</strong> 60-70% understandable</li>
-        <li><strong>Age 3:</strong> 75%+ understandable</li>
-      </ul>
-      <p>Some sounds develop later — /r/, /th/, and /l/ may not be mastered until 5-7 years.</p>
+  <ul>
+    <li><strong>Combining words:</strong> By 24 months, most children are putting at least two words together to express ideas ("want cookie," "no nap").</li>
+    <li><strong>Following directions:</strong> A 2-year-old should be able to follow simple one-step directions. By 3, most children follow two-step instructions ("Pick up your shoes and put them by the door").</li>
+    <li><strong>Naming objects and pictures:</strong> Your child should be able to point to and name common objects, body parts, and pictures in a book.</li>
+    <li><strong>Asking "why?":</strong> The famous "why" stage typically begins around age 2½ to 3. This reflects growing curiosity and an understanding that language can be used to learn about the world.</li>
+    <li><strong>Using pronouns:</strong> Children begin experimenting with pronouns like "I," "me," and "you" during this period, though mix-ups are very common.</li>
+    <li><strong>Being understood by others:</strong> At age 2, strangers typically understand about 50% of a child's speech. By age 3, that number rises to roughly 75%. Familiar caregivers usually understand more.</li>
+  </ul>
 
-      <h2>Types of Words Children Learn</h2>
-      <p>Early vocabularies typically include:</p>
-      <ul>
-        <li><strong>Nouns:</strong> Names of people, animals, objects (mama, dog, ball)</li>
-        <li><strong>Action words:</strong> eat, go, play, sleep</li>
-        <li><strong>Social words:</strong> hi, bye, please, thank you</li>
-        <li><strong>Descriptive words:</strong> big, hot, more, all gone</li>
-        <li><strong>Location words:</strong> up, down, in, out</li>
-      </ul>
+  <h2>What Drives Language Development at This Stage?</h2>
 
-      <h2>Promoting Language Development</h2>
-      <p>You don't need special programs — everyday interaction builds language:</p>
+  <p>Language growth between 2 and 3 is driven by a combination of neurological maturation and environmental input. Research consistently shows that the single most powerful thing parents can do is <strong>talk with their child</strong> — narrating daily activities, reading books together, responding to their attempts to communicate, and expanding on what they say. If your child says "big dog," you might respond, "Yes, that is a big brown dog! He is running fast."</p>
 
-      <h3>Talk to Your Child</h3>
-      <ul>
-        <li>Narrate your day: "We're putting on your shoes"</li>
-        <li>Ask questions and wait for responses</li>
-        <li>Respond to their attempts — even babbling</li>
-        <li>Use real words, not baby talk</li>
-      </ul>
+  <p>The AAP recommends reading together every day and limiting screen time to no more than one hour per day of high-quality programming for children ages 2 to 5. Studies show that back-and-forth conversation — the "serve and return" of communication — is more important for language development than the total number of words a child hears.</p>
 
-      <h3>Read Together</h3>
-      <ul>
-        <li>Read daily — any time counts</li>
-        <li>Ask questions about the pictures</li>
-        <li>Let them "read" familiar books</li>
-        <li>Point to words as you read</li>
-      </ul>
+  <h2>Speech Clarity: What to Expect and What Is Normal</h2>
 
-      <h3>Sing and Play</h3>
-      <ul>
-        <li>Songs teach rhythm and vocabulary</li>
-        <li>Rhyming games build phonemic awareness</li>
-        <li>Pretend play encourages language use</li>
-        <li>Follow their lead in play and talk about it</li>
-      </ul>
+  <p>It is important to distinguish between <strong>language</strong> (the words and sentences a child uses) and <strong>speech</strong> (how clearly they pronounce those words). Between ages 2 and 3, many speech sounds are still developing. It is completely normal for a 2-year-old to substitute, distort, or drop certain sounds — for example, saying "wabbit" for "rabbit" or "nana" for "banana."</p>
 
-      <h3>Expand Their Words</h3>
-      <ul>
-        <li>Child: "Dog!" You: "Yes, a big brown dog!"</li>
-        <li>Child: "Juice!" You: "You want more juice?"</li>
-        <li>Add one or two words to what they say</li>
-      </ul>
+  <p>According to the AAP, the sounds most children master first are p, b, m, h, n, w, d, and t. Sounds like r, l, s, sh, ch, and th often do not fully develop until ages 4 to 6 or later. The key measure at this age is overall intelligibility — can listeners get the gist of what your child is saying? — rather than perfect pronunciation.</p>
 
-      <h2>When to Seek Help</h2>
-      <p>The American Academy of Pediatrics recommends discussing speech concerns if:</p>
-      <ul>
-        <li>Fewer than 50 words at 2 years</li>
-        <li>No two-word phrases by 2 years</li>
-        <li>Less than 50% understandable at 2 years</li>
-        <li>Doesn't follow simple instructions</li>
-        <li>Doesn't point or gesture</li>
-        <li>No interest in communicating</li>
-        <li>Regression in speech skills</li>
-      </ul>
+  <h2>Bilingual and Multilingual Families</h2>
 
-      <h2>Types of Speech Delays</h2>
-      <p>Speech and language delays can be different:</p>
-      <ul>
-        <li><strong>Expressive delay:</strong> Understanding language but not speaking much</li>
-        <li><strong>Receptive delay:</strong> Difficulty understanding language</li>
-        <li><strong>Speech disorder:</strong> Difficulty producing sounds</li>
-        <li><strong>Language disorder:</strong> Difficulty using language appropriately</li>
-      </ul>
+  <p>Children growing up with two or more languages may have a slightly smaller vocabulary in each individual language compared to monolingual peers, but their <strong>total vocabulary across all languages</strong> is typically comparable. The AAP supports raising children bilingually and notes that bilingualism does not cause language delays. If you are raising your child with multiple languages, count words from all languages when tracking vocabulary milestones.</p>
 
-      <h2>Early Intervention</h2>
-      <p>If you're concerned about speech:</p>
-      <ul>
-        <li>Talk to your pediatrician</li>
-        <li>Request a hearing test (hearing issues can affect speech)</li>
-        <li>Contact your state's Early Intervention program</li>
-        <li>Consider a speech-language evaluation</li>
-        <li>Early therapy is highly effective</li>
-      </ul>
-
-      <h2>Bilingualism and Language Development</h2>
-      <p>Children learning two languages may:</p>
-      <ul>
-        <li>Have smaller vocabularies in each language initially</li>
-        <li>Mix languages (code-switching) — this is normal</li>
-        <li>Reach milestones at similar times as monolingual children</li>
-        <li>Benefit cognitively from bilingual exposure</li>
-      </ul>
-      <p>Learning multiple languages does not cause speech delays.</p>
-
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My child understands everything but doesn't talk much. Is this normal?</p>
-          <p class="faq-answer">This can be normal — some children are "late talkers" who catch up. However, if your 2-year-old has fewer than 50 words or isn't combining words, discuss it with your pediatrician. Early intervention helps.</p>
-        </div>
-
-        <div class="faq-item">
-          <p class="faq-question">Should I be worried if my 3-year-old still babbles?</p>
-          <p class="faq-answer">By 3, most children speak in sentences. Occasional babbling during play is fine, but if it's the primary form of communication, talk to your pediatrician.</p>
-        </div>
-
-        <div class="faq-item">
-          <p class="faq-question">My child mispronounces many words. Is this okay?</p>
-          <p class="faq-answer">Speech sound errors are normal through age 5. At 2, about 50% of speech should be understandable; at 3, about 75%. Some sounds (/r/, /th/, /l/) develop later.</p>
-        </div>
-
-        <div class="faq-item">
-          <p class="faq-question">Does screen time affect language development?</p>
-          <p class="faq-answer">The AAP recommends limiting screen time for children under 2 and prioritizing interactive, educational content for 2-5 year olds. Face-to-face interaction builds language better than screens.</p>
-        </div>
-
-        <div class="faq-item">
-          <p class="faq-question">My child repeats words I say. Is this echolalia?</p>
-          <p class="faq-answer">Imitation is a normal part of language learning. Echolalia that persists beyond typical development or interferes with communication warrants evaluation.</p>
-        </div>
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 2–3 Year Old Language</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
+    ))}
+  </div>
 
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Fewer than 50 words at age 2</li>
-          <li>No two-word phrases by age 2</li>
-          <li>Doesn't respond to their name</li>
-          <li>Doesn't follow simple instructions</li>
-          <li>Speech is less than 50% understandable at 2</li>
-          <li>No interest in communicating</li>
-          <li>Loss of previously acquired words</li>
-          <li>Stuttering that persists beyond 6 months</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The AAP recommends developmental screening at the 18-month, 24-month, and 30-month well-child visits, with autism-specific screening at 18 and 24 months. Between these visits, contact your child's doctor if you notice any of the following:</p>
+    <ul>
+      <li>Fewer than 50 words by age 2, or not combining two words</li>
+      <li>Does not follow simple instructions or respond to questions</li>
+      <li>Loss of words or language skills your child previously had</li>
+      <li>Strangers cannot understand any of your child's speech by age 2</li>
+      <li>Your child does not seem interested in communicating or interacting with others</li>
+      <li>Stuttering that lasts more than 6 months or involves visible tension</li>
+    </ul>
+    <p>If you have concerns, you do not need to wait for a scheduled visit. In the United States, children under age 3 can be referred to their state's Early Intervention program for a free evaluation, regardless of income or insurance status. Your pediatrician can help you with a referral, or you can contact your state's program directly.</p>
+  </div>
 </BaseLayout>

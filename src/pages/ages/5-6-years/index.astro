@@ -1,233 +1,121 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "5-6 Year Development: Kindergarten Readiness & Milestones",
-  "description": "Your 5-6 year old is starting kindergarten. Learn about developmental milestones, school readiness, social skills, and what to expect at this age.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
+const title = '5–6 Year Old Development: What to Expect';
+const description = 'What to expect from your 5 to 6 year old: kindergarten readiness, emerging reading and writing skills, improved coordination, friendships, and growing independence — with AAP and CDC guidance.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 5-year-old to still have tantrums?',
+    answer: 'Yes. While tantrums typically peak around ages 2 to 3, many 5-year-olds still have meltdowns — especially when they\'re tired, hungry, or frustrated by something they can\'t yet articulate. The difference at this age is that children can usually be talked through their emotions more quickly. If tantrums are severe, frequent, or escalating rather than decreasing, discuss it with your pediatrician.'
+  },
+  {
+    question: 'What to expect with reading at this age?',
+    answer: 'There\'s a wide range of normal. Some 5-year-olds can read simple words and short sentences, while others are still learning letter sounds. The AAP emphasizes that reading readiness varies, and many children don\'t read fluently until age 7. What matters most at 5 to 6 is that your child is interested in books, recognizes some letters, and understands that print carries meaning.'
+  },
+  {
+    question: 'Is it normal for my child to struggle with sharing?',
+    answer: 'Sharing is a skill that develops gradually, and many 5-year-olds still find it challenging — especially with prized possessions. However, by this age, most children understand the concept of fairness and can take turns with adult guidance. Cooperative play becomes more natural over the kindergarten year as children develop stronger empathy and social skills.'
+  },
+  {
+    question: 'Signs of kindergarten readiness — what should I look for?',
+    answer: 'Kindergarten readiness is about more than academics. Key signs include the ability to follow simple rules, separate from a caregiver without extreme distress, use the bathroom independently, communicate needs to an adult, take turns, and focus on a task for 10 to 15 minutes. If you have concerns about readiness, talk to your child\'s preschool teacher and pediatrician — both can provide valuable perspective.'
   }
-};
+];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What should a 5-year-old know before kindergarten?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Kindergarten readiness includes basic self-care (using bathroom, dressing), following directions, recognizing some letters and numbers, and social skills like sharing and taking turns. Academic skills vary widely and aren't required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much sleep does a 5-6 year old need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Children ages 5-6 need 10-13 hours of sleep per 24 hours. Many still benefit from a nap or quiet time, though most have dropped naps by age 5."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my 5-year-old ready for kindergarten?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Readiness includes emotional maturity (separates from parents, manages frustration), social skills (plays cooperatively, follows rules), and basic self-care (uses bathroom independently). Academic skills vary and aren't required for success."
-      }
-    }
-  ]
-};
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/',
+});
+
+const faqData = faqSchema(faqs);
 ---
 
-<BaseLayout title="5-6 Years: Kindergarten Development & Milestones" description="Your 5-6 year old is starting kindergarten. Learn about developmental milestones, school readiness, social skills, and what to expect at this age." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>5-6 Year Development: Kindergarten Age</h1>
-      <p class="article-meta">Ages 5-6 years · Updated March 2026</p>
-    </header>
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '5–6 Years' }]}>
 
-    <div class="topic-nav">
-      <a href="/ages/5-6-years/">Overview</a>
-      <a href="/ages/5-6-years/milestones/">Milestones</a>
-      <a href="/ages/5-6-years/sleep/">Sleep</a>
-      <a href="/ages/5-6-years/behavior/">Behavior</a>
-      <a href="/ages/5-6-years/school/">School</a>
-    </div>
+  <h1>5–6 Year Old Development: What to Expect</h1>
 
-    <div class="article-content">
-      <p>Five and six are magical ages — your child is starting school, making real friendships, and becoming more independent every day. This is a time of major transitions, new challenges, and incredible growth.</p>
+  <p>The year between five and six is a threshold year — your child is leaving early childhood behind and stepping into the world of "big kid" school, real friendships, and a rapidly expanding sense of self. Whether your child is starting kindergarten, already navigating it, or preparing for first grade, this age brings remarkable cognitive, social, and physical growth. Here's what developmental science and the AAP say you can expect.</p>
 
-      <h2>Physical Development</h2>
-      <p>Your kindergartener is becoming more coordinated and capable:</p>
-      <ul>
-        <li><strong>Running and jumping:</strong> Hops on one foot, skips, gallops</li>
-        <li><strong>Ball skills:</strong> Catches with hands, throws with aim</li>
-        <li><strong>Fine motor:</strong> Writes letters, draws detailed pictures, uses scissors</li>
-        <li><strong>Dressing:</strong> Buttons, zippers, ties shoes (with help)</li>
-        <li><strong>Balance:</strong> Rides a bike with training wheels</li>
-        <li><strong>Strength:</strong> Can climb playground equipment confidently</li>
-      </ul>
+  <h2>What to Expect: Kindergarten Readiness and Academic Emergence</h2>
 
-      <h2>Cognitive Development</h2>
-      <p>Thinking becomes more complex and logical:</p>
-      <ul>
-        <li><strong>Counting:</strong> Counts to 20+, recognizes written numbers</li>
-        <li><strong>Letters:</strong> Recognizes most letters, may write name</li>
-        <li><strong>Time:</strong> Understands concepts like yesterday, today, tomorrow</li>
-        <li><strong>Categories:</strong> Groups objects by color, shape, size</li>
-        <li><strong>Problem solving:</strong> Thinks through simple problems</li>
-        <li><strong>Memory:</strong> Remembers routines and sequences</li>
-      </ul>
+  <p>For many families, this is the year the word "school" becomes a daily reality. Kindergarten readiness isn't a single skill — it's a cluster of cognitive, social, and self-care abilities that help a child succeed in a classroom setting.</p>
 
-      <h2>Language Development</h2>
-      <p>Communication becomes sophisticated:</p>
-      <ul>
-        <li><strong>Vocabulary:</strong> 2,000-2,500+ words</li>
-        <li><strong>Sentences:</strong> Complex sentences with multiple clauses</li>
-        <li><strong>Questions:</strong> Asks "how" and "why" constantly</li>
-        <li><strong>Stories:</strong> Can tell simple stories with beginning, middle, end</li>
-        <li><strong>Speech:</strong> Mostly understandable to strangers</li>
-        <li><strong>Reading readiness:</strong> Recognizes some words, understands print concepts</li>
-      </ul>
+  <p>Academically, most 5-to-6-year-olds are in the emergent literacy and numeracy phase. They can recognize many letters, begin sounding out simple words, write their name (sometimes with reversed letters — that's normal), and count objects to 10 or beyond. Some children in this age range read simple books; others aren't there yet. Both are within the range of typical development, according to the AAP.</p>
 
-      <h2>Social & Emotional Development</h2>
-      <p>Friendships and social skills become more important:</p>
-      <ul>
-        <li><strong>Friendships:</strong> Has preferred playmates, best friends</li>
-        <li><strong>Cooperation:</strong> Plays cooperatively with rules</li>
-        <li><strong>Empathy:</strong> Shows concern for others' feelings</li>
-        <li><strong>Independence:</strong> Separates from parents more easily</li>
-        <li><strong>Emotions:</strong> Better at expressing feelings with words</li>
-        <li><strong>Gender awareness:</strong> Understands gender differences</li>
-      </ul>
+  <p>What matters most for kindergarten success isn't whether your child can already read — it's whether they can listen to a story, follow two- or three-step directions, and engage with learning activities for 10 to 15 minutes at a stretch.</p>
 
-      <h2>Kindergarten Readiness</h2>
-      <p>School readiness includes more than academics:</p>
+  <h2>Signs of Physical Progress: Coordination and Independence</h2>
 
-      <h3>Social-Emotional Skills</h3>
-      <ul>
-        <li>Separates from parents without major distress</li>
-        <li>Follows simple directions</li>
-        <li>Takes turns and shares</li>
-        <li>Plays cooperatively with other children</li>
-        <li>Manages frustration (with support)</li>
-      </ul>
+  <p>The physical leaps at 5 to 6 years are less dramatic than infancy but no less important. Children at this age are refining the gross and fine motor skills that support everything from playground play to handwriting:</p>
 
-      <h3>Self-Care Skills</h3>
-      <ul>
-        <li>Uses bathroom independently</li>
-        <li>Opens lunch containers and packages</li>
-        <li>Dresses self (may need help with buttons/shoes)</li>
-        <li>Manages belongings (backpack, coat)</li>
-      </ul>
+  <ul>
+    <li><strong>Gross motor:</strong> Hopping on one foot, skipping, catching a bounced ball, riding a bike (with or without training wheels), climbing confidently</li>
+    <li><strong>Fine motor:</strong> Using scissors to cut along a line, drawing recognizable shapes and people, beginning to write letters and numbers, buttoning and zipping clothing</li>
+    <li><strong>Self-care:</strong> Dressing independently (including shoes — though tying laces comes later), using the bathroom alone, brushing teeth with supervision, using a fork and knife</li>
+  </ul>
 
-      <h3>Academic Readiness (Varies Widely)</h3>
-      <ul>
-        <li>Recognizes some letters (especially in own name)</li>
-        <li>Counts to 10 or higher</li>
-        <li>Recognizes own name in print</li>
-        <li>Holds pencil correctly</li>
-        <li>Can sit and listen to a story</li>
-      </ul>
-      <p><strong>Note:</strong> Academic skills at kindergarten entry vary enormously and are not predictive of later success. Social-emotional readiness matters more.</p>
+  <p>The CDC notes that improved coordination at this age allows children to participate more fully in organized activities like sports, dance, and group games. These activities, in turn, build confidence, teamwork, and body awareness.</p>
 
-      <h2>School Transition Tips</h2>
-      <p>Help your child succeed in kindergarten:</p>
-      <ul>
-        <li><strong>Visit the school:</strong> Tour classroom, meet teacher, find bathroom</li>
-        <li><strong>Practice routines:</strong> Getting ready, packing backpack</li>
-        <li><strong>Read together:</strong> Books about starting school</li>
-        <li><strong>Talk about feelings:</strong> It's okay to be nervous</li>
-        <li><strong>Establish routines:</strong> Consistent bedtime and morning routines</li>
-        <li><strong>Label belongings:</strong> Help them recognize their things</li>
-      </ul>
+  <h2>What to Expect: Social and Emotional Development</h2>
 
-      <h2>Play and Learning</h2>
-      <p>Play remains crucial for development:</p>
-      <ul>
-        <li><strong>Imaginative play:</strong> Elaborate pretend scenarios</li>
-        <li><strong>Board games:</strong> Simple games with rules</li>
-        <li><strong>Arts and crafts:</strong> Drawing, cutting, gluing</li>
-        <li><strong>Physical play:</strong> Running, climbing, bike riding</li>
-        <li><strong>Reading:</strong> Daily reading together</li>
-        <li><strong>Music:</strong> Singing, dancing, simple instruments</li>
-      </ul>
+  <p>Five- and six-year-olds are entering a new social world. Friendships become genuinely important — your child may talk about a "best friend," feel hurt by exclusion, and begin navigating the complicated dynamics of group play.</p>
 
-      <h2>Sleep at This Age</h2>
-      <ul>
-        <li><strong>Total sleep:</strong> 10-13 hours per 24 hours</li>
-        <li><strong>Bedtime:</strong> Typically 7:30-8:30 PM</li>
-        <li><strong>Naps:</strong> Most have dropped naps; some benefit from quiet time</li>
-        <li><strong>Sleep needs:</strong> May vary based on activity level</li>
-      </ul>
+  <p>Key social-emotional developments at this stage include:</p>
 
-      <h2>Common Challenges</h2>
+  <ul>
+    <li><strong>Understanding right and wrong:</strong> Children this age grasp basic rules of fairness, feel guilt when they break a rule, and are beginning to internalize family and classroom expectations.</li>
+    <li><strong>Increased empathy:</strong> Your child can recognize when someone else is sad or hurt and may try to comfort them. They understand that other people have feelings that are different from their own.</li>
+    <li><strong>Rule-following:</strong> Board games, classroom routines, and group sports all become more enjoyable because 5-to-6-year-olds can understand and follow rules — even if they don't always like them.</li>
+    <li><strong>Desire for independence:</strong> "I can do it myself" is a frequent refrain. Children at this age want to make choices about clothing, food, and activities, and they benefit from age-appropriate autonomy.</li>
+    <li><strong>Managing emotions:</strong> While meltdowns still happen, most 5-to-6-year-olds are developing the vocabulary and self-regulation to express frustration in words rather than actions — at least some of the time.</li>
+  </ul>
 
-      <h3>School Anxiety</h3>
-      <p>Some separation anxiety is normal, especially at the start of school:</p>
-      <ul>
-        <li>Validate feelings: "It's hard to say goodbye"</li>
-        <li>Keep goodbyes brief and confident</li>
-        <li>Establish a goodbye ritual</li>
-        <li>Most children settle within 2-4 weeks</li>
-      </ul>
+  <p>The AAP encourages parents to support this emotional growth by naming feelings ("I can see you're frustrated"), validating experiences, and modeling calm problem-solving.</p>
 
-      <h3>Peer Conflicts</h3>
-      <p>Learning to navigate friendships takes time:</p>
-      <ul>
-        <li>Teach problem-solving words: "I don't like that"</li>
-        <li>Role-play social situations</li>
-        <li>Let them work through minor conflicts</li>
-        <li>Intervene if there's bullying or physical aggression</li>
-      </ul>
+  <h2>Language and Cognitive Growth</h2>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My child can't read yet. Will they be behind in kindergarten?</p>
-          <p class="faq-answer">No — kindergarten is where most children learn to read. Some enter knowing letters, others don't. Both are normal. Social-emotional readiness matters more than academic skills at this age.</p>
-        </div>
+  <p>Language explodes at this age. Most 5-to-6-year-olds speak in complex sentences, tell detailed stories about their day, and ask an unending stream of "why" and "how" questions. Their vocabulary may reach 2,000 to 5,000 words, and they understand even more than they can say.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My kindergartener is exhausted after school. Is this normal?</p>
-          <p class="faq-answer">Yes, very normal. School is mentally and socially exhausting. Many children need downtime after school. Some benefit from an earlier bedtime during the school year.</p>
-        </div>
+  <p>Cognitively, children at this stage are developing early logical thinking. They can sort objects by multiple attributes (color and size), understand the concept of "yesterday" and "tomorrow," and begin basic addition and subtraction with concrete objects. Imagination remains vivid — pretend play is rich and elaborate — but children are also learning to distinguish fantasy from reality.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Should my 5-year-old still be taking naps?</p>
-          <p class="faq-answer">Most children drop naps by age 5, but some still benefit from them. If your child sleeps well at night without naps, they're probably ready to drop them. Quiet time can replace naps.</p>
-        </div>
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">My child is having trouble making friends. What can I do?</p>
-          <p class="faq-answer">Arrange playdates with classmates, practice social skills at home, and talk to the teacher about classroom dynamics. Some children take longer to form friendships — this is usually normal.</p>
-        </div>
-
-        <div class="faq-item">
-          <p class="faq-question">Is it normal for my kindergartener to be so emotional?</p>
-          <p class="faq-answer">Yes — school is a major transition. Emotional ups and downs are common, especially in the first few months. Ensure adequate sleep, maintain routines, and offer extra patience and connection.</p>
-        </div>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
+    ))}
+  </div>
 
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Extreme difficulty separating from parents after several weeks of school</li>
-          <li>No interest in playing with other children</li>
-          <li>Can't follow simple 2-3 step directions</li>
-          <li>Speech that is difficult to understand</li>
-          <li>Extreme clumsiness or difficulty with motor skills</li>
-          <li>Regression in previously mastered skills</li>
-          <li>Persistent anxiety or sadness</li>
-          <li>Difficulty with basic self-care (bathroom, dressing)</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Most 5-to-6-year-olds are thriving, but some children need extra support. Bring up concerns with your pediatrician if your child:</p>
+    <ul>
+      <li>Cannot follow simple two-step directions</li>
+      <li>Has difficulty speaking in sentences or being understood by others outside the family</li>
+      <li>Shows little interest in playing with other children</li>
+      <li>Cannot hold a crayon or pencil or shows no interest in drawing or writing</li>
+      <li>Is unable to dress or use the toilet independently</li>
+      <li>Seems excessively anxious, fearful, or aggressive compared to peers</li>
+      <li>Has lost previously mastered skills</li>
+    </ul>
+    <p>Kindergarten teachers are also excellent observers of development. If a teacher expresses concern about your child's learning, attention, or behavior, take it seriously and follow up with your pediatrician. Early support — whether through school services or outside therapy — can make a meaningful difference.</p>
+  </div>
+
+  <h2>Explore 5–6 Year Old Topics</h2>
+
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a class="topic-card" href={`/ages/5-6-years/${topic.slug}/`}>
+        {topic.label}
+      </a>
+    ))}
+  </div>
+
 </BaseLayout>

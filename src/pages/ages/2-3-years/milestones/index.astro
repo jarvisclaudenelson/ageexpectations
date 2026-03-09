@@ -1,241 +1,97 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "2-3 Year Milestones: Development Checklist",
-  "description": "Developmental milestones for 2-3 year olds. Physical, cognitive, language, and social-emotional milestones from CDC guidelines.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '2–3 Year Old Milestones: What to Expect and Signs of Progress';
+const description = 'Most 2-year-olds can run, kick a ball, and say 2-word phrases, progressing to 3–4 word sentences and pretend play by age 3. Use this CDC-referenced milestone guide to track your toddler\'s development.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What milestones should a 2-year-old achieve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At 2, most children can run, say 50+ words, combine two words, engage in pretend play, and show defiant behavior. The CDC milestone checklist provides details."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many words should a 3-year-old say?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most 3-year-olds have a vocabulary of 200+ words and speak in 3-4 word sentences. They should be mostly understandable to strangers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When do children start playing with others?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Parallel play (playing alongside but not with others) starts around 2. Cooperative play with sharing develops between 3-4 years."
-      }
-    }
-  ]
-};
+const faqs = [
+  { question: 'Is it normal for my 2-year-old to not be running yet?', answer: 'Most children begin running between 18 and 24 months, though some take a bit longer — especially if they were later walkers. By 24 months, the CDC milestone checklist expects children to be running. If your child is not running by age 2, or runs with a very uneven or stiff gait, bring it up with your pediatrician. In many cases, children simply need a bit more time, but an evaluation can rule out any underlying motor concerns.' },
+  { question: 'What words should a 2-year-old be saying?', answer: 'By age 2, most children use at least 50 words and are beginning to combine them into 2-word phrases like "more milk," "daddy go," or "big truck." They should be able to name familiar objects and body parts. Not every word needs to be perfectly clear — it is normal for only about 50% of a 2-year-old\'s speech to be understood by strangers. If your child uses fewer than 25 words or is not combining words by 24 months, the AAP recommends a speech-language evaluation.' },
+  { question: 'When should a toddler be able to follow 2-step instructions?', answer: 'Most children can follow simple 2-step instructions (like "pick up the cup and put it on the table") by around 24 months. The directions need to be simple and involve familiar actions and objects. If your child consistently struggles with 2-step instructions after age 2, it is worth mentioning to your pediatrician, as it could reflect a language comprehension issue rather than simply not wanting to cooperate.' },
+  { question: 'Is it normal for a 3-year-old to still not be potty trained?', answer: 'Yes — this is completely normal. While many children begin showing signs of readiness between ages 2 and 3, the AAP notes that there is a wide range of normal for toilet training. Some children are not fully trained until age 3.5 or later. Readiness signs include staying dry for 2 hours at a time, showing interest in the toilet, discomfort with wet diapers, and being able to follow simple instructions. Pressuring a child before they are ready can backfire. Talk to your pediatrician if your child is over 3.5 and showing no interest or readiness signs.' },
+  { question: 'What are signs of developmental delay in a 2–3 year old?', answer: 'The CDC and AAP flag the following as potential concerns: not using 2-word phrases by 24 months, not walking steadily, not copying actions or words, not engaging in simple pretend play by age 3, loss of previously acquired skills, not following simple instructions, or very limited interest in other children. If you notice any of these, speak with your pediatrician. Early intervention (available in every U.S. state) can provide targeted support during this critical window of brain development.' },
+];
+
+const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/2-3-years/milestones/' });
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '2–3 Years', href: '/ages/2-3-years/' }, { label: 'Milestones' }]}>
+  <h1>2–3 Year Old Milestones: What to Expect and Signs of Progress</h1>
 
-<BaseLayout title="2-3 Year Milestones: Development Checklist" description="Complete developmental milestones checklist for 2-3 year olds. Physical, cognitive, language, and social milestones from CDC guidelines." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>2-3 Year Milestones: Development Checklist</h1>
-      <p class="article-meta">Ages 24-36 months · Updated March 2026</p>
-    </header>
+  <p>Between ages 2 and 3, your toddler transforms from a wobbly new walker into a running, climbing, talking, pretend-playing force of nature. It is one of the most dramatic periods of development in the entire childhood span — and it can feel like your child is learning something new every single day. If you're wondering whether your child is on track, this guide walks through the major milestones the CDC and AAP consider typical for this age range, along with clear guidance on what to watch for.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/2-3-years/">Overview</a>
-      <a href="/ages/2-3-years/milestones/">Milestones</a>
-      <a href="/ages/2-3-years/sleep/">Sleep</a>
-      <a href="/ages/2-3-years/behavior/">Behavior</a>
-      <a href="/ages/2-3-years/language/">Language</a>
-      <a href="/ages/2-3-years/feeding/">Feeding</a>
-    </div>
+  <h2>Gross Motor Milestones: What to Expect for Movement and Coordination</h2>
 
-    <div class="article-content">
-      <p>Between ages 2 and 3, your child transforms from a baby into a little person with preferences, opinions, and a rapidly expanding vocabulary. This guide covers what developmental milestones to expect, based on CDC and AAP guidelines.</p>
+  <p>Gross motor development accelerates dramatically between ages 2 and 3. The CDC milestone checklist for 24 months includes running, kicking a ball, and walking up stairs (initially holding on, progressing to alternating feet by age 3). Here is what to expect:</p>
 
-      <h2>24 Month Milestones (2 Years)</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Walks well, runs (more steady)</li>
-        <li>Kicks a ball</li>
-        <li>Climbs well on playground equipment</li>
-        <li>Goes up and down stairs with help</li>
-        <li>Stacks 4-6 blocks</li>
-        <li>Uses spoon and fork</li>
-        <li> Scribbles in circles</li>
-        <li>Begins to dress/undress with help</li>
-      </ul>
+  <ul>
+    <li><strong>By age 2:</strong> Running with increasing confidence (though tumbles are still common), kicking a ball forward, walking up and down stairs while holding a railing or an adult's hand, beginning to jump with both feet leaving the ground.</li>
+    <li><strong>By age 2.5:</strong> Jumping more consistently, throwing a ball overhand, standing on tiptoes, beginning to pedal a tricycle.</li>
+    <li><strong>By age 3:</strong> Running smoothly without frequent falls, climbing on playground structures, walking up stairs with alternating feet, catching a large ball with arms extended, pedaling a tricycle with confidence.</li>
+  </ul>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Vocabulary of 50+ words</li>
-        <li>Combines two words ("more milk," "daddy go")</li>
-        <li>Points to named objects</li>
-        <li>Follows simple instructions</li>
-        <li>About 50% understandable to strangers</li>
-      </ul>
+  <p>These skills build on each other. A child who is a confident runner at 2 will typically be climbing with ease by 3. The AAP emphasizes that active play — running, climbing, jumping — is the most effective way to support gross motor development at this age. Toddlers need at least 60 minutes of active physical play spread throughout the day.</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Engages in pretend play</li>
-        <li>Finds hidden objects easily</li>
-        <li>Sorts shapes and colors</li>
-        <li>Completes sentences in familiar books</li>
-        <li>Follows 2-step instructions</li>
-      </ul>
+  <h2>Fine Motor Milestones: Signs of Progress with Hands and Fingers</h2>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Plays alongside other children (parallel play)</li>
-        <li>Shows defiant behavior (the "no" phase)</li>
-        <li>Shows affection to familiar people</li>
-        <li>Has temper tantrums</li>
-        <li>Imitates others, especially adults</li>
-      </ul>
+  <p>Fine motor control undergoes significant refinement during this period. These skills matter not only for self-care but also for the early foundations of writing and drawing:</p>
 
-      <h2>30 Month Milestones (2.5 Years)</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Jumps with both feet</li>
-        <li>Stands on tiptoes</li>
-        <li>Kicks a ball forward</li>
-        <li>Uses hands to twist/turn objects</li>
-        <li>Stacks 8-10 blocks</li>
-        <li>Draws vertical lines</li>
-      </ul>
+  <ul>
+    <li><strong>By age 2:</strong> Turning pages in a book (one at a time), stacking 4–6 blocks, beginning to use a spoon and fork with increasing accuracy, scribbling with a crayon.</li>
+    <li><strong>By age 2.5:</strong> Turning door handles, unscrewing lids, stacking 6+ blocks, beginning to string large beads.</li>
+    <li><strong>By age 3:</strong> Drawing circles and simple lines intentionally (not just scribbling), using scissors with assistance, completing simple 3–4 piece puzzles, building a tower of 9–10 blocks, dressing with help (pulling on pants, putting arms through sleeves).</li>
+  </ul>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Vocabulary of 100+ words</li>
-        <li>Uses 2-3 word sentences</li>
-        <li>Asks "what" and "where" questions</li>
-        <li>Points to body parts when asked</li>
-        <li>About 60-70% understandable</li>
-      </ul>
+  <p>The CDC notes that by age 3, children should be able to turn pages, work simple latches and knobs, and copy a circle. If your child struggles to hold a crayon or shows no interest in manipulating small objects by age 2.5, mention it to your pediatrician.</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Sorts by color and shape</li>
-        <li>Completes simple puzzles</li>
-        <li>Understands "same" and "different"</li>
-        <li>Follows 2-3 step instructions</li>
-        <li>Knows basic colors</li>
-      </ul>
+  <h2>Language Milestones: What to Expect for Speech and Communication</h2>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Shows jealousy toward siblings</li>
-        <li>Plays make-believe with toys</li>
-        <li>Shows pride in accomplishments</li>
-        <li>May have imaginary playmates</li>
-        <li>Beginning to take turns (with help)</li>
-      </ul>
+  <p>Language development between ages 2 and 3 is nothing short of extraordinary. The vocabulary explosion that begins around 18 months continues at a remarkable pace:</p>
 
-      <h2>36 Month Milestones (3 Years)</h2>
-      
-      <h3>Physical/Motor</h3>
-      <ul>
-        <li>Climbs well</li>
-        <li>Runs well, can start/stop</li>
-        <li>Pedals tricycle</li>
-        <li>Jumps forward</li>
-        <li>Walks up stairs alternating feet</li>
-        <li>Stacks 10+ blocks</li>
-        <li>Draws circles and squares</li>
-        <li>Uses toilet independently</li>
-        <li>Dresses self (with help for buttons)</li>
-      </ul>
+  <ul>
+    <li><strong>By age 2:</strong> Using at least 50 words; combining 2 words into short phrases ("want cookie," "mommy up"); pointing to body parts when named; following 2-step instructions ("pick up the ball and bring it here"); about 50% of speech is understandable to strangers.</li>
+    <li><strong>By age 2.5:</strong> Using 200+ words; speaking in 2–3 word sentences; beginning to use pronouns (me, you, I); asking simple questions ("what's that?"); about 50–75% of speech is understandable to strangers.</li>
+    <li><strong>By age 3:</strong> Using 3–4 word sentences and sometimes longer; vocabulary of 200–1,000+ words; carrying on simple conversations; telling you about their day; using plurals and past tense (often incorrectly, like "I goed"); about 75% of speech is understandable to strangers.</li>
+  </ul>
 
-      <h3>Language/Communication</h3>
-      <ul>
-        <li>Vocabulary of 200+ words</li>
-        <li>Speaks in 3-4 word sentences</li>
-        <li>Asks "why" questions</li>
-        <li>75% understandable to strangers</li>
-        <li>Can tell stories</li>
-        <li>Sings songs from memory</li>
-      </ul>
+  <p>The AAP identifies several key language red flags for this age: not using 2-word phrases by 24 months, not responding to their name, not pointing to show you things, and not understanding simple instructions. The CDC's updated milestone checklist emphasizes that these are "most children" benchmarks — meaning the majority of children reach them by the listed age, and those who do not should be screened further.</p>
 
-      <h3>Cognitive</h3>
-      <ul>
-        <li>Engages in elaborate pretend play</li>
-        <li>Sorts objects by category</li>
-        <li>Counts objects (doesn't understand quantity)</li>
-        <li>Understands "same" and "different"</li>
-        <li>Completes 3-4 piece puzzles</li>
-        <li>Understands taking turns</li>
-      </ul>
+  <h2>Cognitive Milestones: Signs of Growing Thinking Skills</h2>
 
-      <h3>Social/Emotional</h3>
-      <ul>
-        <li>Plays cooperatively with other children</li>
-        <li>Takes turns (with reminders)</li>
-        <li>Shows empathy when others are upset</li>
-        <li>Separates from parents more easily</li>
-        <li>Expresses wide range of emotions</li>
-        <li>Seeks approval from adults</li>
-      </ul>
+  <p>Your toddler's brain is developing rapidly. Between ages 2 and 3, you will see emerging problem-solving, imagination, and understanding of the world:</p>
 
-      <h2>Red Flags: When to Be Concerned</h2>
-      <p>Talk to your pediatrician if your child:</p>
-      <ul>
-        <li>Has fewer than 50 words at 2 years</li>
-        <li>No two-word phrases by 2 years</li>
-        <li>Doesn't respond to their name</li>
-        <li>Doesn't make eye contact</li>
-        <li>Not walking well by 2 years</li>
-        <li>No pretend play by 2.5 years</li>
-        <li>Loses previously acquired skills</li>
-        <li>Limited interest in other children</li>
-        <li>Doesn't follow simple instructions</li>
-      </ul>
+  <ul>
+    <li><strong>Sorting and matching:</strong> By age 2, most children begin sorting shapes and colors. By 3, they can match objects to pictures and sort by multiple categories.</li>
+    <li><strong>Pretend play:</strong> This is a major cognitive milestone. By 2, children engage in simple pretend play (feeding a doll, talking on a toy phone). By 3, pretend play becomes more elaborate — creating scenarios, assigning roles, and using one object to represent another (a block becomes a phone).</li>
+    <li><strong>Understanding of concepts:</strong> By age 3, most children grasp basic concepts like big/small, in/out, and understand the idea of "two." They can complete simple 3–4 piece puzzles and follow a short storyline in a book.</li>
+  </ul>
 
-      <h2>Supporting Your Child's Development</h2>
-      <p>You don't need expensive toys — these simple activities help:</p>
-      <ul>
-        <li><strong>Read daily:</strong> Builds vocabulary and attention</li>
-        <li><strong>Play together:</strong> Follow their lead</li>
-        <li><strong>Talk lots:</strong> Narrate your day</li>
-        <li><strong>Encourage independence:</strong> Let them try things</li>
-        <li><strong>Limit screen time:</strong> Interactive play is better</li>
-        <li><strong>Provide safe exploration:</strong> Let them climb, explore</li>
-      </ul>
+  <p>The CDC checklist flags the absence of pretend play by age 3 as a potential concern worth discussing with your pediatrician, as imaginative play reflects important social-cognitive development.</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">My child isn't talking much at 2. Should I worry?</p>
-          <p class="faq-answer">A 50+ word vocabulary and two-word combinations are expected at 2. Some children talk more, some less. If your child has fewer than 50 words or isn't combining words, talk to your pediatrician.</p>
-        </div>
+  <h2>Social-Emotional Milestones: What to Expect for Feelings and Interactions</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">When will my child play with other kids?</p>
-          <p class="faq-answer">Parallel play (playing beside other children) is normal at 2. Cooperative play with actual interaction typically develops between 3-4 years. Some children need more time.</p>
-        </div>
+  <p>The social-emotional landscape of a 2–3 year old is intense — for the child and for you. Key milestones include:</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Should my 3-year-old be able to share?</p>
-          <p class="faq-answer">True sharing — understanding others' feelings about giving up a toy — develops around 3-4 years. Younger toddlers don't have this cognitive ability yet. Turn-taking is more realistic.</p>
-        </div>
+  <ul>
+    <li><strong>Parallel play:</strong> At age 2, most toddlers play alongside other children rather than with them. By age 3, you will see the beginnings of associative play — interacting, sharing materials, and commenting on each other's activities.</li>
+    <li><strong>Emerging empathy:</strong> Around age 2, children begin to show concern when someone is upset (offering a toy or a hug). This develops into more genuine empathy by age 3.</li>
+    <li><strong>Autonomy and "I do it!":</strong> The drive for independence peaks during this stage. Your child wants to do everything themselves — from pouring milk to putting on shoes. This is healthy and important, even when it is messy and slow.</li>
+    <li><strong>Tantrums:</strong> Emotional regulation is still developing. Tantrums peak between ages 2 and 3 and are a normal part of this stage. See our <a href="/ages/2-3-years/behavior/">Behavior & Emotions</a> page for detailed guidance.</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">My child still uses diapers. Is this normal?</p>
-          <p class="faq-answer">Potty training typically happens between 18 months and 3-4 years. Many perfectly healthy children aren't fully trained until 3-4. Daytime training usually precedes nighttime control.</p>
-        </div>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Contact your pediatrician if your 2–3 year old is not using 2-word phrases by 24 months, does not follow simple instructions, has lost skills they previously had, is not walking steadily, shows no interest in other children or caregivers, does not engage in pretend play by age 3, or has extreme reactions to sensory input (sounds, textures, lights). The AAP recommends formal developmental screening at the 24- and 30-month well-child visits and autism-specific screening at 18 and 24 months. You do not need to wait for a scheduled visit to raise concerns — early identification leads to earlier support, and outcomes are consistently better when intervention begins before age 3.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions About 2–3 Year Old Milestones</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-    </div>
-  </article>
+    ))}
+  </div>
 </BaseLayout>

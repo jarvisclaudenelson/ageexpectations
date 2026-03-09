@@ -1,227 +1,121 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "2-3 Year Behavior: Tantrums, Defiance & Emotional Development",
-  "description": "Understanding toddler behavior at 2-3 years. How to handle tantrums, defiance, hitting, biting, and teaching emotional regulation.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '2–3 Year Old Behavior: Tantrums, Big Emotions, and What to Expect';
+const description = 'Tantrums peak between ages 2 and 3 as toddlers develop autonomy faster than emotional regulation. Learn what is normal behavior, when to worry, and evidence-based strategies from the AAP.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I handle tantrums in a 2-year-old?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Stay calm, ensure safety, don't give in to the tantrum, and offer comfort after it passes. Tantrums are emotional overload — your child isn't trying to manipulate you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does my toddler say no to everything?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Saying no is a normal developmental milestone showing your child is asserting independence and testing boundaries. It's actually a sign of healthy development."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I stop my toddler from hitting and biting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Respond consistently and calmly: say 'we don't hit,' remove them from the situation, and teach words for feelings. These behaviors decrease significantly with age and consistent teaching."
-      }
-    }
-  ]
-};
+const faqs = [
+  { question: 'Is it normal for my 2-year-old to have multiple tantrums daily?', answer: 'Yes — this is within the range of normal. Research published in the Journal of Pediatrics found that most 2-year-olds have tantrums at least daily, with some having 2–3 per day. Tantrums typically last 1–3 minutes at this age. They become a concern when they consistently last longer than 25 minutes, occur more than 5 times a day, or involve self-injury (head banging, biting themselves). If tantrums are that frequent or intense, discuss it with your pediatrician.' },
+  { question: 'Is it normal for my toddler to hit, bite, or push other kids?', answer: 'Unfortunately, yes — hitting, biting, and pushing are very common behaviors in 2–3 year olds. They happen because toddlers have strong impulses and very limited ability to regulate them. They lack the language to express frustration and the impulse control to stop themselves. This does not mean your child is aggressive or that you are doing something wrong. Respond calmly, set the limit ("I won\'t let you hit"), comfort the other child, and offer an alternative. Most children outgrow these behaviors by age 3.5–4 as language and emotional regulation improve.' },
+  { question: 'What are signs of behavioral problems versus normal toddler behavior?', answer: 'Normal toddler behavior includes daily tantrums, difficulty sharing, saying "no" frequently, hitting or biting occasionally, needing help with transitions, and wanting to do everything independently. Signs that may suggest a behavioral concern include tantrums lasting more than 25 minutes consistently, self-injurious behavior during tantrums, extreme difficulty with any changes in routine, aggression that does not respond to consistent limit-setting over several weeks, complete lack of interest in other children, or regression in previously acquired skills. The AAP recommends discussing these patterns with your pediatrician.' },
+  { question: 'When will my toddler learn to share?', answer: 'True voluntary sharing — choosing to give something to another child without being prompted — typically does not develop reliably until around age 3.5 to 4. At age 2, children are still in the stage of "everything is mine." By 2.5–3, they can begin to take turns with adult support, and you will see early cooperative play emerge. Forcing a toddler to share before they are developmentally ready can actually backfire. Instead, the AAP suggests modeling sharing, narrating what you see ("she is waiting for a turn"), and praising sharing when it happens naturally.' },
+  { question: 'Is it normal for my 2-year-old to say "no" to everything?', answer: 'Absolutely. Saying "no" constantly is one of the hallmarks of being 2 years old. It is your child\'s way of testing boundaries, asserting independence, and practicing autonomy — all critical developmental tasks. Even when they want to say "yes," they may say "no" out of habit or because the feeling of autonomy is more important to them in that moment than the actual choice. This phase typically eases between ages 2.5 and 3 as language becomes more sophisticated and children gain more control over their daily lives.' },
+];
+
+const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/2-3-years/behavior/' });
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '2–3 Years', href: '/ages/2-3-years/' }, { label: 'Behavior & Emotions' }]}>
+  <h1>2–3 Year Old Behavior: Tantrums, Big Emotions, and What to Expect</h1>
 
-<BaseLayout title="2-3 Year Behavior: Tantrums & Emotional Development" description="Behavior guide for 2-3 year olds. How to handle tantrums, defiance, hitting, biting, and teach emotional regulation. Positive discipline strategies." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>2-3 Year Behavior: Understanding Your Toddler</h1>
-      <p class="article-meta">Ages 24-36 months · Updated March 2026</p>
-    </header>
+  <p>If you have a 2 or 3-year-old, you have probably experienced the full emotional spectrum in a single trip to the grocery store — from gleeful singing to body-on-the-floor sobbing because you broke the banana the wrong way. This is not a sign of a problem. This is exactly what 2–3 year old behavior looks like, and there are clear developmental reasons behind every baffling moment.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/2-3-years/">Overview</a>
-      <a href="/ages/2-3-years/milestones/">Milestones</a>
-      <a href="/ages/2-3-years/sleep/">Sleep</a>
-      <a href="/ages/2-3-years/behavior/">Behavior</a>
-      <a href="/ages/2-3-years/language/">Language</a>
-      <a href="/ages/2-3-years/feeding/">Feeding</a>
-    </div>
+  <p>This guide covers the behavioral and emotional patterns that are typical at this age, the developmental science behind them, evidence-based strategies from the AAP, and the specific signs that do warrant a conversation with your pediatrician.</p>
 
-    <div class="article-content">
-      <p>Ages 2-3 bring some of parenting's most challenging moments — and some of the most rewarding. Your toddler is discovering they have opinions, and they're eager to share them. Here's how to navigate this intense but important developmental stage.</p>
+  <h2>Why Toddler Behavior Is So Intense: What to Expect Developmentally</h2>
 
-      <h2>Understanding Tantrums</h2>
-      <p>Tantrums peak between 18 months and 3 years. They're not manipulation or bad behavior — they're emotional overwhelm that your child can't yet control.</p>
+  <p>The core tension of the 2–3 year old stage is a mismatch between desire and ability. Your child's drive for independence, their understanding of what they want, and their emotional intensity are all developing faster than their ability to communicate clearly, wait, problem-solve, or manage frustration. This gap is the engine behind virtually every behavioral challenge of this age.</p>
 
-      <h3>What Causes Tantrums</h3>
-      <ul>
-        <li>Hunger, tiredness, or overstimulation</li>
-        <li>Frustration at limitations or inability to communicate</li>
-        <li>Transitions between activities</li>
-        <li>Wants that can't be met immediately</li>
-        <li>Physical discomfort (teething, illness, constipation)</li>
-      </ul>
+  <p>Key developmental factors driving behavior at this stage:</p>
 
-      <h3>During a Tantrum</h3>
-      <ul>
-        <li>Stay as calm as possible — your regulation helps teach theirs</li>
-        <li>Ensure physical safety</li>
-        <li>Acknowledge feelings: "You're so frustrated"</li>
-        <li>Don't try to reason or lecture</li>
-        <li>Don't give in to the tantrum — it teaches that tantrums work</li>
-        <li>Keep words simple: "I'm here" is enough</li>
-      </ul>
+  <ul>
+    <li><strong>The prefrontal cortex is immature.</strong> The brain region responsible for impulse control, emotional regulation, and flexible thinking is one of the last areas of the brain to fully develop — it is not mature until the mid-20s. In a 2-year-old, it is barely online. Your child literally cannot "calm down" on command.</li>
+    <li><strong>Autonomy is the central developmental task.</strong> According to Erik Erikson's stages of psychosocial development, toddlers are navigating "autonomy vs. shame and doubt." Their fierce insistence on doing things themselves ("I do it!") is not defiance — it is healthy, essential developmental work.</li>
+    <li><strong>Language lags behind feelings.</strong> A 2-year-old may have strong emotions about a toy being taken away but only the vocabulary to scream or hit. As language catches up (usually by age 3–3.5), physical expressions of frustration decrease significantly.</li>
+    <li><strong>Cause and effect is still being learned.</strong> Toddlers experiment with behavior in the same way they experiment with blocks. They push, test, and repeat to learn how the world — and you — respond.</li>
+  </ul>
 
-      <h3>After the Tantrum</h3>
-      <ul>
-        <li>Connect before you correct</li>
-        <li>Offer comfort without conditions</li>
-        <li>Name the emotion: "You were really angry"</li>
-        <li>Briefly explain if appropriate</li>
-        <li>Move on — don't hold grudges</li>
-      </ul>
+  <h2>Tantrums: What Is Normal and What to Watch For</h2>
 
-      <h2>The Defiance Phase</h2>
-      <p>"No!" becomes the favorite word, and resistance to routines is common. This is normal — and actually healthy.</p>
+  <p>Tantrums are the single most discussed behavioral topic for this age range, and for good reason — they are universal, unpredictable, and exhausting. The AAP considers tantrums a normal part of development between ages 1 and 4, with peak frequency and intensity between ages 2 and 3.</p>
 
-      <h3>Why They're Defiant</h3>
-      <ul>
-        <li>Testing independence</li>
-        <li>Learning cause and effect</li>
-        <li>Developing autonomy</li>
-        <li>Pushing boundaries to learn rules</li>
-      </ul>
+  <p><strong>What is typical:</strong></p>
+  <ul>
+    <li>Most 2-year-olds have at least one tantrum per day; many have 2–3.</li>
+    <li>Tantrums at this age typically last 1–3 minutes, though some go longer.</li>
+    <li>Common triggers include hunger, fatigue, transitions, being told "no," and not being able to do something independently.</li>
+    <li>Crying, screaming, falling to the ground, going limp, and kicking are all within the range of normal tantrum behavior.</li>
+  </ul>
 
-      <h3>Strategies That Work</h3>
-      <ul>
-        <li><strong>Offer choices:</strong> "Red or blue cup?" instead of "Do you want a cup?"</li>
-        <li><strong>Pick battles:</strong> Not everything needs to be a power struggle</li>
-        <li><strong>Avoid questions:</strong> Use statements: "It's time for bath"</li>
-        <li><strong>Give warnings:</strong> "Five more minutes" before transitions</li>
-        <li><strong>Follow through:</strong> If you say it, do it</li>
-        <li><strong>Stay calm:</strong> Your reaction fuels the battle</li>
-      </ul>
+  <p><strong>Evidence-based strategies from the AAP:</strong></p>
+  <ul>
+    <li><strong>Stay calm.</strong> Your calm presence is the most powerful tool you have. Toddlers co-regulate — they borrow your nervous system to manage their own emotions.</li>
+    <li><strong>Ensure safety, then wait.</strong> Move your child away from anything dangerous, then stay nearby without lecturing or reasoning. Logic does not reach a dysregulated brain.</li>
+    <li><strong>Validate the feeling, hold the limit.</strong> "You really wanted that toy. I know that is so hard. I can't let you grab it from her."</li>
+    <li><strong>Prevent when possible.</strong> Many tantrums can be reduced by keeping to a routine, offering limited choices ("Do you want the red cup or the blue cup?"), and avoiding known triggers (shopping right before naptime, for example).</li>
+    <li><strong>Reconnect after.</strong> Once the tantrum passes, a brief hug or calm acknowledgment ("That was a big feeling. You're okay now.") helps your child feel secure.</li>
+  </ul>
 
-      <h2>Hitting, Biting, and Aggression</h2>
-      <p>Physical aggression is common but distressing for parents. It's a behavior, not a character flaw.</p>
+  <h2>Hitting, Biting, and Pushing: Signs of Normal Frustration</h2>
 
-      <h3>Why They Hit or Bite</h3>
-      <ul>
-        <li>Limited language to express needs</li>
-        <li>Frustration they can't articulate</li>
-        <li>Testing cause and effect</li>
-        <li>Overwhelmed by emotions</li>
-        <li>Seeking reaction</li>
-        <li>Imitating others</li>
-      </ul>
+  <p>Physical aggression in toddlers is extremely common and, in most cases, developmentally typical. The CDC and AAP acknowledge that hitting, biting, pushing, and throwing objects are behaviors that peak between ages 2 and 3. This does not mean you should ignore them — it means you should respond with firm, calm limits rather than alarm.</p>
 
-      <h3>How to Respond</h3>
-      <ul>
-        <li>Stay calm — don't yell or hit back</li>
-        <li>State clearly: "We don't hit. Hitting hurts."</li>
-        <li>Move them away from the situation</li>
-        <li>Attend to the victim first (models empathy)</li>
-        <li>Teach words: "You were angry, you can say 'I'm mad'"</li>
-        <li>Be consistent — same rule every time</li>
-      </ul>
+  <p><strong>Why it happens:</strong> Toddlers resort to physical behavior when they lack the language to express frustration, when impulse control has not yet developed, and when emotions move faster than their ability to process them. Biting in particular is very common between 18 months and 3 years and is rarely a sign of an underlying problem.</p>
 
-      <h2>Building Emotional Intelligence</h2>
-      <p>You can help your child develop emotional regulation skills:</p>
+  <p><strong>What helps:</strong></p>
+  <ul>
+    <li>Intervene immediately and calmly: "I won't let you bite. Biting hurts."</li>
+    <li>Comfort the other child first — this models empathy.</li>
+    <li>Offer a replacement behavior: "If you're angry, you can stomp your feet or say 'I'm mad.'"</li>
+    <li>Look for patterns — does hitting happen when your child is tired? Overstimulated? During transitions?</li>
+    <li>Avoid biting or hitting back "to show them how it feels." Research consistently shows this increases aggression rather than reducing it.</li>
+  </ul>
 
-      <ul>
-        <li><strong>Name emotions:</strong> "You seem happy/sad/angry"</li>
-        <li><strong>Read emotion books:</strong> Talk about how characters feel</li>
-        <li><strong>Model regulation:</strong> "I'm taking a breath because I'm frustrated"</li>
-        <li><strong>Create calm spaces:</strong> A cozy corner with books</li>
-        <li><strong>Teach deep breaths:</strong> Simple "balloon breathing"</li>
-        <li><strong>Validate feelings:</strong> It's okay to be mad; it's not okay to hurt</li>
-      </ul>
+  <h2>The Drive for Autonomy: "I Do It!" and What It Means</h2>
 
-      <h2>Setting Limits Effectively</h2>
-      <p>Toddlers need boundaries — they feel safer with clear limits:</p>
-      <ul>
-        <li>Be consistent with rules</li>
-        <li>Keep rules simple and few</li>
-        <li>Use natural consequences when possible</li>
-        <li>Offer positive attention for good behavior</li>
-        <li>Redirect rather than just say no</li>
-        <li>Acknowledge feelings while holding boundaries</li>
-      </ul>
+  <p>Perhaps nothing defines the 2–3 year old stage more than the fierce desire to do things independently. Your child may insist on pouring their own milk (spilling most of it), putting on their own shoes (on the wrong feet), or opening the car door themselves (adding ten minutes to every departure). This is not manipulation or misbehavior — it is one of the most important developmental tasks of this age.</p>
 
-      <h2>"Mine!" and Sharing</h2>
-      <p>Possessiveness peaks around 2-3 years. True sharing develops later.</p>
-      <ul>
-        <li>It's normal — they can't yet understand others' perspectives</li>
-        <li>Model taking turns instead of demanding sharing</li>
-        <li>Praise flexible behavior when it happens</li>
-        <li>Have backup toys for playdates</li>
-        <li>Don't force sharing of comfort items</li>
-      </ul>
+  <p>The AAP encourages parents to support autonomy whenever safely possible. Strategies include:</p>
+  <ul>
+    <li>Building extra time into routines so your child can try things independently.</li>
+    <li>Offering limited choices throughout the day to give your child a sense of control.</li>
+    <li>Letting your child struggle briefly before offering help — and always asking before helping ("Would you like me to help with that zipper?").</li>
+    <li>Accepting imperfection. Mismatched clothes and messily poured cereal are signs of healthy development.</li>
+  </ul>
 
-      <h2>Nighttime Fears</h2>
-      <p>Imaginary fears often emerge at this age:</p>
-      <ul>
-        <li>Keep a nightlight if needed</li>
-        <li>Check for monsters (playfully) — they may find it reassuring</li>
-        <li>Establish consistent bedtime routines</li>
-        <li>Comfort without creating monsters</li>
-        <li>Monster spray or special stuffed "protector" can help</li>
-      </ul>
+  <h2>Difficulty Sharing and the Shift from Parallel to Associative Play</h2>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">How long do tantrums last?</p>
-          <p class="faq-answer">Individual tantrums typically last 1-3 minutes but can go up to 10 minutes. They tend to peak around 18-36 months and decrease significantly as language develops.</p>
-        </div>
+  <p>Parents often worry when their 2-year-old refuses to share, but this is entirely developmentally appropriate. True sharing requires perspective-taking — the ability to understand that another person wants something and to voluntarily give up your own possession. This cognitive skill does not emerge reliably until closer to age 3.5–4.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Should I spank my toddler?</p>
-          <p class="faq-answer">The American Academy of Pediatrics recommends against spanking. Research shows it increases aggression, decreases compliance, and can damage the parent-child relationship.</p>
-        </div>
+  <p>At age 2, most children engage in <strong>parallel play</strong> — playing alongside other children with similar materials, but not truly interacting. By age 2.5–3, you will see the emergence of <strong>associative play</strong>, where children begin to interact, exchange materials, and comment on each other's activities, though without organized rules or goals.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler hits me. What should I do?</p>
-          <p class="faq-answer">Respond the same way as other hitting: firmly say "We don't hit" and briefly remove yourself or them from the situation. Don't make it a power struggle or give excessive attention.</p>
-        </div>
+  <p>What you can do:</p>
+  <ul>
+    <li>Set up playdates with enough duplicate toys to reduce conflict.</li>
+    <li>Use a timer for turn-taking: "In two minutes, it will be her turn with the truck."</li>
+    <li>Narrate social situations: "She is feeling sad because she wants a turn."</li>
+    <li>Praise cooperative moments when they happen naturally rather than forcing sharing.</li>
+  </ul>
 
-        <div class="faq-item">
-          <p class="faq-question">Why is my sweet baby suddenly so aggressive?</p>
-          <p class="faq-answer">This is common and doesn't mean your child is "bad." They're experiencing emotions without the language or impulse control to express them appropriately. Consistent teaching helps.</p>
-        </div>
+  <h2>Emotional Regulation: A Skill in Progress</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">Does positive discipline mean no consequences?</p>
-          <p name="faq-answer">No — it means consequences that teach rather than punish. Natural consequences (like a broken toy from throwing) and brief, logical consequences work better than arbitrary punishment.</p>
-        </div>
+  <p>It is easy to forget that emotional regulation — the ability to manage intense feelings without falling apart — is a skill that takes years to develop. At age 2, your child has almost none of this skill. By age 3, you will start to see the earliest signs: occasionally using words instead of screaming, sometimes accepting a compromise, and more frequently recovering from upsets without complete meltdowns.</p>
+
+  <p>According to the AAP, the most effective way to support emotional regulation in toddlers is through <strong>co-regulation</strong> — staying calm yourself, validating your child's feelings, and helping them name their emotions ("You're frustrated because the block keeps falling"). Over time, this scaffolding helps children internalize the ability to manage their own emotions.</p>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Most behavioral challenges at ages 2–3 are normal, but certain patterns should be evaluated. Talk to your pediatrician if your child's tantrums consistently last longer than 25 minutes, occur more than 5 times per day, or involve self-injury (head banging, biting themselves, scratching). Also seek guidance if your child shows aggression that does not improve with consistent limit-setting over several weeks, has extreme difficulty with any change in routine (beyond typical toddler preference for predictability), shows no interest in other children at all, shows regression in behavior or skills, or has prolonged periods of flat or withdrawn affect. Your pediatrician can help determine whether your child's behavior falls within the expected range or whether an evaluation — such as a developmental or behavioral assessment — would be helpful.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions About 2–3 Year Old Behavior</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Self-injurious behavior (head banging, biting self)</li>
-          <li>Tantrums lasting more than 30 minutes regularly</li>
-          <li>Tantrums with no emotional expression (flat affect)</li>
-          <li>No interest in playing with other children</li>
-          <li>Persistent aggression that doesn't improve with teaching</li>
-          <li>Regression in previously achieved skills</li>
-          <li>Significant developmental delays alongside behavior issues</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+    ))}
+  </div>
 </BaseLayout>

@@ -1,225 +1,143 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "12-18 Month Behavior: Tantrums, Independence & Emotions",
-  "description": "Understanding toddler behavior at 12-18 months. Learn about tantrums, the 'no' phase, separation anxiety, and how to handle challenging behaviors.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
-  }
-};
+const title = '12\u201318 Month Behavior: What to Expect from Emotions and Temperament';
+const description = 'Toddlers aged 12\u201318 months experience peaks in separation anxiety, first tantrums, boundary testing, and emerging independence. Learn what behaviors are normal, what to expect, and when to consult your pediatrician.';
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why does my 12-18 month old say no to everything?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Saying 'no' is a normal developmental milestone. Your toddler is asserting independence and testing boundaries. It's actually a sign of healthy development."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I handle tantrums at this age?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Stay calm, ensure safety, ignore attention-seeking behavior, and offer comfort after the tantrum passes. Tantrums are caused by big emotions that toddlers can't yet control."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is separation anxiety normal at 18 months?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, separation anxiety typically peaks around 10-18 months and is a sign of healthy attachment. It usually decreases after age 2 but can resurface during times of stress."
-      }
-    }
-  ]
-};
+const breadcrumbs = [
+  { label: '12\u201318 Months', href: '/ages/12-18-months/' },
+  { label: 'Behavior & Emotions' },
+];
+
+const faqs = [
+  {
+    question: 'Is it normal for my toddler to hit, bite, or throw things?',
+    answer: 'Yes, this is very common between 12 and 18 months. Toddlers at this age have strong emotions but extremely limited language and impulse control. Hitting, biting, and throwing are not signs of aggression in the adult sense \u2014 they are a toddler\u2019s way of expressing frustration, excitement, or a need they cannot verbalize yet. Respond calmly and consistently: gently stop the behavior, name the emotion ("You\u2019re frustrated"), and redirect. Avoid long explanations or harsh reactions, which can increase the behavior. If hitting or biting is frequent and directed at other children in a way that seems unusual for the age, mention it to your pediatrician.',
+  },
+  {
+    question: 'Is it normal for my 15-month-old to have a meltdown over something small?',
+    answer: 'Absolutely. What seems minor to an adult can feel overwhelming to a toddler who is just learning to navigate emotions. A broken cracker, the wrong-color cup, or a transition away from a favorite activity can trigger genuine distress. At this age, the prefrontal cortex \u2014 the brain region responsible for emotional regulation \u2014 is extremely immature. Your toddler is not being manipulative; they truly cannot manage their feelings yet. Stay calm, offer comfort, and know that these responses are developmentally appropriate.',
+  },
+  {
+    question: 'Is it normal for my toddler to cling to me and cry when I leave the room?',
+    answer: 'Yes. Separation anxiety typically peaks between 10 and 18 months. Your child has developed a strong attachment to you and now understands that you exist when you\u2019re out of sight (object permanence), but does not yet have a mature sense of time \u2014 so when you leave, they don\u2019t know when or if you\u2019ll come back. Keep goodbyes brief and upbeat, create a consistent departure routine, and trust that most children calm down within minutes of the parent leaving. The intensity of separation anxiety usually decreases gradually after 18\u201324 months.',
+  },
+  {
+    question: 'What are signs of a behavior concern vs. typical toddler behavior?',
+    answer: 'Typical toddler behavior includes tantrums, clinginess, saying "no," testing boundaries, and swinging between independence and needing comfort. Behaviors that may warrant discussion with your pediatrician include: not responding to their name consistently, lack of eye contact or social referencing (looking to you for reactions), no interest in other people or children, loss of previously acquired skills (like words they used to say), extreme and prolonged distress that does not respond to any comfort, or self-injurious behaviors like head-banging that are intense or frequent.',
+  },
+  {
+    question: 'Is it normal for my toddler to play near other children but not with them?',
+    answer: 'Yes. This is called "parallel play" and it is the expected stage of social play for toddlers between about 12 and 24 months. During parallel play, children sit near each other and may watch or imitate one another, but they do not actively share, take turns, or collaborate. True cooperative play does not typically develop until age 3 or later. Parallel play is an important stepping stone \u2014 your toddler is learning by observing peers, even if it does not look like they\u2019re interacting.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-18-months/behavior/',
+});
+const fSchema = faqSchema(faqs);
 ---
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={breadcrumbs}>
+  <h1>12&ndash;18 Month Behavior: What to Expect from Emotions and Temperament</h1>
 
-<BaseLayout title="12-18 Month Behavior: Tantrums & Independence" description="Toddler behavior at 12-18 months: tantrums, the 'no' phase, separation anxiety, and healthy emotional development. Tips for handling challenging behaviors." schema={schema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>12-18 Month Behavior: Understanding Your Toddler</h1>
-      <p class="article-meta">Ages 12-18 months · Updated March 2026</p>
-    </header>
+  <p>Somewhere around your child's first birthday, a switch flips. The baby who was content to sit in your lap and explore a rattle is now a determined little person with opinions, preferences, and a growing vocabulary of "no." Welcome to toddlerhood. The emotional and behavioral changes between 12 and 18 months can feel intense &mdash; but nearly all of them are signs that your child's brain is developing exactly as it should.</p>
 
-    <div class="topic-nav">
-      <a href="/ages/12-18-months/">Overview</a>
-      <a href="/ages/12-18-months/milestones/">Milestones</a>
-      <a href="/ages/12-18-months/sleep/">Sleep</a>
-      <a href="/ages/12-18-months/behavior/">Behavior</a>
-      <a href="/ages/12-18-months/feeding/">Feeding</a>
-      <a href="/ages/12-18-months/language/">Language</a>
-    </div>
+  <h2>What to Expect: Separation Anxiety Peaks</h2>
 
-    <div class="article-content">
-      <p>Welcome to toddlerhood — where your sweet baby is now a fiercely independent little person who has strong opinions about everything, especially things they can't have. The behavior you see at 12-18 months is actually a sign of healthy development, even when it's exhausting.</p>
+  <p><strong>Separation anxiety</strong> is one of the defining emotional experiences of this age. While it can appear as early as 6&ndash;8 months, it typically reaches its peak intensity between <strong>10 and 18 months</strong>, according to the CDC's developmental milestone guidelines.</p>
 
-      <h2>The "No" Phase</h2>
-      <p>Between 12-18 months, many toddlers discover the power of the word "no." This is a critical developmental milestone showing your child understands they have some control over their world.</p>
+  <p>Here's what's happening developmentally: your toddler now fully understands <strong>object permanence</strong> &mdash; they know you still exist when you walk out of the room. But they do not yet have a mature understanding of time. When you leave, they cannot reason that you'll be back in 20 minutes. From their perspective, you are simply gone, and that feels genuinely frightening.</p>
 
-      <h3>Why They Do It</h3>
-      <ul>
-        <li>Testing independence</li>
-        <li>Learning cause and effect</li>
-        <li>Discovering they have choices</li>
-        <li>Expressing autonomy</li>
-      </ul>
+  <p>Separation anxiety looks different in every child. Some toddlers cry intensely at daycare drop-off but calm within minutes. Others become clingy at home, following a parent from room to room. Some show increased distress at bedtime. All of these responses are normal.</p>
 
-      <h3>How to Respond</h3>
-      <ul>
-        <li>Offer limited choices: "Red cup or blue cup?" instead of "Do you want a cup?"</li>
-        <li>Pick your battles — not everything needs to be a power struggle</li>
-        <li>Stay calm — your reaction teaches them about boundaries</li>
-        <li>Acknowledge feelings: "I know you don't want to leave the park"</li>
-        <li>Follow through on what you say</li>
-      </ul>
+  <p>Strategies that help:</p>
+  <ul>
+    <li>Keep goodbyes brief, warm, and consistent &mdash; sneaking out can make anxiety worse</li>
+    <li>Create a short departure ritual (a special phrase, a kiss on the hand)</li>
+    <li>Practice short separations at home to build confidence</li>
+    <li>Acknowledge the emotion: "I know you're sad. I'll be back after your nap."</li>
+  </ul>
 
-      <h2>Tantrums</h2>
-      <p>Tantrums are one of the most challenging parts of the 12-18 month stage. They're not manipulation — they're your toddler's way of expressing overwhelming emotions they can't yet control.</p>
+  <p>The intensity of separation anxiety typically decreases after 18&ndash;24 months as language skills improve and children develop a better understanding of routines and time.</p>
 
-      <h3>What Causes Tantrums</h3>
-      <ul>
-        <li>Hunger or tiredness (most common triggers)</li>
-        <li>Frustration at not being able to communicate</li>
-        <li>Overstimulation</li>
-        <li>Wants not being met immediately</li>
-        <li>Transitioning between activities</li>
-        <li>Physical discomfort (teething, illness)</li>
-      </ul>
+  <h2>Emerging Independence and the Power of "No"</h2>
 
-      <h3>During a Tantrum</h3>
-      <ul>
-        <li>Stay calm — your regulation helps teach theirs</li>
-        <li>Ensure safety — move away from hazards</li>
-        <li>Offer simple comfort: "I'm here"</li>
-        <li>Don't try to reason or lecture during the tantrum</li>
-        <li>Avoid giving in — it teaches that tantrums work</li>
-      </ul>
+  <p>Between 12 and 18 months, toddlers begin to understand that they are a <strong>separate person</strong> from their caregivers. This is a profound cognitive leap, and it comes with a fierce drive to do things independently. Your toddler may insist on feeding themselves (even inefficiently), resist being put into a car seat, or push your hands away when you try to help.</p>
 
-      <h3>After the Tantrum</h3>
-      <ul>
-        <li>Connect before you correct</li>
-        <li>Name the emotion: "You were so frustrated"</li>
-        <li>Offer comfort without conditions</li>
-        <li>Briefly explain if age-appropriate</li>
-        <li>Move on — don't hold grudges</li>
-      </ul>
+  <p>This is also the age when many children learn one of their first and most-used words: <strong>"no."</strong> Saying no is not defiance &mdash; it is your child's first experience of autonomy. They are discovering that they have preferences and that their words can influence what happens around them. This is a critical social-emotional milestone.</p>
 
-      <h2>Separation Anxiety</h2>
-      <p>Around 12-18 months, separation anxiety often peaks. This is actually a sign of healthy attachment — your child has learned that you're a separate person and they want you nearby.</p>
+  <p>Supporting healthy independence at this stage means offering <strong>limited choices</strong> (the red cup or the blue cup, not an open-ended question), building in extra time for your toddler to try things on their own, and picking your battles. Not everything needs to be a power struggle. Save firm limits for safety and let smaller things go when you can.</p>
 
-      <h3>Signs of Separation Anxiety</h3>
-      <ul>
-        <li>Crying when you leave the room</li>
-        <li>Clinging to one caregiver</li>
-        <li>Waking at night more frequently</li>
-        <li>Refusing to be held by others</li>
-        <li>Crying at daycare drop-off</li>
-      </ul>
+  <h2>Signs of First Tantrums: What's Normal?</h2>
 
-      <h3>How to Help</h3>
-      <ul>
-        <li>Establish a consistent goodbye routine</li>
-        <li>Keep goodbyes brief and confident</li>
-        <li>Always say goodbye — sneaking away increases anxiety</li>
-        <li>Practice short separations</li>
-        <li>Leave a comfort item with your scent</li>
-        <li>Build trust by always returning</li>
-      </ul>
+  <p>If your toddler hasn't had their first tantrum yet, it's likely coming. <strong>Tantrums typically begin between 12 and 18 months</strong> and peak in frequency around age 2 (hence the popular term "terrible twos," though many parents find the period between 18 months and 3 years more challenging than age 2 itself).</p>
 
-      <h2>Aggression: Hitting, Biting, and Hair Pulling</h2>
-      <p>Aggressive behaviors are common at this age, though alarming to parents. They usually stem from frustration, lack of language to express needs, or simple exploration.</p>
+  <p>Tantrums at this age are driven by a fundamental mismatch: your child's desires and understanding of the world are growing rapidly, but their ability to communicate and regulate emotions is still extremely immature. The <strong>prefrontal cortex</strong> &mdash; the brain region responsible for impulse control, emotional regulation, and rational decision-making &mdash; will not be fully developed until the mid-20s. In toddlerhood, it is barely functional.</p>
 
-      <h3>Why They Happen</h3>
-      <ul>
-        <li>Limited language to express needs</li>
-        <li>Frustration with play or sharing</li>
-        <li>Testing cause and effect</li>
-        <li>Overwhelmed by emotions</li>
-        <li>Imitating others (including adults)</li>
-      </ul>
+  <p>Common tantrum triggers at 12&ndash;18 months include:</p>
+  <ul>
+    <li>Being told "no" or having an object taken away</li>
+    <li>Transitions (leaving the park, stopping play for a diaper change)</li>
+    <li>Frustration with a task they can't complete (a puzzle piece that won't fit)</li>
+    <li>Hunger, tiredness, or overstimulation</li>
+    <li>Not being understood (wanting something they can't yet name)</li>
+  </ul>
 
-      <h3>How to Respond</h3>
-      <ul>
-        <li>Stay calm — don't yell or hit back</li>
-        <li>Say clearly: "We don't hit. Hitting hurts."</li>
-        <li>Move them away from the situation</li>
-        <li>Address the victim first (comfort them)</li>
-        <li>Teach words for feelings: "You were angry"</li>
-        <li>Be consistent — the same rule every time</li>
-      </ul>
+  <p>The AAP recommends responding to tantrums with calm consistency. Stay nearby, ensure your child is safe, and avoid giving in to the demand that triggered the tantrum (which teaches that tantrums are an effective strategy). Once the storm passes, offer comfort and move on. At this age, there is no need for consequences, time-outs, or lengthy explanations &mdash; your child cannot yet process them.</p>
 
-      <h2>Developing Emotional Intelligence</h2>
-      <p>Your toddler is building the foundation for emotional regulation. You can help by:</p>
+  <h2>Testing Boundaries: Why Your Toddler Does the Thing You Just Said Not to Do</h2>
 
-      <ul>
-        <li><strong>Naming emotions:</strong> "You seem happy!" "That made you sad."</li>
-        <li><strong>Reading face</strong>s: Point out emotions in books and real life</li>
-        <li><strong>Model regulation:</strong> "I'm feeling frustrated, so I'm taking a breath"</li>
-        <li><strong>Validating feelings:</strong> It's okay to be mad; it's not okay to hit</li>
-        <li><strong>Teaching deep breaths:</strong> Even simple "balloon breathing" helps</li>
-        <li><strong>Creating calm-down spaces:</strong> A cozy spot with books</li>
-      </ul>
+  <p>You tell your toddler not to touch the dog's water bowl. They look right at you, smile, and splash their hand in it. This is not disobedience &mdash; it is <strong>cause-and-effect learning</strong>. Your toddler is running experiments: "What happens when I do this? What happens when I do it again? Does the same thing happen every time?"</p>
 
-      <h2>Setting Boundaries</h2>
-      <p>Your toddler needs to know you're in charge — but you can do it with warmth:</p>
-      <ul>
-        <li>Be consistent with rules</li>
-        <li>Follow through on consequences</li>
-        <li>Use natural consequences when possible</li>
-        <li>Offer positive attention for good behavior</li>
-        <li>Acknowledge their feelings while holding the line</li>
-      </ul>
+  <p>Children this age need to test limits <em>repeatedly</em> before they internalize them. According to child development research, toddlers need to hear a rule an average of <strong>six to nine times</strong> before they begin to remember and follow it &mdash; and even then, impulse control is too immature for consistent compliance.</p>
 
-      <div class="faq-section">
-        <h2>Is This Normal? — Common Questions</h2>
-        
-        <div class="faq-item">
-          <p class="faq-question">Why does my toddler hit and bite other children?</p>
-          <p class="faq-answer">Toddlers lack the language and impulse control to express frustration socially. Hitting and biting are common but not acceptable. With consistent teaching, most children significantly reduce these behaviors by age 3.</p>
-        </div>
+  <p>The most effective approach is to set a few clear, consistent limits and enforce them calmly every time. Use simple, direct language: "The water bowl is for the dog. Let's play with your water table." Then physically redirect your child. Expect to repeat this many, many times. That repetition is not failure &mdash; it's how toddler brains learn.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler hits me. What should I do?</p>
-          <p class="faq-answer">Respond the same way you would if they hit another child: firmly say "We don't hit" and briefly remove yourself or them from the situation. Don't make it a power struggle or give excessive attention to the behavior.</p>
-        </div>
+  <h2>Stranger Wariness and Social Development</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">Is it normal for my toddler to be so clingy?</p>
-          <p class="faq-answer">Yes, separation anxiety peaks around 12-18 months and is a sign of healthy attachment. It typically decreases after age 2 but can resurface during stress, illness, or major changes.</p>
-        </div>
+  <p><strong>Stranger wariness</strong> (sometimes called stranger anxiety) often intensifies between 12 and 18 months. Your toddler may hide behind your legs when a neighbor says hello, cry when a relative they haven't seen recently tries to hold them, or refuse to engage with new adults. This is a sign of healthy attachment and normal social-emotional development &mdash; not a sign of shyness or a social problem.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My toddler has meltdowns every time we leave somewhere. Help!</p>
-          <p class="faq-answer">Transitions are hard for toddlers. Try warnings before leaving ("2 more minutes"), making departures quick (lingering increases distress), and keeping a consistent routine. This phase typically passes.</p>
-        </div>
+  <p>At the same time, toddlers this age are becoming increasingly interested in <strong>other children</strong>. You may notice your child watching other kids at the playground, imitating their actions, or moving close to them. This is the beginning of <strong>parallel play</strong> &mdash; playing alongside peers rather than with them. True interactive play does not typically emerge until age 2&ndash;3. Parallel play is an important developmental stage in which toddlers learn social skills through observation.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Should I spank my toddler?</p>
-          <p class="faq-answer">The American Academy of Pediatrics recommends against spanking. Research shows physical punishment increases aggression, decreases compliance, and can damage the parent-child relationship. Positive discipline is more effective long-term.</p>
-        </div>
+  <p>You can support your toddler's social development by:</p>
+  <ul>
+    <li>Providing regular exposure to other children in low-pressure settings</li>
+    <li>Allowing your child to warm up to new people at their own pace &mdash; never force interaction</li>
+    <li>Modeling social behaviors: waving, saying "hi," sharing</li>
+    <li>Narrating social situations: "That boy is playing with the ball. He looks happy."</li>
+  </ul>
+
+  <h2>What "Social Referencing" Tells You About Your Child's Emotional Development</h2>
+
+  <p>By 12 months, most toddlers are actively engaged in <strong>social referencing</strong> &mdash; looking to a trusted caregiver's face for cues about how to react to an unfamiliar situation. When your child encounters something new (a loud noise, an unfamiliar animal, a strange toy), they will often glance at you before responding. If you look calm and relaxed, they're more likely to approach. If you look worried, they're more likely to retreat.</p>
+
+  <p>Social referencing is a milestone tracked by the CDC and is an important indicator of healthy social-emotional development. Children who consistently do not engage in social referencing &mdash; who do not look to caregivers for emotional cues or who seem unaware of others' emotions &mdash; should be evaluated by their pediatrician, as this can be an early sign of autism spectrum disorder.</p>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The behaviors described in this article &mdash; tantrums, clinginess, boundary testing, and stranger wariness &mdash; are all part of normal toddler development. However, talk to your pediatrician if you notice:</p>
+    <ul>
+      <li>Your child does not respond to their name consistently by 12 months</li>
+      <li>There is little or no eye contact, social smiling, or social referencing</li>
+      <li>Your child shows no interest in other people (adults or children)</li>
+      <li>Previously acquired skills &mdash; words, gestures, social behaviors &mdash; are being lost (regression)</li>
+      <li>Tantrums are extremely frequent (more than 5&ndash;10 per day), last longer than 25 minutes regularly, or involve self-injury (intense head-banging, biting themselves)</li>
+      <li>Your child seems persistently distressed and is not comforted by any caregiver</li>
+      <li>Your instincts tell you something is off &mdash; parent intuition matters</li>
+    </ul>
+    <p>The CDC recommends developmental screening at the 12-month and 18-month well-child visits. If you have concerns between visits, do not wait &mdash; call your pediatrician. Early intervention services are available in every U.S. state for children under age 3.</p>
+  </div>
+
+  <section class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
-
-      <div class="red-flags">
-        <h3>When to Talk to Your Pediatrician</h3>
-        <ul>
-          <li>Self-injurious behavior (head banging, biting self)</li>
-          <li>Tantrums lasting more than 30 minutes regularly</li>
-          <li>No emotional expression (flat affect)</li>
-          <li>Regression in previously achieved skills</li>
-          <li>No interest in playing with other children</li>
-          <li>Persistent aggression that doesn't improve with teaching</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+    ))}
+  </section>
 </BaseLayout>

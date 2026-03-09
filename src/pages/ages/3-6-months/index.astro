@@ -1,200 +1,115 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "3-6 Month Baby Development: Sleep, Rolling & First Laughs",
-  "description": "Months 3–6 development data: rolling, laughing, sleep regression at 4 months, and feeding schedules for breastfed and formula-fed babies.",
-  "author": {
-    "@type": "Organization",
-    "name": "AgeExpectations"
+const title = '3–6 Month Old Development: What to Expect';
+const description = 'What to expect from your 3 to 6 month old: social smiling, rolling over, babbling, reaching and grasping, and signs of readiness for solid foods — with AAP-backed guidance.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 4-month-old to not roll over yet?',
+    answer: 'Yes. Most babies begin rolling from tummy to back around 4 months, but some don\'t master it until closer to 5 months. Consistent tummy-time practice helps build the core and neck strength needed. If your baby shows no interest in rolling by 6 months, mention it at your next well-child visit.'
+  },
+  {
+    question: 'What to expect with babbling at this age?',
+    answer: 'Between 3 and 6 months, babies move from cooing vowel sounds ("ooh," "aah") to experimenting with consonant-vowel combos like "ba" and "da." Not every baby babbles on the same schedule — some are quiet observers who are still taking everything in. The key sign to watch for is whether your baby is responding to your voice and attempting to vocalize back.'
+  },
+  {
+    question: 'Is it normal for my baby to put everything in their mouth?',
+    answer: 'Absolutely. Mouthing objects is a primary way babies explore the world at this age. It helps them learn about textures and shapes and also soothes sore gums if teething begins. Just make sure items are clean and large enough to avoid choking hazards.'
+  },
+  {
+    question: 'When should I start solid foods?',
+    answer: 'The American Academy of Pediatrics (AAP) recommends introducing complementary solid foods around 6 months of age, when most babies show signs of readiness: good head control, sitting with support, interest in food, and the ability to move food from a spoon to the throat. Some pediatricians may discuss starting between 4 and 6 months for specific reasons — always follow your own doctor\'s guidance.'
   }
-};
+];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the 4-month sleep regression?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Around 4 months, a baby's sleep architecture permanently shifts from newborn-style sleep to adult-style cycles (lighter, more easily disrupted). This is neurological maturation, not a regression — it doesn't reverse. Babies who relied on feeding or rocking to fall asleep now wake between cycles and need the same input to return to sleep."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much solid food should a 5-month-old eat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most babies aren't ready for solids until 6 months (AAP recommendation). Readiness signs include sitting with minimal support, good head control, showing interest in food, and the disappearance of the tongue-thrust reflex. Starting before 4 months is not recommended."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When do babies roll over?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Front-to-back rolling typically appears first, between 3 and 5 months. Back-to-front rolling, which requires more core strength, usually follows at 4–6 months. Babies with limited tummy time often roll later."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much should a 4-month-old eat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Formula-fed babies typically take 4–6 oz per feeding, 5–6 times per day (total: ~24–36 oz/day). Breastfed babies nurse 5–7 times per day. Demand still leads the schedule at this age."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is drooling at 3-4 months a sign of teething?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not necessarily. Salivary glands mature and become more active around 2–4 months — heavy drooling is normal before swallowing is fully coordinated. First teeth typically appear between 4 and 7 months, but some babies don't teethe until 12+ months."
-      }
-    }
-  ]
-};
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/3-6-months/',
+});
+
+const faqData = faqSchema(faqs);
 ---
 
-<BaseLayout title="3-6 Months: Baby Development, Sleep & Feeding" description="Months 3–6 development data: rolling, laughing, the 4-month sleep regression, and feeding schedules for breastfed and formula-fed babies." schema={schema} faqSchema={faqSchema} pageType="Article">
-  <article class="article">
-    <header class="article-header">
-      <h1>3–6 Month Baby Development: Rolling, Laughing & the 4-Month Sleep Shift</h1>
-      <p class="article-meta">Ages 3–6 months · Updated March 2026</p>
-    </header>
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '3–6 Months' }]}>
 
-    <div class="topic-nav">
-      <a href="/ages/3-6-months/">Overview</a>
-      <a href="/ages/3-6-months/milestones/">Milestones</a>
-      <a href="/ages/3-6-months/sleep/">Sleep</a>
-      <a href="/ages/3-6-months/feeding/">Feeding</a>
-    </div>
+  <h1>3–6 Month Old Development: What to Expect</h1>
 
-    <div class="article-content">
-      <p>Months 3–6 mark the transition from newborn to infant. Crying decreases, sleep begins consolidating (with one significant disruption at 4 months), and your baby becomes a genuinely interactive social creature. First laughs, rolling, and intentional reaching all land in this window.</p>
+  <p>The months between three and six are some of the most rewarding in early parenting. Your baby is waking up to the world — flashing genuine social smiles, giggling at peek-a-boo, and reaching for anything within arm's length. Every week seems to bring a new skill, and it's natural to wonder whether your little one is right on track. Here's what developmental research and the AAP tell us about this exciting stage.</p>
 
-      <h2>Physical Development</h2>
-      <ul>
-        <li><strong>Head control:</strong> Steady, no head lag when pulled to sitting by 4 months</li>
-        <li><strong>Rolling:</strong> Front-to-back by 3–5 months; back-to-front by 4–6 months</li>
-        <li><strong>Supported sitting:</strong> Sits with support for short periods by 4–5 months; tripod sit emerging by 6 months</li>
-        <li><strong>Reaching:</strong> Intentional reaching and batting at objects from about 3–4 months</li>
-        <li><strong>Grasp:</strong> Palmar grasp — uses whole hand to grab objects; transfers between hands beginning around 5–6 months</li>
-        <li><strong>Bearing weight:</strong> Pushes down with legs when held upright on a surface</li>
-        <li><strong>Tummy time progress:</strong> Mini push-up by 3–4 months; extended arm push-up by 5–6 months</li>
-      </ul>
+  <h2>What to Expect: Social Smiling and Emotional Connection</h2>
 
-      <h2>Cognitive Development</h2>
-      <ul>
-        <li><strong>Object permanence:</strong> Early signs — looks for a dropped toy at 5–6 months</li>
-        <li><strong>Cause and effect:</strong> Repeats actions to reproduce interesting results (shaking a rattle)</li>
-        <li><strong>Visual acuity:</strong> Near-adult color vision and depth perception by ~4 months</li>
-        <li><strong>Attention span:</strong> Can focus on an interesting object or face for several minutes</li>
-        <li><strong>Imitation:</strong> Begins imitating facial expressions and simple sounds</li>
-        <li><strong>Exploration:</strong> Everything goes to the mouth — oral exploration is how infants process sensory data</li>
-      </ul>
+  <p>By 3 months, the reflexive newborn smile has given way to true social smiling — your baby grins because they're happy to see you. This is one of the earliest signs of healthy social-emotional development. You'll notice your baby lighting up at familiar faces, turning toward your voice, and beginning to show displeasure when interaction stops (sometimes called the "still face" response).</p>
 
-      <h2>Social & Language Development</h2>
-      <ul>
-        <li><strong>Laughter:</strong> Full belly laughs typically emerge at 3–4 months</li>
-        <li><strong>Vocalization:</strong> Babbling with consonant-vowel combinations ("ba," "da," "ga") starts around 4–5 months</li>
-        <li><strong>Reciprocal communication:</strong> Responds to your vocalizations, pauses, and waits for your response</li>
-        <li><strong>Social referencing:</strong> Looks to caregiver faces to gauge reactions to new stimuli</li>
-        <li><strong>Stranger awareness:</strong> Beginning to prefer familiar faces; early stranger wariness by 5–6 months</li>
-        <li><strong>Emotion recognition:</strong> Distinguishes happy, sad, and angry facial expressions</li>
-      </ul>
+  <p>Between 4 and 6 months, these interactions deepen. Babies begin laughing out loud, squealing with delight, and using different cries to express different needs. They recognize caregivers and may show early signs of stranger awareness — becoming quieter or more watchful around unfamiliar people. According to the AAP, this growing social awareness is a sign that your baby's brain is forming the secure attachments that support all future learning.</p>
 
-      <h2>Sleep Patterns</h2>
-      <p>Sleep consolidates — then hits a structural shift at 4 months:</p>
-      <ul>
-        <li><strong>Total sleep:</strong> 12–16 hours per 24 hours</li>
-        <li><strong>Night sleep:</strong> Many babies achieve 5–6+ hour stretches by 3–4 months</li>
-        <li><strong>4-month sleep regression:</strong> Sleep architecture permanently matures around 4 months; night waking increases until baby learns to link sleep cycles independently</li>
-        <li><strong>Naps:</strong> 3 naps per day, transitioning to 2 longer naps by ~6 months</li>
-        <li><strong>Wake windows:</strong> 1.5–2 hours between sleep periods</li>
-        <li><strong>Sleep training readiness:</strong> Most experts recommend waiting until at least 4 months (adjusted age) before formal sleep training</li>
-        <li><strong>Safe sleep:</strong> Back to sleep on firm flat surface; no change to safe sleep guidelines at this age</li>
-      </ul>
+  <h2>Signs of Motor Progress: Rolling, Reaching, and Head Control</h2>
 
-      <h2>Feeding Schedule & Amounts</h2>
-      <ul>
-        <li><strong>Breastfed frequency:</strong> 5–7 times per 24 hours; feeding sessions become faster and more efficient</li>
-        <li><strong>Formula frequency:</strong> 5–6 times per 24 hours</li>
-        <li><strong>Formula amount:</strong> 4–6 oz per feeding, totaling ~24–36 oz/day</li>
-        <li><strong>Growth spurts:</strong> Expect increased hunger around 3 months, 4 months, and 6 months</li>
-        <li><strong>Solid food:</strong> Not recommended before 4 months; AAP recommends waiting until 6 months unless pediatrician advises otherwise</li>
-        <li><strong>Readiness for solids (not a schedule, a checklist):</strong> Sits with minimal support, good head control, tongue-thrust reflex gone, interest in food, doubles birth weight</li>
-        <li><strong>Distractible feeding:</strong> Babies become easily distracted during feeds at this age — quiet environments help</li>
-      </ul>
+  <p>Motor development accelerates rapidly in this window. Here's a general timeline, keeping in mind that every baby develops at their own pace:</p>
 
-      <h2>Teething</h2>
-      <ul>
-        <li><strong>Typical onset:</strong> 4–7 months, but wide variation (some babies tooth at 3 months, some at 12+)</li>
-        <li><strong>First teeth:</strong> Lower central incisors usually erupt first</li>
-        <li><strong>Symptoms:</strong> Drooling, chewing, fussiness, mild gum swelling</li>
-        <li><strong>Drooling:</strong> Heavy drool from 2–4 months onward is typically salivary gland maturation, not teething</li>
-        <li><strong>Relief:</strong> Chilled (not frozen) teething rings, firm rubber teethers, gum massage</li>
-        <li><strong>Avoid:</strong> Teething tablets with belladonna, benzocaine gels, amber necklaces (CPSC hazard)</li>
-      </ul>
+  <ul>
+    <li><strong>3–4 months:</strong> Improved head control during tummy time, pushing up on forearms, bringing hands together at midline, batting at toys</li>
+    <li><strong>4–5 months:</strong> Rolling from tummy to back, reaching and grasping objects deliberately, bearing some weight on legs when held upright</li>
+    <li><strong>5–6 months:</strong> Rolling from back to tummy, sitting with support (and briefly without), transferring objects from one hand to the other, raking at small items with fingers</li>
+  </ul>
 
-      <h2>Sensory & Environmental Stimulation</h2>
-      <ul>
-        <li><strong>High-contrast visuals:</strong> Less critical now — full color vision is established</li>
-        <li><strong>Mirrors:</strong> Babies are fascinated by their own reflection; safe unbreakable mirrors are excellent toys</li>
-        <li><strong>Texture exploration:</strong> Offer varied surfaces to touch and mouth (soft, bumpy, smooth)</li>
-        <li><strong>Outdoor time:</strong> Novel environments, sounds, and visual complexity are stimulating</li>
-        <li><strong>Reading:</strong> Even at this age, hearing language-rich reading builds vocabulary and phonemic awareness</li>
-        <li><strong>Screen time:</strong> AAP recommends no screens (except video chat) under 18–24 months</li>
-      </ul>
+  <p>The CDC's updated milestone checklist notes that most babies roll over in both directions by 6 months. Tummy time remains the single best activity you can offer to strengthen the neck, shoulder, and core muscles that power these skills.</p>
 
-      <div class="faq-section">
-        <h2>Common Questions</h2>
+  <h2>What to Expect with Language: From Cooing to Babbling</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">My 4-month-old was sleeping well and now wakes every hour. What happened?</p>
-          <p class="faq-answer">This is the 4-month sleep regression — a permanent neurological change in sleep architecture. Babies who needed feeding or rocking to fall asleep now need the same thing between every sleep cycle (every 45–60 min). The solution isn't waiting it out; it's helping baby learn to fall asleep independently at the start of the night.</p>
-        </div>
+  <p>Language development at this stage is all about vocal experimentation. Around 3 months, most babies are accomplished cooers — producing drawn-out vowel sounds like "ooh" and "aah." By 4 to 5 months, they begin adding consonants, creating the early babble strings ("ba-ba," "ma-ma") that parents love to hear. These aren't intentional words yet, but they're critical practice for the mouth and tongue movements that speech requires.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">My 5-month-old isn't rolling yet. Should I be concerned?</p>
-          <p class="faq-answer">Not necessarily. Rolling typically appears between 3–6 months, and babies with less tummy time often roll later. If your baby has good head control, reaches for objects, and shows normal muscle tone, limited rolling is often a tummy-time issue, not a developmental one. Mention it at your 6-month visit if not rolling by then.</p>
-        </div>
+  <p>Your baby is also becoming an avid listener. They'll turn toward sounds, startle at loud noises, and respond to changes in your tone of voice. The AAP emphasizes that talking, reading, and singing to your baby — even though they can't understand the words — directly supports language development by exposing them to the rhythm and structure of speech.</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Can I give my 5-month-old water?</p>
-          <p class="faq-answer">No. Infants under 6 months get all fluid from breast milk or formula. Adding water can dilute sodium levels and cause hyponatremia (a dangerous electrolyte imbalance). After 6 months and with solids introduction, small amounts of water are fine.</p>
-        </div>
+  <h2>Beginning Solids: What the AAP Recommends</h2>
 
-        <div class="faq-item">
-          <p class="faq-question">My 4-month-old fights every nap. Is this normal?</p>
-          <p class="faq-answer">Very common. Nap development lags behind night sleep maturation. Short, fragmented naps — often 30–45 minutes — are typical at 4 months. Longer, more consolidated naps usually develop between 5–6 months. Consistent pre-nap routines and watching wake windows help.</p>
-        </div>
+  <p>One of the biggest transitions during this period is the introduction of solid foods. The AAP recommends exclusive breastfeeding (or formula feeding) for approximately the first 6 months of life, with complementary foods introduced around 6 months. Signs your baby may be ready include:</p>
 
-        <div class="faq-item">
-          <p class="faq-question">Is it safe to use a sleep sack at 4 months?</p>
-          <p class="faq-answer">Yes — sleep sacks (wearable blankets) are safe and recommended. They replace loose blankets (a SIDS risk) and keep the baby appropriately warm. Once baby shows signs of rolling, transition from swaddle to arms-free sleep sack.</p>
-        </div>
+  <ul>
+    <li>Steady head control and the ability to sit with support</li>
+    <li>Opening their mouth when food approaches</li>
+    <li>Showing interest in what you're eating</li>
+    <li>Loss of the tongue-thrust reflex (pushing food out of the mouth)</li>
+  </ul>
+
+  <p>Your pediatrician will discuss timing and first foods at the 4-month or 6-month well-child visit. There's no single "right" first food — iron-fortified infant cereal, pureed vegetables, and pureed fruits are all common starting points.</p>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
       </div>
+    ))}
+  </div>
 
-      <div class="red-flags">
-        <h3>When to Contact Your Pediatrician</h3>
-        <ul>
-          <li>No social smile by 3 months</li>
-          <li>No laughing or squealing by 4–5 months</li>
-          <li>Doesn't reach for or grasp objects by 4–5 months</li>
-          <li>Poor head control — still significant head lag at 4 months</li>
-          <li>Doesn't roll either direction by 6 months</li>
-          <li>Doesn't babble ("ba," "da," "ga") by 6 months</li>
-          <li>Doesn't respond to sounds or voices</li>
-          <li>Seems very stiff or very floppy</li>
-          <li>Poor weight gain or weight loss</li>
-          <li>Feeding refusal lasting more than a day</li>
-        </ul>
-      </div>
-    </div>
-  </article>
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Every baby develops on their own timeline, but certain signs warrant a conversation with your doctor. Contact your pediatrician if your 3–6 month old:</p>
+    <ul>
+      <li>Doesn't smile at people or respond to loud sounds</li>
+      <li>Doesn't follow moving objects with their eyes</li>
+      <li>Shows no interest in reaching for or grasping toys by 5 months</li>
+      <li>Seems unusually stiff or unusually floppy</li>
+      <li>Doesn't bring hands or objects to their mouth</li>
+      <li>Has lost skills they previously had (regression)</li>
+    </ul>
+    <p>Early identification of developmental concerns leads to earlier intervention — and better outcomes. Your pediatrician is your best partner in tracking your baby's progress.</p>
+  </div>
+
+  <h2>Explore 3–6 Month Topics</h2>
+
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a class="topic-card" href={`/ages/3-6-months/${topic.slug}/`}>
+        {topic.label}
+      </a>
+    ))}
+  </div>
+
 </BaseLayout>
