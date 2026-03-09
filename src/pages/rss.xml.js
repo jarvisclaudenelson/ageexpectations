@@ -12,16 +12,19 @@ export async function GET(context) {
       .replace('index.astro', '')
       .replace('.astro', '/');
 
-    // Get title and description from the page's exported components if possible,
-    // or fall back to sensible defaults. Since they are .astro files,
-    // we can't easily read the frontmatter unless they are using markdown.
-    // For now, we'll use a placeholder and suggest moving to Content Collections.
+    const parts = url.split('/').filter(Boolean);
+    const age = parts[1];
+    const topic = parts[2] || 'index';
+    
+    // Predicted image path
+    const imageUrl = `${context.site}images/pins/${age}-${topic}.png`;
     
     return {
       title: url.split('/').filter(Boolean).join(' ').replace(/-/g, ' '),
       pubDate: new Date(),
       description: `Developmental guide for ${url.split('/').filter(Boolean)[1]}`,
       link: url,
+      customData: `<media:content url="${imageUrl}" medium="image" />`,
     };
   });
 
@@ -30,5 +33,8 @@ export async function GET(context) {
     description: 'Practical developmental guides for every stage of parenting.',
     site: context.site,
     items: items,
+    xmlns: {
+      media: 'http://search.yahoo.com/mrss/',
+    },
   });
 }
