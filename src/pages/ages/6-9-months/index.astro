@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '6–9 Month Old Development: What to Expect';
+const description = 'What to expect from your 6 to 9 month old: sitting up, early babbling, responding to their name, and growing curiosity — with AAP-backed guidance.';
+
+const faqs = [
+  {
+    question: 'When do most babies sit up on their own?',
+    answer: 'By 6 months, many babies can sit with minimal support. By 9 months, most babies can sit without any support and move into a sitting position themselves. This milestone is crucial for developing the core strength needed for crawling and eventually walking.'
+  },
+  {
+    question: 'How many words should my 9-month-old be saying?',
+    answer: 'At 9 months, most babies are not yet saying intentional words like "Mama" or "Dada," though they may be babbling those sounds. The focus at this age is on receptive language — responding to their name, understanding simple commands like "no," and making a variety of sounds to get your attention.'
+  },
+  {
+    question: 'Is it normal for my baby to be clingy around 8 months?',
+    answer: 'Yes. Separation anxiety often begins between 6 and 9 months as babies develop object permanence — the understanding that you still exist even when you\'re out of sight. This clinginess is a sign of a healthy attachment and usually peaks around 12–18 months.'
+  },
+  {
+    question: 'What are the first signs of crawling?',
+    answer: 'Before actual crawling, many babies "commando crawl" (using their arms to pull their body along the floor) or rock back and forth on their hands and knees. Some babies skip traditional crawling altogether and move straight to cruising or walking. All are normal variations of motor development.'
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-9-months/',
+});
+
+const faqData = faqSchema(faqs);
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '6–9 Months' }]}>
+
+  <h1>6–9 Month Old Development: What to Expect</h1>
+
+  <p>The 6 to 9 month period is a time of incredible physical and social expansion. Your baby is likely sitting up, beginning to move across the floor, and developing a unique personality. They are becoming more interactive, responding to their name, and showing a deep curiosity about the world around them. Here's a guide to the key milestones and what to expect during this busy stage.</p>
+
+  <h2>Motor Development: Sitting, Moving, and Exploring</h2>
+
+  <p>Your baby is gaining the strength and coordination to move more independently. By 6 to 9 months, you can expect to see:</p>
+
+  <ul>
+    <li><strong>Sitting Without Support:</strong> Most babies master sitting independently during this window, allowing them to use their hands to play with toys.</li>
+    <li><strong>Early Mobility:</strong> Many babies begin to crawl, scoot, or "creep" on their bellies. This newfound mobility means it's time to double-check your baby-proofing!</li>
+    <li><strong>The Pincer Grasp:</strong> Your baby will start using their thumb and forefinger to pick up small objects, which is a major fine motor milestone and essential for self-feeding.</li>
+  </ul>
+
+  <p>The AAP encourages plenty of floor play to allow your baby to practice these new skills safely. Avoid "containers" like walkers or saucers for long periods, as they can sometimes delay natural motor progress.</p>
+
+  <h2>Social and Emotional Growth: Attachment and Curiosity</h2>
+
+  <p>Your baby's social world is becoming more complex. You might notice:</p>
+
+  <ul>
+    <li><strong>Responding to Their Name:</strong> By 9 months, most babies will turn their heads or look at you when you call their name.</li>
+    <li><strong>Stranger Awareness:</strong> It's common for babies to become wary of unfamiliar people or show separation anxiety when you leave the room.</li>
+    <li><strong>Interactive Play:</strong> Your baby will likely enjoy games like peek-a-boo and patty-cake, and they may start mimicking your gestures or sounds.</li>
+  </ul>
+
+  <p>This is a great age to introduce simple, repetitive games that encourage social interaction and turn-taking.</p>
+
+  <h2>Language and Communication: The Road to First Words</h2>
+
+  <p>Communication is about more than just talking. Between 6 and 9 months, babies are busy:</p>
+
+  <ul>
+    <li><strong>Babbling Strings:</strong> You'll hear more complex babbling like "bababa" or "dadada." These aren't usually intentional words yet, but they are the building blocks of speech.</li>
+    <li><strong>Understanding Simple Words:</strong> Your baby is starting to understand the meaning of common words like "no," "bye-bye," and "bottle."</li>
+    <li><strong>Using Gestures:</strong> Many babies begin pointing at things they want or waving hello and goodbye.</li>
+  </ul>
+
+  <p>Continue to talk to your baby about what you're doing throughout the day. Narrating your activities helps build their vocabulary and understanding of language structure.</p>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Frequently Asked Questions</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Every baby is different, but consult your pediatrician if your 6–9 month old:</p>
+    <ul>
+      <li>Doesn't sit with help by 9 months</li>
+      <li>Doesn't babble or make sounds</li>
+      <li>Doesn't respond to their name</li>
+      <li>Doesn't look where you point</li>
+      <li>Seems to lose skills they once had</li>
+    </ul>
+    <p>Your doctor can help determine if a developmental evaluation is needed.</p>
+  </div>
+
+  <h2>Explore 6–9 Month Topics</h2>
+
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a class="topic-card" href={`/ages/6-9-months/${topic.slug}/`}>
+        {topic.label}
+      </a>
+    ))}
+  </div>
+
+</BaseLayout>

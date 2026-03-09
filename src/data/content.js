@@ -34,6 +34,13 @@ export const articles = [
     image: '/images/2026-03-09-pin-3-6m.png',
   },
   {
+    title: '6–9 Month Old Development: What to Expect',
+    description: 'What to expect from your 6 to 9 month old: sitting up, early babbling, responding to their name, and growing curiosity — with AAP-backed guidance.',
+    path: '/ages/6-9-months/',
+    pubDate: '2026-03-09',
+    image: '/images/2026-03-09-pin-6-9m.png',
+  },
+  {
     title: '12–18 Month Old Development: What to Expect',
     description: 'A complete guide to 12–18 month development covering walking, first words, feeding transitions, sleep changes, and emerging independence.',
     path: '/ages/12-18-months/',
