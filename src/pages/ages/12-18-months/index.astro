@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "12-18 Month Toddler Development: Walking, Words & the 1-to-1 Nap Transition",
+  "description": "Months 12–18 development data: first steps, vocabulary growth, nap transition, whole milk, and what's normal toddler behavior vs. a development concern.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many words should a 15-month-old say?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 15 months, most toddlers say 3–10 words consistently. The CDC milestone (met by 75% of children) is at least 3 words by 15 months. Receptive language (understanding words) is always ahead of expressive language. No words at 15 months, or any loss of words at any age, warrants a speech-language evaluation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do toddlers transition from 2 naps to 1 nap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 2-to-1 nap transition typically happens between 13 and 18 months, with 15 months being common. Signs include resisting one nap, taking longer to fall asleep at nap time, or napping so late in the day that bedtime is disrupted. The transition can take 2–8 weeks of inconsistency before the single nap consolidates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much whole milk should a 12-18 month old drink?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AAP recommends 16–24 oz (2–3 cups) of whole milk per day for 12–24 month olds. More than 24 oz can displace solid food intake and cause iron deficiency. Whole milk — not reduced fat — is recommended for brain development until age 2, unless the pediatrician advises otherwise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is hitting and biting at 14 months normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Toddlers at this age lack impulse control and verbal ability to express frustration — hitting, biting, and throwing are common. These behaviors aren't moral failures; they're neurological limitations. Calm, consistent responses ('we don't hit') matter more than punishment. Most improve significantly by 2–3 years as language develops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do toddlers stop putting everything in their mouth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mouthing as primary exploration typically decreases significantly between 12 and 18 months as hand exploration becomes more sophisticated. Most toddlers largely stop mouthing non-food objects by 18–24 months. Until then, small object hazards remain a real choking and ingestion risk."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="12-18 Months: Toddler Development, Sleep & Feeding" description="Months 12–18 development data: first steps, vocabulary growth, nap transition, whole milk introduction, and normal toddler behavior vs. development concerns." schema={schema} faqSchema={faqSchema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>12–18 Month Toddler Development: Walking, Words & the Nap Transition</h1>
+      <p class="article-meta">Ages 12–18 months · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/12-18-months/">Overview</a>
+      <a href="/ages/12-18-months/milestones/">Milestones</a>
+      <a href="/ages/12-18-months/sleep/">Sleep</a>
+      <a href="/ages/12-18-months/feeding/">Feeding</a>
+      <a href="/ages/12-18-months/behavior/">Behavior</a>
+    </div>
+
+    <div class="article-content">
+      <p>Welcome to toddlerhood. At 12 months, most babies are pulling to stand or just beginning to walk. By 18 months, most are running, climbing, and saying 5–20 words. The gap between what they understand and what they can say or do drives most of the frustration — theirs and yours. This is also when the 2-to-1 nap transition happens, which disrupts schedules for weeks.</p>
+
+      <h2>Physical Development</h2>
+      <ul>
+        <li><strong>Walking:</strong> Independent steps typically begin 12–15 months; gait is wide-based and unsteady initially</li>
+        <li><strong>Running:</strong> Stiff, arms-out running emerges around 14–16 months</li>
+        <li><strong>Climbing:</strong> Climbs onto low furniture by 12–14 months; stairs with support by 14–16 months</li>
+        <li><strong>Ball play:</strong> Throws a ball overhand by 12–13 months; kicks a ball while walking by ~16 months</li>
+        <li><strong>Pincer grasp:</strong> Refined; self-feeds most finger foods efficiently by 12–14 months</li>
+        <li><strong>Stacking:</strong> Stacks 2 blocks at 12 months; 3–4 blocks by 15 months; 6 blocks by 18 months</li>
+        <li><strong>Scribbling:</strong> Holds crayon in fist and scribbles; circular marks by 15–18 months</li>
+        <li><strong>Spoon use:</strong> Attempts to use spoon independently from ~14 months; highly inefficient but developmentally important</li>
+      </ul>
+
+      <h2>Cognitive Development</h2>
+      <ul>
+        <li><strong>Symbolic play:</strong> Pretend play using objects symbolically — feeding a doll, talking on a toy phone</li>
+        <li><strong>Problem solving:</strong> Tries multiple approaches to solve a problem (getting a toy from a container)</li>
+        <li><strong>Memory:</strong> Deferred imitation — repeats actions seen hours or days earlier</li>
+        <li><strong>Causal reasoning:</strong> Understands that actions produce effects; begins using tools purposefully</li>
+        <li><strong>Shape sorting:</strong> Can complete simple 2–3 shape puzzles by 15–18 months</li>
+        <li><strong>Body awareness:</strong> Points to 2–3 body parts when named by 15–18 months</li>
+        <li><strong>Self-recognition:</strong> Recognizes self in mirror by ~18 months (rouge test)</li>
+      </ul>
+
+      <h2>Language Development</h2>
+      <ul>
+        <li><strong>Words at 12 months:</strong> 1–3 consistent words (range 0–10)</li>
+        <li><strong>Words at 15 months:</strong> 3–10 words; some toddlers have more</li>
+        <li><strong>Words at 18 months:</strong> Typically 5–20 words; CDC milestone is 10 words by 18 months</li>
+        <li><strong>Receptive vocabulary:</strong> Understands 50–200+ words by 18 months — far more than they say</li>
+        <li><strong>Word combinations:</strong> Two-word combinations ("more milk," "daddy go") typically begin ~18–24 months</li>
+        <li><strong>Gesture use:</strong> Points, shows, gives objects to share; waves; head-shakes for "no"</li>
+        <li><strong>Language input:</strong> Being talked to, read to, and engaged in back-and-forth conversation is the most evidence-backed way to build vocabulary</li>
+        <li><strong>Screen time effect:</strong> Passive screen time does not build vocabulary; interactive video chat does not harm it</li>
+      </ul>
+
+      <h2>Social & Emotional Development</h2>
+      <ul>
+        <li><strong>Autonomy drive:</strong> Increasingly wants to do things independently — dress self, feed self, choose activities</li>
+        <li><strong>Tantrums:</strong> Begin in earnest 12–18 months; peak 18–24 months; neurologically driven by frontal lobe immaturity</li>
+        <li><strong>Parallel play:</strong> Plays alongside other children but not cooperatively</li>
+        <li><strong>Empathy:</strong> Shows concern for others in distress; may offer a comfort object</li>
+        <li><strong>Testing limits:</strong> Consistent, calm, predictable limits are more effective than lengthy explanations</li>
+        <li><strong>Attachment security:</strong> Secure attachment predicts better self-regulation, language, and social outcomes — responding consistently to distress builds it</li>
+        <li><strong>Fear development:</strong> New fears may emerge (loud noises, strangers, separation)</li>
+      </ul>
+
+      <h2>Sleep Patterns</h2>
+      <ul>
+        <li><strong>Total sleep:</strong> 11–14 hours per 24 hours</li>
+        <li><strong>Night sleep:</strong> 10–12 hours</li>
+        <li><strong>Naps:</strong> 2 naps until approximately 13–15 months; transition to 1 nap typically 15–18 months</li>
+        <li><strong>Single nap timing:</strong> After transition, midday nap (12–1pm start) of 1.5–3 hours</li>
+        <li><strong>Nap transition signs:</strong> Resisting one nap, taking very long to fall asleep, or sleeping so late the day nap disrupts bedtime</li>
+        <li><strong>Transition duration:</strong> 2-to-1 nap transition can take 2–8 weeks of inconsistency; offer opportunity for 2 naps on tired days</li>
+        <li><strong>Bedtime:</strong> 6:30–8pm for most toddlers; earlier if dropping morning nap</li>
+        <li><strong>Night wakings:</strong> Developmental leaps, teething, illness, and overtiredness cause temporary regressions</li>
+        <li><strong>Toddler clock:</strong> An OK-to-wake clock can help with early rising</li>
+      </ul>
+
+      <h2>Feeding: Transitioning to Family Foods</h2>
+      <ul>
+        <li><strong>Whole milk:</strong> Switch from formula at 12 months; 16–24 oz per day maximum; whole milk, not reduced-fat, until age 2</li>
+        <li><strong>Breastfeeding:</strong> Can continue past 12 months as long as both parties want; breast milk has nutritional and immune benefits throughout second year</li>
+        <li><strong>Meal structure:</strong> 3 meals + 1–2 snacks per day; predictable timing helps appetite regulation</li>
+        <li><strong>Portion expectations:</strong> Toddler portions are ~¼ of an adult portion; a tablespoon per year of age per food group is a rough guide</li>
+        <li><strong>Appetite variability:</strong> Growth slows dramatically after 12 months — appetite drops noticeably and varies widely day to day. This is normal, not a feeding problem</li>
+        <li><strong>Food selectivity:</strong> Neophobia (fear of new foods) peaks 18–24 months; offer new foods alongside accepted foods without pressure; 10–15 exposures before acceptance is typical</li>
+        <li><strong>Self-feeding:</strong> Spoon and fork attempts from ~14 months; full independence takes until 3–4 years</li>
+        <li><strong>Juice:</strong> AAP recommends no juice under age 1; limit to 4 oz/day max from 12–36 months</li>
+        <li><strong>Choking hazards remain:</strong> Whole grapes, large chunks, hard raw vegetables, hot dogs, nuts, large globs of nut butter</li>
+      </ul>
+
+      <h2>Dental Milestones</h2>
+      <ul>
+        <li><strong>Teeth count:</strong> Typically 8 teeth (4 upper, 4 lower) by 12 months; 12 teeth by 18 months (wide variation)</li>
+        <li><strong>Brushing:</strong> Twice daily; grain-of-rice smear of fluoride toothpaste</li>
+        <li><strong>First molars:</strong> Emerge around 13–19 months; can cause significant discomfort</li>
+        <li><strong>Bottle weaning:</strong> Aim to eliminate bottle by 12–18 months; transition to cup to protect tooth enamel</li>
+      </ul>
+
+      <h2>Screen Time</h2>
+      <ul>
+        <li><strong>AAP guideline:</strong> Avoid screens other than video chat under 18 months; 18–24 months, co-view with caregiver if used</li>
+        <li><strong>Displacement concern:</strong> Screen time at this age displaces language-building face-to-face interaction</li>
+        <li><strong>Video chat:</strong> Does not carry the same developmental concerns as passive viewing</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Common Questions</h2>
+
+        <div class="faq-item">
+          <p class="faq-question">My 15-month-old won't eat anything but crackers and milk. Is this a problem?</p>
+          <p class="faq-answer">A few days of selective eating isn't a problem. Weeks to months of a severely restricted diet may impact nutrition. Growth slows at 12 months and appetite shrinks — this is normal. Neophobia (new food refusal) peaks at 18–24 months. Consistent, no-pressure exposure to varied foods matters more than what's eaten at any single meal. If weight gain is poor or diet is extremely limited, a pediatric feeding evaluation is worth pursuing.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My 14-month-old has tantrums multiple times per day. Is that typical?</p>
+          <p class="faq-answer">Yes. Multiple daily tantrums are developmentally normal at this age. The prefrontal cortex — responsible for impulse control and emotional regulation — is extremely immature. Toddlers don't have the neurological hardware to regulate strong emotions. Tantrums aren't manipulation; they're dysregulation. Calm, consistent responses are most effective.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">When should I wean from the bottle?</p>
+          <p class="faq-answer">AAP recommends transitioning off the bottle by 12–18 months. Prolonged bottle use (especially at bedtime or during sleep) causes significant tooth decay and can perpetuate night feeding. Transition to an open cup or straw cup. Some toddlers refuse the cup at first — consistent offering over 1–2 weeks usually succeeds.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Is my 18-month-old ready for potty training?</p>
+          <p class="faq-answer">A minority of children show readiness by 18 months. Most aren't ready until 24–36 months. Readiness signs: interest in the toilet, awareness of diaper being wet/soiled, ability to follow simple directions, and some ability to pull pants up/down. Attempting potty training before readiness typically extends the total time to training. Average age of training completion is ~2.5–3 years.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My toddler is only saying 5 words at 18 months. Should I worry?</p>
+          <p class="faq-answer">The CDC milestone is 10 words by 18 months; below that warrants a speech-language evaluation referral. However, the bigger flag is trajectory: a toddler adding words weekly is different from one with a static vocabulary. Also check for: responds to name, points to share interest, understands simple requests. If any of these are absent, refer sooner. Early speech therapy is highly effective.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Contact Your Pediatrician</h3>
+        <ul>
+          <li>Not walking by 18 months</li>
+          <li>Fewer than 10 words by 18 months (refer for speech evaluation)</li>
+          <li>Not pointing to share interest by 14–15 months</li>
+          <li>Doesn't follow simple one-step directions by 15 months</li>
+          <li>Loss of any previously acquired words or skills at any age</li>
+          <li>Doesn't wave, clap, or use other gestures by 15 months</li>
+          <li>Doesn't seem interested in other people or social interaction</li>
+          <li>Repeatedly lines up toys or has very rigid, repetitive play</li>
+          <li>Significant food refusal causing poor weight gain</li>
+          <li>Persistent hand preference before 18 months (possible hemiplegia)</li>
+          <li>Tantrums that involve breath-holding turning blue, self-injury, or lasting &gt;30 minutes regularly</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

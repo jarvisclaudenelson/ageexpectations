@@ -1,0 +1,227 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "2-3 Year Behavior: Tantrums, Defiance & Emotional Development",
+  "description": "Understanding toddler behavior at 2-3 years. How to handle tantrums, defiance, hitting, biting, and teaching emotional regulation.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I handle tantrums in a 2-year-old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stay calm, ensure safety, don't give in to the tantrum, and offer comfort after it passes. Tantrums are emotional overload — your child isn't trying to manipulate you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my toddler say no to everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saying no is a normal developmental milestone showing your child is asserting independence and testing boundaries. It's actually a sign of healthy development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop my toddler from hitting and biting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Respond consistently and calmly: say 'we don't hit,' remove them from the situation, and teach words for feelings. These behaviors decrease significantly with age and consistent teaching."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="2-3 Year Behavior: Tantrums & Emotional Development" description="Behavior guide for 2-3 year olds. How to handle tantrums, defiance, hitting, biting, and teach emotional regulation. Positive discipline strategies." schema={schema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>2-3 Year Behavior: Understanding Your Toddler</h1>
+      <p class="article-meta">Ages 24-36 months · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/2-3-years/">Overview</a>
+      <a href="/ages/2-3-years/milestones/">Milestones</a>
+      <a href="/ages/2-3-years/sleep/">Sleep</a>
+      <a href="/ages/2-3-years/behavior/">Behavior</a>
+      <a href="/ages/2-3-years/language/">Language</a>
+      <a href="/ages/2-3-years/feeding/">Feeding</a>
+    </div>
+
+    <div class="article-content">
+      <p>Ages 2-3 bring some of parenting's most challenging moments — and some of the most rewarding. Your toddler is discovering they have opinions, and they're eager to share them. Here's how to navigate this intense but important developmental stage.</p>
+
+      <h2>Understanding Tantrums</h2>
+      <p>Tantrums peak between 18 months and 3 years. They're not manipulation or bad behavior — they're emotional overwhelm that your child can't yet control.</p>
+
+      <h3>What Causes Tantrums</h3>
+      <ul>
+        <li>Hunger, tiredness, or overstimulation</li>
+        <li>Frustration at limitations or inability to communicate</li>
+        <li>Transitions between activities</li>
+        <li>Wants that can't be met immediately</li>
+        <li>Physical discomfort (teething, illness, constipation)</li>
+      </ul>
+
+      <h3>During a Tantrum</h3>
+      <ul>
+        <li>Stay as calm as possible — your regulation helps teach theirs</li>
+        <li>Ensure physical safety</li>
+        <li>Acknowledge feelings: "You're so frustrated"</li>
+        <li>Don't try to reason or lecture</li>
+        <li>Don't give in to the tantrum — it teaches that tantrums work</li>
+        <li>Keep words simple: "I'm here" is enough</li>
+      </ul>
+
+      <h3>After the Tantrum</h3>
+      <ul>
+        <li>Connect before you correct</li>
+        <li>Offer comfort without conditions</li>
+        <li>Name the emotion: "You were really angry"</li>
+        <li>Briefly explain if appropriate</li>
+        <li>Move on — don't hold grudges</li>
+      </ul>
+
+      <h2>The Defiance Phase</h2>
+      <p>"No!" becomes the favorite word, and resistance to routines is common. This is normal — and actually healthy.</p>
+
+      <h3>Why They're Defiant</h3>
+      <ul>
+        <li>Testing independence</li>
+        <li>Learning cause and effect</li>
+        <li>Developing autonomy</li>
+        <li>Pushing boundaries to learn rules</li>
+      </ul>
+
+      <h3>Strategies That Work</h3>
+      <ul>
+        <li><strong>Offer choices:</strong> "Red or blue cup?" instead of "Do you want a cup?"</li>
+        <li><strong>Pick battles:</strong> Not everything needs to be a power struggle</li>
+        <li><strong>Avoid questions:</strong> Use statements: "It's time for bath"</li>
+        <li><strong>Give warnings:</strong> "Five more minutes" before transitions</li>
+        <li><strong>Follow through:</strong> If you say it, do it</li>
+        <li><strong>Stay calm:</strong> Your reaction fuels the battle</li>
+      </ul>
+
+      <h2>Hitting, Biting, and Aggression</h2>
+      <p>Physical aggression is common but distressing for parents. It's a behavior, not a character flaw.</p>
+
+      <h3>Why They Hit or Bite</h3>
+      <ul>
+        <li>Limited language to express needs</li>
+        <li>Frustration they can't articulate</li>
+        <li>Testing cause and effect</li>
+        <li>Overwhelmed by emotions</li>
+        <li>Seeking reaction</li>
+        <li>Imitating others</li>
+      </ul>
+
+      <h3>How to Respond</h3>
+      <ul>
+        <li>Stay calm — don't yell or hit back</li>
+        <li>State clearly: "We don't hit. Hitting hurts."</li>
+        <li>Move them away from the situation</li>
+        <li>Attend to the victim first (models empathy)</li>
+        <li>Teach words: "You were angry, you can say 'I'm mad'"</li>
+        <li>Be consistent — same rule every time</li>
+      </ul>
+
+      <h2>Building Emotional Intelligence</h2>
+      <p>You can help your child develop emotional regulation skills:</p>
+
+      <ul>
+        <li><strong>Name emotions:</strong> "You seem happy/sad/angry"</li>
+        <li><strong>Read emotion books:</strong> Talk about how characters feel</li>
+        <li><strong>Model regulation:</strong> "I'm taking a breath because I'm frustrated"</li>
+        <li><strong>Create calm spaces:</strong> A cozy corner with books</li>
+        <li><strong>Teach deep breaths:</strong> Simple "balloon breathing"</li>
+        <li><strong>Validate feelings:</strong> It's okay to be mad; it's not okay to hurt</li>
+      </ul>
+
+      <h2>Setting Limits Effectively</h2>
+      <p>Toddlers need boundaries — they feel safer with clear limits:</p>
+      <ul>
+        <li>Be consistent with rules</li>
+        <li>Keep rules simple and few</li>
+        <li>Use natural consequences when possible</li>
+        <li>Offer positive attention for good behavior</li>
+        <li>Redirect rather than just say no</li>
+        <li>Acknowledge feelings while holding boundaries</li>
+      </ul>
+
+      <h2>"Mine!" and Sharing</h2>
+      <p>Possessiveness peaks around 2-3 years. True sharing develops later.</p>
+      <ul>
+        <li>It's normal — they can't yet understand others' perspectives</li>
+        <li>Model taking turns instead of demanding sharing</li>
+        <li>Praise flexible behavior when it happens</li>
+        <li>Have backup toys for playdates</li>
+        <li>Don't force sharing of comfort items</li>
+      </ul>
+
+      <h2>Nighttime Fears</h2>
+      <p>Imaginary fears often emerge at this age:</p>
+      <ul>
+        <li>Keep a nightlight if needed</li>
+        <li>Check for monsters (playfully) — they may find it reassuring</li>
+        <li>Establish consistent bedtime routines</li>
+        <li>Comfort without creating monsters</li>
+        <li>Monster spray or special stuffed "protector" can help</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Is This Normal? — Common Questions</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">How long do tantrums last?</p>
+          <p class="faq-answer">Individual tantrums typically last 1-3 minutes but can go up to 10 minutes. They tend to peak around 18-36 months and decrease significantly as language develops.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Should I spank my toddler?</p>
+          <p class="faq-answer">The American Academy of Pediatrics recommends against spanking. Research shows it increases aggression, decreases compliance, and can damage the parent-child relationship.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My toddler hits me. What should I do?</p>
+          <p class="faq-answer">Respond the same way as other hitting: firmly say "We don't hit" and briefly remove yourself or them from the situation. Don't make it a power struggle or give excessive attention.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Why is my sweet baby suddenly so aggressive?</p>
+          <p class="faq-answer">This is common and doesn't mean your child is "bad." They're experiencing emotions without the language or impulse control to express them appropriately. Consistent teaching helps.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Does positive discipline mean no consequences?</p>
+          <p name="faq-answer">No — it means consequences that teach rather than punish. Natural consequences (like a broken toy from throwing) and brief, logical consequences work better than arbitrary punishment.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Talk to Your Pediatrician</h3>
+        <ul>
+          <li>Self-injurious behavior (head banging, biting self)</li>
+          <li>Tantrums lasting more than 30 minutes regularly</li>
+          <li>Tantrums with no emotional expression (flat affect)</li>
+          <li>No interest in playing with other children</li>
+          <li>Persistent aggression that doesn't improve with teaching</li>
+          <li>Regression in previously achieved skills</li>
+          <li>Significant developmental delays alongside behavior issues</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

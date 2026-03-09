@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "12-18 Month Behavior: Tantrums, Independence & Emotions",
+  "description": "Understanding toddler behavior at 12-18 months. Learn about tantrums, the 'no' phase, separation anxiety, and how to handle challenging behaviors.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does my 12-18 month old say no to everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saying 'no' is a normal developmental milestone. Your toddler is asserting independence and testing boundaries. It's actually a sign of healthy development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle tantrums at this age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stay calm, ensure safety, ignore attention-seeking behavior, and offer comfort after the tantrum passes. Tantrums are caused by big emotions that toddlers can't yet control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is separation anxiety normal at 18 months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, separation anxiety typically peaks around 10-18 months and is a sign of healthy attachment. It usually decreases after age 2 but can resurface during times of stress."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="12-18 Month Behavior: Tantrums & Independence" description="Toddler behavior at 12-18 months: tantrums, the 'no' phase, separation anxiety, and healthy emotional development. Tips for handling challenging behaviors." schema={schema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>12-18 Month Behavior: Understanding Your Toddler</h1>
+      <p class="article-meta">Ages 12-18 months · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/12-18-months/">Overview</a>
+      <a href="/ages/12-18-months/milestones/">Milestones</a>
+      <a href="/ages/12-18-months/sleep/">Sleep</a>
+      <a href="/ages/12-18-months/behavior/">Behavior</a>
+      <a href="/ages/12-18-months/feeding/">Feeding</a>
+      <a href="/ages/12-18-months/language/">Language</a>
+    </div>
+
+    <div class="article-content">
+      <p>Welcome to toddlerhood — where your sweet baby is now a fiercely independent little person who has strong opinions about everything, especially things they can't have. The behavior you see at 12-18 months is actually a sign of healthy development, even when it's exhausting.</p>
+
+      <h2>The "No" Phase</h2>
+      <p>Between 12-18 months, many toddlers discover the power of the word "no." This is a critical developmental milestone showing your child understands they have some control over their world.</p>
+
+      <h3>Why They Do It</h3>
+      <ul>
+        <li>Testing independence</li>
+        <li>Learning cause and effect</li>
+        <li>Discovering they have choices</li>
+        <li>Expressing autonomy</li>
+      </ul>
+
+      <h3>How to Respond</h3>
+      <ul>
+        <li>Offer limited choices: "Red cup or blue cup?" instead of "Do you want a cup?"</li>
+        <li>Pick your battles — not everything needs to be a power struggle</li>
+        <li>Stay calm — your reaction teaches them about boundaries</li>
+        <li>Acknowledge feelings: "I know you don't want to leave the park"</li>
+        <li>Follow through on what you say</li>
+      </ul>
+
+      <h2>Tantrums</h2>
+      <p>Tantrums are one of the most challenging parts of the 12-18 month stage. They're not manipulation — they're your toddler's way of expressing overwhelming emotions they can't yet control.</p>
+
+      <h3>What Causes Tantrums</h3>
+      <ul>
+        <li>Hunger or tiredness (most common triggers)</li>
+        <li>Frustration at not being able to communicate</li>
+        <li>Overstimulation</li>
+        <li>Wants not being met immediately</li>
+        <li>Transitioning between activities</li>
+        <li>Physical discomfort (teething, illness)</li>
+      </ul>
+
+      <h3>During a Tantrum</h3>
+      <ul>
+        <li>Stay calm — your regulation helps teach theirs</li>
+        <li>Ensure safety — move away from hazards</li>
+        <li>Offer simple comfort: "I'm here"</li>
+        <li>Don't try to reason or lecture during the tantrum</li>
+        <li>Avoid giving in — it teaches that tantrums work</li>
+      </ul>
+
+      <h3>After the Tantrum</h3>
+      <ul>
+        <li>Connect before you correct</li>
+        <li>Name the emotion: "You were so frustrated"</li>
+        <li>Offer comfort without conditions</li>
+        <li>Briefly explain if age-appropriate</li>
+        <li>Move on — don't hold grudges</li>
+      </ul>
+
+      <h2>Separation Anxiety</h2>
+      <p>Around 12-18 months, separation anxiety often peaks. This is actually a sign of healthy attachment — your child has learned that you're a separate person and they want you nearby.</p>
+
+      <h3>Signs of Separation Anxiety</h3>
+      <ul>
+        <li>Crying when you leave the room</li>
+        <li>Clinging to one caregiver</li>
+        <li>Waking at night more frequently</li>
+        <li>Refusing to be held by others</li>
+        <li>Crying at daycare drop-off</li>
+      </ul>
+
+      <h3>How to Help</h3>
+      <ul>
+        <li>Establish a consistent goodbye routine</li>
+        <li>Keep goodbyes brief and confident</li>
+        <li>Always say goodbye — sneaking away increases anxiety</li>
+        <li>Practice short separations</li>
+        <li>Leave a comfort item with your scent</li>
+        <li>Build trust by always returning</li>
+      </ul>
+
+      <h2>Aggression: Hitting, Biting, and Hair Pulling</h2>
+      <p>Aggressive behaviors are common at this age, though alarming to parents. They usually stem from frustration, lack of language to express needs, or simple exploration.</p>
+
+      <h3>Why They Happen</h3>
+      <ul>
+        <li>Limited language to express needs</li>
+        <li>Frustration with play or sharing</li>
+        <li>Testing cause and effect</li>
+        <li>Overwhelmed by emotions</li>
+        <li>Imitating others (including adults)</li>
+      </ul>
+
+      <h3>How to Respond</h3>
+      <ul>
+        <li>Stay calm — don't yell or hit back</li>
+        <li>Say clearly: "We don't hit. Hitting hurts."</li>
+        <li>Move them away from the situation</li>
+        <li>Address the victim first (comfort them)</li>
+        <li>Teach words for feelings: "You were angry"</li>
+        <li>Be consistent — the same rule every time</li>
+      </ul>
+
+      <h2>Developing Emotional Intelligence</h2>
+      <p>Your toddler is building the foundation for emotional regulation. You can help by:</p>
+
+      <ul>
+        <li><strong>Naming emotions:</strong> "You seem happy!" "That made you sad."</li>
+        <li><strong>Reading face</strong>s: Point out emotions in books and real life</li>
+        <li><strong>Model regulation:</strong> "I'm feeling frustrated, so I'm taking a breath"</li>
+        <li><strong>Validating feelings:</strong> It's okay to be mad; it's not okay to hit</li>
+        <li><strong>Teaching deep breaths:</strong> Even simple "balloon breathing" helps</li>
+        <li><strong>Creating calm-down spaces:</strong> A cozy spot with books</li>
+      </ul>
+
+      <h2>Setting Boundaries</h2>
+      <p>Your toddler needs to know you're in charge — but you can do it with warmth:</p>
+      <ul>
+        <li>Be consistent with rules</li>
+        <li>Follow through on consequences</li>
+        <li>Use natural consequences when possible</li>
+        <li>Offer positive attention for good behavior</li>
+        <li>Acknowledge their feelings while holding the line</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Is This Normal? — Common Questions</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">Why does my toddler hit and bite other children?</p>
+          <p class="faq-answer">Toddlers lack the language and impulse control to express frustration socially. Hitting and biting are common but not acceptable. With consistent teaching, most children significantly reduce these behaviors by age 3.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My toddler hits me. What should I do?</p>
+          <p class="faq-answer">Respond the same way you would if they hit another child: firmly say "We don't hit" and briefly remove yourself or them from the situation. Don't make it a power struggle or give excessive attention to the behavior.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Is it normal for my toddler to be so clingy?</p>
+          <p class="faq-answer">Yes, separation anxiety peaks around 12-18 months and is a sign of healthy attachment. It typically decreases after age 2 but can resurface during stress, illness, or major changes.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My toddler has meltdowns every time we leave somewhere. Help!</p>
+          <p class="faq-answer">Transitions are hard for toddlers. Try warnings before leaving ("2 more minutes"), making departures quick (lingering increases distress), and keeping a consistent routine. This phase typically passes.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Should I spank my toddler?</p>
+          <p class="faq-answer">The American Academy of Pediatrics recommends against spanking. Research shows physical punishment increases aggression, decreases compliance, and can damage the parent-child relationship. Positive discipline is more effective long-term.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Talk to Your Pediatrician</h3>
+        <ul>
+          <li>Self-injurious behavior (head banging, biting self)</li>
+          <li>Tantrums lasting more than 30 minutes regularly</li>
+          <li>No emotional expression (flat affect)</li>
+          <li>Regression in previously achieved skills</li>
+          <li>No interest in playing with other children</li>
+          <li>Persistent aggression that doesn't improve with teaching</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

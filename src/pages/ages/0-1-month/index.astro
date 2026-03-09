@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Newborn Care: 0-1 Month Development & What to Expect",
+  "description": "Your first month with a newborn. Learn about feeding, sleep patterns, development, crying, and when to call the pediatrician.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should a newborn sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Newborns sleep 14-17 hours per day, typically in 2-4 hour stretches. They don't have a day/night rhythm yet, so night waking is normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I feed my newborn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Newborns typically eat every 2-3 hours, or 8-12 times per 24 hours. Breastfed babies may eat more frequently. Watch for hunger cues rather than the clock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it normal for newborns to cry a lot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, newborns cry 1-4 hours per day. Crying peaks around 6 weeks and decreases by 3-4 months. It's their primary way to communicate needs."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="Newborn Care: 0-1 Month Development & Milestones" description="First month with your newborn. Learn about feeding, sleep, development, crying, diaper counts, and when to call your pediatrician." schema={schema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>Newborn Care: Your First Month</h1>
+      <p class="article-meta">Ages 0-1 month · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/0-1-month/">Overview</a>
+      <a href="/ages/0-1-month/milestones/">Milestones</a>
+      <a href="/ages/0-1-month/sleep/">Sleep</a>
+      <a href="/ages/0-1-month/feeding/">Feeding</a>
+      <a href="/ages/0-1-month/health/">Health</a>
+    </div>
+
+    <div class="article-content">
+      <p>The first month with a newborn is equal parts magical and overwhelming. Your baby is adjusting to life outside the womb, and you're adjusting to being a parent. Here's what to expect during these early weeks.</p>
+
+      <h2>What Newborns Look Like</h2>
+      <p>Newborns don't look like the babies in commercials — and that's completely normal:</p>
+      <ul>
+        <li><strong>Head shape:</strong> May be cone-shaped from birth canal (rounds out in days)</li>
+        <li><strong>Skin:</strong> May be peeling, blotchy, or have birthmarks</li>
+        <li><strong>Eyes:</strong> Color often changes over first months</li>
+        <li><strong>Hair:</strong> May have lots, little, or none — and it may fall out</li>
+        <li><strong>Weight:</strong> Loses 5-10% of birth weight initially, regains by 2 weeks</li>
+        <li><strong>Belly button:</strong> Umbilical cord stump falls off in 1-3 weeks</li>
+      </ul>
+
+      <h2>Physical Development</h2>
+      <p>Your newborn's movements are reflexive at this stage:</p>
+      <ul>
+        <li><strong>Rooting reflex:</strong> Turns head toward touch on cheek</li>
+        <li><strong>Sucking reflex:</strong> Automatically sucks when mouth touched</li>
+        <li><strong>Grasp reflex:</strong> Holds onto your finger</li>
+        <li><strong>Moro reflex:</strong> Startles with arms out when startled</li>
+        <li><strong>Vision:</strong> Sees best 8-12 inches away; prefers faces</li>
+        <li><strong>Hearing:</strong> Recognizes your voice from the womb</li>
+      </ul>
+
+      <h2>Feeding Your Newborn</h2>
+      <p>Feeding is the primary activity of the first month:</p>
+      <ul>
+        <li><strong>Frequency:</strong> Every 2-3 hours, or 8-12 times per 24 hours</li>
+        <li><strong>Hunger cues:</strong> Rooting, sucking motions, hand-to-mouth</li>
+        <li><strong>Fullness cues:</strong> Turning away, falling asleep, relaxed hands</li>
+        <li><strong>Amount:</strong> Breastfed babies nurse on demand; formula-fed typically 1.5-3 oz per feeding</li>
+      </ul>
+
+      <h2>Sleep Patterns</h2>
+      <p>Newborn sleep is very different from adult sleep:</p>
+      <ul>
+        <li><strong>Total sleep:</strong> 14-17 hours per 24 hours</li>
+        <li><strong>Sleep cycles:</strong> 50-60 minutes (vs. 90 for adults)</li>
+        <li><strong>Day/night confusion:</strong> Common — no circadian rhythm yet</li>
+        <li><strong>Waking:</strong> Every 2-4 hours to feed is normal</li>
+        <li><strong>Safe sleep:</strong> Back sleeping, firm surface, no loose bedding</li>
+      </ul>
+
+      <h2>Crying</h2>
+      <p>Crying is your baby's primary communication method:</p>
+      <ul>
+        <li><strong>Normal amount:</strong> 1-4 hours per day</li>
+        <li><strong>Common reasons:</strong> Hunger, tiredness, diaper, temperature, overstimulation</li>
+        <li><strong>Peak crying:</strong> Around 6 weeks, then decreases</li>
+        <li><strong>Colic:</strong> Defined as crying 3+ hours/day, 3+ days/week, for 3+ weeks</li>
+      </ul>
+
+      <h2>Diaper Output</h2>
+      <p>Diaper counts help confirm adequate feeding:</p>
+      <ul>
+        <li><strong>Wet diapers:</strong> 6+ per day after day 4</li>
+        <li><strong>Dirty diapers:</strong> 3-4+ per day initially; may decrease after first month</li>
+        <li><strong>Color:</strong> Yellow or tan stools are normal; black meconium in first days</li>
+        <li><strong>Urine:</strong> Should be pale yellow, not dark</li>
+      </ul>
+
+      <h2>Bonding and Development</h2>
+      <p>Even in the first month, your baby is learning about you:</p>
+      <ul>
+        <li><strong>Recognizes your voice:</strong> Talk and sing to your baby</li>
+        <li><strong>Prefers faces:</strong> Make eye contact during feedings</li>
+        <li><strong>Responds to touch:</strong> Skin-to-skin contact is beneficial</li>
+        <li><strong>Can track objects:</strong> Slowly move toys 8-12 inches from face</li>
+        <li><strong>Startles to sound:</strong> Normal reflex, not fear</li>
+      </ul>
+
+      <h2>Postpartum Recovery for Parents</h2>
+      <p>Your recovery matters too:</p>
+      <ul>
+        <li><strong>Rest:</strong> Sleep when baby sleeps when possible</li>
+        <li><strong>Help:</strong> Accept offers of meals, cleaning, or childcare</li>
+        <li><strong>Emotions:</strong> Baby blues are common; postpartum depression needs treatment</li>
+        <li><strong>Physical recovery:</strong> Varies by delivery type</li>
+        <li><strong>Feeding support:</strong> Lactation consultants can help</li>
+      </ul>
+
+      <h2>Safe Sleep Guidelines</h2>
+      <p>Follow AAP safe sleep recommendations:</p>
+      <ul>
+        <li>Always place baby on their back to sleep</li>
+        <li>Use a firm, flat sleep surface (crib, bassinet, pack-n-play)</li>
+        <li>No loose bedding, pillows, bumpers, or toys in sleep area</li>
+        <li>Room-share (not bed-share) for at least 6 months</li>
+        <li>Keep room at comfortable temperature</li>
+        <li>Avoid overheating</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Is This Normal? — Common Questions</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">My newborn sleeps all day and is awake all night. Is this normal?</p>
+          <p class="faq-answer">Yes, this is very common. Newborns don't have a circadian rhythm yet. It typically takes 6-8 weeks (sometimes longer) for day/night patterns to emerge. Keep days bright and active, nights dark and quiet.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">How do I know if my baby is getting enough milk?</p>
+          <p class="faq-answer">Signs include: 6+ wet diapers per day after day 4, regular dirty diapers, seeming satisfied after feeds, gaining weight (regain birth weight by 2 weeks), and alert periods between feeds.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My baby cries for hours every evening. Is this colic?</p>
+          <p class="faq-answer">Evening fussiness is very common. True colic is defined as crying 3+ hours/day, 3+ days/week, for 3+ weeks. If you're concerned, talk to your pediatrician. The crying typically peaks at 6 weeks and improves by 3-4 months.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Should I wake my baby to feed?</p>
+          <p class="faq-answer">In the first 2 weeks, yes — wake every 2-3 hours to ensure adequate intake and weight gain. After your baby has regained birth weight and your pediatrician gives the okay, you can let them sleep longer stretches.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Is it okay to let my baby sleep in a swing or car seat?</p>
+          <p class="faq-answer">Babies should not sleep in swings, car seats, or other inclined devices for extended periods. These positions can restrict breathing. For sleep, use a firm, flat surface like a crib or bassinet.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Call Your Pediatrician</h3>
+        <ul>
+          <li>Fever of 100.4°F (38°C) or higher</li>
+          <li>Refusing to eat or very sleepy/hard to wake</li>
+          <li>Fewer than 6 wet diapers per day after day 4</li>
+          <li>Bloody or black stools (after meconium passes)</li>
+          <li>Green vomit (not just spit-up)</li>
+          <li>Breathing difficulties or very fast breathing</li>
+          <li>Blue or gray color around lips or face</li>
+          <li>Jaundice (yellowing) that worsens or spreads</li>
+          <li>Not gaining weight</li>
+          <li>Excessive crying you can't soothe</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

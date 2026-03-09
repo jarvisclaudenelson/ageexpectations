@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Newborn Sleep: Patterns, Safety & Survival Guide",
+  "description": "Newborn sleep patterns, safe sleep guidelines, day/night confusion, and tips for surviving the first month of sleep deprivation.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should a newborn sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Newborns sleep 14-17 hours per day, typically in 2-4 hour stretches around the clock. They wake frequently to eat, which is normal and necessary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do babies start sleeping through the night?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most babies don't sleep through the night (5-6 hours) until 3-6 months. Newborns need to eat every 2-3 hours and cannot sleep long stretches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe for my newborn to sleep on their side or stomach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The AAP recommends babies always sleep on their backs for every sleep. Side and stomach sleeping increase the risk of SIDS."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="Newborn Sleep: Patterns, Safety & Survival Guide" description="Newborn sleep guide: patterns, safe sleep guidelines, day/night confusion, and tips for the first month of sleep deprivation." schema={schema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>Newborn Sleep: What to Expect</h1>
+      <p class="article-meta">Ages 0-1 month · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/0-1-month/">Overview</a>
+      <a href="/ages/0-1-month/milestones/">Milestones</a>
+      <a href="/ages/0-1-month/sleep/">Sleep</a>
+      <a href="/ages/0-1-month/feeding/">Feeding</a>
+      <a href="/ages/0-1-month/health/">Health</a>
+    </div>
+
+    <div class="article-content">
+      <p>Newborn sleep is nothing like adult sleep — and that's by design. Your baby is adjusting to life outside the womb, and their tiny stomachs need frequent refueling. Understanding what's normal can help you survive this exhausting but temporary phase.</p>
+
+      <h2>How Much Newborns Sleep</h2>
+      <p>The National Sleep Foundation recommends:</p>
+      <ul>
+        <li><strong>Total sleep:</strong> 14-17 hours per 24 hours</li>
+        <li><strong>Sleep stretches:</strong> 2-4 hours at a time</li>
+        <li><strong>Night waking:</strong> Every 2-3 hours to feed is normal and necessary</li>
+        <li><strong>Sleep cycles:</strong> 50-60 minutes (vs. 90 minutes for adults)</li>
+      </ul>
+
+      <h2>Newborn Sleep Patterns</h2>
+      <p>Newborn sleep is divided into two states:</p>
+      <ul>
+        <li><strong>Active sleep (REM):</strong> 50% of sleep; eyes move, body twitches, may make noises</li>
+        <li><strong>Quiet sleep (non-REM):</strong> Deep, still sleep</li>
+      </ul>
+      <p>Newborns spend about 50% of sleep in REM (compared to 20% for adults). This supports rapid brain development.</p>
+
+      <h2>Day/Night Confusion</h2>
+      <p>Many newborns have their days and nights mixed up. This is because:</p>
+      <ul>
+        <li>They don't have a circadian rhythm yet</li>
+        <li>Melatonin production doesn't start until around 9-12 weeks</li>
+        <li>In the womb, they slept when you moved (daytime) and woke when you rested (night)</li>
+      </ul>
+
+      <h3>Helping Establish Day/Night Rhythm</h3>
+      <ul>
+        <li><strong>Days:</strong> Keep lights on, activity normal, interact during feeds</li>
+        <li><strong>Nights:</strong> Keep lights dim, voices low, minimize interaction</li>
+        <li><strong>Consistency:</strong> It takes 6-8 weeks (sometimes longer) to develop</li>
+        <li><strong>Patience:</strong> This is biological, not behavioral</li>
+      </ul>
+
+      <h2>Safe Sleep Guidelines (AAP)</h2>
+      <p>Following safe sleep practices reduces the risk of SIDS:</p>
+
+      <h3>The ABCs of Safe Sleep</h3>
+      <ul>
+        <li><strong>A — Alone:</strong> No bed-sharing; baby sleeps in own space</li>
+        <li><strong>B — Back:</strong> Always on their back for every sleep</li>
+        <li><strong>C — Crib:</strong> Firm, flat sleep surface with no loose items</li>
+      </ul>
+
+      <h3>Sleep Environment</h3>
+      <ul>
+        <li>Firm mattress with tight-fitting sheet</li>
+        <li>No pillows, blankets, bumpers, or toys in sleep area</li>
+        <li>Room temperature: 68-72°F (20-22°C)</li>
+        <li>Room-share (not bed-share) for at least 6 months</li>
+        <li>Consider a pacifier at nap and bedtime</li>
+      </ul>
+
+      <h3>What to Avoid</h3>
+      <ul>
+        <li>Bed-sharing (especially if you smoke, drink, or are very tired)</li>
+        <li>Sleeping on couches, chairs, or inclined surfaces</li>
+        <li>Overheating (no hats indoors, not too many layers)</li>
+        <li>Products claiming to reduce SIDS (wedges, positioners)</li>
+        <li>Weighted blankets or sleep positioners</li>
+      </ul>
+
+      <h2>Swaddling</h2>
+      <p>Swaddling can help newborns sleep but must be done safely:</p>
+      <ul>
+        <li>Swaddle snugly around arms, loose at hips (allows leg movement)</li>
+        <li>Stop swaddling when baby shows signs of rolling (usually 8-12 weeks)</li>
+        <li>Use lightweight, breathable fabric</li>
+        <li>Ensure baby doesn't overheat</li>
+        <li>Never swaddle and place on stomach</li>
+      </ul>
+
+      <h2>Surviving Sleep Deprivation</h2>
+      <p>The first month is exhausting. Strategies that help:</p>
+
+      <h3>Practical Tips</h3>
+      <ul>
+        <li><strong>Sleep when baby sleeps:</strong> Even 20 minutes helps</li>
+        <li><strong>Accept help:</strong> Let others cook, clean, or hold baby while you rest</li>
+        <li><strong>Share night duties:</strong> If breastfeeding, partner can do diaper changes</li>
+        <li><strong>Lower standards:</strong> This is not the time for a perfect house</li>
+        <li><strong>Prepare for night feeds:</strong> Water, snacks, phone charger nearby</li>
+      </ul>
+
+      <h3>Feeding and Sleep</h3>
+      <ul>
+        <li>Newborns need to eat every 2-3 hours</li>
+        <li>Don't try to stretch feeds — it can backfire</li>
+        <li>Cluster feeding (frequent feeds) in evenings is normal</li>
+        <li>Dream feeds may help some babies sleep longer</li>
+      </ul>
+
+      <h2>When Sleep Improves</h2>
+      <p>Gradual changes you can expect:</p>
+      <ul>
+        <li><strong>6-8 weeks:</strong> Day/night rhythm begins to emerge</li>
+        <li><strong>3 months:</strong> May sleep 4-6 hour stretches</li>
+        <li><strong>4-6 months:</strong> Longer night sleep possible</li>
+        <li><strong>6+ months:</strong> Many sleep 6-8 hours (but not all)</li>
+      </ul>
+
+      <h2>Newborn Sleep Cues</h2>
+      <p>Watch for these signs your baby is tired:</p>
+      <ul>
+        <li>Yawning</li>
+        <li>Rubbing eyes</li>
+        <li>Looking away or avoiding eye contact</li>
+        <li>Fussiness or crying</li>
+        <li>Stiffening body</li>
+        <li>Sucking on hands (can mean hungry or tired)</li>
+      </ul>
+      <p>Put baby down when drowsy but awake — this helps them learn to self-soothe.</p>
+
+      <h2>Common Sleep Challenges</h2>
+
+      <h3>Cluster Feeding</h3>
+      <p>Frequent feeding in the evening is normal and helps build milk supply. It doesn't mean you don't have enough milk.</p>
+
+      <h3>Day/Night Reversal</h3>
+      <p>Keep days bright and active, nights dark and quiet. It takes time but will resolve.</p>
+
+      <h3>Short Naps</h3>
+      <p>Newborn naps are often 20-45 minutes. This is normal — their sleep cycles are short.</p>
+
+      <h3>Grunting and Noises</h3>
+      <p>Newborns are noisy sleepers. Grunting, squeaking, and brief cries are usually normal.</p>
+
+      <div class="faq-section">
+        <h2>Is This Normal? — Common Questions</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">My newborn only sleeps when held. Is this okay?</p>
+          <p class="faq-answer">Newborns often prefer being held — they were just in the womb for 9 months. For safety, transfer to a firm sleep surface when you need to sleep. You can use babywearing for supervised contact naps during the day.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Should I wake my baby to feed at night?</p>
+          <p class="faq-answer">In the first 2 weeks, yes — wake every 2-3 hours to ensure adequate intake and weight gain. After your baby has regained birth weight and your pediatrician approves, you can let them sleep longer stretches.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Is it safe to bed-share with my newborn?</p>
+          <p class="faq-answer">The AAP recommends room-sharing without bed-sharing for at least 6 months. Bed-sharing increases SIDS risk, especially if parents smoke, drink alcohol, are very tired, or if the baby is premature or low birth weight.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My baby makes so much noise while sleeping. Is this normal?</p>
+          <p class="faq-answer">Yes, newborns are noisy sleepers. Grunting, squeaking, brief cries, and snorting are usually normal. True snoring or gasping warrants a pediatrician visit.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">When will my baby sleep through the night?</p>
+          <p class="faq-answer">Most babies don't sleep through the night (5-6 hours) until 3-6 months. Newborns need to eat frequently and cannot sleep long stretches. This is temporary — it will improve.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Talk to Your Pediatrician</h3>
+        <ul>
+          <li>Very difficult to wake for feeds</li>
+          <li>Sleeping through feeds consistently in first weeks</li>
+          <li>Snoring, gasping, or pauses in breathing</li>
+          <li>Turning blue or very pale during sleep</li>
+          <li>Excessive sweating during sleep</li>
+          <li>Not gaining weight</li>
+          <li>Extreme fussiness that doesn't improve with soothing</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

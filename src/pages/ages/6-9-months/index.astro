@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "6-9 Month Baby Development: Sitting, Solids & Separation Anxiety",
+  "description": "Months 6–9 development data: sitting independently, solid food introduction, crawling preparation, sleep patterns, and separation anxiety onset.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What solid foods should I start with at 6 months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Iron-rich foods are the priority at 6 months because breast milk iron becomes insufficient. Options include pureed meats, iron-fortified single-grain cereals, and well-cooked pureed legumes. Introduce one new food every 3–5 days to identify allergies. Top allergens (peanut, egg, tree nuts, fish) should be introduced early — current evidence supports early introduction to reduce allergy risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do babies sit up on their own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most babies sit independently — without hands for support — between 6 and 8 months. Tripod sitting (leaning on hands) usually precedes this by 4–6 weeks. Babies typically begin sitting with full stability and can pivot to reach toys by 8–9 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is separation anxiety at 8 months normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, separation anxiety is a normal developmental milestone — it signals healthy attachment, not insecurity. It typically peaks between 8–10 months, as babies develop object permanence (understanding that a person exists even when unseen) but not yet the concept that absence is temporary. It naturally diminishes through toddlerhood."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much milk does a 7-month-old need when eating solids?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Breast milk or formula remains the primary nutrition source through 12 months. At 6–9 months, 24–32 oz of formula per day (or 4–6 breastfeeds) is typical alongside solids. Solid foods at this stage are supplemental — they introduce flavor, texture, and iron, not replace milk feeds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My 8-month-old won't sleep unless I'm there. What do I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Separation anxiety, developmental leaps, and new mobility all disrupt sleep at 8–9 months. Many sleep consultants recommend waiting until a developmental leap passes before sleep training. Consistent bedtime routines, brief check-in methods, or graduated extinction (Ferber) are all evidence-backed options after this phase."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="6-9 Months: Baby Development, Solids & Sleep" description="Months 6–9 development data: sitting independently, solid food introduction, crawling preparation, and separation anxiety onset." schema={schema} faqSchema={faqSchema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>6–9 Month Baby Development: Sitting, Solids & Separation Anxiety</h1>
+      <p class="article-meta">Ages 6–9 months · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/6-9-months/">Overview</a>
+      <a href="/ages/6-9-months/milestones/">Milestones</a>
+      <a href="/ages/6-9-months/sleep/">Sleep</a>
+      <a href="/ages/6-9-months/feeding/">Feeding</a>
+    </div>
+
+    <div class="article-content">
+      <p>Months 6–9 are high-velocity development. Babies go from rolling to sitting to pre-crawling in roughly 90 days. Solid foods enter the picture, sleep gets disrupted again (9-month regression), and object permanence brings separation anxiety — which is a milestone, not a problem.</p>
+
+      <h2>Physical Development</h2>
+      <ul>
+        <li><strong>Independent sitting:</strong> Tripod sit at 5–6 months; hands-free sitting by 7–8 months</li>
+        <li><strong>Pivoting:</strong> Rotates in sitting position to reach objects by 8 months</li>
+        <li><strong>Pre-crawling:</strong> Rocks on hands and knees, commando/belly crawls, or bottom shuffles from 7–8 months</li>
+        <li><strong>Crawling:</strong> Classic hands-and-knees crawling typically emerges 7–10 months (some babies skip it entirely)</li>
+        <li><strong>Pulling to stand:</strong> Begins pulling on furniture to stand from 8–9 months</li>
+        <li><strong>Pincer grasp:</strong> Raking grasp at 6–7 months; early inferior pincer (using thumb and fingers) by 8–9 months</li>
+        <li><strong>Mouthing:</strong> Everything still goes directly to the mouth — developmental, not just habit</li>
+      </ul>
+
+      <h2>Cognitive Development</h2>
+      <ul>
+        <li><strong>Object permanence:</strong> Understands objects exist when out of sight; will search for a hidden toy from ~8 months</li>
+        <li><strong>Cause and effect:</strong> Deliberately drops objects to watch them fall; bangs objects together</li>
+        <li><strong>Imitation:</strong> Imitates gestures and sounds with increasing accuracy</li>
+        <li><strong>Problem solving:</strong> Pulls a cloth to retrieve a hidden object</li>
+        <li><strong>Attention:</strong> Can hold attention on an interesting activity for 2–3 minutes</li>
+        <li><strong>Spatial understanding:</strong> Explores objects by rotating, banging, and transferring between hands</li>
+      </ul>
+
+      <h2>Language Development</h2>
+      <ul>
+        <li><strong>Babbling:</strong> Reduplicated babble — "bababa," "mamama," "dadada" — from 6–7 months</li>
+        <li><strong>Varied babble:</strong> Combines different consonant-vowel pairs ("bagida") by 8–9 months</li>
+        <li><strong>Intonation:</strong> Uses different pitches and rhythms that mirror conversational speech</li>
+        <li><strong>Name recognition:</strong> Turns consistently to own name by 6–7 months</li>
+        <li><strong>Gesture comprehension:</strong> Begins responding to "no" and simple gestures</li>
+        <li><strong>Joint attention:</strong> Follows a caregiver's pointing gesture toward an object</li>
+      </ul>
+
+      <h2>Social & Emotional</h2>
+      <ul>
+        <li><strong>Stranger anxiety:</strong> Wariness of unfamiliar people intensifies from ~6 months</li>
+        <li><strong>Separation anxiety:</strong> Peaks 8–10 months; cries when primary caregiver leaves the room</li>
+        <li><strong>Attachment:</strong> Clear preference for 1–2 primary caregivers</li>
+        <li><strong>Emotional contagion:</strong> Laughs when others laugh; may cry in response to others' distress</li>
+        <li><strong>Turn-taking games:</strong> Peek-a-boo and simple back-and-forth play are engaging and developmentally valuable</li>
+        <li><strong>Mirror recognition:</strong> Enjoys mirror play; full self-recognition doesn't develop until ~18–24 months</li>
+      </ul>
+
+      <h2>Sleep Patterns</h2>
+      <ul>
+        <li><strong>Total sleep:</strong> 12–15 hours per 24 hours</li>
+        <li><strong>Night sleep:</strong> 10–12 hours; many (not all) babies can sleep 6–8 hour stretches</li>
+        <li><strong>Nap schedule:</strong> 2 naps per day — morning and afternoon — each 1–2 hours</li>
+        <li><strong>Wake windows:</strong> 2–3 hours between sleep periods</li>
+        <li><strong>8–10 month sleep disruption:</strong> Object permanence + separation anxiety + motor development drive night waking; very common and temporary</li>
+        <li><strong>Sleep training:</strong> Evidence-backed methods (graduated extinction, camp-out, pick-up/put-down) are options if needed; studies show no long-term psychological harm</li>
+        <li><strong>Night feeds:</strong> Many babies this age can nutritionally go 10–12 hours without feeding; night waking is often habitual, not hunger-driven</li>
+      </ul>
+
+      <h2>Solid Food Introduction</h2>
+      <p>Milk remains primary nutrition; solids introduce texture, flavor, and critical micronutrients:</p>
+      <ul>
+        <li><strong>Start timing:</strong> Around 6 months (not before 4 months; watch for readiness signs)</li>
+        <li><strong>Readiness signs:</strong> Sitting with minimal support, good head control, tongue-thrust reflex absent, interest in food, doubled birth weight</li>
+        <li><strong>First priority:</strong> Iron-rich foods — pureed meats, iron-fortified cereals, legumes</li>
+        <li><strong>Introduction pace:</strong> One new food every 3–5 days to identify reactions</li>
+        <li><strong>Texture progression:</strong> Smooth purées → mashed → finely chopped soft foods</li>
+        <li><strong>Baby-led weaning (BLW):</strong> Soft finger foods from the start; evidence shows similar outcomes to purée-led weaning in healthy term infants</li>
+        <li><strong>Allergen introduction:</strong> Early introduction of peanut, egg, tree nuts, fish is now recommended to reduce allergy risk (LEAP trial data)</li>
+        <li><strong>Milk feeds:</strong> Breast milk/formula: 24–32 oz/day; solids don't significantly replace milk feeds yet</li>
+        <li><strong>Avoid:</strong> Honey (botulism risk under 12 months), cow's milk as primary drink, added salt/sugar, choking hazards</li>
+      </ul>
+
+      <h2>Motor Safety Notes</h2>
+      <ul>
+        <li>Babyproof before mobility arrives — crawlers access everything at floor level</li>
+        <li>Secure furniture to walls (tip-over risk when pulling to stand)</li>
+        <li>Gate stairs immediately when baby begins crawling</li>
+        <li>Remove small objects from reachable areas (choking risk)</li>
+        <li>Door pinch guards protect fingers during crawling stage</li>
+        <li>Lower crib mattress to lowest position before pulling to stand begins</li>
+      </ul>
+
+      <h2>Diaper & Stool Changes with Solids</h2>
+      <ul>
+        <li><strong>Frequency change:</strong> Stools become less frequent and more formed once solids are introduced</li>
+        <li><strong>Color change:</strong> Will reflect foods eaten — orange (sweet potato), green (peas), etc. — normal</li>
+        <li><strong>Constipation:</strong> Common during solids introduction; ensure adequate fluid intake; pureed prunes or pears help</li>
+        <li><strong>Wet diapers:</strong> Still 6+ per day confirms adequate hydration</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Common Questions</h2>
+
+        <div class="faq-item">
+          <p class="faq-question">Do I need to give purées or can I go straight to finger foods?</p>
+          <p class="faq-answer">Both approaches are valid. Baby-led weaning (soft finger foods from the start) has comparable outcomes to spoon-fed purées in healthy term infants. The priority is that whatever texture you use is safe — nothing hard, sticky, or round. Soft, squishable pieces are the test: if it squishes between your fingers, it's likely safe.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My 7-month-old screams when I leave the room. Is this separation anxiety?</p>
+          <p class="faq-answer">Yes — and it's developmentally appropriate. Object permanence means baby now knows you exist when you're gone, but doesn't yet understand you'll come back. Brief separations with consistent, calm goodbyes (don't sneak out) help build confidence over time. It typically peaks at 8–10 months and decreases through toddlerhood.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My baby gags every time I give solids. Is this choking?</p>
+          <p class="faq-answer">Gagging and choking are different. Gagging is a loud, dramatic retching — it's a protective reflex that moves food forward. It's very common during the texture-learning phase and not dangerous. Choking is silent, with no air moving. Learn infant choking response and understand the difference before starting solids.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">When should I introduce a sippy cup?</p>
+          <p class="faq-answer">You can introduce an open cup or straw cup (not a traditional sippy) with water around 6 months when solids start. Open cups develop oral motor skills better than valved sippies. Small amounts of water (2–4 oz/day) alongside solids is fine after 6 months.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My 9-month-old pulls to stand but falls constantly. Is that normal?</p>
+          <p class="faq-answer">Yes. Pulling to stand and the subsequent falling is how balance and weight-shifting are learned. Falls from standing height are usually not harmful at this age — the floor is the appropriate practice surface. Falls from heights (couch, changing table) are the real concern to prevent.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Contact Your Pediatrician</h3>
+        <ul>
+          <li>Doesn't sit with support by 7 months</li>
+          <li>Doesn't bear weight on legs by 7 months</li>
+          <li>Doesn't babble ("bababa," "mamama") by 9 months</li>
+          <li>Doesn't respond to own name by 9 months</li>
+          <li>No back-and-forth gesturing or vocal exchange by 9 months</li>
+          <li>Loss of previously acquired skills at any age</li>
+          <li>Significant feeding refusal or choking on all textures</li>
+          <li>No transfer of objects between hands by 7–8 months</li>
+          <li>Persistent asymmetric movement (uses one side much more than the other)</li>
+          <li>Blood in stool, severe constipation, or signs of food allergy (hives, vomiting, difficulty breathing after a new food)</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

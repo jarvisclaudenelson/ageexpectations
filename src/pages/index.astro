@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AgeExpectations",
+  "description": "Evidence-based parenting guidance by age — milestones, sleep, behavior, and development what to expect.",
+  "url": "https://ageexpectations.com"
+};
+---
+
+<BaseLayout title="Parenting Milestones & What to Expect" description="Evidence-based parenting guidance by age. Find developmental milestones, sleep patterns, behavior tips, and health guidance for every stage — newborn to teen." schema={schema}>
+  <div class="article">
+    <div class="hero">
+      <h1>What to Expect, When You Don't Know What to Expect</h1>
+      <p>Evidence-based parenting guidance organized by age. Find reliable information on milestones, sleep, feeding, behavior, and development — the stuff that keeps parents up at night.</p>
+    </div>
+
+    <h2>Choose Your Child's Age</h2>
+    <div class="age-grid">
+      <a href="/ages/0-1-month/" class="age-card">
+        <h3>Newborn (0-1 mo)</h3>
+        <p>First month essentials</p>
+      </a>
+      <a href="/ages/1-3-months/" class="age-card">
+        <h3>1-3 Months</h3>
+        <p>The fourth trimester</p>
+      </a>
+      <a href="/ages/3-6-months/" class="age-card">
+        <h3>3-6 Months</h3>
+        <p>Growing and curious</p>
+      </a>
+      <a href="/ages/6-9-months/" class="age-card">
+        <h3>6-9 Months</h3>
+        <p>On the move</p>
+      </a>
+      <a href="/ages/9-12-months/" class="age-card">
+        <h3>9-12 Months</h3>
+        <p>Almost walking</p>
+      </a>
+      <a href="/ages/12-18-months/" class="age-card">
+        <h3>12-18 Months</h3>
+        <p>The toddler years begin</p>
+      </a>
+      <a href="/ages/18-24-months/" class="age-card">
+        <h3>18-24 Months</h3>
+        <p>Big emotions</p>
+      </a>
+      <a href="/ages/2-3-years/" class="age-card">
+        <h3>2-3 Years</h3>
+        <p>Terrible or wonderful</p>
+      </a>
+      <a href="/ages/3-4-years/" class="age-card">
+        <h3>3-4 Years</h3>
+        <p>Preschooler</p>
+      </a>
+      <a href="/ages/4-5-years/" class="age-card">
+        <h3>4-5 Years</h3>
+        <p>Pre-kindergarten</p>
+      </a>
+      <a href="/ages/5-6-years/" class="age-card">
+        <h3>5-6 Years</h3>
+        <p>Kindergarten age</p>
+      </a>
+      <a href="/ages/6-8-years/" class="age-card">
+        <h3>6-8 Years</h3>
+        <p>Early elementary</p>
+      </a>
+      <a href="/ages/8-10-years/" class="age-card">
+        <h3>8-10 Years</h3>
+        <p>Upper elementary</p>
+      </a>
+      <a href="/ages/10-12-years/" class="age-card">
+        <h3>10-12 Years</h3>
+        <p>Pre-teen</p>
+      </a>
+      <a href="/ages/12-14-years/" class="age-card">
+        <h3>12-14 Years</h3>
+        <p>Early teen</p>
+      </a>
+      <a href="/ages/14-18-years/" class="age-card">
+        <h3>14-18 Years</h3>
+        <p>Teen years</p>
+      </a>
+    </div>
+
+    <div class="faq-section">
+      <h2>Why AgeExpectations?</h2>
+      <p>Parenting advice is everywhere — but not all of it is reliable. We summarize evidence-based guidance from the American Academy of Pediatrics (AAP), CDC, and peer-reviewed research into practical, easy-to-understand pages organized by age.</p>
+      <p>Each page covers what developmental milestones to expect, common concerns parents have, and red flags worth mentioning to your pediatrician.</p>
+    </div>
+  </div>
+</BaseLayout>

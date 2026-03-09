@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "5-6 Year Development: Kindergarten Readiness & Milestones",
+  "description": "Your 5-6 year old is starting kindergarten. Learn about developmental milestones, school readiness, social skills, and what to expect at this age.",
+  "author": {
+    "@type": "Organization",
+    "name": "AgeExpectations"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should a 5-year-old know before kindergarten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kindergarten readiness includes basic self-care (using bathroom, dressing), following directions, recognizing some letters and numbers, and social skills like sharing and taking turns. Academic skills vary widely and aren't required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much sleep does a 5-6 year old need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children ages 5-6 need 10-13 hours of sleep per 24 hours. Many still benefit from a nap or quiet time, though most have dropped naps by age 5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my 5-year-old ready for kindergarten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Readiness includes emotional maturity (separates from parents, manages frustration), social skills (plays cooperatively, follows rules), and basic self-care (uses bathroom independently). Academic skills vary and aren't required for success."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title="5-6 Years: Kindergarten Development & Milestones" description="Your 5-6 year old is starting kindergarten. Learn about developmental milestones, school readiness, social skills, and what to expect at this age." schema={schema} pageType="Article">
+  <article class="article">
+    <header class="article-header">
+      <h1>5-6 Year Development: Kindergarten Age</h1>
+      <p class="article-meta">Ages 5-6 years · Updated March 2026</p>
+    </header>
+
+    <div class="topic-nav">
+      <a href="/ages/5-6-years/">Overview</a>
+      <a href="/ages/5-6-years/milestones/">Milestones</a>
+      <a href="/ages/5-6-years/sleep/">Sleep</a>
+      <a href="/ages/5-6-years/behavior/">Behavior</a>
+      <a href="/ages/5-6-years/school/">School</a>
+    </div>
+
+    <div class="article-content">
+      <p>Five and six are magical ages — your child is starting school, making real friendships, and becoming more independent every day. This is a time of major transitions, new challenges, and incredible growth.</p>
+
+      <h2>Physical Development</h2>
+      <p>Your kindergartener is becoming more coordinated and capable:</p>
+      <ul>
+        <li><strong>Running and jumping:</strong> Hops on one foot, skips, gallops</li>
+        <li><strong>Ball skills:</strong> Catches with hands, throws with aim</li>
+        <li><strong>Fine motor:</strong> Writes letters, draws detailed pictures, uses scissors</li>
+        <li><strong>Dressing:</strong> Buttons, zippers, ties shoes (with help)</li>
+        <li><strong>Balance:</strong> Rides a bike with training wheels</li>
+        <li><strong>Strength:</strong> Can climb playground equipment confidently</li>
+      </ul>
+
+      <h2>Cognitive Development</h2>
+      <p>Thinking becomes more complex and logical:</p>
+      <ul>
+        <li><strong>Counting:</strong> Counts to 20+, recognizes written numbers</li>
+        <li><strong>Letters:</strong> Recognizes most letters, may write name</li>
+        <li><strong>Time:</strong> Understands concepts like yesterday, today, tomorrow</li>
+        <li><strong>Categories:</strong> Groups objects by color, shape, size</li>
+        <li><strong>Problem solving:</strong> Thinks through simple problems</li>
+        <li><strong>Memory:</strong> Remembers routines and sequences</li>
+      </ul>
+
+      <h2>Language Development</h2>
+      <p>Communication becomes sophisticated:</p>
+      <ul>
+        <li><strong>Vocabulary:</strong> 2,000-2,500+ words</li>
+        <li><strong>Sentences:</strong> Complex sentences with multiple clauses</li>
+        <li><strong>Questions:</strong> Asks "how" and "why" constantly</li>
+        <li><strong>Stories:</strong> Can tell simple stories with beginning, middle, end</li>
+        <li><strong>Speech:</strong> Mostly understandable to strangers</li>
+        <li><strong>Reading readiness:</strong> Recognizes some words, understands print concepts</li>
+      </ul>
+
+      <h2>Social & Emotional Development</h2>
+      <p>Friendships and social skills become more important:</p>
+      <ul>
+        <li><strong>Friendships:</strong> Has preferred playmates, best friends</li>
+        <li><strong>Cooperation:</strong> Plays cooperatively with rules</li>
+        <li><strong>Empathy:</strong> Shows concern for others' feelings</li>
+        <li><strong>Independence:</strong> Separates from parents more easily</li>
+        <li><strong>Emotions:</strong> Better at expressing feelings with words</li>
+        <li><strong>Gender awareness:</strong> Understands gender differences</li>
+      </ul>
+
+      <h2>Kindergarten Readiness</h2>
+      <p>School readiness includes more than academics:</p>
+
+      <h3>Social-Emotional Skills</h3>
+      <ul>
+        <li>Separates from parents without major distress</li>
+        <li>Follows simple directions</li>
+        <li>Takes turns and shares</li>
+        <li>Plays cooperatively with other children</li>
+        <li>Manages frustration (with support)</li>
+      </ul>
+
+      <h3>Self-Care Skills</h3>
+      <ul>
+        <li>Uses bathroom independently</li>
+        <li>Opens lunch containers and packages</li>
+        <li>Dresses self (may need help with buttons/shoes)</li>
+        <li>Manages belongings (backpack, coat)</li>
+      </ul>
+
+      <h3>Academic Readiness (Varies Widely)</h3>
+      <ul>
+        <li>Recognizes some letters (especially in own name)</li>
+        <li>Counts to 10 or higher</li>
+        <li>Recognizes own name in print</li>
+        <li>Holds pencil correctly</li>
+        <li>Can sit and listen to a story</li>
+      </ul>
+      <p><strong>Note:</strong> Academic skills at kindergarten entry vary enormously and are not predictive of later success. Social-emotional readiness matters more.</p>
+
+      <h2>School Transition Tips</h2>
+      <p>Help your child succeed in kindergarten:</p>
+      <ul>
+        <li><strong>Visit the school:</strong> Tour classroom, meet teacher, find bathroom</li>
+        <li><strong>Practice routines:</strong> Getting ready, packing backpack</li>
+        <li><strong>Read together:</strong> Books about starting school</li>
+        <li><strong>Talk about feelings:</strong> It's okay to be nervous</li>
+        <li><strong>Establish routines:</strong> Consistent bedtime and morning routines</li>
+        <li><strong>Label belongings:</strong> Help them recognize their things</li>
+      </ul>
+
+      <h2>Play and Learning</h2>
+      <p>Play remains crucial for development:</p>
+      <ul>
+        <li><strong>Imaginative play:</strong> Elaborate pretend scenarios</li>
+        <li><strong>Board games:</strong> Simple games with rules</li>
+        <li><strong>Arts and crafts:</strong> Drawing, cutting, gluing</li>
+        <li><strong>Physical play:</strong> Running, climbing, bike riding</li>
+        <li><strong>Reading:</strong> Daily reading together</li>
+        <li><strong>Music:</strong> Singing, dancing, simple instruments</li>
+      </ul>
+
+      <h2>Sleep at This Age</h2>
+      <ul>
+        <li><strong>Total sleep:</strong> 10-13 hours per 24 hours</li>
+        <li><strong>Bedtime:</strong> Typically 7:30-8:30 PM</li>
+        <li><strong>Naps:</strong> Most have dropped naps; some benefit from quiet time</li>
+        <li><strong>Sleep needs:</strong> May vary based on activity level</li>
+      </ul>
+
+      <h2>Common Challenges</h2>
+
+      <h3>School Anxiety</h3>
+      <p>Some separation anxiety is normal, especially at the start of school:</p>
+      <ul>
+        <li>Validate feelings: "It's hard to say goodbye"</li>
+        <li>Keep goodbyes brief and confident</li>
+        <li>Establish a goodbye ritual</li>
+        <li>Most children settle within 2-4 weeks</li>
+      </ul>
+
+      <h3>Peer Conflicts</h3>
+      <p>Learning to navigate friendships takes time:</p>
+      <ul>
+        <li>Teach problem-solving words: "I don't like that"</li>
+        <li>Role-play social situations</li>
+        <li>Let them work through minor conflicts</li>
+        <li>Intervene if there's bullying or physical aggression</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Is This Normal? — Common Questions</h2>
+        
+        <div class="faq-item">
+          <p class="faq-question">My child can't read yet. Will they be behind in kindergarten?</p>
+          <p class="faq-answer">No — kindergarten is where most children learn to read. Some enter knowing letters, others don't. Both are normal. Social-emotional readiness matters more than academic skills at this age.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My kindergartener is exhausted after school. Is this normal?</p>
+          <p class="faq-answer">Yes, very normal. School is mentally and socially exhausting. Many children need downtime after school. Some benefit from an earlier bedtime during the school year.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Should my 5-year-old still be taking naps?</p>
+          <p class="faq-answer">Most children drop naps by age 5, but some still benefit from them. If your child sleeps well at night without naps, they're probably ready to drop them. Quiet time can replace naps.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">My child is having trouble making friends. What can I do?</p>
+          <p class="faq-answer">Arrange playdates with classmates, practice social skills at home, and talk to the teacher about classroom dynamics. Some children take longer to form friendships — this is usually normal.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-question">Is it normal for my kindergartener to be so emotional?</p>
+          <p class="faq-answer">Yes — school is a major transition. Emotional ups and downs are common, especially in the first few months. Ensure adequate sleep, maintain routines, and offer extra patience and connection.</p>
+        </div>
+      </div>
+
+      <div class="red-flags">
+        <h3>When to Talk to Your Pediatrician</h3>
+        <ul>
+          <li>Extreme difficulty separating from parents after several weeks of school</li>
+          <li>No interest in playing with other children</li>
+          <li>Can't follow simple 2-3 step directions</li>
+          <li>Speech that is difficult to understand</li>
+          <li>Extreme clumsiness or difficulty with motor skills</li>
+          <li>Regression in previously mastered skills</li>
+          <li>Persistent anxiety or sadness</li>
+          <li>Difficulty with basic self-care (bathroom, dressing)</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
