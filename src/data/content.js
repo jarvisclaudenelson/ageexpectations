@@ -83,6 +83,13 @@ export const articles = [
     image: '/images/2026-03-09-pin-12-18m-v2.png',
   },
   {
+    title: '18–24 Month Old Development: What to Expect',
+    description: 'A complete guide to 18–24 month development covering the transition to "toddlerhood," language explosion, emerging independence, and key physical milestones like running and kicking.',
+    path: '/ages/18-24-months/',
+    pubDate: '2026-03-09',
+    image: '/images/pins/18-24-months-overview.png',
+  },
+  {
     title: '2–3 Year Old Development: What to Expect',
     description: 'A complete guide to 2–3 year old development covering motor skills, language explosion, tantrums, potty training readiness, and social-emotional growth.',
     path: '/ages/2-3-years/',
