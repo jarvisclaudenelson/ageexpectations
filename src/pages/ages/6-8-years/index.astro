@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '6–8 Year Old Development: What to Expect';
+const description = 'What to expect from your 6–8 year old — growing independence, developing friendships, advanced reading and math skills, and refined motor skills.';
+
+const faqs = [
+  {
+    question: 'How much sleep does a 6–8 year old need?',
+    answer: 'The CDC and AAP recommend that school-age children (6–12 years) get 9–12 hours of sleep per 24 hours. Consistent sleep routines remain important as school demands and extracurricular activities increase.',
+  },
+  {
+    question: 'When do children start losing their baby teeth?',
+    answer: 'Most children begin to lose their baby (primary) teeth around age 6. This process typically continues until age 12. The lower front teeth are usually the first to go.',
+  },
+  {
+    question: 'What are the cognitive milestones for this age?',
+    answer: 'Children this age can typically tell time, understand the concept of numbers, follow multi-step instructions, and are developing a better understanding of cause and effect. Their reading and writing skills progress from basic decoding to reading for meaning.',
+  },
+  {
+    question: 'How do social relationships change at 6–8 years?',
+    answer: 'Friendships become increasingly important. Children this age start to pay more attention to friendships and teamwork, want to be liked and accepted by peers, and are developing a stronger sense of empathy and "fairness."',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '6–8 Years' },
+  ]}
+>
+  <h1>6–8 Year Old Development: What to Expect</h1>
+
+  <p>The ages of 6 to 8 represent a significant shift in a child's world. Known as "middle childhood," this is a time when children move beyond the home-centered world of preschool and into the broader community of school, sports, and peer groups. They are becoming more independent, developing their own unique interests, and forming deeper social connections.</p>
+
+  <p>This guide covers the key developmental milestones for children ages 6 to 8, based on guidelines from the CDC and the American Academy of Pediatrics (AAP).</p>
+
+  <h2>Explore 6–8 Year Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/6-8-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
+
+  <h2>Physical Development: Growth and Coordination</h2>
+
+  <p>Physical growth during this period is typically steady rather than rapid. You may notice:</p>
+
+  <ul>
+    <li><strong>Steady Growth:</strong> Children usually grow about 2 to 2.5 inches and gain about 4 to 7 pounds per year.</li>
+    <li><strong>Motor Skills:</strong> Coordination and balance improve significantly. Most children can ride a two-wheeled bike, jump rope, and participate in organized sports like soccer or gymnastics.</li>
+    <li><strong>Fine Motor Skills:</strong> Handwriting becomes smaller and more legible. They can use tools like scissors and zippers with ease and may start to show interest in more complex crafts or hobbies.</li>
+    <li><strong>Dental Changes:</strong> This is the prime time for "the tooth fairy." Baby teeth begin to fall out, replaced by permanent adult teeth.</li>
+  </ul>
+
+  <h2>Cognitive Milestones: Learning and Logic</h2>
+
+  <p>Cognitive development in middle childhood is marked by the transition from intuitive to logical thinking. Key milestones include:</p>
+
+  <ul>
+    <li><strong>Abstract Thinking:</strong> They begin to understand more complex concepts like time (telling time on a clock), distance, and money.</li>
+    <li><strong>Improved Concentration:</strong> Their attention span increases, allowing them to focus on tasks for longer periods.</li>
+    <li><strong>Language Explosion:</strong> Vocabulary grows rapidly. They can follow three or four-step instructions and use more complex sentence structures.</li>
+    <li><strong>Academic Progress:</strong> Reading skills transition from "learning to read" to "reading to learn." They begin to understand more complex math concepts like addition and subtraction.</li>
+  </ul>
+
+  <h2>Social and Emotional Development: Peers and Independence</h2>
+
+  <p>This is a critical time for developing self-confidence and a sense of identity. Significant changes include:</p>
+
+  <ul>
+    <li><strong>Peer Importance:</strong> Friendships become more central to their lives. They want to be liked and accepted by their peers and may form "best friend" bonds.</li>
+    <li><strong>Independence:</strong> They crave more independence from their parents but still rely heavily on the family for security and support.</li>
+    <li><strong>Emotional Regulation:</strong> While they are better at managing their emotions than toddlers, they may still experience frustrations, especially related to school or friendships.</li>
+    <li><strong>Moral Development:</strong> They are developing a strong sense of "right" and "wrong" and are very attuned to the concept of fairness.</li>
+  </ul>
+
+  <h2>Health and Safety in Middle Childhood</h2>
+
+  <p>As children become more active and independent, health and safety focus shifts:</p>
+
+  <ul>
+    <li><strong>Nutrition:</strong> Encourage a variety of healthy foods. This is a time when children may become more influenced by peer food choices or marketing.</li>
+    <li><strong>Physical Activity:</strong> The AAP recommends at least 60 minutes of physical activity daily. Encourage active play, sports, or family walks.</li>
+    <li><strong>Safety:</strong> Helmet use for biking, scootering, or skating is non-negotiable. Ensure they are using the correct booster seat in the car until they reach the height requirement for a seat belt (usually 4 feet 9 inches).</li>
+    <li><strong>Screen Time:</strong> Set clear limits on screen time and prioritize high-quality, educational content. The AAP recommends creating a Family Media Use Plan.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Common Questions About 6–8 Year Old Development</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>While every child develops at their own pace, consult your pediatrician if you notice any of the following concerns:</p>
+    <ul>
+      <li>Significant difficulty with reading or basic math.</li>
+      <li>Extreme difficulty making or keeping friends.</li>
+      <li>Persistent sadness, anxiety, or withdrawal from activities they used to enjoy.</li>
+      <li>Inability to follow simple multi-step instructions.</li>
+      <li>Significant regression in skills they previously mastered.</li>
+      <li>Persistent physical complaints (like stomachaches or headaches) that seem related to school or social stress.</li>
+    </ul>
+    <p>Routine well-child visits are recommended annually during this period to monitor growth, development, and overall health.</p>
+  </div>
+</BaseLayout>

@@ -139,4 +139,11 @@ export const articles = [
     pubDate: '2026-03-10',
     image: '/images/pins/4-5-years-overview.png',
   },
+  {
+    title: '6–8 Year Old Development: What to Expect',
+    description: 'What to expect from your 6–8 year old — growing independence, developing friendships, advanced reading and math skills, and refined motor skills.',
+    path: '/ages/6-8-years/',
+    pubDate: '2026-03-10',
+    image: '/images/pins/6-8-years-overview.png',
+  },
 ];
