@@ -125,4 +125,11 @@ export const articles = [
     path: '/ages/5-6-years/milestones/',
     pubDate: '2025-01-15',
   },
+  {
+    title: 'Preschooler Development (3–4 Years): What to Expect',
+    description: 'A complete guide to 3–4 year old development covering language explosion, social-emotional growth, cognitive milestones, and physical coordination.',
+    path: '/ages/3-4-years/',
+    pubDate: '2026-03-10',
+    image: '/images/pins/3-4-years-overview.png',
+  },
 ];
