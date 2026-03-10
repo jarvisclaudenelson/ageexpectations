@@ -132,4 +132,11 @@ export const articles = [
     pubDate: '2026-03-10',
     image: '/images/pins/3-4-years-overview.png',
   },
+  {
+    title: 'Preschooler Development (4–5 Years): What to Expect',
+    description: 'A guide to development for 4–5 year olds — preparation for kindergarten, complex language skills, emotional regulation, and advanced motor skills like hopping and drawing.',
+    path: '/ages/4-5-years/',
+    pubDate: '2026-03-10',
+    image: '/images/pins/4-5-years-overview.png',
+  },
 ];
