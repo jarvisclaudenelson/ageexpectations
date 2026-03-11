@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+
+const title = '8–10 Year Old Development: What to Expect';
+const description = 'A guide to development for 8–10 year olds — growing independence, cognitive leaps in logical thinking, social-emotional changes, and physical growth spurts.';
+
+const faqs = [
+  {
+    question: 'How much sleep do 8–10 year olds need?',
+    answer: 'Most children this age need 9–12 hours of sleep per night. Consistent bedtime routines remain important, especially as schoolwork and extracurricular activities become more demanding.',
+  },
+  {
+    question: 'When does puberty start?',
+    answer: 'Puberty can start as early as age 8 for girls and age 9 for boys. It is normal to see early signs like growth spurts, skin changes, or breast development during these years.',
+  },
+  {
+    question: 'Is it normal for my child to be more influenced by friends now?',
+    answer: 'Yes. In middle childhood, the focus shifts toward peer groups. Friendships become more stable and complex, and "best friends" become very important for social development and self-esteem.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'School Age (8–10 Years)' },
+  ]}
+>
+  <h1>8–10 Year Old Development: What to Expect</h1>
+
+  <p>The years between 8 and 10 represent a significant phase of "middle childhood." Your child is moving away from the early school years and toward the independence of the pre-teen stage. This is a time of steady physical growth, major cognitive leaps in logical thinking, and a deeper focus on social connections outside the family.</p>
+
+  <h2>Physical Development and Growth</h2>
+  <p>During these years, children typically grow about 2.5 inches and gain about 7 pounds annually. You might notice your child becoming more coordinated and graceful as their large muscle control improves. This is a great time for them to explore complex physical activities like team sports, dance, or martial arts.</p>
+  <ul>
+    <li><strong>Coordination:</strong> Better balance and endurance.</li>
+    <li><strong>Fine Motor Skills:</strong> Improved handwriting and ability to use tools (like sewing needles or complex building sets).</li>
+    <li><strong>Teeth:</strong> Permanent teeth continue to replace "baby" teeth.</li>
+  </ul>
+
+  <h2>Cognitive Leaps: Logical Thinking</h2>
+  <p>According to Jean Piaget, children this age are in the "concrete operational" stage. They are becoming much better at logical thinking and understanding cause-and-effect, though they still struggle with abstract or hypothetical concepts. Their attention span is growing, allowing them to focus on projects or books for longer periods.</p>
+  <ul>
+    <li><strong>Math and Logic:</strong> Ability to handle more complex arithmetic and word problems.</li>
+    <li><strong>Organization:</strong> They can start to plan and organize their own time and schoolwork with some guidance.</li>
+    <li><strong>Interests:</strong> Often develop deep, specific interests or hobbies (e.g., space, dinosaurs, a specific book series).</li>
+  </ul>
+
+  <h2>Social and Emotional Growth</h2>
+  <p>This is the era of the "best friend." Relationships with peers become central to their identity. They are learning to navigate social rules, handle conflict, and understand different perspectives. Self-esteem is often tied to their sense of competence — how good they feel they are at school, sports, or social interactions.</p>
+  <ul>
+    <li><strong>Independence:</strong> A growing desire for privacy and autonomy.</li>
+    <li><strong>Fairness:</strong> A very strong sense of "what is fair" and an interest in rules and justice.</li>
+    <li><strong>Peer Pressure:</strong> Early signs of wanting to "fit in" with the group.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 8–10 Year Olds</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The American Academy of Pediatrics (AAP) recommends annual well-child visits for children this age. Between visits, consult your pediatrician if you notice:</p>
+    <ul>
+      <li>Significant changes in sleep or eating habits.</li>
+      <li>Persistent sadness, withdrawal, or extreme anxiety that interferes with daily life.</li>
+      <li>Extreme difficulty with schoolwork or focusing, which could indicate a learning difference.</li>
+      <li>Signs of early or delayed puberty that concern you.</li>
+      <li>Physical symptoms like frequent headaches or stomachaches, which can sometimes be related to stress.</li>
+    </ul>
+    <p>As children grow more independent, it's important to keep the lines of communication open. Trust your intuition as a parent — you know your child best.</p>
+  </div>
+</BaseLayout>

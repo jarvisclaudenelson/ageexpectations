@@ -146,4 +146,11 @@ export const articles = [
     pubDate: '2026-03-10',
     image: '/images/pins/6-8-years-overview.png',
   },
+  {
+    title: '8–10 Year Old Development: What to Expect',
+    description: 'A guide to development for 8–10 year olds — growing independence, cognitive leaps in logical thinking, social-emotional changes, and physical growth spurts.',
+    path: '/ages/8-10-years/',
+    pubDate: '2026-03-11',
+    image: '/images/pins/8-10-years-overview.png',
+  },
 ];
