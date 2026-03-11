@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+
+const title = '12–14 Year Old Development: What to Expect';
+const description = 'A guide to early adolescence (12–14) — rapid physical growth, the peak of the "imaginary audience," emerging identity, and shifting sleep patterns.';
+
+const faqs = [
+  {
+    question: 'How much sleep do 12–14 year olds actually need?',
+    answer: 'According to the AAP, young teens in this age group still need about 8–10 hours of sleep per night. However, their biological clock shifts later, making it harder for them to fall asleep early.',
+  },
+  {
+    question: 'Why is my 12–14 year old so self-conscious?',
+    answer: 'This is the peak of the "imaginary audience" phenomenon, where teens feel like everyone is watching and judging them. It is a normal part of cognitive development as they learn to think about what others are thinking.',
+  },
+  {
+    question: 'How can I support their need for independence?',
+    answer: 'Provide "structured autonomy"—give them choices and responsibilities while maintaining clear boundaries. Pick your battles and focus on safety and core values rather than minor lifestyle preferences.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'Early Teen (12–14 Years)' },
+  ]}
+>
+  <h1>12–14 Year Old Development: What to Expect</h1>
+
+  <p>The transition from childhood to adolescence is most intense between the ages of 12 and 14. This period, often coinciding with middle school, is marked by rapid physical transformations, a deepening of intellectual capacity, and a significant shift in how they view themselves in relation to the world.</p>
+
+  <h2>Physical Development: The Puberty Peak</h2>
+  <p>Physical changes are often the most dramatic aspect of these years. While every child follows their own timeline, most will experience significant growth spurts and the full onset of puberty during this window.</p>
+  <ul>
+    <li><strong>Growth and Coordination:</strong> Rapid increases in height and weight are common. Some teens may experience temporary "growing pains" or clumsiness as their brain adjusts to their longer limbs.</li>
+    <li><strong>The Sleep Shift:</strong> A biological shift in circadian rhythms occurs, making teens feel more awake later at night and sleepier in the morning. Despite this, they still require 8–10 hours of sleep.</li>
+    <li><strong>Physical Maturity:</strong> For girls, menstruation is typically established by age 13. For boys, voice changes and increased muscle mass become more prominent.</li>
+  </ul>
+
+  <h2>Cognitive Growth: Abstract Reasoning</h2>
+  <p>The brain undergoes a major "remodeling" during early adolescence. Teens move away from concrete thinking and begin to master abstract concepts, allowing them to think about the future, morality, and complex social dynamics in new ways.</p>
+  <ul>
+    <li><strong>Metacognition:</strong> The ability to think about their own thoughts. This leads to increased self-reflection but also to the "imaginary audience"—the feeling that everyone is observing them.</li>
+    <li><strong>Moral Reasoning:</strong> A move toward questioning authority and exploring their own values and ethics, rather than just following rules to avoid punishment.</li>
+    <li><strong>Executive Function:</strong> While they can plan better, the "braking system" of the brain (the prefrontal cortex) is still developing, which can lead to occasional impulsive decision-making.</li>
+  </ul>
+
+  <h2>Social and Emotional Changes</h2>
+  <p>Socially, the 12–14 year old is navigating a complex world of peer hierarchies and identity formation. The drive for independence from parents is healthy and necessary, even if it feels like a rejection at times.</p>
+  <ul>
+    <li><strong>Peer Primacy:</strong> Friendships become the primary source of emotional support and social validation. Fitting in or finding a "tribe" is a top priority.</li>
+    <li><strong>Identity Formation:</strong> Experimenting with different styles, interests, and social groups as they try to answer the question, "Who am I?"</li>
+    <li><strong>Emotional Intensity:</strong> Hormonal changes combined with social stress can lead to intense emotional highs and lows. They are learning to navigate more complex feelings like romantic attraction and social anxiety.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 12–14 Year Olds</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Adolescent well-visits are vital for physical health and screening for emotional well-being. Consult your doctor if you notice:</p>
+    <ul>
+      <li>Signs of persistent anxiety or depression that interfere with daily life.</li>
+      <li>Drastic changes in eating habits or extreme preoccupation with weight.</li>
+      <li>Withdrawal from previously enjoyed activities or friend groups.</li>
+      <li>Evidence of self-harm or risky behaviors (substance use, etc.).</li>
+      <li>Sleep problems that prevent them from functioning during the day.</li>
+    </ul>
+    <p>Maintaining a non-judgmental, "open door" policy for conversation is one of the best ways to support your teen through these transformative years.</p>
+  </div>
+</BaseLayout>

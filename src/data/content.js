@@ -160,4 +160,11 @@ export const articles = [
     pubDate: '2026-03-11',
     image: '/images/pins/10-12-years-overview.png',
   },
+  {
+    title: '12–14 Year Old Development: What to Expect',
+    description: 'A guide to early adolescence (12–14) — rapid physical growth, the peak of the "imaginary audience," emerging identity, and shifting sleep patterns.',
+    path: '/ages/12-14-years/',
+    pubDate: '2026-03-11',
+    image: '/images/pins/12-14-years-overview.png',
+  },
 ];
