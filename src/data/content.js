@@ -153,4 +153,11 @@ export const articles = [
     pubDate: '2026-03-11',
     image: '/images/pins/8-10-years-overview.png',
   },
+  {
+    title: '10–12 Year Old Development: What to Expect',
+    description: 'A guide to the pre-teen years (10–12) — puberty onset, developing independence, abstract thinking, and the shift toward peer influence.',
+    path: '/ages/10-12-years/',
+    pubDate: '2026-03-11',
+    image: '/images/pins/10-12-years-overview.png',
+  },
 ];

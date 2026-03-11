@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+
+const title = '10–12 Year Old Development: What to Expect';
+const description = 'A guide to the pre-teen years (10–12) — puberty onset, developing independence, abstract thinking, and the shift toward peer influence.';
+
+const faqs = [
+  {
+    question: 'How much sleep do 10–12 year olds need?',
+    answer: 'According to the AAP, pre-teens in this age group still need about 9–12 hours of sleep per night for optimal health, growth, and academic performance.',
+  },
+  {
+    question: 'When should I be concerned about puberty?',
+    answer: 'Puberty typically begins between ages 8–13 for girls and 9–14 for boys. If your child shows signs before age 8 or no signs by age 14, consult your pediatrician.',
+  },
+  {
+    question: 'How can I support my child’s growing need for privacy?',
+    answer: 'It is normal for pre-teens to want more privacy. Respect their space (like knocking before entering their room) while maintaining open communication about safety and digital habits.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'Pre-Teen (10–12 Years)' },
+  ]}
+>
+  <h1>10–12 Year Old Development: What to Expect</h1>
+
+  <p>The ages of 10 to 12 are often called the "tween" years—a bridge between childhood and adolescence. This is a period of rapid change, marked by the onset of puberty, a significant shift in social focus toward peers, and the development of more complex, abstract thinking skills.</p>
+
+  <h2>Physical Development and Puberty</h2>
+  <p>For many children, this is the start of the most significant physical transformation since infancy. Growth spurts are common, and girls often begin these changes slightly earlier than boys. You may notice your child becoming more aware of their body and physical appearance.</p>
+  <ul>
+    <li><strong>Puberty Onset:</strong> Changes such as body odor, skin changes (acne), and hair growth begin.</li>
+    <li><strong>Growth Spurts:</strong> Sudden increases in height and weight can sometimes lead to temporary clumsiness as they adjust to their new proportions.</li>
+    <li><strong>Strength and Coordination:</strong> Continued improvement in sports-related skills and fine motor precision.</li>
+  </ul>
+
+  <h2>Cognitive Growth: Abstract Thinking</h2>
+  <p>In this stage, children begin to move beyond "concrete" thinking. They start to understand that there are multiple sides to an issue and can think about future consequences more realistically. Their ability to organize, plan, and execute complex tasks (executive function) is still developing but improving.</p>
+  <ul>
+    <li><strong>Complex Logic:</strong> Ability to handle more sophisticated academic subjects like algebra or literary analysis.</li>
+    <li><strong>Self-Reflection:</strong> A growing ability to think about their own thoughts and feelings (metacognition).</li>
+    <li><strong>Justice and Ethics:</strong> A deeper interest in social issues, fairness, and the "why" behind rules.</li>
+  </ul>
+
+  <h2>Social and Emotional Changes</h2>
+  <p>This is perhaps the most visible area of change. Friendships become deeper and more influential, sometimes taking precedence over family relationships. This is a normal part of developing independence, though it can be a challenging transition for parents.</p>
+  <ul>
+    <li><strong>Peer Influence:</strong> A strong desire to "fit in" and follow peer trends in clothing, music, and language.</li>
+    <li><strong>Mood Fluctuations:</strong> Hormonal shifts can lead to increased irritability or sudden mood swings.</li>
+    <li><strong>Privacy:</strong> A significant increase in the desire for personal space and private time.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 10–12 Year Olds</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Continue with annual well-child checkups. These visits are crucial for monitoring growth and discussing the emotional changes of the pre-teen years. Consult your doctor if you notice:</p>
+    <ul>
+      <li>Signs of depression or extreme withdrawal.</li>
+      <li>Significant, sudden drops in academic performance.</li>
+      <li>Extreme preoccupation with body image or weight.</li>
+      <li>Persistent trouble sleeping or excessive daytime sleepiness.</li>
+      <li>Signs of bullying, either as a victim or a perpetrator.</li>
+    </ul>
+    <p>Keeping a "low-pressure" environment for conversation can help your pre-teen feel comfortable coming to you with concerns as they navigate these big changes.</p>
+  </div>
+</BaseLayout>
