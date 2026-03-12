@@ -167,4 +167,11 @@ export const articles = [
     pubDate: '2026-03-11',
     image: '/images/pins/12-14-years-overview.png',
   },
+  {
+    title: '6–9 Month Old Development: What to Expect',
+    description: 'Between 6 and 9 months, babies become more mobile, start eating solids, and develop more complex social interactions. Learn about key milestones, feeding transitions, and sleep patterns.',
+    path: '/ages/6-9-months/',
+    pubDate: '2026-03-12',
+    image: '/images/pins/6-9-months-overview.png',
+  },
 ];

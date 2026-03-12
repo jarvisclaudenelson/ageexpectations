@@ -4,81 +4,96 @@ import { articleSchema, faqSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '6–9 Month Old Development: What to Expect';
-const description = 'What to expect from your 6 to 9 month old: sitting up, early babbling, responding to their name, and growing curiosity — with AAP-backed guidance.';
+const description = 'Between 6 and 9 months, babies become more mobile, start eating solids, and develop more complex social interactions. Learn about key milestones, feeding transitions, and sleep patterns.';
 
 const faqs = [
   {
-    question: 'When do most babies sit up on their own?',
-    answer: 'By 6 months, many babies can sit with minimal support. By 9 months, most babies can sit without any support and move into a sitting position themselves. This milestone is crucial for developing the core strength needed for crawling and eventually walking.'
+    question: 'When should my baby start sitting without support?',
+    answer: 'Most babies begin to sit without support between 6 and 9 months. According to the CDC, sitting without support is a milestone that about 75% of babies reach by 9 months. You can encourage this by placing toys just out of reach while they are sitting to help them practice balance.',
   },
   {
-    question: 'How many words should my 9-month-old be saying?',
-    answer: 'At 9 months, most babies are not yet saying intentional words like "Mama" or "Dada," though they may be babbling those sounds. The focus at this age is on receptive language — responding to their name, understanding simple commands like "no," and making a variety of sounds to get your attention.'
+    question: 'How many naps should a 6–9 month old take?',
+    answer: 'Most babies in this age range transition from three naps down to two consistent naps per day (usually one in the morning and one in the afternoon). Total sleep needs are about 12–16 hours per 24-hour period, including naps.',
   },
   {
-    question: 'Is it normal for my baby to be clingy around 8 months?',
-    answer: 'Yes. Separation anxiety often begins between 6 and 9 months as babies develop object permanence — the understanding that you still exist even when you\'re out of sight. This clinginess is a sign of a healthy attachment and usually peaks around 12–18 months.'
+    question: 'What foods should I introduce first at 6 months?',
+    answer: 'The AAP suggests that for most babies, it does not matter what the first solid foods are. Traditional first foods include iron-fortified cereals, mashed fruits (bananas, avocado), and pureed vegetables. Introduce one new food at a time and wait 3–5 days to check for allergic reactions.',
   },
   {
-    question: 'What are the first signs of crawling?',
-    answer: 'Before actual crawling, many babies "commando crawl" (using their arms to pull their body along the floor) or rock back and forth on their hands and knees. Some babies skip traditional crawling altogether and move straight to cruising or walking. All are normal variations of motor development.'
-  }
+    question: 'Is separation anxiety normal at 9 months?',
+    answer: 'Yes, it is very common. Around 9 months, babies begin to understand object permanence—they know you still exist even when you leave the room. This can lead to "stranger danger" or clinginess when you leave. Consistent goodbye routines help them learn that you will always return.',
+  },
+  {
+    question: 'My baby is "raking" food with their hand. Is that normal?',
+    answer: 'Absolutely. Between 6 and 9 months, babies use their whole hand to "rake" objects or food toward themselves. This is a precursor to the pincer grasp (using thumb and forefinger), which typically develops closer to 9–12 months.',
+  },
 ];
 
-const articleData = articleSchema({
+const aSchema = articleSchema({
   title,
   description,
   url: 'https://ageexpectations.com/ages/6-9-months/',
 });
-
-const faqData = faqSchema(faqs);
+const fSchema = faqSchema(faqs);
 ---
-
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '6–9 Months' }]}>
-
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '6–9 Months' },
+  ]}
+>
   <h1>6–9 Month Old Development: What to Expect</h1>
 
-  <p>The 6 to 9 month period is a time of incredible physical and social expansion. Your baby is likely sitting up, beginning to move across the floor, and developing a unique personality. They are becoming more interactive, responding to their name, and showing a deep curiosity about the world around them. Here's a guide to the key milestones and what to expect during this busy stage.</p>
+  <p>The 6 to 9 month period is often a favorite for parents. Your baby is likely sitting up, laughing, and showing a distinct personality. This is a season of "firsts"—the first tastes of solid food, the first attempts at crawling, and perhaps the first babbled "mama" or "dada."</p>
 
-  <h2>Motor Development: Sitting, Moving, and Exploring</h2>
+  <p>This overview covers the major developmental shifts for babies in the second half of their first year, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
 
-  <p>Your baby is gaining the strength and coordination to move more independently. By 6 to 9 months, you can expect to see:</p>
+  <h2>Explore 6–9 Month Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/6-9-months/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
 
-  <ul>
-    <li><strong>Sitting Without Support:</strong> Most babies master sitting independently during this window, allowing them to use their hands to play with toys.</li>
-    <li><strong>Early Mobility:</strong> Many babies begin to crawl, scoot, or "creep" on their bellies. This newfound mobility means it's time to double-check your baby-proofing!</li>
-    <li><strong>The Pincer Grasp:</strong> Your baby will start using their thumb and forefinger to pick up small objects, which is a major fine motor milestone and essential for self-feeding.</li>
-  </ul>
+  <h2>Physical Development: Getting Mobile</h2>
 
-  <p>The AAP encourages plenty of floor play to allow your baby to practice these new skills safely. Avoid "containers" like walkers or saucers for long periods, as they can sometimes delay natural motor progress.</p>
-
-  <h2>Social and Emotional Growth: Attachment and Curiosity</h2>
-
-  <p>Your baby's social world is becoming more complex. You might notice:</p>
+  <p>During these months, babies transition from being stationary to being active explorers. Key physical developments include:</p>
 
   <ul>
-    <li><strong>Responding to Their Name:</strong> By 9 months, most babies will turn their heads or look at you when you call their name.</li>
-    <li><strong>Stranger Awareness:</strong> It's common for babies to become wary of unfamiliar people or show separation anxiety when you leave the room.</li>
-    <li><strong>Interactive Play:</strong> Your baby will likely enjoy games like peek-a-boo and patty-cake, and they may start mimicking your gestures or sounds.</li>
+    <li><strong>Sitting:</strong> Most babies can sit without support by 9 months. They may also begin to "tripod" sit (leaning forward on their hands) as they gain core strength.</li>
+    <li><strong>Moving:</strong> While not all babies crawl by 9 months (some scoot on their bottoms or "army crawl" on their bellies), most are find ways to move across the floor.</li>
+    <li><strong>Hand Skills:</strong> Your baby can now move objects from one hand to the other. They are also learning to "rake" small pieces of food toward themselves using their fingers.</li>
   </ul>
 
-  <p>This is a great age to introduce simple, repetitive games that encourage social interaction and turn-taking.</p>
+  <h2>Language and Communication: Finding Their Voice</h2>
 
-  <h2>Language and Communication: The Road to First Words</h2>
-
-  <p>Communication is about more than just talking. Between 6 and 9 months, babies are busy:</p>
+  <p>Communication becomes much more intentional during this stage:</p>
 
   <ul>
-    <li><strong>Babbling Strings:</strong> You'll hear more complex babbling like "bababa" or "dadada." These aren't usually intentional words yet, but they are the building blocks of speech.</li>
-    <li><strong>Understanding Simple Words:</strong> Your baby is starting to understand the meaning of common words like "no," "bye-bye," and "bottle."</li>
-    <li><strong>Using Gestures:</strong> Many babies begin pointing at things they want or waving hello and goodbye.</li>
+    <li><strong>Babbling:</strong> You will hear a lot of consonant sounds, such as "ba-ba-ba" or "ma-ma-ma." While they may not yet associate "mama" with a specific person, they are practicing the building blocks of speech.</li>
+    <li><strong>Recognition:</strong> Your baby should start looking when you call their name and may recognize the names of familiar people or objects.</li>
+    <li><strong>Gestures:</strong> Many babies begin to lift their arms to be picked up or point at things that interest them.</li>
   </ul>
 
-  <p>Continue to talk to your baby about what you're doing throughout the day. Narrating your activities helps build their vocabulary and understanding of language structure.</p>
+  <h2>Feeding: The Transition to Solids</h2>
+
+  <p>At 6 months, the AAP recommends introducing solid foods while continuing breastfeeding or formula feeding. This is an exciting but messy milestone!</p>
+
+  <ul>
+    <li><strong>Signs of Readiness:</strong> Your baby should be able to hold their head up steadily and sit well in a high chair before starting solids.</li>
+    <li><strong>Texture Exploration:</strong> Start with smooth purees and gradually move to thicker, mashed textures. By 9 months, many babies can handle small pieces of soft "finger foods."</li>
+    <li><strong>Allergens:</strong> Modern AAP guidelines suggest that early introduction of common allergens (like peanut products and eggs) may help prevent allergies, but always consult your pediatrician first if you have a family history of allergies.</li>
+  </ul>
+
+  <h2>Social and Emotional: Stranger Danger</h2>
+
+  <p>As babies become more aware of their surroundings, they also become more aware of who is "familiar" and who is not. It is normal for a previously social baby to suddenly become shy or fearful of strangers or even extended family members. They are also developing a stronger attachment to their primary caregivers and may cry or reach for you when you leave the room.</p>
 
   <div class="faq-section">
-    <h2>Is This Normal? Frequently Asked Questions</h2>
-
+    <h2>Is This Normal? Common Questions About 6–9 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
         <p class="faq-question">{faq.question}</p>
@@ -89,25 +104,15 @@ const faqData = faqSchema(faqs);
 
   <div class="callout">
     <h2>When to Talk to Your Pediatrician</h2>
-    <p>Every baby is different, but consult your pediatrician if your 6–9 month old:</p>
+    <p>The 9-month well-child visit is a key milestone for developmental screening. Contact your pediatrician if your baby:</p>
     <ul>
-      <li>Doesn't sit with help by 9 months</li>
-      <li>Doesn't babble or make sounds</li>
-      <li>Doesn't respond to their name</li>
-      <li>Doesn't look where you point</li>
-      <li>Seems to lose skills they once had</li>
+      <li>Does not sit with help by 9 months</li>
+      <li>Does not babble ("ba," "ga," "ma")</li>
+      <li>Does not respond to their own name</li>
+      <li>Does not recognize familiar people</li>
+      <li>Does not look where you point</li>
+      <li>Does not transfer toys from one hand to the other</li>
+      <li>Loses skills they once had</li>
     </ul>
-    <p>Your doctor can help determine if a developmental evaluation is needed.</p>
   </div>
-
-  <h2>Explore 6–9 Month Topics</h2>
-
-  <div class="topic-grid">
-    {topics.map(topic => (
-      <a class="topic-card" href={`/ages/6-9-months/${topic.slug}/`}>
-        {topic.label}
-      </a>
-    ))}
-  </div>
-
 </BaseLayout>
