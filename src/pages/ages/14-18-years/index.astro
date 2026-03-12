@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = 'Adolescent Development (14–18 Years): What to Expect';
+const description = 'A guide to the high school years (14–18) — complete physical maturation, developing abstract thinking, navigating social independence, and preparing for the transition to adulthood.';
+
+const faqs = [
+  {
+    question: 'How much sleep do teenagers really need?',
+    answer: 'According to the American Academy of Pediatrics (AAP) and the American Academy of Sleep Medicine, teens aged 13–18 years should sleep 8–10 hours per 24 hours on a regular basis to promote optimal health. Many teens fall short of this due to academic pressure, extracurriculars, and a biological shift in their circadian rhythm that makes them naturally inclined to stay up later and sleep in longer.',
+  },
+  {
+    question: 'Is it normal for my teen to pull away from the family?',
+    answer: 'Yes. Seeking independence and autonomy is a primary developmental task of middle and late adolescence. Teens often spend more time with friends and less time with family as they form their own identity. This "pulling away" is a normal part of becoming an independent adult, though maintaining a supportive, open connection with parents remains critical for their well-being.',
+  },
+  {
+    question: 'Why does my teen seem so impulsive at times?',
+    answer: 'The adolescent brain is still a work in progress. The frontal lobes, which handle complex decision-making and impulse control, aren\'t fully developed until the mid-20s. While 14–18 year olds can think abstractly and understand consequences, they are often driven by strong emotions and peer influence in the moment, which can lead to risk-taking behavior.',
+  },
+  {
+    question: 'When should I be concerned about my teen\'s mood?',
+    answer: 'While mood swings are common due to hormonal changes and social stress, persistent sadness, withdrawal from favorite activities, significant changes in sleep or appetite, or a drop in school performance can be signs of depression or anxiety. The AAP recommends regular mental health screenings during adolescent well-child visits.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'Adolescent (14–18 Years)' },
+  ]}
+>
+  <h1>Adolescent Development (14–18 Years): What to Expect</h1>
+
+  <p>The ages of 14 to 18 represent a period of profound transition. This is the era of high school, first jobs, driving, and the final steps toward legal adulthood. For parents, it is a shift from being a "manager" to being a "consultant" as your teenager takes on more responsibility for their own lives.</p>
+
+  <p>This guide covers the key physical, cognitive, and social-emotional milestones for middle and late adolescence, based on guidelines from the American Academy of Pediatrics (AAP) and HealthyChildren.org.</p>
+
+  <h2>Physical Development: Completing the Journey</h2>
+
+  <p>By age 14, most adolescents are well into puberty, and by 18, many have reached their full adult height and physical maturation.</p>
+
+  <ul>
+    <li><strong>Growth Spurts:</strong> Girls typically reach their adult height by age 14 or 15, while boys may continue to grow into their late teens.</li>
+    <li><strong>Maturation:</strong> Physical changes from puberty (voice deepening, body hair, acne) continue and eventually stabilize. Most girls have established regular menstrual cycles by this stage.</li>
+    <li><strong>Brain Development:</strong> Although the body looks like an adult, the brain is still maturing. The prefrontal cortex—the area responsible for planning, prioritizing, and controlling impulses—continues to develop well into the 20s.</li>
+  </ul>
+
+  <h2>Cognitive Milestones: Moving Beyond Black and White</h2>
+
+  <p>During the high school years, teenagers develop the ability to think abstractly and consider multiple perspectives.</p>
+
+  <ul>
+    <li><strong>Abstract Thinking:</strong> Teens can now ponder "what if" scenarios and think about complex concepts like justice, politics, and philosophy.</li>
+    <li><strong>Future Orientation:</strong> Older teens begin to set long-term goals and think more seriously about life after high school, whether that involves college, trade school, or the workforce.</li>
+    <li><strong>Self-Regulation:</strong> While still prone to impulsive decisions under stress or peer pressure, 14–18 year olds are gradually improving their ability to weigh risks and rewards.</li>
+  </ul>
+
+  <h2>Social and Emotional Growth: Finding an Identity</h2>
+
+  <p>The primary task of this stage is identity formation—answering the question, "Who am I?"</p>
+
+  <ul>
+    <li><strong>Search for Autonomy:</strong> Teens push for more independence, which can lead to increased conflict with parents. This is a normal part of the process of separating and becoming an individual.</li>
+    <li><strong>Peer Influence:</strong> Friends become the primary source of social support. Peer pressure peaks in early-to-middle adolescence but often lessens as teens gain more self-confidence toward age 18.</li>
+    <li><strong>Romantic Relationships:</strong> Interest in dating and romantic relationships is common. This is a key time for learning about healthy boundaries, consent, and emotional intimacy.</li>
+    <li><strong>Values and Morals:</strong> Teens begin to develop their own set of values and may question the beliefs they were raised with as they forge their own path.</li>
+  </ul>
+
+  <h2>Health and Wellness: Establishing Life Habits</h2>
+
+  <p>The habits formed during these years often carry into adulthood.</p>
+
+  <ul>
+    <li><strong>Sleep:</strong> Teens need 8–10 hours of sleep, but biological shifts often make them "night owls." Encouraging a regular sleep schedule is vital for mental health and school performance.</li>
+    <li><strong>Nutrition:</strong> Rapid growth and high activity levels require significant calories. Focus on a balanced diet rich in calcium and iron, and be aware of the pressure social media can place on body image.</li>
+    <li><strong>Mental Health:</strong> Adolescence is a common time for the onset of anxiety and depression. Open communication and regular check-ins are essential.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 14–18 Year Olds</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Annual well-child visits (often called "sports physicals" at this age) remain important. Contact your doctor if you notice:</p>
+    <ul>
+      <li>Signs of depression: persistent sadness, hopelessness, or social withdrawal.</li>
+      <li>Significant changes in sleep or eating habits.</li>
+      <li>Extreme weight loss or gain, or obsessive behavior around food and exercise.</li>
+      <li>Suspected substance use (alcohol, vaping, or drugs).</li>
+      <li>A sudden, dramatic drop in school performance.</li>
+      <li>Self-harming behaviors or talk of suicide (this is an emergency).</li>
+    </ul>
+    <p>Your pediatrician can provide a confidential space for your teen to discuss sensitive health topics and offer guidance on the transition to adult medical care.</p>
+  </div>
+</BaseLayout>

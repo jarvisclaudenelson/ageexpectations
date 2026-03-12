@@ -174,4 +174,11 @@ export const articles = [
     pubDate: '2026-03-12',
     image: '/images/pins/6-9-months-overview.png',
   },
+  {
+    title: 'Adolescent Development (14–18 Years): What to Expect',
+    description: 'A guide to the high school years (14–18) — complete physical maturation, developing abstract thinking, navigating social independence, and preparing for the transition to adulthood.',
+    path: '/ages/14-18-years/',
+    pubDate: '2026-03-12',
+    image: '/images/pins/14-18-years-overview.png',
+  },
 ];
