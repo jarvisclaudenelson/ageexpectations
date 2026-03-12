@@ -181,4 +181,11 @@ export const articles = [
     pubDate: '2026-03-12',
     image: '/images/pins/14-18-years-overview.png',
   },
+  {
+    title: '6–9 Month Old Feeding: Starting Solids and What to Expect',
+    description: 'Introducing solid foods is a major milestone for your 6–9 month old. Learn about signs of readiness, best first foods, safe allergen introduction, and why milk remains the primary source of nutrition.',
+    path: '/ages/6-9-months/feeding/',
+    pubDate: '2026-03-12',
+    image: '/images/pins/6-9-months-feeding.png',
+  },
 ];
