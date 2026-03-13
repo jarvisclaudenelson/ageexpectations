@@ -188,4 +188,11 @@ export const articles = [
     pubDate: '2026-03-12',
     image: '/images/pins/6-9-months-feeding.png',
   },
+  {
+    title: '1–3 Month Old Development: What to Expect',
+    description: 'What to expect from your 1 to 3 month old: first social smiles, following objects with their eyes, and growing physical strength — with AAP-backed guidance.',
+    path: '/ages/1-3-months/',
+    pubDate: '2026-03-13',
+    image: '/images/pins/1-3-months-overview.png',
+  },
 ];
