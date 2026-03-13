@@ -195,4 +195,11 @@ export const articles = [
     pubDate: '2026-03-13',
     image: '/images/pins/1-3-months-overview.png',
   },
+  {
+    title: '3–6 Month Old Development: What to Expect',
+    description: 'Between 3 and 6 months, babies undergo a major transformation. They move from newborn reflexes to voluntary actions, start showing distinct personalities, and prepare for the major milestone of starting solids.',
+    path: '/ages/3-6-months/',
+    pubDate: '2026-03-13',
+    image: '/images/pins/3-6-months-overview.png',
+  },
 ];
