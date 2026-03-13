@@ -4,40 +4,106 @@ import { articleSchema, faqSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '9–12 Month Old Development: What to Expect';
-const description = 'What to expect from your 9 to 12 month old: early walking, first words, and growing cognitive skills — with AAP-backed guidance.';
+const description = 'Between 9 and 12 months, your baby is transitioning from an infant to a toddler. Expect major milestones like crawling, pulling to stand, and perhaps first steps, along with "mama/dada" and waving goodbye.';
 
 const faqs = [
   {
-    question: 'When will my baby start talking?',
-    answer: 'Most babies say their first intentional words, like "Mama," "Dada," or "No," around their first birthday. Every baby is different — some may start earlier at 10 months, while others wait until 14 months. The key is to look for consistent use of sounds or words to label objects or people.'
+    question: 'When should my baby start crawling?',
+    answer: 'Most babies start crawling between 7 and 10 months. However, some babies skip traditional hands-and-knees crawling altogether, opting for "army crawling," "bottom scooting," or moving straight to pulling up and cruising. The AAP notes that as long as your baby is finding ways to move and coordinate both sides of their body, the specific style is less important than the progress.',
   },
   {
-    question: 'How much sleep does my 11-month-old need?',
-    answer: 'At 9–12 months, most babies need about 11–14 hours of sleep total, including one or two naps during the day. By 12 months, many are transitioning to one long afternoon nap, but some still benefit from a short morning nap as well.'
-  }
+    question: 'Is it normal for my 10-month-old to still wake up at night?',
+    answer: 'Yes, it is very common. While many babies can "sleep through the night" (6–8 hours) by this age, major developmental leaps—like learning to pull to stand or crawl—often cause temporary sleep regressions. Separation anxiety also peaks around 9–10 months, making it harder for babies to settle alone. Consistent routines and a safe sleep environment are key during this transition.',
+  },
+  {
+    question: 'How many words should a 12-month-old say?',
+    answer: 'By their first birthday, most babies can say "mama" and "dada" specifically to their parents and may have 1–2 other simple words like "ball" or "uh-oh." More importantly, they should be communicating through gestures: pointing at what they want, waving "bye-bye," and shaking their head for "no."',
+  },
+  {
+    question: 'When should I transition from a bottle to a cup?',
+    answer: 'The AAP recommends introduced a sippy cup or open cup around 6 months and aim to transition away from bottles entirely by 12–15 months. By 9–12 months, your baby should be practicing with a cup at mealtimes to develop the motor skills needed for this transition.',
+  },
+  {
+    question: 'Is "stranger danger" normal at this age?',
+    answer: 'Yes, separation anxiety and stranger wariness are very common milestones between 9 and 12 months. Your baby is beginning to understand that they are a separate person from you and may become clingy or cry when you leave or when unfamiliar people approach. This is a sign of healthy attachment and cognitive development.',
+  },
 ];
 
-const articleData = articleSchema({
+const aSchema = articleSchema({
   title,
   description,
   url: 'https://ageexpectations.com/ages/9-12-months/',
 });
-
-const faqData = faqSchema(faqs);
+const fSchema = faqSchema(faqs);
 ---
-
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} breadcrumbs={[{ label: '9–12 Months' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: 'Infant (9–12 Months)' },
+  ]}
+>
   <h1>9–12 Month Old Development: What to Expect</h1>
-  <p>The transition into the first year is full of milestones as your baby prepares to become a toddler. You'll see growth in language, mobility, and social skills.</p>
-  <h2>Key Milestones</h2>
+
+  <p>The final quarter of the first year is a whirlwind of activity. Your baby is likely no longer content to stay where you put them; they are on the move, exploring every corner of their environment, and starting to understand the world in more complex ways. This is the stage where "infant" starts to feel a lot more like "toddler."</p>
+
+  <p>This overview covers the key areas of development for 9–12 month olds, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC. Explore the topic pages below for deeper dives into specific areas like sleep, feeding, and milestones.</p>
+
+  <h2>Explore 9–12 Month Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/9-12-months/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
+
+  <h2>Physical Milestones: Moving Toward Independence</h2>
+
+  <p>Mobility is the name of the game at 9–12 months. Your baby is working hard on the gross motor skills that lead to walking:</p>
+
   <ul>
-    <li>Cruising (walking while holding onto furniture)</li>
-    <li>Standing alone momentarily</li>
-    <li>First intentional words (Mama, Dada)</li>
-    <li>Waving "bye-bye" and playing patty-cake</li>
+    <li><strong>Crawling:</strong> Most babies are proficient crawlers by 9 or 10 months. They may use a standard crawl, a "bear crawl" (on hands and feet), or a "commando crawl" (on their belly).</li>
+    <li><strong>Pulling to Stand:</strong> By 9 months, many babies can pull themselves up to a standing position using furniture.</li>
+    <li><strong>Cruising:</strong> After learning to stand, they will begin "cruising"—shuffling along while holding onto the couch or coffee table.</li>
+    <li><strong>Standing and Walking:</strong> Between 10 and 12 months, your baby may take their first independent steps. Don't worry if they aren't walking yet; the normal range for first steps extends well into the second year.</li>
+    <li><strong>Pincer Grasp:</strong> Fine motor skills are also advancing. Your baby can now use their thumb and forefinger to pick up small objects (the pincer grasp), which makes self-feeding much easier.</li>
   </ul>
+
+  <h2>Language and Communication: First Words and Gestures</h2>
+
+  <p>Your baby is starting to understand much of what you say and is finding new ways to talk back:</p>
+
+  <ul>
+    <li><strong>Mama and Dada:</strong> Most babies start saying "mama" and "dada" specifically to their parents by 10–12 months.</li>
+    <li><strong>Understanding "No":</strong> Your baby likely understands the word "no" now (even if they don't always stop what they are doing!).</li>
+    <li><strong>Gestures:</strong> Pointing is a major milestone. Your baby will point to things they want or things they want you to see. They also learn to wave "bye-bye" and shake their head for "no."</li>
+    <li><strong>Babbles with Intent:</strong> Their babbling starts to sound more like real conversation, with changes in tone and inflection that mimic adult speech.</li>
+  </ul>
+
+  <h2>Feeding and Nutrition: Joining the Family Table</h2>
+
+  <p>By 9–12 months, solid foods are becoming a larger part of your baby's diet, though breast milk or formula remains important:</p>
+
+  <ul>
+    <li><strong>Three Meals a Day:</strong> Most babies this age should be eating three small meals a day plus snacks, in addition to 24–30 ounces of breast milk or formula.</li>
+    <li><strong>Self-Feeding:</strong> Encourage your baby to feed themselves using their hands. This helps develop fine motor skills and independence.</li>
+    <li><strong>Introducing Textures:</strong> By now, your baby should be moving past purees to soft finger foods—small pieces of cooked vegetables, soft fruits, pasta, or small bits of meat.</li>
+    <li><strong>Water:</strong> You can offer small amounts of water in a cup during mealtimes.</li>
+  </ul>
+
+  <h2>Sleep Patterns: The 12-Month Transition</h2>
+
+  <p>Most 9–12 month olds need about 12–14 hours of sleep in a 24-hour period, typically including two naps. However, this is also a common time for sleep disruptions:</p>
+
+  <ul>
+    <li><strong>Developmental Leaps:</strong> When babies are practicing new skills like standing or walking, they often want to practice them in their crib at 2:00 AM.</li>
+    <li><strong>Separation Anxiety:</strong> This often peaks around 9 or 10 months. Your baby may cry when you leave the room or when they wake up at night and realize you aren't there.</li>
+    <li><strong>Nap Transitions:</strong> While most 12-month-olds still need two naps, some may start resisting the morning nap as they approach their first birthday.</li>
+  </ul>
+
   <div class="faq-section">
-    <h2>Is This Normal? Frequently Asked Questions</h2>
+    <h2>Is This Normal? Common Questions About 9–12 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
         <p class="faq-question">{faq.question}</p>
@@ -45,11 +111,18 @@ const faqData = faqSchema(faqs);
       </div>
     ))}
   </div>
-  <div class="topic-grid">
-    {topics.map(topic => (
-      <a class="topic-card" href={`/ages/9-12-months/${topic.slug}/`}>
-        {topic.label}
-      </a>
-    ))}
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The 9-month and 12-month well-child visits are important milestones. Talk to your pediatrician if your baby:</p>
+    <ul>
+      <li>Doesn't crawl or move in some way</li>
+      <li>Doesn't stand when supported</li>
+      <li>Doesn't search for things they see you hide</li>
+      <li>Doesn't say single words like "mama" or "dada"</li>
+      <li>Doesn't learn gestures like waving or shaking head</li>
+      <li>Doesn't point to things</li>
+      <li>Loses skills they once had</li>
+    </ul>
   </div>
 </BaseLayout>
