@@ -215,4 +215,11 @@ export const articles = [
     pubDate: '2026-03-13',
     image: '/images/pins/9-12-months-overview.png',
   },
+  {
+    title: '6–9 Month Old Sleep: What to Expect and Is It Normal?',
+    description: 'Between 6 and 9 months, many babies begin sleeping through the night, but developmental leaps like crawling and separation anxiety can trigger regressions. Learn about 6-9 month sleep patterns, nap schedules, and safe sleep habits.',
+    path: '/ages/6-9-months/sleep/',
+    pubDate: '2026-03-14',
+    image: '/images/pins/6-9-months-sleep.png',
+  },
 ];
