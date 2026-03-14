@@ -222,4 +222,11 @@ export const articles = [
     pubDate: '2026-03-14',
     image: '/images/pins/6-9-months-sleep.png',
   },
+  {
+    "title": "6–9 Month Milestones: What to Expect and Signs of Progress",
+    "description": "Between 6 and 9 months, babies reach major developmental milestones including sitting without support, early babbling like \"mama\" and \"dada,\" and the beginning of solid foods.",
+    "path": "/ages/6-9-months/milestones/",
+    "pubDate": "2026-03-14",
+    "image": "/images/pins/6-9-months-milestones.png",
+  },
 ];

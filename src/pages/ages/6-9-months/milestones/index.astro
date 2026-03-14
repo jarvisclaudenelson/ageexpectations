@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '6–9 Month Milestones: What to Expect and Signs of Progress';
+const description = 'Between 6 and 9 months, babies reach major developmental milestones including sitting without support, early babbling like "mama" and "dada," and the beginning of solid foods.';
+
+const faqs = [
+  {
+    question: 'When do babies usually start sitting up without support?',
+    answer: 'Most babies begin to sit without support between 6 and 8 months. Initially, they may use their arms for balance (the "tripod sit"), but by 9 months, many can sit steadily while playing with toys. If your baby isn\'t sitting with help by 9 months, mention it to your pediatrician.',
+  },
+  {
+    question: 'Should my baby be crawling by 9 months?',
+    answer: 'While many babies begin to crawl between 7 and 10 months, some skip crawling entirely and move straight to pulling up and cruising. The CDC and AAP focus more on the ability to move and explore the environment (like rolling or scooting) rather than the specific method of crawling.',
+  },
+  {
+    question: 'What sounds should my 9-month-old be making?',
+    answer: 'By 9 months, most babies are "babbling" with repetitive strings of sounds like "bababa," "dadada," or "mamama." They also begin to understand simple words like "no" and respond to their own name. While they might not use "mama" or "dada" specifically for parents yet, they are practicing the building blocks of speech.',
+  },
+  {
+    question: 'Is separation anxiety normal at this age?',
+    answer: 'Yes, separation anxiety often peaks between 8 and 12 months. Your baby is beginning to understand "object permanence"—that things (and people) exist even when they can\'t see them. This can lead to clinginess or crying when you leave the room. It is a sign of a healthy attachment.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-9-months/milestones/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '6–9 Months', href: '/ages/6-9-months/' },
+    { label: 'Milestones' },
+  ]}
+>
+  <h1>6–9 Month Milestones: What to Expect</h1>
+
+  <p>The window between 6 and 9 months is a period of incredible physical and social expansion. Your baby is likely transitioning from a stationary observer to a mobile explorer. They are becoming more purposeful in their movements, more expressive in their communication, and more curious about the world around them.</p>
+
+  <p>Developmental milestones are behaviors and physical skills seen in infants and children as they grow and develop. While every child develops at their own pace, the CDC and AAP provide general timeframes for when most children reach certain milestones.</p>
+
+  <h2>Social and Emotional Milestones</h2>
+  <p>At this age, your baby is becoming much more social and interactive. You may notice:</p>
+  <ul>
+    <li><strong>Separation Anxiety:</strong> They may act shy, clingy, or fearful around strangers. They may cry when you leave the room or when a relative tries to hold them.</li>
+    <li><strong>Showing Preferences:</strong> They have favorite toys and definitely have favorite people.</li>
+    <li><strong>Emotional Expression:</strong> They show a range of emotions, from pure joy and laughter to frustration and anger.</li>
+    <li><strong>Mirror Recognition:</strong> They enjoy looking at themselves (and you!) in the mirror.</li>
+  </ul>
+
+  <h2>Language and Communication Milestones</h2>
+  <p>Your baby is laying the groundwork for their first "real" words:</p>
+  <ul>
+    <li><strong>Babbling:</strong> They make many different sounds, like "pa-pa-pa" and "ba-ba-ba." By 9 months, they often string these together in long "sentences."</li>
+    <li><strong>Recognition:</strong> They respond to their name and may look when you call them. They are also beginning to understand the word "no."</li>
+    <li><strong>Gestures:</strong> They may start using their fingers to point at things they want or find interesting.</li>
+    <li><strong>Copying:</strong> They try to copy the sounds and gestures you make.</li>
+  </ul>
+
+  <h2>Cognitive Milestones (Learning, Thinking, Problem-Solving)</h2>
+  <p>Your baby's brain is working hard to figure out how the world works:</p>
+  <ul>
+    <li><strong>Object Permanence:</strong> They look for objects that they see you hide. They understand that a toy still exists even if it's under a blanket.</li>
+    <li><strong>Exploration:</strong> They use their hands and mouth to explore everything. They like to bang objects together to see what sound they make.</li>
+    <li><strong>Cause and Effect:</strong> They might drop a toy repeatedly to watch you pick it up, learning that their actions have results.</li>
+    <li><strong>Pincer Grasp:</strong> Around 9 months, they begin to use their thumb and index finger to pick up small things (like Cheerios).</li>
+  </ul>
+
+  <h2>Movement and Physical Development Milestones</h2>
+  <p>Mobility is the big theme for 6–9 month olds:</p>
+  <ul>
+    <li><strong>Sitting:</strong> They sit without support and can reach for toys while sitting.</li>
+    <li><strong>Rolling:</strong> They roll easily in both directions (front to back and back to front).</li>
+    <li><strong>Weight Bearing:</strong> When held in a standing position, they support weight on their legs and might even bounce.</li>
+    <li><strong>Movement:</strong> Many babies begin to crawl, scoot, or "army crawl" during this window.</li>
+    <li><strong>Pulling Up:</strong> By 9 months, many babies can pull themselves up to a standing position using furniture.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Common Questions About 6–9 Month Milestones</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The CDC and AAP suggest talking to your pediatrician if your 9-month-old child:</p>
+    <ul>
+      <li>Does not sit with help</li>
+      <li>Does not babble ("mamama", "bababa", "dadada")</li>
+      <li>Does not respond to their own name</li>
+      <li>Does not seem to recognize familiar people</li>
+      <li>Does not look where you point</li>
+      <li>Does not transfer toys from one hand to the other</li>
+      <li>Has lost skills they once had</li>
+    </ul>
+    <p>Early intervention is key. If you have any concerns about your baby's development, don't wait—speak with your doctor.</p>
+  </div>
+</BaseLayout>
