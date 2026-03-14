@@ -56,10 +56,10 @@ export const articles = [
   },
   {
     title: '12–18 Month Old Development: What to Expect',
-    description: 'A complete guide to 12–18 month development covering walking, first words, feeding transitions, sleep changes, and emerging independence.',
+    description: 'The transition from baby to toddler is a major milestone. Between 12 and 18 months, your child will likely take their first steps, say their first words, and begin to explore the world with new independence.',
     path: '/ages/12-18-months/',
-    pubDate: '2025-01-15',
-    image: '/images/2026-03-09-pin-12-18m-v2.png',
+    pubDate: '2026-03-14',
+    image: '/images/pins/12-18-months-overview.png',
   },
   {
     title: '12–18 Month Milestones: What to Expect and Signs of Progress',

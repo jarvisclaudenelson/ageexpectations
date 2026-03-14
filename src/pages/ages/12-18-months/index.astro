@@ -4,70 +4,88 @@ import { articleSchema, faqSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '12–18 Month Old Development: What to Expect';
-const description = 'Most 12–18 month olds are learning to walk, saying their first words, and exploring everything in reach. Here is what to expect across every developmental domain and when to talk to your pediatrician.';
+const description = 'The transition from baby to toddler is a major milestone. Between 12 and 18 months, your child will likely take their first steps, say their first words, and begin to explore the world with new independence.';
 
 const faqs = [
-  { question: 'Is it normal for my 12-month-old to not be walking yet?', answer: 'Yes. While some babies take their first steps around 12 months, the normal range for independent walking extends to 15–18 months. According to the CDC, most children walk well by 18 months. If your child is pulling to stand and cruising along furniture, they are on a healthy trajectory. Talk to your pediatrician if your child is not standing with support by 12 months or not walking at all by 18 months.' },
-  { question: 'How many words should my 15-month-old be saying?', answer: 'At 15 months, many toddlers say 3–5 recognizable words, though some may say more or fewer. The AAP considers 1–3 words typical at 12 months and around 5–10 words by 18 months. What matters equally is whether your child understands more than they say — following simple directions like "give me the cup" and pointing at objects they want are strong signs of healthy language development.' },
-  { question: 'Why does my toddler throw everything on the floor?', answer: 'Dropping and throwing objects is a normal part of cognitive development between 12 and 18 months. Your child is learning about cause and effect — what happens when I let go? Does it bounce or break? Does my parent pick it up? This is actually a sign of healthy curiosity and emerging problem-solving, not misbehavior. You can redirect by offering appropriate throwing activities like soft balls.' },
-  { question: 'When should I worry about my 12–18 month old not talking?', answer: 'The AAP recommends discussing language concerns with your pediatrician if your child has no words at all by 16 months, does not point or gesture to communicate by 12–14 months, does not seem to understand simple words or phrases, or loses language skills they previously had. Early intervention for speech and language is very effective at this age.' },
-  { question: 'Is it normal for my toddler to have frequent tantrums at this age?', answer: 'Some frustration and emotional outbursts are perfectly normal between 12 and 18 months. Your child is developing strong desires and opinions but does not yet have the language or emotional regulation skills to express them. This is the very beginning of what people call the "terrible twos," and it often starts well before age two. Staying calm, acknowledging their feelings, and offering simple choices can help.' },
+  {
+    question: 'When should my child start walking?',
+    answer: 'While many babies take their first steps around their first birthday, the CDC recently updated its milestones to reflect that walking without support is a milestone 75% of children reach by 18 months. If your child is not walking by 18 months, consult your pediatrician.',
+  },
+  {
+    question: 'How many words should an 18-month-old say?',
+    answer: 'By 18 months, most toddlers can say at least three words other than "mama" or "dada." They are also beginning to follow simple one-step directions without any gestures, like "Give me the toy."',
+  },
+  {
+    question: 'Is it normal for my toddler to throw tantrums already?',
+    answer: 'Yes. Between 12 and 18 months, toddlers begin to develop their own will but lack the verbal skills to express their frustrations. This often results in tantrums. Staying calm and providing simple labels for their emotions can help.',
+  },
+  {
+    question: 'When should I switch from a bottle to a cup?',
+    answer: 'The AAP recommends transitioning from a bottle to a cup by 12 to 18 months. By 18 months, many toddlers can drink from an open cup (with some spilling).',
+  },
 ];
 
-const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/12-18-months/' });
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-18-months/',
+});
 const fSchema = faqSchema(faqs);
 ---
-<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '12–18 Months' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '12–18 Months' },
+  ]}
+>
   <h1>12–18 Month Old Development: What to Expect</h1>
 
-  <p>The months between your child's first and second birthdays are some of the most dramatic in all of child development. Your baby is becoming a toddler — literally, toddling across the room on unsteady legs, pointing at everything they see, and saying their very first real words. It is exhilarating and exhausting in equal measure, and it is completely normal to wonder whether your child is "on track."</p>
+  <p>The transition from "infant" to "toddler" happens somewhere between 12 and 18 months. This is a period of rapid physical growth and even faster cognitive development. Your child is moving from being a passive observer to an active, often vocal, participant in the family.</p>
 
-  <p>The good news: there is a wide range of normal at this age. Some 12-month-olds are already walking confidently while others are still happily cruising along furniture and will not take independent steps for several more months. Some toddlers chatter constantly at 14 months while others are quiet observers who understand far more than they say. The guidelines below — based on current AAP and CDC developmental milestone checklists — will help you understand what to expect across every domain, what is typical, and what warrants a conversation with your pediatrician.</p>
+  <p>This overview covers the major developmental shifts for toddlers in this exciting transition period, based on the latest research and guidelines from the AAP and CDC.</p>
 
-  <h2>What to Expect: An Overview of Every Developmental Domain</h2>
-
-  <h3>Gross Motor Development</h3>
-  <p>This is the age of mobility. Most children pull to stand by 12 months, cruise along furniture shortly after, and take their first independent steps between 12 and 15 months. By 18 months, the vast majority of toddlers are walking on their own. You may also see your child start to climb onto low furniture, squat down to pick up a toy and stand back up, and attempt to kick a ball (though they will mostly just walk into it).</p>
-
-  <h3>Fine Motor Development</h3>
-  <p>Between 12 and 18 months, your child's hand skills are refining rapidly. Expect to see them stacking two to three blocks, turning pages in a board book (several at a time at first), scribbling with a crayon, and attempting to use a spoon — messily. The pincer grasp (thumb and forefinger) they developed around 9–10 months is now being put to constant use picking up small foods, bits of lint, and anything else they can find on the floor.</p>
-
-  <h3>Language and Communication</h3>
-  <p>Most 12-month-olds say one to three recognizable words beyond "mama" and "dada." By 18 months, the average toddler has a vocabulary of about 5–10 words, though some children have 50 or more. Equally important is receptive language: your child should be understanding simple instructions ("Where's your shoe?"), responding to their name consistently, and using gestures like pointing, waving, and shaking their head.</p>
-
-  <h3>Cognitive Development</h3>
-  <p>Object permanence — the understanding that things still exist even when hidden — is well established by now. Your child will look for toys you hide under a blanket and may start playing simple pretend games, like holding a toy phone to their ear. They are also learning cause and effect at a rapid pace, which is why they love pushing buttons, pulling levers, and dropping things off their high chair tray over and over again.</p>
-
-  <h3>Social-Emotional Development</h3>
-  <p>Separation anxiety typically peaks between 12 and 18 months. Your child may become clingy when you try to leave or cry when handed to someone unfamiliar. This is a sign of healthy attachment, not a behavioral problem. At the same time, toddlers this age begin showing early empathy — they may look concerned when another child cries — and start to show clear preferences for certain people, toys, and routines.</p>
-
-  <h3>Sleep</h3>
-  <p>Most 12–18 month olds need about 11–14 hours of total sleep per 24 hours, according to the AAP. Many children transition from two naps to one nap during this period, usually between 14 and 18 months. Sleep regressions are common around 12 months (often related to learning to walk) and again around 18 months (often related to separation anxiety and growing independence).</p>
-
-  <h3>Feeding and Nutrition</h3>
-  <p>By 12 months, your child can transition from formula to whole cow's milk (16–24 ounces per day) and should be eating a variety of table foods. The AAP recommends weaning from the bottle by 12–15 months. Expect messy self-feeding, strong food preferences, and an appetite that seems to vary wildly from day to day — all of which are normal. Drinking from an open cup with help is a skill most toddlers begin to develop during this window.</p>
-
-  <h2>Signs of Healthy Development at 12–18 Months</h2>
-  <p>While every child develops on their own timeline, here are signs that your toddler's development is progressing well:</p>
-  <ul>
-    <li>Walking independently or actively working toward it (pulling up, cruising)</li>
-    <li>Using at least a few words and understanding many more</li>
-    <li>Pointing at things they want or find interesting</li>
-    <li>Making eye contact and engaging with caregivers during play</li>
-    <li>Exploring their environment with curiosity</li>
-    <li>Showing a range of emotions including joy, frustration, and affection</li>
-    <li>Imitating actions they see adults do (talking on a phone, sweeping)</li>
-  </ul>
-
-  <h2>Explore Topics for 12–18 Months</h2>
+  <h2>Explore 12–18 Month Topics</h2>
   <div class="topic-grid">
     {topics.map(topic => (
       <a href={`/ages/12-18-months/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>
 
+  <h2>Physical Development: On the Move</h2>
+
+  <p>The most visible changes during this stage are physical. Most children become "toddlers" in the literal sense during these months.</p>
+
+  <ul>
+    <li><strong>Walking:</strong> Most children are walking by 15 to 18 months. They may still be "wobbly" and use a wide-based gait for balance.</li>
+    <li><strong>Climbing:</strong> Once they can walk, many toddlers immediately try to climb onto furniture or up stairs (usually on hands and knees at first).</li>
+    <li><strong>Fine Motor:</strong> Your toddler is learning to use tools. They may try to use a spoon, scribble with a crayon, or "help" you by holding a phone to their ear.</li>
+  </ul>
+
+  <h2>Language and Communication: First Words</h2>
+
+  <p>Receptive language (what they understand) usually outpaces expressive language (what they can say) during this period.</p>
+
+  <ul>
+    <li><strong>Vocabulary:</strong> By 18 months, expect at least 3-5 specific words. They also understand many more nouns and simple commands.</li>
+    <li><strong>Gestures:</strong> Toddlers use pointing to show you things they find interesting, which is a key social-communication milestone.</li>
+    <li><strong>Following Directions:</strong> They should be able to follow simple instructions like "Sit down" or "Bring me the ball" without you needing to point.</li>
+  </ul>
+
+  <h2>Social and Emotional: Seeking Independence</h2>
+
+  <p>The 12-18 month stage is the beginning of "autonomy." Your toddler is realizing they are a separate person from you.</p>
+
+  <ul>
+    <li><strong>Social Referencing:</strong> They will often move away from you to explore but will look back to see if you are still there and if you look "safe."</li>
+    <li><strong>Imitation:</strong> This is a peak time for copying your actions—sweeping, "talking" on the phone, or pretending to cook.</li>
+    <li><strong>Self-Awareness:</strong> They may begin to recognize themselves in the mirror or in photos.</li>
+  </ul>
+
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 12–18 Month Olds</h2>
+    <h2>Is This Normal? Common Questions About 12–18 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
         <p class="faq-question">{faq.question}</p>
@@ -78,16 +96,13 @@ const fSchema = faqSchema(faqs);
 
   <div class="callout">
     <h2>When to Talk to Your Pediatrician</h2>
-    <p>Every child develops at their own pace, and most variations are perfectly normal. However, the AAP and CDC recommend contacting your pediatrician if your 12–18 month old:</p>
+    <p>The 12-month and 18-month well-child visits are critical. The 18-month visit often includes a formal autism screening (M-CHAT). Contact your doctor if your child:</p>
     <ul>
-      <li>Is not standing with support by 12 months or not walking by 18 months</li>
-      <li>Has no words at all by 16 months</li>
-      <li>Does not point or use gestures to communicate</li>
-      <li>Does not respond to their name consistently</li>
-      <li>Does not seem to understand simple instructions</li>
-      <li>Loses skills they previously had (says fewer words, stops waving, becomes less social)</li>
-      <li>Does not make eye contact or show interest in social interaction</li>
+      <li>Is not walking by 18 months</li>
+      <li>Does not point to show things to others</li>
+      <li>Loses skills they once had (like words or social interest)</li>
+      <li>Does not gain at least a few new words between 12 and 18 months</li>
+      <li>Does not notice or mind when a caregiver leaves or returns</li>
     </ul>
-    <p>If you have any concerns at all, do not wait — early intervention services are available in every U.S. state for children under 3, and research consistently shows that earlier support leads to better outcomes. Trust your instincts as a parent.</p>
   </div>
 </BaseLayout>
