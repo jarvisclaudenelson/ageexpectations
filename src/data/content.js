@@ -236,4 +236,11 @@ export const articles = [
     "pubDate": "2026-03-15",
     "image": "/images/pins/9-12-months-milestones.png",
   },
+  {
+    "title": "1–3 Month Old Development: What to Expect",
+    "description": "Between 1 and 3 months, babies transition from the newborn phase into a more alert and socially engaged stage. Expect your baby’s first social smile, increased head control, and more predictable feeding and sleep patterns.",
+    "path": "/ages/1-3-months/",
+    "pubDate": "2026-03-15",
+    "image": "/images/pins/1-3-months-overview.png",
+  },
 ];
