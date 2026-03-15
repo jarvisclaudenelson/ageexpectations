@@ -24,6 +24,7 @@ def main():
     parser.add_argument("--prompt", required=True, help="Prompt for background image")
     parser.add_argument("--output", required=True, help="Output filename")
     parser.add_argument("--layout", default="split", choices=["split", "overlay", "card-bottom"], help="Layout style")
+    parser.add_argument("--rotate", type=int, default=0, help="Rotate background image (degrees counter-clockwise)")
     parser.add_argument("--api-key", help="Gemini API key")
     
     args = parser.parse_args()
@@ -55,22 +56,20 @@ def main():
     img = Image.new('RGB', (W, H), WHITE)
     draw = ImageDraw.Draw(img)
     
-    # Load background
     bg = Image.open(temp_bg).convert('RGB')
     
-    # Check EXIF orientation and fix it (essential for AI generated images)
+    # Check EXIF orientation and fix it
     try:
         from PIL import ImageOps
         bg = ImageOps.exif_transpose(bg)
     except:
         pass
 
+    # Apply manual rotation if specified
+    if args.rotate != 0:
+        bg = bg.rotate(args.rotate, expand=True)
+
     bg_w, bg_h = bg.size
-    
-    # If the image is landscape, rotate it to portrait (90 deg clockwise)
-    if bg_w > bg_h:
-        bg = bg.rotate(-90, expand=True)
-        bg_w, bg_h = bg.size
         
     # Layout configuration
     if args.layout == "split":
