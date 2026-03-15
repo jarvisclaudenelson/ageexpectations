@@ -81,7 +81,10 @@ def main():
         # Paste photo
         scale = max(photo_w / bg_w, H / bg_h)
         bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
-        img.paste(bg_s.crop(((bg_s.width - photo_w)//2, (bg_s.height - H)//2, (bg_s.width + photo_w)//2, (bg_s.height + H)//2)), (0,0))
+        
+        # Better cropping: prioritize the top of the photo (faces) over dead center
+        crop_top = int((bg_s.height - H) * 0.15) # Shift up by 15% of the excess height
+        img.paste(bg_s.crop(((bg_s.width - photo_w)//2, crop_top, (bg_s.width + photo_w)//2, crop_top + H)), (0,0))
         
         # Draw stripe
         draw.rectangle([W - stripe_w, 0, W, H], fill=BEIGE)
@@ -96,6 +99,8 @@ def main():
         # Paste photo
         scale = max(W / bg_w, photo_h / bg_h)
         bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
+        
+        # Top-aligned crop (starts from 0 at the top)
         img.paste(bg_s.crop(((bg_s.width - W)//2, 0, (bg_s.width + W)//2, photo_h)), (0,0))
         
         # Draw card
