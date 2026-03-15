@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
+
+const title = '9–12 Month Milestones: What to Expect and Signs of Progress';
+const description = 'Between 9 and 12 months, babies reach major developmental milestones including pulling to stand, early walking, saying "mama" and "dada," and following simple instructions.';
+
+const faqs = [
+  {
+    question: 'Is it normal if my 12-month-old is not walking yet?',
+    answer: 'Yes. While many babies take their first steps around their first birthday, the normal range for walking is broad, typically between 9 and 15 months. According to the AAP, as long as your baby is making progress in other motor skills—like pulling to stand, cruising along furniture, or standing alone—there is usually no cause for concern. If your baby is not standing with support by 12 months, mention it to your pediatrician.',
+  },
+  {
+    question: 'When should my baby say their first word?',
+    answer: 'Most babies say their first intentional word (like "mama" or "dada") between 10 and 14 months. However, the "language explosion" often starts with babbling that sounds like speech and responding to their own name. By 12 months, most babies can use simple gestures like shaking their head "no" or waving "bye-bye."',
+  },
+  {
+    question: 'Is it normal for my baby to be afraid of strangers at this age?',
+    answer: 'Yes, "stranger anxiety" and separation anxiety typically peak between 9 and 12 months. Your baby is beginning to understand that they are a separate person from you and may become clingy or cry when you leave or when someone unfamiliar approaches. This is actually a sign of healthy emotional attachment and cognitive development.',
+  },
+  {
+    question: 'What is the "pincer grasp" and why is it important?',
+    answer: 'The pincer grasp is the ability to pick up small objects using the thumb and index finger. This milestone typically develops around 9–10 months. It is a major step in fine motor development, allowing babies to feed themselves small pieces of food and eventually lead to skills like holding a pencil or using tools.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/9-12-months/milestones/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '9–12 Months', href: '/ages/9-12-months/' },
+    { label: 'Milestones' },
+  ]}
+>
+  <h1>9–12 Month Milestones: What to Expect</h1>
+
+  <p>The window between 9 and 12 months is a period of incredible transformation. Your baby is transitioning from an infant to a toddler, moving from being relatively stationary to exploring their environment with new-found mobility and communication skills. This is the age of "firsts"—first steps, first words, and the first birthday.</p>
+
+  <p>Developmental milestones are things most children can do by a certain age. While every child develops at their own pace, the following milestones are based on guidelines from the American Academy of Pediatrics (AAP) and the CDC for children reaching their first birthday.</p>
+
+  <h2>Social and Emotional Milestones</h2>
+  <p>At this age, your baby is becoming more socially aware and showing a clear preference for familiar people.</p>
+  <ul>
+    <li><strong>Stranger Anxiety:</strong> May be shy, anxious, or fearful around strangers.</li>
+    <li><strong>Separation Anxiety:</strong> May cry when a parent leaves the room or when being dropped off at childcare.</li>
+    <li><strong>Preference:</strong> Has favorite people and toys; may hand you a book when they want to hear a story.</li>
+    <li><strong>Attention-Seeking:</strong> Repeats sounds or actions to get your attention or a laugh.</li>
+    <li><strong>Cooperation:</strong> Puts out an arm or leg to help with dressing.</li>
+    <li><strong>Social Games:</strong> Plays simple interactive games like "peek-a-boo" and "pat-a-cake."</li>
+  </ul>
+
+  <h2>Language and Communication Milestones</h2>
+  <p>Your baby is starting to understand the power of communication, even before they can say many words.</p>
+  <ul>
+    <li><strong>Understanding "No":</strong> Responds to simple spoken requests and understands the word "no" (even if they don't always follow it!).</li>
+    <li><strong>Gestures:</strong> Uses simple gestures, like shaking their head "no" or waving "bye-bye."</li>
+    <li><strong>Vocalization:</strong> Makes sounds with changes in tone (sounding more like real speech).</li>
+    <li><strong>First Words:</strong> Says "mama" and "dada" specifically to their parents and may say exclamations like "uh-oh!"</li>
+    <li><strong>Imitation:</strong> Tries to repeat words or sounds that you say.</li>
+  </ul>
+
+  <h2>Cognitive Milestones (Learning, Thinking, Problem-Solving)</h2>
+  <p>Curiosity is at an all-time high as your baby learns how the world works.</p>
+  <ul>
+    <li><strong>Exploration:</strong> Explores things in different ways, such as shaking, banging, or throwing objects.</li>
+    <li><strong>Object Permanence:</strong> Finds hidden things easily; understands that objects exist even when they can't see them.</li>
+    <li><strong>Functional Use:</strong> Starts to use things correctly; for example, drinks from a cup or tries to brush their hair.</li>
+    <li><strong>Cause and Effect:</strong> Bangs two things together to hear the sound.</li>
+    <li><strong>Fine Motor Focus:</strong> Pokes with their index finger and uses a pincer grasp (thumb and forefinger) to pick up small items.</li>
+    <li><strong>Following Directions:</strong> Follows simple one-step directions, like "Please give me the ball."</li>
+  </ul>
+
+  <h2>Movement and Physical Development Milestones</h2>
+  <p>This is the age of mobility. Your baby is likely "on the go" in one way or another.</p>
+  <ul>
+    <li><strong>Sitting:</strong> Gets to a sitting position without help from an adult.</li>
+    <li><strong>Pulling to Stand:</strong> Pulls themselves up to stand using furniture.</li>
+    <li><strong>Cruising:</strong> Walks while holding on to furniture.</li>
+    <li><strong>Standing Alone:</strong> May stand for a few seconds without holding on.</li>
+    <li><strong>First Steps:</strong> May take a few steps without holding on (though many babies don't walk until closer to 15 months).</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Common Questions About 9–12 Month Milestones</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The CDC and AAP recommend regular developmental screenings. You should talk to your pediatrician if your 12-month-old:</p>
+    <ul>
+      <li>Does not crawl or seems to drag one side of their body while crawling</li>
+      <li>Cannot stand when supported</li>
+      <li>Does not search for things that they see you hide</li>
+      <li>Does not say single words like "mama" or "dada"</li>
+      <li>Does not learn gestures like waving or shaking their head</li>
+      <li>Does not point to things</li>
+      <li>Loses skills they once had</li>
+    </ul>
+    <p>Early intervention is key. If you have concerns, don't wait—talk to your doctor or contact your state's early intervention program.</p>
+  </div>
+</BaseLayout>

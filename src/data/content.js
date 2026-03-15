@@ -229,4 +229,11 @@ export const articles = [
     "pubDate": "2026-03-14",
     "image": "/images/pins/6-9-months-milestones.png",
   },
+  {
+    "title": "9–12 Month Milestones: What to Expect and Signs of Progress",
+    "description": "Between 9 and 12 months, babies reach major developmental milestones including pulling to stand, early walking, saying \"mama\" and \"dada,\" and following simple instructions.",
+    "path": "/ages/9-12-months/milestones/",
+    "pubDate": "2026-03-15",
+    "image": "/images/pins/9-12-months-milestones.png",
+  },
 ];
