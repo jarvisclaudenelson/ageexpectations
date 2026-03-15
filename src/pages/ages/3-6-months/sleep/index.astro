@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema } from "../../../data/schema.js";
+
+const title = "3–6 Month Old Sleep: What to Expect and Is It Normal?";
+const description = "Between 3 and 6 months, babies undergo a major sleep transition as they develop circadian rhythms. Learn about the 4-month sleep regression, safe sleep shifts, and establishing healthy sleep habits.";
+
+const faqs = [
+  {
+    question: "What is the 4-month sleep regression?",
+    answer: "The 4-month sleep regression is a biological shift in how your baby sleeps. Instead of the simple \"deep/light\" newborn sleep cycles, your baby starts to develop more adult-like sleep stages. This transition often causes babies to wake more frequently between cycles as they learn to navigate these new stages. It is a sign of healthy neurological development, though it can be exhausting for parents.",
+  },
+  {
+    question: "When should I stop swaddling my baby?",
+    answer: "The AAP recommends you stop swaddling as soon as your baby shows any signs of trying to roll over. For many babies, this happens between 3 and 4 months. Once a baby can roll, a swaddle becomes a safety hazard because they may roll onto their stomach and be unable to use their arms to push up or turn back over.",
+  },
+  {
+    question: "How many naps should a 4-month-old take?",
+    answer: "Most 3–6 month olds take 3 to 4 naps per day. As they approach 6 months, many babies begin to transition toward a more predictable 3-nap schedule, with wake windows typically lasting between 1.5 to 2.5 hours.",
+  },
+  {
+    question: "Is it safe for my baby to sleep on their stomach if they rolled there themselves?",
+    answer: "Yes. According to the AAP, if your baby is able to roll from their back to their stomach and from their stomach to their back, you do not need to flip them back over if they roll onto their stomach during sleep. However, you should still always place them on their back to start every sleep session.",
+  },
+  {
+    question: "Should I start sleep training at 4 months?",
+    answer: "Many pediatricians suggest that 4–6 months is an appropriate window to start gentle sleep hygiene and helping your baby learn to fall asleep independently. However, \"formal\" sleep training is a personal choice. The most important factor is ensuring your baby is developmentally ready and that you continue to follow safe sleep guidelines.",
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/3-6-months/sleep/",
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: "3–6 Months", href: "/ages/3-6-months/" },
+    { label: "Sleep" },
+  ]}
+>
+  <h1>3–6 Month Old Sleep: What to Expect</h1>
+
+  <p>The window between 3 and 6 months is often one of the most significant periods of change for infant sleep. Your baby is moving away from the \"fourth trimester\" newborn phase and into a more mature sleep pattern. This period is characterized by the development of a circadian rhythm, the infamous 4-month sleep regression, and the transition away from the swaddle.</p>
+
+  <h2>Sleep Requirements for 3–6 Month Olds</h2>
+  <p>According to the American Academy of Pediatrics (AAP) and the National Sleep Foundation, babies in this age range typically need <strong>12 to 15 hours of total sleep</strong> in a 24-hour period. This is usually broken down into:</p>
+  <ul>
+    <li><strong>Night Sleep:</strong> 10–12 hours (with 1–2 feedings still being very normal).</li>
+    <li><strong>Daytime Sleep:</strong> 3–4 hours, typically spread across 3 or 4 naps.</li>
+  </ul>
+
+  <h2>The 4-Month Sleep Regression: A Biological Milestone</h2>
+  <p>Around 4 months, many parents notice a sudden \"regression\" in sleep. A baby who was previously sleeping long stretches may suddenly wake every 2 hours or struggle to settle for naps. While frustrating, this is actually a <strong>progression</strong> in brain development.</p>
+  <p>Newborn sleep is very simple, consisting mostly of deep REM sleep. Around 4 months, your baby’s brain matures, and they begin to cycle through different stages of sleep (light and deep) similar to an adult. Because they haven\"t yet learned how to connect these cycles or fall back asleep when they drift into a light stage, they wake up fully and look for the \"props\" they had when they first fell asleep (like rocking or feeding).</p>
+
+  <h2>The Swaddle Transition</h2>
+  <p>Safety is the priority during this stage. The AAP is clear: <strong>Stop swaddling as soon as your baby shows any signs of trying to roll over.</strong> For most babies, this occurs between 3 and 4 months. If your baby is swaddled and rolls onto their stomach, they cannot use their arms to reposition themselves, which significantly increases the risk of SIDS.</p>
+  <p>Transitioning to a sleep sack (a wearable blanket that leaves the arms free) is the recommended next step. This provides the warmth of a blanket without the risks of loose bedding.</p>
+
+  <h2>Safe Sleep Guidelines for 3–6 Months</h2>
+  <p>Even as your baby becomes more mobile, the fundamentals of safe sleep remain the same:</p>
+  <ul>
+    <li><strong>Back to Sleep:</strong> Always place your baby on their back for every sleep.</li>
+    <li><strong>Flat, Firm Surface:</strong> Use a crib, bassinet, or play yard that meets CPSC safety standards. No inclined sleepers or \"nests.\"</li>
+    <li><strong>Bare is Best:</strong> No pillows, blankets, bumpers, or stuffed animals in the sleep space.</li>
+    <li><strong>Room Sharing:</strong> The AAP recommends room-sharing (but not bed-sharing) for at least the first 6 months to reduce the risk of SIDS.</li>
+  </ul>
+
+  <h2>Developing Healthy Sleep Habits</h2>
+  <p>This is an excellent time to start establishing a consistent bedtime routine. A simple, predictable sequence helps signal to your baby\"s developing circadian rhythm that it is time for rest. A routine might include:</p>
+  <ol>
+    <li>A warm bath</li>
+    <li>A fresh diaper and pajamas</li>
+    <li>A final feeding</li>
+    <li>A short story or song</li>
+    <li>Putting them down \"drowsy but awake\"</li>
+  </ol>
+  <p>Putting a baby down <strong>drowsy but awake</strong> is a key skill. It allows them to practice the first stage of falling asleep independently. If they can learn to do this at the start of the night, they will be much more successful at putting themselves back to sleep when they wake between sleep cycles at 3 AM.</p>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 3–6 Month Sleep</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>While sleep changes are normal at this age, consult your doctor if you notice:</p>
+    <ul>
+      <li>Extreme difficulty waking your baby for feedings</li>
+      <li>Signs of sleep apnea (snoring, gasping, or long pauses in breathing)</li>
+      <li>Your baby is not gaining weight or seems excessively fussy during feedings</li>
+      <li>You are feeling overwhelmed or experiencing signs of postpartum depression/anxiety</li>
+    </ul>
+  </div>
+</BaseLayout>
