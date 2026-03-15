@@ -250,4 +250,11 @@ export const articles = [
     pubDate: "2026-03-15",
     image: "/images/pins/3-6-months-sleep.png",
   },
+  {
+    title: "9–12 Month Sleep: Patterns, Regressions, and Routines",
+    description: "Between 9 and 12 months, babies often settle into a two-nap routine, but developmental milestones like pulling to stand and crawling can trigger sleep regressions. Learn what to expect and how to help your baby sleep better.",
+    path: "/ages/9-12-months/sleep/",
+    pubDate: "2026-03-15",
+    image: "/images/pins/9-12-months-sleep.png",
+  },
 ];

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '@utils/schema';
+
+const title = '9–12 Month Sleep: Patterns, Regressions, and Routines';
+const description = 'Between 9 and 12 months, babies often settle into a two-nap routine, but developmental milestones like pulling to stand and crawling can trigger sleep regressions. Learn what to expect and how to help your baby sleep better.';
+
+const faqs = [
+  {
+    question: 'How much sleep does a 9–12 month old need?',
+    answer: 'Most babies this age need 12 to 14 hours of total sleep in a 24-hour period. This typically includes 10–12 hours at night and 2–3 hours of daytime sleep divided between two naps.',
+  },
+  {
+    question: 'Is there a 9-month sleep regression?',
+    answer: 'Yes. Many babies experience a sleep regression around 8, 9, or 10 months. This is usually tied to major developmental milestones like crawling, pulling to stand, and increased separation anxiety. Your baby might resist bedtime or wake up more frequently at night to practice their new skills.',
+  },
+  {
+    question: 'When do babies drop to one nap?',
+    answer: 'Most babies continue to need two naps until they are 14 to 18 months old. While your 10 or 11-month-old might occasionally resist one of their naps, it is usually best to stick with the two-nap schedule until they consistently show they are ready for the transition.',
+  },
+  {
+    question: 'Can my baby have a blanket or pillow at 12 months?',
+    answer: 'The AAP recommends keeping the crib clear of blankets, pillows, and soft toys for the first year to reduce the risk of SIDS and suffocation. After the first birthday, you can gradually introduce a small, thin blanket or a small lovey, but many parents choose to wait longer.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/9-12-months/sleep/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '9–12 Months', href: '/ages/9-12-months/' },
+    { label: 'Sleep' },
+  ]}
+>
+  <h1>9–12 Month Sleep: What to Expect</h1>
+
+  <p>By the time your baby reaches 9 months, you might feel like you've finally hit a rhythm. Many babies are sleeping longer stretches at night, and daytime naps have likely consolidated into a predictable two-nap schedule. However, the period between 9 and 12 months is also a time of massive physical and cognitive growth, which can frequently disrupt even the best sleep patterns.</p>
+
+  <h2>Common Sleep Patterns at 9–12 Months</h2>
+  <p>While every baby is different, most infants in this age range follow a similar sleep structure:</p>
+  <ul>
+    <li><strong>Nighttime Sleep:</strong> 10–12 hours. Many babies are capable of sleeping through the night without a feeding, though some may still wake once.</li>
+    <li><strong>Naps:</strong> Two naps per day, usually totaling 2–3 hours of daytime sleep. The morning nap often happens 2.5–3 hours after waking, and the afternoon nap follows about 3 hours after the first nap ends.</li>
+    <li><strong>Wake Windows:</strong> Most babies this age can stay awake for 3 to 4 hours between sleep periods.</li>
+  </ul>
+
+  <h2>The 8-10 Month Sleep Regression</h2>
+  <p>If your previously "good sleeper" suddenly starts waking up at 2 a.m. or screaming at bedtime, you are likely facing the 8-10 month sleep regression. Unlike the 4-month regression, which is a permanent change in sleep architecture, this regression is usually temporary and driven by development.</p>
+  <p><strong>What causes it?</strong></p>
+  <ul>
+    <li><strong>Physical Milestones:</strong> Your baby is likely learning to crawl, sit up independently, pull to stand, or even cruise along furniture. Their brains are so excited by these skills that they want to practice them in the crib.</li>
+    <li><strong>Separation Anxiety:</strong> Around 9 months, babies begin to understand "object permanence"—they know you still exist when you leave the room, and they might protest your departure more vigorously.</li>
+    <li><strong>Teething:</strong> The arrival of first molars can cause significant discomfort.</li>
+    <li><strong>Language Development:</strong> Even "silent" development, like processing new sounds and words, can keep a baby's brain active at night.</li>
+  </ul>
+
+  <h2>Tips for Better Sleep</h2>
+  <p>Consistency is your best tool during this transition period. Stick to a soothing bedtime routine—like bath, pajamas, a book, and a song—to signal to your baby that it's time to wind down.</p>
+  <p>If your baby is practicing pulling to stand in the crib, give them plenty of opportunities to practice that skill during the day. If they get "stuck" standing at night, briefly show them how to sit back down, but keep the interaction boring and minimal to avoid turning it into a game.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>While sleep disruptions are common, talk to your doctor if you notice:</p>
+    <ul>
+      <li>Signs of sleep apnea (loud snoring, gasping, or pauses in breathing)</li>
+      <li>Extreme difficulty soothing your baby despite consistent routines</li>
+      <li>Persistent waking that you suspect is related to reflux or ear infections</li>
+      <li>Any concerns about your baby's growth or caloric intake during the day</li>
+    </ul>
+  </div>
+</BaseLayout>
