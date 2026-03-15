@@ -7,42 +7,37 @@
 # ///
 """
 Generate Pinterest pins in the Jarvis brand style.
-Matches the 3-6 Month Milestones reference design:
-- 1024x1792 (9:16 ratio for Pinterest)
-- Photo on left (~55%), white card on right (~45%)
-- Title + colon, large headline, bullet points
-- All centered in white card
+Supports multiple layouts and prevents text overflow.
 """
 import argparse
 import subprocess
 import os
 import sys
+import math
 from PIL import Image, ImageDraw, ImageFont
 
 def main():
     parser = argparse.ArgumentParser(description="Generate a Pinterest pin (Jarvis Brand Style)")
-    parser.add_argument("--title", required=True, help="Title with colon (e.g. '3-6 MONTH MILESTONES:')")
-    parser.add_argument("--headline", required=True, help="Main headline (e.g. 'ROLLING OVER, GRABBING TOYS, GIGGLING.')")
+    parser.add_argument("--title", required=True, help="Title (e.g. '3-6 MONTH MILESTONES:')")
+    parser.add_argument("--headline", required=True, help="Main headline")
     parser.add_argument("--bullets", required=True, help="Bullet points (comma separated)")
     parser.add_argument("--prompt", required=True, help="Prompt for background image")
     parser.add_argument("--output", required=True, help="Output filename")
+    parser.add_argument("--layout", default="split", choices=["split", "overlay", "card-bottom"], help="Layout style")
     parser.add_argument("--api-key", help="Gemini API key")
     
     args = parser.parse_args()
     
-    # Canvas size matching reference (9:16 Pinterest ratio)
     W, H = 1024, 1792
-    
-    # Brand colors
-    BEIGE = (245, 240, 235)  # Light warm beige for stripe
+    BEIGE = (245, 240, 235)
     WHITE = (255, 255, 255)
-    TITLE_COLOR = (60, 60, 60)  # Dark gray, not pure black
-    HEADLINE_COLOR = (40, 40, 40)  # Slightly darker for headline
-    BULLET_COLOR = (80, 80, 80)  # Medium gray for bullets
+    TITLE_COLOR = (60, 60, 60)
+    HEADLINE_COLOR = (40, 40, 40)
+    BULLET_COLOR = (80, 80, 80)
     
-    # 1. Generate base image with vertical orientation
+    # 1. Generate background
     temp_bg = f"temp_bg_{os.getpid()}.png"
-    gen_prompt = f"{args.prompt}, professional parenting photography, soft natural lighting, warm tones, cozy home setting, high quality, 4:5 aspect ratio photo"
+    gen_prompt = f"{args.prompt}, professional photography, high quality, soft natural light"
     
     gen_cmd = [
         "uv", "run", "/app/skills/nano-banana-pro/scripts/generate_image.py",
@@ -54,135 +49,147 @@ def main():
         gen_cmd.extend(["--api-key", args.api_key])
     
     print(f"Generating background...")
-    try:
-        subprocess.run(gen_cmd, check=True, capture_output=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error generating background: {e}", file=sys.stderr)
-        sys.exit(1)
+    subprocess.run(gen_cmd, check=True, capture_output=True)
     
-    # 2. Create canvas and load background
+    # 2. Setup Canvas
     img = Image.new('RGB', (W, H), WHITE)
     draw = ImageDraw.Draw(img)
     
-    # Load and resize background to fill left portion
     bg = Image.open(temp_bg).convert('RGB')
     bg_w, bg_h = bg.size
-    
-    # Check if background is sideways and fix if needed
     if bg_w > bg_h:
-        # Landscape orientation - rotate to portrait
         bg = bg.rotate(-90, expand=True)
         bg_w, bg_h = bg.size
-    
-    # Calculate crop to fill left 55% of canvas
-    target_w = int(W * 0.55)
-    target_h = H
-    
-    # Resize background to cover the target area
-    scale = max(target_w / bg_w, target_h / bg_h)
-    new_w = int(bg_w * scale)
-    new_h = int(bg_h * scale)
-    bg_resized = bg.resize((new_w, new_h), Image.Resampling.LANCZOS)
-    
-    # Center crop
-    crop_left = (new_w - target_w) // 2
-    crop_top = (new_h - target_h) // 2
-    bg_cropped = bg_resized.crop((crop_left, crop_top, crop_left + target_w, crop_top + target_h))
-    
-    # Paste background on left
-    img.paste(bg_cropped, (0, 0))
-    
-    # 3. Draw right side elements
-    # Beige stripe at far right (4%)
-    stripe_w = int(W * 0.04)
-    draw.rectangle([W - stripe_w, 0, W, H], fill=BEIGE)
-    
-    # White card (40% width, centered vertically with 6% margins)
-    card_w = int(W * 0.40)
-    card_h = H - int(H * 0.12)  # 6% margin top and bottom
-    card_x = int(W * 0.55)  # Start after photo
-    card_y = int(H * 0.06)
-    
-    draw.rectangle([card_x, card_y, card_x + card_w, card_y + card_h], fill=WHITE)
-    
-    # 4. Setup fonts
-    try:
-        # Try to use nice serif fonts if available
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", 42)
-        headline_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf", 72)
-        bullet_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 36)
-    except:
-        title_font = ImageFont.load_default()
-        headline_font = ImageFont.load_default()
-        bullet_font = ImageFont.load_default()
-    
-    # 5. Text layout
-    # Padding inside card
-    pad_x = int(card_w * 0.08)
+        
+    # Layout configuration
+    if args.layout == "split":
+        photo_w = int(W * 0.55)
+        card_x, card_y = photo_w, int(H * 0.06)
+        card_w, card_h = W - photo_w - int(W * 0.04), H - int(H * 0.12)
+        stripe_w = int(W * 0.04)
+        
+        # Paste photo
+        scale = max(photo_w / bg_w, H / bg_h)
+        bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
+        img.paste(bg_s.crop(((bg_s.width - photo_w)//2, (bg_s.height - H)//2, (bg_s.width + photo_w)//2, (bg_s.height + H)//2)), (0,0))
+        
+        # Draw stripe
+        draw.rectangle([W - stripe_w, 0, W, H], fill=BEIGE)
+        # Draw card
+        draw.rectangle([card_x, card_y, card_x + card_w, card_y + card_h], fill=WHITE)
+        
+    elif args.layout == "card-bottom":
+        photo_h = int(H * 0.60)
+        card_x, card_y = int(W * 0.10), photo_h - int(H * 0.05)
+        card_w, card_h = int(W * 0.80), H - photo_h
+        
+        # Paste photo
+        scale = max(W / bg_w, photo_h / bg_h)
+        bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
+        img.paste(bg_s.crop(((bg_s.width - W)//2, 0, (bg_s.width + W)//2, photo_h)), (0,0))
+        
+        # Draw card
+        draw.rectangle([card_x, card_y, card_x + card_w, card_y + card_h], fill=WHITE)
+
+    elif args.layout == "overlay":
+        card_x, card_y = int(W * 0.10), int(H * 0.55)
+        card_w, card_h = int(W * 0.80), int(H * 0.40)
+        
+        # Paste photo (full)
+        scale = max(W / bg_w, H / bg_h)
+        bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
+        img.paste(bg_s.crop(((bg_s.width - W)//2, (bg_s.height - H)//2, (bg_s.width + W)//2, (bg_s.height + H)//2)), (0,0))
+        
+        # Draw card (higher opacity white)
+        overlay = Image.new('RGBA', (card_w, card_h), (255, 255, 255, 245)) # Increased to 245
+        img.paste(overlay, (card_x, card_y), overlay)
+
+    # 3. Text Fitting Logic
+    pad_x = int(card_w * 0.10)
     text_w = card_w - (pad_x * 2)
     text_x = card_x + pad_x
     
-    # Helper to wrap and center text
-    def wrap_text(text, font, max_width):
-        words = text.split()
-        lines = []
-        current = words[0] if words else ""
-        for word in words[1:]:
-            test = current + " " + word
-            if draw.textlength(test, font=font) <= max_width:
-                current = test
-            else:
-                lines.append(current)
-                current = word
-        lines.append(current)
-        return lines
+    serif = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
+    serif_bold = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
+    sans = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
     
-    def draw_centered_text(draw, lines, font, x, y, max_width, color, line_spacing=1.2):
-        for line in lines:
-            w = draw.textlength(line, font=font)
-            draw.text((x + (max_width - w) / 2, y), line, font=font, fill=color)
-            bbox = draw.textbbox((0, 0), line, font=font)
-            y += (bbox[3] - bbox[1]) * line_spacing
+    def get_layout(t_size, h_size, b_size):
+        try:
+            f_title = ImageFont.truetype(serif, t_size)
+            f_head = ImageFont.truetype(serif_bold, h_size)
+            f_bullet = ImageFont.truetype(sans, b_size)
+        except:
+            f_title = f_head = f_bullet = ImageFont.load_default()
+            
+        def wrap(text, font, max_w):
+            words = text.split()
+            lines = []
+            if not words: return []
+            curr = words[0]
+            for w in words[1:]:
+                if draw.textlength(curr + " " + w, font=font) <= max_w:
+                    curr += " " + w
+                else:
+                    lines.append(curr)
+                    curr = w
+            lines.append(curr)
+            return lines
+
+        t_lines = wrap(args.title.upper(), f_title, text_w)
+        h_lines = wrap(args.headline.upper(), f_head, text_w)
+        b_items = [f"• {b.strip()}" for b in args.bullets.split(",")]
+        
+        # Measure height
+        def get_h(lines, font, spacing):
+            if not lines: return 0
+            h = 0
+            for l in lines:
+                bbox = draw.textbbox((0,0), l, font=font)
+                h += (bbox[3] - bbox[1]) * spacing
+            return h
+            
+        th = get_h(t_lines, f_title, 1.3)
+        hh = get_h(h_lines, f_head, 1.1)
+        bh = get_h(b_items, f_bullet, 1.5)
+        
+        gap1, gap2 = h_size * 0.8, h_size * 1.0
+        total_h = th + hh + bh + gap1 + gap2
+        return total_h, t_lines, h_lines, b_items, f_title, f_head, f_bullet, gap1, gap2
+
+    # Fit text by scaling down
+    t_sz, h_sz, b_sz = 40, 68, 32 # Slightly smaller starting point for split
+    if args.layout != "split": 
+        t_sz, h_sz, b_sz = 46, 80, 36
+        
+    for _ in range(12): # More iterations
+        total_h, t_lines, h_lines, b_items, f_t, f_h, f_b, g1, g2 = get_layout(t_sz, h_sz, b_sz)
+        if total_h <= card_h * 0.85: # More breathing room (85% instead of 90%)
+            break
+        t_sz = int(t_sz * 0.9)
+        h_sz = int(h_sz * 0.9)
+        b_sz = int(b_sz * 0.9)
+
+    # 4. Draw Text
+    curr_y = card_y + (card_h - total_h) / 2
+    
+    def draw_centered(lines, font, y, color, spacing):
+        for l in lines:
+            w = draw.textlength(l, font=font)
+            draw.text((text_x + (text_w - w)/2, y), l, font=font, fill=color)
+            bbox = draw.textbbox((0,0), l, font=font)
+            y += (bbox[3] - bbox[1]) * spacing
         return y
+
+    curr_y = draw_centered(t_lines, f_t, curr_y, TITLE_COLOR, 1.3)
+    curr_y += g1
+    curr_y = draw_centered(h_lines, f_h, curr_y, HEADLINE_COLOR, 1.1)
+    curr_y += g2
+    curr_y = draw_centered(b_items, f_b, curr_y, BULLET_COLOR, 1.5)
     
-    # Calculate content height for vertical centering
-    title_lines = wrap_text(args.title.upper(), title_font, text_w)
-    headline_lines = wrap_text(args.headline.upper(), headline_font, text_w)
-    bullets = [b.strip() for b in args.bullets.split(",")]
-    
-    # Measure heights
-    title_h = len(title_lines) * 50 * 1.3
-    headline_h = len(headline_lines) * 80 * 1.1
-    bullet_h = len(bullets) * 40 * 1.5
-    gaps = 60 + 80  # Space between sections
-    
-    total_content_h = title_h + headline_h + bullet_h + gaps
-    start_y = card_y + (card_h - total_content_h) / 2
-    
-    # Draw title
-    y = draw_centered_text(draw, title_lines, title_font, text_x, start_y, text_w, TITLE_COLOR, 1.3)
-    y += 60
-    
-    # Draw headline
-    y = draw_centered_text(draw, headline_lines, headline_font, text_x, y, text_w, HEADLINE_COLOR, 1.1)
-    y += 80
-    
-    # Draw bullets (centered)
-    for bullet in bullets:
-        text = f"• {bullet}"
-        w = draw.textlength(text, font=bullet_font)
-        draw.text((text_x + (text_w - w) / 2, y), text, font=bullet_font, fill=BULLET_COLOR)
-        bbox = draw.textbbox((0, 0), text, font=bullet_font)
-        y += bbox[3] - bbox[1] + 20
-    
-    # Save
-    img.save(args.output, 'PNG')
-    print(f"Pin saved: {args.output}")
+    img.save(args.output)
+    print(f"Pin saved: {args.output} (Layout: {args.layout})")
     print(f"MEDIA: {os.path.abspath(args.output)}")
-    
-    # Cleanup
-    if os.path.exists(temp_bg):
-        os.remove(temp_bg)
+    if os.path.exists(temp_bg): os.remove(temp_bg)
 
 if __name__ == "__main__":
     main()
