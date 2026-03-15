@@ -172,13 +172,19 @@ def main():
         return total_h, t_lines, h_lines, b_items, f_title, f_head, f_bullet, gap1, gap2
 
     # Fit text by scaling down
-    t_sz, h_sz, b_sz = 40, 68, 32 # Slightly smaller starting point for split
+    t_sz, h_sz, b_sz = 36, 82, 32 # Heading (h_sz) is now much larger than title (t_sz)
     if args.layout != "split": 
-        t_sz, h_sz, b_sz = 46, 80, 36
+        t_sz, h_sz, b_sz = 42, 96, 36
         
-    for _ in range(12): # More iterations
+    for _ in range(15): # More iterations for finer fit
         total_h, t_lines, h_lines, b_items, f_t, f_h, f_b, g1, g2 = get_layout(t_sz, h_sz, b_sz)
-        if total_h <= card_h * 0.85: # More breathing room (85% instead of 90%)
+        # Check if any single line overflows the width
+        max_line_w = 0
+        for lines, font in [(t_lines, f_t), (h_lines, f_h)]:
+            for l in lines:
+                max_line_w = max(max_line_w, draw.textlength(l, font=font))
+        
+        if total_h <= card_h * 0.82 and max_line_w <= text_w: # Even more breathing room
             break
         t_sz = int(t_sz * 0.9)
         h_sz = int(h_sz * 0.9)
