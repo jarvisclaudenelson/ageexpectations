@@ -82,8 +82,9 @@ def main():
         scale = max(photo_w / bg_w, H / bg_h)
         bg_s = bg.resize((int(bg_w * scale), int(bg_h * scale)), Image.Resampling.LANCZOS)
         
-        # Better cropping: prioritize the top of the photo (faces) over dead center
-        crop_top = int((bg_s.height - H) * 0.15) # Shift up by 15% of the excess height
+        # Better cropping: prioritize the top of the photo (faces)
+        # 15% was still too low. Let's start the crop closer to the actual top (5%).
+        crop_top = int((bg_s.height - H) * 0.05) 
         img.paste(bg_s.crop(((bg_s.width - photo_w)//2, crop_top, (bg_s.width + photo_w)//2, crop_top + H)), (0,0))
         
         # Draw stripe
