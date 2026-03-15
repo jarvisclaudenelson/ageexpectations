@@ -55,8 +55,19 @@ def main():
     img = Image.new('RGB', (W, H), WHITE)
     draw = ImageDraw.Draw(img)
     
+    # Load background
     bg = Image.open(temp_bg).convert('RGB')
+    
+    # Check EXIF orientation and fix it (essential for AI generated images)
+    try:
+        from PIL import ImageOps
+        bg = ImageOps.exif_transpose(bg)
+    except:
+        pass
+
     bg_w, bg_h = bg.size
+    
+    # If the image is landscape, rotate it to portrait (90 deg clockwise)
     if bg_w > bg_h:
         bg = bg.rotate(-90, expand=True)
         bg_w, bg_h = bg.size
