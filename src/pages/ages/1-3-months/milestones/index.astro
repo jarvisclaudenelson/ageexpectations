@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
+import { topics } from '../../../../data/ages.js';
+
+const title = '1–3 Month Milestones: What to Expect and Signs of Progress';
+const description = 'Between 1 and 3 months, babies reach major developmental milestones including social smiles, improved head control, and reacting to their environment.';
+
+const faqs = [
+  {
+    question: 'When should I expect my baby\'s first real smile?',
+    answer: 'While newborns may smile in their sleep, the first "social smile"—a smile in response to your voice or face—typically appears between 6 and 8 weeks (about 2 months). This is a major milestone in social and emotional development.',
+  },
+  {
+    question: 'Should my baby be holding their head up by 3 months?',
+    answer: 'By 2 months, most babies can hold their head up when pushing up on their tummy. By 4 months, they typically have much steadier head control. Tummy time is the best way to help strengthen these neck and shoulder muscles.',
+  },
+  {
+    question: 'What sounds should a 2-month-old make?',
+    answer: 'At this age, babies begin to make sounds other than crying. You\'ll likely hear "cooing"—vowel sounds like "ooh" and "ah"—and gurgling. They also react to loud sounds by startling or becoming quiet.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/1-3-months/milestones/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '1–3 Months', href: '/ages/1-3-months/' },
+    { label: 'Milestones' },
+  ]}
+>
+  <h1>1–3 Month Milestones: What to Expect</h1>
+
+  <p>The transition from the newborn phase (0–1 month) into the early infancy stage (1–3 months) is marked by a dramatic increase in alertness. Your baby is beginning to wake up to the world, recognizing familiar faces, and starting to communicate with more than just tears.</p>
+
+  <p>Developmental milestones are behaviors and physical skills seen in infants and children as they grow and develop. While every child develops at their own pace, the CDC and AAP provide general timeframes for when most children reach certain milestones.</p>
+
+  <h2>Social and Emotional Milestones</h2>
+  <p>At 2 months, your baby is becoming a social being. Look for these key behaviors:</p>
+  <ul>
+    <li><strong>Social Smile:</strong> They smile at you when you talk to or smile at them.</li>
+    <li><strong>Alertness:</strong> They look at your face and watch you as you move around the room.</li>
+    <li><strong>Self-Soothing:</strong> They might briefly calm themselves (for example, by bringing their hands to their mouth and sucking on them).</li>
+    <li><strong>Recognition:</strong> They seem happy to see you when you approach.</li>
+  </ul>
+
+  <h2>Language and Communication Milestones</h2>
+  <p>Your baby is starting to find their voice:</p>
+  <ul>
+    <li><strong>Cooing:</strong> They make gurgling or vowel sounds like "ooh" and "aah."</li>
+    <li><strong>Turning Toward Sounds:</strong> They may turn their head toward the sound of your voice.</li>
+    <li><strong>Reacting to Environment:</strong> They react to loud sounds by startling or looking toward the source.</li>
+  </ul>
+
+  <h2>Cognitive Milestones (Learning, Thinking, Problem-Solving)</h2>
+  <p>Your baby’s brain is busy processing new information:</p>
+  <ul>
+    <li><strong>Tracking:</strong> They follow moving objects with their eyes, such as a toy or your face.</li>
+    <li><strong>Focus:</strong> They look at a toy for several seconds when held in front of them.</li>
+    <li><strong>Recognition of Faces:</strong> They begin to recognize familiar people from a distance.</li>
+  </ul>
+
+  <h2>Movement and Physical Development Milestones</h2>
+  <p>Physical strength is growing daily:</p>
+  <ul>
+    <li><strong>Head Control:</strong> They can hold their head up and begin to push up when lying on their tummy.</li>
+    <li><strong>Hand Movements:</strong> They open their hands briefly and may bring them to their mouth.</li>
+    <li><strong>Symmetry:</strong> They move both arms and both legs.</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Common Questions About 1–3 Month Milestones</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>The CDC and AAP suggest talking to your pediatrician if your 2-month-old child:</p>
+    <ul>
+      <li>Does not respond to loud sounds</li>
+      <li>Does not watch things as they move</li>
+      <li>Does not smile at people</li>
+      <li>Does not bring hands to mouth</li>
+      <li>Cannot hold their head up when pushing up on their tummy</li>
+      <li>Has lost skills they once had</li>
+    </ul>
+    <p>Early intervention is key. If you have any concerns about your baby's development, don't wait—speak with your doctor.</p>
+  </div>
+</BaseLayout>

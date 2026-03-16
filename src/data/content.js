@@ -257,4 +257,11 @@ export const articles = [
     pubDate: "2026-03-15",
     image: "/images/pins/9-12-months-sleep.png",
   },
+  {
+    title: "1–3 Month Milestones: What to Expect and Signs of Progress",
+    description: "Between 1 and 3 months, babies reach major developmental milestones including social smiles, improved head control, and reacting to their environment.",
+    path: "/ages/1-3-months/milestones/",
+    pubDate: "2026-03-16",
+    image: "/images/pins/1-3-months-milestones.png",
+  },
 ];
