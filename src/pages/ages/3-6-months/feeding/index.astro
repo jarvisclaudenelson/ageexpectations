@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema } from "../../../../data/schema.js";
+
+const title = "3–6 Month Old Feeding: Schedules, Solids Readiness, and What to Expect";
+const description = "Between 3 and 6 months, breastfed and formula-fed babies settle into more predictable feeding schedules. Learn how much to feed, when solid foods become appropriate, and signs of hunger and fullness at this stage.";
+
+const faqs = [
+  {
+    question: "How often should I feed my 3–6 month old?",
+    answer: "Most 3–6 month olds breastfeed every 3 to 4 hours, or take 4 to 6 bottle feedings per day with 4–6 oz per feeding. Total daily intake for formula-fed babies is typically 24–36 oz. Every baby is different — follow hunger and fullness cues rather than a strict clock.",
+  },
+  {
+    question: "Can I start solid foods at 4 months?",
+    answer: "The American Academy of Pediatrics (AAP) recommends waiting until around 6 months to introduce solid foods for most babies. Starting before 4 months is not recommended. Between 4 and 6 months, you can watch for readiness signs — like sitting with support and showing interest in food — but the AAP still advises waiting until 6 months for optimal gut and immune development.",
+  },
+  {
+    question: "What are the signs my baby is ready for solid foods?",
+    answer: "Signs of solid food readiness include: sitting up with minimal support and holding their head steady, showing interest in food (watching you eat, reaching for food), loss of the tongue-thrust reflex (not automatically pushing food out of their mouth), and being at least 4 months old with most experts preferring 6 months. All four signs should be present before starting.",
+  },
+  {
+    question: "Is it normal for a breastfed baby to feed more frequently at 3–6 months?",
+    answer: "Yes. Growth spurts around 3 months and 6 months can temporarily increase feeding frequency. Cluster feeding (feeding very frequently in the evenings) is also common. Increased nursing does not necessarily mean your milk supply is low — it is usually temporary and helps boost supply to meet your baby's growing needs.",
+  },
+  {
+    question: "Should I switch to a different nipple flow on bottles at this age?",
+    answer: "Possibly. Between 3 and 6 months, some babies develop faster sucking patterns and may need a medium-flow (Level 2) nipple. Signs your baby needs a faster flow include: taking too long to finish a bottle, seeming frustrated, or falling asleep from the effort of feeding. Signs the flow is too fast include: choking, sputtering, or swallowing lots of air.",
+  },
+  {
+    question: "How do I know my baby is getting enough milk?",
+    answer: "Key indicators include: 6 or more wet diapers per day, steady weight gain as confirmed by your pediatrician, a generally content and alert baby between feedings, and visible swallowing during breastfeeding. At well-child visits, your pediatrician will track weight gain on a growth curve, which is the most reliable measure of adequate nutrition.",
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/3-6-months/feeding/",
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  image="/images/pins/2026-03-18-3-6-months-feeding-pin.png"
+  breadcrumbs={[
+    { label: "3–6 Months", href: "/ages/3-6-months/" },
+    { label: "Feeding" },
+  ]}
+>
+  <h1>3–6 Month Old Feeding: What to Expect</h1>
+
+  <p>Between 3 and 6 months, feeding starts to feel a little more manageable. The round-the-clock scramble of the newborn phase gives way to more predictable patterns. Your baby is growing rapidly, their stomach has expanded, and they can take in more per feeding — which means longer stretches between feedings and (eventually) fewer nighttime feeds. This stage also ends with one of parenthood's most anticipated milestones: the introduction of solid foods.</p>
+
+  <h2>How Much and How Often: By the Numbers</h2>
+  <p>While every baby is different, here are general guidelines from the AAP and major pediatric nutrition guidelines:</p>
+
+  <h3>Breastfed Babies</h3>
+  <ul>
+    <li><strong>Frequency:</strong> Every 3–4 hours, or about 5–8 feedings per 24 hours.</li>
+    <li><strong>Duration:</strong> 10–20 minutes per breast, though this varies widely.</li>
+    <li><strong>Key principle:</strong> Breast milk supply is demand-driven. Feed on demand rather than a strict schedule to maintain adequate supply.</li>
+  </ul>
+
+  <h3>Formula-Fed Babies</h3>
+  <ul>
+    <li><strong>Frequency:</strong> 4–6 bottles per day.</li>
+    <li><strong>Amount per feeding:</strong> 4–6 oz, increasing toward 6–8 oz as your baby approaches 6 months.</li>
+    <li><strong>Daily total:</strong> Approximately 24–36 oz per day. A simple rule of thumb: 2.5 oz per pound of body weight per day, up to about 32 oz.</li>
+  </ul>
+
+  <h3>Combination Feeding</h3>
+  <p>If you are combination feeding (both breast milk and formula), follow your baby's hunger and fullness cues as your primary guide. Your pediatrician can help you calibrate volume if you have concerns about intake.</p>
+
+  <h2>Reading Your Baby's Hunger and Fullness Cues</h2>
+  <p>This is one of the most important feeding skills you can develop. Responding to cues — rather than watching the clock or the ounces — helps your baby develop a healthy relationship with food that will benefit them for life.</p>
+
+  <h3>Hunger Cues (Early to Late)</h3>
+  <ol>
+    <li><strong>Early:</strong> Rooting, turning head side to side, putting hands to mouth, sucking on fists.</li>
+    <li><strong>Middle:</strong> Increased movement, fussiness, reaching toward you.</li>
+    <li><strong>Late:</strong> Crying. This is a late cue — try to respond before this point if possible. A very upset baby is harder to latch or calm for bottle feeding.</li>
+  </ol>
+
+  <h3>Fullness Cues</h3>
+  <ul>
+    <li>Turning their head away from the breast or bottle</li>
+    <li>Slowing down their suck-swallow rhythm</li>
+    <li>Pushing the nipple out with their tongue</li>
+    <li>Becoming more interested in their surroundings than eating</li>
+    <li>Falling into a relaxed, sleepy state with open, relaxed hands</li>
+  </ul>
+  <p><strong>Avoid pressuring your baby to finish a bottle.</strong> Overfeeding at this stage is easier with a bottle than at the breast. Practice "paced bottle feeding" — holding the bottle more horizontally to slow the flow and allowing your baby to take breaks.</p>
+
+  <h2>Growth Spurts and Cluster Feeding</h2>
+  <p>Around <strong>3 months</strong> and again around <strong>6 months</strong>, many babies go through noticeable growth spurts. You may find your baby suddenly wants to feed much more frequently — sometimes every 1–2 hours. This is completely normal and temporary.</p>
+  <p>For breastfeeding parents, this increased demand is actually how your body boosts its supply to meet your baby's growing needs. Lean into the cluster feeding for a few days — it usually resolves on its own within 3–5 days.</p>
+
+  <h2>The Solid Foods Question: When Is the Right Time?</h2>
+  <p>This is the question on every parent's mind during this stage. The short answer from the <strong>American Academy of Pediatrics (AAP):</strong></p>
+  <blockquote>
+    <p>The AAP recommends exclusive breastfeeding (or formula feeding) for <strong>about the first 6 months</strong>, with the introduction of complementary foods around 6 months when the baby shows developmental readiness.</p>
+  </blockquote>
+  <p>The key word is "about." Some babies show readiness signs a little before 6 months; others are not ready until closer to 6 or even 7 months. Age is only one factor — developmental readiness matters more.</p>
+
+  <h3>Signs Your Baby Is Ready for Solid Foods</h3>
+  <p>All of the following should be present before you introduce solids:</p>
+  <ul>
+    <li><strong>Good head and neck control:</strong> Your baby can hold their head steady and upright without support.</li>
+    <li><strong>Ability to sit with support:</strong> They can sit in a high chair or feeding seat without slumping.</li>
+    <li><strong>Loss of the tongue-thrust reflex:</strong> When you put a spoon near their mouth, they don't automatically push it back out with their tongue. This reflex protects young babies from choking and should fade around 4–5 months.</li>
+    <li><strong>Interest in food:</strong> They watch you eat with interest, open their mouth when food approaches, and may reach toward your plate.</li>
+  </ul>
+
+  <h3>Why Not Before 4 Months?</h3>
+  <p>Before 4 months, a baby's digestive system is not mature enough to process solid foods safely. Early introduction has been associated with an increased risk of choking, food allergies, digestive problems, and excessive weight gain. The AAP is clear: <strong>do not start solid foods before 4 months under any circumstances.</strong></p>
+
+  <h2>Vitamin D Supplementation</h2>
+  <p>Breast milk does not contain adequate vitamin D. The AAP recommends that all breastfed and partially breastfed babies receive <strong>400 IU of vitamin D per day</strong> starting in the first few days of life. Formula is fortified with vitamin D, so formula-fed babies who consume at least 32 oz per day generally do not need supplementation — but confirm with your pediatrician.</p>
+
+  <h2>Is My Baby Getting Enough? Signs to Watch For</h2>
+  <p>At every well-child visit between 3 and 6 months, your pediatrician will weigh your baby and plot their growth on a standardized chart. Consistent weight gain along their growth curve — whatever percentile it is — is the best indicator of adequate nutrition.</p>
+  <p>Between visits, these are reassuring signs:</p>
+  <ul>
+    <li>At least 6 wet diapers per day (for formula-fed or established breastfed babies)</li>
+    <li>Regular bowel movements (frequency varies widely — daily to every few days is normal for breastfed babies)</li>
+    <li>Alert, active, and content for periods between feedings</li>
+    <li>Steady development of motor skills and responsiveness</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common 3–6 Month Feeding Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Reach out if you notice:</p>
+    <ul>
+      <li>Your baby is losing weight or not gaining weight appropriately</li>
+      <li>Fewer than 6 wet diapers per day after the first few weeks</li>
+      <li>Excessive spitting up, especially if it seems painful or is projectile</li>
+      <li>Your baby seems constantly hungry and is never satisfied after feedings</li>
+      <li>Difficulty latching, extreme breast pain, or concerns about your milk supply</li>
+      <li>Signs of an allergic reaction after any new food introduction (rash, hives, vomiting, difficulty breathing)</li>
+    </ul>
+  </div>
+</BaseLayout>

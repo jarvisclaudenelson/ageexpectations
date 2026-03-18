@@ -272,6 +272,13 @@ export const articles = [
     image: "/images/pins/1-3-months-sleep.png",
   },
   {
+    title: "3–6 Month Old Feeding: Schedules, Solids Readiness, and What to Expect",
+    description: "Between 3 and 6 months, breastfed and formula-fed babies settle into more predictable feeding schedules. Learn how much to feed, when solid foods become appropriate, and signs of hunger and fullness at this stage.",
+    path: "/ages/3-6-months/feeding/",
+    pubDate: "2026-03-18",
+    image: "/images/pins/2026-03-18-3-6-months-feeding-pin.png",
+  },
+  {
     title: "9–12 Month Old Feeding: From Purees to Finger Foods",
     description: "Between 9 and 12 months, babies transition from purees to finger foods and begin eating more like the rest of the family. Learn about portion sizes, top finger foods, dropping bottles, and safe eating at this stage.",
     path: "/ages/9-12-months/feeding/",
