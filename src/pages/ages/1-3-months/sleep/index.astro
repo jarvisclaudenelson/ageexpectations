@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema } from "../../../../data/schema.js";
+
+const title = "1–3 Month Old Sleep: What to Expect and Is It Normal?";
+const description = "Babies 1–3 months old sleep 14–17 hours per day in short stretches with no established schedule. Learn what's normal, how to support healthy sleep habits, and safe sleep guidelines for this stage.";
+
+const faqs = [
+  {
+    question: "How much sleep does a 1–3 month old need?",
+    answer: "Most babies between 1 and 3 months need between 14 and 17 hours of total sleep in a 24-hour period, according to the National Sleep Foundation. This sleep is spread across the day and night in multiple short stretches, typically 2–4 hours at a time. Very few babies this age will sleep through the night.",
+  },
+  {
+    question: "Is it normal for my 2-month-old to still wake every 2–3 hours?",
+    answer: "Yes, this is completely normal. Babies this age have small stomachs and high caloric needs, so nighttime feedings are both expected and necessary. Most pediatricians do not recommend attempting to reduce nighttime feedings before 4–6 months unless advised to do so for medical reasons.",
+  },
+  {
+    question: "When can I let my baby sleep in a longer stretch at night?",
+    answer: "Many babies begin producing longer nighttime stretches (4–6+ hours) somewhere between 6 and 12 weeks, though this varies widely. If your pediatrician has confirmed your baby is gaining weight well, you may be given the green light to stop waking them for night feeds. However, if weight gain is a concern, your baby may need to be woken to feed every 2–3 hours until they're back on track.",
+  },
+  {
+    question: "Should my 1–3 month old be on a sleep schedule?",
+    answer: "Not yet. Babies under 3 months do not have an established circadian rhythm, so they cannot follow a predictable clock-based schedule. Instead, focus on responding to sleepy cues (eye rubbing, yawning, staring blankly) and keeping wake windows short — around 45 to 90 minutes. Consistent routines (a short sequence before each sleep) can begin as early as 6–8 weeks.",
+  },
+  {
+    question: "When should I stop swaddling my baby?",
+    answer: "You should stop swaddling as soon as your baby shows any signs of trying to roll over. For most babies, this begins between 3 and 4 months. Swaddling a rolling baby is a safety risk because they can roll onto their stomach and be unable to push up or turn themselves back over. Transition to a sleep sack with free arms at that point.",
+  },
+  {
+    question: "Is it safe to let my newborn sleep on my chest?",
+    answer: "While skin-to-skin contact is beneficial for bonding and calming a fussy baby, it is not safe as a sleep surface. The AAP recommends that babies always sleep on a flat, firm surface on their backs — a crib, bassinet, or play yard — not on a parent's chest, in an armchair, or on a couch. If you fall asleep while feeding or holding your baby, gently move them to their safe sleep space as soon as you wake.",
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/1-3-months/sleep/",
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: "1–3 Months", href: "/ages/1-3-months/" },
+    { label: "Sleep" },
+  ]}
+>
+  <h1>1–3 Month Old Sleep: What to Expect</h1>
+
+  <p>If the sleep deprivation of the newborn phase has you convinced something is wrong, take a breath: it's not. The 1–3 month stage is one of the most exhausting stretches of early parenthood precisely because it's biologically supposed to be. Your baby is sleeping a lot — just not in the long, consolidated blocks you'd prefer. Understanding why can make middle-of-the-night wake-ups a little easier to endure.</p>
+
+  <h2>How Much Sleep Do 1–3 Month Olds Need?</h2>
+  <p>According to the National Sleep Foundation, babies ages 1 to 3 months need <strong>14 to 17 hours of total sleep</strong> per day. Unlike older babies, this sleep is spread unpredictably across both day and night in short bursts of 2 to 4 hours.</p>
+  <ul>
+    <li><strong>Night Sleep:</strong> 8–10 hours total, often split into 2–4 stretches.</li>
+    <li><strong>Daytime Sleep:</strong> 4–6 hours, typically spread across 4–6 short naps.</li>
+    <li><strong>Wake Windows:</strong> Most babies this age can only stay awake comfortably for 45 to 90 minutes before becoming overtired.</li>
+  </ul>
+  <p>Overtiredness works against you at this age — a baby who has been awake too long becomes harder to settle, not easier. Watching for sleepy cues and keeping wake windows short is more effective than waiting for a "scheduled" nap time.</p>
+
+  <h2>Why Babies This Age Don't Sleep Through the Night</h2>
+  <p>Newborns and young infants lack a developed circadian rhythm — the internal biological clock that regulates the human sleep-wake cycle. This rhythm typically doesn't mature until around 12–16 weeks, driven in part by exposure to light, social cues, and feeding patterns. Until then, your baby cannot physiologically distinguish day from night.</p>
+  <p>Nighttime feedings are also a nutritional necessity. Breast milk and formula digest quickly, and your baby's small stomach requires regular refueling every 2–3 hours. Most healthy babies will begin to stretch one nighttime interval to 4–6 hours somewhere between 6 and 12 weeks — but this varies widely, and many parents don't see that longer stretch until 3–4 months.</p>
+
+  <h2>Day-Night Confusion and How to Gently Correct It</h2>
+  <p>Some babies arrive with their days and nights flipped — sleeping in long stretches during the day and waking frequently at night. This is normal and temporary, but you can nudge things in the right direction:</p>
+  <ul>
+    <li><strong>Maximize light exposure during the day.</strong> Open curtains, go on walks, keep daytime naps in naturally lit rooms.</li>
+    <li><strong>Dim the evenings.</strong> Lower lights 1–2 hours before bedtime and keep nighttime interactions calm and quiet.</li>
+    <li><strong>Limit long daytime naps if possible.</strong> Gently rousing your baby after a 2-hour daytime nap (if they're gaining weight well) can help consolidate sleep into the night over time.</li>
+    <li><strong>Keep nighttime feedings boring.</strong> No bright lights, no talking, no games. Feed, change if necessary, and settle them back to sleep with minimal stimulation.</li>
+  </ul>
+
+  <h2>Safe Sleep at 1–3 Months</h2>
+  <p>The American Academy of Pediatrics (AAP) safe sleep recommendations apply fully at this age. There are no exceptions for "my baby only sleeps if..." — safety comes first.</p>
+  <ul>
+    <li><strong>Back to Sleep, Every Time:</strong> Always place your baby on their back for every sleep, including naps. This is the single most effective action to reduce the risk of SIDS.</li>
+    <li><strong>Firm, Flat Surface:</strong> Use a safety-approved crib, bassinet, or play yard. The surface should be firm with a fitted sheet only — no pillow-like inserts, inclined sleepers, or in-bed "nests."</li>
+    <li><strong>Bare Crib:</strong> No loose blankets, pillows, bumper pads, or stuffed animals. The crib should be empty except for your baby.</li>
+    <li><strong>Room-Share, Don't Bed-Share:</strong> The AAP recommends keeping your baby's sleep space in your room for at least the first 6 months. A bedside bassinet keeps them close for nighttime feedings while maintaining a separate, safe sleep surface.</li>
+    <li><strong>Swaddling is Safe — With Limits:</strong> A properly swaddled baby (arms snug, hips loose) can sleep safely. Stop swaddling the moment your baby shows any signs of attempting to roll.</li>
+    <li><strong>Temperature:</strong> Keep the room at a comfortable 68–72°F (20–22°C) and avoid over-bundling. A good rule: dress your baby in one more layer than you'd wear.</li>
+  </ul>
+
+  <h2>Starting Healthy Sleep Foundations Early</h2>
+  <p>You can't formally "sleep train" a 6-week-old, but you can begin laying the groundwork for healthy sleep habits now. Simple, consistent routines — even just a feed, a brief cuddle, and a darkened room — start signaling to your baby's brain that it's time to sleep. A few evidence-backed strategies:</p>
+  <ul>
+    <li><strong>Drowsy but awake:</strong> Practice placing your baby in their crib when they're sleepy but not yet fully asleep. This helps them begin to associate the crib with falling asleep, rather than relying entirely on motion or feeding to drift off.</li>
+    <li><strong>Watch wake windows:</strong> Aim to put your baby down after 45–75 minutes of awake time. An overtired baby will fight sleep harder, not less.</li>
+    <li><strong>Consistent sleep space:</strong> Whenever possible, have your baby sleep in the same place. Contact naps and car naps are fine occasionally, but a familiar sleep environment supports better sleep long term.</li>
+  </ul>
+
+  <h2>What About the 6-Week "Peak Fussiness"?</h2>
+  <p>Many parents notice that around 6 weeks, sleep and fussiness both seem to get worse before they get better. This is normal. Six weeks is often considered the developmental peak of fussiness for newborns — and it's also frequently when parents are most exhausted. The good news: most parents report noticeable improvement in sleep between 6 and 10 weeks as babies become slightly more alert and predictable during the day and begin to stretch their night sleep intervals.</p>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common Questions About 1–3 Month Sleep</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Sleep deprivation is hard, but some situations warrant a conversation with your doctor:</p>
+    <ul>
+      <li>Your baby is difficult to wake for feedings and is not regaining birth weight by 2 weeks</li>
+      <li>You notice loud snoring, gasping, or pauses in breathing during sleep</li>
+      <li>Your baby seems excessively limp, pale, or unresponsive after sleeping</li>
+      <li>You are struggling with postpartum depression or anxiety — your wellbeing matters too, and your doctor can help</li>
+      <li>You feel unsafe driving or caring for your baby due to sleep deprivation</li>
+    </ul>
+  </div>
+</BaseLayout>

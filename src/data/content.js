@@ -264,4 +264,11 @@ export const articles = [
     pubDate: "2026-03-16",
     image: "/images/pins/1-3-months-milestones.png",
   },
+  {
+    title: "1–3 Month Old Sleep: What to Expect and Is It Normal?",
+    description: "Babies 1–3 months old sleep 14–17 hours per day in short stretches with no established schedule. Learn what's normal, how to support healthy sleep habits, and safe sleep guidelines for this stage.",
+    path: "/ages/1-3-months/sleep/",
+    pubDate: "2026-03-18",
+    image: "/images/pins/1-3-months-sleep.png",
+  },
 ];
