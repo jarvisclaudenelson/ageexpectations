@@ -271,4 +271,11 @@ export const articles = [
     pubDate: "2026-03-18",
     image: "/images/pins/1-3-months-sleep.png",
   },
+  {
+    title: "9–12 Month Old Feeding: From Purees to Finger Foods",
+    description: "Between 9 and 12 months, babies transition from purees to finger foods and begin eating more like the rest of the family. Learn about portion sizes, top finger foods, dropping bottles, and safe eating at this stage.",
+    path: "/ages/9-12-months/feeding/",
+    pubDate: "2026-03-18",
+    image: "/images/pins/9-12-months-feeding.png",
+  },
 ];

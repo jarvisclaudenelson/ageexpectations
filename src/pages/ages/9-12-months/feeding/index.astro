@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema } from '../../../../data/schema.js';
+
+const title = '9–12 Month Old Feeding: From Purees to Finger Foods';
+const description = 'Between 9 and 12 months, babies transition from purees to finger foods and begin eating more like the rest of the family. Learn about portion sizes, top finger foods, dropping bottles, and safe eating at this stage.';
+
+const faqs = [
+  {
+    question: 'How much should my 9–12 month old eat at meals?',
+    answer: 'At 9–12 months, babies typically eat 3 small meals per day plus 1–2 snacks. Portions are tiny by adult standards — think 2–4 tablespoons of each food per meal. The goal is variety and exposure, not volume. Breast milk or formula (about 16–24 oz/day) still provides a significant portion of nutrition at this stage.',
+  },
+  {
+    question: 'When can my baby start eating finger foods?',
+    answer: 'Most babies are ready for soft finger foods around 8–9 months, when they develop the pincer grasp (picking up small pieces between thumb and forefinger). Good early finger foods include soft banana pieces, small bits of cooked sweet potato, small pasta pieces, and shredded chicken. All pieces should be no larger than 1/2 inch to reduce choking risk.',
+  },
+  {
+    question: 'Should I stop formula or breastfeeding before 12 months?',
+    answer: 'No. The AAP recommends continuing breast milk or formula as the primary drink until at least 12 months. Whole cow\'s milk can be introduced as the main drink at 12 months, but not before. You can start offering small amounts of water (2–4 oz/day) in a sippy cup alongside solid meals during this period.',
+  },
+  {
+    question: 'What foods are still off-limits at 9–12 months?',
+    answer: 'Honey must be avoided until 12 months due to the risk of botulism. Whole cow\'s milk as a primary drink, fruit juice, and choking hazards like whole grapes, raw hard vegetables, nuts, popcorn, and hot dogs should also be avoided. Always cut foods into small pieces and supervise all meals.',
+  },
+  {
+    question: 'My baby throws food on the floor constantly. Is this normal?',
+    answer: 'Completely normal — and developmentally appropriate. Around 9–12 months, babies explore cause and effect (what happens when I drop this?), test gravity, and self-regulate hunger by pushing away food they\'re done with. Minimize frustration by offering small portions at a time and accepting that mealtimes are messy at this stage.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/9-12-months/feeding/',
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  breadcrumbs={[
+    { label: '9–12 Months', href: '/ages/9-12-months/' },
+    { label: 'Feeding' },
+  ]}
+>
+  <h1>9–12 Month Old Feeding: From Purees to Finger Foods</h1>
+
+  <p>The 9–12 month window is one of the most exciting — and messy — stages of feeding. Your baby is graduating from smooth purees to real, textured food, developing the fine motor skills to self-feed, and starting to eat alongside the family. It's a big leap, and it comes with a lot of questions about what's safe, how much is enough, and when to make the switch away from the bottle or breast.</p>
+
+  <h2>Where Nutrition Still Comes From</h2>
+  <p>Breast milk or formula remains the primary source of nutrition through the first full year. At 9–12 months, most babies need about <strong>16–24 ounces of breast milk or formula per day</strong> — down from the 24–32 oz typical at 6 months, as solids take up more of their caloric intake. This is the stage where solids shift from "exploration" to making a genuine nutritional contribution, but milk is still the anchor.</p>
+  <p>The AAP recommends against introducing whole cow's milk as the primary drink before 12 months. Small amounts of dairy in cooking (like cheese or yogurt) are fine and can be a great source of calcium and fat.</p>
+
+  <h2>The Transition to Finger Foods</h2>
+  <p>The pincer grasp — using the thumb and forefinger to pick up small objects — typically emerges between 8 and 10 months. Once your baby has it, finger foods become possible and important for developing self-feeding skills and oral motor development.</p>
+  <p>Good starter finger foods have three things in common: they're soft enough to mash with gums alone, small enough to avoid choking risk (no larger than ½ inch), and not too slippery to pick up. Try:</p>
+  <ul>
+    <li><strong>Banana pieces</strong> — soft, nutrient-dense, easy to hold</li>
+    <li><strong>Cooked sweet potato cubes</strong> — rich in vitamins A and C</li>
+    <li><strong>Well-cooked pasta</strong> (small shapes like orzo or cut penne)</li>
+    <li><strong>Shredded chicken or ground turkey</strong> — an excellent iron source</li>
+    <li><strong>Small pieces of soft-cooked vegetables</strong> — broccoli, peas, carrots, zucchini</li>
+    <li><strong>Small pieces of ripe avocado</strong></li>
+    <li><strong>Scrambled eggs</strong> — protein-packed and easy to gum</li>
+    <li><strong>Small cubes of soft tofu</strong></li>
+  </ul>
+
+  <h2>Meal Structure at 9–12 Months</h2>
+  <p>By 9 months, most babies settle into a rhythm of <strong>3 small meals per day plus 1–2 snacks</strong>. Portions are small by adult standards — about 2–4 tablespoons per food item is typical. Offer a variety of foods at each meal: a protein source, a vegetable or fruit, and a grain or starch.</p>
+  <p>Offering food before the milk feed (rather than after) can help increase interest in solids. If your baby isn't interested, that's okay — keep exposing them to different flavors and textures. It can take 10–15 exposures before a baby accepts a new food.</p>
+
+  <h2>Transitioning Off the Bottle</h2>
+  <p>The AAP recommends weaning off the bottle by 12–18 months, starting the transition around the first birthday. At 9–12 months, begin introducing a <strong>sippy cup or open cup</strong> with small amounts of water (2–4 oz/day) at meals. This gets your baby comfortable with a cup before the switch from formula to whole milk at 12 months.</p>
+  <p>Avoid letting babies take a bottle to bed or putting juice in a bottle at any age — both practices are associated with increased tooth decay.</p>
+
+  <h2>Gagging vs. Choking: Knowing the Difference</h2>
+  <p>Gagging is a normal and protective reflex that often looks alarming but is your baby's way of moving food forward when it goes too far back. Babies gag much more readily than adults — their gag reflex is triggered further forward on the tongue. Signs of gagging include eyes watering, the face turning red, and coughing or sputtering. Choking is different: the baby is silent or can't make sound, can't breathe, and may turn blue.</p>
+  <p>The best prevention for choking is offering appropriately-sized, soft food and always supervising mealtime. Consider taking an infant CPR and choking response course.</p>
+
+  <h2>Supporting a Good Eater Long-Term</h2>
+  <p>Research shows that the feeding relationship matters as much as what's on the plate. The division of responsibility, developed by dietitian Ellyn Satter, recommends that <em>parents decide what food is offered, when, and where</em> — and <em>babies decide whether and how much they eat</em>. Pressuring babies to eat, even with good intentions, can undermine hunger cues and food acceptance over time.</p>
+  <ul>
+    <li>Offer a variety of foods, including ones they've rejected before</li>
+    <li>Let them self-feed as much as possible, even if it's messier</li>
+    <li>Eat together as a family when you can — babies learn by watching</li>
+    <li>Stay neutral about food refusals; a calm reaction reduces food battles</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Common Questions About 9–12 Month Feeding</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>Foods to Avoid Before 12 Months</h2>
+    <ul>
+      <li><strong>Honey</strong> — risk of infant botulism; off-limits until the first birthday</li>
+      <li><strong>Whole cow's milk as a primary drink</strong> — wait until 12 months</li>
+      <li><strong>Fruit juice</strong> — the AAP recommends avoiding juice until age 1</li>
+      <li><strong>Choking hazards:</strong> whole grapes, cherry tomatoes (cut these in quarters), nuts, popcorn, raw hard vegetables, large chunks of meat, hot dogs (slice lengthwise then dice), large globs of nut butter</li>
+      <li><strong>Added salt and sugar</strong> — babies' kidneys can't handle high sodium, and there's no nutritional need for added sugar</li>
+    </ul>
+    <p>When in doubt, cut it smaller. And never leave a baby unattended during meals.</p>
+  </div>
+</BaseLayout>
