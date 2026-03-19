@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '10–12 Year Old Behavior: Mood Swings, Independence, and the Tween Years';
+const description = 'Understanding tween behavior — mood swings, pushing back, privacy needs, screen conflicts, early peer pressure, and what the AAP recommends for parenting 10 to 12 year olds.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 11-year-old to have dramatic mood swings?',
+    answer: 'Yes. Hormonal shifts from puberty directly affect mood regulation, and the brain regions responsible for emotional intensity mature faster than those responsible for emotional control at this age. The AAP distinguishes typical tween mood fluctuations from clinical depression: typical mood swings are situational (triggered by something), brief (recover within hours), and do not prevent normal functioning. Persistent sadness, hopelessness, or low mood lasting 2 or more weeks with functional impairment warrants evaluation (AAP, 2022).'
+  },
+  {
+    question: 'Why does my 12-year-old argue with everything I say?',
+    answer: 'Arguing at age 10 to 12 reflects developing abstract reasoning — tweens can now construct genuine counterarguments and notice inconsistencies in parental logic. This is a cognitive milestone. The AAP recommends acknowledging valid points ("That\'s a fair argument") while holding firm on non-negotiable limits, explaining your reasoning briefly, and offering genuine autonomy in domains where their judgment is developing (clothing, friend choices, hobbies) (AAP, 2022). Debates over every rule drain energy for battles that actually matter.'
+  },
+  {
+    question: 'My 11-year-old suddenly wants their bedroom door locked all the time. Is this normal?',
+    answer: 'Yes. Between ages 10 and 12, the need for privacy increases sharply as children develop a private inner world separate from family. This is healthy. The AAP recommends knocking before entering, not reading journals or texts without a specific safety reason, and accepting that private conversations with friends are developmentally appropriate (AAP, 2022). Safety-appropriate transparency — knowing who they\'re talking to and what platforms they use — is distinct from monitoring every conversation.'
+  },
+  {
+    question: 'My 10-year-old is starting to care about what people think of them. Is that healthy?',
+    answer: 'Yes, within limits. Caring about peer perception develops naturally as children understand that others have thoughts and evaluations of them — a cognitive achievement. The AAP notes that some self-consciousness and peer orientation is healthy and expected at ages 10 to 12. The threshold for concern is when self-consciousness prevents participation in normal activities, triggers extreme anxiety, or produces significant distress about the opinions of every person they encounter. That level of intensity warrants discussion with your pediatrician.'
+  },
+  {
+    question: 'How do I handle my 12-year-old asking for social media?',
+    answer: 'Most major platforms (Instagram, TikTok, Snapchat, Facebook) require users to be at least 13. The AAP recommends delaying social media access until children are at least 13 and have demonstrated the judgment to navigate online social dynamics (AAP, 2016). Research links early social media use to increased anxiety and depression in girls ages 10 to 14 specifically (Twenge et al., 2018). If you allow access, maintain visibility into accounts and activity, establish clear rules, and discuss the specific risks openly — not as threats, but as real information.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/behavior/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/behavior/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '10–12 Years', href: '/ages/10-12-years/' }, { label: 'Behavior & Emotions' }]}>
+
+  <h1>10–12 Year Old Behavior: Mood Swings, Independence, and the Tween Years</h1>
+
+  <p class="answer-first">Tween behavior — the push-pull of children ages 10 to 12 who want independence but still need parental connection — is one of the most disorienting phases of parenting. The AAP describes early adolescence as a period of "storm and stress" that is real but manageable (AAP, 2022). Children this age are not being difficult deliberately; they are managing puberty, expanding social awareness, and developing a sense of self — simultaneously — with a brain that handles emotional intensity before it handles emotional regulation.</p>
+
+  <h2>How should I respond to mood swings in my 10 to 12 year old?</h2>
+
+  <p class="answer-first">Tween mood swings are driven by two simultaneous forces: hormonal changes that increase emotional reactivity, and a social environment (especially middle school) that is more complex and higher-stakes than anything they have navigated before. The AAP recommends validating the emotion without endorsing the behavior — "I can see you're really upset" is different from "It's okay to slam the door" (AAP, 2022). Do not take the bait during emotional escalation; reconnect after the storm, not during it.</p>
+
+  <p>What helps during mood swings:</p>
+  <ul>
+    <li>Stay calm — your regulated nervous system co-regulates theirs</li>
+    <li>Name the emotion without judgment: "You seem really frustrated right now"</li>
+    <li>Give space rather than pursuing when they withdraw</li>
+    <li>Avoid reasoning, lecturing, or problem-solving during peak emotional intensity</li>
+    <li>Reconnect warmly after the episode: low-key check-ins work better than formal conversations</li>
+    <li>Address behavior after calm returns, not in the middle of the storm</li>
+  </ul>
+
+  <h2>How do I maintain a relationship with my tween while they pull away?</h2>
+
+  <p class="answer-first">Tweens pulling away from parents while orienting toward peers is developmentally appropriate and necessary for identity formation. The AAP identifies the quality of the parent-child relationship during early adolescence as one of the strongest predictors of adolescent mental health outcomes — the relationship matters even when it does not look like it does (AAP, 2022). The key is staying connected without forcing connection: low-key, side-by-side activities work better than formal "let's talk" conversations.</p>
+
+  <ul>
+    <li>Maintain shared routines (family dinner, car rides) that create connection without requiring it</li>
+    <li>Do activities side by side — cooking, driving, watching their preferred show — where conversation is optional</li>
+    <li>Ask specific questions, not general ones: "Who did you hang out with at lunch?" not "How was school?"</li>
+    <li>Be available without demanding attention; teens come to parents when they feel safe, not obligated</li>
+    <li>Know their friends' names and at least a little about their interests — this signals you care about their world</li>
+  </ul>
+
+  <h2>How do I handle my tween's growing need for privacy?</h2>
+
+  <p class="answer-first">Between ages 10 and 12, children develop a private inner life — thoughts, feelings, and experiences they do not share with parents. This is healthy. The AAP recommends distinguishing between privacy (which supports development) and secrecy that endangers safety (which does not) (AAP, 2022). Knock before entering their room. Do not read their journal without a specific safety reason. Allow private friend conversations. Maintain visibility into online activity through open, stated family safety practices — not covert monitoring.</p>
+
+  <h2>How do I set screen time limits that actually work for tweens?</h2>
+
+  <p class="answer-first">Screen time limits for tweens work when they are built on principles rather than arbitrary hour counts. The AAP recommends prioritizing sleep, physical activity, homework, and face-to-face social interaction before screen time — not tracking total hours (AAP, 2016). Research links social media specifically (not screens generally) to increased anxiety and depression in girls ages 10 to 14. A written Family Media Use Plan — with the child's input — establishes expectations clearly and reduces daily conflict over negotiating limits.</p>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my tween's behavior?</h2>
+    <p class="answer-first">Contact your pediatrician if mood swings are persistent (lasting weeks, not hours), if your child withdraws from all activities and relationships rather than just seeking more privacy, if you see signs of self-harm, extreme anxiety, or disordered eating, or if your child's academic performance drops suddenly across multiple subjects (AAP, 2022).</p>
+    <p>Seek help promptly for:</p>
+    <ul>
+      <li>Any mention of self-harm or not wanting to be alive — this is an emergency, not a phase</li>
+      <li>Extreme restriction of food intake, excessive exercise, or purging behaviors</li>
+      <li>Significant, sustained withdrawal from all people and activities they previously enjoyed</li>
+      <li>Evidence of substance use — vaping, alcohol, marijuana — even "just trying it"</li>
+      <li>Cyberbullying — both as target and as perpetrator</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 10 to 12 Year Old Behavior</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

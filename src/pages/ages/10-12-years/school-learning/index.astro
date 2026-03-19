@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '10–12 Year Old School and Learning: Middle School Academics and Study Skills';
+const description = 'Academic expectations for children ages 10 to 12 — middle school reading and math, managing multiple teachers, organization, learning differences, and study strategies that work.';
+
+const faqs = [
+  {
+    question: 'My 11-year-old\'s grades dropped when they started middle school. Is that normal?',
+    answer: 'Grade dips at the middle school transition are extremely common. Moving from one teacher to six, adding assignment tracking across subjects, navigating a new social environment, and managing puberty simultaneously creates cognitive load that disrupts academic performance even in capable students. The AAP notes that the middle school transition (typically ages 11 to 12) is one of the highest-risk periods for academic disengagement (AAP, 2022). If grades drop by more than one letter grade and do not recover within a semester, ask the school about study skills support and discuss it with your pediatrician.'
+  },
+  {
+    question: 'What study skills should my 10 to 12 year old be developing?',
+    answer: 'Between ages 10 and 12, effective study skills include: using a planner or agenda consistently, breaking long-term projects into weekly milestones, reviewing notes the day of the lesson (not only before the test), using retrieval practice (covering notes and recalling information) rather than re-reading, and identifying which assignments need the most time vs. which are quick. These skills do not develop automatically — they require explicit teaching from parents, teachers, or study skills programs.'
+  },
+  {
+    question: 'Should I hire a tutor for my struggling 11-year-old?',
+    answer: 'A tutor can help, but the first step is identifying why the child is struggling. Tutoring helps with content gaps but does not address learning differences (dyslexia, dyscalculia, ADHD), attention issues, anxiety about performance, or skill-execution problems. Ask the school for a teacher conference to identify the specific pattern of difficulty before investing in tutoring. If a learning difference is suspected, ask for a formal evaluation through the school or your pediatrician — tutoring plus appropriate accommodations outperforms tutoring alone for children with identified learning differences.'
+  },
+  {
+    question: 'How can I help my 12-year-old manage their time better?',
+    answer: 'Time management for tweens requires external systems until the prefrontal cortex catches up. Practical tools: a physical or digital planner with every assignment written down at the time it is assigned; a weekly family check-in about upcoming deadlines and tests; a Sunday evening "prep for the week" routine; and backward planning for long-term projects (identify the due date, then schedule backwards). Avoid doing this for them — set up the system together, then coach rather than manage.'
+  },
+  {
+    question: 'My 11-year-old says they\'re bored at school. What does that mean?',
+    answer: 'Boredom at school in this age range has three common causes: under-challenge (curriculum is not stimulating enough), disengagement (emotional or social issues reducing motivation), or a mismatch between learning style and teaching approach. Talk to the teacher first to identify the pattern. Genuine under-challenge can sometimes be addressed through enrichment, accelerated courses, or gifted programming. Disengagement that is emotional or social in origin usually requires a different intervention.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '10–12 Years', href: '/ages/10-12-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>10–12 Year Old School and Learning: Middle School Academics and Study Skills</h1>
+
+  <p class="answer-first">The transition to middle school — typically occurring between ages 11 and 12 — is one of the most academically demanding shifts in a child's education. Students move from one classroom and teacher to six or more, gaining independence over tracking assignments, managing transitions, and advocating for their own needs. The AAP identifies the middle school transition as a high-risk period for academic disengagement and a critical window for building the study and organizational skills that predict high school success (AAP, 2022).</p>
+
+  <h2>What academic expectations do 5th and 6th graders face?</h2>
+
+  <p class="answer-first">By 5th grade (ages 10 to 11), most children read complex informational texts, write multi-paragraph argumentative essays, handle fractions, decimals, and beginning ratios, and conduct multi-source research projects. By 6th grade (ages 11 to 12), students begin pre-algebra or algebra, engage in literary analysis, write position papers with evidence, and are expected to manage their own academic responsibilities with decreasing adult support (Common Core State Standards, CCSS). This is also the age at which learning differences that were manageable in elementary school often become more visible.</p>
+
+  <p>5th grade academic benchmarks:</p>
+  <ul>
+    <li>Reads complex chapter books and informational texts, analyzes character and theme</li>
+    <li>Writes organized multi-paragraph essays with evidence from sources</li>
+    <li>Multiplies and divides fractions and decimals</li>
+    <li>Understands volume and measurement with formulas</li>
+    <li>Conducts research using multiple sources, evaluates source credibility</li>
+  </ul>
+
+  <p>6th grade academic benchmarks:</p>
+  <ul>
+    <li>Pre-algebra or beginning algebra: ratios, proportions, expressions, equations</li>
+    <li>Literary analysis: identifies author's purpose, analyzes structure and figurative language</li>
+    <li>Argumentative writing with claims, evidence, and counterargument</li>
+    <li>Historical thinking: evaluating primary sources, understanding multiple perspectives</li>
+    <li>Independent project management across multiple subjects</li>
+  </ul>
+
+  <h2>How do I help my tween manage multiple teachers and assignments?</h2>
+
+  <p class="answer-first">Managing assignments across 5 to 7 teachers requires external organizational systems that most tweens do not develop on their own — executive function skills are still developing through adolescence and into early adulthood (AAP, 2022). A physical or digital planner with every assignment written at the time it is assigned is the single most effective intervention. A Sunday evening family check-in about the week ahead, identifying deadlines and preparing materials, reduces Monday-morning scrambling by targeting organizational failures before they become crises.</p>
+
+  <ul>
+    <li><strong>Planner habit:</strong> Written at the moment of assignment, not from memory at home. Check teacher online systems together — but the planner is the primary system.</li>
+    <li><strong>Backpack check:</strong> Daily before bed — right materials, homework completed, anything due tomorrow confirmed.</li>
+    <li><strong>Long-term project tracking:</strong> Backward plan together — identify the due date, list all steps, assign each step to a calendar date.</li>
+    <li><strong>Weekly review:</strong> Sunday evenings, 10 to 15 minutes — upcoming tests, projects, events, PE days.</li>
+  </ul>
+
+  <h2>What study strategies actually work for tweens?</h2>
+
+  <p class="answer-first">The most effective study strategies for children ages 10 to 12 are retrieval practice (recalling information without looking at notes, then checking) and spaced practice (studying in multiple short sessions over several days rather than one long session before the test). Both outperform re-reading, highlighting, and last-minute cramming by significant margins in learning research (Dunlosky et al., 2013). Teach these strategies explicitly — most children at this age have never been taught how to study, only that they should.</p>
+
+  <ul>
+    <li><strong>Retrieval practice:</strong> Cover notes. Try to recall the information. Check. This doubles retention compared to re-reading.</li>
+    <li><strong>Spaced practice:</strong> Study vocabulary or concepts for 10 minutes on Monday, 10 minutes on Wednesday, 10 minutes on Friday — beats 30 minutes the night before.</li>
+    <li><strong>Self-quizzing:</strong> Use flashcards (physical or Quizlet), practice tests, or have a parent quiz them — active recall beats passive review.</li>
+    <li><strong>Interleaving:</strong> Mix subjects during a study session rather than blocking all of one subject at a time — this feels harder but improves long-term retention.</li>
+  </ul>
+
+  <h2>How do I spot learning differences at the middle school level?</h2>
+
+  <p class="answer-first">Learning differences that were manageable in elementary school — with smaller class sizes, more teacher support, and simpler tasks — often become more visible in middle school when demands increase. Signs to watch for at ages 10 to 12 include: significant gaps between what a child understands verbally and what they produce in writing; reading that remains effortful and slow despite years of instruction; math that requires far more time and effort than expected; and consistent organizational failure despite explicit instruction and support (AAP, 2022).</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 10 to 12 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

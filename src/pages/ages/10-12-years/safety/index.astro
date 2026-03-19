@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '10–12 Year Old Safety: Online Safety, Independence, and Risk Prevention';
+const description = 'Safety guide for tweens ages 10 to 12 — social media risks, cyberbullying, vaping awareness, sports injury prevention, home alone readiness, and AAP recommendations.';
+
+const faqs = [
+  {
+    question: 'Is my 11-year-old old enough for Instagram or TikTok?',
+    answer: 'Instagram, TikTok, Snapchat, and most social platforms require users to be at least 13. The AAP recommends delaying social media access until at least age 13, and research by Twenge et al. (2018) links social media use in girls ages 10 to 14 specifically to increased rates of depression and anxiety. If your 12-year-old is approaching the age threshold, discuss the specific risks openly — algorithm-driven content, social comparison, cyberbullying — and establish clear rules before granting access.'
+  },
+  {
+    question: 'My 12-year-old wants to stay home alone while I run errands. Is that safe?',
+    answer: 'Many 12-year-olds can handle brief periods alone (1 to 2 hours) in a familiar, safe environment when they know how to reach a trusted adult and can handle basic unexpected situations. The AAP does not specify an age requirement for being home alone, emphasizing maturity, specific circumstances, and demonstrated judgment over chronological age (AAP, 2022). Start with short, familiar situations. Ensure they can reach you or a backup adult by phone, know what to do in an emergency, and have a plan for common scenarios (power outage, someone at the door).'
+  },
+  {
+    question: 'How do I talk to my 11-year-old about vaping?',
+    answer: 'Vaping awareness conversations should start by age 10 to 11 — before peer exposure. The AAP recommends framing it as health information, not moral lecture: "E-cigarettes contain nicotine, which is a drug that changes how your brain develops. Your brain is still growing until your mid-20s — nicotine harms that process in ways we are still learning about" (AAP, 2023). Research shows that parental conversations about substance risks before exposure significantly reduce experimentation rates. Ask your pediatrician to reinforce this message during well-child visits.'
+  },
+  {
+    question: 'What should I teach my 12-year-old about online predators?',
+    answer: 'Teach specific, concrete skills rather than general warnings. The AAP recommends: never share your real name, school, address, or photo with online-only contacts; never agree to meet someone you only know online without telling a parent; recognize that people online may not be who they claim to be; and report any request for photos, personal information, or meetings immediately to a trusted adult without fear of punishment (AAP, 2016). Role-play scenarios: "What would you do if someone you met in a game asked to move to private messages?"'
+  },
+  {
+    question: 'My 12-year-old is being bullied online. What should I do?',
+    answer: 'Cyberbullying affects about 15 to 35% of young people, with middle schoolers experiencing the highest rates (StopBullying.gov, CDC, 2022). Steps: document the bullying (screenshots), report it to the platform, do not retaliate, contact the school if the perpetrator is a classmate (most schools have cyberbullying policies that cover off-campus behavior), and contact your pediatrician if your child shows signs of distress, anxiety, depression, or school avoidance in response. Involve law enforcement if content is threatening or involves sexual images of minors.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/safety/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/safety/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '10–12 Years', href: '/ages/10-12-years/' }, { label: 'Safety' }]}>
+
+  <h1>10–12 Year Old Safety: Online Safety, Independence, and Risk Prevention</h1>
+
+  <p class="answer-first">The safety landscape shifts significantly between ages 10 and 12. Physical injury risks (the primary concern at younger ages) remain relevant, but online safety, substance use awareness, mental health protection, and the risks that come with growing independence become equally important. The AAP's safety guidance for tweens focuses on graduated independence, open communication about risks, and building the judgment skills that reduce risk-taking in adolescence (AAP, 2022). Protection through restriction alone does not work for this age group.</p>
+
+  <h2>What online safety rules are essential for tweens?</h2>
+
+  <p class="answer-first">Children ages 10 to 12 face specific online risks that younger children don't: social media peer comparison and cyberbullying, contact from unknown adults through gaming and social platforms, exposure to inappropriate or disturbing content, and early introduction to vaping and substance content through algorithm-driven feeds. The AAP recommends maintaining parental visibility into all online activity at this age through openly stated family practices — not covert monitoring (AAP, 2016).</p>
+
+  <p>Core online safety rules for this age:</p>
+  <ul>
+    <li>No personal information (real name, school, address, photos, phone number) shared with online-only contacts</li>
+    <li>All accounts require parental knowledge and access — passwords are shared with parents</li>
+    <li>No meeting online contacts in person without full parental knowledge and involvement</li>
+    <li>Report any uncomfortable requests or encounters immediately — no punishment for reporting</li>
+    <li>Devices charge in common areas of the house overnight, not in bedrooms</li>
+    <li>Social media platforms require users to be 13 — enforce the age limit</li>
+  </ul>
+
+  <h2>How do I talk to my 10 to 12 year old about vaping and substances?</h2>
+
+  <p class="answer-first">Substance use awareness conversations should begin by age 10 — before most children encounter peer exposure (AAP, 2023). Research consistently shows that parental conversations about substance risks before first exposure significantly reduce experimentation rates. The effective approach is factual and specific: vaping delivers nicotine that harms brain development still underway until the mid-20s; alcohol at young ages affects brain development differently than at adult ages; marijuana use before age 18 is linked to reduced attention and memory (AAP, 2023). Ask your pediatrician to reinforce these messages during well-child visits.</p>
+
+  <ul>
+    <li><strong>Timing:</strong> Before peer exposure, not after. Age 10 to 11 is not too early.</li>
+    <li><strong>Format:</strong> Factual, specific, and brief — not lecture. "Did you know vaping..." works better than a 20-minute speech.</li>
+    <li><strong>Recurring:</strong> Brief, periodic conversations outperform one big talk. Return to the topic naturally when news or media provides an opening.</li>
+    <li><strong>Judgment:</strong> Teach the skill ("How will you respond if someone offers you...") not just the rule ("Never use drugs").</li>
+  </ul>
+
+  <h2>What mental health safety practices matter at this age?</h2>
+
+  <p class="answer-first">Adolescence is the peak onset period for anxiety disorders, depression, and eating disorders — and early adolescence (ages 10 to 14) is when symptoms most commonly first appear. The AAP recommends annual mental health screening at well-child visits starting at age 12, and proactive parental conversations about mental health that normalize help-seeking (AAP, 2022). Tweens who know that struggling emotionally is something you talk to a parent or doctor about — not hide — have better outcomes than those who learn to mask distress.</p>
+
+  <ul>
+    <li>Keep lines of communication open with low-pressure check-ins, not interrogations</li>
+    <li>Normalize therapy: "Talking to someone who helps with feelings is like going to the doctor for a cold"</li>
+    <li>Know the warning signs of depression and anxiety in tweens (see the Red Flags section)</li>
+    <li>Ensure your child knows they can come to you without consequences for mental health concerns</li>
+    <li>Know the 988 Suicide and Crisis Lifeline — share this number with your child as a resource, not a threat</li>
+  </ul>
+
+  <h2>What sports safety practices apply to tweens?</h2>
+
+  <p class="answer-first">The AAP recommends delaying sports specialization until at least age 12 — children who specialize in one sport before age 12 face higher rates of overuse injury and burnout (AAP, 2022). Year-round single-sport participation before age 12 is a risk factor for injury, not a pathway to elite performance. Concussion awareness and "if in doubt, sit it out" protocols apply to all contact sports. Helmets are required for all cycling, skating, and skateboarding regardless of age.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 10 to 12 Year Old Safety</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
