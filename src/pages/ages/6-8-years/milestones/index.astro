@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '6–8 Year Old Milestones: What to Expect in Middle Childhood';
+const description = 'Key developmental milestones for children ages 6 to 8 — reading, math, physical coordination, social friendships, emotional regulation, and when to talk to your pediatrician.';
+
+const faqs = [
+  {
+    question: 'What reading milestones should my 7-year-old hit?',
+    answer: 'By age 7, most children read simple chapter books independently and have transitioned from "learning to read" to "reading to learn." They decode unfamiliar words using phonics strategies, recognize hundreds of high-frequency words by sight, and can retell a story with beginning, middle, and end. By age 8, children typically read at a 2nd-to-3rd grade level and use reading to gain new information in science and social studies (AAP, 2022).'
+  },
+  {
+    question: 'What math skills should my 8-year-old have?',
+    answer: 'By age 8, most children add and subtract 2-digit numbers without counting on fingers, understand place value to 100, and have begun multiplication and division concepts. They can tell time on an analog clock, understand basic money (making change), and solve simple word problems. By the end of 2nd grade, the Common Core standard expects fluency in addition and subtraction within 20.'
+  },
+  {
+    question: 'Is it normal for my 7-year-old to still wet the bed?',
+    answer: 'Yes. Bedwetting (nocturnal enuresis) is common and typically developmentally normal through age 7. About 15% of 5-year-olds, 10% of 7-year-olds, and 5% of 10-year-olds still wet the bed regularly (AAP, 2022). Most children outgrow it without treatment. Discuss with your pediatrician at age 7 to 8 if your child is distressed about it or if it is affecting their ability to participate in sleepovers or overnight events.'
+  },
+  {
+    question: 'When do children learn to tie their shoes?',
+    answer: 'Most children develop the fine motor coordination and sequencing skills needed to tie shoes between ages 5 and 7, with a wide range of 4 to 8 years (AAP). Children learn faster when taught a technique that matches their developmental level — the "bunny ears" method (two loops) is often easier than the traditional over-under method for children ages 5 to 6. If your 8-year-old cannot tie shoes, mention it to your pediatrician as part of a broader fine motor assessment.'
+  },
+  {
+    question: 'Is it normal for my 6-year-old to have an imaginary friend?',
+    answer: 'Yes. Imaginary friends are common from ages 3 to 8 and are associated with above-average creativity, language development, and social imagination. About 65% of children have or have had an imaginary companion by age 7 (Taylor et al., 2004). The imaginary friend is a concern only if the child cannot distinguish it from reality, uses it to avoid all real social interaction, or becomes distressed when others do not believe in it.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/milestones/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/milestones/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '6–8 Years', href: '/ages/6-8-years/' }, { label: 'Milestones' }]}>
+
+  <h1>6–8 Year Old Milestones: What to Expect in Middle Childhood</h1>
+
+  <p class="answer-first">Between ages 6 and 8, children cross a critical developmental threshold: they shift from learning concrete skills (decoding letters, counting objects) to applying those skills to acquire new knowledge and solve real problems. Reading becomes the primary tool for learning. Math expands from counting to computation. Friendships shift from activity-based to relationship-based. The CDC does not publish a formal milestone checklist for this age range, but the AAP's middle childhood guidance identifies these as the defining developmental transitions (AAP, 2022).</p>
+
+  <h2>What cognitive milestones should my 6 to 8 year old reach?</h2>
+
+  <p class="answer-first">Between ages 6 and 8, children enter Piaget's concrete operational stage — they think logically about real things but still need concrete examples for abstract concepts. They understand conservation (that a tall thin glass holds the same amount as a short wide one), can sort by multiple attributes simultaneously, and develop true cause-and-effect reasoning (AAP, 2022). Attention spans grow to support 20-to-30-minute focused work sessions.</p>
+
+  <p>Key cognitive milestones:</p>
+  <ul>
+    <li><strong>Age 6:</strong> Reads simple words and sentences, adds and subtracts within 10, tells time to the half-hour, understands yesterday/today/tomorrow, follows 3-step instructions</li>
+    <li><strong>Age 7:</strong> Reads simple chapter books, adds and subtracts 2-digit numbers, understands basic money and measurement, explains cause and effect in stories</li>
+    <li><strong>Age 8:</strong> Reads at 2nd-to-3rd grade level, beginning multiplication, tells time on analog clock, plans and organizes simple projects with guidance</li>
+  </ul>
+
+  <h2>What physical milestones should my 6 to 8 year old reach?</h2>
+
+  <p class="answer-first">Between ages 6 and 8, children gain approximately 2 to 2.5 inches in height and 4 to 7 pounds per year. Coordination reaches a level that supports complex physical skills — riding a bike, swimming, organized sports, and team games. Fine motor control allows smaller, more legible handwriting, easier use of scissors and other tools, and the emergence of specific craft or hobby skills (CDC). Baby teeth fall out beginning around age 6, replaced by permanent teeth through age 12.</p>
+
+  <p>Gross motor milestones:</p>
+  <ul>
+    <li>Rides a two-wheeled bike (often by age 6 or 7)</li>
+    <li>Jumps rope with some regularity (age 6 to 7)</li>
+    <li>Catches and throws with accuracy from moderate distances</li>
+    <li>Swims with basic strokes (timing varies with instruction)</li>
+    <li>Participates in organized sports or physical activities</li>
+  </ul>
+
+  <p>Fine motor milestones:</p>
+  <ul>
+    <li>Handwriting is smaller and more legible than at age 5</li>
+    <li>Ties shoes (wide range: ages 5 to 8)</li>
+    <li>Uses scissors accurately along complex curves</li>
+    <li>Draws with increasing detail and perspective</li>
+    <li>May show interest in detailed crafts, drawing, or musical instruments</li>
+  </ul>
+
+  <h2>What language milestones should my 6 to 8 year old reach?</h2>
+
+  <p class="answer-first">Between ages 6 and 8, vocabulary grows from approximately 5,000 words to 10,000 words or more. Children use complex sentences, understand figures of speech and simple jokes, and begin to use language for persuasion and explanation rather than just description (CDC). Reading and writing become intertwined with spoken language development — vocabulary from books enters speech, and narrative skills from conversation support writing.</p>
+
+  <ul>
+    <li><strong>Age 6:</strong> Uses complex sentences, follows 3-step directions, tells stories with clear sequencing</li>
+    <li><strong>Age 7:</strong> Reads simple chapter books, writes several sentences, understands most jokes and riddles</li>
+    <li><strong>Age 8:</strong> Reads and writes at 2nd-to-3rd grade level, uses language persuasively, understands sarcasm in familiar contexts</li>
+  </ul>
+
+  <h2>What social-emotional milestones matter most between ages 6 and 8?</h2>
+
+  <p class="answer-first">Between ages 6 and 8, friendship becomes a central developmental task. Children move from activity-based friendships ("we play together at recess") to relationship-based friendships ("she understands me and we have the same interests"). Same-sex peer groups become important. Children develop a sense of industry — the drive to feel competent at things that matter to them, and the distress when they don't (Erikson, AAP, 2022).</p>
+
+  <ul>
+    <li>Forms stable "best friend" relationships (age 6 to 7)</li>
+    <li>Understands and follows complex game rules</li>
+    <li>Demonstrates genuine empathy — offers comfort, considers others' feelings</li>
+    <li>Develops competitive feelings and sometimes struggles with losing</li>
+    <li>Cares about fairness intensely and will advocate for it</li>
+    <li>Seeks approval and acceptance from same-sex peers</li>
+  </ul>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 6 to 8 year old's milestones?</h2>
+    <p class="answer-first">Contact your pediatrician if your child cannot read simple words by the end of 1st grade, has persistent speech that unfamiliar adults struggle to understand, shows no interest in other children or consistently gets rejected by peers, cannot follow multi-step directions, or loses skills they previously had (AAP, 2022).</p>
+    <p>Specific concerns to raise:</p>
+    <ul>
+      <li>Letter reversals that persist beyond 2nd grade may indicate dyslexia — ask about a reading evaluation</li>
+      <li>Significant inattention affecting school performance — ask about ADHD screening</li>
+      <li>Cannot tie shoes by age 8 — may indicate fine motor delay worth evaluating</li>
+      <li>Bedwetting past age 7 is common but worth mentioning if the child is distressed</li>
+      <li>Extreme difficulty with losing or emotional regulation in competitive settings</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 6 to 8 Year Old Milestones</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

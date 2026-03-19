@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '6–8 Year Old Safety: Rules, Independence, and Injury Prevention';
+const description = 'Safety guide for children ages 6 to 8 — bike helmets, booster seats, water safety, online safety, age-appropriate independence, and what the AAP recommends for this age group.';
+
+const faqs = [
+  {
+    question: 'Can my 7-year-old ride their bike without a helmet if we\'re just going around the block?',
+    answer: 'No. The AAP recommends helmet use for every bike ride, regardless of distance or perceived risk (AAP, 2022). Most bicycle-related head injuries happen close to home during low-risk-seeming rides. Helmets reduce the risk of serious head injury by up to 85%. The most effective approach is to model consistent helmet use yourself and make it a non-negotiable family rule from the start, not an option depending on distance.'
+  },
+  {
+    question: 'Can my 8-year-old walk to school alone?',
+    answer: 'Whether an 8-year-old can walk to school alone depends on the specific route, neighborhood, and the child\'s demonstrated judgment — not just their age. The AAP does not specify an exact age, but notes that most children develop the pedestrian safety skills and judgment for short, safe walking routes between ages 9 and 10 (AAP, 2022). Practice the route together first, assess the specific risks, and consider the child\'s demonstrated behavior under pressure before allowing solo walking.'
+  },
+  {
+    question: 'When can my child stop using a booster seat?',
+    answer: 'The AAP recommends using a booster seat until the seat belt fits properly — not based on age (AAP, 2023). A properly fitting seat belt sits across the upper thighs (not the stomach) and across the chest and shoulder (not the neck). Most children reach this fit between 4 feet 9 inches and 57 inches. Many 8-year-olds still need a booster. The NHTSA recommends checking the fit test: lap belt flat across upper thighs, shoulder belt across mid-chest and shoulder, feet flat on the floor.'
+  },
+  {
+    question: 'How do I talk to my 7-year-old about internet safety?',
+    answer: 'Children ages 6 to 8 with device access need clear, concrete internet safety rules: never share your real name, school, address, or photo with someone you don\'t know in real life; tell a parent immediately if something online makes you uncomfortable; no online purchases without permission; and all accounts need parental knowledge and access. The AAP recommends parents maintain access to children\'s accounts and review online activity openly at this age, framing it as normal family safety rather than surveillance (AAP, 2016).'
+  },
+  {
+    question: 'Is my 6-year-old old enough to be left alone for 10 minutes?',
+    answer: 'Most 6-year-olds are not developmentally ready to be left alone, even briefly. Children this age cannot reliably handle unexpected situations (injury, stranger at the door, a sibling conflict) without adult guidance. The AAP suggests most children are not ready for unsupervised time until at least age 10 to 12, depending on the child\'s maturity and the specific situation. State laws on child supervision vary; check your local guidelines before leaving children alone at any age.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/safety/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/safety/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '6–8 Years', href: '/ages/6-8-years/' }, { label: 'Safety' }]}>
+
+  <h1>6–8 Year Old Safety: Rules, Independence, and Injury Prevention</h1>
+
+  <p class="answer-first">Unintentional injuries remain the leading cause of death for children ages 1 to 19 in the United States (CDC, 2022). For children ages 6 to 8, the major injury risks are motor vehicle crashes (as passengers and pedestrians), bicycle injuries, drowning, and falls. This age group is gaining independence — walking farther from home, riding bikes, exploring — and safety practices must evolve alongside that independence without eliminating appropriate risk-taking and outdoor play.</p>
+
+  <h2>What car safety rules apply to 6 to 8 year olds?</h2>
+
+  <p class="answer-first">Children ages 6 to 8 are typically in a booster seat with a seat belt, transitioning away from the internal harness car seat when they reach its weight and height limits. The AAP recommends staying in a booster seat until the seat belt fits correctly across the upper thighs and mid-chest — not the stomach or neck — which most children reach at 4 feet 9 inches (AAP, 2023). Many 8-year-olds still require a booster. All children under age 13 ride in the back seat.</p>
+
+  <p>The seat belt fit test:</p>
+  <ul>
+    <li>Lap belt lies flat across upper thighs, not across the stomach</li>
+    <li>Shoulder belt crosses mid-chest and shoulder, not neck or face</li>
+    <li>Feet rest flat on the floor</li>
+    <li>Child can sit against the seat back for the entire ride</li>
+    <li>If any of these fail, continue using the booster</li>
+  </ul>
+
+  <h2>What bicycle and outdoor play safety rules matter most?</h2>
+
+  <p class="answer-first">Helmets are required for every bike ride, every scooter ride, and every skating or skateboarding session — no exceptions. The AAP reports bicycle helmets reduce head injury risk by up to 85% (AAP, 2022). Children ages 6 to 8 are gaining independence and road confidence but cannot reliably judge vehicle speeds or make safe split-second crossing decisions. Riding on sidewalks and bike paths, not roads, remains appropriate through this age range.</p>
+
+  <ul>
+    <li><strong>Helmets:</strong> Every ride, every time. Check fit every season as children grow.</li>
+    <li><strong>Road safety:</strong> Teach the rules (stop at the curb, look left-right-left, never dart out from between cars) and practice them, but do not rely on 6-to-8-year-old judgment for busy roads.</li>
+    <li><strong>Protective gear:</strong> Wrist guards and knee pads for skating and skateboarding prevent the majority of fractures in this age group.</li>
+    <li><strong>Playground:</strong> Ensure playgrounds have impact-absorbing surfaces (rubber, wood chips, sand) rather than concrete or packed dirt under equipment.</li>
+  </ul>
+
+  <h2>How do I keep my 6 to 8 year old safe around water?</h2>
+
+  <p class="answer-first">Drowning is the second leading cause of unintentional injury death for children ages 1 to 14 in the US (CDC, 2022). The AAP recommends active adult supervision within arm's reach for children under age 10 in or near water — regardless of swimming ability (AAP, 2023). Swim lessons reduce drowning risk substantially and are recommended for all children who have regular water access. Life jackets are required for open water and boating regardless of swimming skill.</p>
+
+  <ul>
+    <li><strong>Pool safety:</strong> Maintain four-sided fencing with a self-closing, self-latching gate. Never leave the pool area with a child in or near the water.</li>
+    <li><strong>Designated water watcher:</strong> One adult watches the water without phone or distraction during swim time. Rotate this responsibility.</li>
+    <li><strong>Swim lessons:</strong> Children who have completed swim lessons have significantly lower drowning risk — but lessons do not eliminate the need for supervision.</li>
+    <li><strong>Open water:</strong> Life jackets for all boating. Children ages 6 to 8 are not strong enough or skilled enough for open water without a properly fitting life jacket.</li>
+  </ul>
+
+  <h2>When can children ages 6 to 8 have more outdoor independence?</h2>
+
+  <p class="answer-first">Graduated outdoor independence — playing in the front yard, then the block, then further — begins for most children between ages 7 and 10, depending on the specific environment and the child's demonstrated judgment. The AAP supports outdoor play and physical activity but notes that children under age 10 generally cannot reliably handle unexpected pedestrian safety situations (AAP, 2022). Free outdoor play with peer supervision (not adult supervision, but known peers in familiar environments) is appropriate for many 7-to-8-year-olds in low-traffic, well-known neighborhoods.</p>
+
+  <h2>What online safety rules apply to this age group?</h2>
+
+  <p class="answer-first">Children ages 6 to 8 who use devices need concrete, enforced safety rules: no sharing real name, school, address, or photos with online-only contacts; no downloading apps or making purchases without parent permission; immediate disclosure if anything online makes them uncomfortable (AAP, 2016). Parents should know all account passwords and maintain open access to review activity — not secretly, but openly as a stated family safety practice. Most social media platforms require users to be at least 13; enforce this limit.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 6 to 8 Year Old Safety</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

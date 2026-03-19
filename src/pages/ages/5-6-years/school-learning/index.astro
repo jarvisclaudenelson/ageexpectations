@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '5–6 Year Old School and Learning: Kindergarten Skills and What to Expect';
+const description = 'What school and learning look like for 5 to 6 year olds — kindergarten readiness, early reading and math, writing development, attention, and how to support learning at home, with AAP and CDC guidance.';
+
+const faqs = [
+  {
+    question: 'Should my 5-year-old be reading before kindergarten?',
+    answer: 'No. Pre-reading skills — letter recognition, phonemic awareness, print concepts — matter for kindergarten entry, but full reading fluency is not expected until first grade or beyond. The AAP and the National Association for the Education of Young Children emphasize that reading readiness varies widely, and many children do not read independently until age 6 or 7. Pushing formal reading instruction before a child is ready can create frustration and avoidance rather than competence.'
+  },
+  {
+    question: 'What math skills should my 5-year-old have before kindergarten?',
+    answer: 'By kindergarten entry (typically age 5), most children can count to 20, recognize written numbers to 10, understand "more" and "fewer," and demonstrate one-to-one correspondence — understanding that each number word matches one object (CDC, 2022). These are the foundational math concepts kindergarten builds on. Children who can sort objects by color and shape and who understand simple patterns are on solid footing for kindergarten math.'
+  },
+  {
+    question: 'Is it normal for my 6-year-old to hate sitting still for homework?',
+    answer: 'Yes. Children ages 5 to 6 have attention spans of about 10 to 15 minutes for structured tasks. Expecting a 6-year-old to sit for 30 to 45 minutes of homework is developmentally inappropriate. Keep homework sessions to 10 to 15 minutes with movement breaks, work at a consistent time and place, and communicate with the teacher if homework volume feels excessive for your child\'s development.'
+  },
+  {
+    question: 'My child\'s teacher says they have trouble paying attention. Should I be worried?',
+    answer: 'Attention challenges are common in kindergarten — children this age are just beginning to develop the sustained attention that formal schooling requires. The question is whether the concern is about typical developmental attention (which improves with practice and maturation) or a pattern significant enough to suggest ADHD or a learning difference. If concerns persist through 1st grade or are paired with significant academic struggles, ask your pediatrician about a developmental evaluation. Early identification of ADHD or learning differences leads to better outcomes.'
+  },
+  {
+    question: 'What can I do at home to support learning without pushing too hard?',
+    answer: 'Read aloud daily — 15 to 20 minutes of shared reading builds vocabulary, comprehension, and a positive association with books more than any structured program. Count real objects in daily life (stairs, grapes, cars). Play board games that involve counting and strategy. Let children cook with you, which builds math concepts naturally. The AAP emphasizes that playful, parent-led learning at home is more effective than academic worksheets for this age group.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '5–6 Years', href: '/ages/5-6-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>5–6 Year Old School and Learning: Kindergarten Skills and What to Expect</h1>
+
+  <p class="answer-first">Kindergarten is the first formal academic environment most children encounter, and readiness is broader than academics. The AAP identifies self-regulation — the ability to follow directions, wait, manage frustration, and stay on task for 10 to 15 minutes — as the strongest predictor of kindergarten success (AAP, 2022). Children who enter kindergarten with solid emotional and social skills succeed regardless of their academic starting point. Reading, counting, and letter recognition matter but are secondary.</p>
+
+  <h2>What academic skills does kindergarten actually require?</h2>
+
+  <p class="answer-first">Kindergarten entry expectations vary by state and school, but most kindergartens expect children to recognize most uppercase letters, count to 10 with one-to-one correspondence, hold a pencil or crayon with a functional grip, follow two-step directions, and use the bathroom independently (CDC, 2022). Reading fluency, writing full words, and number computation are taught in kindergarten — not required at entry.</p>
+
+  <p>Skills that support kindergarten success:</p>
+  <ul>
+    <li><strong>Language:</strong> Speaking in sentences, telling a story with beginning/middle/end, understanding and following verbal directions</li>
+    <li><strong>Early literacy:</strong> Recognizing some letters (especially those in their name), understanding that print is read left to right, interest in books</li>
+    <li><strong>Early math:</strong> Counting objects to 10, recognizing written numbers 1 to 5, understanding "more" and "fewer"</li>
+    <li><strong>Self-care:</strong> Using the bathroom independently, dressing and undressing, opening a lunchbox, asking for help when needed</li>
+    <li><strong>Social:</strong> Separating from caregiver without extreme distress, taking turns, following classroom rules, communicating needs to an unfamiliar adult</li>
+  </ul>
+
+  <h2>How does reading develop between ages 5 and 6?</h2>
+
+  <p class="answer-first">Reading development at ages 5 to 6 progresses through three stages: letter knowledge (recognizing letters and their sounds), phonemic awareness (hearing that words are made of individual sounds), and early decoding (sounding out simple consonant-vowel-consonant words like "cat," "hop," "sit"). Most children are in the letter knowledge and phonemic awareness stages at kindergarten entry, and move into early decoding during kindergarten (AAP, 2022). Wide variation exists — some 5-year-olds read simple books; others are not ready until age 7.</p>
+
+  <p>What healthy reading development looks like at this age:</p>
+  <ul>
+    <li>Interest in books and being read to</li>
+    <li>Recognition of letters, especially those in their own name</li>
+    <li>Understanding that print goes left to right and top to bottom</li>
+    <li>Ability to rhyme and generate rhymes (bat/cat/hat)</li>
+    <li>Hearing individual sounds in words (the first sound in "sun" is /s/)</li>
+    <li>Beginning to connect letters to their sounds</li>
+  </ul>
+
+  <h2>How does early math develop between ages 5 and 6?</h2>
+
+  <p class="answer-first">Kindergarten math builds on the number sense children develop through daily life — counting objects, comparing quantities, and noticing patterns. Most 5-year-olds can count to 20, recognize written numbers to 10, and demonstrate one-to-one correspondence (one number word for each object counted). By the end of kindergarten, most children can count to 100, add and subtract within 5 using objects, and identify basic shapes (CDC, 2022).</p>
+
+  <p>Math skills develop through play:</p>
+  <ul>
+    <li>Counting real objects (stairs, blocks, crackers) builds more durable number sense than counting in the abstract</li>
+    <li>Board games with dice (Snakes and Ladders, Candy Land) build counting and number recognition</li>
+    <li>Cooking provides measuring, fractions, and number concepts in a meaningful context</li>
+    <li>Sorting collections (buttons, rocks, toys) by multiple attributes builds classification skills</li>
+  </ul>
+
+  <h2>What is a realistic attention span for a 5 to 6 year old?</h2>
+
+  <p class="answer-first">Children ages 5 to 6 can sustain focused attention on a structured academic task for approximately 10 to 15 minutes before needing a break (AAP, 2022). Attention spans increase by roughly 2 to 5 minutes per year of age during early childhood. Expecting a 6-year-old to complete 45 minutes of homework without breaks is developmentally inappropriate. Movement breaks every 10 to 15 minutes significantly improve subsequent attention and task completion.</p>
+
+  <h2>How can I support learning at home without pressure?</h2>
+
+  <p class="answer-first">Daily read-aloud sessions of 15 to 20 minutes are the single highest-leverage learning activity for 5-to-6-year-olds — they build vocabulary, comprehension, phonological awareness, and a positive relationship with reading more effectively than any structured program (AAP, 2022). Count real objects in daily life. Play games that involve strategy and waiting. Let children cook, garden, or build with you. Playful, embedded learning beats worksheets.</p>
+
+  <ul>
+    <li><strong>Read aloud daily</strong> — any books, including rereading favorites. Pointing to words as you read builds print concepts.</li>
+    <li><strong>Talk about everything</strong> — narrating daily activities builds vocabulary faster than any flashcard program.</li>
+    <li><strong>Play math games</strong> — dice games, card games, and cooking all build number sense in context.</li>
+    <li><strong>Visit the library</strong> — letting children choose their own books builds intrinsic motivation to read.</li>
+    <li><strong>Ask about their day with specific questions</strong> — "What was the funniest thing that happened?" builds narrative language skills.</li>
+  </ul>
+
+  <div class="callout">
+    <h2>When should I be concerned about my child's school readiness or learning?</h2>
+    <p class="answer-first">Talk to your pediatrician and your child's teacher if your 5-to-6-year-old cannot follow two-step directions, has speech that is difficult for unfamiliar adults to understand, shows no interest in letters or numbers despite exposure, cannot draw a recognizable person, or has significant difficulty staying on task for even 5 minutes (AAP, 2022).</p>
+    <p>If your child's teacher identifies a concern, take it seriously and follow up with your pediatrician. Evaluation through the school district (free under federal IDEA law) can identify learning differences early, when intervention is most effective. Speech-language therapy, occupational therapy, and specialized reading instruction all work best when started early.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 5 to 6 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

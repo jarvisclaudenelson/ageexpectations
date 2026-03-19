@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '6–8 Year Old School and Learning: Reading, Math, and Academic Development';
+const description = 'What school and learning look like for children ages 6 to 8 — reading fluency, math skills, homework habits, learning differences, and how to support your child at home, with AAP guidance.';
+
+const faqs = [
+  {
+    question: 'At what age should a child be able to read independently?',
+    answer: 'Most children develop independent reading ability between ages 6 and 7, though the range extends from age 5 to age 8 and still falls within typical development (AAP, 2022). Reading independently means decoding unfamiliar words using phonics, recognizing common words by sight, and understanding what they read. If your child is not reading simple sentences by the end of 1st grade (typically age 6 to 7), discuss a reading evaluation with your pediatrician and school.'
+  },
+  {
+    question: 'How much homework is too much for a 7-year-old?',
+    answer: 'The National Education Association and National PTA recommend the "10-minute rule" — 10 minutes of homework per grade level per night. A 1st grader (age 6 to 7) should have about 10 minutes; a 2nd grader about 20 minutes. Research does not support more homework than this for elementary school students improving achievement. If homework consistently takes much longer than these guidelines, talk to the teacher and your pediatrician about attention or processing speed concerns.'
+  },
+  {
+    question: 'My 7-year-old is struggling with reading. Could it be dyslexia?',
+    answer: 'Dyslexia is the most common learning difference, affecting 15 to 20% of the population (IDA, 2022). Signs in 6-to-8-year-olds include: difficulty connecting letters to sounds despite instruction, inability to decode simple words by the end of 1st grade, letter reversals persisting past age 7, slow and effortful reading, and difficulty with phonological tasks (rhyming, breaking words into syllables). Early identification matters significantly — the brain is most responsive to reading intervention at ages 5 to 8. Ask your pediatrician and school about formal evaluation.'
+  },
+  {
+    question: 'How can I tell if my child has ADHD or is just a distracted kid?',
+    answer: 'ADHD is characterized by inattention, hyperactivity, or impulsivity that is more severe than typical for the child\'s age, persists for 6 or more months, and appears in at least two settings (home AND school) (DSM-5). The AAP recommends ADHD evaluation when these criteria are met in children ages 4 to 18 (AAP, 2019). "Distracted at school but fine at home" more often reflects anxiety, classroom fit, or learning differences than ADHD — which by definition appears across settings. Talk to your pediatrician with input from the teacher.'
+  },
+  {
+    question: 'What can I do at home to help my child with reading?',
+    answer: 'Read aloud together daily, even after children read independently — hearing complex text read fluently builds vocabulary and comprehension beyond what children can access on their own. Let children choose their own books; motivation matters enormously. Audiobooks count and build listening comprehension. Practice phonics in low-pressure games, not drills. The AAP emphasizes that reading enjoyment — not just skill — predicts long-term reading achievement (AAP, 2022).'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '6–8 Years', href: '/ages/6-8-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>6–8 Year Old School and Learning: Reading, Math, and Academic Development</h1>
+
+  <p class="answer-first">The ages 6 to 8 bring the great transition in academic development: from learning to read, to reading to learn. Children who crack the reading code in 1st grade use that skill to absorb content in every other subject. Children who struggle with reading in 1st and 2nd grade fall further behind in all subjects as content demands increase. The AAP identifies early literacy support as one of the highest-leverage health interventions for school-age children (AAP, 2022). This is the window to act if there are concerns.</p>
+
+  <h2>What are the reading benchmarks for children ages 6 to 8?</h2>
+
+  <p class="answer-first">By the end of kindergarten (age 5 to 6), most children decode simple consonant-vowel-consonant words (cat, hop, sit) and recognize 20 to 50 high-frequency words by sight. By the end of 1st grade (age 6 to 7), most children read simple chapter books, recognize 200+ sight words, and decode multisyllabic words using phonics strategies. By the end of 2nd grade (age 7 to 8), most children read chapter books at a 2nd-grade level fluently and use reading to learn content (AAP, 2022).</p>
+
+  <p>Reading development benchmarks:</p>
+  <ul>
+    <li><strong>End of kindergarten:</strong> Decodes simple 3-letter words, recognizes 20–50 sight words, understands print goes left to right</li>
+    <li><strong>End of 1st grade:</strong> Reads simple chapter books, recognizes 100–200 sight words, retells stories with sequence and detail</li>
+    <li><strong>End of 2nd grade:</strong> Reads independently at 2nd-grade level, uses reading to learn, reads with expression</li>
+  </ul>
+
+  <h2>What math skills do children develop between ages 6 and 8?</h2>
+
+  <p class="answer-first">Between ages 6 and 8, math expands from counting and basic addition to multi-digit computation, measurement, and beginning multiplication concepts. By the end of 1st grade, most children add and subtract within 20 and solve simple word problems. By the end of 2nd grade, most children fluently add and subtract within 100, understand place value, and measure with appropriate tools (Common Core State Standards). By age 8, most children have basic multiplication concepts if instruction has covered them.</p>
+
+  <ul>
+    <li><strong>Age 6:</strong> Adds and subtracts within 10, counts to 120, understands "equal," sorts and classifies objects</li>
+    <li><strong>Age 7:</strong> Adds and subtracts within 20 fluently, understands place value to 100, solves simple word problems</li>
+    <li><strong>Age 8:</strong> Adds and subtracts within 1,000, beginning multiplication and division, understands basic fractions (1/2, 1/4)</li>
+  </ul>
+
+  <h2>What are the signs of a learning difference in a 6 to 8 year old?</h2>
+
+  <p class="answer-first">The most important sign of a learning difference at this age is a significant gap between a child's intellectual ability and their academic performance despite typical instruction. Dyslexia signs include: difficulty connecting letters to sounds after phonics instruction, letter and word reversals past age 7, very slow reading that does not become automatic, and difficulty with rhyming and syllable tasks. Dysgraphia shows as extreme difficulty writing legibly. ADHD shows as inattention or impulsivity across multiple settings, not just school (AAP, 2022).</p>
+
+  <p>When to request an evaluation:</p>
+  <ul>
+    <li>Cannot read simple words by the end of 1st grade</li>
+    <li>Letter reversals persist past 2nd grade</li>
+    <li>Reading is effortful and slow with no improvement despite instruction</li>
+    <li>Writing is extremely difficult to produce or read</li>
+    <li>Math facts (addition, subtraction) cannot be memorized after extensive practice</li>
+    <li>Teacher expresses concern about attention, focus, or learning in the classroom</li>
+  </ul>
+
+  <h2>How much screen time is appropriate for school-age children?</h2>
+
+  <p class="answer-first">The AAP recommends consistent limits on recreational screen time for children ages 6 and older, prioritizing sleep, physical activity, homework, and face-to-face social time first (AAP, 2016). Research links more than 2 hours of recreational screen time daily to reduced sleep quality, lower academic performance, and attention difficulties in school-age children. Educational screen use (reading apps, educational programs) is categorically different from entertainment screen time.</p>
+
+  <h2>How can I support my 6 to 8 year old's learning at home?</h2>
+
+  <p class="answer-first">The highest-leverage home learning activity at this age is reading together daily — both parent-read-aloud (exposing children to vocabulary above their own reading level) and child-read-aloud (practicing fluency). Consistent homework time and location matter more than the amount of parental help provided. Conversations about what they're learning at school — not just grades — build comprehension and engagement more than any supplemental program (AAP, 2022).</p>
+
+  <ul>
+    <li><strong>Read aloud daily</strong> — 15 to 20 minutes of parent reading to child, even after children read independently</li>
+    <li><strong>Library trips weekly or biweekly</strong> — child choice drives motivation</li>
+    <li><strong>Consistent homework routine</strong> — same time and place daily; keep sessions to 10 to 20 minutes maximum</li>
+    <li><strong>Math in daily life</strong> — grocery store, cooking, measuring, telling time</li>
+    <li><strong>Discuss their day specifically</strong> — "What was something you learned today?" builds comprehension and memory</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 6 to 8 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

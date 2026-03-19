@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '5–6 Year Old Safety: Age-Appropriate Rules and Accident Prevention';
+const description = 'Safety guide for 5 to 6 year olds — car seat transitions, bike helmets, water safety, stranger safety, online safety, and when children can handle more independence, with AAP guidelines.';
+
+const faqs = [
+  {
+    question: 'When can my 5-year-old ride in a booster seat instead of a car seat?',
+    answer: 'The AAP recommends keeping children in a forward-facing car seat with a harness until they reach the maximum height or weight limit for that seat — typically 40 to 65 pounds and up to 49 inches, depending on the seat (AAP, 2023). Many 5-year-olds have not yet reached those limits. The transition to a booster seat should be based on your child\'s actual size and your specific car seat\'s specifications, not their birthday.'
+  },
+  {
+    question: 'Does my child need a helmet every time they ride a bike?',
+    answer: 'Yes. The AAP recommends helmet use for every ride, regardless of distance or speed (AAP, 2022). Bicycle helmets reduce the risk of serious head and brain injury by up to 85%. A properly fitting helmet sits level on the head, two finger-widths above the eyebrows, with snug side straps forming a V below each ear and a chin strap that allows only one finger between strap and chin.'
+  },
+  {
+    question: 'How do I teach my 5-year-old about strangers without scaring them?',
+    answer: 'The AAP recommends teaching children about "safe adults" rather than "stranger danger" — a concept that confuses children because most abuse comes from known adults, and children sometimes need to approach strangers (like a store employee) for help (AAP, 2022). Teach your child their full name, your phone number, and that they should go to a trusted adult (teacher, parent of a friend, uniformed officer) if they feel unsafe. Practice scenarios: "What would you do if you got separated from me at the store?"'
+  },
+  {
+    question: 'Can my 5-year-old swim without constant supervision?',
+    answer: 'No. The AAP recommends active, uninterrupted adult supervision within arm\'s reach any time a child under age 10 is in or near water, regardless of swimming ability (AAP, 2023). Children can drown in minutes in shallow water, even after taking swim lessons. Swim lessons for children ages 1 to 4 reduce drowning risk significantly, but lessons do not replace active supervision.'
+  },
+  {
+    question: 'When is it safe for my child to play outside without direct supervision?',
+    answer: 'There is no single age that applies to every child or neighborhood. The AAP notes that age 5 to 6 is generally too young for unsupervised outdoor time beyond a fenced backyard with a trusted adult nearby (AAP, 2022). By ages 6 to 8, children with road safety skills, a neighbor who knows them, and a clear understanding of rules (stay on the block, come home when called) may manage brief periods of low-risk outdoor play with check-ins.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/safety/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/safety/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '5–6 Years', href: '/ages/5-6-years/' }, { label: 'Safety' }]}>
+
+  <h1>5–6 Year Old Safety: Age-Appropriate Rules and Accident Prevention</h1>
+
+  <p class="answer-first">Unintentional injuries are the leading cause of death for children ages 1 to 19 in the United States (CDC, 2022). For children ages 5 to 6, the top injury risks are motor vehicle crashes, drowning, falls, and bicycle injuries. The AAP's safety guidance for this age focuses on supervision levels matched to developmental capacity, graduated independence, and specific equipment rules — car seats, helmets, and life jackets (AAP, 2023).</p>
+
+  <h2>What are the car seat rules for 5 and 6 year olds?</h2>
+
+  <p class="answer-first">The AAP recommends keeping children in a forward-facing car seat with an internal harness until they reach the maximum weight or height limit for that seat — not transitioning based on age alone (AAP, 2023). Most forward-facing seats accommodate children up to 40 to 65 pounds. Many 5-year-olds still fit in a harnessed seat. Check your specific seat's manual for limits, and move to a booster only when the child has outgrown the harness limits.</p>
+
+  <p>Car seat progression for this age:</p>
+  <ul>
+    <li><strong>Still in forward-facing with harness:</strong> Keep children in this seat as long as possible within the seat's weight and height limits</li>
+    <li><strong>Transitioning to booster:</strong> Use a high-back booster with a seat belt until the child is at least 4 feet 9 inches tall and the seat belt fits properly (lap belt across upper thighs, not stomach; shoulder belt across chest, not neck)</li>
+    <li><strong>Never put a child in the front seat</strong> under age 13, per AAP guidance</li>
+  </ul>
+
+  <h2>What bicycle safety rules apply to 5 and 6 year olds?</h2>
+
+  <p class="answer-first">Every bike ride requires a properly fitting helmet — no exceptions. The AAP reports that helmets reduce the risk of bicycle-related head injury by up to 85% and brain injury by up to 88% (AAP, 2022). At ages 5 to 6, children are also learning road awareness but cannot reliably make the split-second judgments that crossing a street or riding near traffic requires. Ride on sidewalks or bike paths, not in the street, until children are at least 10 and have demonstrated consistent traffic judgment.</p>
+
+  <p>Helmet fit check:</p>
+  <ul>
+    <li>Sits level on the head, not tilted back</li>
+    <li>Two finger-widths above the eyebrows</li>
+    <li>Side straps form a V shape just below each ear</li>
+    <li>Chin strap allows only one finger between strap and chin</li>
+    <li>Does not rock more than one inch in any direction</li>
+  </ul>
+
+  <h2>How do I keep my 5 to 6 year old safe around water?</h2>
+
+  <p class="answer-first">Drowning is the second leading cause of unintentional injury death in children ages 1 to 14 (CDC, 2022). The AAP recommends active adult supervision — within arm's reach — any time a child under 10 is in or near water, regardless of swimming ability (AAP, 2023). Swim lessons for children ages 1 to 4 reduce drowning risk by 88% in that age group. Life jackets are required for all water activities beyond a pool with immediate adult supervision.</p>
+
+  <ul>
+    <li><strong>Pool safety:</strong> Four-sided fencing with a self-closing, self-latching gate reduces pool drowning risk by 83%</li>
+    <li><strong>Swim lessons:</strong> The AAP recommends swim lessons starting at age 1 when families have pool or water access. Skills-based swim programs reduce risk significantly</li>
+    <li><strong>Life jackets:</strong> Required on all boats and open water. Inflatable arm floaties are not a substitute — they do not keep an unconscious child face-up</li>
+    <li><strong>Supervision:</strong> Designate one adult as the "water watcher" — no phones, no conversations during watch duty</li>
+  </ul>
+
+  <h2>What "stranger safety" lessons are appropriate for this age?</h2>
+
+  <p class="answer-first">The AAP recommends teaching "body safety" and "safe adult" rules rather than the traditional "stranger danger" approach, which is confusing for children and ineffective (AAP, 2022). Teach children their full name, home address, and a parent's phone number. Teach them that no adult should ask a child to keep secrets from their parents. Practice what to do when separated from you in a public place. Role-play with specific scenarios rather than abstract rules.</p>
+
+  <p>Practical lessons for this age:</p>
+  <ul>
+    <li>Teach your full name, address, and one parent's phone number — practice until automatic</li>
+    <li>"No adult should ask you to keep secrets from your parents" — this is the core rule for abuse prevention</li>
+    <li>"If you get separated from me, find a store employee or a mom with children and ask for help"</li>
+    <li>"Your body belongs to you" — use correct anatomical terms; teach the difference between safe and unsafe touch</li>
+    <li>Practice: "What would you do if someone you don't know said they'd take you to get ice cream?"</li>
+  </ul>
+
+  <h2>When can my child walk to school or play outside without supervision?</h2>
+
+  <p class="answer-first">Age 5 to 6 is too young for unaccompanied outdoor play beyond a fenced backyard with an adult nearby in most situations (AAP, 2022). Children this age cannot reliably judge vehicle speeds, understand all traffic safety rules, or handle unexpected situations. Walking to school alone or playing unsupervised in front yards is developmentally appropriate closer to ages 8 to 10 for most children, depending on the specific route, neighborhood, and the child's demonstrated judgment.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 5 to 6 Year Old Safety</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

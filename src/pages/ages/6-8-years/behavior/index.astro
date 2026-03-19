@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '6–8 Year Old Behavior: Emotions, Rules, and Growing Independence';
+const description = 'Understanding behavior and emotional development in 6 to 8 year olds — why kids this age test limits, lie, get anxious about school, and how to support emotional regulation, with AAP guidance.';
+
+const faqs = [
+  {
+    question: 'Should I be worried that my 8-year-old is afraid of the dark?',
+    answer: 'Fear of the dark is common through middle childhood. About 20% of children still report nighttime fears at age 8 (Muris et al., 2000). By this age, most children understand intellectually that monsters are not real but still feel genuine fear at night. A nightlight, consistent bedtime routine, and validating the fear without feeding it usually help. If fear of the dark prevents sleep or causes significant distress beyond brief reassurance, discuss it with your pediatrician.'
+  },
+  {
+    question: 'Why does my 7-year-old lie, and how should I respond?',
+    answer: 'Lying at age 6 to 8 is extremely common and serves specific developmental purposes: avoiding punishment, managing social situations, protecting feelings (of self or others), and testing the power of words. The AAP recommends responding with calm, clear consequences rather than lengthy lectures or shame — which increase rather than decrease lying in children. Model honesty consistently, and praise truth-telling even when the truth is uncomfortable.'
+  },
+  {
+    question: 'Is it normal for my 6-year-old to say "I hate you" when angry?',
+    answer: 'Yes. Children ages 6 to 8 have larger emotional experiences than their language can express, so they reach for the most intense words they know. "I hate you" usually means "I am so angry right now and I don\'t have better words." Respond calmly ("I can see you\'re really angry") rather than reacting to the content. After they calm down, address the phrase directly: "In our family, even when we\'re angry, we don\'t use those words. Let\'s find better ways to say \'I\'m angry.\'"'
+  },
+  {
+    question: 'My 7-year-old is a sore loser. How do I help?',
+    answer: 'Losing gracefully is a skill that takes years to develop and is genuinely difficult for children this age. The competitive drive that makes children try hard is the same drive that makes losing painful. Practice matters: play low-stakes games at home and model calm responses to losing yourself. Validate the feeling ("Losing is frustrating") before coaching the behavior ("And we still say good game"). Most children develop better sportsmanship between ages 8 and 10 as emotional regulation matures.'
+  },
+  {
+    question: 'Is my 6-year-old too young for chores?',
+    answer: 'No. Age-appropriate chores from age 6 build competence, responsibility, and family contribution — all of which support healthy development. At ages 6 to 8, developmentally appropriate chores include: making their bed, setting the table, feeding pets, sorting laundry, emptying the dishwasher, and cleaning their room with guidance. The AAP supports assigning regular household responsibilities as a way to build the sense of industry — feeling capable and contributing — that is a key developmental task of middle childhood.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/behavior/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/behavior/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '6–8 Years', href: '/ages/6-8-years/' }, { label: 'Behavior & Emotions' }]}>
+
+  <h1>6–8 Year Old Behavior: Emotions, Rules, and Growing Independence</h1>
+
+  <p class="answer-first">Children ages 6 to 8 are developing the emotional regulation skills that will serve them for life — and they are clearly not done yet. The AAP describes this period as a time when children move from externally regulated behavior (following rules because adults tell them to) toward internally regulated behavior (following rules because they have internalized them) (AAP, 2022). This transition involves testing, pushing back, and occasional meltdowns. It is working as designed.</p>
+
+  <h2>Why do 6 to 8 year olds argue and push back so often?</h2>
+
+  <p class="answer-first">Children ages 6 to 8 argue because they are developing logical reasoning and discovering that they can construct counterarguments. Where a 3-year-old melts down from pure emotion, a 7-year-old argues from logic — often with surprising sophistication. The AAP notes that this argumentativeness is actually a cognitive milestone (AAP, 2022). Acknowledge the argument ("You make a fair point"), then hold the boundary ("And the answer is still no, because..."). Brief explanations are appropriate; lengthy debates are not.</p>
+
+  <p>Effective strategies for this age:</p>
+  <ul>
+    <li>Acknowledge their perspective before stating your decision</li>
+    <li>Offer genuine choices within non-negotiable limits</li>
+    <li>Explain your reasons briefly — "because I said so" loses effectiveness at this age</li>
+    <li>Follow through consistently — inconsistency fuels more arguments, not fewer</li>
+    <li>Pick battles carefully; focus on safety and core values</li>
+  </ul>
+
+  <h2>How does emotional regulation develop between ages 6 and 8?</h2>
+
+  <p class="answer-first">Emotional regulation — the ability to manage and express emotions appropriately — improves significantly between ages 6 and 8, but is still far from mature. Children this age can name their emotions more accurately, use words rather than physical aggression more often, and recover from upsets more quickly than at ages 3 to 5. They still melt down when tired, hungry, or overwhelmed — and the intensity of middle childhood emotions often surprises parents who expected more control by this age (AAP, 2022).</p>
+
+  <p>Signs of healthy emotional development at this age:</p>
+  <ul>
+    <li>Uses words to express frustration more often than physical aggression</li>
+    <li>Can calm down within 15 to 20 minutes of a meltdown with support</li>
+    <li>Shows genuine empathy — comforts others, acknowledges when they have hurt someone</li>
+    <li>Recognizes multiple emotions at once ("I'm happy AND nervous about the play")</li>
+    <li>Begins to distinguish between what they feel and what they choose to do with that feeling</li>
+  </ul>
+
+  <h2>What is school refusal, and is it normal at this age?</h2>
+
+  <p class="answer-first">School refusal — resistance to attending school, ranging from complaints and stomachaches to complete refusal — affects about 5% of school-age children and often begins or intensifies around ages 6 to 8 when academic and social demands increase (AAP, 2022). Brief school reluctance at the start of a school year is normal. Persistent refusal, physical symptoms (stomachaches, headaches) that resolve on weekends, and significant distress around school attendance warrant evaluation for anxiety, social difficulties, or bullying.</p>
+
+  <p>Causes and responses:</p>
+  <ul>
+    <li><strong>Separation anxiety:</strong> Common root cause, especially at ages 6 to 7. Graduated exposure (small separations that succeed) combined with reassurance works better than avoidance.</li>
+    <li><strong>Social difficulties:</strong> Bullying, peer rejection, or friendship problems. Investigate with school staff, not just the child's report.</li>
+    <li><strong>Academic anxiety:</strong> Fear of failure, difficulty keeping up, or unidentified learning differences. Request a school evaluation if academic struggles are present.</li>
+    <li><strong>General anxiety:</strong> Persistent school avoidance is a common presentation of childhood anxiety disorders. Talk to your pediatrician if it lasts more than 2 weeks.</li>
+  </ul>
+
+  <h2>How do I handle sibling conflict between a 6-year-old and a younger sibling?</h2>
+
+  <p class="answer-first">Sibling conflict is among the most frequent behavioral concerns parents report for children ages 6 to 8. The AAP notes that sibling conflict, while exhausting, teaches negotiation, conflict resolution, and emotional regulation — skills that transfer directly to peer relationships (AAP, 2022). Avoid taking sides when possible; coach the conflict resolution process instead of resolving it for them. Set clear limits on physical aggression and unkind words without requiring children to feel friendly when they don't.</p>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 6 to 8 year old's behavior?</h2>
+    <p class="answer-first">Contact your pediatrician if your child shows persistent physical aggression (hitting, kicking, biting) that does not respond to consistent consequences, significant anxiety that prevents school attendance or typical activities, cruelty to animals or younger children, significant regression in behavior or skills, or if you suspect bullying — as target or perpetrator (AAP, 2022).</p>
+    <p>Additional behavioral red flags at this age:</p>
+    <ul>
+      <li>Persistent lying that does not improve with consequences</li>
+      <li>Setting fires or dangerous fascination with fire</li>
+      <li>Extreme separation anxiety at age 7 or 8 (mild at 6 is still common)</li>
+      <li>Persistent physical complaints (stomachaches, headaches) with no medical cause — often anxiety</li>
+      <li>Rapid escalation to extreme emotional reactions with very little provocation</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 6 to 8 Year Old Behavior</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

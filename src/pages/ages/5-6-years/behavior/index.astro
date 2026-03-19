@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '5–6 Year Old Behavior: What\'s Normal and What to Watch For';
+const description = 'Guide to behavior and emotional development for 5 to 6 year olds — tantrums, rule-testing, lying, aggression, anxiety, and what the AAP says about supporting self-regulation.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 5-year-old to still have tantrums?',
+    answer: 'Yes. Tantrums peak around ages 2 to 3 but persist for many children into kindergarten. At age 5 to 6, meltdowns often trigger when children are tired, hungry, overstimulated, or facing a task beyond their current emotional regulation capacity. The frequency and intensity should be declining from age 3. If tantrums are increasing rather than decreasing, or if they last longer than 20 minutes regularly, discuss it with your pediatrician.'
+  },
+  {
+    question: 'Why does my 5-year-old lie, and should I be worried?',
+    answer: 'Lying at age 5 to 6 is common and reflects cognitive development, not a character flaw. Children this age understand the concept of truth but are still learning self-control and consequences. Most lying at this age falls into three categories: avoiding punishment, making themselves sound more interesting, or protecting a friend. Consistent, calm consequences — not shame — are the most effective response. Persistent, elaborate lying that shows no improvement through age 7 warrants a conversation with your pediatrician.'
+  },
+  {
+    question: 'Is it normal for my 6-year-old to hit or be physically aggressive?',
+    answer: 'Some physical aggression at age 5 to 6 is within the range of typical behavior — children at this age still have developing impulse control and may hit when frustrated. The concern threshold is frequency, severity, and trajectory. Physical aggression that is frequent, targets specific peers, or is escalating rather than decreasing warrants discussion with your pediatrician. The AAP recommends addressing physical aggression directly with consistent, calm consequences and teaching alternative emotional expression.'
+  },
+  {
+    question: 'My 5-year-old is terrified of the dark. Is that normal?',
+    answer: 'Yes. Fear of the dark is among the most common childhood fears, peaking between ages 4 and 6. It is rooted in normal cognitive development: children this age have active imaginations but cannot yet reliably distinguish fantasy from reality in high-arousal situations. A nightlight, a consistent bedtime routine, and validating the fear without reinforcing avoidance are the most effective responses. Most children outgrow this fear by age 7 to 8.'
+  },
+  {
+    question: 'Is it normal for my 5-year-old to be bossy with friends?',
+    answer: 'Bossiness is common at this age as children learn to direct social play and advocate for what they want. Children ages 5 to 6 are learning the difference between leadership and coercion — a nuanced social skill that takes years to develop. Some bossiness is developmentally normal. If your child consistently alienates peers and cannot negotiate or compromise, work with them on perspective-taking ("How do you think Emma feels when you tell her what to do?") and consider discussing it at your next well-child visit.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/behavior/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/5-6-years/behavior/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '5–6 Years', href: '/ages/5-6-years/' }, { label: 'Behavior & Emotions' }]}>
+
+  <h1>5–6 Year Old Behavior: What's Normal and What to Watch For</h1>
+
+  <p class="answer-first">Children ages 5 to 6 are developing self-regulation, the ability to manage emotions and impulses in socially acceptable ways. This process is incomplete — the prefrontal cortex, which governs impulse control, does not mature until the mid-20s. The AAP identifies self-regulation as the behavioral milestone that most predicts kindergarten success and long-term social-emotional health (AAP, 2022). Expect progress and setbacks both.</p>
+
+  <h2>Why does my 5-year-old have meltdowns at school but not at home?</h2>
+
+  <p class="answer-first">Many children hold it together at school — where expectations, peer observation, and novelty demand maximum self-control — and then release at home with a trusted caregiver. This "after-school restraint collapse" is common and reflects healthy attachment, not behavior problems (AAP, 2022). Your child treats home as a safe space to release accumulated stress. A low-demand transition period after school (snack, outdoor time, quiet play) significantly reduces the intensity of these collapses.</p>
+
+  <p>What helps:</p>
+  <ul>
+    <li>Provide a predictable after-school routine with minimal demands for the first 30 to 60 minutes</li>
+    <li>Offer a snack immediately — hunger is a common trigger</li>
+    <li>Reduce screen time right after school, which raises arousal rather than lowers it</li>
+    <li>Physical movement (playground, backyard) helps regulate stress hormones</li>
+  </ul>
+
+  <h2>How should I handle tantrums in a 5 or 6 year old?</h2>
+
+  <p class="answer-first">At age 5 to 6, effective tantrum management shifts from pure distraction (which works better at age 2 to 3) toward emotional coaching — naming the feeling, validating the experience, and then problem-solving after the child is calm. The AAP recommends staying calm yourself, not negotiating during the meltdown, and reconnecting warmly after it ends (AAP, 2022). Consistent, predictable responses reduce tantrum frequency over time.</p>
+
+  <p>A practical sequence:</p>
+  <ol>
+    <li>Ensure safety — if the child is physically safe, step back slightly to avoid escalating</li>
+    <li>Stay calm — your calm nervous system regulates theirs through co-regulation</li>
+    <li>Name the feeling: "I can see you're really angry right now"</li>
+    <li>Wait — do not reason, lecture, or problem-solve until the meltdown has passed</li>
+    <li>Reconnect warmly after: "That was really hard. I love you. Can we talk about what happened?"</li>
+    <li>Problem-solve together when both of you are calm</li>
+  </ol>
+
+  <h2>Is it normal for my 5-year-old to test limits constantly?</h2>
+
+  <p class="answer-first">Yes. Limit-testing is how children this age map their social world and confirm that caregivers provide consistent structure. Between ages 5 and 7, children move from external rule-following (I follow rules because adults tell me to) toward internalized rule-following (I follow rules because I understand why they exist). This transition requires testing the rules — repeatedly (AAP, 2022). Consistency from caregivers, not punishment intensity, is what teaches internalized rules.</p>
+
+  <p>What works:</p>
+  <ul>
+    <li>State limits clearly and simply: "In our family, we..." rather than lengthy explanations</li>
+    <li>Follow through consistently — inconsistency encourages more testing, not less</li>
+    <li>Acknowledge compliance explicitly: "Thank you for stopping when I asked. That was hard."</li>
+    <li>Offer genuine choices within safe limits to reduce power struggles</li>
+  </ul>
+
+  <h2>What common fears are normal for 5 and 6 year olds?</h2>
+
+  <p class="answer-first">Fear of the dark, monsters, loud noises, and separation from caregivers are among the most common fears at ages 5 to 6 (AAP, 2022). These fears are rooted in a developmental mismatch: imagination is expanding rapidly, but the ability to distinguish fantasy from reality in emotionally activated states is still developing. Most of these fears peak between ages 4 and 7 and resolve without treatment.</p>
+
+  <p>Common fears by age and typical trajectory:</p>
+  <ul>
+    <li><strong>Dark and monsters:</strong> Peak at 4 to 6. Nightlights, consistent routines, and validating without reinforcing avoidance help. Most resolve by age 7 to 8.</li>
+    <li><strong>Separation anxiety:</strong> Mild separation anxiety at the start of kindergarten is normal. Distress that persists beyond 4 to 6 weeks of school, or prevents school attendance, warrants professional evaluation.</li>
+    <li><strong>Death:</strong> Children ages 5 to 6 often become aware of death and ask direct, sometimes jarring questions. Answer honestly and simply, appropriate to their developmental level.</li>
+    <li><strong>Medical procedures:</strong> Fear of shots, blood, and doctors is common. Prepare children honestly ("It will hurt for a moment"), avoid overpromising, and praise courage after.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my child's behavior?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Contact your pediatrician if your 5-to-6-year-old shows physical aggression that is frequent, escalating, or targets specific children; has intense fears that prevent school attendance or sleep; shows anxiety that has increased rather than decreased from preschool; has lost skills they previously had; or is consistently rejected by peers despite trying to connect (AAP, 2022).</p>
+    <p>Additional behavioral red flags:</p>
+    <ul>
+      <li>Persistent, intense tantrums lasting more than 20 minutes with no improvement over months</li>
+      <li>Cruelty to animals or younger children</li>
+      <li>Extreme difficulty transitioning between activities or environments</li>
+      <li>Behaviors that are very different at home versus school (concerns from teachers about behavior not seen at home, or vice versa, are worth investigating)</li>
+      <li>Any regression in toileting after being reliably trained for more than 6 months</li>
+    </ul>
+    <p>Behavioral support is most effective when started early. Ask your pediatrician about referrals to a child psychologist or behavioral therapist if you have ongoing concerns.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 5 to 6 Year Old Behavior</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
