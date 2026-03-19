@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '14–18 Year Old Milestones: High School Adolescent Development';
+const description = 'Developmental milestones for teens ages 14 to 18 — completing puberty, identity consolidation, cognitive maturity, relationship development, and preparing for adulthood, with AAP guidance.';
+
+const faqs = [
+  {
+    question: 'When does the adolescent brain finish developing?',
+    answer: 'The prefrontal cortex — responsible for impulse control, long-term planning, and complex decision-making — does not fully mature until the mid-20s, typically around age 25 (AAP, 2022). Teens ages 14 to 18 can reason abstractly and understand consequences when calm, but their decision-making systems under emotional arousal or peer pressure remain more reactive and less regulated than adult systems. This is why legally adult behavior (voting at 18, alcohol at 21) is staged — legal systems implicitly recognize this developmental reality.'
+  },
+  {
+    question: 'What are the physical milestones of late adolescence?',
+    answer: 'Girls typically reach adult height by age 14 to 15, with physical maturation essentially complete by 17. Boys continue growing into their late teens — many are not at full adult height until 17 to 18. Both sexes reach essentially adult body composition by 18, though muscle mass (especially in boys) continues building into the early 20s. Acne, which often peaks in mid-adolescence, typically improves significantly by the late teens for most (though not all) individuals (AAP, 2022).'
+  },
+  {
+    question: 'Is it normal for my 16-year-old to still not know what they want to do with their life?',
+    answer: 'Yes. Identity formation is a process, not an event. The AAP and developmental psychologist Erik Erikson describe late adolescence (ages 15 to 21) as the primary period of identity consolidation — not identity completion (AAP, 2022). Most healthy 16-year-olds are still experimenting with values, interests, and future directions. Expecting a 16-year-old to have a stable career identity is developmentally premature. What matters is that they are engaged in exploration — trying things, reflecting, learning who they are — not that they have arrived.'
+  },
+  {
+    question: 'What social milestones should a 17-year-old have reached?',
+    answer: 'By age 17, most teens have one or more close, emotionally significant friendships, have some experience with romantic relationships, and are developing a more stable sense of personal identity. Peer conformity — dressing and acting like the group — moderates significantly between ages 14 and 17 as identity becomes more secure. Teens who have developed genuine close friendships, can navigate conflict with peers, and have some sense of their own values are on a healthy developmental trajectory (AAP, 2022).'
+  },
+  {
+    question: 'Is it normal for my 15-year-old to prefer spending time with friends over family?',
+    answer: 'Yes. Prioritizing peer relationships over family is the central social task of mid-adolescence. It is how teens develop the independence they will need as young adults. The AAP notes that teens who maintain some family connection — through shared meals, family routines, and brief but regular parental check-ins — navigate adolescence better than those who are fully disconnected from family (AAP, 2022). The goal is not family-centeredness, but a maintained attachment that teens can lean on when they need to.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/milestones/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/milestones/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '14–18 Years', href: '/ages/14-18-years/' }, { label: 'Milestones' }]}>
+
+  <h1>14–18 Year Old Milestones: High School Adolescent Development</h1>
+
+  <p class="answer-first">Between ages 14 and 18, adolescents move from the physical and emotional turbulence of early adolescence toward a more consolidated identity and increasing readiness for adult autonomy. The AAP describes late adolescence as a period of identity consolidation — the active integration of one's values, relationships, experiences, and sense of self into a coherent whole (AAP, 2022). Physical maturation largely completes; the brain continues developing into the mid-20s. Most of the visible behavioral progress of this period is cognitive and social, not physical.</p>
+
+  <h2>What physical milestones define ages 14 to 18?</h2>
+
+  <p class="answer-first">Between ages 14 and 18, physical maturation largely completes for both sexes. Girls typically reach adult height by ages 14 to 15. Boys continue growing until ages 17 to 18, with muscle mass continuing to build into the early 20s. Acne often improves in late adolescence for many teens. Brain development — specifically the prefrontal cortex governing impulse control and long-term planning — continues maturing until the mid-20s and is the most significant ongoing biological development of this period (AAP, 2022).</p>
+
+  <ul>
+    <li><strong>Girls:</strong> Adult height typically achieved by age 14 to 15; physical maturation complete by 17; reproductive system fully established</li>
+    <li><strong>Boys:</strong> Growth continues until ages 17 to 18; muscle mass builds into early 20s; voice fully settled; acne may persist through late teens</li>
+    <li><strong>Brain:</strong> Prefrontal cortex (impulse control, planning) continues maturing until the mid-20s — the most significant ongoing biological development</li>
+    <li><strong>Reproductive health:</strong> Sexually active teens need regular STI screening and access to contraception — discuss with your teen's pediatrician</li>
+  </ul>
+
+  <h2>What cognitive milestones matter most between ages 14 and 18?</h2>
+
+  <p class="answer-first">Between ages 14 and 18, teens develop increasingly sophisticated abstract reasoning, future orientation, and identity-based decision-making. Older teens (ages 16 to 18) think in more complex, nuanced ways about moral questions, social relationships, and their own future than early teens do. Cognitive self-regulation — the ability to inhibit impulses, sustain attention, and plan ahead — improves steadily through adolescence, though remains below adult levels until the mid-20s (AAP, 2022).</p>
+
+  <ul>
+    <li><strong>Ages 14 to 15:</strong> Abstract reasoning well-established; can consider multiple complex perspectives; future orientation emerging; identity still forming</li>
+    <li><strong>Ages 16 to 17:</strong> More stable identity; decreasing peer conformity; longer-range planning (college, career, relationships); improved self-regulation under stress</li>
+    <li><strong>Ages 17 to 18:</strong> Near-adult reasoning in familiar, low-stress domains; future orientation concrete (plans, applications, decisions); identity increasingly stable</li>
+  </ul>
+
+  <h2>What social-emotional milestones define ages 14 to 18?</h2>
+
+  <p class="answer-first">The primary social-emotional task of late adolescence is identity consolidation — developing a stable, coherent sense of self that integrates values, relationships, and aspirations. Peer conformity, which peaks in early adolescence, moderates as identity becomes more secure: 17-year-olds are meaningfully less driven by peer approval than 13-year-olds. Romantic relationships become more emotionally significant. Friendships deepen. Family relationships shift from authority to consultation (AAP, 2022).</p>
+
+  <ul>
+    <li>Decreasing peer conformity as identity becomes more secure (ages 15 to 18)</li>
+    <li>Deepening, emotionally significant friendships and romantic relationships</li>
+    <li>More stable sense of personal values — not just inherited from family or adopted from peer group</li>
+    <li>Beginning to think concretely about adult roles: career direction, relationship values, independence</li>
+    <li>Parental relationship shifts from manager-managed to increasingly mutual</li>
+    <li>Empathy deepens — capacity for genuine perspective-taking and emotional support</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 14 to 18 Year Old Milestones</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

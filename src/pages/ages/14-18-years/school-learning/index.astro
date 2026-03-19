@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '14–18 Year Old School and Learning: High School Academics and College Prep';
+const description = 'Academic expectations for high schoolers ages 14 to 18 — course rigor, GPA, college prep, learning differences, study strategies, AP and IB, and managing academic stress, with AAP guidance.';
+
+const faqs = [
+  {
+    question: 'How do I know if my high schooler is in the right courses?',
+    answer: 'Course placement should match ability and ambition — not peer pressure or parental expectation. The AAP recommends that course load decisions consider the full picture: current grades, teacher recommendations, extracurricular commitments, sleep, and mental health (AAP, 2022). A student consistently earning Bs in honors classes who is sleeping 8 hours and engaged in life outside school is in a better situation than one earning As in AP classes on 6 hours of sleep with chronic stress. Rigor matters, but not at the cost of health.'
+  },
+  {
+    question: 'Is it normal for my 15-year-old to procrastinate on everything?',
+    answer: 'Procrastination in adolescents often reflects executive function limitations (the prefrontal cortex governing planning and initiation is still developing), task anxiety (avoiding work that feels difficult or overwhelming), or unclear task breakdown (not knowing how to start). The AAP notes that procrastination is a skills issue as much as a motivation issue (AAP, 2022). Effective interventions: breaking tasks into the smallest possible first steps, using time-blocking rather than to-do lists, and addressing any underlying anxiety or learning differences that make starting work feel threatening.'
+  },
+  {
+    question: 'Should my 16-year-old be doing test prep for the SAT or ACT?',
+    answer: 'Modest test prep shows meaningful score improvements — the College Board reports that students who use free Khan Academy SAT prep for 20 hours gain an average of 115 points (College Board, 2017). Extensive commercial test prep programs costing thousands of dollars show much smaller marginal gains over free alternatives. The most effective strategy is: take a practice test to identify weak areas, practice those specific skills, and take the actual test early in junior year to allow retakes. Most competitive colleges now have test-optional admissions policies, making test scores one factor among many.'
+  },
+  {
+    question: 'My 17-year-old is completely burned out from school. What should I do?',
+    answer: 'Academic burnout in high schoolers — characterized by exhaustion, cynicism toward school, and a sense of inefficacy — is increasingly common and is associated with high course loads, chronic sleep deprivation, and overscheduling (AAP, 2022). Burnout is different from laziness: it is genuine exhaustion from sustained overload. Address it structurally: evaluate sleep (the most common treatable cause), assess extracurricular load, consider dropping one commitment rather than white-knuckling through, and discuss with your pediatrician whether depression is contributing.'
+  },
+  {
+    question: 'How important is GPA compared to other factors for college admissions?',
+    answer: 'GPA remains the single most heavily weighted factor in college admissions at most institutions (NACAC, 2022). Course rigor — taking challenging courses and doing well in them — matters more than either GPA or test scores alone. Extracurricular activities, essays, and recommendations matter significantly at selective institutions where most applicants have high GPAs. For the majority of US colleges (most of which admit over 60% of applicants), a solid GPA in challenging coursework provides admission to a wide range of appropriate options.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '14–18 Years', href: '/ages/14-18-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>14–18 Year Old School and Learning: High School Academics and College Prep</h1>
+
+  <p class="answer-first">High school academics — the 4-year span covering 9th through 12th grade — carry the highest-stakes academic pressure most teens have faced. The AAP identifies chronic stress, sleep deprivation, and burnout as the most common health consequences of the modern high school academic environment, and recommends that families evaluate the full cost of academic intensity (AAP, 2022). GPA and course rigor matter for college and career outcomes; so do sleep, mental health, and having time for pursuits outside of academics. These goals are not mutually exclusive — but they require deliberate tradeoffs.</p>
+
+  <h2>What are the academic expectations for each year of high school?</h2>
+
+  <p class="answer-first">High school coursework varies significantly by school and state, but the Common Core and College and Career Readiness standards set broad expectations. 9th grade introduces algebra 2 or geometry, literary analysis, argumentative writing, and beginning foreign language. 11th grade is typically the highest-rigor year — the most APs or honors courses, the SAT or ACT, and the most demanding expectations for independent academic work. 12th grade shifts toward application and transition (Common Core, College Board).</p>
+
+  <p>Grade-level expectations:</p>
+  <ul>
+    <li><strong>9th grade (age 14 to 15):</strong> Geometry or Algebra 2, literary analysis, 5-paragraph argument essays, biology or physical science, world history</li>
+    <li><strong>10th grade (age 15 to 16):</strong> Algebra 2 or pre-calculus, more complex writing and research, chemistry or physics, world history or US history</li>
+    <li><strong>11th grade (age 16 to 17):</strong> AP or honors courses, SAT/ACT preparation and testing, college research, most demanding academic year</li>
+    <li><strong>12th grade (age 17 to 18):</strong> College applications, senior thesis or capstone projects, transition planning, often slightly reduced academic pressure</li>
+  </ul>
+
+  <h2>How do I support a teen who is struggling academically without doing their work?</h2>
+
+  <p class="answer-first">The AAP recommends maintaining parental involvement in high school academics through awareness and accessibility, not through management of individual assignments (AAP, 2022). Regular brief check-ins (10 minutes, once weekly) that address upcoming deadlines, current grades, and areas of difficulty keep parents informed without undermining teen ownership. Providing access to support resources — tutoring, office hours, academic counseling — is the parent's role; using those resources is the teen's.</p>
+
+  <ul>
+    <li>Weekly check-ins: "What's coming up this week? Any tests or big deadlines?" — brief, not interrogating</li>
+    <li>Monitor grades through school portals — openly, not covertly — to identify problems early</li>
+    <li>Connect to resources: tutor, teacher office hours, study groups, academic counseling</li>
+    <li>Distinguish inability from unwillingness — persistent inability to complete work warrants evaluation, not just consequences</li>
+    <li>Advocate with schools when needed — ADHD, learning differences, and anxiety all qualify for accommodations under federal law</li>
+  </ul>
+
+  <h2>What does healthy academic stress look like versus burnout?</h2>
+
+  <p class="answer-first">Healthy academic stress is temporary, contextual, and motivating — a teen feels anxious before an exam, prepares, takes it, and returns to baseline. Burnout is chronic and depleting — persistent exhaustion, cynicism about school, and a sense of being unable to perform regardless of effort (Maslach, AAP, 2022). Burnout is caused by sustained overload without recovery. Treatment requires structural change (reducing course load, improving sleep, reducing extracurriculars), not willpower. If your teen shows signs of burnout, treat it like a health problem, not a character issue.</p>
+
+  <h2>When should college preparation actually start?</h2>
+
+  <p class="answer-first">Effective college preparation starts in 9th grade — not with test prep, but with course selection, GPA building, and exploring genuine interests. The most important 9th-grade action is choosing challenging courses appropriate to the student's ability and taking them seriously. Test preparation is most productive in 10th and 11th grade. College research and application preparation belong primarily to 11th and 12th grade (College Board, NACAC, 2022). Starting "college prep" programs in middle school is typically neither necessary nor beneficial.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 14 to 18 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

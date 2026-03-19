@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '14–18 Year Old Behavior: Teen Emotions, Independence, and Risk';
+const description = 'Understanding teen behavior ages 14 to 18 — healthy risk-taking vs. dangerous risk, depression signs, relationship conflicts, independence battles, and when to involve professional help.';
+
+const faqs = [
+  {
+    question: 'Is my 16-year-old\'s moodiness still normal, or is it depression?',
+    answer: 'Typical moodiness in older teens is situational and episodic — triggered by specific events, with periods of normal functioning between episodes. Depression is characterized by persistent low mood or irritability lasting 2 or more weeks, loss of interest in everything previously enjoyed, significant changes in sleep and appetite, and impairment in school and social functioning (DSM-5). The AAP recommends depression screening at every well-child visit starting at age 12. If you are unsure, a pediatrician visit is always appropriate — you are not "overreacting."'
+  },
+  {
+    question: 'My 17-year-old wants to make all their own decisions. How do I handle this?',
+    answer: 'Late adolescence is the appropriate time to increase decision-making autonomy progressively. The AAP recommends moving from directive parenting (you decide what the teen does) to consultative parenting (you advise, they decide within safety parameters) during ages 15 to 18 (AAP, 2022). Pick limits carefully: safety (driving, substances, curfew) remains non-negotiable. Preferences (clothing, hair, friend choices, hobbies) should progressively belong to the teen. Every non-safety limit you hold is capital spent — spend it on what matters.'
+  },
+  {
+    question: 'Is it normal for my 15-year-old to experiment with identity — different styles, friend groups, or beliefs?',
+    answer: 'Yes. Identity experimentation is the primary developmental work of adolescence. Teens who try on different clothing styles, social groups, belief systems, and future directions are doing exactly what healthy adolescent development requires. The AAP notes that identity exploration — including religious questioning, political development, and changing friend groups — is how teens develop a stable, internalized adult identity (AAP, 2022). The concern is not experimentation; it is the absence of any exploration, or experimentation that is dangerous rather than merely different.'
+  },
+  {
+    question: 'My 16-year-old and I argue constantly. Is our relationship normal?',
+    answer: 'Conflict between parents and teens is most intense during mid-adolescence (ages 13 to 16) and typically decreases through ages 17 to 18 as identity consolidates (AAP, 2022). The content of arguments matters more than their frequency: arguments about autonomy, preferences, and rules are normal. Arguments that include contempt, abuse, or complete breakdown of basic respect warrant professional support. Maintaining warmth alongside conflict — "I love you even when we disagree" — is the most important variable for long-term relationship quality.'
+  },
+  {
+    question: 'How do I talk to my 17-year-old about healthy relationships and consent?',
+    answer: 'Conversations about healthy relationships and consent are most effective when they begin before teens are in relationships — ideally in early adolescence. By ages 16 to 17, teens benefit from specific, concrete frameworks: healthy relationships involve mutual respect, open communication, and the ability to say no without fear of the partner\'s reaction. Consent is ongoing, enthusiastic, and freely given — not assumed, pressured, or negotiated. The AAP recommends parents initiate these conversations directly rather than delegating them entirely to schools (AAP, 2022).'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/behavior/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/behavior/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '14–18 Years', href: '/ages/14-18-years/' }, { label: 'Behavior & Emotions' }]}>
+
+  <h1>14–18 Year Old Behavior: Teen Emotions, Independence, and Risk</h1>
+
+  <p class="answer-first">Teen behavior between ages 14 and 18 covers a wider developmental range than any other 4-year window in childhood. A 14-year-old and an 18-year-old inhabit meaningfully different developmental realities. The AAP frames the parenting task for this period as a gradual transition from "manager" to "consultant" — progressively handing decision-making authority to the teen as they demonstrate judgment, while maintaining firm limits on safety-related domains (AAP, 2022). Holding too many limits too long undermines trust; holding too few leaves teens without structure they still need.</p>
+
+  <h2>How do I distinguish healthy risk-taking from dangerous risk-taking in my teen?</h2>
+
+  <p class="answer-first">Healthy adolescent risk-taking — trying new activities, joining new social groups, expressing unconventional views, exploring identity — is how teens develop competence and identity. Dangerous risk-taking involves behaviors with consequences that are serious, irreversible, or developmentally harmful: substance use, reckless driving, unprotected sex, and self-harm are the major categories (AAP, 2022). The parenting task is allowing and supporting healthy risk while maintaining firm limits on dangerous risk. Treating all risk equally — making the same big deal of a new haircut and drinking — teaches teens that parental judgment cannot be trusted.</p>
+
+  <p>Healthy vs. concerning risk:</p>
+  <ul>
+    <li><strong>Healthy:</strong> New friend groups, changing style or appearance, trying a new sport or activity, expressing unconventional opinions, romantic relationships</li>
+    <li><strong>Monitor:</strong> Extreme social withdrawal, dropping all previous interests and friends simultaneously, overnight personality changes</li>
+    <li><strong>Concerning:</strong> Substance use, reckless driving (including as a passenger), unprotected sexual activity, self-harm, significant truancy</li>
+    <li><strong>Emergency:</strong> Suicidal ideation, apparent substance dependence, severe eating disorder, complete academic collapse with withdrawal from all support</li>
+  </ul>
+
+  <h2>How do I stay connected to my teen when they push me away?</h2>
+
+  <p class="answer-first">Teens who feel genuinely connected to parents are more likely to seek parental input in difficult situations, report mental health concerns, and make safer choices when peer pressure peaks (AAP, 2022). Connection at this age looks different than at age 8: teens respond to side-by-side time (driving, cooking, watching a show together) better than scheduled "let's talk" conversations. Brief, regular contact beats infrequent intense conversations. Listening without immediately problem-solving or redirecting keeps communication open.</p>
+
+  <ul>
+    <li>Use car time — teens talk more readily when not making eye contact and when there is a defined end to the conversation</li>
+    <li>Ask about their world specifically: their friend by name, their current interest, their current teacher — not general "how was school"</li>
+    <li>Be available without demanding — teens come to parents when they feel safe, not when they feel obligated</li>
+    <li>Repair quickly after conflict — "I'm sorry I said that. I love you. Can we start over?" keeps the door open</li>
+    <li>Know their friends by name — this signals you care about their actual life</li>
+  </ul>
+
+  <h2>How do I recognize mental health crises in a teenager?</h2>
+
+  <p class="answer-first">Mental health crises in teens can develop gradually or appear suddenly after a triggering event. The AAP identifies depression, anxiety disorders, eating disorders, and substance use as the major mental health risks for ages 14 to 18, with peak onset during this window (AAP, 2022). Warning signs that require immediate action: any mention of suicidal thoughts or not wanting to be alive; self-harm; sudden, complete withdrawal from all people and activities; severe weight loss; or signs of substance dependence.</p>
+
+  <div class="callout">
+    <h2>When should I seek professional help for my teen's behavior?</h2>
+    <p class="answer-first">Contact your pediatrician if your teen shows persistent depression or anxiety for 2 or more weeks, significant functional impairment in school or social life, signs of eating disorder, substance use beyond experimentation, or complete withdrawal from family and all activities (AAP, 2022).</p>
+    <p>Seek emergency help immediately for:</p>
+    <ul>
+      <li>Any mention of suicidal thoughts, plans, or not wanting to be alive — call 988 or go to the nearest ER</li>
+      <li>Self-harm behaviors</li>
+      <li>Apparent acute substance intoxication</li>
+      <li>Psychotic symptoms: hallucinations, delusions, severe disorganized thinking</li>
+    </ul>
+    <p>Annual well-child visits through age 18 provide confidential time alone with your teen and include mental health screening. Encourage your teen to use this time to raise concerns they may not raise at home.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 14 to 18 Year Old Behavior</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

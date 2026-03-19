@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '12–14 Year Old School and Learning: Middle School to High School Academics';
+const description = 'Academic expectations for early teens ages 12 to 14 — 7th and 8th grade benchmarks, algebra readiness, managing school stress, executive function, and supporting learning through adolescence.';
+
+const faqs = [
+  {
+    question: 'What math should my 13-year-old be doing?',
+    answer: 'By 7th grade (age 12 to 13), most students in US schools are working with ratios, proportional relationships, negative numbers, and beginning algebraic expressions (Common Core). By 8th grade (age 13 to 14), the standard curriculum includes linear equations, functions, systems of equations, and geometry. Whether students are "on grade level," in accelerated algebra, or receiving math support depends significantly on school curriculum and individual pacing — not just developmental readiness. Ask the school math teacher what the expected progression is for your child\'s specific program.'
+  },
+  {
+    question: 'My 13-year-old hates school. Is that a phase or a problem?',
+    answer: 'Disengagement from school is extremely common in early adolescence — and potentially significant. The AAP identifies the middle school years (ages 11 to 14) as the period of highest academic disengagement risk (AAP, 2022). Brief "school is boring" complaints are typical. Persistent hatred of school that is accompanied by grade drops, social withdrawal, or physical symptoms (daily stomachaches, headaches on school days that resolve on weekends) warrants investigation: Is it academic difficulty? Social problems? A mismatch between teaching style and learning style? Anxiety?'
+  },
+  {
+    question: 'My 14-year-old spends 4 hours on homework every night. Is that too much?',
+    answer: 'The National Education Association\'s "10-minute rule" suggests no more than 10 minutes per grade level per night: a 9th grader (age 14) should have about 90 minutes of homework. Four hours suggests one of three things: the assignment load is excessive; the child has significantly below-grade-level processing speed (which may indicate a learning difference or ADHD); or the child is spending significant non-homework time during homework time. Document the actual time spent and content completed for two weeks, then bring this data to the teacher and your pediatrician.'
+  },
+  {
+    question: 'Should I let my 13-year-old drop a class they find hard?',
+    answer: 'Dropping a class is sometimes appropriate (if the placement is genuinely wrong for the student\'s level) and sometimes counterproductive (if it becomes a pattern of avoiding challenge). The AAP recommends discussing with the teacher and school counselor first: Is the difficulty level-appropriate challenge, or is this a class the student has been misplaced in? Is there support available (tutoring, accommodations) that has not been tried? Normalize appropriate challenge while taking seriously the difference between productive struggle and ongoing failure.'
+  },
+  {
+    question: 'How do I know if my 13-year-old\'s school struggles indicate a learning difference?',
+    answer: 'Learning differences become more visible in middle school as demands for independent reading, writing, and complex math increase. Signs in early teens include: consistent reading that is effortful and slow despite adequate instruction; significant gap between verbal sophistication and written output; inability to recall math facts after extensive practice; persistent organizational failure despite explicit teaching; and difficulty that does not improve with tutoring alone. Request a formal evaluation through the school (free under IDEA law) or through a private psychologist if you suspect a learning difference.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '12–14 Years', href: '/ages/12-14-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>12–14 Year Old School and Learning: Middle School to High School Academics</h1>
+
+  <p class="answer-first">Between ages 12 and 14 — the 7th and 8th grade years for most students — academic demands shift from content acquisition to analytical thinking, extended writing, and multi-step mathematical reasoning. The AAP identifies this as a high-risk period for academic disengagement: social pressures, puberty, sleep deprivation, and increased assignment complexity create a perfect storm for motivated children to disengage from learning (AAP, 2022). Parents who maintain involvement (without doing the work for their teens) and understand the academic landscape make the biggest difference.</p>
+
+  <h2>What are the academic expectations for 7th and 8th graders?</h2>
+
+  <p class="answer-first">By 7th grade (ages 12 to 13), most students work with ratios, proportions, negative numbers, and algebraic expressions; write argumentative essays with evidence and counterargument; analyze complex texts for author's purpose, bias, and structure; and conduct multi-source research with citations. By 8th grade (ages 13 to 14), most students handle linear equations and functions, geometry proofs, literary analysis, historical argumentation, and independent multi-week projects (Common Core State Standards).</p>
+
+  <p>7th grade academic benchmarks:</p>
+  <ul>
+    <li>Ratios, proportional relationships, percent problems, negative numbers</li>
+    <li>Algebraic expressions and basic equations</li>
+    <li>Argumentative writing with evidence, reasoning, and counterargument</li>
+    <li>Literary analysis: author's craft, theme, figurative language</li>
+    <li>Multi-source research with appropriate citation</li>
+  </ul>
+
+  <p>8th grade academic benchmarks:</p>
+  <ul>
+    <li>Linear equations, functions, and systems; beginning geometry proofs</li>
+    <li>Extended argumentative and informational writing</li>
+    <li>Historical thinking: cause/effect, perspective, primary source analysis</li>
+    <li>Scientific reasoning: hypothesis, experimental design, data interpretation</li>
+    <li>Independent management of multi-week projects across subjects</li>
+  </ul>
+
+  <h2>How does sleep deprivation affect school performance in early adolescents?</h2>
+
+  <p class="answer-first">Sleep deprivation is one of the most underestimated factors in early adolescent academic performance. The AAP recommends 8 to 10 hours for teens ages 13 to 18, but the average teen gets 6 to 7 hours on school nights due to biological sleep phase delay combined with early school start times (AAP, 2014). Research links chronic sleep deprivation in adolescents to impaired attention, reduced working memory, lower GPA, increased emotional reactivity, and higher rates of depression and anxiety — all of which directly impact school performance.</p>
+
+  <ul>
+    <li>Move devices out of the bedroom by 9:30 PM — blue light suppresses melatonin and delays sleep onset</li>
+    <li>Maintain consistent wake times even on weekends — sleeping in 3+ hours on Saturdays creates "social jet lag" that worsens Monday performance</li>
+    <li>Advocate for later school start times — the AAP has formally recommended no school starts before 8:30 AM for middle and high school students</li>
+    <li>Prioritize sleep over homework after 10 PM — a tired brain retains less than a rested one</li>
+  </ul>
+
+  <h2>How do I support my early teen's academic independence without doing their work?</h2>
+
+  <p class="answer-first">Academic independence in 7th and 8th grade requires scaffolding — external structures that support the executive function skills that are still developing. The AAP recommends parents maintain awareness of academic demands without micromanaging individual assignments (AAP, 2022). A weekly check-in (5 to 10 minutes, Sunday evening) covering upcoming tests and deadlines keeps parents informed without undermining the teen's ownership. Access to the school's online grade system — checked together, not covertly — maintains transparency without surveillance.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 12 to 14 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '14–18 Year Old Safety: Driving, Substances, Mental Health, and Teen Risk';
+const description = 'Safety guide for teens ages 14 to 18 — graduated driving laws, substance use prevention, mental health protection, sexual health, online safety, and what the AAP recommends.';
+
+const faqs = [
+  {
+    question: 'What are the safest rules for a newly licensed teen driver?',
+    answer: 'Newly licensed teen drivers (ages 16 to 17) have a crash risk nearly 4 times higher than drivers ages 20 and older (IIHS, 2022). The AAP recommends: no teen passengers for the first 6 months; no nighttime driving from 9 PM to 5 AM; no phone use (not even hands-free at first); and consistent parental review of the driving experience each week. Graduated Driver Licensing (GDL) laws, which most states have, restrict these conditions by law — but research shows parental rules on top of state laws further reduce crash risk (AAP, 2023).'
+  },
+  {
+    question: 'My 15-year-old says "everyone" drinks at parties. What should I do?',
+    answer: 'Not everyone drinks at teen parties, but alcohol is present at roughly 30% of high school parties (SAMHSA, 2021). The AAP recommends establishing clear family rules about parties (parents home, no alcohol, parental contact information confirmed) before the situation arises — not after (AAP, 2023). The most protective factor against early alcohol use is a direct, warm, ongoing parental conversation about expectations and risks. Give your teen specific scripts: "My parents drug test randomly" or "I have a thing in the morning" — face-saving exits that work.'
+  },
+  {
+    question: 'When can a teenager stay home alone overnight?',
+    answer: 'There is no universal age requirement for teens staying home overnight. Most 16-to-17-year-olds who have demonstrated reliable judgment in lower-stakes situations can manage brief overnight stays alone when a trusted adult is reachable and a clear plan for emergencies exists. The AAP recommends a graduated approach: brief daytime independence first, then evenings, then an overnight — expanding only as judgment is demonstrated (AAP, 2022). "Ready" is a behavior, not a birthday.'
+  },
+  {
+    question: 'How do I talk to my 16-year-old about sexual health and contraception?',
+    answer: 'The AAP recommends that sexual health conversations begin in early adolescence and continue through high school — not as a single "talk" but as ongoing, normalized discussions (AAP, 2022). By age 16, teens benefit from specific, factual information about contraception, STI prevention, consent, and healthy relationships. Teens whose parents discuss sexual health directly are more likely to delay sexual initiation, use contraception consistently when sexually active, and report sexual coercion to a trusted adult. Your pediatrician can provide reproductive health counseling and resources during confidential well-child visits.'
+  },
+  {
+    question: 'What should I know about teens and social media use?',
+    answer: 'Research links heavy social media use — particularly in girls ages 13 to 17 — to increased rates of depression, anxiety, and poor sleep quality (Twenge et al., 2018; Haidt & Rausch, 2023). The AAP recommends families set consistent limits on social media, keep devices out of bedrooms at night, and have ongoing conversations about social comparison, algorithmic content, and cyberbullying (AAP, 2023). Several surgeon general advisories have specifically highlighted social media risks for adolescent mental health. Monitoring does not need to be covert — open, stated visibility is more effective and less damaging to trust.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/safety/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/safety/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '14–18 Years', href: '/ages/14-18-years/' }, { label: 'Safety' }]}>
+
+  <h1>14–18 Year Old Safety: Driving, Substances, Mental Health, and Teen Risk</h1>
+
+  <p class="answer-first">For teens ages 14 to 18, the most significant safety risks are motor vehicle crashes (the leading cause of teen death in the US), substance use, mental health crises, and online harm. The CDC reports that 2,800 US teens ages 13 to 19 died in motor vehicle crashes in 2020 — and most were preventable with GDL laws and parental rules (CDC, 2022). The AAP's safety guidance for this age group emphasizes that restriction alone does not reduce risk; building judgment, skills, and open communication reduces it (AAP, 2022).</p>
+
+  <h2>What driving safety rules reduce teen crash risk?</h2>
+
+  <p class="answer-first">Newly licensed teen drivers ages 16 to 17 have nearly 4 times the crash risk of experienced adult drivers (IIHS, 2022). The highest-risk factors are: nighttime driving, passenger presence (each additional teen passenger doubles crash risk), and phone use. The AAP recommends parents enforce rules beyond what state GDL laws require: no teen passengers for the first 6 months, no nighttime driving until 6 months of incident-free driving, and no phone use — not even hands-free (AAP, 2023).</p>
+
+  <p>Evidence-based rules for new teen drivers:</p>
+  <ul>
+    <li><strong>No passengers:</strong> Each additional teen passenger doubles crash risk. No peers in the car for the first 6 months.</li>
+    <li><strong>No nighttime driving:</strong> Fatal crash risk doubles at night. Limit nighttime driving until 6 months of incident-free driving are established.</li>
+    <li><strong>No phones:</strong> Texting while driving increases crash risk by 23 times. "Hands-free" is safer but still impairs attention. Phone in glove box while driving.</li>
+    <li><strong>No riding with newly licensed teens:</strong> Your child's crash risk increases significantly as a passenger with a new teen driver. Establish this rule explicitly.</li>
+    <li><strong>Consistent parental supervision:</strong> Knowing where your teen is going, who is driving, and when to expect them home reduces risk significantly.</li>
+  </ul>
+
+  <h2>How do I prevent substance use in my 14 to 18 year old?</h2>
+
+  <p class="answer-first">The most effective substance use prevention strategy for teens is direct, ongoing parental conversation that begins before first exposure (AAP, 2023). Research consistently shows that teens who report having had frequent, direct conversations with their parents about substance risks have lower rates of early use than those who did not. The approach that works: factual, brief, non-lecturing conversations that acknowledge the social reality ("I know alcohol is at some parties") while stating clear expectations ("In our family, the rule is...") and teaching specific refusal skills.</p>
+
+  <ul>
+    <li><strong>Alcohol:</strong> Establish clear expectations before the first party invitation. Give specific scripts for declining without social cost. Know that providing alcohol to minors carries legal consequences for adults.</li>
+    <li><strong>Vaping and marijuana:</strong> Adolescent brains are specifically more vulnerable to nicotine dependence and cannabis effects than adult brains — this is a factual argument, not a moral one. Use it.</li>
+    <li><strong>Prescription drugs:</strong> Lock prescription medications in your home. Misuse of prescription opioids and stimulants (Adderall, Ritalin) is common among high schoolers.</li>
+    <li><strong>Fentanyl awareness:</strong> Any illicit drug can be contaminated with fentanyl. The "one pill can kill" message is not hyperbole — fentanyl-contaminated pills look identical to prescription medications.</li>
+  </ul>
+
+  <h2>What mental health safety practices matter most for high schoolers?</h2>
+
+  <p class="answer-first">Adolescence is the peak onset period for every major mental health condition — anxiety, depression, eating disorders, and substance use disorders all most commonly first appear between ages 14 and 24. The AAP recommends annual mental health screening at well-child visits and parental conversations that explicitly normalize help-seeking (AAP, 2022). Teens who have learned that struggling emotionally is something you address — not hide — seek help earlier. The 988 Suicide and Crisis Lifeline is available 24/7 for teens and parents.</p>
+
+  <div class="callout">
+    <h2>When do I call for immediate help for my teen?</h2>
+    <p class="answer-first">Call 911 or go to the nearest emergency room if your teen has taken an overdose of any substance or medication, has made a suicide attempt, is expressing active suicidal intent with a plan, or has become acutely psychotic (hallucinations, delusions, severe disorganization) (AAP, 2022).</p>
+    <p>Call 988 (Suicide and Crisis Lifeline) if:</p>
+    <ul>
+      <li>Your teen has expressed suicidal thoughts without an immediate plan</li>
+      <li>Your teen is in acute emotional crisis and not safe</li>
+      <li>You are a parent in crisis and don't know how to help your teen</li>
+    </ul>
+    <p>988 is available 24/7 via call or text. It connects callers to crisis counselors who can assess risk and connect families to local resources.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 14 to 18 Year Old Safety</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
