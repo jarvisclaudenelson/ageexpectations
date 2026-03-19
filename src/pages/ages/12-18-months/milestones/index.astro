@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '12–18 Month Milestones: What to Expect and Signs of Progress';
 const description = 'Most toddlers walk independently by 12–15 months, say 5–10 words by 18 months, and begin pointing, stacking blocks, and drinking from a cup. Here are the key milestones and when to talk to your pediatrician.';
@@ -15,15 +15,16 @@ const faqs = [
 
 const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/12-18-months/milestones/' });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://ageexpectations.com/ages/12-18-months/milestones/' });
 ---
-<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '12–18 Months', href: '/ages/12-18-months/' }, { label: 'Milestones' }]}>
+<BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} medicalSchema={mSchema} breadcrumbs={[{ label: '12–18 Months', href: '/ages/12-18-months/' }, { label: 'Milestones' }]}>
   <h1>12–18 Month Milestones: What to Expect and Signs of Progress</h1>
 
   <p>Somewhere between their first birthday and eighteen months, your child crosses one of the great thresholds of early life: they stop being a baby and become a toddler. The transformation is breathtaking. In just six months, most children go from taking tentative steps while gripping your fingers to walking — and sometimes running — on their own. They begin to say real words, follow simple instructions, and show you that they have a mind full of ideas they are desperate to communicate.</p>
 
   <p>If you are wondering whether your child is hitting their milestones "on time," you are in good company. This guide covers every major milestone between 12 and 18 months, explains the normal range for each, and tells you exactly when the AAP and CDC recommend seeking guidance from your pediatrician.</p>
 
-  <h2>Gross Motor Milestones: What to Expect for Walking and Movement</h2>
+  <h2>What gross motor milestones should I expect between 12 and 18 months?</h2>
 
   <p><strong>Walking</strong> is the headline milestone of this age range, and it has one of the widest normal windows of any developmental skill. According to the CDC's updated milestone checklist, most children walk independently between 12 and 15 months, and nearly all children are walking by 18 months. Here is what the typical progression looks like:</p>
 
@@ -36,7 +37,7 @@ const fSchema = faqSchema(faqs);
 
   <p>Beyond walking, other gross motor milestones to watch for during this period include climbing onto low furniture, bending over to pick up objects, and attempting to kick a ball (though coordinated kicking usually comes closer to 18–24 months).</p>
 
-  <h2>Language Milestones: Signs of Progress from First Words to Early Vocabulary</h2>
+  <h2>What language milestones should my 12–18 month old reach?</h2>
 
   <p>Language development between 12 and 18 months is a mix of spoken words and nonverbal communication — and the nonverbal piece is just as important as the words themselves.</p>
 
@@ -46,7 +47,7 @@ const fSchema = faqSchema(faqs);
 
   <p><strong>Gestures:</strong> Pointing is one of the most important milestones of this period. Most children begin pointing between 9 and 14 months. The CDC lists pointing at something interesting to show you (declarative pointing) as a key milestone by 18 months. Other important gestures include waving bye-bye, shaking the head for "no," and raising arms to be picked up.</p>
 
-  <h2>Fine Motor Milestones: What to Expect for Hands and Coordination</h2>
+  <h2>What fine motor milestones should my 12–18 month old be reaching?</h2>
 
   <p>Your toddler's hand skills are becoming increasingly precise between 12 and 18 months. Key milestones include:</p>
 
@@ -58,7 +59,7 @@ const fSchema = faqSchema(faqs);
     <li><strong>Turning pages:</strong> Your child may begin turning pages in board books, usually several pages at a time rather than one by one. Turning single pages develops closer to 24 months.</li>
   </ul>
 
-  <h2>Cognitive Milestones: Signs of Growing Understanding</h2>
+  <h2>What cognitive milestones should I look for at 12–18 months?</h2>
 
   <p>Between 12 and 18 months, your child's thinking becomes visibly more sophisticated. You will see evidence of this in their play and daily interactions:</p>
 
@@ -69,7 +70,7 @@ const fSchema = faqSchema(faqs);
     <li><strong>Simple problem-solving:</strong> You may see your child try to figure out how to reach a toy that is out of reach, use a stick to pull something closer, or pull a string to bring a toy toward them.</li>
   </ul>
 
-  <h2>Social-Emotional Milestones: What to Expect for Connection and Feelings</h2>
+  <h2>What social-emotional milestones should my 12–18 month old show?</h2>
 
   <p>Your toddler's social and emotional world is becoming richer and more complex. According to both the AAP and CDC, typical social-emotional milestones at this age include:</p>
 
@@ -82,7 +83,7 @@ const fSchema = faqSchema(faqs);
     <li>Showing early empathy — looking concerned when another child cries</li>
   </ul>
 
-  <h2>Milestone Checklist at a Glance</h2>
+  <h2>What does the 12–18 month milestone checklist look like?</h2>
 
   <p>Here is a summary of the milestones most children reach between 12 and 18 months, based on current AAP and CDC guidelines:</p>
 
