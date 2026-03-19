@@ -1,26 +1,26 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '9–12 Month Sleep: Patterns, Regressions, and Routines';
-const description = 'Between 9 and 12 months, babies often settle into a two-nap routine, but developmental milestones like pulling to stand and crawling can trigger sleep regressions. Learn what to expect and how to help your baby sleep better.';
+const description = 'Between 9 and 12 months, babies settle into a two-nap routine, but developmental milestones like pulling to stand and crawling can trigger sleep regressions. Learn what to expect and how to support better sleep.';
 
 const faqs = [
   {
     question: 'How much sleep does a 9–12 month old need?',
-    answer: 'Most babies this age need 12 to 14 hours of total sleep in a 24-hour period. This typically includes 10–12 hours at night and 2–3 hours of daytime sleep divided between two naps.',
+    answer: 'Most babies this age need 12–14 hours of total sleep in a 24-hour period. This typically includes 10–12 hours at night and 2–3 hours of daytime sleep divided between two naps (American Academy of Sleep Medicine, 2022).',
   },
   {
     question: 'Is there a 9-month sleep regression?',
-    answer: 'Yes. Many babies experience a sleep regression around 8, 9, or 10 months. This is usually tied to major developmental milestones like crawling, pulling to stand, and increased separation anxiety. Your baby might resist bedtime or wake up more frequently at night to practice their new skills.',
+    answer: 'Yes. Many babies experience a sleep regression around 8–10 months, tied to major developmental milestones like crawling, pulling to stand, and increased separation anxiety. Your baby might resist bedtime or wake more frequently at night to practice new skills. Most regressions resolve within 1–2 weeks with consistent routines.',
   },
   {
     question: 'When do babies drop to one nap?',
-    answer: 'Most babies continue to need two naps until they are 14 to 18 months old. While your 10 or 11-month-old might occasionally resist one of their naps, it is usually best to stick with the two-nap schedule until they consistently show they are ready for the transition.',
+    answer: 'Most babies continue to need two naps until 14–18 months (CDC, 2022). While your 10 or 11-month-old might occasionally resist one of their naps, it is usually best to stick with the two-nap schedule until they consistently show readiness signs: fighting naps for two or more weeks, taking a long time to fall asleep at bedtime, or waking earlier than usual.',
   },
   {
     question: 'Can my baby have a blanket or pillow at 12 months?',
-    answer: 'The AAP recommends keeping the crib clear of blankets, pillows, and soft toys for the first year to reduce the risk of SIDS and suffocation. After the first birthday, you can gradually introduce a small, thin blanket or a small lovey, but many parents choose to wait longer.',
+    answer: 'The AAP recommends keeping the crib clear of blankets, pillows, and soft toys for the first year to reduce the risk of SIDS and suffocation (AAP, 2022). After the first birthday, you can introduce a small, thin blanket or a small lovey. Many parents choose to wait longer — there is no rush.',
   },
 ];
 
@@ -30,45 +30,64 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/9-12-months/sleep/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/9-12-months/sleep/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '9–12 Months', href: '/ages/9-12-months/' },
     { label: 'Sleep' },
   ]}
 >
-  <h1>9–12 Month Sleep: What to Expect</h1>
+  <h1>9–12 Month Sleep: What to Expect and Is It Normal?</h1>
 
-  <p>By the time your baby reaches 9 months, you might feel like you've finally hit a rhythm. Many babies are sleeping longer stretches at night, and daytime naps have likely consolidated into a predictable two-nap schedule. However, the period between 9 and 12 months is also a time of massive physical and cognitive growth, which can frequently disrupt even the best sleep patterns.</p>
+  <p>By 9 months, many babies have settled into a rhythm — longer stretches at night and a predictable two-nap schedule. But the period between 9 and 12 months is also a time of massive physical and cognitive growth, which frequently disrupts even the best sleep patterns. Understanding why helps you respond with confidence rather than alarm.</p>
 
-  <h2>Common Sleep Patterns at 9–12 Months</h2>
-  <p>While every baby is different, most infants in this age range follow a similar sleep structure:</p>
+  <h2>How much sleep does a 9–12 month old need?</h2>
+
+  <p class="answer-first">Most babies aged 9–12 months need 12–14 hours of total sleep per 24-hour period, typically including 10–12 hours at night and 2–3 hours of daytime sleep divided between two naps (American Academy of Sleep Medicine, 2022). Most babies this age can stay awake for 3–4 hours between sleep periods.</p>
+
+  <p>While every baby is different, these totals serve as a useful benchmark. A baby consistently getting fewer than 11 hours of total sleep and showing signs of chronic overtiredness — difficulty waking, extreme fussiness, poor appetite — is worth discussing with your pediatrician.</p>
+
+  <h2>What is the 8–10 month sleep regression?</h2>
+
+  <p class="answer-first">The 8–10 month sleep regression is driven by a combination of developmental milestones and separation anxiety. When your baby is learning to crawl, sit independently, or pull to stand, their brain rehearses these skills during sleep — causing more frequent waking (CDC, 2022). Separation anxiety, which peaks around 8–10 months, adds another layer: your baby wakes, realizes you are not there, and protests. Most regressions resolve within 1–2 weeks.</p>
+
+  <p>Unlike the 4-month regression, which permanently changes sleep architecture, the 8–10 month regression is temporary and driven by specific developmental events. Consistency is your best response. Maintain your established bedtime routine, avoid introducing new sleep associations you will need to undo later, and give your baby plenty of practice with new motor skills during the day.</p>
+
+  <h2>Why does my baby practice new skills in the crib at night?</h2>
+
+  <p class="answer-first">When babies learn a new motor skill — crawling, sitting, pulling to stand — their brains consolidate and rehearse it during sleep (CDC, 2022). A 9-month-old who has just learned to pull to stand will often pop up in the crib at 2 AM and then cry because they cannot get back down. This is not a sleep problem — it is a motor learning problem. The solution is practicing the skill during the day, specifically the "getting back down" portion.</p>
+
+  <p>Spend time during daytime floor play practicing sitting down from standing and transitioning from standing to crawling. The more fluent your baby becomes with these transitions during waking hours, the less their nighttime brain will need to rehearse them.</p>
+
+  <h2>What sleep routine works best at 9–12 months?</h2>
+
+  <p class="answer-first">A consistent 15–20-minute bedtime routine is the most effective sleep support at this age, signaling to your baby's circadian rhythm that sleep is coming (AAP, 2022). A predictable sequence — bath, pajamas, a book, a song, into the crib drowsy but awake — works better than any specific routine detail. The consistency is what teaches your baby what to expect.</p>
+
+  <p>Placing your baby in the crib drowsy but awake helps them practice falling asleep independently, which is the skill that allows them to self-settle when they wake between sleep cycles in the middle of the night. If your baby relies on feeding, rocking, or your presence to fall asleep, they will look for those same conditions every time they cycle into light sleep — which happens several times each night.</p>
+
+  <h2>What are the safe sleep rules for a 9–12 month old?</h2>
+
+  <p class="answer-first">The AAP recommends continuing safe sleep practices through at least 12 months: back to sleep on a firm, flat surface with a bare sleep space (no blankets, pillows, bumpers, or stuffed animals), with room-sharing but not bed-sharing (AAP, 2022). If your baby can roll both ways, you do not need to reposition them if they roll to their stomach — but always start every sleep on their back.</p>
+
   <ul>
-    <li><strong>Nighttime Sleep:</strong> 10–12 hours. Many babies are capable of sleeping through the night without a feeding, though some may still wake once.</li>
-    <li><strong>Naps:</strong> Two naps per day, usually totaling 2–3 hours of daytime sleep. The morning nap often happens 2.5–3 hours after waking, and the afternoon nap follows about 3 hours after the first nap ends.</li>
-    <li><strong>Wake Windows:</strong> Most babies this age can stay awake for 3 to 4 hours between sleep periods.</li>
+    <li>Always place your baby on their back to sleep, every time.</li>
+    <li>Use a firm, flat crib or bassinet mattress. No inclined sleepers.</li>
+    <li>Keep the crib empty — no blankets, pillows, bumpers, or toys. A sleep sack is the safe alternative.</li>
+    <li>Room-share (but do not bed-share) for at least the first year.</li>
   </ul>
-
-  <h2>The 8-10 Month Sleep Regression</h2>
-  <p>If your previously "good sleeper" suddenly starts waking up at 2 a.m. or screaming at bedtime, you are likely facing the 8-10 month sleep regression. Unlike the 4-month regression, which is a permanent change in sleep architecture, this regression is usually temporary and driven by development.</p>
-  <p><strong>What causes it?</strong></p>
-  <ul>
-    <li><strong>Physical Milestones:</strong> Your baby is likely learning to crawl, sit up independently, pull to stand, or even cruise along furniture. Their brains are so excited by these skills that they want to practice them in the crib.</li>
-    <li><strong>Separation Anxiety:</strong> Around 9 months, babies begin to understand "object permanence"—they know you still exist when you leave the room, and they might protest your departure more vigorously.</li>
-    <li><strong>Teething:</strong> The arrival of first molars can cause significant discomfort.</li>
-    <li><strong>Language Development:</strong> Even "silent" development, like processing new sounds and words, can keep a baby's brain active at night.</li>
-  </ul>
-
-  <h2>Tips for Better Sleep</h2>
-  <p>Consistency is your best tool during this transition period. Stick to a soothing bedtime routine—like bath, pajamas, a book, and a song—to signal to your baby that it's time to wind down.</p>
-  <p>If your baby is practicing pulling to stand in the crib, give them plenty of opportunities to practice that skill during the day. If they get "stuck" standing at night, briefly show them how to sit back down, but keep the interaction boring and minimal to avoid turning it into a game.</p>
 
   <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Is This Normal? Common Questions About 9–12 Month Sleep</h2>
     {faqs.map(faq => (
       <div class="faq-item">
         <p class="faq-question">{faq.question}</p>
@@ -78,10 +97,10 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>While sleep disruptions are common, talk to your doctor if you notice:</p>
+    <h2>When should I talk to my pediatrician about my baby's sleep?</h2>
+    <p>Most sleep disruptions at 9–12 months are developmental and temporary. Talk to your pediatrician if you notice:</p>
     <ul>
-      <li>Signs of sleep apnea (loud snoring, gasping, or pauses in breathing)</li>
+      <li>Signs of sleep apnea — loud snoring, gasping, or pauses in breathing</li>
       <li>Extreme difficulty soothing your baby despite consistent routines</li>
       <li>Persistent waking that you suspect is related to reflux or ear infections</li>
       <li>Any concerns about your baby's growth or caloric intake during the day</li>

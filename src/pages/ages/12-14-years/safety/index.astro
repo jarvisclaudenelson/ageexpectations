@@ -2,29 +2,37 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
-const title = '12–14 Year Old Safety: Teen Risk Prevention and Mental Health Protection';
-const description = 'Safety guide for early teens ages 12 to 14 — substance use prevention, social media risks, mental health warning signs, driving safety as passengers, and what the AAP recommends.';
+const title = '12–14 Year Old Safety: Substance Use, Online Risks, and Mental Health Protection';
+const description = 'Safety guide for early teens ages 12 to 14 — substance use prevention, social media risks, cyberbullying, mental health warning signs, passenger safety in teen-driven cars, and what the AAP recommends.';
 
 const faqs = [
   {
-    question: 'How do I talk to my 13-year-old about alcohol without making them curious?',
-    answer: 'Research shows that frank, factual conversations about alcohol reduce — not increase — early experimentation. The AAP recommends discussing the specific health effects of alcohol on the developing brain (adolescent brains are more vulnerable to alcohol\'s effects than adult brains and are more likely to develop dependence) before peer exposure, not after (AAP, 2023). Framing is important: "Alcohol is legal for adults whose brains are fully developed. Yours isn\'t yet, and it affects your brain differently" is factual, not preachy.'
+    question: 'How do I talk to my 13-year-old about alcohol without making them more curious?',
+    answer: 'Research shows that frank, factual conversations about alcohol reduce — not increase — early experimentation. The AAP recommends discussing the specific health effects of alcohol on the developing brain before peer exposure (AAP, 2023). Adolescent brains are more vulnerable to alcohol\'s effects and more prone to dependence than adult brains. Framing that works: "Alcohol is legal for adults whose brains are fully developed. Yours isn\'t yet, and it affects your brain differently" — factual and specific, not preachy.',
   },
   {
     question: 'What are the signs that my 14-year-old is vaping?',
-    answer: 'Signs of vaping in teens include: unfamiliar equipment or pods (small, USB-looking devices), sweet or fruity smells (vaping flavors), increased water intake (vaping causes dry mouth), nosebleeds (nicotine irritates mucous membranes), and unusual behavioral changes around device use. The AAP notes that e-cigarettes are the most commonly used tobacco product among US middle and high school students — 7.7% of middle schoolers and 14.1% of high schoolers used e-cigarettes in 2021 (CDC, 2021). Vaping delivers high doses of nicotine that are particularly harmful to the developing adolescent brain.'
+    answer: 'Signs of vaping include: unfamiliar equipment or pods (small USB-shaped devices or pods), sweet or fruity smells, increased water intake (vaping causes dry mouth), nosebleeds (nicotine irritates mucous membranes), and unusual behavioral changes around device use. The AAP notes that e-cigarettes are the most commonly used tobacco product among US middle and high schoolers — 14.1% of high schoolers and 7.7% of middle schoolers used e-cigarettes in 2021 (CDC, 2021). Vaping delivers high-dose nicotine specifically harmful to the developing adolescent brain.',
   },
   {
     question: 'Is my 13-year-old safe riding in cars with teen drivers?',
-    answer: 'Teen drivers represent the highest crash risk of any age group — crash rates for 16-to-19-year-olds are nearly 3 times higher than for drivers 20 and older (IIHS, 2022). The AAP recommends that teens do not ride with newly licensed teen drivers, especially at night or with multiple teen passengers — both conditions dramatically increase crash risk (AAP, 2023). Establish this rule before it becomes relevant: "You don\'t ride with a driver under 18 unless a parent has specifically approved it."'
+    answer: 'Teen drivers represent the highest crash risk of any age group — crash rates for 16-to-19-year-olds are nearly 3 times higher than for drivers 20 and older (IIHS, 2022). The AAP recommends that teens do not ride with newly licensed teen drivers, especially at night or with multiple teen passengers — both conditions dramatically increase crash risk (AAP, 2023). Establish this rule explicitly before it becomes relevant: "You do not ride with a driver under 18 unless a parent has specifically approved it for that specific trip."',
   },
   {
     question: 'How do I handle cyberbullying involving my 13-year-old?',
-    answer: 'Cyberbullying peaks between ages 12 and 15. Steps: document everything (screenshots with timestamps), report to the platform, contact the school if the perpetrator is a classmate (most schools have off-campus cyberbullying policies), and contact law enforcement if content includes threats or sexual images. Watch for mental health impacts — cyberbullying is associated with significantly elevated rates of depression, anxiety, and suicidal ideation in teens (AAP, 2022). Talk to your pediatrician if your teen shows signs of emotional distress following cyberbullying.'
+    answer: 'Cyberbullying peaks between ages 12 and 15. Document everything (screenshots with timestamps), report to the platform, contact the school if the perpetrator is a classmate (most schools have off-campus cyberbullying policies that apply), and contact law enforcement if content includes threats or sexual images. Cyberbullying is associated with significantly elevated rates of depression, anxiety, and suicidal ideation in teens (AAP, 2022). Talk to your pediatrician if your teen shows signs of emotional distress following cyberbullying.',
   },
   {
     question: 'What should I know about my 13-year-old\'s mental health risks?',
-    answer: 'Adolescence is the peak onset period for anxiety disorders, depression, eating disorders, and substance use disorders. Half of all lifetime mental health conditions have their first onset by age 14 (WHO, 2021). The AAP recommends annual mental health screening starting at age 12 and proactive parental conversations that normalize seeking help. Teens who know that struggling emotionally is something you talk about — not hide — seek help earlier and have better outcomes than those who learn to mask distress.'
+    answer: 'Half of all lifetime mental health conditions first appear by age 14 (WHO, 2021). Depression, anxiety disorders, and eating disorders all have peak onset in adolescence. The AAP recommends annual mental health screening starting at age 12 and proactive parental conversations that normalize seeking help. Teens who know that struggling emotionally is something you talk about — not hide — seek help earlier and have better outcomes than those who learn to mask distress.',
+  },
+  {
+    question: 'My 13-year-old wants to walk to school and places alone. Is it safe?',
+    answer: 'Walking independently is both safe and developmentally appropriate for most 12 to 14 year olds in low-traffic areas. The AAP encourages age-appropriate independence as a component of healthy development (AAP, 2022). The practical safety requirements: a fully charged phone with your number and at least one backup contact, knowledge of safe routes, and a check-in expectation. Discuss traffic safety, trusted adult resources along the route, and how to handle an uncomfortable situation before granting the independence — not after.',
+  },
+  {
+    question: 'Should I monitor my 13-year-old\'s texts and social media?',
+    answer: 'The AAP recommends maintaining parental visibility into digital activity through openly stated family safety practices rather than covert surveillance (AAP, 2016). "We have access to your accounts, and we check periodically" is a stated practice. Secretly reading all texts builds neither trust nor safety habits. The goal is a teen who tells you when something is wrong online — not one who hides everything. Full transparency (access to accounts), combined with a stated no-punishment reporting policy (tell me anything without fear of losing your phone), is more effective than covert monitoring.',
   },
 ];
 
@@ -41,48 +49,78 @@ const medicalData = medicalWebPageSchema({
 });
 ---
 
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '12–14 Years', href: '/ages/12-14-years/' }, { label: 'Safety' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '12–14 Years', href: '/ages/12-14-years/' },
+    { label: 'Safety' },
+  ]}
+>
+  <h1>12–14 Year Old Safety: Substance Use, Online Risks, and Mental Health Protection</h1>
 
-  <h1>12–14 Year Old Safety: Teen Risk Prevention and Mental Health Protection</h1>
-
-  <p class="answer-first">Between ages 12 and 14, the safety risks that matter most shift from physical injury to behavioral, mental health, and substance-related risks. Unintentional injury remains the leading cause of death for this age group — primarily motor vehicle crashes and drowning — but depression, anxiety, eating disorders, and substance use all have their peak onset in early to mid-adolescence (AAP, 2022). Safety for this age means injury prevention AND mental health protection AND substance use prevention, simultaneously.</p>
+  <p class="answer-first">Between ages 12 and 14, the safety risks that matter most shift from physical injury to behavioral, mental health, and substance-related risks. Unintentional injury remains the leading cause of death in this age group — primarily motor vehicle crashes and drowning — but depression, anxiety disorders, eating disorders, and substance use all have peak onset in early to mid-adolescence (AAP, 2022). Effective safety at this age means injury prevention AND mental health protection AND substance use prevention, approached simultaneously through open communication and graduated independence rather than restriction alone.</p>
 
   <h2>What substance use risks matter most for 12 to 14 year olds?</h2>
 
-  <p class="answer-first">Alcohol and vaping (nicotine) are the substances most commonly encountered by early adolescents. The AAP reports that the average age of first alcohol use in the US is 12, and 14.1% of high school students use e-cigarettes (CDC, 2021). Adolescent brains are more vulnerable to alcohol's effects and more prone to developing dependence than adult brains — making early experimentation riskier at this age than at any later point. Prevention conversations should happen before first exposure, which means by age 10 to 12.</p>
+  <p class="answer-first">Alcohol and vaping (nicotine) are the substances most likely to be encountered by 12 to 14 year olds. The AAP reports that the average age of first alcohol use in the US is 12, and 7.7% of middle schoolers use e-cigarettes (CDC, 2021). Adolescent brains are more vulnerable to alcohol's effects and more prone to developing dependence than adult brains — early experimentation carries genuinely higher health risks at this age than at any later point. Prevention conversations should happen before first peer exposure, which means by age 10 to 12.</p>
 
+  <p>The substance risks and what parents need to know:</p>
   <ul>
-    <li><strong>Alcohol:</strong> First exposure average age is 12 in the US. The developing adolescent brain responds to alcohol differently and is more prone to dependence than adult brains.</li>
-    <li><strong>Vaping:</strong> E-cigarettes deliver high-dose nicotine that is particularly harmful to adolescent brain development. Flavored vaping products specifically target adolescent taste preferences (AAP, 2023).</li>
-    <li><strong>Marijuana:</strong> Regular use before age 18 is associated with reduced attention, memory, and academic achievement. Adolescent brain exposure increases long-term mental health risks (AAP, 2023).</li>
-    <li><strong>Prevention:</strong> Brief, factual parental conversations before exposure reduce experimentation. Knowing their friends and where they spend unsupervised time reduces exposure opportunity.</li>
+    <li><strong>Alcohol:</strong> Average age of first use is 12 in the US. The developing adolescent brain develops dependence faster and is more damaged by alcohol than the adult brain. No amount is safe for this age group.</li>
+    <li><strong>Vaping (nicotine):</strong> Flavored e-cigarettes specifically target adolescent taste preferences. High-dose nicotine from vaping is rapidly addictive in adolescents — many teens who vape become dependent before they realize it is happening (AAP, 2023).</li>
+    <li><strong>Marijuana:</strong> Regular cannabis use before age 18 is associated with reduced attention, memory, and academic achievement, and increases long-term mental health risks. "Medical" framing does not change the developmental impact (AAP, 2023).</li>
+    <li><strong>Prescription drugs:</strong> Stimulant medications (Adderall, Ritalin) and opioids in the home are among the substances most accessible to middle schoolers. Lock them.</li>
   </ul>
 
   <h2>What mental health risks should parents watch for at this age?</h2>
 
-  <p class="answer-first">Half of all lifetime mental health conditions first appear by age 14 (WHO, 2021). Depression, anxiety disorders, and eating disorders all peak in onset during adolescence. The AAP recommends annual mental health screening at well-child visits starting at age 12, and proactive conversations at home that normalize help-seeking. Teens who feel they can come to parents with mental health struggles — without shame or dismissal — seek help earlier and have better outcomes (AAP, 2022).</p>
+  <p class="answer-first">Half of all lifetime mental health conditions first appear by age 14 (WHO, 2021). The AAP recommends annual mental health screening at well-child visits starting at age 12 and proactive family conversations that normalize help-seeking (AAP, 2022). The most important thing parents can do is establish a home environment where struggling emotionally is something you address, not hide — teens with this safety net seek help earlier and have better outcomes.</p>
 
-  <p>Warning signs that require prompt action:</p>
+  <p>Warning signs requiring prompt action:</p>
   <ul>
-    <li><strong>Depression:</strong> Persistent sadness or irritability lasting 2+ weeks, loss of interest in all previously enjoyed activities, sleep and appetite changes, withdrawal from all social contact</li>
-    <li><strong>Anxiety:</strong> Avoidance of school, social situations, or normal activities; physical symptoms (headaches, stomachaches) with no medical cause; constant worry that impairs functioning</li>
-    <li><strong>Eating disorders:</strong> Significant restriction of food intake, excessive exercise, preoccupation with body weight or shape, or binge-purge behavior</li>
-    <li><strong>Self-harm:</strong> Any cutting, burning, or other self-injury — requires immediate professional evaluation, not only parental conversation</li>
-    <li><strong>Suicidal thoughts:</strong> Any direct or indirect mention — "I don't want to be here," giving away possessions — is an emergency requiring immediate response</li>
+    <li><strong>Depression:</strong> Persistent sadness or irritability for 2+ weeks, loss of interest in all previously enjoyed activities, sleep and appetite changes, withdrawal from all social contact</li>
+    <li><strong>Anxiety:</strong> Avoidance of school, social situations, or normal activities; physical symptoms (headaches, stomachaches) with no medical cause; constant worry that impairs daily function</li>
+    <li><strong>Eating disorders:</strong> Food restriction, excessive exercise, preoccupation with body weight or shape, binge-purge behavior — early intervention dramatically improves outcomes</li>
+    <li><strong>Self-harm:</strong> Any cutting, burning, or other self-injury — requires immediate professional evaluation</li>
+    <li><strong>Suicidal thoughts:</strong> Any direct or indirect mention ("I don't want to be here," giving away possessions) — this is an emergency requiring immediate action</li>
   </ul>
 
-  <h2>What online safety risks are specific to 12 to 14 year olds?</h2>
+  <h2>What online safety rules are essential for 12 to 14 year olds?</h2>
 
-  <p class="answer-first">Social media use in girls ages 10 to 14 is associated with increased depression and anxiety rates (Twenge et al., 2018). Cyberbullying peaks between ages 12 and 15. Online grooming — adults presenting as peers to establish inappropriate relationships — disproportionately targets early adolescents who are exploring online social relationships. The AAP recommends maintaining parental visibility into social media accounts and gaming communications at this age (AAP, 2016).</p>
+  <p class="answer-first">Social media use in girls ages 10 to 14 is linked to increased depression and anxiety (Twenge et al., 2018). Cyberbullying peaks between ages 12 and 15. Online grooming — adults presenting as peers to establish inappropriate relationships — disproportionately targets early adolescents. Most major platforms (Instagram, TikTok, Snapchat) require users to be 13 — enforce this age requirement, and delay access if your teen is not yet 13 (AAP, 2016).</p>
 
+  <p>Core online safety practices for this age:</p>
   <ul>
-    <li>Maintain access to all accounts — not covertly, but as stated, non-negotiable family safety practice</li>
-    <li>Keep devices out of bedrooms at night — this single change improves sleep, reduces risky online behavior, and reduces cyberbullying exposure</li>
+    <li>Maintain access to all accounts — stated, not covert — as a non-negotiable family safety practice</li>
+    <li>Keep devices out of bedrooms at night — this improves sleep and reduces risky late-night online behavior simultaneously</li>
     <li>Know who they communicate with online — in gaming platforms, not just social media</li>
-    <li>Establish a no-punishment reporting policy: any uncomfortable online encounter should be brought to a parent immediately without consequence for the teen</li>
+    <li>Establish a no-punishment reporting policy: any uncomfortable online encounter is reported to a parent immediately, with no consequence for the teen</li>
+    <li>Discuss specific risks directly: algorithm-driven content, social comparison, contact from adults pretending to be peers</li>
   </ul>
 
-  <div class="faq-section">
+  <h2>What passenger safety rules apply to 12 to 14 year olds?</h2>
+
+  <p class="answer-first">Teen drivers represent the highest crash risk of any age group — crash rates for drivers ages 16 to 19 are nearly 3 times higher than for drivers 20 and older, and each additional teen passenger doubles crash risk (IIHS, 2022). Children ages 12 to 14 who ride regularly with teen drivers face statistically higher injury risk than those who ride only with adult drivers. The AAP recommends establishing explicit rules about which drivers teens are permitted to ride with (AAP, 2023).</p>
+
+  <div class="callout">
+    <h2>When should I contact a doctor or emergency services about my 12 to 14 year old's safety?</h2>
+    <p class="answer-first">Call 911 or go to the nearest emergency room if your teen has been in a vehicle crash, has taken any substance including alcohol, has made a suicide attempt, or shows signs of acute psychiatric crisis (AAP, 2022). Call 988 (Suicide and Crisis Lifeline, call or text, 24/7) if your teen expresses suicidal thoughts, is in emotional crisis, or if you as a parent are unsure how to respond.</p>
+    <p>Contact your pediatrician promptly for:</p>
+    <ul>
+      <li>Suspected substance use — even occasional alcohol or vaping at this age warrants conversation with a pediatrician</li>
+      <li>Signs of depression or anxiety lasting more than 2 weeks</li>
+      <li>Evidence of self-harm behavior</li>
+      <li>Significant cyberbullying causing emotional distress</li>
+      <li>Any eating behaviors that suggest an eating disorder</li>
+      <li>School refusal lasting more than a few days</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
     <h2>Frequently Asked Questions: 12 to 14 Year Old Safety</h2>
 
     {faqs.map(faq => (
@@ -91,7 +129,7 @@ const medicalData = medicalWebPageSchema({
         <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
-  </div>
+  </section>
 
   <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 
