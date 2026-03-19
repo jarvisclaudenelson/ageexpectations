@@ -292,4 +292,11 @@ export const articles = [
     pubDate: "2026-03-19",
     image: "/images/pins/1-3-months-feeding.png",
   },
+  {
+    title: "10–12 Year Old Sleep: How Much, Bedtime, and What's Normal",
+    description: "Children ages 10 to 12 need 9 to 12 hours of sleep per night, but puberty drives a biological shift toward later bedtimes. Learn about typical tween sleep patterns, the circadian phase delay, screens, and when to talk to your pediatrician.",
+    path: "/ages/10-12-years/sleep/",
+    pubDate: "2026-03-19",
+    image: "/images/pins/10-12-years-sleep.png",
+  },
 ];
