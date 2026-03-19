@@ -1,27 +1,31 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = 'Preschooler Development (4–5 Years): What to Expect';
-const description = 'A guide to development for 4–5 year olds — preparation for kindergarten, complex language skills, emotional regulation, and advanced motor skills like hopping and drawing.';
+const description = 'A guide to development for 4 to 5 year olds — kindergarten readiness, complex language skills, cooperative play, emotional regulation, and advanced motor milestones, with AAP and CDC guidance.';
 
 const faqs = [
   {
-    question: 'How can I tell if my 4-year-old is ready for kindergarten?',
-    answer: 'Kindergarten readiness involves more than just academic skills like knowing letters. It also includes social-emotional readiness (following directions, sharing, managing emotions) and self-care skills (using the bathroom independently, dressing themselves). Most schools offer screenings, but the AAP suggests focusing on your child\'s ability to listen, participate in group activities, and handle transitions.',
+    question: 'How do I know if my 4-year-old is ready for kindergarten?',
+    answer: 'Kindergarten readiness is a cluster of skills, not a single test. The AAP identifies the most important factors as social-emotional — following rules, separating from caregivers without extreme distress, communicating needs to an unfamiliar adult, taking turns, and sustaining attention for 10 to 15 minutes (AAP, 2022). Academic skills (letter recognition, counting) matter less than these foundational skills. If you have concerns, your child\'s preschool teacher and pediatrician can both provide useful perspective before kindergarten entry.'
   },
   {
-    question: 'Is it normal for a 4-year-old to still have tantrums?',
-    answer: 'While tantrums peak around age 2–3, they can still occur at age 4 as children navigate complex emotions and social situations. However, they should be less frequent and shorter than in the toddler years. At this age, children are learning better ways to use words to express frustration. If tantrums are violent, last longer than 15 minutes, or occur many times a day, consult your pediatrician.',
+    question: 'Is it normal for my 4-year-old to still have tantrums?',
+    answer: 'Yes. Tantrums peak between ages 18 months and 3 years but persist for many children through age 4 and occasionally into age 5. At age 4, tantrums should be less frequent and shorter than at age 2 or 3, and children should be more responsive to verbal redirection before and after the meltdown. If tantrums are escalating (increasing in frequency or intensity), last more than 15 minutes regularly, or involve physical aggression, discuss it with your pediatrician (AAP, 2022).'
   },
   {
-    question: 'When should a child be able to write their name?',
-    answer: 'Many children start to recognize and try to write some letters of their name between ages 4 and 5. By the time they enter kindergarten, most children can write their first name, though the letters may be shaky or reversed. Practice with drawing, tracing, and play-dough can help develop the fine motor skills needed for writing.',
+    question: 'When should my child write their name?',
+    answer: 'Most children can write their first name — or at least most of the letters in it — between ages 4 and 5 (CDC, 2022). Letter formation is often large, uneven, and may include reversed letters; this is developmentally normal. The underlying skill that matters is fine motor control — the ability to hold a pencil with a functional grip and make intentional marks. Children who are drawing people, making shapes, and labeling their artwork are developing the fine motor foundation that leads to legible writing.'
   },
   {
     question: 'How much sleep does a 4-year-old need?',
-    answer: 'Preschoolers aged 3–5 typically need 10–13 hours of sleep per 24 hours, including naps. Many 4-year-olds are in the process of dropping their afternoon nap, which may mean they need an earlier bedtime to compensate. A consistent bedtime routine remains crucial for healthy sleep patterns.',
+    answer: 'The AAP recommends 10 to 13 hours of sleep per 24 hours for children ages 3 to 5, including naps (AAP, 2016). Many 4-year-olds are transitioning out of afternoon naps; children who drop the nap typically need an earlier bedtime to compensate. A consistent bedtime routine — same sequence, same time — is more important than any specific bedtime hour for supporting healthy sleep patterns.',
+  },
+  {
+    question: 'Is my 5-year-old\'s imaginary friend a concern?',
+    answer: 'No. Imaginary friends are common from ages 3 to 7 and research links them to above-average creativity, language development, and social imagination (Taylor et al., 2004). A 5-year-old with an elaborate imaginary friend is engaging in healthy cognitive development. The concern threshold is if the child cannot distinguish the imaginary friend from reality when calmly asked, uses the imaginary friend to avoid all real social interaction, or becomes extremely distressed when others don\'t believe in it.'
   },
 ];
 
@@ -31,21 +35,99 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/4-5-years/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/4-5-years/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: 'Preschooler (4–5 Years)' },
   ]}
 >
   <h1>Preschooler Development (4–5 Years): What to Expect</h1>
 
-  <p>The year between ages 4 and 5 is a time of incredible growth as children transition from the "little kid" years toward the more structured world of elementary school. This is the age of "Why?" and "Watch this!" as preschoolers gain confidence in their physical abilities, social connections, and understanding of the world.</p>
+  <p class="answer-first">Between ages 4 and 5, children are in the final stretch of the preschool years — developing the skills that make kindergarten success possible. The CDC's milestones for age 5 include: following 3-step instructions, telling a simple story with a beginning, middle, and end, counting 10 or more objects, hopping on one foot, and drawing a person with at least 6 body parts (CDC, 2022). These milestones have a developmental window — children who miss them by 3 to 6 months are worth discussing with your pediatrician.</p>
 
-  <p>Based on guidelines from the American Academy of Pediatrics (AAP) and the CDC, this overview covers the major developmental milestones for 4–5 year olds. This stage is often called the "Pre-K" year, as many activities focus on building the foundational skills needed for kindergarten success.</p>
+  <h2>What are the key milestones for 4 to 5 year olds?</h2>
+
+  <p class="answer-first">By age 4, most children follow 3-step instructions, speak clearly enough for strangers to understand them most of the time, draw a person with 3 or more body parts, and play cooperatively in groups with peers. By age 5, most children tell stories with beginning/middle/end, count 10 or more objects, write some letters and numbers, hop on one foot, and can be understood by strangers most of the time (CDC, 2022). The 4-to-5 year window is when kindergarten readiness skills consolidate.</p>
+
+  <h2>What language milestones should my 4 to 5 year old reach?</h2>
+
+  <p class="answer-first">Between ages 4 and 5, children's language becomes rich and complex. They tell stories with narrative structure, use future tense correctly, understand and produce rhymes, and carry on extended conversations with adults and peers. Vocabulary reaches approximately 1,500 to 2,000 words by age 4 and grows to 2,000 to 2,500 words by age 5 (CDC, 2022). Most 5-year-olds can be understood by strangers nearly all the time. Persistent articulation errors for sounds like /r/, /l/, /s/, and /th/ remain common and may not warrant concern until age 7 to 8.</p>
+
+  <ul>
+    <li>Speaks in sentences with 5 or more words</li>
+    <li>Tells a simple story with beginning, middle, and end</li>
+    <li>Uses future tense: "I'm going to go to the park"</li>
+    <li>Rhymes and makes up silly words</li>
+    <li>Names most colors and numbers to 10</li>
+    <li>Can be understood by strangers most of the time (age 4) and nearly all of the time (age 5)</li>
+  </ul>
+
+  <h2>How does social-emotional development progress between ages 4 and 5?</h2>
+
+  <p class="answer-first">Between ages 4 and 5, children become more socially sophisticated — they form genuine friendships, engage in complex cooperative play with assigned roles, show growing empathy, follow classroom rules with increasing consistency, and begin to understand the concept of fairness. The AAP notes that social-emotional skills at kindergarten entry predict school success more reliably than academic skills (AAP, 2022). Self-regulation — the ability to manage emotions and follow rules without adult prompting — is the most important school-readiness skill at this age.</p>
+
+  <ul>
+    <li>Shows preference for specific friends and expresses affection</li>
+    <li>Plays cooperatively in groups with shared goals and negotiated roles</li>
+    <li>Understands the concept of fairness and may enforce it vigorously</li>
+    <li>Shows growing empathy — notices and responds to peers' emotions</li>
+    <li>Follows rules in structured settings with less adult prompting than at age 3</li>
+    <li>Wants to please and be liked by friends and caregivers</li>
+    <li>Distinguishes fantasy from reality most of the time (but not always)</li>
+  </ul>
+
+  <h2>What cognitive milestones should my 4 to 5 year old reach?</h2>
+
+  <p class="answer-first">Between ages 4 and 5, children develop increasingly logical thinking about concrete, familiar topics. They count 10 or more objects, understand that written numbers represent quantities, identify most letters of the alphabet, and draw people with recognizable body parts and detail (CDC, 2022). By age 5, many children connect some letters to their sounds — the beginning of the phonemic awareness that supports reading. The ability to follow 3-step instructions is a key kindergarten-readiness cognitive skill.</p>
+
+  <ul>
+    <li>Counts 10 or more objects correctly</li>
+    <li>Prints some letters and numbers, especially those in their name</li>
+    <li>Identifies most uppercase letters of the alphabet</li>
+    <li>Copies shapes: circle, square, triangle</li>
+    <li>Draws a person with at least 6 body parts</li>
+    <li>Understands basic time concepts: morning, afternoon, yesterday, tomorrow</li>
+    <li>Sorts by color, shape, and size</li>
+  </ul>
+
+  <h2>What physical milestones matter most at ages 4 to 5?</h2>
+
+  <p class="answer-first">Between ages 4 and 5, gross motor skills advance to include hopping on one foot, skipping, catching a ball, swinging on playground swings independently, and riding a bike with training wheels. Fine motor skills support cutting along a line with scissors, using a fork and spoon with control, writing some letters, and drawing with increasing detail. The CDC notes that most 5-year-olds can dress and undress independently, including buttoning, though shoe-tying typically develops between ages 5 and 7 (CDC, 2022).</p>
+
+  <h2>When should I talk to my pediatrician about my 4 to 5 year old?</h2>
+
+  <div class="callout">
+    <p class="answer-first">The AAP recommends annual well-child visits at ages 4 and 5 with developmental screening. Contact your pediatrician if your child cannot follow 3-step instructions by age 4, cannot be understood by strangers most of the time by age 4, shows no interest in playing with other children, cannot draw a person with 3 or more body parts, or has lost any skills previously acquired (AAP, 2022).</p>
+    <ul>
+      <li>Cannot tell a simple story by age 5</li>
+      <li>Cannot count 10 objects by age 5</li>
+      <li>Cannot hop on one foot by age 5</li>
+      <li>Has significant difficulty separating from caregivers at preschool after the initial adjustment period</li>
+      <li>Shows extreme anxiety, aggression, or withdrawal that interferes with preschool participation</li>
+      <li>Has lost any language, motor, or social skills</li>
+    </ul>
+    <p>Kindergarten entry is a natural time to identify children who may need additional support. Schools offer evaluation services under federal IDEA law at no cost to families. Your pediatrician can help navigate this process and coordinate referrals to speech, occupational, or behavioral therapy if needed.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 4 to 5 Year Old Development</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
 
   <h2>Explore 4–5 Year Old Topics</h2>
   <div class="topic-grid">
@@ -54,77 +136,6 @@ const fSchema = faqSchema(faqs);
     ))}
   </div>
 
-  <h2>Language and Communication: Telling Stories</h2>
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 
-  <p>By age 4, language has become a powerful tool. Most 4-year-olds can speak clearly enough for strangers to understand them most of the time. Key developments include:</p>
-
-  <ul>
-    <li><strong>Full Sentences:</strong> Using sentences with 4 or more words.</li>
-    <li><strong>Storytelling:</strong> Telling simple stories with a beginning, middle, and end. They can also recount parts of a story read to them.</li>
-    <li><strong>Future Tense:</strong> Beginning to understand and use words like "tomorrow" or "next time."</li>
-    <li><strong>Rhyming and Word Play:</strong> Enjoying silly words, rhymes, and songs.</li>
-    <li><strong>Identifying Basics:</strong> Naming several colors, shapes, and numbers.</li>
-  </ul>
-
-  <p>Conversations with your child at this age are more interactive. They can follow three-step instructions (e.g., "Go to your room, get your shoes, and bring them to the door") and love to ask questions about everything they see.</p>
-
-  <h2>Social and Emotional Growth: Friends and Feelings</h2>
-
-  <p>Four-year-olds are becoming much more social. They are moving away from "parallel play" (playing near each other) toward "cooperative play" (playing together toward a common goal). You may notice:</p>
-
-  <ul>
-    <li><strong>Friendships:</strong> Showing a preference for certain friends and expressing affection for them.</li>
-    <li><strong>Imaginative Play:</strong> Engaging in complex "make-believe" play, often taking on roles like "teacher," "doctor," or "parent."</li>
-    <li><strong>Rule Following:</strong> Understanding the concept of rules and sometimes being quite insistent that others follow them too.</li>
-    <li><strong>Emotional Regulation:</strong> Beginning to use words to express feelings instead of just acting them out, though they still need help when emotions get big.</li>
-    <li><strong>Independence:</strong> Wanting to do things "by myself," from dressing to choosing snacks.</li>
-  </ul>
-
-  <h2>Cognitive Milestones: Thinking and Learning</h2>
-
-  <p>Your child's brain is busy making connections that prepare them for academic learning. By age 5, most children can:</p>
-
-  <ul>
-    <li><strong>Count:</strong> Count 10 or more objects correctly.</li>
-    <li><strong>Print Letters:</strong> Start to copy or print some capital letters, often starting with the letters in their own name.</li>
-    <li><strong>Understand Time:</strong> Grasp basic concepts of time, such as "morning," "afternoon," and "night," and the order of daily routines.</li>
-    <li><strong>Categorize:</strong> Sort objects by color, shape, or size.</li>
-    <li><strong>Draw People:</strong> Draw a person with at least 3 separate body parts (often moving toward 6 parts by age 5).</li>
-  </ul>
-
-  <h2>Physical Development: Coordination and Control</h2>
-
-  <p>Gross and fine motor skills become much more refined during this year. Watch for these milestones:</p>
-
-  <ul>
-    <li><strong>Gross Motor:</strong> Hopping on one foot, standing on one foot for several seconds, climbing well, and swinging on a playground swing independently. Many can also do a somersault.</li>
-    <li><strong>Fine Motor:</strong> Using scissors to cut along a line, using a fork and spoon with control, and possibly starting to use a dull knife for spreading.</li>
-    <li><strong>Self-Care:</strong> Most 4-year-olds can dress and undress themselves (though they may still need help with difficult buttons or laces) and are fully potty trained.</li>
-  </ul>
-
-  <div class="faq-section">
-    <h2>Common Questions About 4–5 Year Old Development</h2>
-    {faqs.map(faq => (
-      <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
-      </div>
-    ))}
-  </div>
-
-  <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The AAP recommends annual well-child visits for preschoolers. Talk to your pediatrician if your 4-to-5-year-old:</p>
-    <ul>
-      <li>Shows extreme fear, aggression, or shyness</li>
-      <li>Is unable to jump in place or has trouble climbing</li>
-      <li>Cannot use a crayon or pencil with a "pincer" grasp</li>
-      <li>Cannot follow simple 3-step directions</li>
-      <li>Does not use "me" and "you" correctly</li>
-      <li>Cannot tell a simple story or use sentences of more than 3 words</li>
-      <li>Is not interested in interactive games or make-believe play</li>
-      <li>Loses skills they once had</li>
-    </ul>
-    <p>Early intervention can make a significant difference. If you have concerns about your child\'s development or kindergarten readiness, your pediatrician or local school district can provide resources and evaluations.</p>
-  </div>
 </BaseLayout>

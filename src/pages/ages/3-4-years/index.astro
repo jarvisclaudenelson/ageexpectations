@@ -1,31 +1,35 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = 'Preschooler Development (3–4 Years): What to Expect';
-const description = 'Between ages 3 and 4, preschoolers experience a surge in language, social-emotional skills, and imagination. They are learning to play with others, ask "why?" constantly, and develop greater physical coordination — here is what to expect during this transitional year.';
+const description = 'Between ages 3 and 4, preschoolers experience a surge in language, social-emotional skills, and imagination — learning to play cooperatively, asking "why" constantly, and developing greater physical coordination. AAP and CDC guidance.';
 
 const faqs = [
   {
     question: 'Why does my 3-year-old ask "why" so much?',
-    answer: 'It is a sign of cognitive growth. At this age, children are curious about how the world works and are learning to process complex information. Asking "why" also helps them keep a conversation going with you and learn new vocabulary. While it can be exhausting, responding patiently helps foster their natural curiosity.',
+    answer: 'Constant "why" questions are a sign of healthy cognitive development. Between ages 3 and 5, children develop causal reasoning — the ability to understand cause and effect — and they use questions to build that understanding. The AAP notes that responding patiently to "why" questions, even with "I don\'t know, let\'s find out," builds vocabulary, reasoning skills, and a positive relationship with learning (AAP, 2022). It is exhausting; it is also working exactly as it should.',
   },
   {
-    question: 'Is it normal for a 3-year-old to still have tantrums?',
-    answer: 'Yes. While preschoolers are getting better at expressing emotions, they still get overwhelmed easily and have limited impulse control. Tantrums usually decrease as language skills improve and they learn better coping mechanisms. The AAP suggests using positive reinforcement and setting clear, consistent boundaries to help manage behavior.',
+    question: 'Is it normal for my 3-year-old to still have tantrums?',
+    answer: 'Yes. Tantrums peak between ages 18 months and 3 years but persist for many children into age 4. At age 3, children have large emotions and limited impulse control — the prefrontal cortex that governs self-regulation is far from mature. Tantrums should decrease in frequency and duration over the preschool years. Consistent, calm responses — validating the feeling without reinforcing the behavior — are more effective than punishment at this age (AAP, 2022).',
   },
   {
-    question: 'When should my child be potty trained?',
-    answer: 'Most children are fully potty trained between 2 and 4 years old. Every child follows their own timeline. Signs of readiness include staying dry for 2+ hours, following simple directions, and showing interest in using the toilet. If you have concerns about your child\'s progress by age 4, discuss it with your pediatrician.',
+    question: 'Should my 3-year-old be potty trained?',
+    answer: 'Most children achieve daytime toilet independence between ages 2 and 4, with a wide range of typical development (AAP, 2022). Signs of readiness include staying dry for 2 or more hours, following simple directions, showing interest in the toilet, and being able to pull pants up and down. If your child shows no interest in toilet training by age 3.5 to 4, or if previously trained skills are lost, discuss it with your pediatrician.',
   },
   {
-    question: 'How much should a 3-year-old sleep?',
-    answer: 'The AAP recommends that 3-year-olds get 10–13 hours of sleep per 24 hours, including naps. Many children in this age group still need one afternoon nap, though some begin to phase it out. Consistency with bedtime routines is key to helping them get the rest they need.',
+    question: 'How much sleep does a 3-year-old need?',
+    answer: 'The AAP recommends 10 to 13 hours of sleep per 24 hours for children ages 3 to 5, including naps (AAP, 2016). Many 3-year-olds still need one afternoon nap of 1 to 2 hours. Children who drop the nap typically need an earlier bedtime to compensate. Consistent bedtime routines — the same sequence of activities at the same time each night — significantly improve both sleep onset and quality.',
   },
   {
-    question: 'What is "cooperative play" and when does it start?',
-    answer: 'Cooperative play is when children start playing *with* each other (like building a tower together or playing a simple game) rather than just *next* to each other (parallel play). Most children begin to transition into cooperative play around age 3 as their social and communication skills mature.',
+    question: 'What is cooperative play, and when does it start?',
+    answer: 'Cooperative play — playing with other children toward a shared goal rather than just near them — begins emerging around age 3 and becomes more consistent by ages 4 to 5 (CDC, 2022). Before this, children engage in parallel play (playing near peers with similar materials but not coordinating). Cooperative play requires language, perspective-taking, and impulse control — skills that develop gradually through the preschool years.',
+  },
+  {
+    question: 'My 3-year-old still has an imaginary friend. Should I be concerned?',
+    answer: 'No. Imaginary friends are common from ages 3 to 7 and are associated with healthy creative development, advanced language, and social imagination. Research suggests up to 65% of children have had an imaginary companion by age 7 (Taylor et al., 2004). An imaginary friend becomes a concern only if the child cannot distinguish it from reality, uses it to avoid all real social interaction, or becomes distressed when others do not believe in it.',
   },
 ];
 
@@ -35,99 +39,106 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/3-4-years/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/3-4-years/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: 'Preschool (3–4 Years)' },
   ]}
 >
   <h1>Preschooler Development (3–4 Years): What to Expect</h1>
 
-  <p>The transition from toddlerhood to the preschool years is marked by a dramatic shift in how children interact with the world. At 3 years old, your child is becoming more independent, more communicative, and more social. This is the age of "why?", of vivid imagination, and of the first real friendships.</p>
+  <p class="answer-first">Between ages 3 and 4, children shift from toddlerhood into the preschool stage — a period marked by a language explosion, emerging cooperative play, and vivid imagination. The CDC's developmental milestones for age 3 include: calming down within 10 minutes of caregiver departure, talking with adults in multi-turn conversations, following 2-step instructions without gestures, and drawing a circle (CDC, 2022). Wide variation is typical; children who miss milestones by 6 months or more are worth discussing with a pediatrician.</p>
 
-  <p>This overview covers the key areas of development for 3-to-4-year-olds, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC. Explore the topic pages below for more specific information on sleep, behavior, and milestones.</p>
+  <h2>What are the key milestones for 3 to 4 year olds?</h2>
 
-  <h2>Explore 3–4 Year Topics</h2>
+  <p class="answer-first">By age 3, most children follow 2-step instructions, speak in sentences of 3 or more words, calm down within 10 minutes of caregiver departure, and engage in simple pretend play. By age 4, most children follow 3-step instructions, speak clearly enough for strangers to understand them most of the time, share and take turns with reminders, and draw a person with 3 or more body parts (CDC, 2022). Social play becomes genuinely cooperative at the upper end of this range.</p>
+
+  <h2>How does language develop between ages 3 and 4?</h2>
+
+  <p class="answer-first">Between ages 3 and 4, children's language expands from simple sentences to multi-turn conversations, storytelling, and question-asking. Most 3-year-olds can be understood by familiar adults about 75% of the time; by age 4, most are understood by strangers most of the time (CDC, 2022). Vocabulary grows rapidly — from about 1,000 words at age 3 to 1,500 to 2,000 words by age 4. The "why" phase — constant causal questions — typically peaks between ages 3 and 5.</p>
+
+  <ul>
+    <li>Uses sentences with 3 or more words (age 3) and 4 or more words (age 4)</li>
+    <li>Asks "who," "what," "where," and "why" questions</li>
+    <li>Tells simple stories with a beginning, middle, and end</li>
+    <li>Says their first name when asked</li>
+    <li>Follows 2-step instructions (age 3) and 3-step instructions (age 4)</li>
+    <li>Understood by strangers 75% of the time (age 3) and most of the time (age 4)</li>
+  </ul>
+
+  <h2>How does social-emotional development change between ages 3 and 4?</h2>
+
+  <p class="answer-first">Between ages 3 and 4, children shift from parallel play to cooperative play — from playing near peers to playing with them toward a shared goal. They develop genuine friendships, express preferences for specific playmates, begin to understand sharing and turn-taking (with reminders), and show growing empathy for others' feelings (CDC, 2022). Emotional regulation improves but remains a work in progress — tantrums decrease in frequency and duration but do not disappear.</p>
+
+  <ul>
+    <li>Calms down within 10 minutes of caregiver departure (age 3)</li>
+    <li>Notices other children and joins them to play</li>
+    <li>Shows a preference for certain friends</li>
+    <li>Begins to share and take turns (with adult guidance and reminders)</li>
+    <li>Engages in elaborate pretend play — "playing house," "playing doctor"</li>
+    <li>Follows classroom and game rules better than at age 2</li>
+    <li>Shows empathy — tries to comfort upset peers</li>
+  </ul>
+
+  <h2>What cognitive milestones should my 3 to 4 year old reach?</h2>
+
+  <p class="answer-first">Between ages 3 and 4, children's thinking shifts from predominantly sensory and physical to representational — they understand that symbols, words, and pictures can stand for real things. They engage in complex pretend play, draw recognizable shapes and people, identify basic colors and numbers, and complete simple puzzles (CDC, 2022). Most 3-to-4-year-olds can identify the difference between fantasy and reality at a basic level, though they still believe in Santa, monsters, and imaginary friends simultaneously.</p>
+
+  <ul>
+    <li>Draws a circle after being shown how (age 3); draws a person with 3 or more body parts (age 4)</li>
+    <li>Completes 3-to-4-piece puzzles</li>
+    <li>Understands basic concepts of time: "before," "after," "tomorrow"</li>
+    <li>Identifies basic colors (age 3) and most colors (age 4)</li>
+    <li>Counts 3 objects (age 3) and 4 or more objects (age 4)</li>
+    <li>Engages in creative pretend play with assigned roles</li>
+  </ul>
+
+  <h2>What physical milestones matter most at ages 3 to 4?</h2>
+
+  <p class="answer-first">Between ages 3 and 4, gross motor skills expand to include pedaling a tricycle, hopping briefly on one foot, catching a ball with both arms, and climbing well on playground equipment. Fine motor skills advance to include stringing large beads, using a fork with most foods, and putting on loose-fitting clothing independently (CDC, 2022). By age 4, most children can draw basic shapes, use scissors to cut along a line, and work a zipper with practice.</p>
+
+  <h2>When should I talk to my pediatrician about my 3 to 4 year old?</h2>
+
+  <div class="callout">
+    <p class="answer-first">The AAP recommends well-child visits at ages 3 and 4 with developmental screening at each visit. Contact your pediatrician if your 3-to-4-year-old cannot follow 2-step instructions, is not understood by familiar adults most of the time, falls down frequently or has difficulty with stairs, shows no interest in playing with other children, does not engage in pretend play, or has lost skills they previously had (CDC, 2022).</p>
+    <ul>
+      <li>Cannot be understood by familiar adults most of the time by age 3</li>
+      <li>Does not use sentences of 3 or more words</li>
+      <li>Cannot draw a circle or simple shapes by age 3</li>
+      <li>Shows no interest in other children by age 3 to 4</li>
+      <li>Has not transitioned out of diapers by age 4</li>
+      <li>Has lost any language, social, or motor skills previously acquired</li>
+    </ul>
+    <p>Early intervention for developmental concerns is most effective when started early. If you have concerns, request a developmental screening at your next visit or contact your state's early intervention program — services are free for children under age 3 who qualify.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 3 to 4 Year Old Development</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2>Explore 3–4 Year Old Topics</h2>
   <div class="topic-grid">
     {topics.map(topic => (
       <a href={`/ages/3-4-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>
 
-  <h2>Social and Emotional Milestones: Playing and Learning</h2>
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 
-  <p>Around age 3, social-emotional development takes a big leap. Children begin to notice the feelings of others and show more complex social behaviors. According to the CDC, most 3-year-olds:</p>
-
-  <ul>
-    <li><strong>Calm down within 10 minutes</strong> after you leave them (such as at a childcare drop-off).</li>
-    <li><strong>Notice other children</strong> and join them to play.</li>
-    <li><strong>Show a wider range of emotions</strong>, though they may still have trouble regulating them when tired or hungry.</li>
-    <li><strong>Begin to share</strong> and take turns, though this is still a developing skill and they will need frequent reminders.</li>
-  </ul>
-
-  <h2>Language and Communication: The Age of "Why?"</h2>
-
-  <p>Language skills explode during this year. Your child is moving from simple sentences to complex conversations. Most 3-year-olds can:</p>
-
-  <ul>
-    <li><strong>Talk with you</strong> using at least two back-and-forth exchanges.</li>
-    <li><strong>Ask "who," "what," "where," and "why"</strong> questions.</li>
-    <li><strong>Say their first name</strong> when asked.</li>
-    <li><strong>Be understood by strangers</strong> about 75% of the time.</li>
-    <li><strong>Follow multi-step instructions</strong>, such as "Pick up your shoes and put them in the closet."</li>
-  </ul>
-
-  <h2>Cognitive Development: Thinking and Problem-Solving</h2>
-
-  <p>Preschoolers are becoming "little scientists," constantly testing theories about how the world works. Cognitive milestones for this age include:</p>
-
-  <ul>
-    <li><strong>Drawing a circle</strong> after you show them how.</li>
-    <li><strong>Avoiding hot objects</strong> (like a stove) after being warned.</li>
-    <li><strong>Identifying basic colors</strong> and some numbers.</li>
-    <li><strong>Engaging in pretend play</strong>, such as playing "house" or "doctor."</li>
-    <li><strong>Completing simple puzzles</strong> with 3 or 4 pieces.</li>
-  </ul>
-
-  <h2>Movement and Physical Development</h2>
-
-  <p>Physical coordination improves as their muscles get stronger and their balance gets better. Most 3-year-olds can:</p>
-
-  <ul>
-    <li><strong>String items together</strong>, like large beads or macaroni.</li>
-    <li><strong>Put on some clothes</strong> by themselves, like loose-fitting pants or a jacket.</li>
-    <li><strong>Use a fork</strong> to eat most foods.</li>
-    <li><strong>Pedal a tricycle</strong> or other three-wheeled toy.</li>
-    <li><strong>Climb well</strong> and run with more stability.</li>
-  </ul>
-
-  <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 3–4 Year Olds</h2>
-    {faqs.map(faq => (
-      <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
-      </div>
-    ))}
-  </div>
-
-  <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The AAP recommends a well-child visit at age 3 and age 4. Contact your pediatrician if your 3-year-old:</p>
-    <ul>
-      <li>Does not want to play with other children or with toys</li>
-      <li>Has extremely difficult behavior that you cannot manage</li>
-      <li>Falls down a lot or has trouble with stairs</li>
-      <li>Has very unclear speech or loses skills they once had</li>
-      <li>Does not use sentences of more than 3 words</li>
-      <li>Does not understand simple instructions</li>
-      <li>Does not make eye contact or show interest in others</li>
-      <li>Is not able to perform basic self-care like using a fork or helping with dressing</li>
-    </ul>
-    <p>Early intervention is highly effective. If you have any concerns about your child's development, it is always better to speak up early.</p>
-  </div>
 </BaseLayout>
