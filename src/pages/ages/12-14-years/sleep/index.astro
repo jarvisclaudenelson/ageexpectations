@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '12–14 Year Old Sleep: How Much Sleep Do Early Teens Need?';
+const description = 'Teens ages 12 to 14 need 8 to 10 hours of sleep per night, but puberty triggers a biological phase shift that makes earlier bedtimes genuinely harder. Learn about teen sleep science, bedtime guidelines, and how to reduce sleep debt, based on AAP recommendations.';
+
+const faqs = [
+  {
+    question: 'What time should my 13-year-old go to bed?',
+    answer: 'A 13-year-old who must wake at 6:30 AM for school needs to be asleep — not just in bed — by 10:00 to 10:30 PM at the latest to hit the AAP\'s 8-to-10-hour recommendation (AAP, 2016). Most 13-year-olds\'s biological clock (due to pubertal phase delay) makes falling asleep before 10:00 to 10:30 PM difficult regardless of bedtime intention. A consistent lights-out time of 9:30 to 10:00 PM, with screens off by 9:00 PM, works better than forcing an 8:30 PM bedtime the child cannot meet.',
+  },
+  {
+    question: 'How much sleep does a 14-year-old need?',
+    answer: 'The AAP and American Academy of Sleep Medicine recommend 8 to 10 hours of sleep per night for adolescents ages 13 to 18 (AAP, 2016). Most 14-year-olds average 6 to 7 hours on school nights due to early school start times and the biological phase delay of puberty — a chronic sleep deficit. Research links this deficit directly to impaired attention, lower GPA, emotional dysregulation, and higher rates of depression and anxiety. Closing the gap by even 30 to 60 minutes per night produces measurable academic and mood improvements.',
+  },
+  {
+    question: 'Why does my 12-year-old suddenly stay up until midnight even on school nights?',
+    answer: 'Puberty shifts the circadian rhythm 1 to 2 hours later — a real, hormonal change in melatonin onset timing that makes it physiologically impossible for most 12 to 14 year olds to feel sleepy before 10:00 to 11:00 PM (AAP, 2014). Screens, caffeine, and irregular weekend schedules amplify this shift. The result: a child who could fall asleep at 9:00 PM before puberty now cannot fall asleep until 10:30 to 11:00 PM even with good intentions. The circadian shift itself cannot be eliminated, but consistent wake times, screen curfews, and cool dark rooms reduce its impact.',
+  },
+  {
+    question: 'Should my 13-year-old have a phone in their bedroom at night?',
+    answer: 'No. The AAP recommends that all devices — phones, tablets, laptops — be removed from children\'s bedrooms at night and charged in a common area (AAP, 2016). Blue light from screens suppresses melatonin for 60 to 90 minutes after exposure. Social media notifications — and the knowledge that messages are arriving — disrupt sleep even when the phone is nearby but not actively used. Establishing a no-devices-in-bedroom rule before age 12 is significantly easier than trying to reverse the habit at 14 or 15.',
+  },
+  {
+    question: 'My 13-year-old sleeps until noon on weekends. Is that healthy?',
+    answer: 'Sleeping 3 or more hours later on weekends than school nights signals chronic weekday sleep deprivation — a pattern called "social jet lag." The body experiences this like flying across multiple time zones every weekend and recovering through the week. Social jet lag in teens is linked to worse mood, lower academic performance, and higher rates of depression (Wittmann et al., 2006). Limiting weekend sleep-ins to 60 to 90 minutes past the school wake time reduces the deficit without eliminating the extra sleep entirely.',
+  },
+  {
+    question: 'Is it normal for my 12-year-old to lie awake anxious at bedtime?',
+    answer: 'Bedtime anxiety is common in early adolescence (ages 12 to 14) and has two primary drivers: the quiet of bedtime allows worries to surface that were crowded out during the day, and the circadian phase delay means the brain is not yet primed for sleep at a parent-set bedtime. Persistent bedtime anxiety — worry that takes more than 30 minutes to settle most nights — that is accompanied by daytime anxiety warrants evaluation. A pediatrician can help distinguish developmentally typical worry from generalized anxiety disorder, which affects approximately 7% of adolescents (NIMH, 2022).',
+  },
+  {
+    question: 'What can I do if my teen\'s school starts too early for healthy sleep?',
+    answer: 'The AAP has formally recommended no middle or high school start times before 8:30 AM since 2014, citing extensive evidence linking early starts to chronic teen sleep deprivation (AAP, 2014). If school start time is not changeable, the most effective household compensations are consistent wake times on weekends (within 60 minutes of school day), removing devices from bedrooms at 9:30 PM, and ensuring the bedroom is cool (65 to 68°F) and dark. Advocate for later start times — many districts have moved successfully, and the AAP publishes resources for parent-led advocacy.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/sleep/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/sleep/',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '12–14 Years', href: '/ages/12-14-years/' },
+    { label: 'Sleep' },
+  ]}
+>
+  <h1>12–14 Year Old Sleep: How Much Sleep Do Early Teens Need?</h1>
+
+  <p class="answer-first">Teens ages 12 to 14 need 8 to 10 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). Most are getting 6 to 7 hours. The gap is not mainly about discipline or devices — puberty triggers a genuine biological shift in the circadian rhythm that makes falling asleep before 10:00 to 11:00 PM physiologically harder, regardless of bedtime rules. Understanding this biology is the starting point for building realistic, effective sleep habits in early adolescents.</p>
+
+  <h2>How much sleep do 12 to 14 year olds actually need?</h2>
+
+  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 8 to 10 hours of sleep per night for adolescents ages 13 to 18 (AAP, 2016). For 12-year-olds still in the 6-to-12 age category, the recommendation is 9 to 12 hours — meaning most 12-year-olds need closer to 9 hours. Research consistently shows that teens who average fewer than 8 hours of sleep have significantly worse academic performance, emotional regulation, immune function, and mental health than peers who average 9 hours or more (AAP, 2022).</p>
+
+  <p>Sleep targets by age and typical wake time:</p>
+  <ul>
+    <li><strong>Age 12:</strong> 9 to 10 hours. Target bedtime of 9:00 to 9:30 PM for a 6:30 AM school wake-up.</li>
+    <li><strong>Age 13:</strong> 8.5 to 10 hours. Target bedtime of 9:30 to 10:00 PM for a 6:30 AM school wake-up.</li>
+    <li><strong>Age 14:</strong> 8 to 10 hours. Target bedtime of 10:00 to 10:30 PM for a 6:30 AM school wake-up. The circadian phase delay is often fully established by this age.</li>
+  </ul>
+
+  <p>If your teen wakes rested and alert without an alarm most mornings and functions well through the day without caffeine, their current sleep is likely adequate. If they require significant parental effort or multiple alarms to wake on school days and crash on weekends, they are sleep-deprived.</p>
+
+  <h2>Why do teens ages 12 to 14 suddenly struggle to fall asleep?</h2>
+
+  <p class="answer-first">Puberty causes a measurable biological delay in circadian rhythm — the internal clock shifts 1 to 2 hours later during puberty due to changes in melatonin release timing (AAP, 2014). This is not a preference or a bad habit. It is a hormonal change that occurs across mammals during puberty. The brain does not begin releasing melatonin (the sleep hormone) at the same time it did before puberty — onset shifts to roughly 10:00 to 11:00 PM for most early adolescents. School start times rarely accommodate this shift, creating structural sleep deprivation in most middle schoolers.</p>
+
+  <p>Factors that amplify the circadian phase delay:</p>
+  <ul>
+    <li><strong>Screen use before bed:</strong> Blue light from phones, tablets, and computers suppresses melatonin production for 60 to 90 minutes after exposure, pushing sleep onset even later (AAP, 2016). A teen on their phone until 10:30 PM may not feel sleepy until midnight.</li>
+    <li><strong>Caffeine:</strong> Energy drinks (common in middle school), soda, and iced coffee all contain meaningful caffeine. Caffeine consumed after 2:00 to 3:00 PM interferes with sleep onset in teens even if they don't perceive its effect.</li>
+    <li><strong>Social jet lag:</strong> Sleeping 2 or more hours later on weekends resets the body clock to a later schedule, making weekday mornings progressively harder. Each weekend of late sleeping undoes the week's circadian work.</li>
+    <li><strong>Irregular bedtimes:</strong> Circadian regulation requires consistency. A bedtime that varies by more than 60 minutes night to night prevents the body clock from anchoring to a predictable schedule.</li>
+  </ul>
+
+  <h2>What bedtime works best for 12, 13, and 14 year olds?</h2>
+
+  <p class="answer-first">A realistic, effective bedtime for most 12 to 14 year olds is 9:30 to 10:30 PM — not 8:30 to 9:00 PM, which many parents attempt and most teens cannot meet due to the biological phase delay (AAP, 2014). A bedtime the teen can actually achieve consistently produces better outcomes than an earlier target that is missed most nights. Consistency matters more than the specific hour: a 10:00 PM lights-out, maintained seven days a week, outperforms a 9:00 PM target met only on school nights.</p>
+
+  <p>Bedtime targets by wake time for this age range:</p>
+  <ul>
+    <li><strong>6:00 AM wake:</strong> In bed by 9:30 to 10:00 PM (8–9 hours sleep)</li>
+    <li><strong>6:30 AM wake:</strong> In bed by 10:00 to 10:30 PM (8–8.5 hours)</li>
+    <li><strong>7:00 AM wake:</strong> In bed by 10:30 to 11:00 PM (8–8.5 hours)</li>
+    <li><strong>7:30 AM wake:</strong> In bed by 11:00 PM (8+ hours)</li>
+  </ul>
+
+  <h2>How does sleep deprivation affect a 12 to 14 year old's brain and behavior?</h2>
+
+  <p class="answer-first">Chronic sleep deprivation in early adolescence produces measurable changes in the brain regions responsible for emotional regulation and impulse control — the same regions still actively developing during this period (AAP, 2022). A sleep-deprived 13-year-old is not choosing to be irritable, reactive, or impulsive: their brain literally has fewer resources for regulation when under-rested. Research links chronic adolescent sleep debt to lower GPA, increased rates of depression and anxiety, higher BMI, weaker immune response, and greater likelihood of drowsy driving once licensed.</p>
+
+  <p>Observable signs of chronic sleep deprivation in a 12 to 14 year old:</p>
+  <ul>
+    <li>Extreme difficulty waking on school days despite adequate bedtime</li>
+    <li>Mood that is significantly worse on school days than weekends</li>
+    <li>Sleeping 2 or more hours longer on weekends than school nights</li>
+    <li>Relying on caffeine to function in the morning</li>
+    <li>Falling asleep within 10 minutes of any quiet, sedentary activity (reading, car rides)</li>
+    <li>Declining academic performance that is not explained by other factors</li>
+  </ul>
+
+  <h2>What sleep hygiene practices actually work for early adolescents?</h2>
+
+  <p class="answer-first">The three interventions with the strongest evidence for improving adolescent sleep are consistent wake times seven days a week, screens removed from the bedroom at night, and a regular pre-sleep wind-down routine (AAP, 2016). Wake time consistency is more powerful than bedtime consistency because the morning wake signal is what anchors the circadian clock — when the body wakes at the same time daily, it adjusts its melatonin release schedule accordingly.</p>
+
+  <p>Evidence-based sleep hygiene for teens ages 12 to 14:</p>
+  <ul>
+    <li><strong>Consistent wake time (7 days):</strong> The most powerful sleep intervention available. Keep weekend wake times within 60 to 90 minutes of school-day wake time. Yes, even on Saturdays.</li>
+    <li><strong>Screens out of the bedroom:</strong> All devices charge in a common area overnight. Not in the bedroom, turned face-down — out. This is a non-negotiable AAP recommendation (AAP, 2016).</li>
+    <li><strong>Screen curfew:</strong> Stop all screens — including "passive" video — 60 to 90 minutes before target sleep time.</li>
+    <li><strong>Cool, dark room:</strong> Optimal sleep temperature is 65 to 68°F (18 to 20°C). Blackout curtains significantly help, especially in summer.</li>
+    <li><strong>Wind-down routine:</strong> 20 to 30 minutes of dim lights and calm activity (reading physical books, journaling, light stretching) before lights out. Consistent routines signal the nervous system that sleep is approaching.</li>
+    <li><strong>No caffeine after 2:00 PM:</strong> Energy drinks, soda, and iced coffee are common in this age group. Half-life of caffeine is 5 to 6 hours — a 3:00 PM drink affects 11:00 PM sleep.</li>
+    <li><strong>Regular physical activity:</strong> The AAP recommends 60 minutes of physical activity daily for this age group. Regular exercise improves sleep quality. Avoid vigorous exercise within 2 hours of bedtime.</li>
+    <li><strong>Melatonin (with guidance):</strong> Low-dose melatonin (0.5 to 1 mg, not 5 to 10 mg) taken 30 to 60 minutes before target sleep time can help offset the circadian phase delay. Always discuss with your pediatrician before starting — melatonin supplements are not FDA-regulated for dosage accuracy, and many over-the-counter products contain 5 to 10 times the effective dose.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my early teen's sleep?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Contact your pediatrician if your 12 to 14 year old consistently takes more than 45 minutes to fall asleep despite good sleep hygiene, snores loudly or stops breathing during sleep, shows daytime sleepiness severe enough to impair school or daily function, or has sleep problems that persist for more than 4 weeks despite consistent sleep hygiene improvements (AAP, 2022).</p>
+    <p>Specific red flags that warrant evaluation:</p>
+    <ul>
+      <li><strong>Loud snoring or gasping:</strong> These are signs of obstructive sleep apnea (OSA), which affects 1 to 5% of children and adolescents and is underdiagnosed. OSA causes fragmented sleep and produces behavioral symptoms that closely mimic ADHD — inattention, impulsivity, hyperactivity, irritability.</li>
+      <li><strong>Sleep onset consistently after 11:30 to midnight despite attempts:</strong> Very late sleep onset despite good sleep hygiene and consistent schedules may indicate Delayed Sleep Phase Syndrome (DSPS), a circadian rhythm disorder. DSPS responds to timed melatonin and light therapy protocols.</li>
+      <li><strong>Restless legs or uncomfortable leg sensations at night:</strong> Restless Legs Syndrome affects approximately 2 to 4% of adolescents, is often underdiagnosed, and is treatable.</li>
+      <li><strong>Significant bedtime anxiety:</strong> If anxiety prevents sleep most nights and is accompanied by other anxiety symptoms during the day, ask your pediatrician about evaluation for an anxiety disorder. Generalized anxiety disorder and separation anxiety are both common in early adolescence.</li>
+      <li><strong>Excessive daytime sleepiness despite 9+ hours of sleep:</strong> Severe daytime sleepiness despite adequate time in bed warrants evaluation for sleep apnea, narcolepsy (which often first presents in adolescence), anemia, thyroid dysfunction, or mood disorders.</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: 12 to 14 Year Old Sleep</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

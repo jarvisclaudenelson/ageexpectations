@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '14–18 Year Old Sleep: How Much Sleep Do Teenagers Need?';
+const description = 'Teens ages 14 to 18 need 8 to 10 hours of sleep per night, but most get 6 to 7. Puberty\'s circadian phase shift, early school start times, and screens combine to create chronic sleep debt in most high schoolers. Learn the science, the bedtime guidelines, and the practical fixes.';
+
+const faqs = [
+  {
+    question: 'What time should a 16-year-old go to bed?',
+    answer: 'A 16-year-old who must wake at 6:30 AM for school needs to be asleep by 10:00 to 10:30 PM to get the 8 to 10 hours the AAP recommends (AAP, 2016). The biological sleep phase delay of mid-adolescence makes falling asleep before 10:00 to 11:00 PM genuinely difficult for most 16-year-olds. A 10:00 to 10:30 PM lights-out, maintained consistently seven days a week with screens off by 9:30 PM, is more effective than forcing a 9:00 PM bedtime the teen cannot meet.',
+  },
+  {
+    question: 'How much sleep does a 17-year-old need?',
+    answer: 'The AAP recommends 8 to 10 hours per night for adolescents ages 13 to 18 (AAP, 2016). Most 17-year-olds average 6 to 7 hours on school nights. Research links this deficit to impaired cognitive performance equivalent to 1 to 2 days without sleep, decreased academic performance, emotional dysregulation, higher rates of depression, greater risk of drowsy driving, and compromised immune function. A 17-year-old who consistently gets 8.5 hours performs, feels, and behaves meaningfully better than one who consistently gets 6.5 hours.',
+  },
+  {
+    question: 'Is it normal for my 15-year-old to stay up until 1 AM and still not feel tired?',
+    answer: 'This pattern is common in mid-adolescence and has a biological basis. Puberty shifts the circadian rhythm 1 to 3 hours later — melatonin release genuinely does not begin until 10:30 to 11:30 PM in many teens ages 14 to 17 (AAP, 2014). Combined with screen use that suppresses melatonin further, many teens cannot fall asleep before 11:30 PM to 1:00 AM despite wanting to. Sleep onset consistently after midnight despite consistent sleep hygiene efforts may indicate Delayed Sleep Phase Syndrome — discuss it with your pediatrician.',
+  },
+  {
+    question: 'My 18-year-old sleeps until noon on weekends. Should I make them get up?',
+    answer: 'Weekend sleep-ins of 3 or more hours past the weekday wake time signal chronic weekday sleep deprivation. "Sleeping in" is the body recovering from accumulated sleep debt, not laziness. The problem is that very late weekend sleep resets the circadian clock to a later schedule, making Monday mornings worse. A reasonable goal: weekend wake times within 60 to 90 minutes of weekday wake times. Allow 1 to 2 hours of extra sleep to recover — not 4 to 5. A consistent wake time, even on weekends, is the most powerful circadian anchor available.',
+  },
+  {
+    question: 'Does screen time before bed really affect teen sleep that much?',
+    answer: 'Yes — and the evidence is strong. Blue light from screens (phones, tablets, computers, and LED TVs) suppresses melatonin production for 60 to 90 minutes after exposure, delaying sleep onset even in teens already experiencing the pubertal phase delay (AAP, 2016). A teen who scrolls social media until 11:00 PM may not feel sleepy until midnight or later. Beyond the blue light effect, the psychological stimulation of social media, news, and gaming keeps the nervous system in an alert state incompatible with sleep onset. Devices off 60 to 90 minutes before target sleep is the evidence-based standard.',
+  },
+  {
+    question: 'Can teens "catch up" on sleep by sleeping in on weekends?',
+    answer: 'Partial recovery is possible but not complete. Research shows that cognitive performance partially recovers with recovery sleep after sleep deprivation. However, chronic sleep restriction (months of getting 6 hours when 8 are needed) causes neural changes that do not fully reverse with weekend recovery (Van Dongen et al., 2003). The practical problem: "catching up" with 4-hour sleep-ins shifts the circadian clock later, creating social jet lag that makes the following week worse. The sustainable fix is incrementally shifting bedtime and wake time earlier — not weekend binges.',
+  },
+  {
+    question: 'Should I let my 16-year-old drink coffee to stay alert at school?',
+    answer: 'Modest caffeine use (one moderate-sized coffee in the morning) is not dangerous for most healthy 16-year-olds, but it is not a fix for sleep deprivation. Caffeine masks sleepiness without restoring the cognitive functions that sleep deprivation impairs — attention, memory consolidation, emotional regulation, and decision-making. The AAP notes that caffeine dependence can develop in adolescents and that energy drinks (which contain far more caffeine than coffee) are specifically linked to sleep disruption and increased anxiety in teens (AAP, 2011). Caffeine after 2:00 to 3:00 PM reliably disrupts sleep onset.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/sleep/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/sleep/',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '14–18 Years', href: '/ages/14-18-years/' },
+    { label: 'Sleep' },
+  ]}
+>
+  <h1>14–18 Year Old Sleep: How Much Sleep Do Teenagers Need?</h1>
+
+  <p class="answer-first">Teenagers ages 14 to 18 need 8 to 10 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). Most high schoolers get 6 to 7 hours on school nights. This is not a preference gap or a discipline problem — puberty shifts the biological circadian clock 1 to 3 hours later, early school start times force early wake-ups, and screens push sleep onset even later. The result is that most American high schoolers are chronically, measurably sleep-deprived. The consequences are real and affect academic performance, mental health, and physical safety.</p>
+
+  <h2>How much sleep do teenagers ages 14 to 18 actually need?</h2>
+
+  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 8 to 10 hours of sleep per night for teens ages 13 to 18 (AAP, 2016). The optimal amount within that range varies by individual, but a practical test: a well-rested teen wakes without significant difficulty most mornings, has stable energy and mood through the day, and does not need caffeine to function. Research shows that teens who consistently sleep 9 hours outperform those who sleep 7 hours on attention, memory, reaction time, mood stability, and academic performance — not trivially, but by significant, measurable margins (AAP, 2022).</p>
+
+  <p>Sleep needs by subgroup within this range:</p>
+  <ul>
+    <li><strong>Ages 14 to 15:</strong> Most still benefit from 9 hours. The circadian phase delay is typically near its peak. School nights often limit sleep to 6.5 to 7.5 hours without intervention.</li>
+    <li><strong>Ages 16 to 17:</strong> 8 to 9.5 hours. Circadian delay remains strong. Driving fatigue (a specific risk for this group) is dramatically higher at 6 hours versus 8 hours of sleep.</li>
+    <li><strong>Age 18:</strong> 8 to 9 hours. Identity and schedule may be shifting (senior year, college transition). Sleep habits established at this age often persist into young adulthood.</li>
+  </ul>
+
+  <h2>Why do teenagers have such a hard time going to sleep at night?</h2>
+
+  <p class="answer-first">Puberty triggers a biological phase delay in the circadian rhythm — melatonin onset shifts 1 to 3 hours later, making it physiologically impossible for most teens to feel sleepy before 10:00 to 11:30 PM (AAP, 2014). This is a hormonal change, not willful defiance. It occurs across mammalian species during puberty. The phase delay is compounded by screens (which suppress melatonin further), caffeine, irregular weekend schedules, and anxiety — any of which alone would be manageable, but combined create a perfect storm against adequate sleep.</p>
+
+  <p>The compounding factors:</p>
+  <ul>
+    <li><strong>Screen exposure:</strong> Blue light from devices suppresses melatonin for 60 to 90 minutes per exposure. A teen scrolling until 11:00 PM pushes biological readiness for sleep to midnight or later.</li>
+    <li><strong>Social jet lag:</strong> Staying up until 2:00 AM and sleeping until 11:00 AM on weekends shifts the body clock 3 to 4 hours later. The body then struggles to shift back for Monday, creating chronic Monday-to-Friday sleep debt.</li>
+    <li><strong>School start times:</strong> The AAP recommends no middle or high school start times before 8:30 AM (AAP, 2014). The majority of US high schools start before 8:00 AM. The structural mismatch between adolescent biology and school schedules drives most chronic teen sleep deprivation.</li>
+    <li><strong>Caffeine and energy drinks:</strong> Energy drinks are the fastest-growing beverage category among teens. Caffeine consumed after 2:00 PM significantly delays sleep onset even when teens do not perceive its effect.</li>
+    <li><strong>Anxiety:</strong> Anxiety disorders are among the most common conditions in adolescence. Bedtime anxiety — intrusive worry in the quiet of the bedroom — is one of the most common causes of prolonged sleep onset in teens ages 14 to 18.</li>
+  </ul>
+
+  <h2>What happens to a teenager's brain and body when they are sleep-deprived?</h2>
+
+  <p class="answer-first">Chronic sleep deprivation (getting 6 hours when 8 to 9 are needed) impairs adolescent cognitive function in ways that closely resemble 1 to 2 days of complete sleep deprivation — but teens adapt to the deficit and no longer feel as impaired as they actually are (Van Dongen et al., 2003). The prefrontal cortex — the brain region responsible for impulse control, judgment, and emotional regulation, and still actively developing during adolescence — is specifically vulnerable to sleep loss. This explains why sleep-deprived teens make worse decisions, react more intensely, and recover from upsets more slowly.</p>
+
+  <p>Documented effects of chronic teen sleep deprivation (AAP, 2022):</p>
+  <ul>
+    <li><strong>Academic performance:</strong> Lower GPA, reduced attention, impaired memory consolidation (sleep is when the brain transfers information to long-term memory)</li>
+    <li><strong>Mental health:</strong> Doubled rates of depression in teens who average 6 or fewer hours compared to those who average 9 hours; increased anxiety severity</li>
+    <li><strong>Physical health:</strong> Higher BMI (sleep regulates appetite hormones ghrelin and leptin); compromised immune response; increased injury risk</li>
+    <li><strong>Driving safety:</strong> Drowsy driving in sleep-deprived teens is comparable in impairment to driving with a blood alcohol level of 0.08%. This is a serious, specific safety risk for 16-to-18-year-old drivers.</li>
+    <li><strong>Substance use:</strong> Sleep-deprived teens have higher rates of caffeine dependence, alcohol use, and stimulant use than adequately rested peers</li>
+  </ul>
+
+  <h2>What bedtime and wake time should a 14 to 18 year old aim for?</h2>
+
+  <p class="answer-first">A realistic, achievable bedtime for most teens ages 14 to 18 is 10:00 to 11:00 PM — not 9:00 PM, which the biological phase delay makes genuinely unachievable for most. A lights-out time the teen can actually meet consistently produces better outcomes than an earlier target that is missed most nights. The most powerful variable is not bedtime but wake time: a consistent 7-day wake schedule anchors the circadian clock more effectively than any bedtime enforcement (AAP, 2016).</p>
+
+  <p>Practical targets by school wake time:</p>
+  <ul>
+    <li><strong>6:00 AM wake:</strong> Lights out by 9:45 to 10:15 PM (8–8.5 hours)</li>
+    <li><strong>6:30 AM wake:</strong> Lights out by 10:15 to 10:30 PM (8–8.25 hours)</li>
+    <li><strong>7:00 AM wake:</strong> Lights out by 11:00 PM (8 hours)</li>
+    <li><strong>7:30 AM wake:</strong> Lights out by 11:00 to 11:30 PM (8–8.5 hours)</li>
+  </ul>
+
+  <p>Weekend rule: wake within 60 to 90 minutes of weekday wake time. Allow 1 to 1.5 extra sleep hours to partially recover weekday debt — not 3 to 4 hours, which resets the clock to a later schedule.</p>
+
+  <h2>How can I help my teenager sleep better without constant conflict?</h2>
+
+  <p class="answer-first">The most effective approach for improving teen sleep long-term is collaborative rather than imposed: explain the sleep science directly to the teen (they respond to understanding why, not just being told what), establish clear household-level rules that are not personal to the teen (devices in family charging station overnight is a family rule, not a punishment), and give the teen ownership of their wind-down routine (AAP, 2016). Teens who understand the biology of their own sleep and feel some control over their environment comply more consistently than those who experience sleep rules as parental control.</p>
+
+  <p>Evidence-based interventions for teen sleep:</p>
+  <ul>
+    <li><strong>Household charging station:</strong> All family phones and devices charge in a common area overnight — not just the teen's. This normalizes the rule and removes "you don't trust me" as a counter-argument.</li>
+    <li><strong>Consistent 7-day wake time:</strong> The single most effective sleep intervention. Set an alarm, even on weekends, within 90 minutes of school-day wake time. Even if the teen went to bed late, getting up at the same time forces the body clock to anchor.</li>
+    <li><strong>Screen curfew by room brightness, not time:</strong> Start dimming lights 60 to 90 minutes before target sleep time. Use f.lux or Night Shift on screens if use continues, to reduce blue light — though stopping screens entirely is more effective.</li>
+    <li><strong>Cool, dark room:</strong> Core body temperature must drop 1 to 2°F to initiate sleep. A room at 65 to 68°F (18 to 20°C) and blackout curtains or a sleep mask support this process.</li>
+    <li><strong>No caffeine after 2:00 PM:</strong> Make this a stated household rule. Energy drinks at 4:00 PM are one of the most common, overlooked causes of teen sleep onset problems.</li>
+    <li><strong>Physical activity:</strong> 60 minutes of daily physical activity (AAP recommendation for this age) improves sleep quality. Avoid vigorous exercise within 2 hours of bedtime.</li>
+    <li><strong>Melatonin when appropriate:</strong> Low-dose melatonin (0.5 to 1 mg, not 5 to 10 mg) taken 30 to 60 minutes before target sleep time can reduce phase delay effects. Discuss with your pediatrician first — most over-the-counter products contain 5 to 10 times the effective dose, and quality is not FDA-regulated.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my teen's sleep?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Contact your pediatrician if your 14 to 18 year old consistently cannot fall asleep before midnight despite removing screens and maintaining consistent schedules, snores loudly or stops breathing during sleep, has daytime sleepiness severe enough to affect safety (drowsy driving, falling asleep in class daily), or shows mood or academic problems that worsen in parallel with sleep disruption (AAP, 2022).</p>
+    <p>Specific red flags warranting evaluation:</p>
+    <ul>
+      <li><strong>Loud, frequent snoring or gasping:</strong> Obstructive sleep apnea (OSA) affects approximately 2 to 3% of adolescents and produces cognitive and behavioral effects that mimic ADHD. It is underdiagnosed and treatable.</li>
+      <li><strong>Sleep onset consistently after midnight:</strong> Despite consistent sleep hygiene efforts, very late sleep onset may indicate Delayed Sleep Phase Syndrome (DSPS) — a circadian rhythm disorder that responds to timed melatonin and morning light therapy protocols and is distinct from the normal pubertal phase delay.</li>
+      <li><strong>Excessive daytime sleepiness despite 9+ hours:</strong> Extreme daytime sleepiness despite adequate time in bed warrants evaluation for sleep apnea, narcolepsy (which typically first presents in adolescence), anemia, thyroid dysfunction, or depression.</li>
+      <li><strong>Narcolepsy symptoms:</strong> Sudden muscle weakness triggered by strong emotion (cataplexy), sleep paralysis, or vivid hallucinations when falling asleep or waking are specific narcolepsy symptoms. Narcolepsy most commonly first presents in the teen years.</li>
+      <li><strong>Significant anxiety at bedtime:</strong> Persistent bedtime anxiety accompanied by daytime anxiety symptoms warrants evaluation for an anxiety disorder — highly treatable with cognitive behavioral therapy (CBT).</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: 14 to 18 Year Old Sleep</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
