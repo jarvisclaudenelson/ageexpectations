@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old Sleep: How Much, Bedtime, and What\'s Normal';
+const description = 'Children ages 8 to 10 need 9 to 12 hours of sleep per night. Learn about typical sleep patterns for this age, recommended bedtimes, screen time rules, and the early signs of the puberty-driven sleep shift.';
+
+const faqs = [
+  {
+    question: 'What time should my 8-year-old go to bed?',
+    answer: 'An 8-year-old who wakes at 6:30 AM for school should be asleep — not just in bed — by 8:30 to 9:00 PM to meet the AAP\'s recommended 9 to 12 hours of sleep (AAP, 2016). Most families with 8-year-olds find that lights-out between 8:00 and 8:30 PM works well, with a 20-minute wind-down routine starting around 7:45 PM. Consistent timing matters more than the exact hour — a bedtime that varies by more than 30 to 60 minutes disrupts circadian regulation and makes falling asleep harder.',
+  },
+  {
+    question: 'What time should my 9 or 10 year old go to bed?',
+    answer: 'A 9 to 10 year old who wakes at 6:30 to 7:00 AM needs to be asleep by 9:00 to 9:30 PM at the latest to get 9 to 10 hours (AAP, 2016). Early puberty begins in some girls around age 8 and boys around age 9, which may push the natural sleepy signal slightly later. If your child regularly cannot fall asleep until 9:30 or 10:00 PM, this may reflect the earliest stage of the circadian phase shift that becomes more pronounced in the tween years. Start with consistent wake times and screens off 60 minutes before bed before considering later bedtimes.',
+  },
+  {
+    question: 'Is it normal for my 9-year-old to not be tired at bedtime?',
+    answer: 'Yes — it is common, and may have a biological explanation. Early puberty (which begins in many girls ages 8 to 9 and boys ages 9 to 11) triggers a gradual delay in the circadian rhythm, pushing the natural sleepy feeling later in the evening (AAP, 2014). If your child genuinely cannot fall asleep until 9:30 PM or later despite a quiet, screen-free environment, this may be the start of the circadian phase shift associated with puberty. If insomnia is accompanied by anxiety, worry, or physical complaints at bedtime, talk to your pediatrician.',
+  },
+  {
+    question: 'How much sleep does a 10-year-old need?',
+    answer: 'The AAP and American Academy of Sleep Medicine recommend 9 to 12 hours of sleep per night for children ages 6 to 12, including 10-year-olds (AAP, 2016). At age 10, many children are in early puberty and beginning the biological phase delay — a natural shift toward later sleep and wake times. Most 10-year-olds function best with 9.5 to 10.5 hours. A reliable signal of inadequate sleep is a child who sleeps significantly more on weekends than school nights — that gap signals chronic weekday sleep insufficiency.',
+  },
+  {
+    question: 'Should my 8-year-old have a phone or tablet in their bedroom at night?',
+    answer: 'No — the AAP recommends that all screens, including phones, tablets, and computers, be removed from children\'s bedrooms at night (AAP, 2016). Blue light from screens suppresses melatonin production for 60 to 90 minutes after use, shifting when the body is ready to sleep. Notification sounds and lights can disrupt sleep architecture even after a child falls asleep. The simplest and most effective rule: all devices charge in a common family area overnight. This rule is significantly easier to establish before age 9 than after.',
+  },
+  {
+    question: 'Is it normal for my 8 to 10 year old to wake up during the night?',
+    answer: 'Brief night wakings are biologically normal at every age — all humans cycle through partial wakings every 90 to 120 minutes during sleep. Most children ages 8 to 10 return to sleep independently without remembering waking. Wakings that result in the child calling out, coming to parents\' room, or being unable to return to sleep within 15 to 20 minutes are less typical and may reflect anxiety, a sleep disorder, or a disrupted sleep schedule. If your child wakes more than 2 to 3 times per week and struggles to return to sleep, discuss it with your pediatrician.',
+  },
+  {
+    question: 'My child sleeps 10 hours but still seems tired. What could explain this?',
+    answer: 'Persistent daytime tiredness despite adequate sleep hours has several possible causes in 8 to 10 year olds. Obstructive sleep apnea (OSA) causes fragmented, non-restorative sleep even when total hours look adequate — loud snoring or mouth-breathing at night are key signs. Iron deficiency anemia is common in this age range and causes fatigue. Anxiety disrupts sleep architecture. Thyroid problems can cause fatigue. And some children who look like they sleep enough on the clock still have poor sleep quality from frequent partial wakings. A check-in with your pediatrician is the right first step.',
+  },
+  {
+    question: 'How do I handle my 9-year-old who fights bedtime every night?',
+    answer: 'Bedtime resistance in 9-year-olds is very common and usually reflects a combination of FOMO (fear of missing out), difficulty transitioning from stimulating evening activities, and sometimes the beginning of the biological phase delay. The most effective approach combines consistent timing, a predictable 20 to 30 minute wind-down routine (screens off, dim lights, calm activity), and a rule that bedroom lights go off at the same time every night even if the child is not sleepy. Avoid escalating power struggles — natural consequences (being tired the next day) teach more than argument. If bedtime battles are severe and chronic, discuss with your pediatrician.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/sleep/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/sleep/',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '8–10 Years', href: '/ages/8-10-years/' },
+    { label: 'Sleep' },
+  ]}
+>
+  <h1>8–10 Year Old Sleep: How Much, Bedtime, and What's Normal</h1>
+
+  <p class="answer-first">Children ages 8 to 10 need 9 to 12 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). This is a transitional window: younger children in this range still have relatively straightforward sleep needs, while many 9 and 10 year olds are entering early puberty and beginning the biological shift toward later sleep times that intensifies in the tween and teen years. Getting the foundations right now pays dividends through middle and high school.</p>
+
+  <h2>How much sleep do 8 to 10 year olds need?</h2>
+
+  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 9 to 12 hours of sleep per night for children ages 6 to 12 (AAP, 2016). For most 8 to 10 year olds, the sweet spot is 9.5 to 11 hours — enough for sustained attention, emotional regulation, and healthy growth. Research shows that children in this age range who average fewer than 9 hours of nightly sleep have measurably worse academic performance, more emotional outbursts, and higher rates of obesity than peers who sleep 10 or more hours (AAP, 2022).</p>
+
+  <p>Sleep targets by age and wake time:</p>
+  <ul>
+    <li><strong>Age 8, wake at 6:30 AM:</strong> Asleep by 8:00 to 9:00 PM (target 9.5–10.5 hours)</li>
+    <li><strong>Age 9, wake at 6:30 AM:</strong> Asleep by 8:30 to 9:30 PM (target 9–10.5 hours)</li>
+    <li><strong>Age 10, wake at 6:30 AM:</strong> Asleep by 9:00 to 9:30 PM (target 9–10 hours)</li>
+    <li><strong>Age 10, wake at 7:00 AM:</strong> Asleep by 9:30 to 10:00 PM (target 9–10 hours)</li>
+  </ul>
+
+  <p>The simplest check: if your child needs significant effort to wake on school days but sleeps 1 to 2 or more extra hours on weekends with no alarm, they are likely chronically under-slept. That weekend gap is called "social jet lag" and signals that weekday sleep is insufficient.</p>
+
+  <h2>What is a good bedtime for an 8, 9, or 10 year old?</h2>
+
+  <p class="answer-first">An 8-year-old who wakes at 6:30 AM for school should be asleep by 8:00 to 8:30 PM. A 9 or 10 year old with the same wake time should aim to be asleep by 8:30 to 9:30 PM (AAP, 2016). The appropriate bedtime shifts slightly later as children approach age 10 because early puberty triggers a biological delay in the circadian rhythm — the body's internal clock shifts toward later sleep and wake times. Consistency is more important than the exact hour: a bedtime that varies by more than 30 to 60 minutes across the week disrupts circadian regulation and makes falling asleep harder on school nights.</p>
+
+  <p>Practical bedtime calculation:</p>
+  <ul>
+    <li>Start with the school wake time (e.g., 6:30 AM)</li>
+    <li>Subtract 9.5 to 10.5 hours to get the target asleep time (e.g., 8:00 to 9:00 PM)</li>
+    <li>Add a 20 to 30 minute wind-down before that time (e.g., routine starts 8:30–8:45 PM)</li>
+    <li>Keep this schedule 7 days a week — weekend drift is the most common cause of weekday sleep trouble</li>
+  </ul>
+
+  <h2>How does early puberty affect sleep in 9 and 10 year olds?</h2>
+
+  <p class="answer-first">Early puberty triggers a delayed phase shift in the circadian rhythm — the body's internal clock shifts 1 to 2 hours later, making it physiologically harder to feel sleepy before 9:30 to 10:00 PM (AAP, 2014). This shift begins earlier than most parents expect: in girls, early puberty typically starts between ages 8 and 10; in boys, between ages 9 and 11. A 9 or 10 year old who cannot fall asleep at 8:30 PM despite good sleep habits may simply have a maturing circadian clock, not a behavioral problem.</p>
+
+  <p>Key points about the puberty-sleep connection:</p>
+  <ul>
+    <li><strong>The shift is biological, not behavioral:</strong> The melatonin release that signals "time to sleep" genuinely moves later during puberty. Willpower and strict bedtimes don't fully override it.</li>
+    <li><strong>Girls are typically affected earlier than boys:</strong> Because puberty begins earlier in girls (as young as age 8), girls ages 9 to 10 may show the sleep phase delay before their male peers.</li>
+    <li><strong>Screens amplify the effect:</strong> Blue light from devices suppresses melatonin for 60 to 90 minutes after exposure. For a child already experiencing a pubertal phase delay, screen use before bed pushes sleep onset even later.</li>
+    <li><strong>The shift worsens through the teen years:</strong> What begins as a 30 to 60 minute shift at age 9 to 10 can grow to 2 to 3 hours by age 14 to 16.</li>
+  </ul>
+
+  <h2>How does screen time affect sleep in 8 to 10 year olds?</h2>
+
+  <p class="answer-first">Screen use in the hour before bedtime is one of the most well-documented causes of delayed sleep onset in school-age children. Blue light from phones, tablets, computers, and televisions suppresses melatonin production for 60 to 90 minutes after exposure, shifting when the body is biologically ready to sleep (AAP, 2016). A child who uses a tablet until 9:00 PM may not feel sleepy until 10:00 to 10:30 PM — despite needing to wake at 6:30 AM. The AAP recommends removing all devices from children's bedrooms at night and ending screen use at least 60 minutes before the target sleep time.</p>
+
+  <p>Evidence-based screen rules for this age range:</p>
+  <ul>
+    <li><strong>All screens off 60 minutes before bed:</strong> Not just "put down" — off, or set to night mode with blue light filtering at minimum.</li>
+    <li><strong>No devices in bedrooms at night:</strong> All phones, tablets, and laptops charge in a common area of the home. This prevents midnight notification checks that fragment sleep.</li>
+    <li><strong>TV in bedrooms:</strong> The AAP recommends against bedroom TVs for children at any age. If present, TV should be off at least 60 minutes before sleep (AAP, 2016).</li>
+    <li><strong>Gaming matters too:</strong> Video games are particularly stimulating — both the blue light and the emotional arousal of competitive play delay sleep onset. End game sessions 60 to 90 minutes before bed.</li>
+  </ul>
+
+  <h2>What does healthy sleep look like in an 8 to 10 year old?</h2>
+
+  <p class="answer-first">A well-rested 8 to 10 year old falls asleep within 20 to 30 minutes of lights-out, wakes without extreme difficulty most mornings, maintains stable energy and mood through the school day, and does not need significantly more sleep on weekends than school nights (AAP, 2022). Most children in this age range no longer nap during the day — napping at age 8 to 10 that is not explained by illness or an unusually active day may indicate insufficient nighttime sleep.</p>
+
+  <p>Signs of adequate sleep:</p>
+  <ul>
+    <li>Falls asleep within 20 to 30 minutes of lights-out most nights</li>
+    <li>Wakes without multiple alarms or significant parental effort on most school days</li>
+    <li>Maintains focused attention and emotional regulation through the school day</li>
+    <li>Weekend sleep does not exceed school night sleep by more than 1 to 1.5 hours</li>
+    <li>No reliance on caffeine (energy drinks, soda) to function in the morning</li>
+  </ul>
+
+  <p>Signs of insufficient sleep:</p>
+  <ul>
+    <li>Extreme difficulty waking most school mornings</li>
+    <li>Regular midday fatigue, irritability, or emotional dysregulation</li>
+    <li>Sleeping 2 or more extra hours on weekend mornings compared to school mornings</li>
+    <li>Difficulty concentrating at school that has worsened over several months</li>
+    <li>Frequent headaches or stomachaches — both are associated with chronic sleep deprivation in children</li>
+  </ul>
+
+  <h2>What is a good bedtime routine for an 8 to 10 year old?</h2>
+
+  <p class="answer-first">The most effective bedtime routine for 8 to 10 year olds is 20 to 30 minutes of calm, consistent, screen-free activity before lights-out (AAP, 2016). The routine doesn't need to be elaborate — consistency matters more than content. A reliable routine signals to the nervous system that sleep is approaching, improving sleep onset speed and overall sleep quality. Even children who consider themselves "too old" for a bedtime routine sleep better with one.</p>
+
+  <p>An effective wind-down routine might include:</p>
+  <ul>
+    <li><strong>Dim the lights:</strong> Bright overhead lights maintain alertness. Switching to a lamp or dimmer 30 to 60 minutes before bed supports melatonin rise.</li>
+    <li><strong>Screens off:</strong> This is the non-negotiable anchor of any effective wind-down. Set a specific screen-off time, not just a "soon" guideline.</li>
+    <li><strong>Independent reading:</strong> Reading is one of the best wind-down activities for this age — it is engaging enough to be enjoyable, but calm enough to allow sleep pressure to build. Physical books or e-ink readers without backlighting are preferred over tablet apps.</li>
+    <li><strong>Brief hygiene routine:</strong> Teeth brushing and face washing signal transition to sleep mode and act as a reliable cue.</li>
+    <li><strong>Brief connection time:</strong> A 5 to 10 minute check-in about the day satisfies the social need that often drives "just one more thing" bedtime resistance.</li>
+    <li><strong>Consistent lights-out time:</strong> End the routine at the same time each night, even on weekends within 30 to 60 minutes.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my child's sleep?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Contact your pediatrician if your 8 to 10 year old consistently takes more than 45 minutes to fall asleep, snores loudly or has pauses in breathing during sleep, shows excessive daytime sleepiness despite adequate hours, wakes regularly in the night and cannot return to sleep, or has mood, behavior, or academic problems that seem related to sleep quality (AAP, 2022).</p>
+    <p>Specific red flags to raise with your pediatrician:</p>
+    <ul>
+      <li><strong>Loud, frequent snoring or mouth-breathing:</strong> These are the most common signs of obstructive sleep apnea (OSA), which affects an estimated 1 to 5% of children. OSA causes fragmented, non-restorative sleep and is significantly under-diagnosed. Children with OSA often have behavioral and attention problems that can mimic ADHD.</li>
+      <li><strong>Sleep onset consistently after 10:30 PM:</strong> Despite good sleep hygiene and consistent bedtimes, very late sleep onset may indicate Delayed Sleep Phase Syndrome (DSPS), a circadian rhythm disorder that responds to timed melatonin, light therapy, and gradual schedule shifting.</li>
+      <li><strong>Persistent daytime sleepiness despite adequate hours:</strong> When a child sleeps 9 to 10 hours but is still exhausted, consider sleep apnea, iron deficiency anemia, thyroid dysfunction, or mood disorders.</li>
+      <li><strong>Night terrors or sleepwalking that is frequent or escalating:</strong> Occasional sleepwalking and night terrors are common in this age range, but frequent episodes — more than once per week — or episodes with dangerous behaviors should be evaluated.</li>
+      <li><strong>Severe, chronic bedtime anxiety:</strong> If a child's fear of the dark, worry about nighttime threats, or general anxiety makes bedtime a highly distressing experience most nights, this warrants evaluation beyond sleep hygiene adjustments.</li>
+      <li><strong>Significant behavioral changes or academic decline correlated with sleep changes:</strong> When sleep problems and daytime dysfunction appear together, the sleep problem is often the cause rather than the symptom.</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Sleep</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

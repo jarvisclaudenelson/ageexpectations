@@ -305,4 +305,11 @@ export const articles = [
     pubDate: "2026-03-19",
     image: "/images/pins/10-12-years-sleep.png",
   },
+  {
+    title: "8–10 Year Old Sleep: How Much, Bedtime, and What's Normal",
+    description: "Children ages 8 to 10 need 9 to 12 hours of sleep per night. Learn about typical sleep patterns, recommended bedtimes by age, the early puberty sleep shift, screen time rules, and when to talk to your pediatrician.",
+    path: "/ages/8-10-years/sleep/",
+    pubDate: "2026-03-19",
+    image: "/images/pins/2026-03-19-8-10-years-sleep-pin.png",
+  },
 ];
