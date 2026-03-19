@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = 'Newborn Sleep (0–1 Month): What to Expect and Is This Normal?';
 const description = 'Newborns sleep 14–17 hours per day in 2–4 hour stretches with no circadian rhythm yet — here is what to expect, AAP safe sleep guidelines, and when to talk to your pediatrician about your newborn\'s sleep.';
@@ -8,23 +8,23 @@ const description = 'Newborns sleep 14–17 hours per day in 2–4 hour stretche
 const faqs = [
   {
     question: 'Is it normal for my newborn to sleep all day and be awake at night?',
-    answer: 'Yes, this is very common and is often called "day-night confusion." Newborns have not yet developed a circadian rhythm — the internal clock that tells us to sleep at night and be awake during the day. In the womb, your baby may have been most active at night when your movement was no longer rocking them to sleep. This typically begins to resolve around 6–8 weeks of age as the brain\'s circadian system matures. You can help by exposing your baby to natural daylight during the day, keeping daytime interactions lively, and making nighttime feedings calm, dim, and quiet.',
+    answer: 'Yes, this is common and is often called "day-night confusion." Newborns have not yet developed a circadian rhythm — the internal clock that regulates sleep-wake cycles based on light and dark. This typically begins to resolve around 6–8 weeks as the brain\'s circadian system matures. Help it along by exposing your baby to natural daylight during the day, keeping daytime interactions lively, and making nighttime feedings dim, quiet, and brief (AAP, 2022).',
   },
   {
     question: 'Is it normal for my newborn to make noises while sleeping?',
-    answer: 'Newborns are notoriously noisy sleepers. Grunting, squeaking, whimpering, brief cries, snorting, and irregular breathing patterns are all common during newborn sleep. Much of this is due to immature airways, nasal passages, and the large proportion of time newborns spend in active (REM) sleep — during which facial movements, twitching, and sounds are normal. However, if you notice persistent grunting with every breath, flared nostrils, chest retractions (skin pulling in between the ribs), or pauses in breathing lasting longer than 20 seconds, contact your pediatrician or seek medical attention immediately.',
+    answer: 'Newborns are notoriously noisy sleepers. Grunting, squeaking, whimpering, brief cries, snorting, and irregular breathing patterns are all typical during newborn sleep. Much of this stems from immature airways and the large proportion of time newborns spend in active (REM) sleep — during which facial movements, twitching, and sounds are normal. However, if you notice persistent grunting with every breath, flared nostrils, chest retractions, or breathing pauses lasting longer than 20 seconds, contact your pediatrician immediately.',
   },
   {
     question: 'How long should a newborn sleep without feeding?',
-    answer: 'In the first few weeks, most pediatricians recommend waking a newborn to feed if they have slept longer than 3–4 hours, especially if the baby has not yet regained their birth weight. Breastfed newborns typically need to eat every 2–3 hours, and formula-fed newborns every 3–4 hours. Once your baby has regained their birth weight and your pediatrician gives the go-ahead (usually around 2–4 weeks), you can typically let your baby sleep until they wake on their own for feedings. Always follow your pediatrician\'s specific guidance for your baby.',
+    answer: 'In the first few weeks, most pediatricians recommend waking a newborn to feed if they have slept longer than 3–4 hours, especially before birth weight is regained. Breastfed newborns typically need to eat every 2–3 hours; formula-fed newborns every 3–4 hours. Once your baby has regained birth weight and your pediatrician gives the go-ahead (usually around 2–4 weeks), you can typically let your baby sleep until they wake on their own for feedings (AAP, 2022).',
   },
   {
     question: 'Is swaddling safe for my newborn?',
-    answer: 'The AAP considers swaddling safe when done correctly and only for babies who are not yet showing signs of rolling over. A safe swaddle should be snug around the arms and chest but loose around the hips to allow healthy hip development. The swaddle should not cover the baby\'s face. Stop swaddling as soon as your baby shows any signs of attempting to roll — typically around 2–4 months — because a swaddled baby who rolls onto their stomach is at increased risk of suffocation. Always place a swaddled baby on their back to sleep.',
+    answer: 'The AAP considers swaddling safe when done correctly and only for babies who are not yet showing signs of rolling over. A safe swaddle is snug around the arms and chest but loose around the hips to allow healthy hip development. The swaddle should not cover the baby\'s face. Stop swaddling as soon as your baby shows any signs of attempting to roll — typically around 2–4 months — because a swaddled baby who rolls onto their stomach is at increased risk of suffocation. Always place a swaddled baby on their back to sleep.',
   },
   {
     question: 'Is it normal for my newborn to only sleep when being held?',
-    answer: 'Many newborns strongly prefer sleeping in a caregiver\'s arms, on their chest, or in close physical contact. This is biologically normal — newborns are hardwired to seek closeness for warmth, comfort, and safety. However, the AAP recommends that all sleep occur on a firm, flat surface to reduce the risk of SIDS and accidental suffocation. If your baby resists sleeping in their bassinet, try putting them down drowsy but awake, warming the sleep surface briefly with a heating pad (removed before placing the baby), and using a swaddle or sleep sack. Room-sharing — placing the bassinet near your bed — also helps many newborns settle more easily.',
+    answer: 'Many newborns strongly prefer sleeping in a caregiver\'s arms or on their chest. This is biologically typical — newborns are hardwired to seek closeness for warmth and safety. However, the AAP recommends that all sleep occur on a firm, flat surface to reduce the risk of SIDS and accidental suffocation. If your baby resists the bassinet, try putting them down drowsy but awake, warming the sleep surface briefly with a heating pad (removed before placing the baby), and using a swaddle. Room-sharing — placing the bassinet near your bed — also helps many newborns settle more easily.',
   },
 ];
 
@@ -34,12 +34,18 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/0-1-month/sleep/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/0-1-month/sleep/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: 'Newborn (0–1 Month)', href: '/ages/0-1-month/' },
     { label: 'Sleep' },
@@ -47,82 +53,74 @@ const fSchema = faqSchema(faqs);
 >
   <h1>Newborn Sleep (0–1 Month): What to Expect and Is This Normal?</h1>
 
-  <p>Nothing quite prepares you for the sleep deprivation that comes with a newborn. Your baby sleeps a lot — far more hours than you do — but those hours are scattered across the entire 24-hour day in short, unpredictable stretches. There is no bedtime, no naptime, no schedule. It can feel chaotic, and it is completely, utterly normal.</p>
+  <p>Nothing quite prepares you for newborn sleep deprivation. Your baby sleeps a lot — far more hours than you do — but those hours are scattered across the entire 24-hour day in short, unpredictable stretches. There is no bedtime, no naptime, no schedule. It feels chaotic, and it is completely typical.</p>
 
-  <p>Understanding how newborn sleep works can help you set realistic expectations, feel more confident about what you are seeing, and know when something might actually warrant a call to your pediatrician. Here is what the research and current AAP guidelines tell us about sleep in the first month of life.</p>
+  <p>Understanding how newborn sleep works helps you set realistic expectations, feel more confident about what you are seeing, and know when something warrants a call to your pediatrician.</p>
 
-  <h2>What to Expect: How Much Do Newborns Sleep?</h2>
+  <h2>How much do newborns sleep?</h2>
 
-  <p>According to the National Sleep Foundation (NSF), newborns typically sleep <strong>14–17 hours per day</strong>, though a range of 11–19 hours can be normal. That may sound like a lot, but it is broken into stretches of just <strong>2–4 hours at a time</strong>, distributed fairly evenly between day and night.</p>
+  <p class="answer-first">Newborns typically sleep 14–17 hours per day in stretches of 2–4 hours, distributed across day and night (National Sleep Foundation, 2023). A range of 11–19 hours can be typical. Sleep is organized entirely around feeding cycles — newborns have tiny stomachs and breastfed babies typically need to eat every 2–3 hours, which is why no stretch lasts long.</p>
 
-  <p>The reason for these short stretches is simple: newborns have tiny stomachs and need to eat frequently. A breastfed newborn typically feeds every 2–3 hours, and a formula-fed newborn every 3–4 hours. Sleep is organized around feeding cycles, not around day and night.</p>
-
-  <p>Key facts about newborn sleep patterns:</p>
   <ul>
-    <li><strong>No circadian rhythm yet:</strong> Newborns do not have a developed circadian rhythm — the internal biological clock that regulates sleep-wake cycles based on light and dark. This system begins to mature around 6–8 weeks and is not fully established until 3–4 months. Until then, your baby genuinely does not know the difference between day and night.</li>
-    <li><strong>Lots of active sleep:</strong> Newborns spend about 50% of their sleep time in active (REM) sleep, compared to about 20–25% in adults. During active sleep, you may see eye movements, facial twitches, irregular breathing, and small sounds. This is normal and believed to play a role in brain development.</li>
-    <li><strong>Sleep cycles are short:</strong> A newborn sleep cycle lasts about 40–50 minutes (compared to 90 minutes in adults), which is why they wake so frequently.</li>
-    <li><strong>Arousal is protective:</strong> The ability to wake easily is actually a safety feature. It helps ensure that your baby rouses to feed, to breathe if something obstructs their airway, and to signal when they need help.</li>
+    <li><strong>No circadian rhythm yet:</strong> Newborns do not have a developed internal clock. This system begins to mature around 6–8 weeks and is not fully established until 3–4 months. Until then, your baby genuinely does not know the difference between day and night.</li>
+    <li><strong>Mostly active sleep:</strong> Newborns spend about 50% of their sleep time in active (REM) sleep, compared to about 20–25% in adults. During active sleep, you may see eye movements, facial twitches, irregular breathing, and small sounds. This is typical and believed to play a role in brain development.</li>
+    <li><strong>Short sleep cycles:</strong> A newborn sleep cycle lasts about 40–50 minutes (compared to 90 minutes in adults), which explains frequent waking.</li>
+    <li><strong>Arousal is protective:</strong> The ability to wake easily helps ensure your baby rouses to feed and breathe if something obstructs their airway.</li>
   </ul>
 
-  <h2>Signs of Normal Newborn Sleep</h2>
+  <h2>What does typical newborn sleep look like?</h2>
 
-  <p>New parents often worry that their baby is sleeping too much, too little, or too strangely. Here is what typical newborn sleep looks like:</p>
+  <p class="answer-first">Typical newborn sleep means sleeping in 1–4 hour stretches, waking to feed, then falling back asleep — with no consistent pattern between day and night (CDC, 2022). Noisy, twitchy sleep is the rule, not the exception, because of the high proportion of REM sleep newborns cycle through.</p>
 
   <ul>
-    <li>Sleeping in stretches of 1–4 hours, waking to feed, then falling back asleep</li>
-    <li>No consistent pattern between day and night (day-night confusion is extremely common)</li>
+    <li>Sleeping in stretches of 1–4 hours, waking to feed, then returning to sleep</li>
+    <li>No consistent pattern between day and night (day-night confusion is common)</li>
     <li>Noisy sleep — grunting, squeaking, sighing, brief whimpers, and irregular breathing during active sleep</li>
-    <li>Twitching, grimacing, and eye movements during active (REM) sleep</li>
+    <li>Twitching, grimacing, and eye movements during REM sleep</li>
     <li>Brief periods of quiet alertness between sleep and feeding cycles, especially toward the end of the first month</li>
   </ul>
 
-  <h2>Day-Night Confusion: What It Is and What Helps</h2>
+  <h2>How do I fix my newborn's day-night confusion?</h2>
 
-  <p>Many newborns have their longest stretch of sleep during the day and their most wakeful, fussy period in the evening or at night. This is sometimes called "day-night reversal" or "day-night confusion," and it is one of the most common concerns parents raise in the first weeks.</p>
+  <p class="answer-first">Correct day-night confusion by using light and sound to signal the difference between daytime and nighttime. Keep the house bright and normally noisy during the day, and transition to a dark, quiet, low-stimulation environment for all nighttime feedings (AAP, 2022). Most babies begin consolidating more sleep at night around 6–8 weeks, though a true day-night pattern may not emerge until 3–4 months.</p>
 
-  <p>Day-night confusion happens because the circadian rhythm is not yet developed. In the womb, your baby may have been lulled to sleep by your daytime movement and become more active when you were still at night.</p>
-
-  <p>While you cannot force a circadian rhythm to develop faster, you can help set the stage:</p>
   <ul>
-    <li><strong>Daylight exposure:</strong> During the day, expose your baby to natural light. Open curtains, spend time near windows, and keep daytime interactions warm and engaging.</li>
-    <li><strong>Active daytime, calm nighttime:</strong> During daytime feedings and wake windows, talk, sing, and make eye contact. At night, keep feedings dim, quiet, and business-like — minimal stimulation.</li>
+    <li><strong>Daylight exposure:</strong> During the day, expose your baby to natural light. Open curtains and keep daytime interactions warm and engaging.</li>
+    <li><strong>Active daytime, calm nighttime:</strong> During daytime feedings and wake windows, talk, sing, and make eye contact. At night, keep feedings dim, quiet, and brief — minimal stimulation.</li>
     <li><strong>Consistent nighttime cues:</strong> Use darkness, white noise, and a calm environment at night to begin establishing the association between dark and sleep.</li>
   </ul>
 
-  <p>Most babies begin to consolidate more sleep at night around 6–8 weeks, though a true day-night pattern may not emerge until 3–4 months.</p>
+  <h2>What are the AAP safe sleep rules for newborns?</h2>
 
-  <h2>AAP Safe Sleep Guidelines: What Every Parent Needs to Know</h2>
-
-  <p>The AAP's safe sleep recommendations (updated in 2022) are the foundation for reducing the risk of Sudden Infant Death Syndrome (SIDS) and other sleep-related infant deaths. These guidelines apply from birth:</p>
+  <p class="answer-first">The safest way for a newborn to sleep is on their back, on a firm, flat surface in a safety-approved crib or bassinet, in a room shared with caregivers but not in the same bed. The AAP's 2022 safe sleep guidelines recommend keeping the sleep area completely bare — no blankets, pillows, bumpers, stuffed animals, or inclined sleepers. Room-sharing without bed-sharing reduces the risk of SIDS by up to 50%.</p>
 
   <ul>
-    <li><strong>Back to sleep, every sleep:</strong> Always place your baby on their back for naps and nighttime sleep. Side sleeping and stomach sleeping significantly increase the risk of SIDS. Once your baby can roll both ways independently (usually around 4–6 months), they can be allowed to find their own sleep position.</li>
-    <li><strong>Firm, flat surface:</strong> Use a firm, flat mattress in a safety-approved crib, bassinet, or play yard. The surface should not indent when the baby is placed on it. No inclined sleepers, car seats, swings, or other devices should be used for routine sleep.</li>
-    <li><strong>Bare sleep space:</strong> Keep the crib free of blankets, pillows, bumpers, stuffed animals, and loose bedding. A fitted sheet is all that should be on the mattress.</li>
-    <li><strong>Room-sharing, not bed-sharing:</strong> The AAP recommends that your baby sleep in the same room as you — ideally for at least the first 6 months — but on their own separate sleep surface. Room-sharing has been shown to reduce the risk of SIDS by as much as 50%. Bed-sharing (sleeping in the same bed) is associated with increased risk, particularly in certain circumstances (soft bedding, parental smoking, alcohol use, or extreme fatigue).</li>
-    <li><strong>No overheating:</strong> Dress your baby in no more than one layer more than you would wear. Signs of overheating include sweating, a hot chest, or flushed skin. Keep the room at a comfortable temperature (68–72 degrees F is often recommended).</li>
+    <li><strong>Back to sleep, every sleep:</strong> Always place your baby on their back for naps and nighttime sleep. Side sleeping and stomach sleeping increase the risk of SIDS. Once your baby can roll both ways independently (usually around 4–6 months), they can find their own sleep position.</li>
+    <li><strong>Firm, flat surface:</strong> Use a firm, flat mattress in a safety-approved crib, bassinet, or play yard. No inclined sleepers, car seats, swings, or other devices for routine sleep.</li>
+    <li><strong>Bare sleep space:</strong> A fitted sheet is all that should be on the mattress. No loose bedding, bumpers, or soft objects.</li>
+    <li><strong>Room-sharing, not bed-sharing:</strong> Keep your baby in the same room — ideally for at least the first 6 months — but on their own separate sleep surface.</li>
+    <li><strong>No overheating:</strong> Dress your baby in no more than one layer more than you would wear. Signs of overheating include sweating, a hot chest, or flushed skin.</li>
   </ul>
 
-  <h2>Swaddling: Benefits, Safety, and When to Stop</h2>
+  <h2>Is swaddling safe, and when should I stop?</h2>
 
-  <p>Many newborns sleep more soundly when swaddled, because the snug wrap prevents the Moro (startle) reflex from waking them. The AAP considers swaddling acceptable when done safely:</p>
+  <p class="answer-first">Swaddling is safe for newborns when done correctly: snug around the chest and arms, loose around the hips, and never covering the face. The AAP recommends stopping swaddling as soon as your baby shows any signs of attempting to roll — typically around 2–4 months — because a swaddled baby who rolls onto their stomach cannot use their arms to push up or reposition, increasing the risk of suffocation.</p>
 
   <ul>
-    <li>Wrap snugly around the chest and arms, but leave the hips loose enough that the legs can bend up and out. Tight wrapping around the hips can contribute to hip dysplasia.</li>
-    <li>Do not cover the baby's face or allow the swaddle to come loose (loose fabric near the face is a suffocation risk).</li>
-    <li><strong>Stop swaddling at the first sign of rolling</strong> — typically around 2–4 months. A swaddled baby who rolls to their stomach cannot use their arms to push up or reposition, which increases the risk of suffocation.</li>
+    <li>Wrap snugly around the chest and arms, but leave the hips loose enough that the legs can bend up and out. Tight hip wrapping can contribute to hip dysplasia.</li>
+    <li>Never cover the baby's face or allow the swaddle to come loose.</li>
     <li>Always place a swaddled baby on their back.</li>
+    <li>At the first sign of rolling, transition to an arms-free sleep sack.</li>
   </ul>
 
-  <h2>What Is Not Normal: Signs to Watch For</h2>
+  <h2>What newborn sleep patterns are actually concerning?</h2>
 
-  <p>While newborn sleep is inherently irregular and sometimes noisy, certain patterns should be evaluated by your pediatrician:</p>
+  <p class="answer-first">Contact your pediatrician if your newborn is consistently difficult to wake for feedings, has breathing pauses longer than 20 seconds, shows persistent grunting with every breath, or has blue or purple discoloration of the lips or face during sleep (AAP, 2022). Brief blue coloring of the hands and feet in the first few days is typical, but it should resolve.</p>
 
   <ul>
-    <li><strong>Excessive sleepiness:</strong> If your baby is consistently difficult to wake for feedings, seems unusually lethargic, or does not wake on their own for long stretches in the first few weeks (before birth weight is regained), contact your pediatrician.</li>
-    <li><strong>Breathing concerns:</strong> Pauses in breathing lasting longer than 20 seconds, persistent grunting with each breath, flared nostrils, or visible chest retractions (skin pulling in between the ribs) require immediate medical attention.</li>
-    <li><strong>Skin color changes during sleep:</strong> Blue or purple discoloration of the lips, face, or body during sleep is a medical emergency. Brief blue coloring of the hands and feet (acrocyanosis) is normal in the first few days but should resolve.</li>
+    <li><strong>Excessive sleepiness:</strong> If your baby is consistently difficult to wake for feedings or seems unusually lethargic before birth weight is regained, contact your pediatrician.</li>
+    <li><strong>Breathing concerns:</strong> Pauses in breathing lasting longer than 20 seconds, persistent grunting with each breath, flared nostrils, or visible chest retractions require immediate medical attention.</li>
+    <li><strong>Skin color changes during sleep:</strong> Blue or purple discoloration of the lips, face, or body during sleep is a medical emergency.</li>
   </ul>
 
   <div class="faq-section">
@@ -136,16 +134,16 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician About Newborn Sleep</h2>
-    <p>Most newborn sleep patterns — however chaotic they feel — are within the range of normal. However, contact your pediatrician if you notice any of the following:</p>
+    <h2>When should I talk to my pediatrician about newborn sleep?</h2>
+    <p>Most newborn sleep patterns — however chaotic they feel — fall within the range of typical. Contact your pediatrician if you notice any of the following:</p>
     <ul>
       <li>Your baby is consistently difficult to rouse for feedings or seems excessively sleepy</li>
-      <li>Pauses in breathing lasting longer than 20 seconds</li>
+      <li>Breathing pauses lasting longer than 20 seconds</li>
       <li>Grunting, flared nostrils, or chest retractions with each breath</li>
       <li>Blue or purple discoloration of the lips or face</li>
-      <li>Your baby never seems to sleep and is crying almost constantly (while some fussiness is normal, persistent inconsolable crying deserves evaluation)</li>
-      <li>You have concerns about your baby's feeding, weight gain, or overall alertness</li>
+      <li>Your baby never seems to sleep and is crying almost constantly</li>
+      <li>You have concerns about feeding, weight gain, or overall alertness</li>
     </ul>
-    <p>Safe sleep practices are the single most important thing you can do to protect your baby during sleep. If you are struggling with exhaustion and finding it hard to follow safe sleep guidelines, talk to your pediatrician honestly. They can help you problem-solve and connect you with support. You are not alone in this.</p>
+    <p>Safe sleep practices are the single most important thing you can do to protect your baby during sleep. If exhaustion is making safe sleep hard to follow, talk to your pediatrician honestly. They can help you problem-solve. You are not alone in this.</p>
   </div>
 </BaseLayout>

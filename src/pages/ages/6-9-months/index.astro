@@ -1,31 +1,31 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '6–9 Month Old Development: What to Expect';
-const description = 'Between 6 and 9 months, babies become more mobile, start eating solids, and develop more complex social interactions. Learn about key milestones, feeding transitions, and sleep patterns.';
+const description = 'Between 6 and 9 months, babies become more mobile, start eating solids, and develop more complex social interactions. Learn about key milestones, feeding transitions, and sleep patterns for this age.';
 
 const faqs = [
   {
     question: 'When should my baby start sitting without support?',
-    answer: 'Most babies begin to sit without support between 6 and 9 months. According to the CDC, sitting without support is a milestone that about 75% of babies reach by 9 months. You can encourage this by placing toys just out of reach while they are sitting to help them practice balance.',
+    answer: 'Most babies begin to sit without support between 6 and 9 months. According to the CDC (2022), sitting without support is a milestone that about 75% of babies reach by 9 months. You can encourage this by placing toys just out of reach while they are sitting to practice balance.',
   },
   {
     question: 'How many naps should a 6–9 month old take?',
-    answer: 'Most babies in this age range transition from three naps down to two consistent naps per day (usually one in the morning and one in the afternoon). Total sleep needs are about 12–16 hours per 24-hour period, including naps.',
+    answer: 'Most babies in this age range transition from three naps down to two consistent naps per day — usually one in the morning and one in the afternoon. Total sleep needs are about 12–16 hours per 24-hour period, including naps (American Academy of Sleep Medicine, 2022).',
   },
   {
     question: 'What foods should I introduce first at 6 months?',
-    answer: 'The AAP suggests that for most babies, it does not matter what the first solid foods are. Traditional first foods include iron-fortified cereals, mashed fruits (bananas, avocado), and pureed vegetables. Introduce one new food at a time and wait 3–5 days to check for allergic reactions.',
+    answer: 'The AAP suggests that for most babies, it does not matter what the first solid foods are (AAP, 2022). Traditional first foods include iron-fortified cereals, mashed fruits like banana or avocado, and pureed vegetables. Introduce one new food at a time and wait 3–5 days to check for allergic reactions. Iron-rich foods are particularly important at this stage because your baby\'s birth iron stores begin depleting around 6 months.',
   },
   {
     question: 'Is separation anxiety normal at 9 months?',
-    answer: 'Yes, it is very common. Around 9 months, babies begin to understand object permanence—they know you still exist even when you leave the room. This can lead to "stranger danger" or clinginess when you leave. Consistent goodbye routines help them learn that you will always return.',
+    answer: 'Yes, separation anxiety is a common milestone between 8 and 12 months (CDC, 2022). Around 9 months, babies understand object permanence — they know you exist even when you leave the room — but lack a mature sense of time. Consistent goodbye routines help them learn that you will return. The intensity typically decreases after 18–24 months.',
   },
   {
     question: 'My baby is "raking" food with their hand. Is that normal?',
-    answer: 'Absolutely. Between 6 and 9 months, babies use their whole hand to "rake" objects or food toward themselves. This is a precursor to the pincer grasp (using thumb and forefinger), which typically develops closer to 9–12 months.',
+    answer: 'Absolutely. Between 6 and 9 months, babies use their whole hand to rake objects or food toward themselves. This is a precursor to the pincer grasp (using thumb and forefinger), which typically develops closer to 9–12 months (CDC, 2022).',
   },
 ];
 
@@ -35,19 +35,25 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/6-9-months/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-9-months/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '6–9 Months' },
   ]}
 >
   <h1>6–9 Month Old Development: What to Expect</h1>
 
-  <p>The 6 to 9 month period is often a favorite for parents. Your baby is likely sitting up, laughing, and showing a distinct personality. This is a season of "firsts"—the first tastes of solid food, the first attempts at crawling, and perhaps the first babbled "mama" or "dada."</p>
+  <p>The 6 to 9 month period is often a parent favorite. Your baby is likely sitting up, laughing, and showing a distinct personality. This is a season of firsts — the first tastes of solid food, the first attempts at crawling, and perhaps the first babbled "mama" or "dada."</p>
 
   <p>This overview covers the major developmental shifts for babies in the second half of their first year, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
 
@@ -58,39 +64,38 @@ const fSchema = faqSchema(faqs);
     ))}
   </div>
 
-  <h2>Physical Development: Getting Mobile</h2>
+  <h2>What physical milestones should my 6–9 month old be reaching?</h2>
 
-  <p>During these months, babies transition from being stationary to being active explorers. Key physical developments include:</p>
-
-  <ul>
-    <li><strong>Sitting:</strong> Most babies can sit without support by 9 months. They may also begin to "tripod" sit (leaning forward on their hands) as they gain core strength.</li>
-    <li><strong>Moving:</strong> While not all babies crawl by 9 months (some scoot on their bottoms or "army crawl" on their bellies), most are find ways to move across the floor.</li>
-    <li><strong>Hand Skills:</strong> Your baby can now move objects from one hand to the other. They are also learning to "rake" small pieces of food toward themselves using their fingers.</li>
-  </ul>
-
-  <h2>Language and Communication: Finding Their Voice</h2>
-
-  <p>Communication becomes much more intentional during this stage:</p>
+  <p class="answer-first">By 9 months, most babies can sit without support, transfer objects from one hand to the other, and have begun to move across the floor — whether by crawling, scooting, or army-crawling (CDC, 2022). The pincer grasp (picking up small objects with thumb and forefinger) also begins emerging around 9 months, opening the door to self-feeding.</p>
 
   <ul>
-    <li><strong>Babbling:</strong> You will hear a lot of consonant sounds, such as "ba-ba-ba" or "ma-ma-ma." While they may not yet associate "mama" with a specific person, they are practicing the building blocks of speech.</li>
-    <li><strong>Recognition:</strong> Your baby should start looking when you call their name and may recognize the names of familiar people or objects.</li>
-    <li><strong>Gestures:</strong> Many babies begin to lift their arms to be picked up or point at things that interest them.</li>
+    <li><strong>Sitting:</strong> Most babies can sit without support by 9 months. They may initially "tripod" sit (leaning forward on their hands) as they build core strength.</li>
+    <li><strong>Moving:</strong> While not all babies crawl by 9 months, most find ways to move — scooting on their bottom, army-crawling on their belly, or pulling up on furniture.</li>
+    <li><strong>Hand skills:</strong> Your baby can now move objects from one hand to the other. They are also learning to rake small pieces of food toward themselves using their fingers.</li>
+    <li><strong>Pulling to stand:</strong> By 9 months, many babies can pull themselves to a standing position using furniture.</li>
   </ul>
 
-  <h2>Feeding: The Transition to Solids</h2>
+  <h2>How is my baby communicating at 6–9 months?</h2>
 
-  <p>At 6 months, the AAP recommends introducing solid foods while continuing breastfeeding or formula feeding. This is an exciting but messy milestone!</p>
+  <p class="answer-first">By 9 months, most babies babble with strings of consonant-vowel sounds like "ba-ba-ba" or "ma-ma-ma," respond to their own name, and understand the word "no" even if they do not always follow it (CDC, 2022). Communication becomes more intentional during this stage — your baby is learning that they can direct your attention and get a response.</p>
 
   <ul>
-    <li><strong>Signs of Readiness:</strong> Your baby should be able to hold their head up steadily and sit well in a high chair before starting solids.</li>
-    <li><strong>Texture Exploration:</strong> Start with smooth purees and gradually move to thicker, mashed textures. By 9 months, many babies can handle small pieces of soft "finger foods."</li>
-    <li><strong>Allergens:</strong> Modern AAP guidelines suggest that early introduction of common allergens (like peanut products and eggs) may help prevent allergies, but always consult your pediatrician first if you have a family history of allergies.</li>
+    <li><strong>Babbling:</strong> Long strings of consonant sounds like "ba-ba-ba" and "ma-ma-ma" emerge. While these may not yet be associated with specific people or objects, they are the building blocks of speech.</li>
+    <li><strong>Name recognition:</strong> Your baby should start looking when you call their name.</li>
+    <li><strong>Gestures:</strong> Many babies begin lifting their arms to be picked up or pointing at things that interest them.</li>
   </ul>
 
-  <h2>Social and Emotional: Stranger Danger</h2>
+  <h2>What should I know about starting solid foods at 6–9 months?</h2>
 
-  <p>As babies become more aware of their surroundings, they also become more aware of who is "familiar" and who is not. It is normal for a previously social baby to suddenly become shy or fearful of strangers or even extended family members. They are also developing a stronger attachment to their primary caregivers and may cry or reach for you when you leave the room.</p>
+  <p class="answer-first">At 6 months, the AAP recommends introducing solid foods while continuing breastfeeding or formula feeding (AAP, 2022). Iron-rich foods are especially important at this stage because your baby's birth iron stores begin depleting around 6 months. Start with smooth purees and graduate to thicker, mashed textures. By 9 months, many babies can handle small pieces of soft finger foods.</p>
+
+  <p>Signs your baby is ready for solids include: holding their head up steadily, sitting well in a high chair, loss of the tongue-thrust reflex, and showing interest in your food. See our <a href="/ages/6-9-months/feeding/">6–9 Month Feeding</a> page for complete guidance on first foods, allergen introduction, and safe feeding practices.</p>
+
+  <h2>How does my baby's social-emotional world change at 6–9 months?</h2>
+
+  <p class="answer-first">Separation anxiety and stranger wariness commonly emerge between 8 and 12 months, as babies develop object permanence — the understanding that you exist even when out of sight (CDC, 2022). A previously social baby may suddenly become fearful of unfamiliar people or cry when you leave the room. This is a sign of healthy attachment, not a regression.</p>
+
+  <p>Your baby is also developing a clear preference for familiar caregivers and favorite toys. Peek-a-boo becomes genuinely thrilling at this age — it directly plays on object permanence. Consistent, warm caregiving responses to separation distress help your baby build the secure base from which they will increasingly explore the world.</p>
 
   <div class="faq-section">
     <h2>Is This Normal? Common Questions About 6–9 Month Development</h2>
@@ -103,16 +108,17 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
+    <h2>When should I talk to my pediatrician about my 6–9 month old?</h2>
     <p>The 9-month well-child visit is a key milestone for developmental screening. Contact your pediatrician if your baby:</p>
     <ul>
       <li>Does not sit with help by 9 months</li>
-      <li>Does not babble ("ba," "ga," "ma")</li>
+      <li>Does not babble ("ba," "ga," "ma") by 9 months</li>
       <li>Does not respond to their own name</li>
       <li>Does not recognize familiar people</li>
       <li>Does not look where you point</li>
       <li>Does not transfer toys from one hand to the other</li>
-      <li>Loses skills they once had</li>
+      <li>Has lost skills they once had</li>
     </ul>
+    <p>Early intervention services are available in every U.S. state for children under age 3. You do not need a diagnosis to request an evaluation.</p>
   </div>
 </BaseLayout>

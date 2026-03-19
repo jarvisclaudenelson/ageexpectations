@@ -2,29 +2,37 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
-const title = '12–14 Year Old Milestones: Early Adolescent Development';
-const description = 'Developmental milestones for early adolescents ages 12 to 14 — puberty completion for girls, peak growth for boys, abstract reasoning, identity formation, and sleep phase delay.';
+const title = '12–14 Year Old Milestones: What to Expect in Early Adolescence';
+const description = 'Developmental milestones for early adolescents ages 12 to 14 — puberty, abstract reasoning, identity formation, peer relationships, and when to talk to your pediatrician. Evidence-based guidance from the AAP.';
 
 const faqs = [
   {
-    question: 'What puberty signs are normal for 12 to 14 year olds?',
-    answer: 'By age 12 to 14, most girls have established menstruation, completed breast development, and experienced their peak height spurt. Most boys are in the active phase of puberty — testicular growth is complete or nearly so, pubic hair is established, voice changes are underway, and their height spurt is peaking or approaching its peak (typically ages 13 to 14). Both sexes may have acne that varies from mild to moderate. This range is well within typical development (AAP, 2022).'
+    question: 'What puberty signs are typical between ages 12 and 14?',
+    answer: 'By age 12 to 14, most girls have established menstruation (average onset age 12.4), completed breast development, and experienced their peak height spurt. Most boys are in active puberty — testicular growth is underway, voice deepening is beginning, the height spurt peaks around ages 13 to 14, and muscle mass is increasing. Both sexes have acne, body odor, and oilier skin (AAP, 2022). Signs appearing within these ages are within the typical range for most children.',
   },
   {
-    question: 'What is the "imaginary audience" and when does it peak?',
-    answer: 'The "imaginary audience" is a cognitive phenomenon where teens believe everyone around them is watching and evaluating their behavior — that their stumble in the hallway or their outfit choice is noticed and judged by everyone present. It emerges from new abstract thinking abilities that allow teens to model others\' perspectives, combined with intense self-focus. It peaks in early adolescence (ages 12 to 14) and gradually fades as identity becomes more secure through mid-to-late adolescence (Elkind, 1967).'
+    question: 'What is the "imaginary audience" and is it normal for my 13-year-old?',
+    answer: 'The "imaginary audience" is a cognitive phenomenon where teens believe everyone around them is watching and judging their behavior. A stumble in the hallway or an unflattering outfit feels like it was noticed by everyone present. It emerges when new abstract reasoning allows teens to model others\' perspectives, combined with intense self-focus. It peaks at ages 12 to 14 and gradually fades as identity becomes more secure through mid-to-late adolescence (Elkind, 1967). It is typical, not a sign of anxiety disorder.',
   },
   {
-    question: 'Is my 13-year-old\'s sleep schedule normal?',
-    answer: 'The biological sleep shift of early adolescence — sleep phase delay — makes falling asleep before 10 to 11 PM physiologically difficult for most 13 to 14 year olds, regardless of bedtime intention. This is a real change in melatonin timing, not defiance. The AAP recommends 8 to 10 hours of sleep for this age group and advocates for school start times no earlier than 8:30 AM (AAP, 2014). Devices out of the bedroom by 9:30 PM and maintaining consistent wake times (including weekends) within an hour of school days reduces the deficit.'
+    question: 'Is my 13-year-old\'s sleep schedule normal, or is it a problem?',
+    answer: 'The biological sleep phase delay of early adolescence makes falling asleep before 10:00 to 11:00 PM physiologically difficult for most 13 to 14 year olds, regardless of bedtime intention. This is a real hormonal change in melatonin timing, not defiance. The AAP recommends 8 to 10 hours of sleep per night for this age group and formally advocates for school start times no earlier than 8:30 AM (AAP, 2014). Removing devices from the bedroom by 9:30 PM and maintaining consistent wake times (including weekends) are the most effective interventions.',
   },
   {
-    question: 'Is it normal for my 13-year-old to be romantically interested in someone?',
-    answer: 'Yes. Romantic interest typically begins in early adolescence, around ages 11 to 14 for most children. This is part of healthy identity formation — learning about attraction, relationships, and emotional intimacy. The AAP recommends parents begin conversations about healthy relationships, consent, and personal values related to dating during early adolescence, before relationship experience creates pressure without context (AAP, 2022). Early conversations are more effective than reactive ones.'
+    question: 'Is it normal for my 13-year-old to develop romantic interest?',
+    answer: 'Yes. Romantic interest typically begins in early adolescence — ages 11 to 14 for most children. This is part of healthy identity formation: learning about attraction, emotional intimacy, and relationship values. The AAP recommends parents begin conversations about healthy relationships and consent during early adolescence, before relationship experience creates pressure without context (AAP, 2022). Early, calm conversations are more effective than reactive ones.',
   },
   {
-    question: 'My 14-year-old still has no close friends. Should I be worried?',
-    answer: 'Social isolation in early adolescence is a risk factor worth taking seriously. Close peer relationships during adolescence predict better mental health outcomes, higher academic achievement, and lower rates of depression and anxiety. The AAP notes that some teens are introverted and have a small but close friend group — which is fine — versus teens who are socially isolated and lonely despite wanting connection (AAP, 2022). If your teen reports feeling lonely, has no close friendships, and seems distressed by this, discuss it with your pediatrician.'
+    question: 'My 14-year-old has no close friends. Should I be worried?',
+    answer: 'Social isolation in early adolescence is a risk factor worth taking seriously. Close peer relationships during adolescence predict better mental health outcomes, higher academic achievement, and lower rates of depression and anxiety. The AAP distinguishes introverted teens with a small but close friend group (healthy) from those who are lonely and isolated despite wanting connection (worth addressing) (AAP, 2022). If your teen reports feeling lonely, has no close friendships, and seems distressed by this, discuss it with your pediatrician.',
+  },
+  {
+    question: 'When does a child\'s voice start to change?',
+    answer: 'Voice changes in boys — the voice "breaking" or cracking — begin between ages 11 and 14 and take 2 to 3 years to complete. The larynx grows rapidly under testosterone\'s influence, producing the characteristic cracking before settling into a lower register. Girls experience a smaller change (lower pitch, fuller tone) but without dramatic cracking. Voice change follows testicular development in boys and is a mid-to-late puberty marker (AAP, 2022).',
+  },
+  {
+    question: 'Is it normal for my 12-year-old to argue about everything?',
+    answer: 'Yes. Arguing reflects developing abstract reasoning — 12 to 14 year olds can now construct genuine counterarguments and notice inconsistencies in logic. This is a cognitive milestone, not defiance. The AAP recommends acknowledging valid points while holding firm on non-negotiable limits, explaining your reasoning briefly, and offering genuine autonomy in lower-stakes domains like clothing and hobbies (AAP, 2022). Debates over every rule exhaust everyone; focus conflict energy on things that matter.',
   },
 ];
 
@@ -41,48 +49,84 @@ const medicalData = medicalWebPageSchema({
 });
 ---
 
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '12–14 Years', href: '/ages/12-14-years/' }, { label: 'Milestones' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '12–14 Years', href: '/ages/12-14-years/' },
+    { label: 'Milestones' },
+  ]}
+>
+  <h1>12–14 Year Old Milestones: What to Expect in Early Adolescence</h1>
 
-  <h1>12–14 Year Old Milestones: Early Adolescent Development</h1>
-
-  <p class="answer-first">Early adolescence — ages 12 to 14 — brings some of the most rapid developmental change since infancy. The AAP identifies four defining developments: puberty approaching completion for girls and peaking for boys, the emergence of formal abstract reasoning and self-reflection, a shift toward peer relationships as the primary social world, and a biological sleep phase delay that makes adequate sleep structurally difficult without institutional support (AAP, 2022). These changes interact — puberty affects mood, which affects social relationships, which affects sleep, which affects school performance.</p>
+  <p class="answer-first">Early adolescence — ages 12 to 14 — brings some of the most rapid developmental change since infancy. The AAP identifies four defining developments at this stage: puberty approaching completion in girls and peaking in boys, the emergence of formal abstract reasoning and self-reflection, a shift toward peer relationships as the primary social world, and a biological sleep phase delay that makes adequate sleep structurally difficult without intentional support (AAP, 2022). These changes interact — puberty affects mood, mood affects peer relationships, and sleep deprivation affects all of the above.</p>
 
   <h2>What physical milestones define ages 12 to 14?</h2>
 
-  <p class="answer-first">Between ages 12 and 14, girls are typically in late puberty — menstruation is established, breast development is complete or near-complete, and height growth is decelerating. Boys are in peak puberty — the growth spurt is most active (gaining 3 to 4 inches per year at peak), voice deepening is underway, muscle mass is increasing, and acne may be at its worst (AAP, 2022). Both sexes experience significant changes in body composition, skin, and body odor.</p>
+  <p class="answer-first">Between ages 12 and 14, girls are typically in late puberty — menstruation is established (average age of first period: 12.4 years), breast development is complete or near-complete, and height growth is decelerating. Boys are in peak puberty — the height spurt peaks around age 13 to 14 (average gain of 3 to 4 inches per year at peak), voice deepening is underway, muscle mass is increasing, and acne may be at its most intense. Both sexes experience significant changes in body composition, skin oiliness, and body odor (AAP, 2022).</p>
 
-  <p>Physical milestones by sex:</p>
+  <p>Physical milestones by sex at this stage:</p>
   <ul>
-    <li><strong>Girls (12 to 14):</strong> Menstruation established (average onset age 12.4), breast development complete, pubic and underarm hair established, height approaching adult level</li>
-    <li><strong>Boys (12 to 14):</strong> Peak height spurt (ages 13 to 14 on average), voice deepening, muscle mass increasing, acne often peaking, pubic and underarm hair established</li>
-    <li><strong>Both sexes:</strong> Skin oilier, acne varying from mild to moderate-severe, body odor requiring daily management, sleep timing shifted biologically later</li>
+    <li><strong>Girls (12 to 14):</strong> Menstruation established, breast development complete, pubic and underarm hair established, adult height nearly reached, body composition shifting to adult proportions</li>
+    <li><strong>Boys (12 to 14):</strong> Peak height spurt underway, voice deepening, muscle mass increasing, testicular development largely complete, acne often at its most intense</li>
+    <li><strong>Both sexes:</strong> Skin oilier, acne varying from mild to moderate-severe, body odor requiring daily hygiene management, sleep timing shifted biologically later</li>
+    <li><strong>Early puberty concern:</strong> Signs of puberty before age 8 in girls or age 9 in boys warrant pediatric evaluation for precocious puberty</li>
   </ul>
 
   <h2>What cognitive milestones emerge between ages 12 and 14?</h2>
 
-  <p class="answer-first">Between ages 12 and 14, the brain transitions to formal operational thinking — the ability to reason about hypothetical situations, consider multiple perspectives simultaneously, and think abstractly about justice, morality, and the future. Metacognition (thinking about one's own thinking) emerges strongly at this age, enabling the "imaginary audience" phenomenon and deeper self-reflection. The prefrontal cortex, responsible for impulse control and long-term planning, is actively developing but far from mature (Piaget, AAP, 2022).</p>
+  <p class="answer-first">Between ages 12 and 14, the brain transitions to formal operational thinking — the ability to reason about hypothetical situations, evaluate arguments, and think abstractly about morality and the future (Piaget, AAP, 2022). Metacognition (thinking about one's own thinking) emerges, enabling deep self-reflection and the self-consciousness of the "imaginary audience." The prefrontal cortex, responsible for impulse control and long-term planning, is actively developing but far from mature — teens this age can reason sophisticatedly when calm but still make poor decisions in emotionally charged situations.</p>
 
+  <p>What to expect cognitively at each age:</p>
   <ul>
-    <li><strong>Abstract reasoning:</strong> Teens can reason about "what if" scenarios, argue philosophical positions, and consider consequences they have not experienced</li>
-    <li><strong>Metacognition:</strong> Awareness of their own thinking processes — "I know I'm overthinking this" — is new and powerful, but also drives intense self-consciousness</li>
-    <li><strong>Moral reasoning:</strong> Shifts from rule-following to avoid punishment toward genuine ethical thinking — questioning rules, arguing for what is fair, considering competing values</li>
-    <li><strong>Executive function:</strong> Planning and organization are improving but still significantly supported by external structure</li>
+    <li><strong>Age 12 (7th grade):</strong> Beginning algebra, literary analysis, argumentation in writing, multi-source research, early abstract reasoning</li>
+    <li><strong>Age 13 (8th grade):</strong> Linear equations and functions, more complex analysis across subjects, growing ethical reasoning, stronger metacognition</li>
+    <li><strong>Age 14 (9th grade):</strong> Algebra 2 or geometry, high school essay writing, genuine philosophical inquiry, future-oriented planning begins to develop</li>
+    <li><strong>Executive function:</strong> Planning, organization, and self-monitoring are improving but still significantly need external structure and scaffolding</li>
   </ul>
 
   <h2>What social-emotional milestones define early adolescence?</h2>
 
-  <p class="answer-first">Between ages 12 and 14, peer relationships become the primary arena for identity formation. Teens use peer group membership — the style they adopt, the friend group they belong to, the activities they identify with — to begin answering "Who am I?" This peer orientation is healthy and necessary, even when it creates friction with parents (AAP, 2022). The quality of at least one close peer relationship during early adolescence predicts better outcomes in later adolescence.</p>
+  <p class="answer-first">Between ages 12 and 14, peer relationships become the primary arena for identity formation. Teens this age use peer group membership — the style they adopt, the social circle they belong to, the activities they identify with — to begin answering "Who am I?" This peer orientation is healthy and necessary for development, even when it creates friction at home (AAP, 2022). Research identifies at least one close, supportive peer friendship as a protective factor for adolescent mental health — teens with one good friend navigate early adolescence better than those who are isolated.</p>
 
+  <p>Social-emotional markers to expect:</p>
   <ul>
-    <li>Peer group becomes the primary social reference point — fitting in matters intensely</li>
+    <li>Peer group becomes the primary social reference point — fitting in matters intensely at this stage</li>
     <li>Identity experimentation through clothing, music, language, and friend group affiliation</li>
     <li>Beginning romantic interest and exploration for most teens in this range</li>
-    <li>Emotional highs and lows are more intense than in earlier childhood — this is biological</li>
-    <li>Pulling away from family while still needing parental security and connection</li>
-    <li>Intense self-consciousness about appearance, performance, and peer perception</li>
+    <li>Emotional highs and lows are more intense than earlier childhood — this is biological, driven by puberty hormones</li>
+    <li>Increasing desire to separate from family identity while still needing parental security</li>
+    <li>Sophisticated empathy — can hold multiple perspectives simultaneously, though still inconsistently</li>
+    <li>Growing moral reasoning — shifting from rule-following to genuine ethical thinking</li>
   </ul>
 
-  <div class="faq-section">
+  <h2>How does the adolescent brain affect decision-making at this age?</h2>
+
+  <p class="answer-first">Between ages 12 and 14, the limbic system (emotional reactivity, reward-seeking, social sensitivity) matures faster than the prefrontal cortex (impulse control, long-term consequences, rational planning). In quiet, low-pressure situations, 12 to 14 year olds can reason with surprising sophistication. In emotionally activated, peer-present situations, the emotional brain typically overrides the rational one — producing impulsive decisions the teen later regrets (AAP, 2022). This is a normal feature of early adolescent neurodevelopment, not a character flaw. Structure and reduced exposure to high-risk situations help more than lectures.</p>
+
+  <h2>Is my 12 to 14 year old developing on track socially?</h2>
+
+  <p class="answer-first">Between ages 12 and 14, typical social development includes having at least one close friend, navigating peer group dynamics (even when stressfully), beginning to show romantic interest, and maintaining some family connection alongside peer orientation. Children who have no close friendships, avoid all social interaction, or show complete indifference to peer relationships are developing differently from the majority — this warrants discussion with a pediatrician, as social isolation at this age is a risk factor for depression and anxiety (AAP, 2022).</p>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 12 to 14 year old's development?</h2>
+    <p class="answer-first">Contact your pediatrician if your child shows no puberty signs by age 13 in girls or age 14 in boys, shows signs of puberty before age 8 in girls or age 9 in boys, has persistent sadness or irritability lasting more than 2 weeks, develops extreme preoccupation with body image or food restriction, or shows significant sudden changes in academic performance, social relationships, or behavior (AAP, 2022).</p>
+    <p>Specific situations requiring prompt attention:</p>
+    <ul>
+      <li><strong>No puberty by age 13 (girls) or 14 (boys):</strong> Delayed puberty warrants evaluation for hormonal, genetic, or nutritional causes</li>
+      <li><strong>Puberty before age 8 (girls) or 9 (boys):</strong> Precocious puberty has medical causes that require evaluation</li>
+      <li><strong>Significant drop in school performance across multiple subjects:</strong> May reflect depression, anxiety, ADHD, learning difference, or substance use</li>
+      <li><strong>Loss of interest in all previously enjoyed activities:</strong> A key indicator of depression in adolescents</li>
+      <li><strong>Signs of disordered eating:</strong> Food restriction, excessive exercise, preoccupation with weight — early intervention dramatically improves outcomes</li>
+      <li><strong>Any mention of self-harm or suicidal thoughts:</strong> Seek help immediately — call 988 or go to the nearest emergency room</li>
+      <li><strong>Complete social withdrawal:</strong> Pulling away from all peers and family, lasting weeks</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
     <h2>Frequently Asked Questions: 12 to 14 Year Old Milestones</h2>
 
     {faqs.map(faq => (
@@ -91,7 +135,7 @@ const medicalData = medicalWebPageSchema({
         <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
-  </div>
+  </section>
 
   <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 

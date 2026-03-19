@@ -2,29 +2,37 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
-const title = '14–18 Year Old Milestones: High School Adolescent Development';
-const description = 'Developmental milestones for teens ages 14 to 18 — completing puberty, identity consolidation, cognitive maturity, relationship development, and preparing for adulthood, with AAP guidance.';
+const title = '14–18 Year Old Milestones: Teen Development and What to Expect';
+const description = 'Developmental milestones for teens ages 14 to 18 — physical maturation, identity consolidation, cognitive growth, relationship development, and preparing for adulthood. Evidence-based guidance with AAP citations and red flags to watch for.';
 
 const faqs = [
   {
     question: 'When does the adolescent brain finish developing?',
-    answer: 'The prefrontal cortex — responsible for impulse control, long-term planning, and complex decision-making — does not fully mature until the mid-20s, typically around age 25 (AAP, 2022). Teens ages 14 to 18 can reason abstractly and understand consequences when calm, but their decision-making systems under emotional arousal or peer pressure remain more reactive and less regulated than adult systems. This is why legally adult behavior (voting at 18, alcohol at 21) is staged — legal systems implicitly recognize this developmental reality.'
+    answer: 'The prefrontal cortex — responsible for impulse control, long-term planning, and complex decision-making — does not fully mature until the mid-20s, typically around age 25 (AAP, 2022). Teens ages 14 to 18 can reason abstractly and understand consequences when calm, but decision-making under emotional arousal or peer pressure remains more reactive and less regulated than adult processing. Legal systems stage adult responsibilities (voting at 18, alcohol at 21) because they implicitly recognize this developmental reality.',
   },
   {
     question: 'What are the physical milestones of late adolescence?',
-    answer: 'Girls typically reach adult height by age 14 to 15, with physical maturation essentially complete by 17. Boys continue growing into their late teens — many are not at full adult height until 17 to 18. Both sexes reach essentially adult body composition by 18, though muscle mass (especially in boys) continues building into the early 20s. Acne, which often peaks in mid-adolescence, typically improves significantly by the late teens for most (though not all) individuals (AAP, 2022).'
+    answer: 'Girls typically reach adult height by age 14 to 15, with physical maturation essentially complete by 17. Boys continue growing until ages 17 to 18 — many are not at full adult height until 17 to 18. Both sexes reach adult body composition by 18, though muscle mass (especially in boys) continues building into the early 20s. Acne, which often peaks in mid-adolescence, improves for most teens by the late teens, though not all (AAP, 2022).',
   },
   {
     question: 'Is it normal for my 16-year-old to still not know what they want to do with their life?',
-    answer: 'Yes. Identity formation is a process, not an event. The AAP and developmental psychologist Erik Erikson describe late adolescence (ages 15 to 21) as the primary period of identity consolidation — not identity completion (AAP, 2022). Most healthy 16-year-olds are still experimenting with values, interests, and future directions. Expecting a 16-year-old to have a stable career identity is developmentally premature. What matters is that they are engaged in exploration — trying things, reflecting, learning who they are — not that they have arrived.'
+    answer: 'Yes. Identity formation is a process, not an event. The AAP and Erik Erikson\'s developmental framework describe late adolescence (ages 15 to 21) as the primary period of identity exploration — not completion (AAP, 2022). Most healthy 16-year-olds are experimenting with values, interests, and future directions. Expecting a 16-year-old to have a stable career identity is developmentally premature. What matters is that they are engaged in exploration — trying things, reflecting, learning about themselves.',
   },
   {
     question: 'What social milestones should a 17-year-old have reached?',
-    answer: 'By age 17, most teens have one or more close, emotionally significant friendships, have some experience with romantic relationships, and are developing a more stable sense of personal identity. Peer conformity — dressing and acting like the group — moderates significantly between ages 14 and 17 as identity becomes more secure. Teens who have developed genuine close friendships, can navigate conflict with peers, and have some sense of their own values are on a healthy developmental trajectory (AAP, 2022).'
+    answer: 'By age 17, most teens have one or more close, emotionally significant friendships, some experience with romantic relationships, and a more stable sense of personal identity. Peer conformity — dressing and acting like the group — moderates significantly between ages 14 and 17 as identity becomes more secure. Teens who have developed genuine close friendships, can navigate conflict with peers, and have some sense of their own values are on a healthy developmental trajectory (AAP, 2022).',
   },
   {
-    question: 'Is it normal for my 15-year-old to prefer spending time with friends over family?',
-    answer: 'Yes. Prioritizing peer relationships over family is the central social task of mid-adolescence. It is how teens develop the independence they will need as young adults. The AAP notes that teens who maintain some family connection — through shared meals, family routines, and brief but regular parental check-ins — navigate adolescence better than those who are fully disconnected from family (AAP, 2022). The goal is not family-centeredness, but a maintained attachment that teens can lean on when they need to.'
+    question: 'Is it normal for my 15-year-old to prefer friends over family?',
+    answer: 'Yes. Prioritizing peer relationships over family is the central social task of mid-adolescence — it is how teens develop the independence they need as young adults. The AAP notes that teens who maintain some family connection (through shared meals, routines, and brief regular check-ins) navigate adolescence better than those fully disconnected from family (AAP, 2022). The goal is not family-centeredness, but a maintained attachment teens can lean on when needed.',
+  },
+  {
+    question: 'My 16-year-old is intensely private and won\'t tell me anything. Is that normal?',
+    answer: 'Yes. Privacy increases dramatically through adolescence as teens develop an internal life that is genuinely separate from family. This is healthy identity development. The AAP distinguishes between privacy (which supports development) and dangerous secrecy (which warrants intervention). A teen who lives their daily life privately but comes to parents when something is seriously wrong is doing what adolescent development requires. A teen who is completely closed even in crisis situations — or who shows behavioral red flags alongside extreme withdrawal — warrants more attention (AAP, 2022).',
+  },
+  {
+    question: 'When should I worry about my teen\'s mental health versus normal teen moodiness?',
+    answer: 'Normal teen moodiness is situational (triggered by something specific), episodic (the teen is fine between episodes), and does not prevent functioning. Clinical depression and anxiety are persistent (lasting 2+ weeks), pervasive (affecting multiple areas of life), and cause significant impairment in school, social function, and daily activities (DSM-5). The AAP recommends depression screening at every well-child visit starting at age 12. When in doubt, a pediatrician visit is the right call — you are not overreacting.',
   },
 ];
 
@@ -41,47 +49,77 @@ const medicalData = medicalWebPageSchema({
 });
 ---
 
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '14–18 Years', href: '/ages/14-18-years/' }, { label: 'Milestones' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '14–18 Years', href: '/ages/14-18-years/' },
+    { label: 'Milestones' },
+  ]}
+>
+  <h1>14–18 Year Old Milestones: Teen Development and What to Expect</h1>
 
-  <h1>14–18 Year Old Milestones: High School Adolescent Development</h1>
-
-  <p class="answer-first">Between ages 14 and 18, adolescents move from the physical and emotional turbulence of early adolescence toward a more consolidated identity and increasing readiness for adult autonomy. The AAP describes late adolescence as a period of identity consolidation — the active integration of one's values, relationships, experiences, and sense of self into a coherent whole (AAP, 2022). Physical maturation largely completes; the brain continues developing into the mid-20s. Most of the visible behavioral progress of this period is cognitive and social, not physical.</p>
+  <p class="answer-first">Between ages 14 and 18, adolescents move from the physical and emotional turbulence of early adolescence toward a more consolidated identity and increasing readiness for adult independence. The AAP describes late adolescence as a period of identity consolidation — the active integration of one's values, relationships, experiences, and sense of self into a coherent whole (AAP, 2022). Physical maturation largely completes; the brain continues developing into the mid-20s. Most of the visible developmental progress in this period is cognitive and social, not physical.</p>
 
   <h2>What physical milestones define ages 14 to 18?</h2>
 
-  <p class="answer-first">Between ages 14 and 18, physical maturation largely completes for both sexes. Girls typically reach adult height by ages 14 to 15. Boys continue growing until ages 17 to 18, with muscle mass continuing to build into the early 20s. Acne often improves in late adolescence for many teens. Brain development — specifically the prefrontal cortex governing impulse control and long-term planning — continues maturing until the mid-20s and is the most significant ongoing biological development of this period (AAP, 2022).</p>
+  <p class="answer-first">Between ages 14 and 18, physical maturation largely completes for both sexes. Girls typically reach adult height by ages 14 to 15, with physical maturation complete by 17. Boys continue growing until ages 17 to 18, with muscle mass continuing to build into the early 20s. Acne often improves in late adolescence for most teens, though some continue to experience it. Brain development — specifically the prefrontal cortex governing impulse control and long-term planning — continues maturing until the mid-20s and is the most significant ongoing biological development of this period (AAP, 2022).</p>
 
   <ul>
-    <li><strong>Girls:</strong> Adult height typically achieved by age 14 to 15; physical maturation complete by 17; reproductive system fully established</li>
-    <li><strong>Boys:</strong> Growth continues until ages 17 to 18; muscle mass builds into early 20s; voice fully settled; acne may persist through late teens</li>
-    <li><strong>Brain:</strong> Prefrontal cortex (impulse control, planning) continues maturing until the mid-20s — the most significant ongoing biological development</li>
-    <li><strong>Reproductive health:</strong> Sexually active teens need regular STI screening and access to contraception — discuss with your teen's pediatrician</li>
+    <li><strong>Girls (14 to 18):</strong> Adult height typically achieved by age 14 to 15; physical maturation complete by 17; reproductive system fully established; acne often improving by age 16 to 17</li>
+    <li><strong>Boys (14 to 18):</strong> Growth continues until ages 17 to 18; muscle mass builds into early 20s; voice fully settled by 16 to 17; facial hair development ongoing; acne may persist through late teens</li>
+    <li><strong>Brain:</strong> Prefrontal cortex continues maturing until the mid-20s; emotional regulation, long-term planning, and impulse control improve but are not at adult levels until then</li>
+    <li><strong>Reproductive health:</strong> Sexually active teens need STI screening and access to contraception — discuss with your teen's pediatrician in a confidential setting</li>
   </ul>
 
   <h2>What cognitive milestones matter most between ages 14 and 18?</h2>
 
-  <p class="answer-first">Between ages 14 and 18, teens develop increasingly sophisticated abstract reasoning, future orientation, and identity-based decision-making. Older teens (ages 16 to 18) think in more complex, nuanced ways about moral questions, social relationships, and their own future than early teens do. Cognitive self-regulation — the ability to inhibit impulses, sustain attention, and plan ahead — improves steadily through adolescence, though remains below adult levels until the mid-20s (AAP, 2022).</p>
+  <p class="answer-first">Between ages 14 and 18, teens develop increasingly sophisticated abstract reasoning, future orientation, and identity-based decision-making. Older teens (ages 16 to 18) reason in more nuanced ways about moral questions, social relationships, and their own future than early teens. Cognitive self-regulation — inhibiting impulses, sustaining attention, planning ahead — improves steadily, though it remains below adult levels until the mid-20s (AAP, 2022). Teens show the most dramatic cognitive improvements in familiar, low-pressure domains; high-stress, peer-present situations still often produce poor decisions.</p>
 
+  <p>Cognitive development trajectory through this range:</p>
   <ul>
-    <li><strong>Ages 14 to 15:</strong> Abstract reasoning well-established; can consider multiple complex perspectives; future orientation emerging; identity still forming</li>
-    <li><strong>Ages 16 to 17:</strong> More stable identity; decreasing peer conformity; longer-range planning (college, career, relationships); improved self-regulation under stress</li>
-    <li><strong>Ages 17 to 18:</strong> Near-adult reasoning in familiar, low-stress domains; future orientation concrete (plans, applications, decisions); identity increasingly stable</li>
+    <li><strong>Ages 14 to 15:</strong> Abstract reasoning well-established, multiple perspectives considered simultaneously, future orientation emerging, identity actively forming, peer conformity near its peak</li>
+    <li><strong>Ages 16 to 17:</strong> More stable identity, decreasing peer conformity, longer-range planning, improved self-regulation, capacity for genuine empathy and perspective-taking</li>
+    <li><strong>Ages 17 to 18:</strong> Near-adult reasoning in familiar low-stress domains, concrete future planning (college, career, relationships), identity increasingly stable and internally generated</li>
   </ul>
 
   <h2>What social-emotional milestones define ages 14 to 18?</h2>
 
-  <p class="answer-first">The primary social-emotional task of late adolescence is identity consolidation — developing a stable, coherent sense of self that integrates values, relationships, and aspirations. Peer conformity, which peaks in early adolescence, moderates as identity becomes more secure: 17-year-olds are meaningfully less driven by peer approval than 13-year-olds. Romantic relationships become more emotionally significant. Friendships deepen. Family relationships shift from authority to consultation (AAP, 2022).</p>
+  <p class="answer-first">The primary social-emotional task of late adolescence is identity consolidation — developing a stable, coherent sense of self that integrates values, relationships, and aspirations. Peer conformity, which peaks in early adolescence, decreases measurably as identity becomes more secure: a 17-year-old is meaningfully less driven by peer approval than a 13-year-old. Romantic relationships become more emotionally significant. Friendships deepen. Family relationships shift from authority-to-child toward increasingly collaborative and mutual (AAP, 2022).</p>
 
+  <p>Social-emotional milestones to look for:</p>
   <ul>
-    <li>Decreasing peer conformity as identity becomes more secure (ages 15 to 18)</li>
-    <li>Deepening, emotionally significant friendships and romantic relationships</li>
-    <li>More stable sense of personal values — not just inherited from family or adopted from peer group</li>
-    <li>Beginning to think concretely about adult roles: career direction, relationship values, independence</li>
-    <li>Parental relationship shifts from manager-managed to increasingly mutual</li>
-    <li>Empathy deepens — capacity for genuine perspective-taking and emotional support</li>
+    <li>Decreasing peer conformity as identity becomes more secure (noticeable between ages 15 and 18)</li>
+    <li>Deepening, emotionally significant friendships and romantic relationships with genuine emotional intimacy</li>
+    <li>More stable, internally held personal values — not just inherited from family or adopted wholesale from peer group</li>
+    <li>Beginning to think concretely about adult roles: career direction, relationship values, where to live, independence</li>
+    <li>Parental relationship gradually shifting from manager-managed to increasingly consultative</li>
+    <li>Genuine empathy — capacity for sustained perspective-taking and emotional support of others</li>
   </ul>
 
-  <div class="faq-section">
+  <h2>How does identity formation work during late adolescence?</h2>
+
+  <p class="answer-first">Identity formation in teens ages 14 to 18 is an active, exploratory process — not a single moment of discovery. Teens try on values, beliefs, friend groups, styles, and future directions, then refine through experience and reflection. The AAP notes that identity exploration — including religious questioning, changing political views, experimenting with different social groups, and reconsidering future plans — is how teens develop a stable, internalized adult identity (AAP, 2022). Identity formed through exploration is more stable in adulthood than identity formed through foreclosure (accepting assigned identity without exploration) or diffusion (avoiding identity work entirely).</p>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 14 to 18 year old's development?</h2>
+    <p class="answer-first">Contact your pediatrician if your teen shows persistent sadness or irritability lasting 2 or more weeks, loses interest in all previously enjoyed activities, develops extreme preoccupation with body image or food intake, shows significant sudden drops in academic performance, completely withdraws from all social relationships, or you observe any signs of substance use, self-harm, or suicidal thinking (AAP, 2022).</p>
+    <p>Specific red flags requiring prompt action:</p>
+    <ul>
+      <li><strong>Any mention of suicide or self-harm:</strong> Emergency response required — call 988 or go to the nearest ER immediately</li>
+      <li><strong>Signs of eating disorder:</strong> Food restriction, excessive exercise, significant weight loss, preoccupation with body weight — early intervention dramatically improves outcomes</li>
+      <li><strong>Persistent depression symptoms for 2+ weeks:</strong> Pervasive low mood, hopelessness, sleep and appetite changes, loss of interest in everything</li>
+      <li><strong>Substance use beyond experimentation:</strong> Using daily, using alone, using to manage emotions, inability to stop despite wanting to</li>
+      <li><strong>Complete academic collapse:</strong> Failing multiple subjects, extended truancy, complete withdrawal from school</li>
+      <li><strong>Signs of an abusive relationship:</strong> Isolation from all friends and family, partner controlling behavior, fearfulness around partner</li>
+      <li><strong>Late puberty with no physical changes by age 17:</strong> Absent or very delayed pubertal development warrants endocrine evaluation</li>
+    </ul>
+  </div>
+
+  <section class="faq-section">
     <h2>Frequently Asked Questions: 14 to 18 Year Old Milestones</h2>
 
     {faqs.map(faq => (
@@ -90,7 +128,7 @@ const medicalData = medicalWebPageSchema({
         <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
-  </div>
+  </section>
 
   <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '3–6 Month Old Development: What to Expect';
@@ -9,19 +9,19 @@ const description = 'Between 3 and 6 months, babies undergo a major transformati
 const faqs = [
   {
     question: 'When should I start solid foods?',
-    answer: 'The AAP and CDC recommend waiting until about 6 months of age to introduce solid foods. Signs of readiness include being able to sit with little or no support, having good head control, showing interest in what you are eating, and the disappearance of the tongue-thrust reflex.',
+    answer: 'The AAP and CDC recommend waiting until about 6 months of age to introduce solid foods (AAP, 2022). Signs of readiness include sitting with little or no support, good head control, interest in what you are eating, and the disappearance of the tongue-thrust reflex. Starting earlier than 4 months is not recommended and is associated with increased risk of choking and food allergies.',
   },
   {
     question: 'How much sleep does a 3–6 month old need?',
-    answer: 'At this age, most babies need 12–16 hours of sleep in a 24-hour period, including naps. Many babies begin to develop more predictable sleep patterns and may start sleeping longer stretches at night, though the "4-month sleep regression" is common as their sleep cycles mature.',
+    answer: 'Most babies at this age need 12–16 hours of sleep in a 24-hour period, including naps (American Academy of Sleep Medicine, 2022). Many babies develop more predictable sleep patterns and may start sleeping longer stretches at night, though the 4-month sleep regression is common as sleep cycles mature.',
   },
   {
     question: 'Is it normal for my baby to drool so much at 4 months?',
-    answer: 'Yes, excessive drooling is very common at this age. While it can be a sign of teething, it is often just a result of the salivary glands maturing and the baby exploring their mouth with their hands and toys.',
+    answer: 'Yes. Drooling at this age is common and is usually caused by the salivary glands maturing, not teething. Babies at 3–6 months are also exploring their mouths with their hands and toys, which stimulates saliva production.',
   },
   {
     question: 'When will my baby start rolling over?',
-    answer: 'Most babies begin to roll from stomach to back around 4 months, and from back to stomach around 5 or 6 months. Tummy time is essential for building the muscle strength needed for this milestone.',
+    answer: 'Most babies begin rolling from stomach to back around 4 months, and from back to stomach around 5–6 months (CDC, 2022). Tummy time is essential for building the muscle strength needed for rolling. If your baby is not rolling in either direction by 6 months, discuss it with your pediatrician.',
   },
 ];
 
@@ -31,21 +31,27 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/3-6-months/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/3-6-months/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '3–6 Months' },
   ]}
 >
   <h1>3–6 Month Old Development: What to Expect</h1>
 
-  <p>The period between 3 and 6 months is often a favorite for parents. Your baby is likely "waking up" to the world, offering frequent social smiles, laughing, and beginning to interact with their environment in more intentional ways. This is a season of rapid physical and cognitive growth as your baby moves away from involuntary newborn reflexes and begins to master voluntary movements.</p>
+  <p>The period between 3 and 6 months is often a parent favorite. Your baby is likely waking up to the world — offering frequent social smiles, laughing, and beginning to interact with their environment in deliberate ways. This is a season of rapid physical and cognitive growth as your baby moves away from involuntary newborn reflexes and begins to master voluntary movements.</p>
 
-  <p>This guide covers the key developmental areas for babies aged 3 to 6 months, following guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
+  <p>This guide covers key developmental areas for babies aged 3 to 6 months, following guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
 
   <h2>Explore 3–6 Month Topics</h2>
   <div class="topic-grid">
@@ -54,42 +60,39 @@ const fSchema = faqSchema(faqs);
     ))}
   </div>
 
-  <h2>Physical Milestones: Moving and Grooving</h2>
+  <h2>What physical milestones should my 3–6 month old be reaching?</h2>
 
-  <p>By 4 to 6 months, your baby's neck and trunk muscles are getting much stronger. Key milestones include:</p>
-
-  <ul>
-    <li><strong>Rolling:</strong> Many babies learn to roll from tummy to back by 4 months, and both ways by 6 months.</li>
-    <li><strong>Sitting:</strong> By 6 months, many babies can sit with support, and some can sit briefly without help using their arms for balance (the "tripod" position).</li>
-    <li><strong>Reaching and Grasping:</strong> Your baby is now using their hands intentionally to reach for, grab, and pull objects toward them. Everything they grab will likely end up in their mouth — this is how they explore!</li>
-    <li><strong>Tummy Time:</strong> This remains crucial. A 4-month-old should be able to push up onto their elbows or even straight arms during tummy time.</li>
-  </ul>
-
-  <h2>Communication and Social Skills</h2>
-
-  <p>Your baby is becoming a social butterfly! Expect more intentional interaction:</p>
+  <p class="answer-first">By 6 months, most babies can roll in both directions, sit briefly with support, reach for and grasp objects, and push up onto straight arms during tummy time (CDC, 2022). Between 3 and 4 months, the neck and trunk muscles strengthen enough for steady head control. By 5–6 months, many babies can sit in a "tripod" position — leaning forward on their hands for balance.</p>
 
   <ul>
-    <li><strong>Social Smiling and Laughing:</strong> By 4 months, most babies smile spontaneously at people and have started to chuckle or laugh out loud.</li>
-    <li><strong>Babbling:</strong> "Cooing" turns into "babbling." You'll hear more consonant sounds like "m," "b," and "p" (e.g., "muh-muh" or "bah-bah").</li>
-    <li><strong>Responding to Names:</strong> By 6 months, many babies begin to recognize and respond to their own names.</li>
-    <li><strong>Expressing Emotions:</strong> You'll notice distinct cries for hunger, pain, or tiredness, and clear expressions of joy or frustration.</li>
+    <li><strong>Rolling:</strong> Many babies learn to roll from tummy to back by 4 months, and in both directions by 6 months.</li>
+    <li><strong>Sitting:</strong> By 6 months, many babies can sit with support. Some can briefly sit without help using their arms for balance (the "tripod" position).</li>
+    <li><strong>Reaching and grasping:</strong> Your baby now uses their hands to reach for, grab, and pull objects toward them. Everything they grab will likely end up in their mouth — this is how they explore.</li>
+    <li><strong>Tummy time progress:</strong> A 4-month-old should push up onto elbows or even straight arms during tummy time. Keep offering daily supervised sessions.</li>
   </ul>
 
-  <h2>Sleep Patterns and Regressions</h2>
+  <h2>How is my baby communicating and socializing at 3–6 months?</h2>
 
-  <p>Sleep at 3–6 months often becomes more consolidated at night, but it can also be disrupted by the "4-month sleep regression." This is actually a sign of brain development, as your baby's sleep architecture changes to be more like an adult's. Most babies at this age need two to three naps a day. The AAP continues to recommend room-sharing and placing babies on their backs on a firm, flat surface for every sleep.</p>
-
-  <h2>Feeding: Preparing for Solids</h2>
-
-  <p>Until 6 months, the AAP recommends exclusive breastfeeding or formula feeding. However, between 4 and 6 months, your baby may start showing signs of readiness for solid foods. Milk remains the primary source of nutrition, but you can look for these signs:</p>
+  <p class="answer-first">By 4 months, most babies smile spontaneously at people, copy facial expressions, and produce consonant-containing babble sounds like "ba," "ma," and "da" (CDC, 2022). Social smiling and laughing typically emerge between 3 and 4 months and are among the most clear indicators of healthy social-emotional development at this stage.</p>
 
   <ul>
-    <li>Good head and neck control.</li>
-    <li>Ability to sit up with little or no support.</li>
-    <li>Loss of the "extrusion reflex" (pushing food out of the mouth with the tongue).</li>
-    <li>Significant interest in what you are eating.</li>
+    <li><strong>Social smiling and laughing:</strong> By 4 months, most babies smile spontaneously at people and have started to chuckle or laugh out loud.</li>
+    <li><strong>Babbling:</strong> "Cooing" turns into "babbling." You will hear more consonant sounds like "m," "b," and "p" — the early building blocks of speech.</li>
+    <li><strong>Responding to names:</strong> By 6 months, many babies begin to recognize and respond to their own name.</li>
+    <li><strong>Expressing emotions:</strong> Distinct cries for hunger, pain, or tiredness emerge, along with clear expressions of joy and frustration.</li>
   </ul>
+
+  <h2>What should I expect for sleep at 3–6 months?</h2>
+
+  <p class="answer-first">Babies aged 3–6 months need 12–16 hours of total sleep per day, often transitioning toward 2–3 daytime naps and longer nighttime stretches (American Academy of Sleep Medicine, 2022). Sleep often becomes more consolidated at night during this stage, but the 4-month sleep regression — caused by maturing sleep architecture — disrupts many babies' patterns around that age. The AAP continues to recommend back-to-sleep on a firm, flat surface for every sleep.</p>
+
+  <p>The 4-month sleep regression is a sign of brain development, not a problem to fix. As your baby's sleep cycles mature to resemble adult sleep, they wake more often between cycles. See our <a href="/ages/3-6-months/sleep/">3–6 Month Sleep</a> page for detailed guidance.</p>
+
+  <h2>When should I start solid foods for my 3–6 month old?</h2>
+
+  <p class="answer-first">The AAP recommends exclusive breastfeeding or formula feeding until approximately 6 months of age (AAP, 2022). Between 4 and 6 months, your baby may show readiness signs — good head and neck control, ability to sit with support, loss of the tongue-thrust reflex, and significant interest in what you are eating — but milk remains the primary source of nutrition until solids are introduced.</p>
+
+  <p>Introducing solids before 4 months is not recommended and is associated with increased choking risk and food allergies. Between 4 and 6 months, focus on watching for readiness signs rather than calendar dates. See our <a href="/ages/3-6-months/feeding/">3–6 Month Feeding</a> page for complete guidance.</p>
 
   <div class="faq-section">
     <h2>Is This Normal? Common Questions About 3–6 Month Development</h2>
@@ -102,17 +105,18 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
+    <h2>When should I talk to my pediatrician about my 3–6 month old?</h2>
     <p>The AAP recommends well-child visits at 4 months and 6 months. Contact your pediatrician if your baby:</p>
     <ul>
-      <li>Doesn't watch things as they move.</li>
-      <li>Doesn't smile at people.</li>
-      <li>Can't hold their head steady.</li>
-      <li>Doesn't coo or make sounds.</li>
-      <li>Doesn't bring things to their mouth.</li>
-      <li>Doesn't push down with their legs when feet are placed on a hard surface.</li>
-      <li>Has trouble moving one or both eyes in all directions.</li>
+      <li>Does not watch things as they move by 4 months</li>
+      <li>Does not smile at people by 4 months</li>
+      <li>Cannot hold their head steady by 4 months</li>
+      <li>Does not coo or make sounds</li>
+      <li>Does not bring things to their mouth</li>
+      <li>Does not push down with their legs when feet are placed on a hard surface</li>
+      <li>Does not roll in either direction by 6 months</li>
+      <li>Has lost skills they once had</li>
     </ul>
-    <p>Always trust your instincts as a parent. If you have concerns about your baby's development, your pediatrician is your best resource.</p>
+    <p>Trust your instincts. If you have concerns about your baby's development, your pediatrician is your best resource — and earlier is always better when it comes to developmental support.</p>
   </div>
 </BaseLayout>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
-import { articleSchema, faqSchema } from "../../../../data/schema.js";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
 const title = "1–3 Month Old Sleep: What to Expect — A Parent's Guide";
 const description = "Evidence-based guide to 1–3 month old sleep patterns, total sleep needs, and safe sleep guidelines. Learn why babies this age wake frequently and how to support healthy sleep development.";
@@ -34,12 +34,18 @@ const aSchema = articleSchema({
   url: "https://ageexpectations.com/ages/1-3-months/sleep/",
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/1-3-months/sleep/",
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: "1–3 Months", href: "/ages/1-3-months/" },
     { label: "Sleep" },

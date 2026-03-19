@@ -1,27 +1,27 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = '1–3 Month Old Development: What to Expect';
-const description = 'Between 1 and 3 months, babies transition from the newborn phase into a more alert and socially engaged stage. Expect your baby’s first social smile, increased head control, and more predictable feeding and sleep patterns.';
+const description = 'Between 1 and 3 months, babies transition from the newborn phase into a more alert and socially engaged stage. Expect your baby\'s first social smile, increased head control, and more predictable feeding and sleep patterns.';
 
 const faqs = [
   {
-    question: 'When will my baby first smile?',
-    answer: 'Most babies develop their first "social smile" (a smile in response to your face or voice) between 6 and 8 weeks of age. While newborns may smile in their sleep due to reflexes, the social smile is a major developmental milestone that signals your baby is beginning to connect with people.',
+    question: 'When will my baby first smile at me?',
+    answer: 'Most babies develop their first "social smile" — a smile in response to your face or voice — between 6 and 8 weeks of age (CDC, 2022). While newborns may smile in their sleep due to reflexes, the social smile is a major developmental milestone that signals your baby is beginning to connect with people. If your baby is not smiling by 3 months, mention it to your pediatrician.',
   },
   {
-    question: 'How much tummy time does a 1-3 month old need?',
-    answer: 'The AAP recommends starting tummy time in the first week. By 1–3 months, aim for 15–30 minutes total throughout the day, spread across several short sessions. Tummy time is crucial for building the neck, shoulder, and arm muscles needed for rolling and eventually crawling.',
+    question: 'How much tummy time does a 1–3 month old need?',
+    answer: 'The AAP recommends starting tummy time in the first week of life. By 1–3 months, aim for 15–30 minutes total throughout the day, spread across several short sessions. Tummy time builds the neck, shoulder, and arm muscles needed for rolling, sitting, and eventually crawling (AAP, 2022).',
   },
   {
     question: 'Is it normal for my 2-month-old to drool so much?',
-    answer: 'Yes. Around 2–3 months, a baby’s salivary glands become more active. Since they haven’t yet learned how to swallow saliva efficiently, it often results in significant drooling. This is rarely a sign of teething this early; it’s just a normal part of developmental maturation.',
+    answer: 'Yes. Around 2–3 months, a baby\'s salivary glands become more active. Since they have not yet learned to swallow saliva efficiently, significant drooling results. This is rarely a sign of teething this early — it is a typical part of developmental maturation.',
   },
   {
     question: 'Why is my baby constantly sucking on their hands?',
-    answer: 'Hand-sucking is a very common and healthy developmental stage at 2–3 months. It’s often a sign of self-soothing or sensory exploration rather than hunger or teething. At this age, babies have discovered their hands and are learning how to use them for comfort.',
+    answer: 'Hand-sucking is a common and healthy developmental behavior at 2–3 months. It is often a sign of self-soothing or sensory exploration rather than hunger or teething. Babies at this age have discovered their hands and are learning to use them for comfort.',
   },
 ];
 
@@ -31,43 +31,61 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/1-3-months/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/1-3-months/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '1–3 Months' },
   ]}
 >
   <h1>1–3 Month Old Development: What to Expect</h1>
 
-  <p>The period between 1 and 3 months is often called the "awakening." Your baby is moving past the sleepy newborn phase and becoming increasingly alert, responsive, and interested in the world. This is the stage where you start to get a "glimpse" of your baby's personality, especially as they begin to smile and coo back at you.</p>
+  <p>The period between 1 and 3 months is often called the "awakening." Your baby is moving past the sleepy newborn phase and becoming alert, responsive, and interested in the world around them. This is the stage where you start to glimpse your baby's personality — especially as they begin to smile and coo back at you.</p>
 
-  <h2>Physical and Motor Milestones</h2>
-  <p>During these two months, your baby’s body is getting stronger and more coordinated. Key physical milestones include:</p>
+  <p>This guide covers key developmental areas for babies 1–3 months old, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
+
+  <h2>Explore 1–3 Month Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/1-3-months/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+  </div>
+
+  <h2>What physical skills should my 1–3 month old have?</h2>
+
+  <p class="answer-first">By 3 months, most babies can hold their head up steadily while being held and lift their head and chest 45 to 90 degrees during tummy time (CDC, 2022). Head control is the signature physical milestone of this stage, driven by rapidly strengthening neck and shoulder muscles. Hand discovery — bringing hands to the mouth and watching them move — also emerges during this window.</p>
+
   <ul>
-    <li><strong>Head Control:</strong> By 3 months, most babies can hold their head up steadily while being held and can lift their head and chest 45 to 90 degrees during tummy time.</li>
-    <li><strong>Social Smiling:</strong> One of the most rewarding milestones, the social smile, typically appears between 6 and 12 weeks.</li>
-    <li><strong>Hand Discovery:</strong> Your baby will likely find their hands, watch them move, and start bringing them to their mouth for exploration.</li>
-    <li><strong>Pushing Up:</strong> When on their tummy, they may start pushing up with their arms.</li>
+    <li><strong>Head control:</strong> By 3 months, most babies hold their head up steadily while being held and lift their head during tummy time. Continue offering supervised tummy time daily to build this strength.</li>
+    <li><strong>Social smiling:</strong> The social smile typically appears between 6 and 12 weeks — one of the most rewarding milestones of early infancy.</li>
+    <li><strong>Hand discovery:</strong> Your baby will likely find their hands, watch them move, and start bringing them to their mouth for exploration.</li>
+    <li><strong>Pushing up:</strong> When on their tummy, many babies begin pushing up with their forearms by 2–3 months.</li>
   </ul>
 
-  <h2>Communication and Social Development</h2>
-  <p>Your baby is learning that their voice and expressions can get a reaction from you. You may notice:</p>
+  <h2>How is my baby communicating at 1–3 months?</h2>
+
+  <p class="answer-first">By 2 months, most babies are cooing — producing vowel-like sounds such as "ah" and "oh" — and can follow a moving object smoothly with their eyes across a 180-degree arc (CDC, 2022). Cooing is your baby's first intentional social communication. They are learning that their voice and expressions get a reaction from you, which is the foundation of all language development.</p>
+
   <ul>
-    <li><strong>Cooing:</strong> Vowel-like sounds like "ah-ah" or "oh-oh" begin to replace some of the crying.</li>
-    <li><strong>Tracking:</strong> Your baby can now follow objects and people more smoothly with their eyes across a 180-degree arc.</li>
-    <li><strong>Recognition:</strong> They will begin to recognize familiar faces and voices from a distance and may show excitement when you approach.</li>
+    <li><strong>Cooing:</strong> Vowel-like sounds replace some of the crying. Your baby is experimenting with their voice.</li>
+    <li><strong>Visual tracking:</strong> Your baby can now follow objects and people more smoothly with their eyes.</li>
+    <li><strong>Recognition:</strong> They begin to recognize familiar faces and voices and may show excitement when you approach.</li>
   </ul>
 
-  <h2>Feeding and Sleep Patterns</h2>
-  <p>While still frequent, feeding and sleep often become slightly more predictable during the 1–3 month stage.</p>
-  <ul>
-    <li><strong>Feeding:</strong> Breastfed babies usually feed every 2–4 hours, while formula-fed babies may go 3–4 hours. Most babies this age still need at least one or two night feedings.</li>
-    <li><strong>Sleep:</strong> Total sleep remains around 14–17 hours, but "long" stretches of 4–6 hours at night may begin to emerge for some babies by the end of the third month. The AAP safe sleep guidelines (back to sleep, firm surface, no loose bedding) remain critical.</li>
-  </ul>
+  <h2>What do feeding and sleep look like at 1–3 months?</h2>
+
+  <p class="answer-first">Breastfed babies 1–3 months old typically feed every 2–4 hours; formula-fed babies usually go 3–4 hours between feedings. Total sleep remains around 14–17 hours per day, but longer nighttime stretches of 4–6 hours may begin to emerge by the end of the third month for some babies (National Sleep Foundation, 2023). The AAP safe sleep guidelines — back to sleep, firm surface, no loose bedding — remain critical at this stage.</p>
+
+  <p>Feeding and sleep often become slightly more predictable during this stage, though significant variation is typical. Most babies still need at least one or two night feedings. If your baby consistently sleeps longer than 4–5 hours without eating and has not yet regained birth weight, wake them to feed and consult your pediatrician.</p>
 
   <div class="faq-section">
     <h2>Is This Normal? Common Questions About 1–3 Month Development</h2>
@@ -80,16 +98,16 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The 2-month well-child visit is a major milestone involving a full physical exam and the first large round of immunizations. Contact your pediatrician if you notice:</p>
+    <h2>When should I talk to my pediatrician about my 1–3 month old?</h2>
+    <p>The 2-month well-child visit is a major milestone involving a full physical exam and the first large round of immunizations. Contact your pediatrician if you notice your baby:</p>
     <ul>
       <li>Not smiling by 3 months</li>
       <li>Not supporting their head when you hold them or during tummy time</li>
       <li>Not tracking moving objects with their eyes</li>
       <li>Not responding to loud sounds</li>
       <li>Persistent crying that seems to be getting worse rather than better</li>
-      <li>Any fever (100.4°F or higher) is still a priority call for babies under 3 months</li>
+      <li>Any fever (100.4°F or higher) — this is still a priority call for babies under 3 months</li>
     </ul>
-    <p>Remember that development is a range. Some babies hit these marks early, while others take a little more time. If you have concerns, your pediatrician is your best resource.</p>
+    <p>Development is a range. Some babies hit these marks early, while others take a bit more time. If you have concerns, your pediatrician is your best resource.</p>
   </div>
 </BaseLayout>

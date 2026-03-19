@@ -30,19 +30,17 @@ Every section must lead with a **direct, complete answer in 40–60 words** befo
 
 ### Rule 2: Question-Based Headings
 
-All H2 and H3 headings should be phrased as the **actual questions parents ask**, not as clinical topic labels. AI engines match user queries to content — question-format headings make that matching direct.
+All H2 and H3 headings must be phrased as the **actual questions parents ask**, not as clinical topic labels. AI engines match user queries to content — question-format headings make that matching direct.
 
-**BAD:**
-> ## Motor Development: 6–9 Months
-> ## Language and Communication
-> ## Nutritional Considerations
+**Examples:**
+- **BAD:** Gross Motor Milestones: What to Expect for Movement and Coordination
+- **GOOD:** What gross motor skills should my 2-year-old have?
+- **BAD:** Language and Communication: 12–18 Months
+- **GOOD:** When will my toddler start saying words?
+- **BAD:** Social and Emotional Development
+- **GOOD:** Is it normal for my preschooler to have tantrums?
 
-**GOOD:**
-> ## When do babies start crawling?
-> ## What words should my 18-month-old be saying?
-> ## What should I feed my 9-month-old?
-
-When brainstorming headings, think about what a tired, worried parent would type into ChatGPT or ask Alexa at midnight.
+When brainstorming headings, think about what a tired, worried parent would type into ChatGPT or ask Alexa at midnight. Avoid "Overview," "Expectations," or "Guidelines" in headers.
 
 ### Rule 3: Independently Citable Sections
 
