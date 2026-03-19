@@ -1,22 +1,31 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
+import { topics } from '../../../data/ages.js';
 
 const title = '8–10 Year Old Development: What to Expect';
-const description = 'A guide to development for 8–10 year olds — growing independence, cognitive leaps in logical thinking, social-emotional changes, and physical growth spurts.';
+const description = 'A guide to development for 8–10 year olds — growing independence, logical thinking, puberty onset, social changes, and physical growth — with AAP guidelines and specific milestones.';
 
 const faqs = [
   {
-    question: 'How much sleep do 8–10 year olds need?',
-    answer: 'Most children this age need 9–12 hours of sleep per night. Consistent bedtime routines remain important, especially as schoolwork and extracurricular activities become more demanding.',
+    question: 'How much sleep do 8 to 10 year olds need?',
+    answer: 'The AAP recommends 9 to 12 hours of sleep per 24 hours for school-age children ages 6 to 12 (AAP, 2016). Children sleeping fewer than 9 hours show consistent impacts on attention, impulse control, and academic performance. Consistent bedtime routines — even on weekends — matter more than perfect timing.',
   },
   {
-    question: 'When does puberty start?',
-    answer: 'Puberty can start as early as age 8 for girls and age 9 for boys. It is normal to see early signs like growth spurts, skin changes, or breast development during these years.',
+    question: 'When does puberty start for boys and girls?',
+    answer: 'Puberty can begin as early as age 8 for girls and age 9 for boys, according to the AAP (2022). For girls, the first sign is typically breast development. For boys, it is testicular growth. Seeing early puberty signs between ages 8 and 10 is within the range of typical development — talk to your pediatrician if signs appear before age 8 in girls or before age 9 in boys, as early puberty can have medical causes.',
   },
   {
     question: 'Is it normal for my child to be more influenced by friends now?',
-    answer: 'Yes. In middle childhood, the focus shifts toward peer groups. Friendships become more stable and complex, and "best friends" become very important for social development and self-esteem.',
+    answer: 'Yes. Between ages 8 and 10, peer relationships become central to social development. Children seek acceptance from same-sex peer groups, compare themselves to peers, and begin to adopt group norms around clothing, language, and interests. The AAP notes this shift is healthy and prepares children for the stronger peer influence of adolescence. Parental values and relationships remain the most important long-term influence.',
+  },
+  {
+    question: 'What reading level should my 9-year-old be at?',
+    answer: 'By age 9, most children read at a 3rd-to-4th grade level and use reading to learn new content across subjects. They read chapter books independently and can summarize what they read. By age 10, children typically read and understand books written at a 4th-to-5th grade level. If your child struggles to read independently by age 9, ask your pediatrician about a reading evaluation.',
+  },
+  {
+    question: 'Should I be worried that my 9-year-old is obsessed with one topic?',
+    answer: 'Intense, specific interests are a hallmark of middle childhood. Children ages 8 to 10 often develop deep passions — dinosaurs, Minecraft, a sport, a book series — and talk about little else. The AAP considers this a sign of healthy cognitive development. These passions build knowledge, persistence, and identity. The concern threshold is if the interest completely prevents social interaction or causes distress when interrupted.',
   },
 ];
 
@@ -26,64 +35,102 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/8-10-years/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: 'School Age (8–10 Years)' },
   ]}
 >
   <h1>8–10 Year Old Development: What to Expect</h1>
 
-  <p>The years between 8 and 10 represent a significant phase of "middle childhood." Your child is moving away from the early school years and toward the independence of the pre-teen stage. This is a time of steady physical growth, major cognitive leaps in logical thinking, and a deeper focus on social connections outside the family.</p>
+  <p class="answer-first">Children ages 8 to 10 are in late middle childhood — moving away from the early school years and toward the independence of the pre-teen stage. The AAP identifies this period as marked by three major shifts: mastery of concrete logical thinking, deeper peer relationships that shape self-concept, and the beginning of puberty for many children (AAP, 2022). Physical growth is steady at about 2.5 inches and 7 pounds per year.</p>
 
-  <h2>Physical Development and Growth</h2>
-  <p>During these years, children typically grow about 2.5 inches and gain about 7 pounds annually. You might notice your child becoming more coordinated and graceful as their large muscle control improves. This is a great time for them to explore complex physical activities like team sports, dance, or martial arts.</p>
+  <h2>What are the key developmental milestones for 8 to 10 year olds?</h2>
+
+  <p class="answer-first">Between ages 8 and 10, children master concrete logical reasoning — they can solve multi-step math problems, understand cause and effect, and read chapter books for information. Peer relationships become central to self-concept. Some children begin early puberty: girls may start breast development as early as age 8, boys as early as age 9 (AAP, 2022). Physical activity builds coordination and endurance.</p>
+
+  <p>Key milestones by domain:</p>
+
   <ul>
-    <li><strong>Coordination:</strong> Better balance and endurance.</li>
-    <li><strong>Fine Motor Skills:</strong> Improved handwriting and ability to use tools (like sewing needles or complex building sets).</li>
-    <li><strong>Teeth:</strong> Permanent teeth continue to replace "baby" teeth.</li>
+    <li><strong>Cognitive:</strong> Multi-step arithmetic, reading for information, understanding time and money, planning and organizing schoolwork with guidance.</li>
+    <li><strong>Language:</strong> Vocabulary of 10,000+ words, complex sentence structures, reading and writing in multiple formats (stories, reports, instructions).</li>
+    <li><strong>Motor:</strong> Refined coordination for team sports, dance, and complex physical activities; improved handwriting; ability to use tools like needles, knives, and complex building sets.</li>
+    <li><strong>Social-emotional:</strong> Peer acceptance is central; strong sense of fairness; deep, specific interests; growing need for privacy and autonomy.</li>
   </ul>
 
-  <h2>Cognitive Leaps: Logical Thinking</h2>
-  <p>According to Jean Piaget, children this age are in the "concrete operational" stage. They are becoming much better at logical thinking and understanding cause-and-effect, though they still struggle with abstract or hypothetical concepts. Their attention span is growing, allowing them to focus on projects or books for longer periods.</p>
+  <h2>How does physical growth change between ages 8 and 10?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 grow about 2.5 inches and 7 pounds per year on average. Coordination improves enough to participate in complex physical activities — team sports, gymnastics, martial arts, swimming with technique. Permanent teeth continue to replace baby teeth. Some children, particularly girls, begin early signs of puberty during this window (AAP, 2022).</p>
+
   <ul>
-    <li><strong>Math and Logic:</strong> Ability to handle more complex arithmetic and word problems.</li>
-    <li><strong>Organization:</strong> They can start to plan and organize their own time and schoolwork with some guidance.</li>
-    <li><strong>Interests:</strong> Often develop deep, specific interests or hobbies (e.g., space, dinosaurs, a specific book series).</li>
+    <li><strong>Coordination:</strong> Better balance, endurance, and agility. Children can learn complex motor skills with practice — a sport, a musical instrument, a craft.</li>
+    <li><strong>Fine motor:</strong> Improved handwriting. Ability to use more complex tools (sewing needles, cooking knives with supervision, detailed building sets).</li>
+    <li><strong>Teeth:</strong> Permanent teeth continue to replace baby teeth throughout this period.</li>
+    <li><strong>Puberty:</strong> Early signs — breast development in girls, testicular growth in boys — can appear at the lower end of this age range. This is within the typical range but worth discussing with your pediatrician.</li>
   </ul>
 
-  <h2>Social and Emotional Growth</h2>
-  <p>This is the era of the "best friend." Relationships with peers become central to their identity. They are learning to navigate social rules, handle conflict, and understand different perspectives. Self-esteem is often tied to their sense of competence — how good they feel they are at school, sports, or social interactions.</p>
+  <h2>What cognitive leaps happen between ages 8 and 10?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 are in Piaget's "concrete operational" stage — they think logically about real, tangible things but still struggle with purely abstract or hypothetical concepts. They can handle multi-step arithmetic, understand cause and effect, plan ahead with guidance, and read to learn rather than just decode (AAP, 2022). Attention spans grow to support 30-to-45-minute work sessions.</p>
+
   <ul>
-    <li><strong>Independence:</strong> A growing desire for privacy and autonomy.</li>
-    <li><strong>Fairness:</strong> A very strong sense of "what is fair" and an interest in rules and justice.</li>
-    <li><strong>Peer Pressure:</strong> Early signs of wanting to "fit in" with the group.</li>
+    <li><strong>Math and logic:</strong> Multi-step arithmetic, word problems, beginning multiplication and division, understanding fractions with concrete examples.</li>
+    <li><strong>Organization:</strong> Children can plan and organize schoolwork with adult guidance. Executive function is developing but still requires scaffolding — planners, checklists, and routines help.</li>
+    <li><strong>Deep interests:</strong> Children develop intense, specific interests at this age. These passions — dinosaurs, coding, a sport, a book series — build knowledge, persistence, and identity. They are healthy, not worrying.</li>
   </ul>
+
+  <h2>How do social relationships and self-concept develop between ages 8 and 10?</h2>
+
+  <p class="answer-first">Between ages 8 and 10, peer acceptance becomes the primary arena for self-concept. Children care deeply about fitting in with same-sex peer groups, compare themselves to peers in athletics, academics, and appearance, and form stable "best friend" relationships (AAP, 2022). Self-esteem ties directly to perceived competence — how good they feel at school, sports, or social interaction.</p>
+
+  <ul>
+    <li><strong>Independence:</strong> A growing desire for privacy and autonomy from parents. Knocking before entering their room, respecting their space, and avoiding public displays of affection all become important to children this age.</li>
+    <li><strong>Fairness:</strong> A strong sense of justice and fairness. Children at this age notice and react strongly to perceived unfairness in rules, treatment, and outcomes.</li>
+    <li><strong>Early peer pressure:</strong> The desire to "fit in" with the group begins to influence clothing choices, food preferences, and leisure activities. This is early peer pressure — it intensifies in adolescence.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my 8 to 10 year old?</h2>
+
+  <div class="callout">
+    <p class="answer-first">The AAP recommends annual well-child visits for children ages 8 to 10. Contact your pediatrician if you notice significant changes in sleep or eating habits, persistent sadness or withdrawal that interferes with daily life, extreme difficulty with schoolwork or focusing (which may indicate a learning difference), signs of early puberty before age 8 in girls or age 9 in boys, or physical symptoms like frequent headaches or stomachaches (AAP, 2022).</p>
+    <p>Additional red flags:</p>
+    <ul>
+      <li>Regression in skills previously mastered</li>
+      <li>Extreme anxiety about school, friendships, or performance</li>
+      <li>Significant, sudden drop in academic performance</li>
+      <li>Signs of bullying — either as a target or as a participant</li>
+      <li>Excessive screen use that replaces sleep, physical activity, or social interaction</li>
+    </ul>
+    <p>Keep communication open as children this age begin to pull away from parents socially. They still need parental connection — just delivered differently than in earlier childhood.</p>
+  </div>
 
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 8–10 Year Olds</h2>
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
-  <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The American Academy of Pediatrics (AAP) recommends annual well-child visits for children this age. Between visits, consult your pediatrician if you notice:</p>
-    <ul>
-      <li>Significant changes in sleep or eating habits.</li>
-      <li>Persistent sadness, withdrawal, or extreme anxiety that interferes with daily life.</li>
-      <li>Extreme difficulty with schoolwork or focusing, which could indicate a learning difference.</li>
-      <li>Signs of early or delayed puberty that concern you.</li>
-      <li>Physical symptoms like frequent headaches or stomachaches, which can sometimes be related to stress.</li>
-    </ul>
-    <p>As children grow more independent, it's important to keep the lines of communication open. Trust your intuition as a parent — you know your child best.</p>
+  <h2>Explore 8–10 Year Old Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/8-10-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
   </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
 </BaseLayout>

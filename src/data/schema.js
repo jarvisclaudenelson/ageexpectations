@@ -1,4 +1,4 @@
-export function articleSchema({ title, description, url, datePublished = '2025-01-15', dateModified = '2025-06-01' }) {
+export function articleSchema({ title, description, url, datePublished = '2025-01-15', dateModified = '2026-03-19' }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -36,5 +36,32 @@ export function faqSchema(faqs) {
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function medicalWebPageSchema({ name, description, url, lastReviewed = '2026-03-19' }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    name,
+    description,
+    url,
+    about: {
+      '@type': 'MedicalCondition',
+      name: 'Child Development Milestones',
+    },
+    audience: {
+      '@type': 'PeopleAudience',
+      audienceType: 'Parents',
+    },
+    lastReviewed,
+    medicalAudience: {
+      '@type': 'MedicalAudience',
+      audienceType: 'Patient',
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.answer-first'],
+    },
   };
 }

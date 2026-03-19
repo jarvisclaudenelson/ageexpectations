@@ -7,10 +7,11 @@ interface Props {
   description: string;
   articleSchema?: object;
   faqSchema?: object;
+  medicalSchema?: object;
   breadcrumbs?: { label: string; href?: string }[];
 }
 
-const { title, description, articleSchema, faqSchema, breadcrumbs } = Astro.props;
+const { title, description, articleSchema, faqSchema, medicalSchema, breadcrumbs } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!DOCTYPE html>
@@ -34,6 +35,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   )}
   {faqSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
+  {medicalSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(medicalSchema)} />
   )}
 </head>
 <body>

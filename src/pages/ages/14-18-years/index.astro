@@ -1,27 +1,35 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
 import { topics } from '../../../data/ages.js';
 
 const title = 'Adolescent Development (14–18 Years): What to Expect';
-const description = 'A guide to the high school years (14–18) — complete physical maturation, developing abstract thinking, navigating social independence, and preparing for the transition to adulthood.';
+const description = 'A guide to the high school years (14–18) — completing physical maturation, developing identity, navigating independence, managing sleep, and preparing for adulthood — with AAP guidelines.';
 
 const faqs = [
   {
-    question: 'How much sleep do teenagers really need?',
-    answer: 'According to the American Academy of Pediatrics (AAP) and the American Academy of Sleep Medicine, teens aged 13–18 years should sleep 8–10 hours per 24 hours on a regular basis to promote optimal health. Many teens fall short of this due to academic pressure, extracurriculars, and a biological shift in their circadian rhythm that makes them naturally inclined to stay up later and sleep in longer.',
+    question: 'How much sleep do teenagers actually need?',
+    answer: 'The AAP and American Academy of Sleep Medicine recommend 8 to 10 hours of sleep per 24 hours for teens ages 13 to 18 (AAP, 2014). Most teens get 6 to 7 hours on school nights due to early school start times, academic pressure, extracurriculars, and biology — a real sleep deficit with documented effects on mood, cognitive performance, and physical health. The AAP advocates for high schools to start no earlier than 8:30 AM.',
   },
   {
     question: 'Is it normal for my teen to pull away from the family?',
-    answer: 'Yes. Seeking independence and autonomy is a primary developmental task of middle and late adolescence. Teens often spend more time with friends and less time with family as they form their own identity. This "pulling away" is a normal part of becoming an independent adult, though maintaining a supportive, open connection with parents remains critical for their well-being.',
+    answer: 'Yes. Seeking independence and forming an autonomous identity is the primary developmental task of middle and late adolescence. Teens spending more time with friends and less time with family is expected and healthy. The concern is total withdrawal combined with loss of interest in everything and everyone — that pattern warrants a conversation with your pediatrician about depression.',
   },
   {
-    question: 'Why does my teen seem so impulsive at times?',
-    answer: 'The adolescent brain is still a work in progress. The frontal lobes, which handle complex decision-making and impulse control, aren\'t fully developed until the mid-20s. While 14–18 year olds can think abstractly and understand consequences, they are often driven by strong emotions and peer influence in the moment, which can lead to risk-taking behavior.',
+    question: 'Why does my teen seem impulsive even when they know better?',
+    answer: 'The adolescent brain\'s prefrontal cortex — responsible for impulse control, risk assessment, and weighing long-term consequences — does not fully mature until the mid-20s (AAP, 2022). In high-emotion or peer-present situations, teens often act on the reward-seeking limbic system rather than the regulatory prefrontal cortex. They can reason about risk when calm — but emotion and peer presence regularly override that reasoning in the moment.',
   },
   {
     question: 'When should I be concerned about my teen\'s mood?',
-    answer: 'While mood swings are common due to hormonal changes and social stress, persistent sadness, withdrawal from favorite activities, significant changes in sleep or appetite, or a drop in school performance can be signs of depression or anxiety. The AAP recommends regular mental health screenings during adolescent well-child visits.',
+    answer: 'Mood swings are common due to hormonal changes and social stress. The clinical threshold for concern is persistence and impairment: sadness, hopelessness, or irritability lasting two or more weeks, significant changes in sleep or appetite, withdrawal from activities they previously enjoyed, or a noticeable drop in school performance. The AAP recommends annual depression screening at well-child visits starting at age 12 (AAP, 2022).',
+  },
+  {
+    question: 'When can a teenager stay home alone?',
+    answer: 'There is no federal law on this, and most states have no specific age requirement. The AAP suggests most children are not ready to be home alone for extended periods before age 10 to 12. By age 14 to 16, most teens can handle several hours alone, depending on maturity and the situation. Consider your teen\'s judgment, your neighborhood, and whether they can reach you or another trusted adult if needed.',
+  },
+  {
+    question: 'What time should a 16-year-old go to bed?',
+    answer: 'The AAP recommends 8 to 10 hours of sleep for teens ages 13 to 18. Given biological sleep phase delay, most teens cannot fall asleep before 10 to 11 PM. A 10:30 PM bedtime with a 6:30 AM school wake time leaves only 8 hours — at the lower bound of the recommendation. Removing screens from the bedroom by 9:30 PM and keeping weekend wake times within an hour of school days helps maintain sleep consistency.',
   },
 ];
 
@@ -31,84 +39,112 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/14-18-years/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: 'Adolescent (14–18 Years)' },
   ]}
 >
   <h1>Adolescent Development (14–18 Years): What to Expect</h1>
 
-  <p>The ages of 14 to 18 represent a period of profound transition. This is the era of high school, first jobs, driving, and the final steps toward legal adulthood. For parents, it is a shift from being a "manager" to being a "consultant" as your teenager takes on more responsibility for their own lives.</p>
+  <p class="answer-first">The ages 14 to 18 — the high school years — are the final stretch of childhood. The AAP describes this period as a shift from "manager to consultant" for parents: teens take on more responsibility for their own choices, and the parent's role moves from directing to advising (AAP, 2022). Physical maturation is completing, identity is consolidating, and the brain's prefrontal cortex is still developing — which explains both the remarkable reasoning abilities and the sometimes baffling decisions.</p>
 
-  <p>This guide covers the key physical, cognitive, and social-emotional milestones for middle and late adolescence, based on guidelines from the American Academy of Pediatrics (AAP) and HealthyChildren.org.</p>
+  <h2>What are the key developmental milestones for 14 to 18 year olds?</h2>
 
-  <h2>Physical Development: Completing the Journey</h2>
+  <p class="answer-first">Between ages 14 and 18, most teens complete physical maturation, develop stable abstract reasoning, consolidate a sense of personal identity, and begin orienting toward independence in real-world domains — work, driving, college, or vocational training. Peer influence, which peaks in early adolescence, begins to moderate as identity becomes more secure (AAP, 2022). The habits established in these years — sleep, nutrition, exercise, stress management — tend to persist into adulthood.</p>
 
-  <p>By age 14, most adolescents are well into puberty, and by 18, many have reached their full adult height and physical maturation.</p>
-
-  <ul>
-    <li><strong>Growth Spurts:</strong> Girls typically reach their adult height by age 14 or 15, while boys may continue to grow into their late teens.</li>
-    <li><strong>Maturation:</strong> Physical changes from puberty (voice deepening, body hair, acne) continue and eventually stabilize. Most girls have established regular menstrual cycles by this stage.</li>
-    <li><strong>Brain Development:</strong> Although the body looks like an adult, the brain is still maturing. The prefrontal cortex—the area responsible for planning, prioritizing, and controlling impulses—continues to develop well into the 20s.</li>
-  </ul>
-
-  <h2>Cognitive Milestones: Moving Beyond Black and White</h2>
-
-  <p>During the high school years, teenagers develop the ability to think abstractly and consider multiple perspectives.</p>
+  <p>Key milestones by domain:</p>
 
   <ul>
-    <li><strong>Abstract Thinking:</strong> Teens can now ponder "what if" scenarios and think about complex concepts like justice, politics, and philosophy.</li>
-    <li><strong>Future Orientation:</strong> Older teens begin to set long-term goals and think more seriously about life after high school, whether that involves college, trade school, or the workforce.</li>
-    <li><strong>Self-Regulation:</strong> While still prone to impulsive decisions under stress or peer pressure, 14–18 year olds are gradually improving their ability to weigh risks and rewards.</li>
+    <li><strong>Physical:</strong> Girls typically reach adult height by age 14 to 15; boys may grow into their late teens. Puberty is largely complete for most teens by 17.</li>
+    <li><strong>Cognitive:</strong> Abstract thinking, future orientation, growing self-regulation, and the ability to weigh complex tradeoffs — though impulsivity under stress and peer presence persists.</li>
+    <li><strong>Social-emotional:</strong> Identity consolidation, deepening romantic relationships, reducing peer conformity, increasing values-based decision making.</li>
+    <li><strong>Practical independence:</strong> Driving, first jobs, managing money, college planning, or vocational training begin in this range.</li>
   </ul>
 
-  <h2>Social and Emotional Growth: Finding an Identity</h2>
+  <h2>How does physical development complete during the high school years?</h2>
 
-  <p>The primary task of this stage is identity formation—answering the question, "Who am I?"</p>
+  <p class="answer-first">By age 14, most girls have reached or approached their adult height, with puberty largely complete. Boys complete their growth spurt between ages 14 and 17, and voice deepening, muscle development, and acne often peak in this range (AAP, 2022). The brain continues developing well past physical maturation — the prefrontal cortex (impulse control and long-term planning) does not fully mature until the mid-20s.</p>
 
   <ul>
-    <li><strong>Search for Autonomy:</strong> Teens push for more independence, which can lead to increased conflict with parents. This is a normal part of the process of separating and becoming an individual.</li>
-    <li><strong>Peer Influence:</strong> Friends become the primary source of social support. Peer pressure peaks in early-to-middle adolescence but often lessens as teens gain more self-confidence toward age 18.</li>
-    <li><strong>Romantic Relationships:</strong> Interest in dating and romantic relationships is common. This is a key time for learning about healthy boundaries, consent, and emotional intimacy.</li>
-    <li><strong>Values and Morals:</strong> Teens begin to develop their own set of values and may question the beliefs they were raised with as they forge their own path.</li>
+    <li><strong>Growth:</strong> Girls typically reach adult height by ages 14 to 15. Boys may continue growing until age 17 to 18. Both sexes gain lean muscle mass through late adolescence.</li>
+    <li><strong>Physical maturation:</strong> Acne peaks in mid-adolescence and typically improves by late teens. Skin care, including dermatologist referral for moderate-to-severe acne, is appropriate.</li>
+    <li><strong>Brain development:</strong> The body looks adult years before the brain is adult. The prefrontal cortex — responsible for planning, prioritizing, and impulse control — matures last, through the mid-20s. This is why teens can reason about risk when calm but often act impulsively in high-emotion situations.</li>
   </ul>
 
-  <h2>Health and Wellness: Establishing Life Habits</h2>
+  <h2>How does thinking and decision-making develop between ages 14 and 18?</h2>
 
-  <p>The habits formed during these years often carry into adulthood.</p>
+  <p class="answer-first">Teens ages 14 to 18 have developed sophisticated abstract thinking and can ponder philosophical, political, and ethical questions with genuine depth. They understand long-term consequences when calm. The limitation is the prefrontal cortex: under peer pressure, intense emotion, or novel situations, decision-making often reverts to the more reactive limbic system rather than the rational cortex (AAP, 2022). This is why "they know better" doesn't always translate to better decisions.</p>
 
   <ul>
-    <li><strong>Sleep:</strong> Teens need 8–10 hours of sleep, but biological shifts often make them "night owls." Encouraging a regular sleep schedule is vital for mental health and school performance.</li>
-    <li><strong>Nutrition:</strong> Rapid growth and high activity levels require significant calories. Focus on a balanced diet rich in calcium and iron, and be aware of the pressure social media can place on body image.</li>
-    <li><strong>Mental Health:</strong> Adolescence is a common time for the onset of anxiety and depression. Open communication and regular check-ins are essential.</li>
+    <li><strong>Abstract thinking:</strong> Teens can analyze literature, consider multiple political perspectives, understand probability, and reason about hypothetical futures.</li>
+    <li><strong>Future orientation:</strong> Older teens begin thinking concretely about life after high school — college, careers, relationships, values. This is identity consolidation in action.</li>
+    <li><strong>Self-regulation:</strong> Improving but incomplete. Creating environments that reduce peer pressure and emotional intensity helps teens make decisions that align with their actual values.</li>
   </ul>
+
+  <h2>How do social relationships and identity evolve in late adolescence?</h2>
+
+  <p class="answer-first">Between ages 14 and 18, teens move from identity exploration to identity consolidation. Peer conformity — the intense pressure to fit in that peaks around ages 12 to 14 — begins to ease as teens develop a more stable sense of self. Romantic relationships deepen and become more emotionally significant. The AAP describes healthy identity formation as integrating one's values, interests, relationships, and history into a coherent, stable self-concept (AAP, 2022).</p>
+
+  <ul>
+    <li><strong>Autonomy:</strong> Teens push for independence across all domains — social decisions, academic choices, and eventually practical life decisions. This is healthy. Maintain boundaries around safety, not preferences.</li>
+    <li><strong>Peer influence:</strong> Peer influence peaks in early adolescence and moderates through high school. Older teens are more likely to make values-based decisions rather than purely peer-driven ones.</li>
+    <li><strong>Romantic relationships:</strong> Relationships at this age are emotionally significant and teach communication, conflict resolution, boundaries, and intimacy. Conversations about healthy relationships and consent belong in this window.</li>
+    <li><strong>Values development:</strong> Teens actively question and examine the values they were raised with. This is healthy — the goal is internalized values, not inherited compliance.</li>
+  </ul>
+
+  <h2>What health habits matter most during the high school years?</h2>
+
+  <p class="answer-first">The AAP identifies sleep, nutrition, and mental health as the three highest-leverage health domains for teens ages 14 to 18. Teens who sleep 8 to 10 hours show better academic performance, lower depression risk, and fewer accidents than those who sleep 6 hours or fewer (AAP, 2014). Calcium and iron needs are highest during adolescence due to bone density building and (for girls) menstrual losses.</p>
+
+  <ul>
+    <li><strong>Sleep:</strong> 8 to 10 hours recommended. Biological sleep phase delay makes this structurally hard with early school times. Screens out of the bedroom by 10 PM helps significantly.</li>
+    <li><strong>Nutrition:</strong> Teen growth requires adequate calcium (1,300 mg/day) for peak bone density development and iron (especially for menstruating girls). A balanced diet covers these needs; supplementation may be warranted if dietary sources are limited.</li>
+    <li><strong>Mental health:</strong> Adolescence is the peak onset period for anxiety, depression, eating disorders, and substance use disorders. Annual mental health screening at well-child visits is recommended (AAP, 2022).</li>
+    <li><strong>Physical activity:</strong> The AAP recommends 60 minutes of moderate-to-vigorous activity daily through age 17. Activity levels typically drop in adolescence — countering this with activities teens find meaningful (not just what parents prefer) works best.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my 14 to 18 year old?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Annual well-child visits through adolescence include confidential time alone with your teen for ages 12 and up — the AAP recommends this explicitly to allow teens to discuss sensitive health topics without parental presence (AAP, 2022). Contact your pediatrician if you see persistent sadness or hopelessness, significant changes in sleep or eating, extreme weight loss or gain, suspected substance use, or a sudden drop in school performance.</p>
+    <p>Emergencies requiring immediate action:</p>
+    <ul>
+      <li>Suicidal thoughts or talk of suicide — call 988 or go to the nearest emergency room immediately</li>
+      <li>Self-harm behaviors — requires urgent professional assessment</li>
+      <li>Signs of serious eating disorder — extreme restriction, rapid weight loss, binge-purge behaviors</li>
+      <li>Signs of substance dependence rather than experimentation</li>
+    </ul>
+    <p>Your pediatrician can provide a confidential space for your teen to discuss sensitive health topics and offers guidance on transitioning to adult medical care — which typically happens between ages 18 and 21.</p>
+  </div>
 
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 14–18 Year Olds</h2>
+    <h2>Frequently Asked Questions: 14 to 18 Year Old Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
-  <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>Annual well-child visits (often called "sports physicals" at this age) remain important. Contact your doctor if you notice:</p>
-    <ul>
-      <li>Signs of depression: persistent sadness, hopelessness, or social withdrawal.</li>
-      <li>Significant changes in sleep or eating habits.</li>
-      <li>Extreme weight loss or gain, or obsessive behavior around food and exercise.</li>
-      <li>Suspected substance use (alcohol, vaping, or drugs).</li>
-      <li>A sudden, dramatic drop in school performance.</li>
-      <li>Self-harming behaviors or talk of suicide (this is an emergency).</li>
-    </ul>
-    <p>Your pediatrician can provide a confidential space for your teen to discuss sensitive health topics and offer guidance on the transition to adult medical care.</p>
+  <h2>Explore 14–18 Year Old Topics</h2>
+  <div class="topic-grid">
+    {topics.map(topic => (
+      <a href={`/ages/14-18-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
   </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
 </BaseLayout>
