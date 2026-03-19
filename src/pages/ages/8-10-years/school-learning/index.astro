@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old School and Learning: Reading, Math, and Study Skills';
+const description = 'Academic development for children ages 8 to 10 — reading benchmarks, math expectations, study habits, learning differences, ADHD screening, and how to support learning at home.';
+
+const faqs = [
+  {
+    question: 'What grade level should my 9-year-old read at?',
+    answer: 'By age 9 (typically 3rd grade), most children read at a 3rd-to-4th grade level — complex chapter books with multiple characters, subplots, and vocabulary above their spoken language. Reading to learn (using text to acquire new information in science and social studies) is the benchmark, not just decoding. If your 9-year-old reads slowly, struggles with chapter books, or finds reading effortful after 3 years of instruction, ask your pediatrician and school about a reading evaluation.'
+  },
+  {
+    question: 'My 10-year-old has terrible handwriting. Should I be concerned?',
+    answer: 'It depends. Some children naturally write less neatly; others have dysgraphia, a learning difference affecting writing fluency and legibility despite adequate intelligence and instruction. Dysgraphia signs include extreme slowness, inconsistent letter sizing, writing that looks effortful regardless of time given, and significant gaps between verbal ability and written output. If your 10-year-old\'s handwriting makes them avoid writing tasks or significantly impacts their work output, ask your pediatrician about an occupational therapy evaluation.'
+  },
+  {
+    question: 'How much homework should a 4th grader have?',
+    answer: 'The National Education Association and National PTA recommend the "10-minute rule": 10 minutes of homework per grade level per night. A 4th grader (age 9 to 10) should have approximately 40 minutes of homework. Research does not support more homework than this for elementary students improving academic outcomes. If homework consistently takes significantly longer than 40 minutes at this grade level, talk to the teacher — the issue may be task volume, assignment design, or a learning difference affecting processing speed.'
+  },
+  {
+    question: 'How do I know if my 9-year-old has ADHD or is just disorganized?',
+    answer: 'ADHD requires inattention, hyperactivity, or impulsivity that is more severe than typical for age, persists for 6+ months, and appears across at least two settings — both home AND school (DSM-5, AAP, 2019). Disorganization that shows up only at school but not at home, or only at home but not at school, more likely reflects anxiety, poor organizational systems, or an ill-fitting classroom environment than ADHD. The AAP recommends formal evaluation — teacher and parent rating scales plus behavioral history — before any diagnosis or treatment.'
+  },
+  {
+    question: 'My child is "gifted" but bored at school. What should I do?',
+    answer: 'Boredom in school is a legitimate concern — children who are chronically under-challenged can develop poor academic habits, negative attitudes toward school, or behavioral problems. Talk to the teacher first; many classrooms offer differentiated instruction or enrichment. If that doesn\'t address the issue, discuss formal gifted testing with the school. Private gifted assessments through a psychologist can also identify academic and intellectual profile and guide next steps.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/school-learning/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/school-learning/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '8–10 Years', href: '/ages/8-10-years/' }, { label: 'School & Learning' }]}>
+
+  <h1>8–10 Year Old School and Learning: Reading, Math, and Study Skills</h1>
+
+  <p class="answer-first">Between ages 8 and 10, academic demands shift from skill-building to knowledge application. Children are expected to read complex texts to learn content in science and social studies, write multi-paragraph compositions, and solve multi-step math problems. The AAP identifies 3rd grade (typically age 8 to 9) as a critical inflection point — children who read proficiently by 3rd grade are four times more likely to graduate high school on time than those who don't (AAP, 2022). Learning differences identified and supported now change long-term outcomes.</p>
+
+  <h2>What are the reading benchmarks for children ages 8 to 10?</h2>
+
+  <p class="answer-first">By age 8 (end of 2nd grade), most children read at a 2nd-to-3rd grade level fluently, recognize most grade-appropriate words by sight, and retell stories with character, setting, and plot. By age 9 (end of 3rd grade), most children read complex chapter books, use context clues for unfamiliar vocabulary, and read informational texts to learn content. By age 10 (end of 4th grade), children read multi-chapter novels, analyze character motivations, and read independently for extended periods (Common Core, AAP).</p>
+
+  <p>Reading red flags to watch for:</p>
+  <ul>
+    <li>Effortful, slow reading that does not become more automatic with practice</li>
+    <li>Reading avoidance — strong preference for any other activity over reading</li>
+    <li>Difficulty retelling what was just read, even immediately after</li>
+    <li>Letter or word reversals persisting past 2nd grade</li>
+    <li>Significant gap between what the child understands when hearing text read aloud versus what they read independently</li>
+  </ul>
+
+  <h2>What math skills should my 8 to 10 year old have?</h2>
+
+  <p class="answer-first">By age 8 (end of 2nd grade), most children add and subtract within 1,000, understand place value, measure with rulers and scales, and grasp basic fractions (1/2, 1/4, 1/3). By age 9 (end of 3rd grade), most children multiply and divide within 100, solve multi-step word problems, and understand area and perimeter. By age 10 (end of 4th grade), most children multiply 4-digit by 1-digit numbers, divide with remainders, and work with decimal fractions (Common Core State Standards).</p>
+
+  <p>Math support that works at home:</p>
+  <ul>
+    <li>Cook together — measuring, halving recipes, and doubling quantities build fraction concepts</li>
+    <li>Play strategy board games (chess, Othello, Settlers of Catan) — build logical reasoning</li>
+    <li>Use real money for small purchases — making change builds number fluency</li>
+    <li>Mental math games in the car — "If I have 24 apples and give you 7, how many do I have left?"</li>
+  </ul>
+
+  <h2>How do I support study skills and organization in a 9 to 10 year old?</h2>
+
+  <p class="answer-first">Children ages 9 to 10 are beginning to develop executive function skills — planning, organizing, prioritizing, and tracking long-term assignments — but need explicit scaffolding (AAP, 2022). A visible homework calendar, a consistent homework time and location, and a before-bed "pack your backpack" routine address the organizational gaps common at this age. Teaching study strategies explicitly (highlighting key terms, self-quizzing, reviewing notes the day before a test) outperforms simply telling children to "study."</p>
+
+  <ul>
+    <li><strong>Homework routine:</strong> Same time, same place daily. Snack and movement break after school before sitting down to work.</li>
+    <li><strong>Planner or agenda:</strong> Write down assignments every day, even when teachers post online. The act of writing aids memory and follow-through.</li>
+    <li><strong>Long-term project management:</strong> Work with your child to break large projects into weekly checkpoints. Do not let them learn this lesson the night before the due date.</li>
+    <li><strong>Study strategies:</strong> Teach retrieval practice (covering notes and trying to recall the information) over passive rereading — the former doubles retention rates.</li>
+  </ul>
+
+  <h2>What are the signs of a learning difference in a 9 to 10 year old?</h2>
+
+  <p class="answer-first">The most important sign of a learning difference in this age range is a persistent, significant gap between a child's intellectual capability and their academic output despite adequate instruction and effort. By age 9 to 10, dyslexia (reading), dysgraphia (writing), dyscalculia (math), and ADHD (attention and executive function) are typically identifiable through formal evaluation. The AAP recommends formal evaluation when concerns persist despite classroom interventions (AAP, 2022).</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old School and Learning</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old Milestones: What to Expect in Late Middle Childhood';
+const description = 'Developmental milestones for children ages 8 to 10 — cognitive leaps, physical coordination, reading and math benchmarks, social maturity, and early puberty signs, with AAP guidelines.';
+
+const faqs = [
+  {
+    question: 'What reading level should my 9-year-old be at?',
+    answer: 'By age 9, most children read at a 3rd-to-4th grade level — chapter books with complex plots, multiple characters, and vocabulary above their spoken language level. They use reading to learn in science, social studies, and math. If your 9-year-old still struggles to decode simple words or reads very slowly with significant effort, ask your pediatrician and school about a dyslexia evaluation. Reading intervention is most effective when delivered before age 10.'
+  },
+  {
+    question: 'My 9-year-old is obsessed with one topic and talks about nothing else. Is that normal?',
+    answer: 'Yes. Intense, specific interests are a hallmark of middle childhood. Children ages 8 to 10 often develop deep passions — dinosaurs, Minecraft, astronomy, a sport, a book series — and want to talk about them constantly. Research links these intense interests to higher creativity, deeper knowledge acquisition, and stronger identity development (Csikszentmihalyi, 1997). The threshold for concern is if the interest completely prevents social interaction or causes extreme distress when interrupted.'
+  },
+  {
+    question: 'When do children start to show early puberty signs?',
+    answer: 'Puberty can begin as early as age 8 for girls and age 9 for boys (AAP, 2022). The earliest signs are breast development in girls (thelarche) and testicular enlargement in boys. Body odor, pubic hair, and skin changes often follow. Seeing these signs in a 9-to-10-year-old is within the typical range. Talk to your pediatrician if signs appear before age 8 in girls or before age 9 in boys, as early puberty can have medical causes worth evaluating.'
+  },
+  {
+    question: 'Should my 10-year-old be able to manage their own homework?',
+    answer: 'Yes, with structure. By age 10, most children can independently complete homework when given a consistent time, location, and minimal distractions. They need adult check-ins ("Is homework done?") but not adult supervision of each assignment. If your 10-year-old consistently cannot complete homework independently, struggles significantly with organization, or loses assignments regularly, discuss ADHD evaluation or executive function support with your pediatrician.'
+  },
+  {
+    question: 'Is it normal for my 9-year-old to have a best friend they talk about constantly?',
+    answer: 'Yes. The "chumship" — a close, exclusive best friendship — is a central developmental feature of late middle childhood. Developmental psychologist Harry Stack Sullivan identified close peer friendships at ages 8 to 12 as a key developmental task that builds intimacy, loyalty, and the capacity for adult relationships. Children who have at least one close friendship show better mental health outcomes in adolescence, even if their broader peer group relationships are complicated.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/milestones/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/milestones/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '8–10 Years', href: '/ages/8-10-years/' }, { label: 'Milestones' }]}>
+
+  <h1>8–10 Year Old Milestones: What to Expect in Late Middle Childhood</h1>
+
+  <p class="answer-first">Between ages 8 and 10, children consolidate the skills of middle childhood and begin the transition toward pre-adolescence. Reading shifts from chapter books to complex novels and informational texts. Math expands to multiplication, division, and fractions. Friendships become selective and intense. The AAP identifies this window as a critical period for building academic confidence, peer relationships, and the sense of competence that protects against adolescent risk-taking (AAP, 2022).</p>
+
+  <h2>What cognitive milestones should my 8 to 10 year old reach?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 are in Piaget's concrete operational stage — they think logically about real things but still need concrete examples for abstract concepts. They handle multi-step math problems, read complex chapter books for information, and begin to plan and organize longer-term projects with guidance. Attention spans grow to 30 to 45 minutes for tasks they find meaningful (AAP, 2022).</p>
+
+  <p>Cognitive milestones by age:</p>
+  <ul>
+    <li><strong>Age 8:</strong> Reads chapter books fluently, multiplies and divides small numbers, understands basic fractions, can organize schoolwork with guidance</li>
+    <li><strong>Age 9:</strong> Reads at 3rd-to-4th grade level, multiplies multi-digit numbers, understands time zones, plans multi-step projects</li>
+    <li><strong>Age 10:</strong> Reads complex chapter books, beginning pre-algebra concepts, understands basic statistics, can self-organize short-term projects</li>
+  </ul>
+
+  <h2>What physical milestones should my 8 to 10 year old reach?</h2>
+
+  <p class="answer-first">Between ages 8 and 10, children grow approximately 2.5 inches and 7 pounds per year. Coordination reaches near-adult levels for fundamental motor skills — they can participate in competitive sports, learn complex physical skills with instruction, and sustain physical activity for extended periods. Some children, particularly girls, begin early puberty signs in this window: breast development and height spurts starting as young as age 8 (AAP, 2022).</p>
+
+  <ul>
+    <li><strong>Gross motor:</strong> Team sports, swimming with technique, gymnastics, cycling, and complex physical coordination are well within reach</li>
+    <li><strong>Fine motor:</strong> Handwriting is smaller and more legible; musical instrument learning accelerates; detailed craft and art skills develop</li>
+    <li><strong>Puberty onset:</strong> Girls may start breast development from age 8; boys begin testicular growth from age 9 — both within typical range</li>
+    <li><strong>Dental:</strong> Permanent molars and premolars continue erupting through this period</li>
+  </ul>
+
+  <h2>What social-emotional milestones matter most between ages 8 and 10?</h2>
+
+  <p class="answer-first">The defining social-emotional development between ages 8 and 10 is the formation of close, selective friendships and the development of a sense of industry — the feeling of being competent and capable at things that matter. Children who develop genuine close friendships during this window build the social-emotional skills that protect them through adolescence. Children who feel consistently incompetent in school, sports, or peer relationships develop negative self-concepts that are harder to reverse later (Erikson, AAP, 2022).</p>
+
+  <ul>
+    <li>Forms one to three close friendships based on shared interests, values, and mutual understanding</li>
+    <li>Shows genuine loyalty to friends — keeps secrets, defends friends to others</li>
+    <li>Develops deep, specific interests and pursues them with persistence</li>
+    <li>Can plan and follow through on multi-step projects over days or weeks</li>
+    <li>Shows growing self-awareness — understands own strengths and limitations more accurately</li>
+    <li>Demonstrates more consistent emotional regulation than at ages 6 to 7</li>
+  </ul>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 8 to 10 year old's milestones?</h2>
+    <p class="answer-first">Contact your pediatrician if your child cannot read at grade level by age 9, shows extreme difficulty with arithmetic facts despite instruction, has no close friendships by age 9, shows significant regression in behavior or skills, or displays signs of puberty before age 8 in girls or before age 9 in boys (AAP, 2022).</p>
+    <ul>
+      <li>Request a reading evaluation if reading is effortful and slow by age 9</li>
+      <li>Discuss ADHD if inattention or impulsivity significantly affects school performance across multiple settings</li>
+      <li>Ask about early puberty (precocious puberty) if signs appear before age 8 in girls or age 9 in boys</li>
+      <li>Mention if the child has persistent negative self-talk or expresses feeling incompetent — this is the window for self-concept to consolidate</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Milestones</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

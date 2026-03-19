@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old Behavior: Independence, Peer Pressure, and Emotional Growth';
+const description = 'Understanding behavior in 8 to 10 year olds — independence seeking, early peer pressure, lying, screen conflicts, anxiety, and what the AAP recommends for supporting emotional development.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 9-year-old to want more privacy from the family?',
+    answer: 'Yes. Between ages 8 and 10, children begin developing a private inner world separate from family — keeping a journal, closing their bedroom door, wanting conversations with friends that parents don\'t hear. This is healthy development, not a warning sign. The AAP recommends respecting reasonable privacy (knocking before entering, not reading journals) while maintaining visibility into their social world and clear expectations around behavior (AAP, 2022).'
+  },
+  {
+    question: 'My 10-year-old is trying to keep up with friends\' clothing and media preferences. How do I handle peer pressure?',
+    answer: 'Early peer pressure in middle childhood is mostly about conformity — fitting in through shared preferences in clothing, music, media, and activities. This is distinct from the high-stakes peer pressure of adolescence. The AAP recommends acknowledging the social importance of fitting in while teaching children to identify their own values: "You can like the same music as your friends. What about [family value] — how does that fit in?" Build identity strength now, before the peer pressure intensifies at age 12 to 15.'
+  },
+  {
+    question: 'Why does my 8-year-old suddenly think everything I do is embarrassing?',
+    answer: 'Children ages 8 to 10 become acutely aware of peer perception — how they appear to friends and classmates. Having a parent visible at school, act silly, or display affection in front of peers can feel genuinely threatening to their social standing. This embarrassment is real and developmentally appropriate. Scale back visible affection in peer settings, maintain it at home, and avoid making the child feel criticized for the response. This phase peaks in early adolescence and moderates as identity becomes more secure.'
+  },
+  {
+    question: 'Is it normal for my 9-year-old to prefer video games to everything else?',
+    answer: 'Intense interest in video games is common at ages 8 to 10. Video games are designed for engagement and activate reward systems that make other activities feel less stimulating by comparison. The AAP recommends limits not based on total hours but on displacement — if gaming is replacing sleep, physical activity, homework, or face-to-face social time, that is the concern. Gaming with friends (in person or online with known peers) has social value; solitary gaming for 4+ hours daily is worth discussing (AAP, 2016).'
+  },
+  {
+    question: 'My 10-year-old seems anxious about school performance. Should I be worried?',
+    answer: 'Some performance anxiety is typical and even motivating at ages 8 to 10. The concern threshold is when anxiety interferes with functioning — refusing to go to school, unable to sleep before tests, avoiding subjects or activities due to fear of failure. Performance anxiety that rises to that level responds well to cognitive behavioral approaches and sometimes evaluation for anxiety disorders. Talk to your pediatrician if school anxiety is significantly affecting your child\'s daily life or enjoyment of school.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/behavior/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/behavior/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '8–10 Years', href: '/ages/8-10-years/' }, { label: 'Behavior & Emotions' }]}>
+
+  <h1>8–10 Year Old Behavior: Independence, Peer Pressure, and Emotional Growth</h1>
+
+  <p class="answer-first">Children ages 8 to 10 are building the behavioral and emotional competencies they will rely on through adolescence. The AAP identifies three behavioral shifts as most significant at this age: growing self-regulation (managing emotions and impulses with less adult scaffolding), peer orientation (caring deeply about social standing and peer acceptance), and independence seeking (wanting to make more of their own decisions) (AAP, 2022). All three are healthy and all three create friction with parents.</p>
+
+  <h2>How does self-regulation develop between ages 8 and 10?</h2>
+
+  <p class="answer-first">Self-regulation — the ability to manage emotions, control impulses, and persist through frustration — improves substantially between ages 8 and 10. Children this age recover from upsets more quickly, use words more consistently than physical responses, and can delay gratification for longer periods than at age 6 (AAP, 2022). They still melt down, especially when tired or under social stress — but the frequency and duration typically decrease from the early elementary years.</p>
+
+  <p>Signs of healthy emotional development:</p>
+  <ul>
+    <li>Recovers from upsets within 15 to 30 minutes with minimal adult intervention</li>
+    <li>Uses words to express frustration rather than physical aggression in most situations</li>
+    <li>Can identify multiple emotions simultaneously ("I'm excited and nervous")</li>
+    <li>Beginning to use calming strategies independently (deep breathing, walking away, asking for space)</li>
+    <li>Shows genuine empathy — offers comfort, makes amends after conflict</li>
+  </ul>
+
+  <h2>Why do children ages 8 to 10 test limits differently than younger children?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 argue with parents from logic, not just emotion. They have developed enough reasoning ability to construct genuine counterarguments and identify inconsistencies in parental rules. This is a cognitive milestone masquerading as defiance. The AAP recommends brief, clear explanations for rules — not debates, and not "because I said so" — and increasing genuine autonomy in age-appropriate domains to reduce the need for limit-testing (AAP, 2022).</p>
+
+  <p>What reduces limit-testing at this age:</p>
+  <ul>
+    <li>Give genuine choices within non-negotiable limits: "You need to finish homework before screens — do you want to do math or reading first?"</li>
+    <li>Explain your reasoning briefly — "I need you home by dinner because..." is more effective than rules without reason</li>
+    <li>Acknowledge their point before holding your position: "You make a fair point. The answer is still no, because..."</li>
+    <li>Follow through every time — inconsistency teaches children that arguing long enough works</li>
+    <li>Pick battles carefully; focus on safety and core values</li>
+  </ul>
+
+  <h2>How do I handle early peer pressure in this age group?</h2>
+
+  <p class="answer-first">Early peer pressure at ages 8 to 10 focuses on conformity — shared clothing brands, media preferences, language, and activities. It is the training ground for the higher-stakes peer pressure of adolescence. The AAP recommends building identity strength now by helping children articulate their own values, practice saying "no" in low-stakes situations, and distinguish between fitting in (acceptable) and compromising core values (not acceptable) (AAP, 2022).</p>
+
+  <ul>
+    <li>Validate the social importance of fitting in: "It matters to feel like part of the group"</li>
+    <li>Identify "non-negotiables" together: what values are not up for peer modification</li>
+    <li>Role-play peer pressure scenarios: "What would you say if a friend dared you to...?"</li>
+    <li>Maintain family rituals that build identity independent of peer group</li>
+    <li>Know your child's friend group — name, parents' names, what they value</li>
+  </ul>
+
+  <h2>What screen time conflicts are normal at this age, and how should I handle them?</h2>
+
+  <p class="answer-first">Screen time conflict is the most common behavioral complaint parents report for children ages 8 to 10. Video games, YouTube, and social content are engineered for engagement and displace other activities when limits are absent. The AAP recommends prioritizing sleep, physical activity, homework, and face-to-face social time before screens — and using a Family Media Use Plan to set consistent, agreed-upon limits (AAP, 2016). "No screens before homework and outdoor play" is more sustainable than tracking total minutes.</p>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 8 to 10 year old's behavior?</h2>
+    <p class="answer-first">Contact your pediatrician if your child shows persistent anxiety about school performance, social situations, or specific fears that interfere with daily activities; displays physical aggression that is escalating rather than decreasing; seems persistently sad or withdrawn from activities they previously enjoyed; or has significant difficulty managing anger in most situations despite consistent, calm parenting responses (AAP, 2022).</p>
+    <p>Red flags that warrant prompt evaluation:</p>
+    <ul>
+      <li>Persistent negative self-talk: "I'm stupid," "nobody likes me," "I can't do anything right"</li>
+      <li>Signs of bullying — as target, perpetrator, or both</li>
+      <li>Cruelty to animals or younger children</li>
+      <li>Significant sudden change in behavior, mood, or social withdrawal</li>
+      <li>Any talk of not wanting to be alive or hurting themselves</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Behavior</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old Safety: Independence, Online Safety, and Injury Prevention';
+const description = 'Safety guide for children ages 8 to 10 — graduated outdoor independence, online safety rules, sports injury prevention, car seat transitions, and AAP recommendations for this age.';
+
+const faqs = [
+  {
+    question: 'Can my 9-year-old walk to school alone?',
+    answer: 'Whether a 9-year-old walks to school alone depends on the specific route, traffic conditions, the child\'s demonstrated pedestrian judgment, and your neighborhood context — not just their age. Most children develop reliable pedestrian safety skills between ages 9 and 10 for low-traffic, familiar routes. Practice the route together, identify specific risks, and confirm the child can handle unexpected situations (a road detour, a stranger approaching) before granting independence. Some states have laws specifying ages; check your local regulations.'
+  },
+  {
+    question: 'At what age can children be home alone?',
+    answer: 'The AAP does not specify an exact age, but notes that most children are not ready for unsupervised time before age 10 to 12 (AAP, 2022). Readiness depends on maturity, specific circumstances, and the child\'s demonstrated response to unexpected situations. Key questions: Can this child reach a trusted adult if something goes wrong? Do they know what to do in a fire, medical emergency, or if a stranger comes to the door? Start with brief, low-stakes alone time (30 minutes, familiar environment) before extending to longer periods.'
+  },
+  {
+    question: 'Do 8 to 10 year olds still need helmets for biking?',
+    answer: 'Yes. The AAP recommends helmets for every bike ride, every age, with no exceptions (AAP, 2022). Head injury risk does not decrease with age or experience — it decreases with helmet use. Children ages 8 to 10 ride faster, farther from home, and in more complex traffic environments than younger children — increasing, not decreasing, the stakes. If your child resists helmet use, make it a non-negotiable family rule rather than a debate: no helmet, no bike.'
+  },
+  {
+    question: 'My 10-year-old wants to play contact sports. Are they safe?',
+    answer: 'Most contact sports are appropriate for children ages 8 to 10 with proper equipment, qualified coaching, and developmentally appropriate rules. The AAP recommends allowing children to try organized sports at this age and emphasizes skill-building over competition (AAP, 2022). One exception: tackle football. The AAP has expressed concern about repetitive head impacts in tackle football and encourages flag football as an alternative for this age group, given the developing brain\'s vulnerability to repeated subconcussive hits.'
+  },
+  {
+    question: 'How do I protect my 9-year-old online?',
+    answer: 'Children ages 8 to 10 with device access need concrete safety rules and consistent parental visibility into their online activity. The AAP recommends: keep devices in common areas of the house; know all passwords and account names; use parental controls for content filtering; establish clear rules about what they can do online and with whom; and make reporting uncomfortable online encounters a non-punished, expected behavior (AAP, 2016). Social media platforms require users to be at least 13 — enforce this age limit.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/safety/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/safety/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '8–10 Years', href: '/ages/8-10-years/' }, { label: 'Safety' }]}>
+
+  <h1>8–10 Year Old Safety: Independence, Online Safety, and Injury Prevention</h1>
+
+  <p class="answer-first">Children ages 8 to 10 are gaining real independence — walking farther from home, cycling in new areas, spending time online, and navigating situations without an adult present. The AAP's safety framework for this age focuses on graduated independence: matching the level of autonomy to the child's demonstrated judgment and the specific situation's risk level (AAP, 2022). The goal is not to protect children from all risk, but to build the judgment they need for adolescence through supervised, calibrated independence.</p>
+
+  <h2>How much outdoor independence is appropriate for 8 to 10 year olds?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 can handle supervised independent play — playing on the block, at a friend's house, or in a local park — in familiar, low-traffic environments when they have demonstrated basic pedestrian safety judgment and can reach a trusted adult if needed (AAP, 2022). Independence should be graduated: start with the front yard, then the block, then further, expanding only when the child demonstrates reliable judgment at the previous level. Know the specific route, risks, and who is in the environment before granting independence.</p>
+
+  <p>Independence readiness checklist for this age:</p>
+  <ul>
+    <li>Knows their full name, address, and a parent's phone number</li>
+    <li>Understands pedestrian safety (stop at curb, look both ways, never dart between cars)</li>
+    <li>Can identify when to ask an adult for help vs. handle independently</li>
+    <li>Knows what to do if approached by an unknown adult</li>
+    <li>Can reach a trusted adult by phone or by going to a neighbor</li>
+    <li>Follows agreed-upon boundaries reliably (comes home when called, stays in designated area)</li>
+  </ul>
+
+  <h2>What sports and physical activity safety rules apply to this age?</h2>
+
+  <p class="answer-first">The AAP recommends at least 60 minutes of moderate-to-vigorous physical activity daily for children ages 6 and older (AAP, 2023). Organized sports are appropriate and beneficial at ages 8 to 10, with a focus on skill development, fun, and participation over competition. The AAP specifically recommends against tackle football at this age due to repetitive subconcussive head impacts during brain development. Helmets are required for cycling, skating, and skateboarding; appropriate padding for contact sports; and properly fitting equipment for all organized sports.</p>
+
+  <ul>
+    <li><strong>Overuse injuries:</strong> Specializing in a single sport before age 12 increases overuse injury risk. Multisport participation at ages 8 to 10 reduces this risk and builds broader athletic competence.</li>
+    <li><strong>Concussion awareness:</strong> Teach children to report head impacts and associated symptoms immediately. "If in doubt, sit it out" — return to play only after medical clearance following any concussion.</li>
+    <li><strong>Hydration:</strong> Children underestimate thirst during physical activity. Ensure water access and scheduled drink breaks during practices and games.</li>
+  </ul>
+
+  <h2>What online safety rules are essential for 8 to 10 year olds?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 increasingly use devices for gaming, YouTube, communication, and school research. The AAP recommends maintaining parental visibility into all online activity at this age — not secretly, but openly as stated family safety practice (AAP, 2016). Core rules: no sharing personal information (name, school, address, photos) with online-only contacts; no downloading apps or in-game purchases without permission; all accounts require parental access; and report anything uncomfortable immediately without fear of punishment.</p>
+
+  <ul>
+    <li>Keep devices in common areas of the house — bedrooms and bathrooms are private; devices are not</li>
+    <li>Maintain access to all passwords and account names</li>
+    <li>Use parental controls for content filtering appropriate to the child's age and maturity</li>
+    <li>Check in on gaming communication — many children ages 8 to 10 communicate with unknown adults through in-game chat</li>
+    <li>Social media platforms (Instagram, TikTok, Snapchat) require users to be 13 — enforce this</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Safety</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
