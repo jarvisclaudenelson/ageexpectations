@@ -1,0 +1,190 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema } from "../../../../data/schema.js";
+
+const title = "1–3 Month Old Feeding: How Much, How Often, and What to Expect";
+const description = "Between 1 and 3 months, babies settle into more predictable feeding patterns. Learn how much to feed your 1–3 month old, how to read hunger and fullness cues, and what to expect with breastfeeding, formula, and combination feeding.";
+
+const faqs = [
+  {
+    question: "How often should I feed my 1–3 month old?",
+    answer: "Most 1–3 month olds breastfeed every 2–3 hours or take 6–8 bottle feedings per day. By 2–3 months, some babies naturally stretch to 3–4 hour intervals as their stomach capacity increases. Total daily intake for formula-fed babies is typically around 24–32 oz. Follow your baby's hunger and fullness cues rather than a strict schedule.",
+  },
+  {
+    question: "How much formula should a 2-month-old drink per feeding?",
+    answer: "At 2 months, most formula-fed babies take 4–5 oz per feeding, 6–8 times per day, for a total of about 24–32 oz per day. A helpful rule of thumb: 2.5 oz of formula per pound of body weight per day, not to exceed 32 oz. Always follow your baby's cues — never pressure them to finish a bottle.",
+  },
+  {
+    question: "Is it normal for my breastfed baby to feed every hour?",
+    answer: "Cluster feeding — very frequent, closely spaced nursing sessions — is completely normal at 1–3 months, especially in the evenings and during growth spurts. Growth spurts are common around 3 weeks, 6 weeks, and 3 months. This is how your baby increases your milk supply to meet their growing needs. It is temporary, usually lasting 2–5 days.",
+  },
+  {
+    question: "Should my 2-month-old be sleeping through the night without eating?",
+    answer: "Most 1–3 month olds still need nighttime feedings. Sleeping a 4–5 hour stretch is considered developmentally good progress at this age. Sleeping through the night (6+ hours) before 3–4 months is not typical or expected. Never restrict feedings to encourage longer sleep at this stage — adequate nutrition is the priority.",
+  },
+  {
+    question: "How do I know if my baby is getting enough breast milk?",
+    answer: "Reliable signs your breastfed baby is getting enough: at least 6 wet diapers per day, regular bowel movements, audible swallowing during nursing, coming off the breast satisfied and content (not fussy and rooting immediately), and consistent weight gain tracked at well-child visits. Your pediatrician will plot weight on a growth chart — steady growth along their own curve is the most reliable indicator.",
+  },
+  {
+    question: "Can I let my 2-month-old sleep longer at night without feeding?",
+    answer: "By 2 months, if your baby is growing well, your pediatrician may say it is okay to let them sleep one longer stretch (4–5 hours) at night without waking to feed. However, do not implement this without checking with your pediatrician first. Some babies, especially those with slower weight gain or breastfed babies whose parents are trying to maintain supply, still need every feeding.",
+  },
+  {
+    question: "My baby spits up after every feeding. Is this normal?",
+    answer: "Yes — reflux and spitting up are very common in the first 3 months. The sphincter between the esophagus and stomach is immature and doesn't always close properly, allowing milk to come back up. As long as your baby is gaining weight well and is not in obvious pain, this is considered \"happy spitting up\" and typically resolves by 6–12 months. If your baby seems in pain, arches their back, or is losing weight, talk to your pediatrician about possible GERD.",
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/1-3-months/feeding/",
+  datePublished: "2026-03-19",
+  dateModified: "2026-03-19",
+});
+const fSchema = faqSchema(faqs);
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  image="/images/pins/1-3-months-feeding.png"
+  breadcrumbs={[
+    { label: "1–3 Months", href: "/ages/1-3-months/" },
+    { label: "Feeding" },
+  ]}
+>
+  <h1>1–3 Month Old Feeding: What to Expect</h1>
+
+  <p>By the time your baby reaches one month, the most exhausting phase of newborn feeding is usually behind you. The every-45-minutes marathon of the first weeks starts to give way to something slightly more predictable. Between 1 and 3 months, most babies can take in more per feeding — breastfed babies become more efficient nursers, and formula-fed babies move to larger, less frequent bottles. You can start to see a pattern forming, even if it's still far from a schedule.</p>
+
+  <p>This is also a period when many parents start asking bigger questions: Is my baby eating enough? Should we be thinking about a schedule? How long should nighttime stretches be? Here's what the research and pediatric guidelines say.</p>
+
+  <h2>How Much and How Often: By the Numbers</h2>
+  <p>These are general guidelines from the American Academy of Pediatrics (AAP) and pediatric nutrition research. Every baby is different — use these as a range, not a prescription.</p>
+
+  <h3>Breastfed Babies (1–3 Months)</h3>
+  <ul>
+    <li><strong>Frequency:</strong> Every 2–3 hours, or about 8–12 feedings per 24 hours at 1 month, decreasing toward 7–9 feedings by 3 months as feeding efficiency improves.</li>
+    <li><strong>Duration:</strong> Roughly 10–20 minutes per side, though this varies widely. An efficient 3-month-old may empty a breast in 5–7 minutes.</li>
+    <li><strong>Key principle:</strong> Breast milk supply is demand-driven. Feed on demand — not by the clock — to maintain supply. Do not restrict feedings.</li>
+  </ul>
+
+  <h3>Formula-Fed Babies (1–3 Months)</h3>
+  <ul>
+    <li><strong>Frequency:</strong> About 6–8 feedings per day at 1 month; 5–6 feedings per day by 3 months.</li>
+    <li><strong>Amount per feeding:</strong> 3–4 oz at 1 month, increasing to 4–5 oz by 2–3 months.</li>
+    <li><strong>Daily total:</strong> Approximately 19–30 oz per day. A simple rule of thumb: 2.5 oz per pound of body weight per day, up to about 32 oz maximum.</li>
+  </ul>
+
+  <h3>Combination Feeding</h3>
+  <p>If you are combination feeding (breast milk plus formula), rely on your baby's hunger and fullness cues as your primary guide. The total daily volume from all sources should fall within the ranges above. Your pediatrician or a lactation consultant can help you calibrate if you have questions about maintaining milk supply alongside formula supplementation.</p>
+
+  <h2>Reading Your Baby's Hunger and Fullness Cues</h2>
+  <p>Learning to read your baby's cues is one of the highest-value feeding skills you can develop. Babies fed responsively — in response to their own signals rather than a rigid schedule — develop better self-regulation around food, which benefits them for life.</p>
+
+  <h3>Hunger Cues (Early to Late)</h3>
+  <ol>
+    <li><strong>Early signs:</strong> Rooting (turning head, opening mouth), bringing hands to mouth, sucking on fists, increased alertness.</li>
+    <li><strong>Active signs:</strong> Squirming, fidgeting, fussiness, reaching toward you.</li>
+    <li><strong>Late sign:</strong> Crying. By the time your baby is crying from hunger, they are harder to calm and latch or settle for a bottle. Aim to respond before this point.</li>
+  </ol>
+
+  <h3>Fullness Cues</h3>
+  <ul>
+    <li>Turning head away from the breast or bottle</li>
+    <li>Slowing or stopping sucking</li>
+    <li>Releasing the nipple and not re-latching</li>
+    <li>Pushing the nipple out with their tongue</li>
+    <li>Becoming distracted or more interested in looking around</li>
+    <li>Relaxed, open hands (fists signal tension/hunger; open hands signal contentment)</li>
+    <li>Falling into a content, relaxed sleep</li>
+  </ul>
+
+  <p><strong>Never pressure your baby to finish a bottle.</strong> Bottle-fed babies are at higher risk for overfeeding because the bottle delivers milk even when they slow their suck. Use paced bottle feeding — hold the bottle nearly horizontal and allow your baby to take natural pauses.</p>
+
+  <h2>Growth Spurts and Cluster Feeding</h2>
+  <p>Between 1 and 3 months, your baby will likely go through <strong>two to three growth spurts</strong> — brief periods of rapid growth during which they will want to feed much more frequently. Common timing:</p>
+  <ul>
+    <li><strong>Around 3 weeks</strong></li>
+    <li><strong>Around 6 weeks</strong></li>
+    <li><strong>Around 3 months</strong></li>
+  </ul>
+  <p>During a growth spurt, your baby may nurse every 1–2 hours or want more formula than usual. This is normal and temporary — typically 2–5 days. For breastfeeding parents, this increased demand is exactly how your body boosts milk supply to meet your baby's growing needs. Lean into it rather than supplementing with formula, unless medically indicated.</p>
+  <p><strong>Cluster feeding</strong> — several short, closely spaced feedings in the evening — is especially common in the first 3 months. It tends to peak in the late afternoon and early evening, often in a predictable window. It can be exhausting, but it's developmentally normal and typically resolves as your baby gets older.</p>
+
+  <h2>Nighttime Feeding: What's Normal</h2>
+  <p>At 1 month, most babies still need to feed every 2–3 hours overnight. By 2–3 months, many babies naturally extend their longest sleep stretch to 4–5 hours, and some reach 6 hours. This is considered developmentally excellent progress — not cause for concern if they're not doing it yet.</p>
+
+  <p><strong>Sleeping "through the night" (6+ continuous hours) before 3–4 months is not typical</strong> and not something to aim for. Adequate feeding is more important than longer sleep stretches at this age. Never restrict feedings to encourage longer sleep in the first 3 months.</p>
+
+  <p>If your pediatrician confirms your baby is gaining weight well and is at least 2 months old, they may give you guidance on responding to one longer nighttime stretch. Always get that green light from your pediatrician before making any changes to nighttime feeding.</p>
+
+  <h2>Breastfeeding: Common Challenges at 1–3 Months</h2>
+
+  <h3>Low Milk Supply Concerns</h3>
+  <p>Many parents worry about low supply, but true low supply is less common than it feels. Signs that supply may genuinely be an issue include: poor weight gain, fewer than 6 wet diapers per day, and a consistently fussy, unsatisfied baby after nursing. If you are concerned, consult a lactation consultant (IBCLC) — they can do a weighted feed to measure how much milk your baby transfers and help with latch and positioning issues.</p>
+
+  <h3>The 6-Week Growth Spurt and "Supply Dips"</h3>
+  <p>The 6-week growth spurt is one of the most common times breastfeeding parents decide to stop, because the sudden increase in nursing frequency feels like the baby isn't getting enough. In most cases, the supply will catch up within a few days if you continue feeding on demand. Push through before making any decisions about supplementing.</p>
+
+  <h3>Returning to Work and Pumping</h3>
+  <p>If you are returning to work, around 6–8 weeks is a good time to introduce a bottle (if you haven't already) and begin building a pumped milk stash. The general rule: aim to pump as many times as your baby would feed during the hours you are away, to maintain supply. A lactation consultant can help you create a realistic pumping plan.</p>
+
+  <h2>Formula Feeding: What to Know</h2>
+  <p>All standard infant formulas sold in the United States meet AAP nutritional requirements, whether cow's milk-based, soy-based, or hydrolyzed (partially or extensively broken down protein). Standard cow's milk-based formula is appropriate for most babies. Specialty formulas (soy, hypoallergenic) are typically only necessary for specific medical indications — do not switch formulas without talking to your pediatrician first.</p>
+  <p>Prepared formula should be used within 1 hour of being served and within 24 hours if stored in the refrigerator. Never microwave formula — it creates hot spots that can burn your baby's mouth.</p>
+
+  <h2>Vitamin D: Don't Forget This One</h2>
+  <p>Breast milk contains very little vitamin D. The AAP recommends <strong>400 IU of vitamin D per day</strong> for all breastfed and partially breastfed babies, starting in the first few days of life. Liquid vitamin D drops are inexpensive and widely available.</p>
+  <p>Formula is fortified with vitamin D, so formula-fed babies who consume at least 32 oz per day generally do not need supplementation — confirm with your pediatrician.</p>
+
+  <h2>Spitting Up: Normal vs. Concerning</h2>
+  <p>Spitting up is extremely common in the first 3 months. The lower esophageal sphincter — the valve between the esophagus and stomach — is still immature, and the stomach is small. Many babies spit up after most feedings, and some spit up large volumes that alarm parents.</p>
+
+  <h3>"Happy Spitters" vs. GERD</h3>
+  <p><strong>Happy spitters</strong> spit up often but continue to gain weight well, are content between feedings, and show no signs of distress. This is considered normal reflux and typically resolves by 6–12 months as the sphincter matures and the baby spends more time upright.</p>
+  <p><strong>Concerning signs</strong> that warrant a call to your pediatrician:</p>
+  <ul>
+    <li>Spitting up large volumes after every feeding combined with poor weight gain</li>
+    <li>Back-arching, crying, or apparent pain during or after feedings</li>
+    <li>Projectile vomiting (a forceful stream that shoots across the room)</li>
+    <li>Spitting up blood or yellow/green bile</li>
+    <li>Difficulty breathing or persistent wheezing</li>
+  </ul>
+
+  <h2>Is My Baby Getting Enough? Signs to Watch For</h2>
+  <p>The most reliable measure of adequate nutrition is consistent weight gain tracked at well-child visits (typically at 1 month and 2 months). Your pediatrician will plot weight on a growth chart — steady progress along your baby's own curve is what matters, not the percentile.</p>
+  <p>Between visits, these are reassuring signs:</p>
+  <ul>
+    <li>At least 6 wet diapers per day (for babies past the first 2 weeks)</li>
+    <li>Regular bowel movements (note: breastfed babies may go from several times a day to once every few days — both are normal)</li>
+    <li>Alert, calm periods between feedings</li>
+    <li>Normal developmental progress — responding to faces, beginning to smile</li>
+  </ul>
+
+  <div class="faq-section">
+    <h2>Is This Normal? Common 1–3 Month Feeding Questions</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <p class="faq-question">{faq.question}</p>
+        <p class="faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="callout">
+    <h2>When to Talk to Your Pediatrician</h2>
+    <p>Reach out if you notice:</p>
+    <ul>
+      <li>Your baby is losing weight or not gaining weight appropriately</li>
+      <li>Fewer than 6 wet diapers per day after the first 2 weeks</li>
+      <li>Projectile vomiting or signs of pain during/after feedings</li>
+      <li>Your baby seems constantly hungry and is never satisfied after feedings</li>
+      <li>Difficulty latching, severe nipple pain, or breasts that never feel drained</li>
+      <li>Your baby is lethargic, difficult to wake for feedings, or not meeting feeding minimums</li>
+    </ul>
+  </div>
+</BaseLayout>

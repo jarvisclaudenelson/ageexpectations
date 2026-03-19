@@ -285,4 +285,11 @@ export const articles = [
     pubDate: "2026-03-18",
     image: "/images/pins/9-12-months-feeding.png",
   },
+  {
+    title: "1–3 Month Old Feeding: How Much, How Often, and What to Expect",
+    description: "Between 1 and 3 months, babies settle into more predictable feeding patterns. Learn how much to feed your 1–3 month old, how to read hunger and fullness cues, and what to expect with breastfeeding, formula, and combination feeding.",
+    path: "/ages/1-3-months/feeding/",
+    pubDate: "2026-03-19",
+    image: "/images/pins/1-3-months-feeding.png",
+  },
 ];
