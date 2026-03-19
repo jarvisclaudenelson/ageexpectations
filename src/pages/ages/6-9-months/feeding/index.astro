@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../../data/schema.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '6–9 Month Old Feeding: Starting Solids and What to Expect';
 const description = 'Introducing solid foods is a major milestone for your 6–9 month old. Learn about signs of readiness, best first foods, safe allergen introduction, and why milk remains the primary source of nutrition.';
@@ -8,19 +8,19 @@ const description = 'Introducing solid foods is a major milestone for your 6–9
 const faqs = [
   {
     question: 'How do I know if my baby is ready for solid foods?',
-    answer: 'According to the AAP, most babies are ready for solids around 6 months. Signs of readiness include being able to sit with little to no support, having good head control, showing interest in food (leaning forward or reaching), and the disappearance of the tongue-thrust reflex (pushing food out of the mouth with the tongue).',
+    answer: 'According to the AAP (2022), most babies are ready for solids around 6 months. Signs of readiness include sitting with little to no support, good head control, showing interest in food (leaning forward or reaching), and the disappearance of the tongue-thrust reflex. Starting before 4 months is not recommended and is associated with increased choking risk and food allergies.',
   },
   {
     question: 'What are the best first foods to introduce?',
-    answer: 'There is no single "best" first food. Common starters include iron-fortified single-grain cereals (like oat or barley), pureed meats, or pureed vegetables and fruits (like avocado, sweet potato, or banana). The AAP recommends introducing one new food at a time and waiting 3–5 days before introducing another to watch for allergic reactions.',
+    answer: 'There is no single best first food. Common starters include iron-fortified single-grain cereals, pureed meats, and pureed vegetables and fruits like avocado, sweet potato, and banana. The AAP recommends introducing one new food at a time and waiting 3–5 days before introducing another to watch for allergic reactions (AAP, 2022). Iron-rich foods are particularly important because your baby\'s birth iron stores deplete around 6 months.',
   },
   {
     question: 'When should I introduce common allergens like peanuts or eggs?',
-    answer: 'Recent AAP guidelines suggest that early introduction of common allergens (around 6 months) may help prevent food allergies. Unless your baby has severe eczema or an existing egg allergy, you can introduce allergens like peanut products, eggs, and dairy in age-appropriate forms once they have started other solids.',
+    answer: 'Recent AAP guidelines recommend introducing common allergens early — around 6 months — to help prevent food allergies (AAP, 2022). Unless your baby has severe eczema or an existing egg allergy, you can introduce peanut products, eggs, and dairy in age-appropriate forms once they have started other solids. Introduce allergens at home when you can monitor your baby for a few hours afterward.',
   },
   {
     question: 'How much breast milk or formula should my baby still be getting?',
-    answer: 'At 6–9 months, breast milk or formula should still be the primary source of nutrition. Solids are for exploration and supplemental nutrients like iron. Most babies this age still need about 24–32 ounces of milk in a 24-hour period.',
+    answer: 'At 6–9 months, breast milk or formula should still be the primary source of nutrition. Solids are for exploration and supplemental nutrients like iron. Most babies this age still need about 24–32 ounces of milk in a 24-hour period (AAP, 2022). As solids increase, milk intake will naturally decrease.',
   },
 ];
 
@@ -30,12 +30,18 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/6-9-months/feeding/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-9-months/feeding/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '6–9 Months', href: '/ages/6-9-months/' },
     { label: 'Feeding' },
@@ -43,34 +49,44 @@ const fSchema = faqSchema(faqs);
 >
   <h1>6–9 Month Old Feeding: Starting Solids and What to Expect</h1>
 
-  <p>Around 6 months, your baby enters an exciting new phase: the world of solid foods. This transition is about more than just nutrition; it’s a developmental leap where they learn new textures, flavors, and the mechanics of eating. While it can be messy, it’s a foundational time for building healthy eating habits.</p>
+  <p>Around 6 months, your baby enters an exciting new phase: the world of solid foods. This transition is about more than nutrition — it is a developmental leap where they learn new textures, flavors, and the mechanics of eating. While messy, it is a foundational time for building healthy eating habits that last.</p>
 
-  <h2>Signs of Readiness</h2>
-  <p>While 6 months is the general recommendation from the American Academy of Pediatrics (AAP), every baby develops at their own pace. Look for these developmental signs:</p>
+  <h2>How do I know when my 6–9 month old is ready for solid foods?</h2>
+
+  <p class="answer-first">The AAP recommends introducing solid foods around 6 months of age, when most babies show the developmental signs of readiness (AAP, 2022). These signs — not a specific calendar date — are the reliable indicator: your baby can sit with minimal support, has good head control, has lost the tongue-thrust reflex, and shows interest in your food. Starting before 4 months is not recommended.</p>
+
   <ul>
     <li><strong>Good head control:</strong> Your baby can hold their head steady and upright.</li>
-    <li><strong>Sitting with little support:</strong> They can sit in a high chair or feeding seat without slouching significantly.</li>
-    <li><strong>Loss of tongue-thrust reflex:</strong> They no longer automatically push food out of their mouth with their tongue.</li>
+    <li><strong>Sitting with little support:</strong> They can sit in a high chair without significant slouching.</li>
+    <li><strong>Loss of tongue-thrust reflex:</strong> They no longer automatically push food out with their tongue.</li>
     <li><strong>Interest in food:</strong> They watch you eat, reach for your food, or open their mouth when food is offered.</li>
   </ul>
 
-  <h2>Introducing First Foods</h2>
-  <p>There is no specific order required for introducing foods. You can start with pureed vegetables, fruits, or meats. However, iron-rich foods are particularly important at this stage because a baby's natural iron stores begin to deplete around 6 months.</p>
+  <h2>What are the best first foods to introduce at 6 months?</h2>
+
+  <p class="answer-first">Iron-rich foods are the most important first foods because your baby's birth iron stores begin depleting around 6 months (AAP, 2022). Good choices include iron-fortified cereals, pureed meats (chicken, beef, turkey), and iron-rich vegetables like pureed peas and spinach. Beyond iron-rich options, you can start with any pureed vegetables, fruits, or meats — there is no required order.</p>
+
   <ul>
     <li><strong>Iron-fortified cereals:</strong> Oat, barley, or multi-grain cereals mixed with breast milk or formula.</li>
-    <li><strong>Pureed meats:</strong> Chicken, beef, or turkey provide essential iron and zinc.</li>
-    <li><strong>Vegetables and Fruits:</strong> Sweet potatoes, peas, carrots, avocados, bananas, and pears are popular choices.</li>
-    <li><strong>Finger Foods:</strong> Small, soft pieces of food (like cooked sweet potato or banana) that the baby can grasp.</li>
+    <li><strong>Pureed meats:</strong> Chicken, beef, or turkey provide iron and zinc.</li>
+    <li><strong>Vegetables and fruits:</strong> Sweet potatoes, peas, carrots, avocados, bananas, and pears are popular choices.</li>
+    <li><strong>Finger foods:</strong> Small, soft pieces of food (cooked sweet potato or banana) that the baby can grasp — once the pincer grasp begins emerging around 8–9 months.</li>
   </ul>
 
-  <h2>Methods: Purees vs. Baby-Led Weaning</h2>
-  <p>Many parents choose to start with smooth purees and gradually increase texture. Others prefer "Baby-Led Weaning" (BLW), where babies are offered soft, finger-sized pieces of whole foods to feed themselves. Both methods are safe as long as the foods offered are soft enough to be mashed with gums and do not pose a choking hazard. Many families find a hybrid approach works best.</p>
+  <h2>Should I use purees or baby-led weaning at 6–9 months?</h2>
 
-  <h2>Safe Allergen Introduction</h2>
-  <p>The AAP now recommends introducing common food allergens early—around 6 months—to help reduce the risk of developing allergies. This includes peanut products (in a safe, thinned-out form), eggs, dairy, and fish. Introduce these foods one at a time at home when you can monitor your baby for a few hours afterward.</p>
+  <p class="answer-first">Both purees and baby-led weaning (BLW) are safe approaches when foods are soft enough to mash with gums and cut to an appropriate size to minimize choking risk (AAP, 2022). Many families use a hybrid approach — starting with smooth purees and gradually introducing soft finger foods as the pincer grasp develops around 8–9 months. The most important factors are readiness, appropriate textures, and supervision.</p>
+
+  <p>With BLW, babies are offered soft, age-appropriate finger-sized pieces of whole foods to feed themselves from the start. With purees, you progress from smooth to thicker textures over time. Both methods support the development of oral motor skills and self-feeding. Always supervise mealtime and ensure your baby is sitting upright.</p>
+
+  <h2>When should I introduce common food allergens?</h2>
+
+  <p class="answer-first">Current AAP guidelines recommend introducing common food allergens early — around 6 months — to help reduce the risk of developing food allergies (AAP, 2022). This includes peanut products (in a safe, thinned-out form), eggs, dairy, and fish. Introduce allergens one at a time at home when you can monitor your baby for a few hours afterward.</p>
+
+  <p>If your baby has severe eczema or an existing egg allergy, consult your pediatrician before introducing peanuts, as they may need an allergy evaluation first. For most babies without these risk factors, early allergen introduction is both safe and protective.</p>
 
   <div class="faq-section">
-    <h2>Common Questions About 6–9 Month Feeding</h2>
+    <h2>Is This Normal? Common Questions About 6–9 Month Feeding</h2>
     {faqs.map(faq => (
       <div class="faq-item">
         <p class="faq-question">{faq.question}</p>
@@ -80,14 +96,14 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>Safety and Foods to Avoid</h2>
-    <p>While your baby's menu is expanding, there are a few things that must stay off the plate until at least 12 months:</p>
+    <h2>Foods to avoid before 12 months</h2>
+    <p>While your baby's menu is expanding, certain foods must stay off the plate until at least 12 months:</p>
     <ul>
-      <li><strong>Honey:</strong> Can cause botulism in infants under 1 year.</li>
-      <li><strong>Cow's Milk:</strong> Not as a replacement for breast milk or formula (though small amounts in cooking or yogurt are usually fine).</li>
-      <li><strong>Fruit Juice:</strong> The AAP recommends no juice before age 1.</li>
-      <li><strong>Choking Hazards:</strong> Avoid whole grapes, popcorn, nuts, hard candies, or large chunks of meat/hot dogs.</li>
+      <li><strong>Honey:</strong> Can cause botulism in infants under 1 year — no exceptions.</li>
+      <li><strong>Whole cow's milk:</strong> Not as a replacement for breast milk or formula, though small amounts in cooking or yogurt are fine.</li>
+      <li><strong>Fruit juice:</strong> The AAP recommends no juice before age 1.</li>
+      <li><strong>Choking hazards:</strong> Whole grapes, popcorn, nuts, hard candies, or large chunks of meat or hot dogs.</li>
     </ul>
-    <p>Always supervise your baby during mealtime and ensure they are sitting upright.</p>
+    <p>Always supervise your baby during mealtime and ensure they are sitting upright. Never leave a baby unattended while eating.</p>
   </div>
 </BaseLayout>

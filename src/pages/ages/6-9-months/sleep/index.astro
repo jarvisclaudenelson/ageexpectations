@@ -1,31 +1,30 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema } from '../../../../data/schema.js';
-import { topics } from '../../../../data/ages.js';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '6–9 Month Old Sleep: What to Expect and Is It Normal?';
-const description = 'Between 6 and 9 months, many babies begin sleeping through the night, but developmental leaps like crawling and separation anxiety can trigger regressions. Learn about 6-9 month sleep patterns, nap schedules, and safe sleep habits.';
+const description = 'Between 6 and 9 months, many babies begin sleeping through the night, but developmental leaps like crawling and separation anxiety can trigger regressions. Learn about 6–9 month sleep patterns, nap schedules, and safe sleep habits.';
 
 const faqs = [
   {
     question: 'How much sleep does a 6–9 month old need?',
-    answer: 'Most babies this age need 12–15 hours of total sleep in a 24-hour period. This typically includes a longer stretch of 10–12 hours at night and 2–3 daytime naps totaling 2–4 hours. Every baby is different, but the American Academy of Sleep Medicine (AASM) recommends these totals for optimal health.',
+    answer: 'Most babies this age need 12–15 hours of total sleep in a 24-hour period. This typically includes a longer stretch of 10–12 hours at night and 2–3 daytime naps totaling 2–4 hours (American Academy of Sleep Medicine, 2022). Every baby is different, but these totals support optimal health and development.',
   },
   {
     question: 'Is there a 6-month or 8-month sleep regression?',
-    answer: 'Yes. Many parents notice regressions around 6 months (often due to hitting milestones like rolling or sitting) and again around 8–9 months (due to crawling, pulling to stand, and separation anxiety). These "regressions" are actually signs of significant brain development and typically resolve within 1–2 weeks if you maintain consistent routines.',
+    answer: 'Yes. Many parents notice regressions around 6 months (often due to hitting milestones like rolling or sitting) and again around 8–9 months (due to crawling, pulling to stand, and separation anxiety). These regressions are signs of significant brain development and typically resolve within 1–2 weeks if you maintain consistent routines.',
   },
   {
     question: 'Can my 6–9 month old sleep through the night without a feeding?',
-    answer: 'By 6 months, many healthy, full-term babies are physically capable of sleeping 6–8 hours (or longer) without a night feeding. However, some babies still need one feeding during the night until closer to 9–12 months. Always consult your pediatrician before weaning night feedings to ensure your baby is meeting growth targets.',
+    answer: 'By 6 months, many healthy, full-term babies are physically capable of sleeping 6–8 hours or longer without a night feeding. However, some babies still need one feeding during the night until closer to 9–12 months. Always consult your pediatrician before dropping night feedings to ensure your baby is meeting growth targets (AAP, 2022).',
   },
   {
     question: 'When do babies drop to two naps?',
-    answer: 'Most babies transition from three naps to two between 6 and 9 months. Signs your baby is ready include resisting the third nap, shorter naps than usual, or suddenly having trouble falling asleep at bedtime. The morning and afternoon naps usually lengthen as the "catnap" disappears.',
+    answer: 'Most babies transition from three naps to two between 6 and 9 months. Signs your baby is ready include resisting the third nap, shorter naps than usual, or suddenly having trouble falling asleep at bedtime. The morning and afternoon naps usually lengthen as the third nap disappears.',
   },
   {
     question: 'Is it safe to have a blanket in the crib at 9 months?',
-    answer: 'No. The AAP recommends keeping the sleep environment free of blankets, pillows, bumpers, and soft toys until at least 12 months of age to reduce the risk of SIDS and suffocation. A wearable blanket (sleep sack) is a safe alternative to keep your baby warm.',
+    answer: 'No. The AAP recommends keeping the sleep environment free of blankets, pillows, bumpers, and soft toys until at least 12 months to reduce the risk of SIDS and suffocation (AAP, 2022). A wearable blanket (sleep sack) is the safe alternative to keep your baby warm.',
   },
 ];
 
@@ -35,12 +34,18 @@ const aSchema = articleSchema({
   url: 'https://ageexpectations.com/ages/6-9-months/sleep/',
 });
 const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-9-months/sleep/',
+});
 ---
 <BaseLayout
   title={title}
   description={description}
   articleSchema={aSchema}
   faqSchema={fSchema}
+  medicalSchema={mSchema}
   breadcrumbs={[
     { label: '6–9 Months', href: '/ages/6-9-months/' },
     { label: 'Sleep' },
@@ -48,28 +53,42 @@ const fSchema = faqSchema(faqs);
 >
   <h1>6–9 Month Old Sleep: What to Expect and Is It Normal?</h1>
 
-  <p>The 6-to-9-month window is often a period of "sleep peaks and valleys." On one hand, many babies are finally capable of longer stretches of nighttime sleep and have established a more predictable nap routine. On the other hand, a literal explosion of physical milestones—crawling, sitting up, and pulling to stand—can make "staying asleep" a challenge for their busy brains.</p>
+  <p>The 6-to-9-month window is often a period of sleep peaks and valleys. Many babies are finally capable of longer stretches of nighttime sleep and have established a more predictable nap routine. At the same time, an explosion of physical milestones — crawling, sitting up, pulling to stand — can disrupt even the best sleep patterns for weeks at a time.</p>
 
-  <p>Understanding these developmental shifts can help you navigate the late-night wakeups and nap transitions with more confidence and less frustration.</p>
+  <h2>How much sleep does a 6–9 month old need?</h2>
 
-  <h2>Typical 6–9 Month Sleep Patterns</h2>
-  <p>According to the AAP and the American Academy of Sleep Medicine, infants in this age range typically exhibit the following sleep behaviors:</p>
+  <p class="answer-first">Babies aged 6–9 months need 12–15 hours of total sleep per 24-hour period, typically split into 10–12 hours at night and 2–4 hours of daytime sleep across 2–3 naps (American Academy of Sleep Medicine, 2022). Most babies in this range can comfortably stay awake for 2.5 to 3.5 hours between sleep periods.</p>
+
+  <p>These numbers are a guideline, not a target. What matters most is that your baby is generally well-rested: alert during wake windows, able to engage during play, and not excessively irritable throughout the day.</p>
+
+  <h2>Why is my 7–8 month old suddenly waking more at night?</h2>
+
+  <p class="answer-first">Sleep regressions at 6–9 months are directly tied to developmental milestones. When your baby learns a new motor skill — rolling, sitting, crawling, pulling to stand — their brain rehearses it during sleep, causing night waking (CDC, 2022). Separation anxiety, which peaks around 8–9 months, adds another layer: your baby wakes, realizes you are not there, and protests. Most milestone-related regressions resolve within 1–2 weeks with consistent routines.</p>
+
+  <p>At this age, your baby is not just growing — they are practicing constantly. A 7-month-old who has just learned to sit will often pop into a sitting position in the crib at 2 AM and then cry because they cannot get back down. Practicing new skills during floor play during the day helps babies master the motor planning needed to resettle themselves at night.</p>
+
+  <h2>How does separation anxiety affect my baby's sleep at this age?</h2>
+
+  <p class="answer-first">Around 8–9 months, babies develop object permanence — they understand you still exist when you leave the room — but lack a mature sense of time, so your absence at bedtime or during a night waking feels alarming (CDC, 2022). This is why a baby who previously settled easily may suddenly protest bedtime or wake frequently when they realize you are not there.</p>
+
+  <p>Consistent goodbyes and a predictable bedtime routine are the most effective tools. Sneaking out can worsen separation anxiety over time; brief, warm, consistent goodbyes help your baby learn that you will return. Most separation anxiety in sleep contexts decreases after 18–24 months as language skills improve and children develop a better sense of routine.</p>
+
+  <h2>How do I build a good sleep routine at 6–9 months?</h2>
+
+  <p class="answer-first">A consistent 15–20-minute bedtime routine is one of the most effective sleep practices at this age, signaling to your baby's developing circadian rhythm that sleep is coming (AAP, 2022). A simple, predictable sequence — bath, pajamas, a short story or song, into the crib — works better than any specific routine detail. The consistency is what matters.</p>
+
+  <p>The AAP recommends that babies be placed in their crib while drowsy but awake to help them learn the skill of falling asleep independently. A baby who can settle themselves to sleep at the start of the night is much better positioned to self-settle when they wake between sleep cycles at 3 AM.</p>
+
+  <h2>What are the safe sleep rules for a 6–9 month old?</h2>
+
+  <p class="answer-first">Even as your baby becomes more mobile, the AAP's safe sleep guidelines remain the same: back to sleep on a firm, flat surface in a bare crib or bassinet, with room-sharing (not bed-sharing) for at least the first 6 months (AAP, 2022). If your baby can roll both ways, you do not need to reposition them if they roll to their stomach during sleep — but always start every sleep on their back.</p>
+
   <ul>
-    <li><strong>Total Sleep:</strong> 12 to 15 hours per 24-hour period.</li>
-    <li><strong>Night Sleep:</strong> 10 to 12 hours, often with one or no feedings for healthy babies.</li>
-    <li><strong>Naps:</strong> Transitioning from 3 naps down to 2 naps by the 9-month mark.</li>
-    <li><strong>Wake Windows:</strong> Most babies can comfortably stay awake for 2.5 to 3.5 hours between sleep periods.</li>
+    <li><strong>Always place your baby on their back to sleep.</strong></li>
+    <li><strong>Use a firm, flat sleep surface</strong> — a crib or bassinet mattress. No inclined sleepers or "nests."</li>
+    <li><strong>Keep the crib empty</strong> — no blankets, pillows, bumpers, or toys. A sleep sack is the safe alternative.</li>
+    <li><strong>Room-share (but do not bed-share)</strong> for at least the first 6 months, and ideally the first year.</li>
   </ul>
-
-  <h2>The Impact of Physical Milestones</h2>
-  <p>At this age, your baby isn't just growing; they are "practicing." It is very common for a 7-month-old to wake up in the middle of the night and immediately pop into a sitting position or try to crawl across the crib. Because these skills are new, they often don't know how to "get back down" to a sleeping position, leading to cries for help.</p>
-  <p><strong>Tip:</strong> Practice "falling down" or moving from sitting to lying down during floor time during the day. This helps them master the motor planning needed to settle themselves back to sleep at night.</p>
-
-  <h2>Separation Anxiety and Sleep</h2>
-  <p>Around 8 or 9 months, babies begin to understand "object permanence"—the idea that you still exist even when you aren't in the room. This awareness, while a great cognitive milestone, often triggers separation anxiety. Your baby may cry the moment you leave the room at bedtime or when they wake up and realize you aren't there. This is a normal phase and a sign of a healthy attachment.</p>
-
-  <h2>Establishing a Consistent Routine</h2>
-  <p>As your baby becomes more aware of the world, a consistent bedtime routine becomes even more important. A predictable sequence of events—such as bath, pajamas, a short story or song, and then into the crib—signals to the brain that it is time to transition to sleep. The AAP recommends that babies be placed in their crib while "drowsy but awake" to help them learn the vital skill of falling asleep independently.</p>
 
   <div class="faq-section">
     <h2>Is This Normal? Common Questions About 6–9 Month Sleep</h2>
@@ -82,13 +101,13 @@ const fSchema = faqSchema(faqs);
   </div>
 
   <div class="callout">
-    <h2>Safe Sleep Reminders</h2>
-    <p>Even as your baby becomes more mobile, safe sleep practices remain critical. Per AAP guidelines:</p>
+    <h2>When should I talk to my pediatrician about my baby's sleep?</h2>
+    <p>Most sleep disruptions at 6–9 months are developmental and temporary. Contact your pediatrician if you notice:</p>
     <ul>
-      <li>Always place your baby on their back to sleep.</li>
-      <li>Use a firm, flat sleep surface (a crib or bassinet mattress).</li>
-      <li>Keep the crib empty—no blankets, pillows, bumpers, or toys.</li>
-      <li>Room-share (but do not bed-share) for at least the first 6 months, and ideally the first year.</li>
+      <li>Signs of sleep apnea — loud snoring, gasping, or long pauses in breathing</li>
+      <li>Extreme difficulty soothing your baby despite consistent routines</li>
+      <li>Persistent waking that you suspect is related to reflux or ear infections</li>
+      <li>Any concerns about your baby's growth or caloric intake during the day</li>
     </ul>
   </div>
 </BaseLayout>

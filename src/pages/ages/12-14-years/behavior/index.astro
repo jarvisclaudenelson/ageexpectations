@@ -2,29 +2,37 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
-const title = '12–14 Year Old Behavior: Understanding Early Adolescent Emotions and Actions';
-const description = 'Understanding early teen behavior — risk-taking, pushing back, emotional intensity, social anxiety, sleep fights, and how to maintain connection while setting effective limits, with AAP guidance.';
+const title = '12–14 Year Old Behavior: Understanding Early Teen Emotions and Actions';
+const description = 'Understanding early teen behavior — risk-taking, impulsivity, emotional intensity, mood swings, social anxiety, and how to maintain connection while setting effective limits. Evidence-based guidance from the AAP.';
 
 const faqs = [
   {
     question: 'Why does my 13-year-old make decisions they clearly knew were wrong?',
-    answer: 'The adolescent brain processes rewards and risks through the limbic system (emotional, reactive) faster than through the prefrontal cortex (logical, planning). In peer-present or emotionally activated situations, the reward-seeking system typically wins — regardless of what teens "know" when calm. This is why teens can explain exactly why something is risky and then do it anyway. The AAP notes this limbic-cortical imbalance is biological and resolves gradually through the mid-20s (AAP, 2022). Structure and reduced exposure to high-risk situations helps more than lectures.'
+    answer: 'The adolescent brain processes rewards and risks through the limbic system (emotional, reactive) faster than through the prefrontal cortex (logical, planning). In peer-present or emotionally activated situations, the reward-seeking system typically wins — regardless of what teens "know" when calm. This is why teens can explain exactly why something is risky and then do it anyway. The AAP notes this limbic-cortical imbalance is biological and resolves through the mid-20s (AAP, 2022). Structure and reduced access to high-risk situations helps more than lectures.',
   },
   {
     question: 'My 14-year-old slams doors and says things like "I hate this family." Is this normal?',
-    answer: 'Behavioral dysregulation of this kind — door-slamming, verbal intensity, dramatic statements — is common in early adolescence (ages 12 to 15) and reflects the combination of hormonal mood reactivity and still-developing emotional regulation. The AAP distinguishes this from abusive behavior: intensity and drama are normal; sustained verbal abuse directed at family members, physical aggression, or destruction of property are not. Address the behavior calmly after the storm, not during it.'
+    answer: 'Behavioral outbursts of this kind — door-slamming, verbal intensity, dramatic statements — are common in early adolescence (ages 12 to 15) and reflect the combination of hormonal mood reactivity and still-developing emotional regulation. The AAP distinguishes this from abusive behavior: intensity and drama are within the range of typical; sustained verbal abuse, physical aggression toward people, or destruction of property are not. Address the behavior after the storm, not during it — reasoning during emotional peak escalates rather than resolves.',
   },
   {
     question: 'How do I handle my 13-year-old\'s extreme social anxiety?',
-    answer: 'Social anxiety is among the most common anxiety disorders in early adolescence, affecting up to 9% of adolescents (NIMH, 2022). Mild self-consciousness is normal at this age; social anxiety is diagnosable when fear of social evaluation prevents participation in normal activities — eating in the school cafeteria, speaking in class, attending social events. If your teen avoids social situations to a degree that significantly impairs their daily life, talk to your pediatrician. Cognitive behavioral therapy (CBT) is the evidence-based first-line treatment and is highly effective for adolescent social anxiety.'
+    answer: 'Social anxiety is among the most common anxiety disorders in early adolescence, affecting up to 9% of adolescents (NIMH, 2022). Mild self-consciousness is typical at this age; social anxiety disorder is present when fear of social evaluation prevents participation in normal activities — eating in the cafeteria, speaking in class, attending social events. If your teen avoids social situations to a degree that significantly impairs daily life, talk to your pediatrician. Cognitive behavioral therapy (CBT) is the evidence-based first-line treatment and is highly effective for adolescent social anxiety.',
   },
   {
     question: 'My 12-year-old has been caught lying repeatedly. What should I do?',
-    answer: 'Deception increases in early adolescence as teens develop the cognitive ability to maintain complex false narratives and the motivation to protect an expanding private life. The AAP recommends responding with calm, direct consequences (not shock or escalating punishment), examining whether your teens feel they cannot tell you the truth without disproportionate consequences, and rebuilding trust incrementally with increasing autonomy as honesty is demonstrated (AAP, 2022). Persistent, elaborate deception that disrupts daily life warrants professional assessment.'
+    answer: 'Deception increases in early adolescence as teens develop the cognitive ability to maintain complex false narratives and the motivation to protect an expanding private life. The AAP recommends responding with calm, direct consequences (not shock or escalating punishment), examining whether your teen feels they cannot tell you the truth without disproportionate consequences, and rebuilding trust incrementally as honesty is demonstrated (AAP, 2022). Persistent, elaborate deception that disrupts daily life and relationships warrants professional assessment.',
   },
   {
-    question: 'Is it normal for my 13-year-old to be intensely moody about school?',
-    answer: 'School-related distress is common in early adolescence. Middle school introduces higher academic demands, complex peer hierarchies, multiple teachers with different expectations, and puberty-related self-consciousness — simultaneously. Periodic frustration, stress, and school-related complaints are expected. Persistent avoidance of school, physical symptoms (headaches, stomachaches) that resolve on weekends, or a significant drop in grades are signs that warrant a deeper look with your pediatrician and the school.'
+    question: 'Is it normal for my 13-year-old to be intensely stressed about school?',
+    answer: 'School-related distress is common in early adolescence. Middle school introduces higher academic demands, complex peer hierarchies, multiple teachers with different expectations, and puberty-related self-consciousness — simultaneously. Periodic frustration, stress, and school complaints are expected. Persistent avoidance of school, physical symptoms (headaches, stomachaches) that resolve on weekends, or a significant drop in grades signal something beyond typical stress that warrants a deeper look with your pediatrician and the school.',
+  },
+  {
+    question: 'How do I know if my 13-year-old\'s moodiness is depression?',
+    answer: 'Typical moodiness is situational (triggered by something), episodic (the teen is fine between episodes), and brief. Clinical depression in adolescents lasts 2 or more weeks with pervasive low mood or irritability, loss of interest in activities previously enjoyed, significant changes in sleep and appetite, and impairment in school and social functioning (DSM-5). The AAP recommends depression screening at all well-child visits starting at age 12 (AAP, 2022). Do not wait until symptoms are obvious — ask your pediatrician if you are unsure.',
+  },
+  {
+    question: 'My 14-year-old has started vaping. How do I respond?',
+    answer: 'Discovering vaping requires a prompt, calm response — not an explosive one. The AAP recommends addressing it as a health concern, not a moral failure: nicotine in e-cigarettes is highly addictive and specifically harmful to the developing adolescent brain, and most teens who vape become dependent faster than adults do (AAP, 2023). Ask your pediatrician about cessation support — the same evidence-based approaches used in adult smoking cessation have been adapted for adolescents. Consequences matter, but withdrawal support matters more.',
   },
 ];
 
@@ -41,62 +49,89 @@ const medicalData = medicalWebPageSchema({
 });
 ---
 
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '12–14 Years', href: '/ages/12-14-years/' }, { label: 'Behavior & Emotions' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '12–14 Years', href: '/ages/12-14-years/' },
+    { label: 'Behavior & Emotions' },
+  ]}
+>
+  <h1>12–14 Year Old Behavior: Understanding Early Teen Emotions and Actions</h1>
 
-  <h1>12–14 Year Old Behavior: Understanding Early Adolescent Emotions and Actions</h1>
-
-  <p class="answer-first">Early adolescent behavior — the emotional intensity, the impulsivity, the dramatic retreats and sudden demands for autonomy — makes more sense when viewed through a developmental lens. The AAP notes that the adolescent brain is wired for heightened emotional reactivity and peer sensitivity before the regulatory systems catch up (AAP, 2022). The behaviors that feel like defiance or disrespect are often the visible output of a brain in active remodeling. That does not mean limits don't apply — it means understanding the neuroscience makes setting them more effective.</p>
+  <p class="answer-first">Early adolescent behavior — the emotional intensity, the impulsivity, the dramatic retreats and sudden demands for autonomy — makes more sense when viewed through a developmental lens. The AAP notes that the adolescent brain is wired for heightened emotional reactivity and peer sensitivity before the regulatory systems catch up (AAP, 2022). Behaviors that feel like defiance or disrespect are often the visible output of a brain in active remodeling. That does not mean limits do not apply — it means understanding the neuroscience makes setting them more effective.</p>
 
   <h2>Why do early teens take risks they clearly know better about?</h2>
 
-  <p class="answer-first">Between ages 12 and 14, the limbic system — which processes rewards, threats, and social signals — matures faster than the prefrontal cortex, which handles impulse control and long-term consequences (AAP, 2022). In low-arousal, private situations, teens reason about risk with surprising sophistication. In high-arousal, peer-present situations, the emotional brain often overrides the rational one. Reducing risk-taking means reducing the conditions that trigger the emotional override — not expecting rational decision-making in situations specifically designed to bypass it.</p>
+  <p class="answer-first">Between ages 12 and 14, the limbic system — which processes rewards, threats, and social signals — matures faster than the prefrontal cortex, which handles impulse control and long-term consequences (AAP, 2022). In quiet, private situations, teens reason about risk with surprising sophistication. In high-arousal, peer-present situations, the emotional brain routinely overrides the rational one. Reducing risk-taking means reducing the conditions that trigger emotional override — not expecting rational decision-making in situations specifically designed to bypass it.</p>
 
-  <p>What reduces risk-taking effectively:</p>
+  <p>What reduces risk-taking more effectively than lectures:</p>
   <ul>
-    <li>Know their friends and friends' parents — peer group context is the strongest predictor of adolescent risk-taking</li>
-    <li>Structure high-risk hours (10 PM to 2 AM is when most adolescent risk behavior occurs)</li>
-    <li>Maintain consistent, warm parental connection — teens with secure parental attachments take fewer risks (AAP, 2022)</li>
-    <li>Teach decision-making skills in low-stakes situations, then gradually raise the stakes</li>
-    <li>Avoid structuring environments that put teens in unsupervised groups with minimal adult accountability</li>
+    <li>Know their friends and friends' parents — peer group context is the strongest predictor of adolescent risk-taking behavior</li>
+    <li>Structure the high-risk hours (unsupervised weekend evenings are when most adolescent risk behavior occurs)</li>
+    <li>Maintain consistent, warm parental connection — teens with secure parental attachments take fewer risks, even when the relationship has friction (AAP, 2022)</li>
+    <li>Teach decision-making skills explicitly in low-stakes situations ("What would you do if..."), then gradually increase the stakes</li>
+    <li>Avoid environments that put teens in unsupervised groups with minimal adult accountability and high social reward potential</li>
   </ul>
 
   <h2>How do I set limits that actually work with a 12 to 14 year old?</h2>
 
-  <p class="answer-first">Limit-setting with early teens works through connection, not control. Research cited by the AAP consistently shows that authoritative parenting — high warmth combined with clear, consistent limits and reasonable autonomy — produces better adolescent outcomes than authoritarian (high control, low warmth) or permissive (high warmth, low limits) approaches (AAP, 2022). Teens who feel genuinely heard and respected by parents are more likely to follow family rules, even when they disagree with them.</p>
+  <p class="answer-first">Limit-setting with early teens works through connection, not pure control. Research cited by the AAP consistently shows that authoritative parenting — high warmth combined with clear, consistent limits and reasonable autonomy — produces better adolescent outcomes than authoritarian (high control, low warmth) or permissive approaches (AAP, 2022). Teens who feel heard and respected by parents are more likely to follow family rules, even when they disagree. Teens who experience only power-based limit-setting look for ways to circumvent it.</p>
 
   <p>Effective limit-setting principles for this age:</p>
   <ul>
-    <li>Distinguish safety limits (non-negotiable) from preference limits (negotiable with good judgment)</li>
-    <li>Explain reasoning briefly and honestly — "because I said so" reliably backfires at this age</li>
-    <li>Offer genuine autonomy where it is appropriate, to preserve credibility on limits that matter</li>
-    <li>Follow through consistently — inconsistency teaches teens that sufficient pressure eventually works</li>
-    <li>Avoid power struggles over minor preferences (clothing, music, room decor) — save the capital for what matters</li>
-    <li>Pick up conflicts after both parties are calm — not in the middle of an argument</li>
+    <li>Distinguish safety limits (non-negotiable) from preference limits (negotiable with demonstrated judgment)</li>
+    <li>Explain reasoning briefly and honestly — "because I said so" reliably increases defiance at this age</li>
+    <li>Offer genuine autonomy in lower-stakes areas (clothing, hobbies, room decor) to preserve credibility on limits that actually matter</li>
+    <li>Follow through consistently — inconsistency teaches teens that enough pressure eventually works</li>
+    <li>Address conflict after both parties are calm — not in the middle of an argument</li>
+    <li>Repair quickly after conflict: "I'm sorry I yelled. I love you. Can we talk about this differently?"</li>
   </ul>
 
   <h2>How do I recognize depression versus normal moodiness in my 13-year-old?</h2>
 
-  <p class="answer-first">Typical adolescent moodiness is situational (triggered by something specific), episodic (the teen has periods of being fine), and does not significantly impair functioning. Clinical depression in adolescents lasts two or more weeks with pervasive low mood or irritability, loss of interest in previously enjoyed activities, significant changes in sleep and appetite, and impairment in school and social functioning (DSM-5). The AAP recommends depression screening at all well-child visits starting at age 12 (AAP, 2022). Do not wait until it is obvious.</p>
+  <p class="answer-first">Typical adolescent moodiness is situational (triggered by a specific event), episodic (the teen has periods of being fine), and does not significantly impair functioning. Clinical depression in adolescents lasts 2 or more weeks with pervasive low mood or irritability, loss of interest in all previously enjoyed activities, significant sleep and appetite changes, and impairment in school and social life (DSM-5). The AAP recommends depression screening at all well-child visits starting at age 12 (AAP, 2022). Depression in this age range is treatable — the obstacle is usually identifying it.</p>
 
   <ul>
-    <li><strong>Typical moodiness:</strong> Situational, episodic, teen recovers and engages normally between episodes</li>
-    <li><strong>Depression warning signs:</strong> Persistent sadness or irritability for 2+ weeks, loss of interest in everything, sleep and appetite changes, withdrawal from all social contact, academic decline</li>
-    <li><strong>Emergency signs:</strong> Talking about death or not wanting to be alive, giving away possessions, self-harm behavior — seek help immediately</li>
+    <li><strong>Typical moodiness:</strong> Situational, episodic, teen recovers and engages normally between episodes, responds to comfort or distraction</li>
+    <li><strong>Depression warning signs:</strong> Persistent sadness or irritability for 2+ weeks, loss of interest in everything, sleep and appetite changes, withdrawal from all social contact, decline in school performance</li>
+    <li><strong>Emergency signs:</strong> Any talk of suicide or self-harm — seek help immediately; do not wait to see if it passes</li>
   </ul>
+
+  <h2>How do I maintain my relationship with my early teen when they pull away?</h2>
+
+  <p class="answer-first">Teens pulling away from parents while orienting toward peers is developmentally appropriate and necessary for identity formation. The AAP identifies the quality of the parent-child relationship during early adolescence as one of the strongest predictors of adolescent mental health outcomes — the relationship matters even when it does not look like it does (AAP, 2022). Low-key, side-by-side activities (driving, cooking, watching their preferred show) work better than formal "let's talk" conversations. Brief, regular contact beats infrequent intense conversations.</p>
+
+  <ul>
+    <li>Maintain shared routines (family dinner, car rides) that create connection without demanding it</li>
+    <li>Ask specific, interest-based questions: "Who'd you sit with at lunch?" not "How was school?"</li>
+    <li>Know their friends by name — this signals you are interested in their actual life, not just managing them</li>
+    <li>Be available without demanding time — teens come to parents when they feel safe, not obligated</li>
+    <li>Repair conflict quickly — the relationship matters more than being right in any individual argument</li>
+  </ul>
+
+  <h2>How do I handle my early teen's growing need for privacy?</h2>
+
+  <p class="answer-first">Between ages 12 and 14, children develop a private inner life — thoughts, feelings, and experiences they do not share with parents. This is healthy identity development. The AAP recommends distinguishing between privacy (which supports development) and secrecy that endangers safety (AAP, 2022). Knock before entering. Avoid reading journals or texts without a specific safety reason. Allow private conversations with friends. Maintain visibility into online activity through openly stated family safety practices — not covert monitoring, which damages trust while rarely improving safety.</p>
 
   <div class="callout">
     <h2>When should I seek professional help for my 12 to 14 year old's behavior?</h2>
-    <p class="answer-first">Contact your pediatrician if behavioral issues are escalating rather than improving, if anxiety prevents participation in school or normal social activities, if depression symptoms persist for 2 or more weeks, or if you observe any self-harm, substance use, or dangerous risk-taking (AAP, 2022).</p>
+    <p class="answer-first">Contact your pediatrician if behavioral issues escalate rather than improve over several weeks, if anxiety prevents participation in school or normal social activities, if depression symptoms persist for 2 or more weeks, or if you observe self-harm, substance use, or dangerous risk-taking (AAP, 2022).</p>
     <p>Seek immediate help for:</p>
     <ul>
-      <li>Any talk of suicide, self-harm, or not wanting to be alive — call 988 or go to the nearest emergency room</li>
-      <li>Self-harm behaviors — cutting, burning, or other injury</li>
-      <li>Complete refusal to attend school for more than a week without medical reason</li>
-      <li>Suspected substance dependence — not just experimentation</li>
+      <li><strong>Any talk of suicide or self-harm:</strong> Call 988 (Suicide and Crisis Lifeline) or go to the nearest emergency room — this is never a phase to wait out</li>
+      <li><strong>Self-harm behaviors:</strong> Cutting, burning, or other self-injury — requires professional evaluation, not only parental conversation and consequences</li>
+      <li><strong>Complete refusal to attend school for more than a week without medical reason:</strong> School refusal almost always reflects treatable anxiety, depression, or social problems</li>
+      <li><strong>Suspected substance dependence:</strong> Daily use, using alone, inability to stop despite wanting to — contact your pediatrician immediately</li>
+      <li><strong>Signs of an eating disorder:</strong> Significant food restriction, excessive exercise, or purging behavior — early intervention dramatically improves outcomes</li>
+      <li><strong>Cyberbullying that causes distress:</strong> Document it, report to the platform and school, and talk to your pediatrician if your teen shows signs of depression or anxiety in response</li>
     </ul>
   </div>
 
-  <div class="faq-section">
+  <section class="faq-section">
     <h2>Frequently Asked Questions: 12 to 14 Year Old Behavior</h2>
 
     {faqs.map(faq => (
@@ -105,7 +140,7 @@ const medicalData = medicalWebPageSchema({
         <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
-  </div>
+  </section>
 
   <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 
