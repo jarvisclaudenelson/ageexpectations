@@ -2,37 +2,45 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
-const title = '14–18 Year Old Sleep: How Much Sleep Do Teenagers Need?';
-const description = 'Teens ages 14 to 18 need 8 to 10 hours of sleep per night, but most get 6 to 7. Puberty\'s circadian phase shift, early school start times, and screens combine to create chronic sleep debt in most high schoolers. Learn the science, the bedtime guidelines, and the practical fixes.';
+const title = 'Teen Sleep (Ages 14–18): How Much Do Teenagers Need and Why Is It So Hard?';
+const description = 'Teens ages 14 to 18 need 8–10 hours of sleep per night. In 2023, 77% of US high schoolers got insufficient sleep — up from 69% in 2007. Puberty\'s circadian phase shift, early school start times, and screens create a structural sleep deficit. Learn the science, the bedtime targets, and evidence-based fixes backed by AAP 2016/2022 and CDC data.';
 
 const faqs = [
   {
     question: 'What time should a 16-year-old go to bed?',
-    answer: 'A 16-year-old who must wake at 6:30 AM for school needs to be asleep by 10:00 to 10:30 PM to get the 8 to 10 hours the AAP recommends (AAP, 2016). The biological sleep phase delay of mid-adolescence makes falling asleep before 10:00 to 11:00 PM genuinely difficult for most 16-year-olds. A 10:00 to 10:30 PM lights-out, maintained consistently seven days a week with screens off by 9:30 PM, is more effective than forcing a 9:00 PM bedtime the teen cannot meet.',
+    answer: 'A 16-year-old who must wake at 6:30 AM for school needs to be asleep by 10:00 to 10:30 PM to get the 8 to 10 hours the AAP recommends (AAP, 2016). The biological sleep phase delay of mid-adolescence makes falling asleep before 10:00 to 11:00 PM genuinely difficult for most 16-year-olds — melatonin release does not start until 10:30 to 11:00 PM for many teens in this age range. A 10:00 to 10:30 PM lights-out maintained consistently seven days a week, with screens off by 9:30 PM, produces better outcomes than a 9:00 PM target the teen cannot meet most nights.',
   },
   {
     question: 'How much sleep does a 17-year-old need?',
-    answer: 'The AAP recommends 8 to 10 hours per night for adolescents ages 13 to 18 (AAP, 2016). Most 17-year-olds average 6 to 7 hours on school nights. Research links this deficit to impaired cognitive performance equivalent to 1 to 2 days without sleep, decreased academic performance, emotional dysregulation, higher rates of depression, greater risk of drowsy driving, and compromised immune function. A 17-year-old who consistently gets 8.5 hours performs, feels, and behaves meaningfully better than one who consistently gets 6.5 hours.',
+    answer: 'The AAP recommends 8 to 10 hours per night for adolescents ages 13 to 18 (AASM/AAP, 2016). Most 17-year-olds average 6 to 7 hours on school nights — well below the minimum. Research links this deficit to cognitive impairment equivalent to 1 to 2 days of total sleep deprivation, lower GPA, doubled rates of depression, higher drowsy-driving risk, and compromised immune function (AAP, 2022). A 17-year-old who consistently gets 8.5 hours performs, feels, and behaves measurably better than one who consistently gets 6.5 hours.',
   },
   {
     question: 'Is it normal for my 15-year-old to stay up until 1 AM and still not feel tired?',
-    answer: 'This pattern is common in mid-adolescence and has a biological basis. Puberty shifts the circadian rhythm 1 to 3 hours later — melatonin release genuinely does not begin until 10:30 to 11:30 PM in many teens ages 14 to 17 (AAP, 2014). Combined with screen use that suppresses melatonin further, many teens cannot fall asleep before 11:30 PM to 1:00 AM despite wanting to. Sleep onset consistently after midnight despite consistent sleep hygiene efforts may indicate Delayed Sleep Phase Syndrome — discuss it with your pediatrician.',
+    answer: 'This is common in mid-adolescence and has a direct biological cause. Puberty shifts the circadian rhythm 1 to 3 hours later — melatonin release does not begin until 10:30 to 11:30 PM in many teens ages 14 to 17 (AAP, 2014). Combined with screen use that suppresses melatonin further, many teens cannot fall asleep before midnight to 1:00 AM despite wanting to. Sleep onset consistently after midnight despite consistent sleep hygiene may indicate Delayed Sleep Phase Syndrome (DSPS), a distinct circadian disorder — discuss with your pediatrician.',
   },
   {
-    question: 'My 18-year-old sleeps until noon on weekends. Should I make them get up?',
-    answer: 'Weekend sleep-ins of 3 or more hours past the weekday wake time signal chronic weekday sleep deprivation. "Sleeping in" is the body recovering from accumulated sleep debt, not laziness. The problem is that very late weekend sleep resets the circadian clock to a later schedule, making Monday mornings worse. A reasonable goal: weekend wake times within 60 to 90 minutes of weekday wake times. Allow 1 to 2 hours of extra sleep to recover — not 4 to 5. A consistent wake time, even on weekends, is the most powerful circadian anchor available.',
+    question: 'My 18-year-old sleeps until noon on weekends. Should I wake them?',
+    answer: 'Weekend sleep-ins of 3 or more hours past the weekday wake time signal chronic weekday sleep deprivation. The body is recovering accumulated debt — this is not laziness. The problem: very late weekend sleep resets the circadian clock later, making Monday mornings harder. A reasonable approach: allow 1 to 1.5 extra hours of recovery sleep on weekends, but wake within 90 minutes of the school-day time on Sunday. A consistent wake time — even on weekends — is the most powerful circadian anchor available (AAP, 2016).',
   },
   {
-    question: 'Does screen time before bed really affect teen sleep that much?',
-    answer: 'Yes — and the evidence is strong. Blue light from screens (phones, tablets, computers, and LED TVs) suppresses melatonin production for 60 to 90 minutes after exposure, delaying sleep onset even in teens already experiencing the pubertal phase delay (AAP, 2016). A teen who scrolls social media until 11:00 PM may not feel sleepy until midnight or later. Beyond the blue light effect, the psychological stimulation of social media, news, and gaming keeps the nervous system in an alert state incompatible with sleep onset. Devices off 60 to 90 minutes before target sleep is the evidence-based standard.',
+    question: 'Does screen time before bed really affect teen sleep?',
+    answer: 'Yes — and the evidence is strong. Blue light from screens suppresses melatonin production for 60 to 90 minutes after exposure, delaying sleep onset in teens already experiencing the pubertal phase delay (AAP, 2016). A teen scrolling social media until 11:00 PM may not feel sleepy until midnight or later. Beyond blue light, the psychological stimulation of social media, news, and gaming keeps the nervous system in an alert state incompatible with sleep onset. Devices off 60 to 90 minutes before target sleep is the evidence-based standard — not just dimmed.',
   },
   {
-    question: 'Can teens "catch up" on sleep by sleeping in on weekends?',
-    answer: 'Partial recovery is possible but not complete. Research shows that cognitive performance partially recovers with recovery sleep after sleep deprivation. However, chronic sleep restriction (months of getting 6 hours when 8 are needed) causes neural changes that do not fully reverse with weekend recovery (Van Dongen et al., 2003). The practical problem: "catching up" with 4-hour sleep-ins shifts the circadian clock later, creating social jet lag that makes the following week worse. The sustainable fix is incrementally shifting bedtime and wake time earlier — not weekend binges.',
+    question: 'Can teenagers "catch up" on sleep by sleeping in on weekends?',
+    answer: 'Partial recovery is possible but incomplete. Cognitive performance partially recovers with recovery sleep after acute deprivation. However, months of getting 6 hours when 8 are needed causes neural changes that do not fully reverse with weekend recovery (Van Dongen et al., 2003). The practical problem: 4-hour weekend sleep-ins shift the circadian clock later, creating social jet lag that makes the following week worse. The fix is incrementally shifting bedtime and wake time earlier by 15 minutes per week — not weekend binges that reset progress.',
   },
   {
-    question: 'Should I let my 16-year-old drink coffee to stay alert at school?',
-    answer: 'Modest caffeine use (one moderate-sized coffee in the morning) is not dangerous for most healthy 16-year-olds, but it is not a fix for sleep deprivation. Caffeine masks sleepiness without restoring the cognitive functions that sleep deprivation impairs — attention, memory consolidation, emotional regulation, and decision-making. The AAP notes that caffeine dependence can develop in adolescents and that energy drinks (which contain far more caffeine than coffee) are specifically linked to sleep disruption and increased anxiety in teens (AAP, 2011). Caffeine after 2:00 to 3:00 PM reliably disrupts sleep onset.',
+    question: 'Should my 16-year-old drink coffee to stay alert at school?',
+    answer: 'One moderate coffee in the morning is not dangerous for most healthy 16-year-olds, but it does not fix sleep deprivation. Caffeine masks sleepiness without restoring the cognitive functions sleep loss impairs — attention, memory consolidation, emotional regulation, and decision-making. The AAP links energy drinks specifically to sleep disruption and increased anxiety in teens (AAP, 2011). Energy drinks contain far more caffeine than coffee and often add stimulants. Caffeine after 2:00 to 3:00 PM reliably disrupts sleep onset that night.',
+  },
+  {
+    question: 'What percentage of teenagers do not get enough sleep?',
+    answer: 'In 2023, 77% of US high school students reported insufficient sleep on school nights — up from 69% in 2007 (Adolescent Behavior and Cognitive Development Study, 2025). The proportion sleeping 5 hours or fewer rose from 16% to 23% in the same period. The CDC recommends 8 to 10 hours for teens ages 13 to 18; fewer than 1 in 4 American high schoolers consistently meets this threshold. This is not an individual failure — it is a structural mismatch between adolescent biology and school scheduling.',
+  },
+  {
+    question: 'Does the AAP recommend that schools start later for teens?',
+    answer: 'Yes. The AAP strongly recommends that middle and high schools begin no earlier than 8:30 AM to align with adolescent circadian biology (AAP, 2014). Studies on later start times show increased sleep duration, reduced tardiness, improved GPA, fewer car crashes among teen drivers, and lower rates of depression. The majority of US high schools still start before 8:00 AM — a structural policy problem with documented health consequences. The AAP classifies insufficient sleep in adolescents as a public health issue.',
   },
 ];
 
@@ -40,12 +48,15 @@ const articleData = articleSchema({
   title,
   description,
   url: 'https://ageexpectations.com/ages/14-18-years/sleep/',
+  datePublished: '2026-03-19',
+  dateModified: '2026-03-19',
 });
 const faqData = faqSchema(faqs);
 const medicalData = medicalWebPageSchema({
   name: title,
   description,
   url: 'https://ageexpectations.com/ages/14-18-years/sleep/',
+  lastReviewed: '2026-03-19',
 });
 ---
 
@@ -60,20 +71,22 @@ const medicalData = medicalWebPageSchema({
     { label: 'Sleep' },
   ]}
 >
-  <h1>14–18 Year Old Sleep: How Much Sleep Do Teenagers Need?</h1>
+  <h1>Teen Sleep (Ages 14–18): How Much Do Teenagers Need and Why Is It So Hard?</h1>
 
-  <p class="answer-first">Teenagers ages 14 to 18 need 8 to 10 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). Most high schoolers get 6 to 7 hours on school nights. This is not a preference gap or a discipline problem — puberty shifts the biological circadian clock 1 to 3 hours later, early school start times force early wake-ups, and screens push sleep onset even later. The result is that most American high schoolers are chronically, measurably sleep-deprived. The consequences are real and affect academic performance, mental health, and physical safety.</p>
+  <p class="answer-first">Teenagers ages 14 to 18 need 8 to 10 hours of sleep per night, per the American Academy of Pediatrics (AAP, 2016). In 2023, 77% of US high school students did not get enough sleep — up from 69% in 2007. This is not a discipline problem. Puberty shifts the biological clock 1 to 3 hours later, most schools start before 8:00 AM, and screens suppress melatonin further. The result is structural, chronic sleep deprivation with documented effects on academic performance, mental health, and physical safety.</p>
 
-  <h2>How much sleep do teenagers ages 14 to 18 actually need?</h2>
+  <h2>How many hours of sleep do teenagers ages 14 to 18 need?</h2>
 
-  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 8 to 10 hours of sleep per night for teens ages 13 to 18 (AAP, 2016). The optimal amount within that range varies by individual, but a practical test: a well-rested teen wakes without significant difficulty most mornings, has stable energy and mood through the day, and does not need caffeine to function. Research shows that teens who consistently sleep 9 hours outperform those who sleep 7 hours on attention, memory, reaction time, mood stability, and academic performance — not trivially, but by significant, measurable margins (AAP, 2022).</p>
+  <p class="answer-first">The American Academy of Sleep Medicine (AASM) and the AAP both recommend 8 to 10 hours of sleep per night for teens ages 13 to 18 (AASM Consensus Statement, 2016; AAP, 2016). A practical benchmark: a well-rested teen wakes without significant difficulty most mornings, holds stable energy and mood through the afternoon, and does not need caffeine to function. Teens who consistently sleep 9 hours outperform those who sleep 7 hours on attention, memory, reaction time, mood stability, and GPA — by significant, measurable margins (AAP, 2022).</p>
 
   <p>Sleep needs by subgroup within this range:</p>
   <ul>
-    <li><strong>Ages 14 to 15:</strong> Most still benefit from 9 hours. The circadian phase delay is typically near its peak. School nights often limit sleep to 6.5 to 7.5 hours without intervention.</li>
-    <li><strong>Ages 16 to 17:</strong> 8 to 9.5 hours. Circadian delay remains strong. Driving fatigue (a specific risk for this group) is dramatically higher at 6 hours versus 8 hours of sleep.</li>
-    <li><strong>Age 18:</strong> 8 to 9 hours. Identity and schedule may be shifting (senior year, college transition). Sleep habits established at this age often persist into young adulthood.</li>
+    <li><strong>Ages 14 to 15:</strong> Most benefit from 9 hours. The circadian phase delay is near its peak in mid-puberty. School nights often restrict sleep to 6.5 to 7.5 hours without active intervention.</li>
+    <li><strong>Ages 16 to 17:</strong> 8 to 9.5 hours. Circadian delay remains strong. Drowsy driving — a specific safety risk for new drivers — is dramatically more common at 6 hours versus 8 hours of sleep.</li>
+    <li><strong>Age 18:</strong> 8 to 9 hours. The phase delay begins to ease slightly. Sleep habits formed here carry directly into college and young adulthood; this age is a high-leverage intervention point.</li>
   </ul>
+
+  <p><strong>How widespread is teen sleep deprivation?</strong> In 2023, 77% of US high school students reported insufficient sleep — up from 69% in 2007. The proportion sleeping 5 hours or fewer rose from 16% to 23% in the same period (Adolescent Brain Cognitive Development Study, 2025). Fewer than 1 in 4 American high schoolers consistently meets the AAP's 8-to-10-hour recommendation on school nights.</p>
 
   <h2>Why do teenagers have such a hard time going to sleep at night?</h2>
 

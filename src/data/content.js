@@ -188,6 +188,12 @@ export const articles = [
     image: "/images/pins/14-18-years-overview.png",
   },
   {
+    title: "Teen Sleep (Ages 14–18): How Much Do Teenagers Need and Why Is It So Hard?",
+    description: "Teens ages 14–18 need 8–10 hours of sleep per night. In 2023, 77% of US high schoolers got insufficient sleep. Puberty's circadian phase shift, early school start times, and screens create a structural sleep deficit. Learn the science, bedtime targets, and evidence-based fixes backed by AAP 2016/2022 and CDC data.",
+    path: "/ages/14-18-years/sleep/",
+    pubDate: "2026-03-19",
+  },
+  {
     title: "6–9 Month Old Feeding: Starting Solids and What to Expect",
     description: "Introducing solid foods is a major milestone for your 6–9 month old. Learn about signs of readiness, best first foods, safe allergen introduction, and why milk remains the primary source of nutrition.",
     path: "/ages/6-9-months/feeding/",
