@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'Warning Signs in a 10 to 12 Year Old: When to Talk to Your Pediatrician';
+const description = 'Behavior changes in tweens ages 10 to 12 can be hard to read — some are typical puberty, others are real warning signs. Learn the specific red flags for depression, anxiety, learning differences, and social struggles at this age, with AAP-backed guidance on when to call your pediatrician.';
+
+const faqs = [
+  {
+    question: 'My 11-year-old has been sad and withdrawn for two weeks. Is this just puberty?',
+    answer: 'Duration and functional impact are the key distinctions. Typical tween moodiness is brief — tied to a specific event and resolving within hours or days. When sadness, withdrawal, or irritability persists for 2 or more consecutive weeks and affects school, friendships, or daily activities, that crosses the threshold for a pediatrician evaluation (AAP, 2022). Do not wait to see if it resolves on its own — early intervention produces significantly better outcomes than delayed treatment.',
+  },
+  {
+    question: 'Is it normal for a 10-year-old to talk about not wanting to go to school every day?',
+    answer: 'Occasional school reluctance is typical. Daily resistance, especially when accompanied by physical complaints (stomachaches, headaches) that resolve when the child stays home, is a red flag for anxiety — most commonly social anxiety or generalized anxiety disorder, which peak onset in the 10 to 12 age range (CDC, 2022). School avoidance that is allowed to continue typically worsens. Contact your pediatrician if school refusal has occurred more than 3 to 4 times in a month or is escalating in intensity.',
+  },
+  {
+    question: 'Should I be worried that my 12-year-old has stopped hanging out with friends?',
+    answer: 'Social withdrawal in a previously social child is one of the most important red flags at this age. The AAP identifies at least one close friendship during early adolescence as a protective mental health factor (AAP, 2022). Withdrawal from all peer relationships — not just preferring fewer friends — warrants attention. Ask your child directly and gently how things are going with their friends. If they report conflict, bullying, rejection, or simply not caring about people they used to enjoy, raise this with their pediatrician.',
+  },
+  {
+    question: 'My 10-year-old is perfectionist to the point of meltdowns over homework. Is that anxiety?',
+    answer: 'Extreme perfectionism combined with significant emotional distress — meltdowns, crying, or refusing to submit work they fear is imperfect — is a behavioral presentation of anxiety in this age group. Approximately 7% of children ages 3 to 17 meet criteria for an anxiety disorder, and the 10 to 12 range is one of the peak onset windows (CDC, 2022). Perfectionism at this level also increases burnout risk. If homework-related meltdowns occur weekly or are escalating in intensity, discuss it with your pediatrician.',
+  },
+  {
+    question: 'When is it okay to wait and see versus call the pediatrician right away?',
+    answer: 'Wait and see is appropriate for isolated, brief episodes clearly tied to specific stressors — a hard test week, a friendship conflict that resolves. Call your pediatrician within a week if any warning sign has persisted for 2 or more weeks, if your child mentions self-harm or not wanting to be here, or if functioning has declined at school, home, or with friends. Go to the emergency room immediately or call 911 if your child expresses suicidal thoughts, makes a plan, or self-harms.',
+  },
+  {
+    question: 'My 11-year-old\'s grades dropped significantly this quarter. What could cause this?',
+    answer: 'Sudden academic decline across multiple subjects can reflect a mental health concern (depression, anxiety, or trauma), a learning difference newly outpacing coping strategies as demands increase, ADHD symptoms becoming more impairing as middle school requires more independent organization, or a social problem (bullying, peer conflict, or social rejection) consuming cognitive resources. The AAP recommends investigating a sustained grade drop with both the school and your pediatrician — not assuming it is effort or motivation (AAP, 2022).',
+  },
+  {
+    question: 'Is it normal for a 10-year-old to talk about death or dying?',
+    answer: 'Children ages 10 to 12 naturally develop a more mature understanding of death — understanding it is permanent, universal, and will happen to them and people they love. Asking questions about death and expressing some fear or sadness about mortality is developmentally normal at this age. What is not typical: expressing that they wish they were dead, that others would be better off without them, or that they have thought about hurting themselves. Any of these statements — even once, even framed as "just kidding" — require immediate, calm, direct follow-up and same-day contact with your pediatrician.',
+  },
+  {
+    question: 'What are the signs that my tween might be being bullied?',
+    answer: 'Tweens being bullied often do not tell parents directly. Warning signs include unexplained changes in mood after school or after being on devices, reluctance to attend school or specific classes, missing possessions or unexplained need for money, withdrawing from friends they previously enjoyed, or declining interest in activities they used to love. The AAP recommends creating low-pressure opportunities for conversation — side-by-side activities, car rides — rather than direct questioning, which tweens often deflect (AAP, 2022). If you suspect bullying, start with the school counselor.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/red-flags/',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/red-flags/',
+  lastReviewed: '2026-03-20',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '10–12 Years', href: '/ages/10-12-years/' },
+    { label: 'Red Flags & Warning Signs' },
+  ]}
+>
+  <h1>Warning Signs in a 10 to 12 Year Old: When to Talk to Your Pediatrician</h1>
+
+  <p class="answer-first">Tween behavior is hard to read. Many changes between ages 10 and 12 — mood swings, withdrawal, arguments, declining grades — are typical responses to puberty and the social complexity of middle school. But some of the same behaviors are early signs of depression, anxiety, learning differences, or social crises that respond much better to early intervention than to waiting. This guide covers the specific, observable warning signs the AAP identifies for this age group, and when to pick up the phone.</p>
+
+  <h2>What are the key red flags for depression in a 10 to 12 year old?</h2>
+
+  <p class="answer-first">Depression in children ages 10 to 12 most often presents as persistent irritability or anger rather than sadness — which is why it is frequently missed in this age group (AAP, 2022). A depressed 11-year-old may seem angry, reactive, and difficult rather than visibly sad. The clinical threshold is 5 or more of the following symptoms present most days for 2 or more consecutive weeks, including either depressed/irritable mood or loss of interest as one of the five (DSM-5, APA).</p>
+
+  <p>Depression warning signs in 10 to 12 year olds:</p>
+  <ul>
+    <li><strong>Persistent irritability, anger, or sadness</strong> most days for 2+ weeks — not episodic or tied to specific events</li>
+    <li><strong>Loss of interest or pleasure</strong> in activities they used to enjoy — sports, gaming, creative pursuits, time with friends</li>
+    <li><strong>Social withdrawal</strong> — declining invitations, spending more time alone, pulling away from close friends</li>
+    <li><strong>Declining grades</strong> or loss of motivation across multiple subjects without an identifiable academic explanation</li>
+    <li><strong>Sleep changes</strong> — oversleeping significantly, or persistent difficulty falling asleep</li>
+    <li><strong>Fatigue and low energy</strong> that does not resolve with rest and is disproportionate to activity level</li>
+    <li><strong>Appetite or weight changes</strong> — eating noticeably more or less than before over several weeks</li>
+    <li><strong>Physical complaints without clear medical cause</strong> — recurring headaches, stomachaches, or muscle aches</li>
+    <li><strong>Negative self-talk</strong> — excessive self-criticism, statements of worthlessness, hopelessness about the future</li>
+    <li><strong>Any talk of self-harm, dying, or not wanting to be here</strong> — even framed as a joke or hypothetical (see emergency section below)</li>
+  </ul>
+
+  <p>The AAP recommends depression screening at every annual well-child visit starting at age 12 using the PHQ-A (Patient Health Questionnaire for Adolescents), a validated 9-question self-report tool (USPSTF, 2016). If your child is approaching 12 and you have concerns, ask the pediatrician to screen at the next visit. Do not wait for the annual.</p>
+
+  <h2>What are the red flags for anxiety in a 10 to 12 year old?</h2>
+
+  <p class="answer-first">Anxiety in the 10 to 12 age range is most often behavioral and physical rather than verbal — meaning children often do not say "I feel anxious." They develop stomachaches before school, find reasons to avoid situations that previously posed no difficulty, seek constant reassurance, and become irritable or explosive when pressed to engage with feared situations (AACAP, 2020). Anxiety disorders affect approximately 9% of children ages 3 to 17 in the U.S., and ages 10 to 12 are a peak onset window (CDC, 2022).</p>
+
+  <p>Anxiety warning signs in 10 to 12 year olds:</p>
+  <ul>
+    <li><strong>School avoidance or refusal</strong> — the single strongest behavioral red flag at this age; recurring absences driven by physical complaints (stomachaches, headaches) that resolve when the child stays home</li>
+    <li><strong>Recurring physical complaints without medical cause</strong> — particularly on school mornings, before tests, or before social situations</li>
+    <li><strong>Avoidance of previously manageable situations</strong> — social events, class participation, trying new activities, or any situation with perceived risk of embarrassment</li>
+    <li><strong>Excessive reassurance-seeking</strong> — repeatedly asking "Will I be okay? What if something goes wrong?" despite calm answers</li>
+    <li><strong>Perfectionism leading to distress</strong> — meltdowns over errors, refusing to submit imperfect work, extreme distress about grades</li>
+    <li><strong>Sleep problems</strong> — difficulty falling asleep due to worry, intrusive anxious thoughts at bedtime despite being tired</li>
+    <li><strong>Rigid routines or checking behaviors</strong> — rituals designed to prevent feared outcomes that take more than a few minutes or cause distress when disrupted</li>
+    <li><strong>Irritability or explosive reactions</strong> when pushed toward avoided situations — anger as a cover for anxiety</li>
+    <li><strong>Social anxiety</strong> — fear of saying something wrong, intense self-consciousness, avoidance of group activities or new social situations</li>
+  </ul>
+
+  <h2>What are the warning signs of learning differences at this age?</h2>
+
+  <p class="answer-first">The 10 to 12 age range is when many learning differences become newly impairing even when they were previously manageable. Academic demands increase sharply in middle school — more independent organization, longer-form writing, multi-step problem solving, and less teacher scaffolding — and children who were compensating adequately in elementary school may begin to fall behind (AAP, 2022). A sustained decline in a previously solid student, disproportionate effort for output, or growing homework avoidance are the most telling signs.</p>
+
+  <p>Red flags for learning differences in 10 to 12 year olds:</p>
+  <ul>
+    <li><strong>Dyslexia:</strong> Reading that remains effortful and slow despite years of instruction; significant gap between what the child understands when hearing text read aloud versus reading independently; avoidance of all reading tasks</li>
+    <li><strong>Dysgraphia:</strong> Writing that is illegible or extremely slow; significant gap between verbal ability and written output; refusal or extreme distress around writing tasks</li>
+    <li><strong>Dyscalculia:</strong> Persistent confusion with basic math facts beyond what peers demonstrate; difficulty with time, money, and everyday number concepts</li>
+    <li><strong>ADHD:</strong> Organizational and executive function problems appearing in multiple settings (home AND school, not just one); work that is frequently incomplete, lost, or forgotten; difficulty sustaining attention that is more pronounced than peers; acting before thinking leading to social consequences (AAP ADHD guidelines, 2019)</li>
+  </ul>
+
+  <p>Formal evaluation through a school psychologist or private neuropsychologist can identify learning differences and unlock accommodations (504 plans, IEPs). The AAP recommends formal evaluation when concerns persist despite classroom interventions (AAP, 2022). You can request an evaluation through your school district at no cost under federal IDEA law — put the request in writing.</p>
+
+  <h2>What social warning signs should parents watch for?</h2>
+
+  <p class="answer-first">Social development between ages 10 and 12 is intense and often difficult — peer hierarchies are forming, social acceptance becomes more important than at any prior life stage, and bullying (including cyberbullying) is most prevalent in middle school. The AAP identifies at least one close peer friendship during early adolescence as a mental health protective factor (AAP, 2022). Sustained social isolation — especially in a child who previously had friendships — is one of the most important warning signs of this age group.</p>
+
+  <p>Social red flags in 10 to 12 year olds:</p>
+  <ul>
+    <li>Complete withdrawal from all peer relationships that previously existed</li>
+    <li>Reports of being excluded, rejected, or having no friends at school</li>
+    <li>Mood changes after school or after device use that suggest peer conflict or online problems</li>
+    <li>Missing possessions, unexplained requests for money, or visible anxiety about going to school that is social rather than academic in origin (possible bullying)</li>
+    <li>Sudden change in friend group accompanied by new, risky behaviors or secrecy — possible negative peer influence</li>
+    <li>Online activity that is concealed, involves significant time, and produces mood deterioration — possible cyberbullying target or exposure to harmful content</li>
+    <li>Signs of being bullied: torn or damaged belongings, unexplained bruises, reluctance to discuss what happened at school</li>
+  </ul>
+
+  <h2>When should I call my pediatrician — and when is it an emergency?</h2>
+
+  <div class="callout">
+    <p class="answer-first"><strong>Call your pediatrician this week</strong> if your 10 to 12 year old has shown 3 or more warning signs from the sections above for 2 or more consecutive weeks, is missing school regularly, has completely withdrawn from friends, or has expressed negative self-talk about being worthless or hopeless.</p>
+
+    <p><strong>Call your pediatrician today or go to the emergency room immediately</strong> if your child:</p>
+    <ul>
+      <li>Mentions wanting to die, not wanting to be here, or that others would be better off without them — even once, even framed as "just kidding"</li>
+      <li>Has engaged in any self-harm (cutting, hitting themselves, burning)</li>
+      <li>Is giving away prized possessions or saying goodbye in unusual ways</li>
+      <li>Seems suddenly, inexplicably calm after a period of severe distress — which can paradoxically signal a decision has been made</li>
+    </ul>
+
+    <p><strong>The 988 Suicide and Crisis Lifeline</strong> — call or text <strong>988</strong> — is available 24 hours a day, 7 days a week, at no cost. You can call on behalf of your child or for yourself. Texting 988 is available if calling feels too visible. The AAP states that any expression of suicidal ideation, regardless of framing, should be evaluated by a professional promptly — never dismissed as attention-seeking (AAP, 2022).</p>
+  </div>
+
+  <h2>What should I do if I'm worried but not sure whether it's serious?</h2>
+
+  <p class="answer-first">If you are uncertain whether what you are observing in your 10 to 12 year old crosses the line from typical development into something that needs attention, err toward calling your pediatrician. A brief phone call or patient portal message describing your observations costs very little and can be triaged quickly. The AAP explicitly discourages "watchful waiting" as the default response when parents identify mental health concerns in this age group — early referral produces meaningfully better outcomes than delayed evaluation (AAP, 2020).</p>
+
+  <p>When you contact your pediatrician, describe specifically:</p>
+  <ul>
+    <li>What you have observed (concrete behaviors, not interpretations)</li>
+    <li>How long it has been going on</li>
+    <li>What settings it appears in (home, school, or both)</li>
+    <li>Whether and how it is affecting functioning (grades, sleep, appetite, friendships)</li>
+    <li>Any changes in your child's life that preceded the change in behavior</li>
+  </ul>
+
+  <p>Your observations as a parent are clinically important data. You know your child's baseline. Pediatricians and psychologists rely on parent report in combination with child self-report to build an accurate picture. You are not overreacting — you are doing exactly what you should do.</p>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: Warning Signs in 10 to 12 Year Olds</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. If you are concerned about your child's mental health, contact your pediatrician. In a crisis, call or text 988 (Suicide and Crisis Lifeline) or call 911. Content references current AAP, USPSTF, CDC, AACAP, and DSM-5 guidelines.</em></p>
+
+</BaseLayout>

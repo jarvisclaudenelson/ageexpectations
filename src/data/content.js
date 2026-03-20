@@ -332,4 +332,11 @@ export const articles = [
     path: "/ages/12-14-years/red-flags/",
     pubDate: "2026-03-20",
   },
+  {
+    title: "Warning Signs in a 10 to 12 Year Old: When to Talk to Your Pediatrician",
+    description: "Behavior changes in tweens ages 10 to 12 can be hard to read — some are typical puberty, others are real warning signs. Learn the specific red flags for depression, anxiety, learning differences, and social struggles at this age, with AAP-backed guidance on when to call your pediatrician.",
+    path: "/ages/10-12-years/red-flags/",
+    pubDate: "2026-03-20",
+    image: "/images/pins/10-12-years-red-flags.png",
+  },
 ];
