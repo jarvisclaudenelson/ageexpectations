@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'Warning Signs of Depression or Anxiety in a 12 to 14 Year Old';
+const description = 'Depression in early teens often shows up as irritability, not sadness. Anxiety often looks like stomachaches and school avoidance, not expressed worry. Learn the specific warning signs for ages 12 to 14, when to call your pediatrician, and what the AAP, USPSTF, and 988 Crisis Line recommend.';
+
+const faqs = [
+  {
+    question: 'Is my 12-year-old depressed or just going through a phase?',
+    answer: 'The key difference is duration and functional impact. Normal mood swings in early adolescence are brief and tied to specific events — a bad test, a fight with a friend. Clinical depression involves a persistently depressed or irritable mood most days for at least 2 weeks, accompanied by loss of interest in previously enjoyed activities, disrupted sleep or appetite, and declining functioning at school or home (AAP, 2022). If your 12-year-old has been different for more than 2 weeks and it is affecting their daily life, that is the threshold for a pediatrician evaluation — not waiting to see if it resolves.',
+  },
+  {
+    question: 'What does anxiety look like in a 12 or 13 year old?',
+    answer: 'Anxiety in 12 to 13 year olds is often physical and behavioral rather than expressed verbally. Most anxious early teens do not say "I feel anxious" — they complain of stomachaches or headaches on school mornings, find reasons to avoid situations they previously enjoyed, seek constant reassurance about whether things will be okay, become irritable or angry when pressed to engage, or develop rigid routines designed to prevent feared outcomes (AACAP, 2020). The single strongest behavioral signal at this age is avoidance — particularly school avoidance. If a 12 to 13 year old is regularly missing school for physical complaints that resolve when they stay home, anxiety is the most likely driver.',
+  },
+  {
+    question: 'Does my pediatrician screen for depression at the 12-year well-child visit?',
+    answer: 'Yes — or they should. The U.S. Preventive Services Task Force (USPSTF, 2016) recommends universal depression screening for all adolescents ages 12 and older at routine visits using a validated tool, most commonly the PHQ-A (Patient Health Questionnaire for Adolescents), a 9-question self-report screening instrument. If your child\'s doctor does not mention it, you can ask. The PHQ-A is brief (5 minutes), accurate, and does not diagnose depression — it identifies who needs further evaluation. A score above a threshold triggers a fuller clinical interview.',
+  },
+  {
+    question: 'How is depression in a 13 or 14 year old different from adult depression?',
+    answer: 'The core difference is mood presentation. In adults, the primary symptom of depression is persistent sadness. In adolescents — especially ages 12 to 14 — the primary mood presentation is often irritability rather than sadness (AAP, 2022). An adult with depression cries and withdraws. A depressed 13-year-old may argue, rage, and seem angry most of the time, which parents often interpret as typical teenage behavior rather than a mood disorder. Other adolescent-specific differences: more pronounced physical complaints (headaches, stomachaches), more prominent sleep disruption, and often more academic rather than occupational impairment.',
+  },
+  {
+    question: 'When should I take my child to a doctor right away for mental health concerns?',
+    answer: 'Contact your pediatrician or go to an emergency room immediately if your 12 to 14 year old expresses any thoughts of suicide or self-harm — even "jokingly" or framed as hypothetical. The AAP states that any expression of suicidal ideation should be taken seriously and evaluated promptly, not monitored at home (AAP, 2022). You can also call or text 988 (Suicide and Crisis Lifeline) at any hour — both for your teen and for yourself as a parent in crisis. Other immediate-concern signs: giving away prized possessions, saying goodbye as if final, self-harming behaviors (cutting, burning), or a sudden shift to calmness after a period of severe depression, which can paradoxically signal a decision has been made.',
+  },
+  {
+    question: 'What is the first-line treatment for depression or anxiety in a 12 to 14 year old?',
+    answer: 'Cognitive Behavioral Therapy (CBT) is the evidence-based first-line treatment for both depression and anxiety in adolescents — not medication (AAP, 2022; AACAP, 2020). CBT teaches teens to identify and restructure the thought patterns that drive anxious or depressive cycles. For anxiety specifically, 60 to 70% of children and adolescents show significant improvement with CBT alone (AACAP, 2020). Medication — typically SSRIs — is considered for moderate-to-severe cases that do not respond to therapy, and is always used alongside therapy rather than as a standalone treatment. The AAP recommends referral to a child psychologist or licensed therapist before considering medication for mild-to-moderate cases in this age group.',
+  },
+  {
+    question: 'Can social media cause depression or anxiety in a 12-year-old?',
+    answer: 'Research establishes strong associations — not definitive causation — between heavy social media use and increased rates of depression, anxiety, and body image concerns in adolescents, with effects particularly pronounced for girls (APA, 2023; AAP, 2023). Social comparison, cyberbullying exposure, sleep displacement (device use at night), and algorithmic content that surfaces distressing material are the proposed mechanisms. The AAP advises against social media access for children under 13, and for ages 12 to 14 specifically, recommends family media plans that limit late-night use, discuss content critically, and maintain open communication about online experiences rather than relying solely on time limits.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/red-flags/',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/red-flags/',
+  lastReviewed: '2026-03-20',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '12–14 Years', href: '/ages/12-14-years/' },
+    { label: 'Red Flags' },
+  ]}
+>
+  <h1>Warning Signs of Depression or Anxiety in a 12 to 14 Year Old</h1>
+
+  <p class="answer-first">In children ages 12 to 14, depression often looks like anger, not sadness — and anxiety often looks like stomachaches and school avoidance, not expressed worry. These are not typical teenage phases if they last more than 2 weeks and interfere with daily functioning. The U.S. Preventive Services Task Force recommends universal depression screening at every annual well-child visit starting at age 12 (USPSTF, 2016). Knowing what to look for — and what crosses the line from normal to clinical — is the most important early intervention a parent can take.</p>
+
+  <h2>What does depression actually look like in a 12 or 13 year old?</h2>
+
+  <p class="answer-first">Depression in early adolescents presents differently than in adults. The most important distinction: the primary mood symptom is often irritability and anger rather than persistent sadness (AAP, 2022). A depressed 12-year-old may argue, rage, or seem emotionally reactive most of the time — which many parents attribute to puberty rather than recognizing as a mood disorder. At the same time, the teen may be withdrawing from friends, losing interest in activities they previously loved, and showing declining academic performance.</p>
+
+  <p>Core warning signs of depression in 12 to 14 year olds:</p>
+  <ul>
+    <li><strong>Persistent irritability or anger</strong> most days, lasting 2 or more weeks — not tied to specific events</li>
+    <li><strong>Withdrawal from friends and family</strong>; preferring to be alone, declining social invitations they would previously have accepted</li>
+    <li><strong>Loss of interest or pleasure</strong> in activities they used to enjoy — sports, hobbies, creative pursuits, socializing</li>
+    <li><strong>Declining grades</strong> or school engagement that is not explained by academic difficulty, learning issues, or life changes</li>
+    <li><strong>Changes in sleep</strong> — sleeping significantly more than usual, or persistent difficulty falling or staying asleep</li>
+    <li><strong>Changes in appetite or weight</strong> — eating noticeably less or more than before</li>
+    <li><strong>Fatigue and low energy</strong> that persists even after adequate sleep</li>
+    <li><strong>Unexplained physical complaints</strong> — frequent headaches or stomachaches with no identified medical cause</li>
+    <li><strong>Negative self-talk</strong> — excessive guilt, self-blame, statements of worthlessness or hopelessness</li>
+    <li><strong>Any talk of suicide, self-harm, or wanting to disappear</strong> — even framed as a joke (see red-flag section below)</li>
+  </ul>
+
+  <p>Depression is a clinical diagnosis requiring at least 5 of these symptoms present most days for 2 or more weeks, including either depressed/irritable mood or loss of interest as one of the five (DSM-5). However, a parent should not wait for a textbook presentation — if something has changed significantly for 2 or more weeks, a pediatrician evaluation is appropriate.</p>
+
+  <h2>What does anxiety look like in a 12 or 13 year old?</h2>
+
+  <p class="answer-first">Anxiety in early adolescents is more often physical and behavioral than verbal. Most anxious 12 to 13 year olds do not say "I feel anxious" — they develop stomachaches on school mornings, find reasons to avoid situations they used to manage fine, seek reassurance repeatedly about whether things will be okay, and become angry or shut down when pressed to engage with feared situations (AACAP, 2020). Irritability is as common a presentation of anxiety as it is of depression in this age group.</p>
+
+  <p>Warning signs of anxiety in 12 to 14 year olds:</p>
+  <ul>
+    <li><strong>School avoidance or refusal</strong> — the single strongest behavioral red flag; frequent absences driven by physical complaints that resolve when the child stays home</li>
+    <li><strong>Recurring physical complaints</strong> without identified medical cause — stomachaches, headaches, nausea, or muscle tension, particularly on school mornings or before social situations</li>
+    <li><strong>Excessive reassurance-seeking</strong> — repeatedly asking "Will I be okay? Are you sure? What if...?" despite calm, rational answers</li>
+    <li><strong>Avoidance of previously manageable situations</strong> — social events, classrooms, group activities, or new experiences</li>
+    <li><strong>Perfectionism and fear of making mistakes</strong> — spending excessive time on homework, refusing to submit work they fear is imperfect, or shutting down when they encounter difficulty</li>
+    <li><strong>Irritability or anger</strong> when pressed to engage with anxiety-provoking situations</li>
+    <li><strong>Sleep problems</strong> — difficulty falling asleep due to worry, even when tired; intrusive thoughts at bedtime</li>
+    <li><strong>Withdrawal from peers</strong> due to social anxiety or fear of judgment</li>
+    <li><strong>Compulsive behaviors</strong> — rigid routines, checking behaviors, or rituals aimed at preventing feared outcomes</li>
+  </ul>
+
+  <p>The most common anxiety disorders in the 12 to 14 age range are generalized anxiety disorder (persistent worry across multiple life domains), social anxiety disorder (fear of social evaluation and humiliation), and separation anxiety — which can persist into adolescence and is often under-recognized in this age group (CDC, 2022; NIMH, 2023).</p>
+
+  <h2>How common are depression and anxiety at this age — and is this new?</h2>
+
+  <p class="answer-first">Anxiety disorders are the most common mental health condition in children and adolescents, affecting approximately 7% of children ages 3 to 17 in the U.S. (CDC, 2022). For early adolescents ages 12 to 14 specifically, prevalence is meaningfully higher — this is one of the peak onset windows for both anxiety and depression. Depression rates among teens have risen significantly: the CDC's 2021 Youth Risk Behavior Survey found that 42% of high school students reported persistent feelings of sadness or hopelessness — a record high representing a 50% increase from pre-pandemic figures (CDC, 2021).</p>
+
+  <p>The AAP declared adolescent mental health a national emergency in 2021. Early identification and intervention — before symptoms become entrenched — dramatically improves outcomes. A 12-year-old identified and treated has meaningfully better long-term outcomes than a 16-year-old who spent 4 years without support (AAP, 2021).</p>
+
+  <h2>Is it moodiness or something clinical? How to tell the difference.</h2>
+
+  <p class="answer-first">The most reliable distinctions between normal early adolescent moodiness and a clinical mood or anxiety disorder are duration, pervasiveness, and functional impact. Normal moodiness is episodic and reactive — triggered by specific events, resolving within hours to days, not fundamentally changing who the child is. Clinical depression and anxiety are persistent (weeks, not days), pervasive (present across home, school, and social life), and impair functioning (declining grades, lost friendships, avoidance of previously normal activities).</p>
+
+  <p>A practical four-question test:</p>
+  <ul>
+    <li><strong>Duration:</strong> Has this been different for 2 or more consecutive weeks?</li>
+    <li><strong>Pervasiveness:</strong> Is this showing up at home AND school AND with friends — not just in one setting?</li>
+    <li><strong>Functional impact:</strong> Is this affecting grades, friendships, sleep, eating, or daily activities?</li>
+    <li><strong>Character change:</strong> Does this feel like a different version of your child rather than a bad week?</li>
+  </ul>
+
+  <p>If you answer yes to two or more of these, a pediatrician conversation is appropriate — not "wait and see." The AAP explicitly recommends against watchful waiting for suspected depression and anxiety in this age group; early referral yields significantly better outcomes than delayed evaluation (AAP, 2020).</p>
+
+  <h2>Does my pediatrician screen for this? What is the PHQ-A?</h2>
+
+  <p class="answer-first">The U.S. Preventive Services Task Force recommends universal depression screening for all adolescents ages 12 and older at annual well-child visits using a validated instrument (USPSTF, 2016). The most commonly used tool is the PHQ-A — the Patient Health Questionnaire for Adolescents — a 9-question self-report form that asks about mood, sleep, energy, appetite, concentration, and thoughts of self-harm over the past 2 weeks. Your teen may complete it on a tablet in the waiting room without realizing it is a depression screen. A score above a threshold prompts a fuller clinical interview by the provider.</p>
+
+  <p>If your child's pediatrician does not proactively screen at the 12, 13, or 14-year well-child visit, you can ask. You might say: "I've heard the PHQ-A is recommended at this age — can we make sure that's part of today's visit?" Screening does not mean assuming something is wrong — it means catching problems early when they are most treatable.</p>
+
+  <h2>When should I call my pediatrician or go to the emergency room?</h2>
+
+  <div class="callout">
+    <p class="answer-first"><strong>Call your pediatrician today</strong> if your 12 to 14 year old has shown 3 or more warning signs of depression or anxiety for 2 or more weeks, is missing significant amounts of school, or has expressed that things would be better if they weren't here.</p>
+
+    <p><strong>Go to the emergency room or call 911 immediately</strong> if your child:</p>
+    <ul>
+      <li>Expresses suicidal thoughts, plans, or intent — even framed casually or as "just a joke"</li>
+      <li>Has engaged in self-harm (cutting, burning, hitting themselves)</li>
+      <li>Is threatening harm to others</li>
+      <li>Is in acute crisis — unable to function, panicking uncontrollably, or unresponsive</li>
+    </ul>
+
+    <p><strong>The 988 Suicide and Crisis Lifeline</strong> — call or text <strong>988</strong> — is available 24 hours a day, 7 days a week. It is free and confidential. You can call on behalf of your child, or your teenager can contact it directly. Texting 988 is available if calling feels too visible. The AAP states that any expression of suicidal ideation, regardless of how it is framed, should be taken seriously and evaluated by a professional promptly — not monitored at home, not dismissed as attention-seeking (AAP, 2022).</p>
+
+    <p>Additional signs that warrant same-week (not someday) pediatrician contact:</p>
+    <ul>
+      <li>Significant weight loss or gain (more than 10% of body weight) over 4 to 8 weeks with no medical explanation</li>
+      <li>Giving away prized possessions or saying goodbyes</li>
+      <li>A sudden, unexplained shift to calm after a period of severe depression — which can indicate a decision has been made</li>
+      <li>Discovering cuts, burns, or bruises in patterns inconsistent with accident</li>
+      <li>Substance use (alcohol, marijuana, vaping) escalating or being used daily to "calm down"</li>
+    </ul>
+  </div>
+
+  <h2>What is the first-line treatment — and does it involve medication?</h2>
+
+  <p class="answer-first">Cognitive Behavioral Therapy (CBT) is the evidence-based first-line treatment for both depression and anxiety in 12 to 14 year olds — not medication (AAP, 2022; AACAP, 2020). CBT for adolescents typically involves 12 to 20 weekly sessions and teaches teens to identify distorted thinking patterns, tolerate uncomfortable emotions, and engage with (rather than avoid) feared situations. For anxiety, 60 to 70% of children and adolescents show significant improvement with CBT alone (AACAP, 2020). For depression, CBT combined with family support and school accommodations produces strong outcomes for mild-to-moderate presentations.</p>
+
+  <p>Medication — typically SSRIs like fluoxetine (Prozac), the only antidepressant FDA-approved for children and adolescents with depression — is considered for moderate-to-severe cases that do not adequately respond to therapy, and is used alongside therapy, not as a standalone treatment (AAP, 2022). Medication is not a first-line recommendation by the AAP for mild-to-moderate depression or anxiety in this age group. Starting with therapy and adding medication if needed is the standard sequence.</p>
+
+  <p>Practical next steps if you suspect your child needs support:</p>
+  <ul>
+    <li><strong>Start with your pediatrician:</strong> Request a mental health evaluation at the next available appointment — most can screen, refer, and coordinate with school support teams</li>
+    <li><strong>Ask about school accommodations:</strong> A 504 plan or IEP can provide reduced workload, extended time, and attendance flexibility while your child receives treatment — schools are required to provide these under federal law</li>
+    <li><strong>Find a CBT therapist:</strong> Ask your pediatrician for a referral, or search the Association for Behavioral and Cognitive Therapies (ABCT) therapist directory. Specify that you want a therapist who works with adolescents and uses CBT</li>
+    <li><strong>Do not wait for a crisis:</strong> Referral waitlists for child and adolescent mental health services average 4 to 8 weeks. Start the process before things become urgent</li>
+  </ul>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: Depression and Anxiety in 12 to 14 Year Olds</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. If you are concerned about your child's mental health, contact your pediatrician. In a crisis, call or text 988 (Suicide and Crisis Lifeline) or call 911. Content references current AAP, USPSTF, CDC, and AACAP guidelines.</em></p>
+
+</BaseLayout>
