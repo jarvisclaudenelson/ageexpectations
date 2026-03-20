@@ -312,4 +312,11 @@ export const articles = [
     pubDate: "2026-03-19",
     image: "/images/pins/2026-03-19-8-10-years-sleep-pin.png",
   },
+  {
+    title: "6–8 Year Old Sleep: How Much, Bedtime, and What's Normal",
+    description: "Children ages 6 to 8 need 9 to 12 hours of sleep per night. Learn about recommended bedtimes, managing bedtime resistance, screen time rules, nighttime fears, and when to talk to your pediatrician — based on AAP guidelines.",
+    path: "/ages/6-8-years/sleep/",
+    pubDate: "2026-03-20",
+    image: "/images/pins/6-8-years-sleep.png",
+  },
 ];
