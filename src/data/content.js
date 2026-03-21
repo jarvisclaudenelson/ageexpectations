@@ -339,4 +339,11 @@ export const articles = [
     pubDate: "2026-03-20",
     image: "/images/pins/10-12-years-red-flags.png",
   },
+  {
+    title: "When Should My Child Start Wearing Deodorant? (Ages 9–14)",
+    description: "A guide to body odor and deodorant for children ages 9 to 14. Covers typical age for starting deodorant, early puberty signs, safe deodorant options, and AAP-backed hygiene advice.",
+    path: "/ages/10-12-years/deodorant/",
+    pubDate: "2026-03-21",
+    image: "/images/pins/2026-03-21-10-12-years-deodorant.png",
+  },
 ];

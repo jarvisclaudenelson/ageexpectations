@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'When Should My Child Start Wearing Deodorant? (Ages 9–14)';
+const description = 'A guide to body odor and deodorant for children ages 9 to 14. Covers typical age for starting deodorant, early puberty signs, safe deodorant options, and AAP-backed hygiene advice.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 9-year-old to have body odor?',
+    answer: 'Yes. Body odor (bromhidrosis) often begins around age 8 or 9 as adrenal glands mature and sweat glands become more active. While this is a sign of adrenarche — the early stage of puberty — it is typically developmental and not a medical concern. If your child is younger than 8 (girls) or 9 (boys) and has significant body odor, discuss it with your pediatrician.'
+  },
+  {
+    question: 'Should I choose an antiperspirant or just a deodorant for my child?',
+    answer: 'For most children ages 9 to 12, a simple deodorant that neutralizes odor-causing bacteria is sufficient. Antiperspirants, which contain aluminum to block sweat, are generally safe for older children and teens but are often unnecessary for pre-teens who are not yet sweating heavily. If your child is distressed by wetness, an antiperspirant is a safe option (AAP, 2023).'
+  },
+  {
+    question: 'Are natural deodorants better for kids?',
+    answer: 'Not necessarily. "Natural" deodorants often use baking soda, which can cause skin irritation or rashes in children with sensitive skin. The AAP notes that traditional deodorants are safe for children; look for "fragrance-free" or "sensitive skin" options if your child has eczema or reactive skin. The choice between natural and traditional is primarily one of parent preference and skin compatibility.'
+  },
+  {
+    question: 'What if my 10-year-old refuses to wear deodorant despite smelling?',
+    answer: 'Resistance to hygiene changes is common in late middle childhood. Keep the conversation low-pressure and matter-of-fact rather than shaming. Frame it as a "growing up" milestone like brushing teeth. Allow the child to choose their own scent or brand to give them a sense of autonomy. If the refusal persists despite social consequences at school, mention it to your pediatrician as part of a broader behavioral check-in.'
+  },
+  {
+    question: 'Can I use my own deodorant on my child in an emergency?',
+    answer: 'Yes. Adult deodorants and antiperspirants are safe for occasional use on children. The primary difference between "kid" brands and adult brands is the scent and marketing. However, adult formulas may be stronger and more likely to irritate sensitive young skin if used daily. If your child has no known skin allergies, a one-time use of an adult product is fine.'
+  },
+  {
+    question: 'Is it normal for one armpit to smell more than the other?',
+    answer: 'Yes. Asymmetrical body odor is common during puberty as sweat glands mature at slightly different rates. It can also be influenced by which arm is dominant or differences in hygiene (missing a spot while washing). It is rarely a medical concern. Encourage thorough washing of both underarms with a mild soap during the daily shower.'
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/deodorant/',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/deodorant/',
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData} breadcrumbs={[{ label: '10–12 Years', href: '/ages/10-12-years/' }, { label: 'Deodorant & Hygiene' }]}>
+
+  <h1>When Should My Child Start Wearing Deodorant? (Ages 9–14)</h1>
+
+  <p class="answer-first">Most children begin using deodorant between ages 9 and 12, corresponding with the onset of adrenarche — the stage of development when the adrenal glands begin producing androgens that activate sweat and oil glands. While age 10 to 12 is the typical range, children may start as early as age 8 (girls) or 9 (boys) without it being a medical concern (AAP, 2023).</p>
+
+  <h2>At what age do most children start needing deodorant?</h2>
+
+  <p class="answer-first">Children typically begin needing deodorant between ages 9 and 12 as they enter early puberty. According to the American Academy of Pediatrics (AAP), the activation of apocrine sweat glands — which produce the thicker, protein-rich sweat that bacteria break down into odor — usually occurs around the same time as the development of other early puberty signs like body hair or skin changes (AAP, 2023). Some children who are active in sports may require deodorant earlier for odor management.</p>
+
+  <p>Hygiene expectations by age range:</p>
+  <ul>
+    <li><strong>Ages 7–9:</strong> Most children do not yet have significant underarm odor, though very active children may have general "sweaty" smells. Deodorant is usually optional.</li>
+    <li><strong>Ages 10–12:</strong> This is the most common window for starting deodorant. Hormonal changes make underarm odor more distinct and adult-like.</li>
+    <li><strong>Ages 13–15:</strong> Nearly all adolescents require daily deodorant or antiperspirant as puberty progresses and sweat production increases significantly.</li>
+  </ul>
+
+  <h2>Is it normal for an 8-to-10-year-old to have body odor?</h2>
+
+  <p class="answer-first">Yes, it is typically normal for children as young as age 8 (girls) or 9 (boys) to develop underarm odor due to a process called adrenarche. This is the natural maturation of the adrenal glands that precedes visible puberty. While adrenarche can cause body odor, oily skin, and light pubic hair, it is not considered "early puberty" (precocious puberty) unless it is accompanied by other signs like breast development or testicular growth before the typical age (AAP, 2022).</p>
+
+  <p>Why body odor starts now:</p>
+  <ul>
+    <li><strong>Apocrine Glands:</strong> These sweat glands in the underarms and groin "turn on" during adrenarche.</li>
+    <li><strong>Bacteria:</strong> Odor is not caused by the sweat itself, but by bacteria on the skin breaking down the proteins in apocrine sweat.</li>
+    <li><strong>Adrenal Androgens:</strong> Hormones like DHEA increase, signaling the body to begin these changes.</li>
+  </ul>
+
+  <h2>What are the best deodorant options for children and teens?</h2>
+
+  <p class="answer-first">The best deodorant for a child is one that they will use consistently and that does not irritate their skin. For most pre-teens, a simple deodorant (which only masks or neutralizes odor) is sufficient and less likely to cause irritation than an antiperspirant (which blocks sweat with aluminum). The AAP notes that both traditional and aluminum-free options are safe for children; the choice should be based on skin sensitivity and child preference (AAP, 2023).</p>
+
+  <p>Choosing a product:</p>
+  <ul>
+    <li><strong>Deodorant vs. Antiperspirant:</strong> Choose deodorant if the only concern is smell; choose antiperspirant if the child is bothered by wet underarms or "sweat stains" on clothes.</li>
+    <li><strong>Sensitive Skin:</strong> Look for "fragrance-free" or "alcohol-free" sticks. Avoid "natural" options with high baking soda content if they cause a rash.</li>
+    <li><strong>Application:</strong> Sticks or rolls-on are usually easier for children to apply correctly than sprays, which can be inhaled or used excessively.</li>
+  </ul>
+
+  <h2>How do I talk to my child about body odor and hygiene?</h2>
+
+  <p class="answer-first">Talk to your child about body odor using matter-of-fact, neutral language that frames deodorant as a routine hygiene task similar to brushing teeth. Avoid shaming or making the child feel "smelly" or "dirty." Explain that body odor is a normal sign of their body growing up and that everyone's body changes in this way (AAP, 2022). Including them in the process of choosing a deodorant can increase their willingness to use it.</p>
+
+  <p>Practical conversation tips:</p>
+  <ul>
+    <li><strong>Normalize it:</strong> "I've noticed your body is starting to grow up, and one of the changes is that you might start to have a stronger smell under your arms. It's totally normal."</li>
+    <li><strong>Make it a choice:</strong> "Would you like to try a stick or a spray? Do you prefer a scent or no scent?"</li>
+    <li><strong>Connect to routine:</strong> "Let's add this to your morning routine after you brush your teeth."</li>
+    <li><strong>Be brief:</strong> Keep the conversation short and low-pressure to avoid making the child self-conscious.</li>
+  </ul>
+
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my child's body odor?</h2>
+    <p class="answer-first">Contact your pediatrician if your child has significant body odor before age 8 (girls) or age 9 (boys), especially if it is accompanied by other signs of puberty such as breast development, testicular enlargement, or a rapid height spurt. These can be signs of precocious puberty which requires a medical evaluation (AAP, 2022).</p>
+    <p>Additional red flags:</p>
+    <ul>
+      <li>Body odor that smells like maple syrup, fish, or locker room "feet" — these can indicate rare metabolic conditions.</li>
+      <li>Excessive sweating (hyperhidrosis) that soaks through multiple layers of clothing or interferes with daily activities.</li>
+      <li>A persistent, painful rash in the underarm area that does not improve after stopping deodorant use.</li>
+      <li>Significant distress or social withdrawal related to body odor or sweat.</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: Deodorant and Hygiene</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
