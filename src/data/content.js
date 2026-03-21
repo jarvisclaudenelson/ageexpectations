@@ -359,4 +359,17 @@ export const articles = [
     pubDate: "2026-03-21",
     image: "/images/pins/8-10-years-red-flags.png",
   },
+  {
+    title: "Warning Signs in a 6 to 8 Year Old: When to Talk to Your Pediatrician",
+    description: "The 6 to 8 age range is when ADHD, anxiety, and learning differences like dyslexia first become clearly visible in a structured school setting. Learn the specific red flags for this age group — what is typical development and what warrants a call to your pediatrician — backed by AAP and CDC guidelines.",
+    path: "/ages/6-8-years/red-flags/",
+    pubDate: "2026-03-21",
+    image: "/images/pins/6-8-years-red-flags.png",
+  },
+  {
+    title: "12–14 Year Old Sleep: How Much Sleep Do Early Teens Need?",
+    description: "Teens ages 12 to 14 need 8 to 10 hours of sleep per night, but puberty triggers a biological phase shift that makes earlier bedtimes genuinely harder. Learn about teen sleep science, bedtime guidelines, and how to reduce sleep debt, based on AAP recommendations.",
+    path: "/ages/12-14-years/sleep/",
+    pubDate: "2026-03-21",
+  },
 ];

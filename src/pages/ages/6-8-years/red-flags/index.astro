@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'Warning Signs in a 6 to 8 Year Old: When to Talk to Your Pediatrician';
+const description = 'The 6 to 8 age range is when ADHD, anxiety, and learning differences like dyslexia first become clearly visible in a structured school setting. Learn the specific red flags for this age group — what is typical development and what warrants a call to your pediatrician — backed by AAP and CDC guidelines.';
+
+const faqs = [
+  {
+    question: 'My 6-year-old has meltdowns about going to school almost every morning. Is this separation anxiety or something more serious?',
+    answer: 'School refusal affects approximately 5 to 28% of school-age children (AAP, 2022), and morning meltdowns specifically about school — not about leaving home in general — are a common presentation of anxiety at this age. Occasional reluctance in the first weeks of kindergarten or after a school break is typical. Daily or near-daily meltdowns persisting for 3 or more weeks, especially when accompanied by physical complaints (stomachaches, headaches) that improve once the child is at school, warrant a pediatrician visit to differentiate normal adjustment from anxiety that needs support.',
+  },
+  {
+    question: 'My 7-year-old is still reading well below grade level after a full year of instruction. Should I be worried?',
+    answer: 'A child who is reading significantly below grade level after a full year of adequate reading instruction — and who is putting in genuine effort — should be evaluated for dyslexia or another language-based learning difference. The AAP recommends not waiting for a child to fall further behind before requesting evaluation (AAP, 2022). By second grade, the gap between a child with dyslexia and their peers often widens rapidly. You can request a free evaluation through your school district in writing under federal IDEA law. Effective intervention (structured literacy/Orton-Gillingham approaches) produces significantly better outcomes when started in first or second grade than later.',
+  },
+  {
+    question: 'My 8-year-old has been getting in trouble at school every week for not following directions. Could this be ADHD?',
+    answer: 'Consistent difficulty following multi-step directions, regularly getting in trouble for impulsivity or inattention, and teacher reports across subjects and settings are among the strongest behavioral indicators of ADHD in the 6 to 8 age range. ADHD affects approximately 9.8% of children ages 3 to 17 in the U.S. (CDC, 2022). The AAP recommends formal evaluation when impairing symptoms have been present in two or more settings for at least 6 months (AAP ADHD Guidelines, 2019). Contact your pediatrician and ask specifically about an ADHD evaluation — the process involves rating scales from both parents and teachers and does not require a specialist referral to begin.',
+  },
+  {
+    question: 'My 7-year-old still has big emotional meltdowns like a preschooler. Shouldn\'t they have grown out of this by now?',
+    answer: 'By ages 6 to 8, most children have developed significantly more emotional regulation than they had at ages 3 to 4 — but there is wide variation in timing, and some children who are typically developing continue to have meltdowns in this age range, particularly when tired or overstimulated. Meltdowns that are increasing in frequency or intensity rather than decreasing, are occurring at school in ways that affect peer relationships, or are interfering with daily functioning at home may signal anxiety, ADHD, sensory processing differences, or, in some cases, a mood disorder. If the pattern is getting worse rather than gradually improving, raise it with your pediatrician.',
+  },
+  {
+    question: 'My 6-year-old said they don\'t want to be alive. How seriously should I take this?',
+    answer: 'Take this completely seriously, immediately. Any statement about not wanting to be alive, wishing they were dead, or that others would be better off without them — even from a 6-year-old, even said in apparent frustration, even once — requires calm follow-up that day and same-day contact with your pediatrician. Young children do not fully understand death, and the statement may not reflect the same intent it would in an adult, but the AAP is explicit that any such expression should be evaluated by a professional promptly and never dismissed (AAP, 2022). If you cannot reach your pediatrician, call or text 988 (Suicide and Crisis Lifeline), available 24/7.',
+  },
+  {
+    question: 'My 8-year-old has been best friends with the same child for two years, but now reports being excluded from their group. Is this normal social drama or something to worry about?',
+    answer: 'Social hierarchies in second and third grade intensify significantly compared to kindergarten and first grade. Some exclusion and shifting friendships are part of typically developing social skills at this age. Persistent exclusion — being left out consistently for weeks, eating lunch alone regularly, being specifically targeted by a group — is different from normal peer friction and can indicate relational aggression (a form of bullying). If your child shows mood deterioration specifically after school, avoids school for social reasons, or reports the same pattern repeatedly over weeks, raise it with the school counselor and your pediatrician (AAP, 2022).',
+  },
+  {
+    question: 'My 7-year-old still wets the bed at night. Is this a red flag?',
+    answer: 'Bedwetting (nocturnal enuresis) is common and typically developing well into this age range. Approximately 15 to 20% of 5-year-olds, 8 to 10% of 7-year-olds, and 3 to 5% of 10-year-olds wet the bed at night (AAP, 2022). Bedwetting alone at age 7 is not a developmental red flag. It is worth mentioning to your pediatrician if it is causing significant distress for the child or affecting their participation in activities like sleepovers — there are effective behavioral and medical treatment options. Daytime wetting at age 7 (accidents during waking hours) is more concerning and should be evaluated.',
+  },
+  {
+    question: 'My 6-year-old is terrified of things that seem irrational — dogs, loud noises, the dark. Is this anxiety or typical childhood fear?',
+    answer: 'Specific fears are common and typically developing in early childhood and continue into ages 6 to 8 — fear of the dark, animals, loud noises, and new situations are all within the range of typical development for this age. The distinction between typical fear and anxiety that needs support: typical fears are specific and manageable, do not prevent participation in daily activities, and diminish gradually over months. Anxiety that warrants evaluation is pervasive, causes significant distress, prevents age-appropriate activities (refusing all playdates, unable to attend school events), or is worsening rather than gradually resolving over 6 or more months (CDC, 2022).',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/red-flags/',
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/6-8-years/red-flags/',
+  lastReviewed: '2026-03-21',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '6–8 Years', href: '/ages/6-8-years/' },
+    { label: 'Red Flags & Warning Signs' },
+  ]}
+>
+  <h1>Warning Signs in a 6 to 8 Year Old: When to Talk to Your Pediatrician</h1>
+
+  <p class="answer-first">The 6 to 8 age range is when children enter structured school for the first time and when ADHD, anxiety, learning differences like dyslexia, and social difficulties become clearly visible in ways they weren't in preschool. Many warning signs at this age are easy to attribute to "still adjusting" or "just needs more time" — but this is also one of the highest-leverage windows for early intervention. Identifying and addressing concerns in first or second grade produces substantially better outcomes than waiting until third grade or later. This guide covers the specific, observable red flags the AAP and CDC identify for this age group.</p>
+
+  <h2>What are the red flags for anxiety in a 6 to 8 year old?</h2>
+
+  <p class="answer-first">Anxiety in 6 to 8 year olds almost always shows up in behavior and physical symptoms rather than explicit verbal expressions of worry. Children this age often lack the vocabulary and self-awareness to say "I feel anxious" — instead, they develop recurring stomachaches, refuse to go to school, need constant reassurance, or have meltdowns when pressed toward situations they fear. Anxiety disorders affect approximately 9% of children ages 3 to 17 in the U.S. (CDC, 2022), and ages 6 to 8 are a significant onset window particularly for separation anxiety, social anxiety, and specific phobias.</p>
+
+  <p>Anxiety warning signs in 6 to 8 year olds:</p>
+  <ul>
+    <li><strong>Recurring physical complaints on school mornings</strong> — stomachaches or headaches that reliably appear before school and resolve over weekends or when the child stays home; this is the most common presentation of school anxiety at this age and is often misread as a medical problem</li>
+    <li><strong>School refusal or significant daily resistance to attending school</strong> — not just occasional reluctance, but a pattern that has persisted for 3 or more weeks and is intensifying</li>
+    <li><strong>Persistent fear of separation from a parent</strong> — beyond the first few weeks of a new school year; difficulty separating at drop-off that is worsening rather than improving</li>
+    <li><strong>Avoidance of previously manageable situations</strong> — sports practices, birthday parties, playdates, or class presentations the child previously handled; avoidance that is growing, not shrinking</li>
+    <li><strong>Excessive reassurance-seeking</strong> — repeated questions ("Will something bad happen? What if I get sick? Will you pick me up?") that do not resolve with calm reassurance and circle back within minutes</li>
+    <li><strong>Extreme perfectionism</strong> — erasing work until the paper tears, crying over small errors, refusing to try tasks they might not do perfectly; perfectionism that produces significant distress and avoidance</li>
+    <li><strong>New sleep difficulties with a worry flavor</strong> — bedtime anxiety, needing a parent to stay, catastrophic thinking at night ("What if our house burns down?") that has emerged or intensified in recent weeks</li>
+    <li><strong>Explosive anger when pushed toward feared situations</strong> — meltdowns that occur specifically at transition points (school arrival, leaving a safe adult) are frequently anxiety presenting as anger</li>
+  </ul>
+
+  <p>Contact your pediatrician if any of these patterns have been consistently present for 3 or more weeks, are intensifying, or are causing the child to miss school or previously enjoyed activities. Anxiety that receives early support (cognitive-behavioral therapy is the most evidence-supported treatment at this age) is substantially more manageable than anxiety that has been accommodated and reinforced for years.</p>
+
+  <h2>What are the red flags for ADHD in a 6 to 8 year old?</h2>
+
+  <p class="answer-first">ADHD is one of the most common neurodevelopmental conditions identified at ages 6 to 8, affecting approximately 9.8% of children ages 3 to 17 in the U.S. (CDC, 2022). Kindergarten and first grade are often when ADHD becomes visible for the first time because structured school demands — sitting for extended periods, following multi-step directions, completing tasks without immediate interest — are genuinely difficult for children with ADHD in a way they were not apparent in less-structured preschool settings. The AAP recommends formal evaluation when impairing symptoms are present in two or more settings for at least 6 months (AAP ADHD Guidelines, 2019).</p>
+
+  <p>ADHD red flags in 6 to 8 year olds:</p>
+  <ul>
+    <li><strong>Consistent teacher reports of inattention, impulsivity, or disruption</strong> — the critical word is "consistent"; any one incident is not meaningful, but a pattern described across multiple weeks and subjects is significant</li>
+    <li><strong>Difficulty following multi-step directions at home AND school</strong> — not in one setting but both; "ADHD" that appears only at home may be stress, anxiety, or a mismatch with parenting approach; true ADHD manifests across settings</li>
+    <li><strong>Work that is incomplete or done much more slowly than peers despite adequate ability</strong> — children with ADHD often have the knowledge but cannot produce the output; this is one of the clearest early academic markers</li>
+    <li><strong>Impulsivity that leads to repeated social conflict</strong> — blurting, grabbing, pushing, acting before thinking in ways the child cannot explain afterward; the impulsivity is genuine, not intentional</li>
+    <li><strong>Hyperactivity clearly beyond same-age peers</strong> — for the hyperactive presentation; constant motion, extreme difficulty sitting when expected, talking without stopping; teachers who see many same-age children are well-positioned to identify outliers</li>
+    <li><strong>Difficulty with transitions and changes in routine</strong> — explosive reactions to stopping a preferred activity; rigid need for predictability that interferes with school schedules and family routines</li>
+    <li><strong>Significant emotional dysregulation</strong> — hair-trigger frustration, difficulty recovering after disappointment; emotional dysregulation is a commonly underrecognized feature of ADHD in children</li>
+  </ul>
+
+  <p>Formal ADHD evaluation through your pediatrician uses validated rating scales completed by both parents and teachers. A 15-minute pediatric appointment where the child is cooperative and engaged does not capture ADHD — the diagnosis is based on systematic parent and teacher report across settings and time. Ask specifically about the Vanderbilt Assessment Scale or the Conners Rating Scale. You do not need a referral to a specialist to begin this process.</p>
+
+  <h2>What are the warning signs of a learning difference in a 6 to 8 year old?</h2>
+
+  <p class="answer-first">Ages 6 to 8 are the highest-leverage window for identifying and supporting learning differences like dyslexia, dysgraphia, and language-based learning disabilities — early intervention in reading and writing produces substantially better outcomes than waiting until third grade or later, when the gap between a child with dyslexia and their peers widens rapidly (AAP, 2022). The core signal to watch for is disproportionate effort relative to output: a child who is working harder than their peers but producing less, struggling despite adequate instruction and genuine effort.</p>
+
+  <p>Learning difference red flags by type:</p>
+  <ul>
+    <li><strong>Dyslexia:</strong> After a full year of reading instruction, the child is reading significantly below grade level; decoding (sounding out words) is effortful and slow; the child reads the same word differently on successive pages; spelling is highly inconsistent; comprehension when text is read aloud dramatically exceeds what the child produces when reading independently; the child avoids reading or has meltdowns around it. Dyslexia is the most common learning difference — approximately 15 to 20% of the population has some degree of reading difficulty (AAP, 2022)</li>
+    <li><strong>Dysgraphia:</strong> Handwriting is illegible or extremely slow compared to peers despite practice and instruction; the child complains of hand pain or fatigue with writing; verbal ability is dramatically higher than written output; fine motor tasks like cutting, buttoning, or tying shoes are also difficult</li>
+    <li><strong>Language processing differences:</strong> Difficulty following multi-step verbal instructions despite adequate hearing; word-finding difficulties (substituting "that thing" for words they should know); vocabulary significantly below same-age peers; difficulty retelling a story or event in sequence</li>
+    <li><strong>Math difficulties:</strong> Persistent confusion about basic number concepts, counting, or early addition and subtraction that peers have solidified; difficulty with number sense that goes beyond not having memorized facts</li>
+  </ul>
+
+  <p>You have the right to request a free evaluation through your school district under the Individuals with Disabilities Education Act (IDEA). Submit the request in writing (email is fine — keep a copy) and note the date. The district has 60 days to complete the evaluation. Your pediatrician can also make a referral for a private neuropsychological evaluation, which provides more detailed diagnostic information. Early identification of dyslexia and dysgraphia enables access to evidence-based instruction — structured literacy approaches — that produces meaningfully better reading outcomes than standard classroom instruction for children with these profiles.</p>
+
+  <h2>What social and behavioral warning signs should I watch for at ages 6 to 8?</h2>
+
+  <p class="answer-first">Social development in the 6 to 8 range shifts significantly from the parallel and associative play of preschool toward cooperative play with shared rules and goals. Most typically developing 6 to 8 year olds have at least one close friend and can navigate basic peer conflicts with adult support. This is also the age when social difficulties related to autism spectrum disorder (ASD), ADHD, or social anxiety first become clearly impairing in the peer context of school (AAP, 2022).</p>
+
+  <p>Social warning signs in 6 to 8 year olds:</p>
+  <ul>
+    <li><strong>Persistent social isolation</strong> — not just shifting friend dynamics, but consistent reports of having no friends, always eating lunch alone, or never being included in peer activities</li>
+    <li><strong>Significant difficulty reading social cues</strong> — repeatedly misreading humor as criticism, missing the unspoken social rules that most peers navigate naturally (this may indicate ASD in a child who was not previously identified, as higher-functioning profiles are often not caught until school age)</li>
+    <li><strong>Aggressive behavior toward peers</strong> that is increasing, not decreasing — hitting, biting, or physical aggression that was typical at ages 2 to 4 but should be declining by age 6 to 7; persistent aggression warrants evaluation for ADHD, anxiety, or trauma-related behavior</li>
+    <li><strong>Bullying behavior directed at others</strong> — consistent reports from school of your child targeting, excluding, or intimidating peers; address with the school and pediatrician, as bullying behavior is associated with its own risk factors</li>
+    <li><strong>Complete refusal of peer interaction</strong> — a child who actively avoids all peer contact, refuses playdates, and is distressed by proximity to children outside the family; this goes beyond introversion and warrants evaluation</li>
+    <li><strong>Mood deterioration specifically connected to school or social situations</strong> — a child who is happy and regulated at home but visibly deteriorates around the school context or specific peer groups may be experiencing bullying or social anxiety</li>
+  </ul>
+
+  <h2>What behavioral regression warning signs matter at ages 6 to 8?</h2>
+
+  <p class="answer-first">Some degree of behavioral regression — returning to earlier behaviors like bedwetting, thumb-sucking, or baby talk — is typical during periods of stress at ages 6 to 8 (new school year, family change, illness). Regression that is brief, tied to an identifiable stressor, and resolves within a few weeks is generally not concerning. Regression that is persistent, involves multiple developmental areas simultaneously, or represents a significant loss of previously solid skills is a red flag and warrants same-week contact with your pediatrician (AAP, 2022).</p>
+
+  <p>Concerning regression patterns at ages 6 to 8:</p>
+  <ul>
+    <li>Sudden return to bedwetting in a child who had been dry at night for more than 6 months without a clear stressor — evaluate for medical causes (UTI, diabetes) and stress</li>
+    <li>Language regression — a child who was speaking in full sentences and using age-appropriate vocabulary who begins using simpler words or baby talk persistently (not occasionally in play)</li>
+    <li>Significant loss of academic skills previously mastered — reading or math regression over a period of months may indicate a mood disorder, significant stress, or an unidentified learning difference</li>
+    <li>Loss of previously solid toilet training (daytime accidents) at age 7 or 8 in a child who had been consistently trained for more than 1 year — evaluate for UTI, stress, and ADHD-related inattention</li>
+    <li>Regression in multiple domains simultaneously — when a child loses ground across sleep, academic performance, and social functioning in the same 2 to 4 week period, this suggests a significant stressor or emerging mood disorder that warrants prompt evaluation</li>
+  </ul>
+
+  <h2>When should I call my pediatrician — and when is it urgent?</h2>
+
+  <div class="callout">
+    <p class="answer-first"><strong>Contact your pediatrician this week</strong> if your 6 to 8 year old has been showing 2 or more warning signs from the sections above consistently for 3 or more weeks, is missing school regularly due to behavioral or physical complaints, has received significant teacher concerns about behavior or academic progress, or has shown a noticeable decline in functioning over the past 4 to 6 weeks.</p>
+
+    <p><strong>Contact your pediatrician today</strong> if you observe rapid deterioration in mood, functioning, or appetite over a 1 to 2 week period — especially if paired with social withdrawal or complete loss of interest in activities the child previously enjoyed.</p>
+
+    <p><strong>Go to the emergency room immediately or call 911</strong> if your child:</p>
+    <ul>
+      <li>Says they want to die, don't want to be alive, or that others would be better without them — even once, even framed as frustration or a joke</li>
+      <li>Has engaged in self-harm of any kind — hitting, scratching, biting themselves</li>
+      <li>Is having a violent behavioral episode that you cannot safely manage or de-escalate</li>
+    </ul>
+
+    <p><strong>The 988 Suicide and Crisis Lifeline</strong> — call or text <strong>988</strong> — is available 24 hours a day, 7 days a week, at no cost. You can call on behalf of your child. The AAP is explicit that any expression of suicidal ideation in a child should be taken seriously and evaluated by a professional promptly — never dismissed as attention-seeking (AAP, 2022).</p>
+  </div>
+
+  <h2>What should I say to my pediatrician when I call about a concern?</h2>
+
+  <p class="answer-first">When you contact your pediatrician about a behavioral, social, or emotional concern in your 6 to 8 year old, give them specific, observable descriptions rather than general summaries. The AAP explicitly recommends parent report as a primary data source in evaluating developmental and behavioral concerns at this age (AAP, 2022). Concrete descriptions give your pediatrician the most useful information to triage appropriately and order or make the right referrals.</p>
+
+  <p>Describe the following when you call or message:</p>
+  <ul>
+    <li><strong>Specific behaviors</strong> — what exactly you see, not your interpretation ("He has a meltdown every morning at drop-off, involving crying and refusing to get out of the car" rather than "He has anxiety")</li>
+    <li><strong>Duration</strong> — how long this pattern has been happening, when it started or changed</li>
+    <li><strong>Settings</strong> — whether it is happening at home, at school, or both; teacher input is valuable, and sharing any written teacher comments is helpful</li>
+    <li><strong>Impact on functioning</strong> — is the child missing school, losing friendships, falling behind academically, or not sleeping?</li>
+    <li><strong>What you have already tried</strong> — and whether it helped, made things worse, or had no effect</li>
+    <li><strong>Any recent life changes</strong> — new school, new sibling, family stress, illness, moves — that preceded or coincided with the change in behavior</li>
+  </ul>
+
+  <p>You are not overreacting by calling. Pediatricians and child psychologists consistently find that parents who identify concerns early are providing clinically important information, and that early evaluation — even when it results in reassurance — is more beneficial than delayed evaluation after a problem has become entrenched.</p>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: Warning Signs in 6 to 8 Year Olds</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. If you are concerned about your child's mental health, learning, or development, contact your pediatrician. In a crisis, call or text 988 (Suicide and Crisis Lifeline) or call 911. Content references current AAP, CDC, AACAP, DSM-5, and IDEA guidelines.</em></p>
+
+</BaseLayout>
