@@ -352,4 +352,11 @@ export const articles = [
     path: "/ages/14-18-years/red-flags/",
     pubDate: "2026-03-21",
   },
+  {
+    title: "Warning Signs in an 8 to 10 Year Old: When to Talk to Your Pediatrician",
+    description: "Some changes in 8 to 10 year olds look like normal growing up but are actually early warning signs of anxiety, depression, ADHD, or learning differences. Learn the specific red flags for this age group, backed by AAP and CDC guidelines, and exactly when to call your pediatrician.",
+    path: "/ages/8-10-years/red-flags/",
+    pubDate: "2026-03-21",
+    image: "/images/pins/8-10-years-red-flags.png",
+  },
 ];
