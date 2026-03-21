@@ -346,4 +346,10 @@ export const articles = [
     pubDate: "2026-03-21",
     image: "/images/pins/2026-03-21-10-12-years-deodorant.png",
   },
+  {
+    title: "Teen Mental Health Crisis: Warning Signs Parents of 14 to 18 Year Olds Need to Know",
+    description: "In 2021, 42% of high school students reported persistent sadness or hopelessness and 22% seriously considered suicide (CDC, 2021). Learn the specific warning signs of depression, anxiety, eating disorders, and substance use in teens ages 14 to 18 — and exactly when to call your pediatrician or 988.",
+    path: "/ages/14-18-years/red-flags/",
+    pubDate: "2026-03-21",
+  },
 ];

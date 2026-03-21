@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'Teen Mental Health Crisis: Warning Signs Parents of 14 to 18 Year Olds Need to Know';
+const description = 'In 2021, 42% of high school students reported persistent sadness or hopelessness and 22% seriously considered suicide (CDC, 2021). Learn the specific warning signs of depression, anxiety, eating disorders, and substance use in teens ages 14 to 18 — and exactly when to call your pediatrician or 988.';
+
+const faqs = [
+  {
+    question: 'How do I know if my teenager is depressed or just moody?',
+    answer: 'The distinguishing factors are duration, pervasiveness, and functional impact. Normal teen moodiness is episodic — tied to specific events and resolving within hours or days. Clinical depression in teenagers ages 14 to 18 involves persistent changes lasting 2 or more consecutive weeks across multiple settings (home, school, friends), including either persistent sadness or irritability and loss of interest in previously enjoyed activities, plus impaired functioning (AAP, 2022). If the answer to "has my kid seemed like a different person for 2 weeks and it is affecting their daily life" is yes — call your pediatrician, do not wait.',
+  },
+  {
+    question: 'My 16-year-old is angry all the time. Could that be depression?',
+    answer: 'Yes. In teenagers, the primary mood symptom of depression is often irritability and anger rather than sadness — this is a documented, consistent clinical finding for the 12 to 18 age group (AAP, 2022). A depressed 16-year-old may seem angry, reactive, and difficult rather than sad and tearful. This is one reason teen depression is commonly missed by parents and even clinicians: it does not look like the adult version. If your teenager is persistently irritable most days for 2 or more weeks, withdrawing from their usual activities, and functioning less well at school or home, request a depression screening from their pediatrician.',
+  },
+  {
+    question: 'What percentage of teenagers struggle with mental health?',
+    answer: 'The numbers are large and have increased significantly. The CDC 2021 Youth Risk Behavior Survey found that 42% of high school students reported persistent feelings of sadness or hopelessness during the previous year, and 22% seriously considered suicide — both record highs representing substantial increases from pre-pandemic data (CDC, 2021). The AAP, American Academy of Child and Adolescent Psychiatry, and Children\'s Hospital Association jointly declared a national emergency in adolescent mental health in 2021. Anxiety disorders affect approximately 32% of adolescents ages 13 to 18 at some point during adolescence, making them the most common mental health condition in this age group (NIMH, 2023).',
+  },
+  {
+    question: 'How do I talk to my teenager about mental health without making things worse?',
+    answer: 'Start with observation rather than diagnosis: "I\'ve noticed you seem different lately, and I\'m concerned about you" lands better than "I think you have depression." Be specific: "You used to love soccer and you quit. You\'ve been in your room most of the time. That worries me." Ask open questions: "Can you help me understand what\'s been going on for you?" Do not minimize, argue, or offer quick solutions. Validate before problem-solving. The goal of the first conversation is not to fix anything — it is to open a door and let your teen know you see them and are not going anywhere. The AAP recommends framing mental health care the same way as physical care: "Your brain needs support the same way your knee would if it was hurt."',
+  },
+  {
+    question: 'What are the warning signs of an eating disorder in a 15-year-old?',
+    answer: 'Early warning signs of eating disorders in teens ages 14 to 18 include: significant weight changes over a short period; excessive or rigid rules about food (avoiding entire food groups, eating in strict rituals, distress when eating plans change); compulsive or punitive exercise; disappearing to the bathroom after meals; excessive preoccupation with body size, calories, or weight that interferes with daily functioning; and wearing layered or loose clothing to conceal body changes (NEDA, 2022; AAP, 2021). Eating disorders have the highest mortality rate of any psychiatric condition. Early identification — before medical complications develop — dramatically improves outcomes. If you observe these signs, contact your pediatrician rather than addressing food behavior directly with your teen, which often accelerates the disorder.',
+  },
+  {
+    question: 'When should I call 988 versus going to the emergency room?',
+    answer: 'Call or text 988 (Suicide and Crisis Lifeline, available 24/7) when your teenager expresses thoughts of suicide or self-harm but is physically safe in the moment — 988 counselors help assess risk level, develop safety plans, and guide next steps. Go to the emergency room or call 911 when your teenager has a weapon, has taken pills or other substances in a self-harm attempt, is actively harming themselves, or you have reason to believe an attempt is imminent and you cannot ensure their safety at home. You can also call 988 yourself — as the parent — to get guidance on what to do before you know which path is right. The AAP is clear: any expression of suicidal thoughts, including those framed as jokes, should be taken seriously and evaluated promptly, not monitored at home (AAP, 2022).',
+  },
+  {
+    question: 'Does marijuana use cause mental health problems in teenagers, or do teens with mental health problems use marijuana?',
+    answer: 'Both directions of effect exist, and they compound each other. The research is clear that adolescent cannabis use — particularly heavy use — meaningfully increases the risk of developing psychosis, depression, and anxiety disorders, with effects most pronounced when use begins before age 16 and when genetically vulnerable individuals are involved (NIDA, 2020; AAP, 2015). The developing adolescent brain is more sensitive to cannabis than the adult brain. Teens with existing anxiety and depression are also more likely to self-medicate with cannabis. The practical implication: regular cannabis use in a teenager is a red flag that requires a direct conversation and a pediatrician conversation — regardless of perceived causation direction.',
+  },
+  {
+    question: 'What is the CRAFFT screening tool, and does my teenager\'s doctor use it?',
+    answer: 'CRAFFT stands for Car, Relax, Alone, Forget, Friends, Trouble — a validated 6-question screening tool used by pediatricians to identify adolescent substance use risk at annual well-child visits (AAP, 2019). The questions assess whether a teen rides in a car with a driver who is using substances, uses substances to relax or fit in, uses substances alone, forgets things they did while using, uses substances when friends or family are not around, and has gotten in trouble due to substance use. The AAP recommends universal CRAFFT screening beginning at age 12. A positive screen does not mean your teen has a substance use disorder — it signals that a fuller conversation and possible referral is warranted. If your child\'s well-child visit did not include this, you can ask.',
+  },
+  {
+    question: 'Is it a red flag if my 17-year-old has no friends?',
+    answer: 'Social withdrawal in adolescence warrants attention but context matters. A teen with one or two deep friendships is typically developing normally — teens at ages 14 to 18 naturally prefer depth over breadth in relationships. The red flag pattern is sudden withdrawal from social connection that previously existed: a teen who had friends and activities and progressively retreats from both over weeks or months, especially if combined with mood changes, declining school performance, or loss of interest in previously enjoyed activities (AAP, 2022). Complete social isolation — no meaningful peer connection whatsoever — is a clinically significant finding that warrants pediatrician discussion, particularly if it emerged within the past several months rather than reflecting a longstanding introverted temperament.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/red-flags/',
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/red-flags/',
+  lastReviewed: '2026-03-21',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '14–18 Years', href: '/ages/14-18-years/' },
+    { label: 'Red Flags' },
+  ]}
+>
+  <h1>Teen Mental Health Crisis: Warning Signs Parents of 14 to 18 Year Olds Need to Know</h1>
+
+  <p class="answer-first">In 2021, 42% of U.S. high school students reported persistent feelings of sadness or hopelessness, and 22% seriously considered suicide — both record highs (CDC Youth Risk Behavior Survey, 2021). The AAP has declared adolescent mental health a national emergency. For teens ages 14 to 18, depression often presents as irritability rather than sadness, anxiety often looks like physical complaints and school avoidance, and eating disorders are frequently missed until medically serious. Knowing the specific warning signs — and when to act — is the most important intervention a parent can provide.</p>
+
+  <h2>What does depression actually look like in a 14 to 18 year old?</h2>
+
+  <p class="answer-first">Depression in teenagers ages 14 to 18 most commonly presents as persistent irritability and anger rather than sadness — this is one of the most frequently missed facts about teen mental health (AAP, 2022). A depressed teenager may seem like they are always angry, reactive, or difficult rather than sad and tearful. At the same time, they are withdrawing from friends, losing interest in activities they previously loved, and declining academically. The emotional presentation looks like a behavioral problem; the underlying condition is a medical one.</p>
+
+  <p>Core warning signs of depression in teens ages 14 to 18:</p>
+  <ul>
+    <li><strong>Persistent irritability or anger</strong> most days for 2 or more weeks — disproportionate to events, not resolving between incidents</li>
+    <li><strong>Persistent sadness, emptiness, or hopelessness</strong> — may be less visible than irritability but equally significant</li>
+    <li><strong>Withdrawal from friends, family, and social activities</strong> they previously participated in willingly</li>
+    <li><strong>Loss of interest or pleasure</strong> in activities they used to care about — sports, hobbies, creative pursuits, socializing</li>
+    <li><strong>Declining academic performance</strong> not explained by learning difficulties or recent major life events</li>
+    <li><strong>Significant sleep changes</strong> — sleeping far more than usual, or persistent difficulty falling or staying asleep</li>
+    <li><strong>Fatigue and low energy</strong> that persists regardless of how much sleep they get</li>
+    <li><strong>Appetite or weight changes</strong> — eating noticeably more or less than usual over several weeks</li>
+    <li><strong>Negative self-evaluation</strong> — excessive guilt, self-blame, statements that they are worthless, a burden, or that things would be better without them</li>
+    <li><strong>Any expression of suicidal thoughts</strong> — including statements framed as jokes or hypotheticals (see crisis section below)</li>
+  </ul>
+
+  <p>Clinical depression requires 5 or more of these symptoms present most days for at least 2 weeks, including either depressed/irritable mood or loss of interest (DSM-5). However, parents should not wait for a textbook presentation — any persistent change in mood and functioning lasting 2 or more weeks warrants a pediatrician conversation, not a watch-and-wait approach (AAP, 2022).</p>
+
+  <h2>What does anxiety look like in teenagers ages 14 to 18?</h2>
+
+  <p class="answer-first">Anxiety disorders are the most common mental health condition in adolescents, affecting approximately 32% of teens ages 13 to 18 at some point (NIMH, 2023). In older teens, anxiety frequently presents as physical symptoms, avoidance, and irritability rather than expressed worry — a teenager who says "I just don't feel like going" may actually be avoiding a feared situation, and one who "always has a stomachache" before school may be experiencing anxiety rather than a gastrointestinal problem. The most clinically significant behavioral red flag for anxiety in this age group is avoidance: when a teenager stops participating in previously normal activities because of fear or anticipated distress.</p>
+
+  <p>Warning signs of anxiety in teens ages 14 to 18:</p>
+  <ul>
+    <li><strong>School avoidance or refusal</strong> — the strongest single behavioral red flag; frequent absences driven by physical complaints that resolve when the teen stays home</li>
+    <li><strong>Avoidance of social situations</strong> they previously participated in — parties, group projects, extracurriculars, sports</li>
+    <li><strong>Physical complaints</strong> with no identified medical cause — stomachaches, headaches, nausea, chest tightness, particularly before school or social situations</li>
+    <li><strong>Excessive reassurance-seeking</strong> — repeatedly asking "Will I be okay? What if something goes wrong?" despite calm, rational reassurance</li>
+    <li><strong>Perfectionism and fear of failure</strong> — spending excessive time on assignments, refusing to submit work perceived as imperfect, or shutting down when facing difficulty</li>
+    <li><strong>Panic attacks</strong> — sudden episodes of intense fear, racing heart, difficulty breathing, dizziness, or feeling of impending doom, often in specific situations or seemingly out of nowhere</li>
+    <li><strong>Rigid rituals or compulsive behaviors</strong> — checking, counting, symmetry, or repetitive behaviors intended to prevent feared outcomes (may indicate OCD, which peaks in onset in adolescence)</li>
+    <li><strong>Sleep problems driven by worry</strong> — difficulty falling asleep due to intrusive thoughts, even when physically tired</li>
+    <li><strong>Performance anxiety</strong> escalating beyond what is proportionate — extreme distress before tests, presentations, or auditions that interferes with preparation or performance</li>
+  </ul>
+
+  <h2>What are the warning signs of an eating disorder in a 14 to 18 year old?</h2>
+
+  <p class="answer-first">Eating disorders have the highest mortality rate of any psychiatric condition, yet they are frequently not identified until they become medically serious (NEDA, 2022). In teens ages 14 to 18, warning signs include food restriction or rigid food rules, compensatory behaviors after eating, distorted body image that drives behavior, and physical changes from malnutrition or purging. The AAP recommends that pediatricians screen for disordered eating at every well-child visit in adolescence — parents should know the signs before a medical visit catches them (AAP, 2021).</p>
+
+  <p>Early warning signs of eating disorders in teens ages 14 to 18:</p>
+  <ul>
+    <li><strong>Significant or rapid weight changes</strong> in either direction over a short period</li>
+    <li><strong>Rigid or obsessive food rules</strong> — eliminating entire food groups without medical reason, strict rituals around eating, intense distress if food plans change</li>
+    <li><strong>Preoccupation with food, calories, weight, or body size</strong> that significantly interferes with daily functioning or social activities</li>
+    <li><strong>Disappearing after meals</strong> — a pattern of going to the bathroom immediately after eating</li>
+    <li><strong>Compulsive or punitive exercise</strong> — inability to rest, extreme distress if unable to exercise, exercising despite injury</li>
+    <li><strong>Wearing baggy or layered clothing</strong> in warm weather — often used to conceal body changes or disguise weight loss</li>
+    <li><strong>Calluses on knuckles</strong> (Russell's sign) — indicates self-induced vomiting; dental erosion is another physical sign</li>
+    <li><strong>Frequent comments about being fat</strong> that are clearly distorted relative to their actual appearance</li>
+    <li><strong>Eating alone or making excuses to avoid eating with family</strong></li>
+    <li><strong>Fainting, dizziness, hair loss, feeling cold constantly</strong> — signs of malnutrition that may develop months into the disorder</li>
+  </ul>
+
+  <p>The three most common eating disorders in this age group are anorexia nervosa (restriction), bulimia nervosa (binge-purge cycles), and binge eating disorder. Boys and teens of all body sizes develop eating disorders — the stereotype of a thin white girl is a dangerous misconception that delays identification in other groups (NEDA, 2022).</p>
+
+  <h2>What are the warning signs of substance use problems in teens ages 14 to 18?</h2>
+
+  <p class="answer-first">Some experimentation with alcohol is common in adolescence and does not automatically indicate a problem. The clinical concern arises when substance use becomes regular, is used to manage emotions or anxiety, occurs alone or in secret, causes functional impairment, or involves substances other than alcohol (AAP, 2019). Research establishes that regular cannabis use in adolescence meaningfully increases the risk of developing psychosis, depression, and anxiety — effects that are most pronounced when use begins before age 16 (NIDA, 2020; AAP, 2015). The developing adolescent brain is substantially more vulnerable to addiction than the adult brain.</p>
+
+  <p>Warning signs of concerning substance use in teens ages 14 to 18:</p>
+  <ul>
+    <li><strong>Behavioral changes</strong> coinciding with known substance access — new friend group, increased secrecy, withdrawal from family</li>
+    <li><strong>Using substances regularly to relax, calm anxiety, or cope</strong> with stress — self-medication is a significant red flag</li>
+    <li><strong>Using alone</strong> rather than only in social contexts</li>
+    <li><strong>Getting in trouble at school or legally</strong> connected to substance use</li>
+    <li><strong>Memory gaps or impaired recall</strong> of events the day after use</li>
+    <li><strong>Escalating frequency or amount</strong> — needing more to get the same effect (tolerance)</li>
+    <li><strong>Continued use despite negative consequences</strong> to relationships, grades, or health</li>
+    <li><strong>Vaping</strong> — nicotine vaping is more addictive than cigarettes and has reached epidemic rates among teens; vaping devices are easily concealed and may contain nicotine, cannabis, or other substances</li>
+    <li><strong>Presence of drug paraphernalia</strong> — pipes, cartridges, rolling papers, lighters in personal spaces</li>
+  </ul>
+
+  <p>The AAP recommends the CRAFFT screening tool at every annual well-child visit starting at age 12 (AAP, 2019). If your teen's pediatrician does not proactively screen, ask: "Can we include the CRAFFT substance use screening as part of today's visit?"</p>
+
+  <h2>When should I call my pediatrician or go to the emergency room?</h2>
+
+  <div class="callout">
+    <p class="answer-first"><strong>Call your pediatrician this week</strong> if your teen ages 14 to 18 has shown 3 or more of the warning signs above for 2 or more consecutive weeks, has been significantly missing school, is using substances regularly, or you have noticed signs consistent with an eating disorder.</p>
+
+    <p><strong>Call 988 (Suicide and Crisis Lifeline — call or text, 24/7, free and confidential)</strong> when your teen expresses thoughts of suicide, self-harm, or wanting to disappear — even framed as a joke — and is currently physically safe. 988 counselors assess risk, develop safety plans, and guide your next steps. You can call on behalf of your teen. Texting 988 is also available.</p>
+
+    <p><strong>Go to the emergency room or call 911 immediately</strong> if your teen:</p>
+    <ul>
+      <li>Has expressed a specific plan for suicide or has access to the means to carry it out</li>
+      <li>Has taken pills, cut themselves, or taken any action to harm themselves</li>
+      <li>Is threatening harm to others</li>
+      <li>Is in acute psychiatric crisis — unresponsive, severely dissociated, unable to function or communicate</li>
+      <li>Has had a sudden shift to calm after severe depression — which can indicate a decision has been made</li>
+    </ul>
+
+    <p>The AAP is unambiguous: any expression of suicidal ideation, regardless of how it is framed — including "I wish I was dead" said in passing, or memes about death shared repeatedly — should be taken seriously and evaluated by a mental health professional promptly. It should not be dismissed as attention-seeking or monitored at home (AAP, 2022).</p>
+
+    <p>Additional signs warranting same-week (not someday) pediatrician contact:</p>
+    <ul>
+      <li>Giving away valued possessions or saying goodbye in ways that feel final</li>
+      <li>Discovering evidence of self-harm (cutting, burning, or bruising in patterns inconsistent with accident)</li>
+      <li>Significant unexplained weight loss or physical signs of malnutrition</li>
+      <li>Fainting, extreme fatigue, or other physical symptoms that may indicate medical complications of an eating disorder</li>
+      <li>Expressions of hopelessness about the future combined with social withdrawal</li>
+    </ul>
+  </div>
+
+  <h2>How common is teen mental health crisis, and why has it gotten worse?</h2>
+
+  <p class="answer-first">The CDC's 2021 Youth Risk Behavior Survey found that 42% of high school students reported persistent feelings of sadness or hopelessness, and 22% seriously considered suicide — both record highs (CDC, 2021). These figures represent approximately a 50% increase from pre-pandemic figures. The AAP, American Academy of Child and Adolescent Psychiatry, and Children's Hospital Association jointly declared a national emergency in child and adolescent mental health in 2021. Teen mental health struggles are not a personal failing — they reflect a confluence of biological, social, and structural pressures that have intensified significantly over the past decade.</p>
+
+  <p>Contributing factors supported by evidence:</p>
+  <ul>
+    <li><strong>Social media and smartphones:</strong> Heavy social media use is associated with increased rates of depression, anxiety, and body image concerns — particularly for girls; effects are most pronounced for use that displaces sleep or face-to-face interaction (APA, 2023; AAP, 2023)</li>
+    <li><strong>Sleep deprivation:</strong> 77% of U.S. high school students do not get sufficient sleep; chronic sleep deprivation doubles rates of depression in teens and significantly worsens anxiety (CDC, 2023)</li>
+    <li><strong>Academic pressure:</strong> Pressure to achieve for college admission, combined with extracurricular demands, has produced what the AAP describes as a culture of toxic stress for many teens (AAP, 2022)</li>
+    <li><strong>COVID-19 sequelae:</strong> The pandemic produced measurable increases in anxiety, depression, and social anxiety across all adolescent age groups — effects that have not fully resolved (CDC, 2021)</li>
+    <li><strong>LGBTQ+ youth:</strong> LGBTQ+ teens report rates of depression, anxiety, and suicidal ideation substantially higher than their heterosexual and cisgender peers — 45% of LGBTQ+ youth seriously considered suicide in 2021 (Trevor Project, 2021)</li>
+  </ul>
+
+  <h2>What is the first-line treatment — and does it involve medication?</h2>
+
+  <p class="answer-first">Cognitive Behavioral Therapy (CBT) is the evidence-based first-line treatment for depression, anxiety, and most other mental health conditions in teens ages 14 to 18 — not medication (AAP, 2022; AACAP, 2020). CBT teaches teens to identify distorted thought patterns, tolerate uncomfortable emotions, and engage with rather than avoid feared situations. For anxiety, 60 to 70% of adolescents show significant improvement with CBT alone (AACAP, 2020). Medication — typically SSRIs — is considered for moderate-to-severe cases that do not adequately respond to therapy, always used alongside therapy rather than as a standalone treatment.</p>
+
+  <p>Practical next steps for parents:</p>
+  <ul>
+    <li><strong>Start with your pediatrician today</strong> — request a mental health evaluation; most can screen, refer, and coordinate with school support</li>
+    <li><strong>Request a school 504 plan or IEP accommodations</strong> — reduced workload, attendance flexibility, and extended time while treatment begins; schools are legally required to provide these under federal law</li>
+    <li><strong>Find a CBT therapist who specializes in adolescents</strong> — use the ABCT (Association for Behavioral and Cognitive Therapies) therapist directory or ask your pediatrician for a referral; specify CBT and adolescent specialty</li>
+    <li><strong>Do not wait for a crisis to begin</strong> — referral waitlists average 4 to 8 weeks; start the process early</li>
+    <li><strong>For eating disorders specifically:</strong> Request a referral to an adolescent eating disorder specialist — standard outpatient therapy is often insufficient; family-based treatment (FBT) is the evidence-based approach for adolescent anorexia (AAP, 2021)</li>
+  </ul>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions: Teen Mental Health Red Flags (Ages 14–18)</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </section>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. If you are concerned about your teenager's mental health, contact your pediatrician. In a crisis, call or text 988 (Suicide and Crisis Lifeline) or call 911. Content references current AAP, CDC, NIMH, NEDA, AACAP, and NIDA guidelines.</em></p>
+
+</BaseLayout>
