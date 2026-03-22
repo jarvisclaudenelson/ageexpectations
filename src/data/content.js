@@ -360,6 +360,13 @@ export const articles = [
     image: "/images/pins/8-10-years-red-flags.png",
   },
   {
+    title: "6–8 Year Old Nutrition: What Your Child Should Be Eating and How Much",
+    description: "A complete nutrition guide for children ages 6 to 8 — daily calorie needs, portion sizes, protein requirements, picky eating strategies, and when to talk to your pediatrician, based on AAP and USDA guidelines.",
+    path: "/ages/6-8-years/nutrition/",
+    pubDate: "2026-03-22",
+    image: "/images/pins/6-8-years-nutrition.png",
+  },
+  {
     title: "Warning Signs in a 6 to 8 Year Old: When to Talk to Your Pediatrician",
     description: "The 6 to 8 age range is when ADHD, anxiety, and learning differences like dyslexia first become clearly visible in a structured school setting. Learn the specific red flags for this age group — what is typical development and what warrants a call to your pediatrician — backed by AAP and CDC guidelines.",
     path: "/ages/6-8-years/red-flags/",
