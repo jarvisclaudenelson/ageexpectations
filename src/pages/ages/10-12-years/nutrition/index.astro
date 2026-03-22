@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '10–12 Year Old Nutrition: What Your Tween Should Be Eating and How Much';
+const description = 'A complete nutrition guide for children ages 10 to 12 — daily calorie needs during puberty, protein and calcium requirements, sports nutrition, body image risks, and when to talk to your pediatrician, based on AAP and USDA guidelines.';
+
+const faqs = [
+  {
+    question: 'How many calories does my 11-year-old need per day?',
+    answer: 'Children ages 10 to 12 typically need 1,600 to 2,200 calories per day, depending on sex, activity level, and whether they have entered puberty (USDA Dietary Guidelines, 2020). Moderately active girls ages 10 to 12 need approximately 1,600 to 1,800 calories; moderately active boys need 1,800 to 2,200 calories. Active children — those in competitive sports or with 60 or more minutes of vigorous daily activity — need calories toward the upper end of the range. During a growth spurt, calorie needs can spike temporarily by 200 to 500 calories above baseline. The AAP does not recommend calorie-counting for children; hunger and fullness cues are the appropriate guide (AAP, 2023).',
+  },
+  {
+    question: 'Why is my 10 or 11 year old suddenly eating so much?',
+    answer: 'A sudden increase in appetite in a 10 to 12 year old is typically the first sign of a puberty-related growth spurt — and it is both expected and appropriate. During peak growth velocity, which occurs around ages 10 to 12 in girls and 12 to 14 in boys, children can grow 2 to 3 inches per year and gain significant lean muscle mass (AAP, 2022). This growth requires substantial additional energy and nutrients. Increased appetite during this phase should generally be honored, not restricted — denying calories during active growth is associated with nutritional deficiencies and, in some children, triggers disordered eating patterns. If increased appetite is accompanied by excessive fatigue, unusual thirst, or unexplained weight gain without height gain, discuss with your pediatrician.',
+  },
+  {
+    question: 'How much calcium does a 10 to 12 year old need, and why does it matter?',
+    answer: 'Children ages 9 to 18 need 1,300 mg of calcium per day — the highest calcium requirement of any life stage (AAP, 2023). This is because approximately 40% of total lifetime bone mass is built during childhood and adolescence, with the most rapid bone mineral accumulation occurring during puberty between ages 10 and 14 (NIH Osteoporosis and Related Bone Diseases Resource Center, 2018). Inadequate calcium intake during this window cannot be compensated for in adulthood and is directly linked to increased risk of osteoporosis later in life. Meeting 1,300 mg daily requires approximately 4 servings of dairy or calcium-fortified alternatives — most children in this age group fall short of this target.',
+  },
+  {
+    question: 'My 12-year-old daughter just started her period. Should she eat more iron?',
+    answer: 'Yes. Girls who have begun menstruating need 15 mg of iron per day — nearly double the 8 mg/day recommended before menstrual onset (AAP, 2023). Menstrual blood loss depletes iron, and iron-deficiency anemia is one of the most common nutritional deficiencies in adolescent girls, affecting roughly 9% of girls ages 12 to 19 in the United States (CDC, 2022). Iron-rich foods appropriate for this age include lean red meat (the most bioavailable source), chicken and turkey dark meat, fortified breakfast cereals, beans, lentils, and spinach. Pairing iron-rich plant foods with vitamin C (like orange juice or bell peppers) significantly increases iron absorption. Your pediatrician may screen for anemia at the 12-year well-child visit.',
+  },
+  {
+    question: 'Should my 10 to 12 year old take a protein supplement or sports powder?',
+    answer: 'No. The AAP explicitly recommends against protein supplements and sports powders for children and adolescents, including active tweens ages 10 to 12 (AAP, 2023). Protein supplements are poorly regulated, often contain undisclosed ingredients, and provide no measurable benefit over food-based protein for children who eat a varied diet. A typically active 10 to 12 year old needs 34 to 46 grams of protein per day — an amount easily met by 2 eggs at breakfast (12 grams), a turkey sandwich at lunch (20 grams), and chicken with dinner (26 grams). The only children who warrant evaluation for protein adequacy are those with highly restricted diets or documented growth failure.',
+  },
+  {
+    question: 'How do I talk to my tween about eating without triggering body image issues?',
+    answer: 'The AAP recommends focusing all nutrition conversations in this age group on what food does for the body — energy, athletic performance, concentration, growth — rather than on weight, calories, or appearance (AAP, 2016). Research shows that children ages 10 to 12 whose parents diet openly, comment on their child\'s body, or label foods as "fattening" are significantly more likely to develop disordered eating by age 15 (Neumark-Sztainer, 2011). Frame food as fuel: "this gives you energy for practice," "calcium builds the bones you\'re growing right now." Never comment on a tween\'s weight — positively or negatively — and do not discuss your own dieting in front of them.',
+  },
+  {
+    question: 'Is it normal for a 10 to 12 year old to skip breakfast?',
+    answer: 'Breakfast skipping is common among tweens — surveys find that approximately 20 to 30% of children ages 10 to 12 skip breakfast at least 3 days per week — but it has documented negative effects on morning academic performance, concentration, and behavior (AAP, 2023). Children who eat breakfast show higher scores on memory, attention, and problem-solving tasks in morning hours than those who fast through the morning. If time is the barrier, lower the friction: overnight oats, a banana with peanut butter, Greek yogurt, or a hard-boiled egg take under 2 minutes. Establishing a consistent wake time with 10 minutes of eating time built in is more effective than elaborate breakfasts that get skipped.',
+  },
+  {
+    question: 'What are warning signs that my tween might have an eating disorder?',
+    answer: 'The 10 to 12 age range is one of the most common windows for eating disorder onset, particularly in girls. Warning signs include: skipping meals consistently with excuses, cutting out entire food groups without medical reason, frequent comments about being fat or needing to diet, going to the bathroom immediately after meals, hiding food, significant weight loss or failure to gain weight during a known growth phase, and obsessive interest in "clean eating" or food labels (AAP, 2016). Eating disorders have the highest mortality rate of any mental health condition — early intervention leads to significantly better outcomes. If you observe 2 or more of these signs, contact your pediatrician rather than waiting.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/nutrition/',
+  datePublished: '2026-03-22',
+  dateModified: '2026-03-22',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-12-years/nutrition/',
+  lastReviewed: '2026-03-22',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '10–12 Years', href: '/ages/10-12-years/' },
+    { label: 'Nutrition & Eating' },
+  ]}
+>
+  <h1>10–12 Year Old Nutrition: What Your Tween Should Be Eating and How Much</h1>
+
+  <p class="answer-first">Children ages 10 to 12 need 1,600 to 2,200 calories per day, with dramatically increased needs for calcium, iron, and protein as puberty begins (USDA Dietary Guidelines, 2020; AAP, 2023). This is the single most nutritionally demanding window of childhood — more bone mass is built in these years than at any other time in life, and the body is simultaneously building lean muscle, expanding blood volume, and developing the hormonal systems that will carry a person through adulthood. Getting nutrition right between ages 10 and 12 has measurable effects on bone density, adult height, cognitive development, and mental health outcomes that persist for decades.</p>
+
+  <h2>What are the key nutritional needs for children ages 10 to 12?</h2>
+
+  <p class="answer-first">Children ages 10 to 12 need 1,600–2,200 calories per day, 1,300 mg of calcium daily (the highest of any life stage), 34–46 grams of protein, and — for girls who have begun menstruating — 15 mg of iron per day (AAP, 2023; USDA Dietary Guidelines, 2020). The rapid bone mineralization of early puberty makes calcium intake at this age more critical than at almost any other point in life: approximately 40% of total lifetime bone mass is accumulated during childhood and adolescence, with peak accumulation occurring between ages 10 and 14 (NIH Osteoporosis and Related Bone Diseases Resource Center, 2018).</p>
+
+  <p>Daily targets for ages 10–12 (USDA Dietary Guidelines, 2020; AAP, 2023):</p>
+  <ul>
+    <li><strong>Calories:</strong> 1,600–1,800 for moderately active girls; 1,800–2,200 for moderately active boys. Active children in organized sports need 200–500 more.</li>
+    <li><strong>Calcium:</strong> 1,300 mg/day — approximately 4 servings of dairy or calcium-fortified foods. This is the same requirement as a 16-year-old at peak growth.</li>
+    <li><strong>Protein:</strong> 34–46 grams/day from meat, poultry, fish, eggs, dairy, beans, nuts, and seeds. Active children and those in growth spurts need the higher end of the range.</li>
+    <li><strong>Iron:</strong> 8 mg/day for both boys and girls before menstruation; 15 mg/day for girls after menstrual onset (AAP, 2023).</li>
+    <li><strong>Vitamin D:</strong> 600 IU/day; supports calcium absorption and immune function. Many tweens in northern latitudes are deficient — your pediatrician can screen at the annual well-child visit (AAP, 2023).</li>
+    <li><strong>Fiber:</strong> 25–31 grams/day from whole grains, fruits, vegetables, and beans (USDA, 2020).</li>
+    <li><strong>Grains:</strong> 5–7 ounce-equivalents per day; at least half whole grain.</li>
+    <li><strong>Vegetables:</strong> 2–3 cups per day across all subgroups.</li>
+    <li><strong>Fruit:</strong> 1.5–2 cups per day; whole fruit preferred over juice.</li>
+  </ul>
+
+  <h2>Why does puberty change what my 10 to 12 year old needs to eat?</h2>
+
+  <p class="answer-first">Puberty triggers the most significant nutrition demand increase of childhood. During the pubertal growth spurt — which typically begins between ages 8 and 10 in girls and 10 and 12 in boys — children can grow 2 to 3 inches per year and add significant lean muscle and bone mass simultaneously (AAP, 2022). This physical transformation requires substantially more calories, protein, calcium, iron, and zinc than the years just before. The brain is also undergoing the second-most intensive development phase of life during early adolescence — prefrontal cortex maturation depends on omega-3 fatty acids and adequate overall nutrition.</p>
+
+  <p>Key changes puberty introduces to nutritional needs:</p>
+  <ul>
+    <li><strong>Increased calorie demand:</strong> A child who needed 1,400 calories at age 9 may need 1,800 to 2,000 calories at age 11. A sudden increase in appetite is typically the first sign of an active growth spurt and should be honored, not restricted.</li>
+    <li><strong>Bone building peaks:</strong> The 10–14 year age range represents peak bone mineral density accumulation. The 1,300 mg calcium daily requirement applies from age 9 all the way through age 18 — but the most critical window is now. Bone mass built in this window is the foundation for skeletal health for life.</li>
+    <li><strong>Iron needs rise in girls:</strong> Girls who begin menstruating need 15 mg of iron per day, nearly double the pre-menstrual requirement of 8 mg/day. Iron-deficiency anemia is the most common nutritional deficiency in adolescent girls.</li>
+    <li><strong>Muscle mass building in boys:</strong> Boys entering puberty begin producing testosterone, which drives rapid muscle development. Adequate protein — distributed across meals rather than front-loaded at dinner — most efficiently supports this growth.</li>
+    <li><strong>Zinc:</strong> Critical for sexual maturation, immune function, and growth. Boys need 8 mg/day and girls 9 mg/day during this period. Zinc is found in meat, shellfish, beans, nuts, and dairy (NIH Office of Dietary Supplements, 2022).</li>
+  </ul>
+
+  <h2>How much calcium does my tween actually need, and what foods provide it?</h2>
+
+  <p class="answer-first">Children ages 9 to 18 need 1,300 mg of calcium per day — the highest calcium requirement of any age group, including pregnant women (AAP, 2023). Meeting this target requires approximately 4 servings of dairy daily, or a combination of dairy and fortified alternatives. One cup (8 oz) of cow's milk provides approximately 300 mg of calcium; one cup of yogurt provides 300–400 mg; one ounce of hard cheese (like cheddar) provides approximately 200 mg. Studies consistently show that the majority of children ages 10 to 12 in the United States fall short of the 1,300 mg target, with average intake closer to 900–1,000 mg per day (USDA, 2020).</p>
+
+  <p>Calcium sources by content for ages 10–12:</p>
+  <ul>
+    <li><strong>Plain yogurt (1 cup):</strong> 400–450 mg — the most calcium-dense food per serving</li>
+    <li><strong>Milk — cow, fortified soy (1 cup):</strong> 300 mg; low-fat or fat-free milk recommended (AAP, 2023)</li>
+    <li><strong>Hard cheese, cheddar (1 oz):</strong> 200 mg; also a good protein source</li>
+    <li><strong>Fortified orange juice (1 cup):</strong> 350 mg; check the label — not all OJ is fortified</li>
+    <li><strong>Fortified breakfast cereal (1 serving):</strong> 100–1,000 mg depending on brand; check the label</li>
+    <li><strong>Canned sardines with bones (3 oz):</strong> 325 mg; the bones are the calcium source and are soft enough to eat</li>
+    <li><strong>White beans (½ cup cooked):</strong> 130 mg; plus protein and fiber</li>
+    <li><strong>Cooked broccoli (1 cup):</strong> 62 mg; lower than dairy but contributes meaningfully when eaten consistently</li>
+    <li><strong>Fortified tofu (½ cup):</strong> 200–250 mg; check label for calcium sulfate in the ingredient list</li>
+  </ul>
+  <p>Children who cannot or do not eat dairy should discuss supplementation with their pediatrician. Calcium citrate supplements are better absorbed than calcium carbonate, particularly in children who take them without food (AAP, 2023).</p>
+
+  <h2>What should my tween eat for sports and physical activity?</h2>
+
+  <p class="answer-first">Active children ages 10 to 12 in organized sports need 200 to 500 additional calories above their baseline requirement, with water as the primary sports hydration — not sports drinks (AAP, 2023). The AAP recommends that sports drinks be reserved for continuous vigorous exercise lasting more than 60 minutes in hot conditions; for typical soccer, basketball, or swim practice lasting 60 minutes or less, water is sufficient and preferable (AAP, 2023). Pre-activity snacks should be consumed 30 to 60 minutes before exercise; post-activity recovery should combine carbohydrate and protein within 30 to 60 minutes of finishing.</p>
+
+  <ul>
+    <li><strong>Pre-activity snack (30–60 min before):</strong> Easy-to-digest carbohydrate plus a small amount of protein — banana with peanut butter, whole grain crackers with cheese, or a small yogurt. Avoid high-fat foods close to activity, which slow digestion and can cause stomach discomfort during exercise.</li>
+    <li><strong>During activity (under 60 min):</strong> Water every 20 minutes. Active children need approximately 5 to 7 oz of water per 20 minutes of exercise. Sports drinks are unnecessary for short activities and provide empty sugar calories (AAP, 2023).</li>
+    <li><strong>During activity (over 60 min):</strong> Electrolyte replacement may be appropriate for prolonged activity in heat. A sports drink or water plus a salty snack (pretzels, crackers) is a reasonable approach. Energy drinks are never appropriate for this age group.</li>
+    <li><strong>Post-activity recovery (within 30–60 min):</strong> A combination of carbohydrate and protein supports glycogen replenishment and muscle repair. Chocolate milk (16 oz) is one of the most studied post-exercise recovery foods for this purpose and is appropriate for this age group. Alternatives include Greek yogurt with fruit or a turkey sandwich on whole grain bread.</li>
+    <li><strong>Protein supplements:</strong> The AAP explicitly recommends against protein powders, shakes, and sports supplements for children ages 10 to 12. These products are unregulated, often contain undisclosed stimulants, and offer no proven benefit over food-based protein for typically developing children (AAP, 2023).</li>
+  </ul>
+
+  <h2>How does nutrition affect my tween's mood, focus, and school performance?</h2>
+
+  <p class="answer-first">Nutritional adequacy directly affects academic performance, emotional regulation, and mental health in children ages 10 to 12. Iron deficiency — the most common nutritional deficiency in this age group — impairs attention, memory, and processing speed before it causes visible anemia (AAP, 2023). Omega-3 fatty acid intake is associated with better attention and reduced ADHD symptoms. Regular breakfast eating is associated with higher grades, better attention, and lower rates of anxiety and depression in school-age children and adolescents (AAP, 2023). Skipping meals causes blood glucose drops that directly impair prefrontal cortex function — the brain region responsible for focus, impulse control, and emotional regulation.</p>
+
+  <p>Evidence-based nutrition strategies that support tween mental performance:</p>
+  <ul>
+    <li><strong>Eat breakfast daily.</strong> Breakfast skippers show measurably lower performance on morning academic assessments. Simple high-protein breakfasts — eggs, Greek yogurt, peanut butter on whole grain — outperform sugary cereals in sustaining focus through late morning.</li>
+    <li><strong>Include omega-3 sources.</strong> Fatty fish (salmon, sardines, tuna), walnuts, and flaxseed support brain development and have documented effects on attention. Aim for 2 servings of fatty fish per week (AAP, 2023).</li>
+    <li><strong>Prioritize iron for girls who have started menstruating.</strong> Iron deficiency impairs learning and attention before it causes obvious symptoms. Annual screening is recommended at the 12-year well-child visit (AAP, 2023).</li>
+    <li><strong>Avoid skipping meals before tests or demanding school days.</strong> The brain uses glucose as its primary fuel; a fasted state impairs working memory and executive function regardless of age.</li>
+    <li><strong>Limit caffeine.</strong> Caffeine in energy drinks, coffee-flavored beverages, and some teas disrupts sleep at this age, and poor sleep has a greater effect on academic performance than skipping breakfast. The AAP recommends against caffeine for children under 12 and limiting it significantly for ages 12–14 (AAP, 2023).</li>
+  </ul>
+
+  <h2>How do I navigate body image conversations about eating with my tween?</h2>
+
+  <p class="answer-first">The 10 to 12 age range is a peak onset period for disordered eating — particularly in girls — and parent behavior around food and bodies is one of the most significant predictive risk factors (AAP, 2016). Research by Dr. Dianne Neumark-Sztainer (Project EAT, 2011) found that parents who dieted openly, made comments about their child's weight, or labeled foods as "fattening" significantly increased their child's risk of unhealthy weight control behaviors and binge eating by age 15. The AAP recommends never commenting on a tween's weight or body shape, never putting a tween on a diet without medical supervision, and framing all food conversations around health, energy, and performance — not appearance.</p>
+
+  <p>Protective communication practices recommended by the AAP (2016):</p>
+  <ul>
+    <li><strong>Frame food as fuel and building material.</strong> "Calcium is building your bones right now" and "protein helps your muscles grow" connect food to function, not weight. Avoid "don't eat that, it'll make you fat."</li>
+    <li><strong>Never comment on a tween's body weight or shape</strong> — including positive comments about thinness, which implicitly communicate that fatness is undesirable. Comments like "you're so skinny, lucky!" cause harm to developing body image.</li>
+    <li><strong>Do not openly diet in front of your tween.</strong> Parents who skip meals, refuse foods, and discuss their own weight or dieting normalize restrictive behavior. Model flexible, varied eating without commentary.</li>
+    <li><strong>Don't use food as a reward or punishment.</strong> This creates emotional eating associations that are difficult to unlearn in adulthood.</li>
+    <li><strong>Address diet culture directly.</strong> Tweens ages 10 to 12 are actively using social media and encountering extreme body ideals. A direct age-appropriate conversation about photo editing, unrealistic standards, and the relationship between puberty and body change is protective.</li>
+    <li><strong>Serve food that includes all food groups.</strong> Households that restrict access to entire categories ("we never have sweets") create higher risk of disordered eating when those foods are available outside the home.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my tween's eating?</h2>
+
+  <p class="answer-first">Talk to your pediatrician if your 10 to 12 year old is showing signs of restrictive eating, significant weight changes in either direction, nutritional deficiencies, or behaviors that suggest disordered eating. Eating disorders have the highest mortality rate of any psychiatric condition, and this is one of the peak-onset age ranges (AAP, 2016). Specific red flags for children ages 10 to 12 include: significant weight loss or failure to gain expected weight during a known growth phase, elimination of entire food groups without medical reason, refusal to eat in social settings, excessive interest in food labels and "clean eating," and any comments about being fat, needing to diet, or discomfort with their changing body.</p>
+
+  <p>Specific red flags that warrant a pediatrician call for ages 10–12:</p>
+  <ul>
+    <li>Weight loss or failure to gain expected weight during a known puberty growth phase — a child in an active growth spurt should be gaining, not losing</li>
+    <li>Cutting out entire food groups (no carbs, no fat, no meat) without a diagnosed medical condition</li>
+    <li>Persistent fatigue, pallor, or difficulty concentrating — these can be signs of iron-deficiency anemia, which is common in girls at this age and easily screened and treated</li>
+    <li>Going to the bathroom immediately after every meal — a potential sign of purging behavior</li>
+    <li>Hiding food, secretly eating, or intense anxiety around meals</li>
+    <li>Excessive exercise that the child describes as being for weight control, or exercise that continues through illness, injury, or weather that would stop most peers</li>
+    <li>Preoccupation with calories, "clean eating," or food labels in a child who previously had a typical relationship with food</li>
+    <li>Hair loss, brittle nails, dizziness, or fainting — signs of significant nutritional deficiency</li>
+    <li>Comments about feeling fat or needing to diet — in a child of any weight, at this age, this is a warning sign, not an observation to agree with</li>
+  </ul>
+  <p>Your pediatrician will weigh your child at every annual visit and plot their growth curve — significant deviations (dropping 2 or more percentile points in weight without height-proportional reasons) trigger evaluation. If you have concerns between well-child visits, call. Early intervention for eating disorders in the 10–14 age range has significantly better outcomes than treatment beginning in later adolescence.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 10 to 12 Year Old Nutrition</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, USDA, and NIH guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

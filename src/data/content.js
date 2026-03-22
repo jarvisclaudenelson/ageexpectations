@@ -333,6 +333,13 @@ export const articles = [
     pubDate: "2026-03-20",
   },
   {
+    title: "10–12 Year Old Nutrition: What Your Tween Should Be Eating and How Much",
+    description: "A complete nutrition guide for children ages 10 to 12 — daily calorie needs during puberty, protein and calcium requirements, sports nutrition, body image risks, and when to talk to your pediatrician, based on AAP and USDA guidelines.",
+    path: "/ages/10-12-years/nutrition/",
+    pubDate: "2026-03-22",
+    image: "/images/pins/10-12-years-nutrition.png",
+  },
+  {
     title: "Warning Signs in a 10 to 12 Year Old: When to Talk to Your Pediatrician",
     description: "Behavior changes in tweens ages 10 to 12 can be hard to read — some are typical puberty, others are real warning signs. Learn the specific red flags for depression, anxiety, learning differences, and social struggles at this age, with AAP-backed guidance on when to call your pediatrician.",
     path: "/ages/10-12-years/red-flags/",
