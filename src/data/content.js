@@ -353,6 +353,13 @@ export const articles = [
     pubDate: "2026-03-21",
   },
   {
+    title: "8–10 Year Old Nutrition: What Your Child Should Be Eating and How Much",
+    description: "A complete nutrition guide for children ages 8 to 10 — daily calorie needs, portion sizes, protein requirements, sports nutrition, body image risks, and when to talk to your pediatrician, based on AAP and USDA guidelines.",
+    path: "/ages/8-10-years/nutrition/",
+    pubDate: "2026-03-22",
+    image: "/images/pins/8-10-years-nutrition.png",
+  },
+  {
     title: "Warning Signs in an 8 to 10 Year Old: When to Talk to Your Pediatrician",
     description: "Some changes in 8 to 10 year olds look like normal growing up but are actually early warning signs of anxiety, depression, ADHD, or learning differences. Learn the specific red flags for this age group, backed by AAP and CDC guidelines, and exactly when to call your pediatrician.",
     path: "/ages/8-10-years/red-flags/",

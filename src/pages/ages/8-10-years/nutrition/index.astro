@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = '8–10 Year Old Nutrition: What Your Child Should Be Eating and How Much';
+const description = 'A complete nutrition guide for children ages 8 to 10 — daily calorie needs, portion sizes, protein requirements, picky eating strategies, and when to talk to your pediatrician, based on AAP and USDA guidelines.';
+
+const faqs = [
+  {
+    question: 'How many calories does my 9-year-old need per day?',
+    answer: 'Children ages 8 to 10 typically need 1,400 to 1,800 calories per day, depending on sex, activity level, and body size (USDA Dietary Guidelines, 2020). Moderately active boys ages 8 to 10 need approximately 1,600 to 1,800 calories; moderately active girls need approximately 1,400 to 1,600 calories. Highly active children who participate in competitive sports or vigorous daily play for 60 or more minutes may need 200 to 400 additional calories. The AAP recommends against calorie-counting for children and instead supports using hunger and fullness cues as the primary guide to food intake (AAP, 2023).',
+  },
+  {
+    question: 'How much protein does my 8 to 10 year old need?',
+    answer: 'Children ages 8 to 10 need approximately 28 grams of protein per day — slightly more than younger children, reflecting their larger body size and active growth (USDA Dietary Guidelines, 2020). Common protein sources and their amounts: a 3-ounce chicken breast provides about 26 grams, one egg provides 6 grams, a cup of milk provides 8 grams, and a half-cup of beans provides 7 to 8 grams. Children who eat a varied diet that includes dairy, eggs, meat, beans, or nuts typically meet protein needs without supplementation. Extra attention to protein is most relevant for children with highly selective eating or who follow vegetarian or vegan diets.',
+  },
+  {
+    question: 'What are signs my 8 to 10 year old is not eating enough?',
+    answer: 'The most reliable indicator that a child ages 8 to 10 is not eating enough is falling off their established growth curve — dropping 2 or more percentile points in height or weight over 6 to 12 months (AAP, 2023). Other signs include persistent fatigue and low energy, difficulty concentrating at school, poor wound healing, frequent illness, and feeling cold often. Brief appetite dips during growth pauses are common and not concerning if the child returns to normal eating within a few weeks. Any child who loses weight without explanation warrants a pediatrician evaluation.',
+  },
+  {
+    question: 'My 9-year-old only wants junk food. How do I handle this?',
+    answer: 'The AAP recommends a division-of-responsibility approach for school-age children: parents decide what food is offered, when meals occur, and where eating happens; children decide whether to eat and how much (Satter, 2020). Homes that keep predominantly nutritious food available see better overall dietary quality than homes that rely on willpower to limit junk food. Restricting palatable foods often backfires — children given unrestricted access to previously forbidden foods eat significantly more of them than children in homes where they appear occasionally. Structured meals and snacks with mostly whole foods, served consistently, is more effective than negotiation.',
+  },
+  {
+    question: 'Should my 10-year-old take a daily vitamin?',
+    answer: 'The AAP does not routinely recommend multivitamin supplements for healthy children who eat a reasonably varied diet (AAP, 2023). Exceptions include children with highly selective eating patterns, diagnosed nutritional deficiencies, certain medical conditions affecting absorption, or diets that exclude entire food groups (such as vegan diets, which require vitamin B12 supplementation). Vitamin D deficiency is common in children with limited sun exposure and darker skin tones — your pediatrician can screen for this at a well-child visit. Do not start supplements without discussing your child\'s specific diet with their pediatrician first.',
+  },
+  {
+    question: 'How much milk should a 9-year-old drink each day?',
+    answer: 'Children ages 8 to 10 need approximately 1,000 to 1,300 mg of calcium per day (AAP, 2023). One cup (8 oz) of cow\'s milk provides approximately 300 mg of calcium — so 2 to 3 cups of dairy daily (including milk, yogurt, and cheese) typically meets calcium needs. The AAP recommends low-fat or fat-free milk for children over age 2. Fortified soy milk is the most comparable dairy alternative for calcium and vitamin D. Children who avoid dairy should discuss supplementation with their pediatrician, since bone mass is actively accumulating in the 8–10 year range and calcium is critical.',
+  },
+  {
+    question: 'Is picky eating at age 9 or 10 something to worry about?',
+    answer: 'Some food selectivity is common at ages 8 to 10, particularly in children with a genetic tendency toward supertasting (heightened sensitivity to bitter flavors in vegetables). Most children at this age eat a sufficient variety to maintain normal growth without intervention. However, Avoidant Restrictive Food Intake Disorder (ARFID) — characterized by fewer than 15 to 20 accepted foods, significant weight loss or growth failure, nutritional deficiencies, and daily distress around food — warrants professional evaluation. If your child\'s eating has narrowed significantly from earlier years, is causing anxiety, or is interfering with social situations like school lunch, talk to your pediatrician.',
+  },
+  {
+    question: 'What are healthy after-school snacks for 8 to 10 year olds?',
+    answer: 'The best after-school snacks for 8 to 10 year olds combine a protein source with a carbohydrate to stabilize blood sugar and fuel the gap between lunch and dinner (AAP, 2023). Options that work well for this age: apple slices with peanut butter, whole grain crackers with cheese or hummus, a small yogurt with fruit, hard-boiled eggs with whole grain toast, or a homemade trail mix with nuts, seeds, and dried fruit. Aim for snacks in the 150 to 250 calorie range — large snacks close to dinner reduce appetite for nutritious evening meals. Involve children this age in choosing their own snacks from a curated set of options.',
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/nutrition/',
+  datePublished: '2026-03-22',
+  dateModified: '2026-03-22',
+});
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/nutrition/',
+  lastReviewed: '2026-03-22',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '8–10 Years', href: '/ages/8-10-years/' },
+    { label: 'Nutrition & Eating' },
+  ]}
+>
+  <h1>8–10 Year Old Nutrition: What Your Child Should Be Eating and How Much</h1>
+
+  <p class="answer-first">Children ages 8 to 10 need 1,400 to 1,800 calories per day from a variety of food groups, including whole grains, fruits, vegetables, lean protein, and dairy (USDA Dietary Guidelines, 2020). This is a nutritionally important window — bone mass is actively accumulating, brain development is ongoing, and physical activity levels are often at their lifetime peak. It is also the age when social pressure around food increases, peers influence food choices, and parents lose some control over what is eaten at school and friends' houses. Building flexible, positive food habits now pays dividends through adolescence.</p>
+
+  <h2>How much should an 8 to 10 year old eat each day?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 need 1,400 to 1,800 calories per day from all five food groups. The USDA's MyPlate guidelines recommend: 1–1.5 cups of fruit, 1.5–2.5 cups of vegetables, 5–6 ounces of grains (at least half whole grain), 4–5 ounces of protein foods, and 2.5–3 cups of dairy daily for this age group (USDA, 2020). Boys in this range need slightly more than girls on average; highly active children — those in competitive sports or with 60+ minutes of vigorous daily activity — need calories toward the upper end of the range.</p>
+
+  <p>Daily food group targets for ages 8–10 (USDA Dietary Guidelines, 2020):</p>
+  <ul>
+    <li><strong>Grains:</strong> 5–6 ounce-equivalents per day; at least half whole grain (whole wheat bread, oatmeal, brown rice, whole grain pasta). One slice of bread or a half-cup of cooked rice equals one ounce-equivalent.</li>
+    <li><strong>Vegetables:</strong> 1.5–2.5 cups per day; variety across subgroups is important — dark green vegetables (broccoli, spinach), red and orange vegetables (carrots, bell peppers), and beans and peas provide different nutrient profiles.</li>
+    <li><strong>Fruit:</strong> 1–1.5 cups per day; whole fruit is preferred over juice, which lacks fiber and concentrates sugar. The AAP recommends limiting juice to 8 ounces per day maximum (AAP, 2023).</li>
+    <li><strong>Protein:</strong> 4–5 ounce-equivalents per day; includes meat, poultry, seafood, eggs, beans, peas, nuts, and seeds. A 3-ounce serving of chicken or fish equals 3 ounce-equivalents.</li>
+    <li><strong>Dairy:</strong> 2.5–3 cups per day; low-fat or fat-free milk and yogurt are recommended; fortified soy milk is an acceptable alternative. This age group is in peak bone-building years, making calcium intake particularly important.</li>
+  </ul>
+
+  <h2>Why does nutrition matter more in the 8 to 10 year age range?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 are in a critical window for bone mineral density accumulation — approximately 40% of adult bone mass is built during childhood and adolescence, with the most rapid accumulation occurring in the years just before and during puberty (National Institutes of Health Osteoporosis and Related Bone Diseases Resource Center, 2018). Inadequate calcium and vitamin D intake during this period cannot be fully compensated for later. In addition, early puberty — which begins in many girls between ages 8 and 10 and boys between ages 9 and 11 — increases iron requirements and overall caloric needs.</p>
+
+  <p>Key nutrients of particular importance for ages 8–10:</p>
+  <ul>
+    <li><strong>Calcium:</strong> 1,000–1,300 mg/day; critical for bone density accumulation. Sources: milk, yogurt, cheese, fortified plant milks, leafy greens.</li>
+    <li><strong>Vitamin D:</strong> 600 IU/day (AAP, 2023); supports calcium absorption and immune function. Sources: fortified milk, fatty fish, egg yolks, fortified foods. Many children in northern latitudes are deficient, especially in winter.</li>
+    <li><strong>Iron:</strong> 8–10 mg/day; especially important for girls beginning menstruation and all children in growth spurts. Sources: lean red meat, poultry, beans, fortified cereals, spinach.</li>
+    <li><strong>Fiber:</strong> 22–25 grams/day; supports digestive health and gut microbiome development. Sources: whole grains, fruits, vegetables, beans.</li>
+    <li><strong>Omega-3 fatty acids:</strong> Support brain development and concentration; sources include fatty fish (salmon, sardines), walnuts, and flaxseed.</li>
+  </ul>
+
+  <h2>What are healthy meals for 8 to 10 year olds?</h2>
+
+  <p class="answer-first">The most effective approach to feeding 8 to 10 year olds is family meals built around a protein, a whole grain, and one or more vegetables — with fruit as a common side or dessert alternative. Research consistently shows that children ages 8 to 10 who eat family meals 3 or more times per week have better overall dietary quality, lower rates of obesity, and lower rates of disordered eating in adolescence than those who rarely eat with their families (AAP, 2023). Meals do not need to be elaborate — a basic dinner of grilled chicken, brown rice, and broccoli with fruit for dessert meets all major nutrient targets.</p>
+
+  <p>Balanced meal examples appropriate for ages 8–10:</p>
+  <ul>
+    <li><strong>Breakfast:</strong> Whole grain toast with peanut butter + banana + glass of low-fat milk. Provides protein, healthy fat, complex carbohydrate, and calcium. Children who eat breakfast score higher on attention and memory tests than those who skip (AAP, 2023).</li>
+    <li><strong>Lunch (packed):</strong> Turkey and cheese on whole wheat + apple slices + baby carrots with hummus + water or low-fat milk.</li>
+    <li><strong>Dinner:</strong> Baked salmon + brown rice + roasted broccoli + sliced melon. Provides omega-3s, calcium, fiber, and vitamins A and C.</li>
+    <li><strong>Snack:</strong> Whole grain crackers with string cheese + grapes. Provides protein, calcium, and natural sugar for sustained energy.</li>
+  </ul>
+  <p>Involving children ages 8 to 10 in meal planning and preparation is highly effective at this age — they are cognitively ready to learn about nutrition and take pride in contributing to family meals. Research shows that children who help cook eat more variety and are more willing to try new foods (AAP, 2023).</p>
+
+  <h2>How should I handle my child's growing awareness of food and body image?</h2>
+
+  <p class="answer-first">Between ages 8 and 10, children become acutely aware of body size — both their own and others'. This is the peak age for the onset of weight stigma internalization and the beginning of dieting behavior in girls, with research showing that up to 40% of 9 to 10 year old girls have dieted (AAP, 2016). The AAP strongly recommends against weight-based comments, food restriction for weight management, or discussions of "good" and "bad" foods in the presence of children this age (AAP, 2016). Instead, frame food in terms of what it does for the body — "this helps your muscles grow," "this helps you focus at school" — rather than weight or appearance.</p>
+
+  <p>Protective practices that reduce eating disorder risk in 8 to 10 year olds:</p>
+  <ul>
+    <li><strong>Avoid labeling foods as "bad" or "fattening."</strong> All foods can fit in a healthy diet in appropriate portions. Restricting foods increases their appeal and can trigger binge behavior when they are available.</li>
+    <li><strong>Don't comment on a child's body weight or shape</strong> — positively or negatively. Complimenting thinness implicitly communicates that fatness is bad.</li>
+    <li><strong>Don't use food as a reward or punishment.</strong> This increases emotional eating patterns that persist into adulthood.</li>
+    <li><strong>Model positive food relationships.</strong> Children who observe parents dieting, complaining about their own bodies, or refusing food groups are more likely to develop disordered eating.</li>
+    <li><strong>Teach media literacy around body image.</strong> Children this age are exposed to idealized bodies in media and social platforms — a direct conversation about photoshopping and unrealistic standards is age-appropriate and protective.</li>
+  </ul>
+
+  <h2>What foods and beverages should children ages 8 to 10 limit?</h2>
+
+  <p class="answer-first">The USDA Dietary Guidelines recommend limiting added sugars to less than 10% of total daily calories for children ages 8 and older — approximately 35 to 45 grams (about 9 to 11 teaspoons) per day (USDA, 2020). A single 12-ounce soda contains approximately 39 grams of added sugar, meeting nearly the entire daily limit. The AAP recommends that children ages 2 and older avoid sugar-sweetened beverages entirely, including soda, sports drinks, flavored lemonades, sweetened teas, and energy drinks (AAP, 2023). Sports drinks are a particular issue at this age — they are often marketed to active children but are unnecessary except during prolonged vigorous activity lasting more than 60 minutes.</p>
+
+  <p>Items to minimize for ages 8–10:</p>
+  <ul>
+    <li><strong>Sugar-sweetened beverages:</strong> Soda, sports drinks (Gatorade, Powerade), fruit punch, sweetened teas — the AAP recommends avoiding these entirely; water and low-fat milk are the recommended beverages for this age group (AAP, 2023).</li>
+    <li><strong>Energy drinks:</strong> Never appropriate for children — contain caffeine levels (80–200 mg per can) that can cause cardiac arrhythmia, anxiety, and sleep disruption (AAP, 2023).</li>
+    <li><strong>Highly processed snack foods:</strong> Chips, packaged cookies, candy as daily staples — not a prohibition, but not the bulk of daily intake. These foods provide calories with minimal nutritional density.</li>
+    <li><strong>Excess juice:</strong> Even 100% fruit juice lacks fiber, concentrates sugar, and provides minimal additional nutrition over whole fruit. Limit to 8 oz/day maximum (AAP, 2023).</li>
+    <li><strong>High-sodium packaged foods:</strong> Children ages 8 to 10 should limit sodium to 1,500–1,900 mg/day (USDA, 2020). Packaged soups, deli meats, salty snacks, and fast food are the primary contributors to excess sodium in children's diets.</li>
+  </ul>
+
+  <h2>How do sports and physical activity affect nutrition needs for this age group?</h2>
+
+  <p class="answer-first">Children ages 8 to 10 who participate in organized sports or vigorous physical activity for 60 or more minutes per day have higher calorie, protein, and hydration needs than their sedentary peers. The AAP recommends water as the primary hydration source during and after sports — not sports drinks or electrolyte beverages, except for exercise lasting more than 60 continuous minutes in hot conditions (AAP, 2023). Active children aged 8 to 10 need approximately 5 to 7 ounces of water for every 20 minutes of physical activity. Post-exercise, a snack combining carbohydrate and protein — such as chocolate milk, a peanut butter sandwich, or yogurt with fruit — supports muscle recovery.</p>
+
+  <ul>
+    <li><strong>Pre-activity:</strong> A small snack 30–60 minutes before activity helps sustain energy — whole grain crackers with peanut butter, a banana, or a small yogurt work well. Avoid large meals within 2 hours of vigorous activity.</li>
+    <li><strong>During activity:</strong> Water every 20 minutes. Sports drinks are unnecessary for activities under 60 minutes and provide empty sugar calories (AAP, 2023).</li>
+    <li><strong>Post-activity:</strong> A recovery snack within 30–60 minutes of activity combining carbohydrate and protein helps replenish glycogen and support muscle repair. Chocolate milk (16 oz) is well-studied in this role and appropriate for this age group.</li>
+    <li><strong>Protein needs for active children:</strong> Highly active 8 to 10 year olds may benefit from protein intake toward 30–35 grams per day, though most children who eat meat, dairy, and eggs naturally reach this without supplementation.</li>
+    <li><strong>Protein supplements:</strong> The AAP does not recommend protein powder or sports supplements for children in this age group (AAP, 2023). These are unnecessary, poorly regulated, and have unknown long-term safety profiles in children.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my child's eating?</h2>
+
+  <p class="answer-first">Talk to your pediatrician if your 8 to 10 year old's eating habits are causing growth concerns, nutritional deficiencies, significant family stress, or show signs of disordered eating. Specific red flags in children this age include: dropping 2 or more growth chart percentiles in height or weight over 6 to 12 months, accepting fewer than 15 to 20 total foods across all groups, persistent fatigue or pallor suggesting nutritional deficiency, or any comments about wanting to diet, being fat, or not eating to control weight (AAP, 2023). The 8–10 age range is a peak onset window for eating disorders — early intervention is significantly more effective than late.</p>
+
+  <p>Specific red flags that warrant a pediatrician call:</p>
+  <ul>
+    <li>Weight loss, failure to gain weight appropriate to height, or dropping 2 or more percentile points on the growth chart</li>
+    <li>Fewer than 15–20 accepted foods total, or sudden major narrowing of diet after previously eating more variety</li>
+    <li>Physical signs of nutritional deficiency: unusual fatigue, pallor, frequent illness, brittle nails, or hair loss</li>
+    <li>Gagging, vomiting, or extreme anxiety when exposed to new foods — beyond typical reluctance</li>
+    <li>Dieting behavior: restricting food intake, skipping meals intentionally to control weight, counting calories, or commenting that certain foods are "fattening" — these are early warning signs of eating disorder onset in this age group (AAP, 2016)</li>
+    <li>Significant weight gain beyond growth expectations — while the AAP discourages weight-focused comments to children, a pediatrician conversation about overall health habits is appropriate</li>
+    <li>A child who was previously eating a varied diet and suddenly restricts significantly after an illness, choking event, or emotional trauma — this pattern may indicate ARFID (Avoidant Restrictive Food Intake Disorder)</li>
+  </ul>
+  <p>Your pediatrician may refer to a pediatric dietitian, a feeding therapist (occupational or speech therapist specializing in feeding), or a pediatric psychologist specializing in eating disorders depending on the specific concern. Do not wait for symptoms to become severe before seeking evaluation — early intervention outcomes are significantly better.</p>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Nutrition</h2>
+
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and USDA guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
