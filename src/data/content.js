@@ -379,4 +379,10 @@ export const articles = [
     path: "/ages/12-14-years/sleep/",
     pubDate: "2026-03-21",
   },
+  {
+    title: "Early Warning Signs of Learning Disabilities in a 5 or 6 Year Old",
+    description: "Learn the real early warning signs of learning disabilities in kindergartners — including what's actually a red flag, the truth about letter reversals, and how to request a free school evaluation under federal law. Based on AAP and International Dyslexia Association guidelines.",
+    path: "/ages/5-6-years/red-flags/",
+    pubDate: "2026-03-22",
+  },
 ];
