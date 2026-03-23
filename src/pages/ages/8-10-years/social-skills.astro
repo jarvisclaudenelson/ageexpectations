@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
+
+const title = '8–10 Year Old Social Skills: Friendships, Boundaries, and What to Expect';
+const description = 'Between ages 8 and 10, children shift from "playmates" to "friends" with shared values. Learn about developing social skills, navigating cliques, emotional regulation, and when to talk to your pediatrician.';
+
+const faqs = [
+  {
+    question: 'Is it normal for my 9-year-old to only want to hang out with friends of the same gender?',
+    answer: 'Yes, it is very typical for children ages 8 to 10 to prefer same-sex peer groups (AAP, 2022). This "gender-segregated" play helps children explore their identity and practice social norms within a comfortable group. While mixed-gender friendships still occur, the drive for same-sex group belonging peaks during these middle childhood years.',
+  },
+  {
+    question: 'My 8-year-old is suddenly very sensitive to what friends think. Should I be worried?',
+    answer: 'Increased sensitivity to peer opinion is a hallmark of the 8-to-10 age range. As children develop "social comparison" skills, they begin to measure their own abilities and appearance against their peers. This shift is a necessary part of developing a self-concept, though it can lead to temporary dips in confidence or increased self-consciousness.',
+  },
+  {
+    question: 'What should I do if my child is being excluded from a "clique" at school?',
+    answer: 'Start by listening without immediately trying to "fix" it. Help your 8-to-10-year-old identify their feelings and brainstorm ways to connect with other friends. The AAP recommends encouraging a variety of social circles — like sports teams, clubs, or neighborhood friends — so that exclusion in one group doesn\'t feel like a total social failure.',
+  },
+  {
+    question: 'How do I know if my 10-year-old is ready for a phone or social media?',
+    answer: 'There is no "magic age," but most experts and the AAP suggest waiting as long as possible, often until age 13 for social media. For a basic phone, consider your child\'s impulse control, ability to follow rules, and the practical need for communication. Focus on "digital citizenship" skills — like kindness and privacy — before handing over a device.',
+  },
+  {
+    question: 'When is social "bossiness" a problem in an 8-year-old?',
+    answer: 'Bossiness is common as 8-to-10-year-olds experiment with leadership and social power. It becomes a concern if it leads to persistent peer rejection, if the child cannot take turns being the "leader," or if they use exclusion to control others. Practice "perspective-taking" at home by asking how they think their friends felt during the interaction.',
+  },
+  {
+    question: 'Should I step in to resolve my 9-year-old’s friendship drama?',
+    answer: 'At ages 8 to 10, parents should move from "referee" to "coach." Instead of calling the other parent, help your child script what they want to say to their friend. This builds essential conflict-resolution skills. Only intervene directly if there is evidence of physical harm, persistent bullying, or a significant power imbalance.',
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/social-skills/',
+});
+const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/8-10-years/social-skills/',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  medicalSchema={mSchema}
+  breadcrumbs={[
+    { label: '8–10 Years', href: '/ages/8-10-years/' },
+    { label: 'Social Skills' },
+  ]}
+>
+  <h1>8–10 Year Old Social Skills: Friendships, Boundaries, and What to Expect</h1>
+
+  <p class="answer-first">Children ages 8 to 10 are in a "social transition" phase where friendships shift from being based on shared activities (playmates) to shared values and mutual trust (intimate friendships). According to the AAP (2022), children in this stage develop a strong need for peer acceptance, begin to prefer same-sex social groups, and gain the ability to see perspectives other than their own.</p>
+
+  <h2>What are the key social milestones for 8 to 10 year olds?</h2>
+
+  <p class="answer-first">By age 10, most children can maintain stable friendships based on trust and loyalty rather than just proximity or toys. They develop "perspective-taking" — the ability to understand that someone else might have different thoughts or feelings (CDC, 2023). Socially, they begin to pull away from family-centered activities in favor of peer-group belonging and shared interests.</p>
+
+  <p>During the 8-to-10-year window, you can typically expect your child to:</p>
+  <ul>
+    <li>Show a strong desire to "fit in" and be liked by their peer group.</li>
+    <li>Prefer playing and socializing in same-sex groups or "cliques."</li>
+    <li>Understand and follow more complex "social rules" in games and sports.</li>
+    <li>Develop a sense of "best friendship" that involves sharing secrets and mutual support.</li>
+    <li>Begin to compare their own social status or abilities to those of their peers (social comparison).</li>
+  </ul>
+
+  <h2>How do 8 to 10 year olds define "friendship"?</h2>
+
+  <p class="answer-first">Between ages 8 and 10, the definition of a "friend" evolves from someone who "plays the same game as me" to someone who "is kind to me and keeps my secrets." This shift toward loyalty and emotional support is a major developmental leap (AAP, 2022). Friendships become more exclusive, and the "best friend" concept becomes central to their social identity.</p>
+
+  <p>In early childhood, a friend is anyone in the room with a similar toy. By the middle school years (ages 8–10), children look for friends who share their specific interests — like Minecraft, soccer, or a specific book series. They also begin to understand the concept of a "fair-weather friend" versus someone who is truly supportive during a conflict.</p>
+
+  <h2>Is it typical for 8 to 10 year olds to have cliques?</h2>
+
+  <p class="answer-first">Yes, forming small, exclusive groups or "cliques" is a typical social behavior for children ages 8 to 10. These groups provide a sense of security and identity as children begin to establish independence from their parents (AAP, 2022). While these groups are a part of typical development, they can also be the source of social exclusion or "mean girl/boy" behaviors.</p>
+
+  <p>Cliques at this age are often characterized by:</p>
+  <ul>
+    <li><strong>Gender segregation:</strong> A strong preference for same-sex groups.</li>
+    <li><strong>Exclusivity:</strong> Using "insider" language or rules to define who belongs and who does not.</li>
+    <li><strong>Conformity:</strong> Pressure to dress, speak, or act like the rest of the group to maintain status.</li>
+  </ul>
+  <p>While cliques help children practice group dynamics, parents should watch for signs that the group is becoming harmful or that the child is using exclusion as a tool for social power.</p>
+
+  <h2>How can I help my 8 to 10 year old handle social conflict?</h2>
+
+  <p class="answer-first">Help your 8-to-10-year-old handle conflict by practicing "perspective-taking" — asking them to describe how their friend might have felt during a disagreement. At this age, the AAP recommends moving from "refereeing" to "coaching," allowing children to brainstorm their own solutions and script their own conversations before intervening directly (AAP, 2022).</p>
+
+  <p>Effective social coaching strategies include:</p>
+  <ul>
+    <li><strong>Role-playing:</strong> Practice "I-statements" (e.g., "I felt sad when you didn't include me in the game") to help them express feelings without attacking the other person.</li>
+    <li><strong>Identifying "Big" vs. "Small" problems:</strong> Help them distinguish between a minor annoyance (a friend being "annoying") and a major issue (bullying or physical harm).</li>
+    <li><strong>Encouraging diverse social circles:</strong> Help your child maintain friendships across different settings (school, sports, neighborhood) so that a conflict in one area doesn't feel like a social catastrophe.</li>
+  </ul>
+
+  <h2>What are "social red flags" for children ages 8 to 10?</h2>
+
+  <p class="answer-first">Social red flags for 8-to-10-year-olds include persistent social isolation, a total lack of interest in peers, being the frequent target of bullying, or using aggressive exclusion to control others. According to the AAP, a sudden withdrawal from previously enjoyed social activities or a significant drop in self-esteem linked to peer interactions warrants closer attention from parents and professionals.</p>
+
+  <p>Contact your pediatrician or a school counselor if you notice:</p>
+  <ul>
+    <li>Your child has no "reciprocal" friendships (no one calls them, and they have no one to call).</li>
+    <li>Extreme "social anxiety" that prevents them from attending school or activities.</li>
+    <li>Frequent "stomachaches" or "headaches" on school mornings (potential signs of social distress).</li>
+    <li>Persistent patterns of being teased or picked on by multiple children.</li>
+    <li>Difficulty reading basic social cues, such as when to stop a behavior that is bothering others.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician about my 8 to 10 year old’s social skills?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Talk to your pediatrician if social struggles interfere with your child's ability to attend school, participate in activities, or maintain a generally positive mood. The AAP notes that middle childhood is a common time for social challenges related to ADHD, anxiety, or high-functioning autism to become more apparent as social "rules" become more complex and less adult-mediated (AAP, 2022).</p>
+    
+    <p>Specific signs that warrant a clinical conversation include:</p>
+    <ul>
+      <li><strong>Persistent withdrawal:</strong> Choosing to be alone nearly all the time rather than just occasionally needing "downtime."</li>
+      <li><strong>Aggressive outbursts:</strong> Frequently losing control during social interactions or "overreacting" to minor social slights.</li>
+      <li><strong>Inability to take perspectives:</strong> A complete lack of empathy or awareness of how their actions affect others' feelings.</li>
+      <li><strong>Victimization:</strong> Any evidence of physical bullying, cyberbullying, or persistent verbal abuse that causes the child to fear going to school.</li>
+    </ul>
+    <p>Early intervention with a counselor or social skills group can help children learn the "unwritten rules" of social interaction during these critical years.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: 8 to 10 Year Old Social Skills</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>

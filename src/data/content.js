@@ -399,4 +399,11 @@ export const articles = [
     path: "/ages/5-6-years/red-flags/",
     pubDate: "2026-03-22",
   },
+  {
+    title: "8–10 Year Old Social Skills: Friendships, Boundaries, and What to Expect",
+    description: "Between ages 8 and 10, children shift from \"playmates\" to \"friends\" with shared values. Learn about developing social skills, navigating cliques, emotional regulation, and when to talk to your pediatrician.",
+    path: "/ages/8-10-years/social-skills/",
+    pubDate: "2026-03-23",
+    image: "/images/pins/2026-03-23-8-10-years-social-skills-pin.png",
+  },
 ];

@@ -24,6 +24,7 @@ export const topics = [
   { slug: 'behavior', label: 'Behavior & Emotions' },
   { slug: 'language', label: 'Language & Communication' },
   { slug: 'play', label: 'Play & Learning' },
+  { slug: 'social-skills', label: 'Social Skills' },
   { slug: 'health', label: 'Health & Safety' },
   { slug: 'red-flags', label: 'Red Flags' },
 ];
