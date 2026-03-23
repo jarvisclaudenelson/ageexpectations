@@ -412,4 +412,11 @@ export const articles = [
     path: "/ages/8-10-years/puberty/",
     pubDate: "2026-03-23",
   },
+  {
+    title: "When Can My Child Stay Home Alone? A Parent's Guide (Ages 10–14)",
+    description: "Most children are ready to stay home alone between ages 10 and 12 for short periods. Learn about maturity readiness, safety skills, legal age limits, and AAP guidelines for ages 10 to 14.",
+    path: "/ages/10-14-years/staying-home-alone/",
+    pubDate: "2026-03-23",
+    image: "/images/pins/2026-03-23-10-14-years-staying-home-alone-pin.png",
+  },
 ];

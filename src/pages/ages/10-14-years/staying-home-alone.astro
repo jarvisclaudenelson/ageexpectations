@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
+
+const title = "When Can My Child Stay Home Alone? A Parent's Guide (Ages 10–14)";
+const description = "Most children are ready to stay home alone between ages 10 and 12 for short periods. Learn about maturity readiness, safety skills, legal age limits, and AAP guidelines for ages 10 to 14.";
+
+const faqs = [
+  {
+    question: "Is it normal for my 11-year-old to be afraid to stay home alone?",
+    answer: "Yes, it is entirely typical for an 11-year-old to feel anxious about being home alone. Developmental readiness varies, and some children are naturally more cautious or prone to separation anxiety. The AAP recommends starting with very short durations (15–30 minutes) and gradually increasing the time as your child builds confidence and demonstrates they can handle the responsibility safely (AAP, 2022).",
+  },
+  {
+    question: "How long can I leave my 12-year-old home alone?",
+    answer: "Most 12-year-olds can handle 1 to 3 hours alone during daylight hours if they have demonstrated maturity and follow safety rules. The AAP advises against leaving children under age 13 alone overnight or for extended periods (8+ hours). Always ensure a trusted neighbor is available and that your child knows exactly how to reach you at all times.",
+  },
+  {
+    question: "Can my 13-year-old babysit their younger siblings?",
+    answer: "A mature 13-year-old can often babysit younger siblings for short periods, but this requires a higher level of responsibility than staying home alone. The AAP suggests that sitters be at least 11 to 13 years old and recommends completing a babysitting safety course (like those from the Red Cross). Ensure the 13-year-old knows basic first aid and has a clear plan for emergencies involving the younger children.",
+  },
+  {
+    question: "Should I use home cameras to check on my child while I'm away?",
+    answer: "Using home cameras can provide peace of mind, but they should complement, not replace, a child's internal safety skills. Be transparent with your 10 to 14-year-old about the cameras to maintain trust. The goal is to foster independence, so use check-ins (via phone or text) as the primary method of communication, using cameras only as a secondary safety measure.",
+  },
+  {
+    question: "What should my child do if there is a power outage while they are alone?",
+    answer: "Your child should have a 'power outage plan' before staying home alone. Teach them where the flashlights are kept (avoid candles due to fire risk), how to stay away from windows during storms, and to keep the refrigerator closed. They should know to call or text you immediately. If they feel unsafe, they should have a pre-arranged plan to go to a trusted neighbor's house.",
+  },
+  {
+    question: "Is it okay to let my 10-year-old stay home for just 15 minutes?",
+    answer: "For many mature 10-year-olds, a 15-minute 'trial run' is an excellent way to build independence. Ensure they know how to lock the door, how to reach you, and what to do if the phone rings or someone knocks. If the child remains calm and follows all rules during these short intervals, you can gradually increase the time (Safe Kids, 2023).",
+  },
+];
+
+const aSchema = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-14-years/staying-home-alone/',
+});
+const fSchema = faqSchema(faqs);
+const mSchema = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/10-14-years/staying-home-alone/',
+});
+---
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={aSchema}
+  faqSchema={fSchema}
+  medicalSchema={mSchema}
+  breadcrumbs={[
+    { label: 'Staying Home Alone (10–14 Years)' },
+  ]}
+>
+  <h1>When Can My Child Stay Home Alone? A Parent's Guide (Ages 10–14)</h1>
+
+  <p class="answer-first">Most children are developmentally ready to begin staying home alone for short periods between ages 10 and 12, though readiness depends more on maturity than age. The American Academy of Pediatrics (AAP) suggests that children are generally not equipped to handle emergencies independently until age 11 or 12. Parents should use a gradual approach, starting with 15–30 minute intervals during daylight hours (AAP, 2022).</p>
+
+  <h2>What is the typical age a child can stay home alone?</h2>
+
+  <p class="answer-first">While there is no single 'correct' age, most child safety experts and the AAP recommend waiting until a child is at least 10 to 12 years old before leaving them alone for short periods (Safe Kids, 2023). Children in this age range are beginning to develop the abstract reasoning and impulse control needed to follow safety protocols without direct supervision. However, children under age 13 should generally not be left alone for more than 3 hours or after dark.</p>
+
+  <p>Considerations for different ages:</p>
+
+  <ul>
+    <li><strong>Ages 9–10:</strong> May be ready for very short 'practice' intervals (15–20 minutes) while a parent runs a nearby errand, provided the child is comfortable and knows emergency basics.</li>
+    <li><strong>Ages 11–12:</strong> Typically ready for 1–2 hours alone during the day. Most children this age can follow a check-in routine and handle simple snacks without using the stove.</li>
+    <li><strong>Ages 13–14:</strong> Most are ready for 3+ hours alone. Many can also begin taking on the responsibility of watching younger siblings for short periods (AAP, 2022).</li>
+  </ul>
+
+  <h2>How do I know if my 10 to 12-year-old is ready to stay home alone?</h2>
+
+  <p class="answer-first">Readiness for self-care is determined by a child's demonstrated responsibility, physical safety skills, and emotional comfort level. Ask yourself: Does your child follow house rules consistently? Do they make logical decisions when faced with a small problem? Are they physically able to lock/unlock doors and use a phone? If a child is easily frightened by noises or lacks basic 'street smarts,' they likely need more time (AAP, 2022).</p>
+
+  <p>Assess these four areas of readiness:</p>
+
+  <ul>
+    <li><strong>Physical Skills:</strong> Can they lock and unlock all doors and windows? Can they use a phone to call or text you and 911?</li>
+    <li><strong>Cognitive Maturity:</strong> Can they follow a list of instructions? Do they understand 'what-if' scenarios (e.g., 'What if the smoke alarm goes off?')?</li>
+    <li><strong>Behavioral History:</strong> Do they typically follow rules about screen time, snacks, and visitors when you are in the other room?</li>
+    <li><strong>Emotional Comfort:</strong> Does the child feel confident about being alone, or do they express fear and anxiety? Never force a child to stay alone if they are genuinely afraid.</li>
+  </ul>
+
+  <h2>What safety skills does my 12 to 14-year-old need before staying home?</h2>
+
+  <p class="answer-first">Before being left alone for any length of time, a 12 to 14-year-old must know their full address, your cell phone number, and exactly when to call 911 (AAP, 2022). They should also be proficient in basic first aid for minor cuts or burns, know the location and use of a fire extinguisher, and understand the 'No Visitors' rule unless specifically cleared by a parent.</p>
+
+  <p>Mandatory safety training should include:</p>
+
+  <ul>
+    <li><strong>Emergency Contacts:</strong> A printed list of numbers (parent, trusted neighbor, pediatrician, 911) kept in a visible spot.</li>
+    <li><strong>The Door Rule:</strong> Never opening the door for anyone—including delivery people—unless a parent has pre-authorized the visit.</li>
+    <li><strong>Kitchen Safety:</strong> Clear rules on whether the stove, oven, or microwave can be used. Many parents allow the microwave but forbid the stove until age 13 or 14.</li>
+    <li><strong>First Aid:</strong> Knowing where the first aid kit is and how to clean a minor wound or use an ice pack.</li>
+  </ul>
+
+  <h2>Are there legal age limits for leaving a child home alone?</h2>
+
+  <p class="answer-first">There is no federal law setting a minimum age for staying home alone, but state laws vary significantly, ranging from age 8 to 14. For example, Maryland law sets the minimum age at 8, while Oregon suggests 10. Illinois previously had a strict limit of 14, though this has been subject to recent legislative updates. Most states use a 'totality of circumstances' approach to determine if a child was neglected.</p>
+
+  <p>To stay legally compliant and safe:</p>
+
+  <ul>
+    <li><strong>Check Local Laws:</strong> Search for 'minimum age for self-care' for your specific state or county.</li>
+    <li><strong>Consider the Environment:</strong> Legal age doesn't matter if the environment is unsafe. A safe neighborhood with a neighbor home next door is different from an isolated rural area.</li>
+    <li><strong>Documentation:</strong> Ensure your child has easy access to a phone and emergency numbers, which demonstrates you have provided adequate safety resources.</li>
+  </ul>
+
+  <h2>When should I talk to my pediatrician?</h2>
+
+  <div class="callout">
+    <p class="answer-first">Consult your pediatrician if your child expresses extreme, persistent anxiety about being home alone that seems out of sync with their age. You should also seek guidance if your child has developmental delays, ADHD, or impulsivity issues that might make unsupervised time unsafe. Your pediatrician can help you assess if your child’s executive function and emotional regulation are ready for the transition to self-care (AAP, 2022).</p>
+    <p>Red flags that may indicate a child is NOT ready:</p>
+    <ul>
+      <li>High levels of impulsivity or 'daredevil' behavior</li>
+      <li>Inability to stay calm when a parent is in another part of the house</li>
+      <li>Frequent 'forgetting' of major safety rules (e.g., leaving the door unlocked)</li>
+      <li>A history of fire-starting or dangerous curiosity with household chemicals</li>
+      <li>Extreme fear of being alone, even for short periods</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions: Staying Home Alone (10 to 14 Years)</h2>
+    {faqs.map(faq => (
+      <div class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+</BaseLayout>
