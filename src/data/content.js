@@ -406,4 +406,10 @@ export const articles = [
     pubDate: "2026-03-23",
     image: "/images/pins/2026-03-23-8-10-years-social-skills-pin.png",
   },
+  {
+    title: "Is My 8 to 10 Year Old Starting Puberty? Signs, Timeline, and What's Normal",
+    description: "While the average age for a first period is 12, physical changes often start at age 8 or 9. Learn the first signs of puberty in 8 to 10 year olds, the difference between adrenarche and puberty, and what the AAP considers the normal range for development.",
+    path: "/ages/8-10-years/puberty/",
+    pubDate: "2026-03-23",
+  },
 ];
