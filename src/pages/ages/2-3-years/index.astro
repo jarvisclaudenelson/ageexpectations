@@ -11,6 +11,7 @@ const faqs = [
   { question: 'Is it normal for a 2-year-old to not talk much?', answer: 'There is a wide range of normal for language at age 2. Some toddlers use 50 or more words and short phrases, while others are slower to talk but understand a great deal. However, if your child uses fewer than 25 words by 24 months, does not combine words, or does not seem to understand simple requests, talk to your pediatrician. Early speech-language evaluation can make a meaningful difference.' },
   { question: 'What are signs of developmental delay in a 2–3 year old?', answer: 'Signs that warrant a conversation with your pediatrician include not using 2-word phrases by age 2, not following simple instructions, losing skills they previously had, not making eye contact, extreme difficulty separating from caregivers, not engaging in pretend play by age 3, or inability to walk steadily. The AAP recommends developmental screening at the 24- and 30-month well-child visits.' },
   { question: 'When do toddlers stop having tantrums?', answer: 'Tantrums are a normal part of development that peak between ages 2 and 3. Most children have fewer and less intense tantrums by age 4 as their language skills and emotional regulation improve. Tantrums that are very frequent (more than 5 per day), last longer than 25 minutes, or involve self-injury should be discussed with your pediatrician.' },
+  { question: 'When should my toddler be potty trained?', answer: 'The AAP notes a wide range of typical for toilet training — most children show readiness between ages 2 and 3, but many are not fully trained until 3.5 or later (AAP, 2022). Signs of readiness include staying dry for 2 hours, showing interest in the toilet, discomfort with wet diapers, and ability to follow simple instructions. Pressuring before readiness typically backfires.' },
 ];
 
 const aSchema = articleSchema({ title, description, url: 'https://ageexpectations.com/ages/2-3-years/' });
@@ -19,13 +20,11 @@ const fSchema = faqSchema(faqs);
 <BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} breadcrumbs={[{ label: '2–3 Years' }]}>
   <h1>2–3 Year Old Development: What to Expect</h1>
 
-  <p>If you're parenting a child between the ages of 2 and 3, you already know: life is never boring. This is the age of first full sentences, fierce independence, towering block structures, and spectacular meltdowns over a broken cracker. It can feel chaotic, but nearly everything your toddler is doing — even the parts that test your patience — is a sign of healthy, rapid development.</p>
+  <p class="answer-first">Between ages 2 and 3, most children progress from 50 words to 200–1,000+ words in 3–4 word sentences, from unsteady running to confident climbing, and from simple pretend play to elaborate imaginative scenarios (CDC, 2022). Tantrums peak during this period as emotional regulation develops. The AAP recommends developmental screening at 24 and 30 months, with autism-specific screening at 18 and 24 months.</p>
 
-  <p>This guide provides a comprehensive overview of what to expect during the 2–3 year old stage across every major developmental domain. Each section links to a detailed topic page with deeper clinical context, practical strategies, and clear guidance on when to consult your pediatrician. Our information is based on current AAP (American Academy of Pediatrics) recommendations and CDC developmental milestone checklists.</p>
+  <h2>What are the key milestones for 2 to 3 year olds?</h2>
 
-  <h2>What to Expect: An Overview of 2–3 Year Old Development</h2>
-
-  <p>Between ages 2 and 3, your child is making enormous strides in every area of development. Here's a quick look at each domain:</p>
+  <p class="answer-first">Between ages 2 and 3, children make enormous strides across every developmental domain — motor skills, language, cognition, and social-emotional development (CDC, 2022). Here's a quick look at each:</p>
 
   <ul>
     <li><strong>Motor skills:</strong> Running, climbing, kicking a ball, walking up and down stairs. Fine motor skills advance to turning pages, stacking blocks, and beginning to use utensils with increasing coordination.</li>
@@ -45,9 +44,9 @@ const fSchema = faqSchema(faqs);
     ))}
   </div>
 
-  <h2>Is This Normal? What to Expect and What to Watch For</h2>
+  <h2>How do I know if my 2 to 3 year old's development is on track?</h2>
 
-  <p>One of the most common questions parents of 2–3 year olds ask is some variation of "is this normal?" The short answer: almost always, yes. Toddlers in this age range are supposed to be impulsive, emotional, messy, and relentlessly curious. That said, there are specific patterns worth paying attention to.</p>
+  <p class="answer-first">The CDC's milestone checklist benchmarks what most children can do by ages 2 and 3, and the AAP screens for these at the 24- and 30-month well-child visits (CDC, 2022). Toddlers in this age range are supposed to be impulsive, emotional, messy, and relentlessly curious. That said, there are specific patterns worth paying attention to.</p>
 
   <p>The <strong>CDC's developmental milestone checklist</strong> provides a helpful benchmark. At the 2-year well-child visit, your pediatrician will screen for milestones like using 2-word phrases, following 2-step instructions, and engaging in simple pretend play. At the 30-month visit, the AAP recommends additional screening for autism spectrum disorder. These aren't pass/fail tests — they're tools to identify children who might benefit from early support.</p>
 
@@ -61,9 +60,9 @@ const fSchema = faqSchema(faqs);
     <li>Improving coordination — fewer falls, better control of utensils and crayons</li>
   </ul>
 
-  <h2>Signs of Possible Delay: When Development Looks Different</h2>
+  <h2>What are the red flags for developmental delay at 2 to 3 years?</h2>
 
-  <p>No two children develop on exactly the same timeline, and variation is expected. However, certain signs may indicate a need for professional evaluation. According to the AAP and CDC, red flags for 2–3 year olds include:</p>
+  <p class="answer-first">No two children develop on the same timeline, and variation is expected. However, the AAP and CDC identify specific patterns in 2–3 year olds that may indicate a need for professional evaluation (CDC, 2022). Red flags include:</p>
 
   <ul>
     <li>Not using 2-word phrases by 24 months</li>
@@ -78,8 +77,8 @@ const fSchema = faqSchema(faqs);
   <p>If you notice any of these patterns, bring them up at your next well-child visit — or sooner. Early intervention services (available through your state's Part C or Part B program) can make a significant difference, and earlier is always better.</p>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The AAP recommends developmental screening at 9, 18, and 30 months, with autism-specific screening at 18 and 24 months. Beyond scheduled screenings, contact your pediatrician if your 2–3 year old is not meeting milestones listed above, has lost previously acquired skills, has tantrums that are unusually severe or frequent (lasting more than 25 minutes, occurring more than 5 times a day, or involving self-injury), or if something simply feels off to you. Parental instinct is a valid and valuable data point. You do not need to wait for a scheduled visit to raise concerns.</p>
+    <h2>When should I talk to my pediatrician about my 2 to 3 year old?</h2>
+    <p class="answer-first">The AAP recommends developmental screening at 9, 18, and 30 months, with autism-specific screening at 18 and 24 months. Beyond scheduled screenings, contact your pediatrician if your 2–3 year old is not meeting milestones listed above, has lost previously acquired skills, has tantrums that are unusually severe or frequent (lasting more than 25 minutes, occurring more than 5 times a day, or involving self-injury), or if something simply feels off to you. Parental instinct is a valid and valuable data point. You do not need to wait for a scheduled visit to raise concerns.</p>
   </div>
 
   <div class="faq-section">
