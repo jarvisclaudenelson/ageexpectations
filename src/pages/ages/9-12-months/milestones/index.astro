@@ -3,49 +3,53 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '9–12 Month Milestones: What to Expect and Signs of Progress';
-const description = 'Between 9 and 12 months, babies reach major developmental milestones including pulling to stand, early walking, saying "mama" and "dada," pointing, and following simple instructions.';
+const description = 'Most babies 9–12 months old pull to stand, cruise, point, understand simple words, and use a pincer grasp to pick up small objects. Use this CDC- and AAP-referenced guide to understand 9–12 month developmental milestones.';
 
 const faqs = [
   {
     question: 'Is it normal if my 12-month-old is not walking yet?',
-    answer: 'Yes. While many babies take their first steps around their first birthday, the typical range for walking independently is 9–15 months (CDC, 2022). As long as your baby is pulling to stand, cruising along furniture, or standing alone, motor development is progressing. If your baby is not standing with support at all by 12 months, mention it to your pediatrician.',
+    answer: 'Yes. Independent walking often begins around the first birthday, but the typical range extends well beyond 12 months, and many healthy babies are still cruising or standing briefly at that age (CDC, 2022). Progress toward standing, cruising, and getting around purposefully matters more than hitting one exact walking deadline on your calendar.',
   },
   {
-    question: 'When should my baby say their first word?',
-    answer: 'Most babies say their first intentional word between 10 and 14 months (CDC, 2022). By 12 months, most babies use simple gestures like shaking their head "no" or waving "bye-bye," which are as developmentally important as spoken words at this stage. If your baby has no words and no gestures at 12 months, discuss it with your pediatrician.',
+    question: 'When should my baby say their first real word?',
+    answer: 'Many babies say their first meaningful word between about 10 and 14 months, and by 12 months most use gestures plus a few sounds or words intentionally to communicate (CDC, 2022). Waving, pointing, and showing objects are as important as spoken words at this stage.',
   },
   {
-    question: 'Is it normal for my baby to be afraid of strangers at this age?',
-    answer: 'Yes. Stranger anxiety and separation anxiety typically peak between 9 and 12 months (CDC, 2022). Your baby is beginning to understand that they are a separate person from you and may become clingy or cry when you leave or when someone unfamiliar approaches. This is a sign of healthy emotional attachment and cognitive development.',
+    question: 'Is stranger anxiety normal at 9 to 12 months?',
+    answer: 'Yes. Stranger wariness and separation anxiety commonly increase between 9 and 12 months because babies have stronger attachment to familiar caregivers and better memory for who belongs in their daily world (CDC, 2022). It is usually a developmental sign, not a problem to eliminate.',
   },
   {
-    question: 'What is the pincer grasp and why is it important?',
-    answer: 'The pincer grasp is the ability to pick up small objects using the thumb and index finger. This milestone typically develops around 9–10 months (CDC, 2022). It is a major fine motor milestone — it allows babies to self-feed small pieces of food and eventually leads to skills like holding a pencil and using tools.',
+    question: 'What is the pincer grasp and when should it show up?',
+    answer: 'The pincer grasp is the ability to pick up a small object using the thumb and index finger, and it often becomes more noticeable between about 9 and 10 months (CDC, 2022). It matters because it supports self-feeding and more precise hand use.',
   },
   {
     question: 'How many words should my 12-month-old say?',
-    answer: 'Most 12-month-olds say 1–3 recognizable words, typically "mama," "dada," and one other word like "ball" or "dog" (CDC, 2022). However, gestures are equally important at this age — pointing, waving, and shaking the head are all meaningful communication milestones. If your baby has no words and no gestures by 12 months, discuss it with your pediatrician.',
+    answer: 'Many 12-month-olds say 1–3 words, but the broader communication picture matters more than the raw count. A baby who points, waves, follows simple directions, and uses sounds intentionally is usually showing healthy communication development even if spoken vocabulary is still tiny (CDC, 2022).',
+  },
+  {
+    question: 'Should my baby point to things by 12 months?',
+    answer: 'Many babies point, show, or reach intentionally by the end of the first year, and pointing to share interest is one of the most important social communication milestones of this stage (CDC, 2022). If your baby is not using any gestures by 12 months, it is worth discussing with your pediatrician.',
   },
 ];
 
-const aSchema = articleSchema({
+const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/9-12-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/9-12-months/milestones/',
 });
-const fSchema = faqSchema(faqs);
-const mSchema = medicalWebPageSchema({
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/9-12-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/9-12-months/milestones/',
 });
 ---
 <BaseLayout
   title={title}
   description={description}
-  articleSchema={aSchema}
-  faqSchema={fSchema}
-  medicalSchema={mSchema}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
   breadcrumbs={[
     { label: '9–12 Months', href: '/ages/9-12-months/' },
     { label: 'Milestones' },
@@ -53,61 +57,62 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>9–12 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p class="answer-first">Between 9 and 12 months, most babies pull to stand using furniture, begin cruising, say "mama" and "dada" with meaning, use pointing to communicate, and develop the pincer grasp for picking up small objects (CDC, 2022). Many babies take their first independent steps during this period, though the typical range for walking is 9–15 months. This stage also brings stronger separation anxiety and the emergence of simple pretend play.</p>
+  <p class="answer-first">Most babies 9–12 months old pull to stand, cruise along furniture, use a pincer grasp, understand simple words like “no,” and communicate with gestures such as pointing, waving, or lifting their arms to be picked up (CDC, 2022). This is the stage when mobility, social communication, and intentional problem-solving all become much more obvious to parents.</p>
 
-  <h2>What social and emotional milestones should I expect at 9–12 months?</h2>
-
-  <p class="answer-first">By 12 months, most babies show clear preferences for familiar people, engage in simple interactive games like peek-a-boo and pat-a-cake, exhibit separation anxiety when a caregiver leaves, and begin to cooperate with dressing by putting out an arm or leg (CDC, 2022). Social referencing — looking to a trusted caregiver's face for cues about how to react in new situations — is also well-established by this age.</p>
+  <h2>What physical milestones should my 9–12 month old be reaching?</h2>
+  <p class="answer-first">By 12 months, most babies pull to stand, move into sitting without help, cruise along furniture, and many briefly stand alone or take a few independent steps, even though walking may not happen until later in the normal range (CDC, 2022). Gross motor progress during 9–12 months should show growing confidence, balance, and purposeful movement.</p>
 
   <ul>
-    <li><strong>Stranger anxiety:</strong> May be shy, anxious, or fearful around strangers. This is a sign of healthy attachment.</li>
-    <li><strong>Separation anxiety:</strong> May cry when a parent leaves the room or during childcare drop-off. Typically peaks at 9–10 months.</li>
-    <li><strong>Preferences:</strong> Has favorite people and toys; may hand you a book when they want to hear a story.</li>
-    <li><strong>Attention-seeking:</strong> Repeats sounds or actions to get your attention or a laugh.</li>
-    <li><strong>Cooperation:</strong> Puts out an arm or leg to help with dressing.</li>
-    <li><strong>Social games:</strong> Plays simple interactive games like peek-a-boo and pat-a-cake.</li>
+    <li><strong>Pulling to stand:</strong> Many babies use furniture to pull upright during this period and become very proud of themselves about it.</li>
+    <li><strong>Cruising:</strong> Side-stepping along couches and tables is a common bridge between crawling and walking (CDC, 2022).</li>
+    <li><strong>Standing:</strong> Some babies can briefly stand without holding on by the end of the first year.</li>
+    <li><strong>Getting to sitting:</strong> Moving independently from crawling or standing back into sitting is a useful milestone because it shows better control and planning.</li>
+    <li><strong>Walking:</strong> A few babies walk before 12 months, many do not, and both can be typical if the overall motor pattern is progressing.</li>
   </ul>
 
   <h2>What communication milestones should my 9–12 month old reach?</h2>
-
-  <p class="answer-first">By 12 months, most babies say "mama" and "dada" specifically to their parents, understand the word "no," use simple gestures like shaking their head and waving bye-bye, and point to direct your attention to things they find interesting (CDC, 2022). Pointing — especially declarative pointing (pointing to share something, not just to request it) — is one of the most important milestones of this stage.</p>
+  <p class="answer-first">Most babies 9–12 months old understand simple words, respond to their name, use gestures like waving or pointing, and make sounds that increasingly resemble speech, with a few babies beginning to say “mama” or “dada” meaningfully by 12 months (CDC, 2022). The biggest communication shift in this stage is intentionality: your baby is trying to tell you something on purpose.</p>
 
   <ul>
-    <li><strong>Understanding "no":</strong> Responds to simple spoken requests and understands "no" even if they do not always follow it.</li>
-    <li><strong>Gestures:</strong> Uses simple gestures like shaking their head "no" or waving "bye-bye."</li>
-    <li><strong>Vocalization:</strong> Makes sounds with changes in tone, sounding more like real speech.</li>
-    <li><strong>First words:</strong> Says "mama" and "dada" specifically to their parents and may say exclamations like "uh-oh."</li>
-    <li><strong>Pointing:</strong> Points at objects of interest to share them with you — a major social-communication milestone.</li>
-    <li><strong>Imitation:</strong> Tries to repeat words or sounds that you say.</li>
+    <li><strong>Gestures:</strong> Waving, pointing, reaching, lifting arms, and showing you objects are all major communication milestones during this period.</li>
+    <li><strong>Understanding words:</strong> Babies often respond to “no,” their name, and familiar routine phrases before they can say many words (CDC, 2022).</li>
+    <li><strong>First words:</strong> Some babies say “mama,” “dada,” or another simple word meaningfully by around 12 months, though gesture use remains just as important.</li>
+    <li><strong>Imitation:</strong> Many babies try to copy sound patterns, tone, or simple actions they see adults repeat.</li>
   </ul>
 
   <h2>What cognitive milestones should I look for at 9–12 months?</h2>
-
-  <p class="answer-first">By 12 months, most babies find hidden objects easily, use objects functionally (drinking from a cup, brushing their hair), bang objects together to hear the sound, and follow simple one-step directions like "Give me the ball" (CDC, 2022). Object permanence — the understanding that things exist even when out of sight — is now fully established.</p>
+  <p class="answer-first">By 12 months, most babies look for hidden objects, follow simple one-step directions, and use toys or household objects in more purposeful ways, such as banging two things together, placing items into containers, or trying to drink from a cup (CDC, 2022). These 9–12 month cognitive milestones show stronger memory, object permanence, and cause-and-effect learning.</p>
 
   <ul>
-    <li><strong>Object permanence:</strong> Finds hidden objects easily. Understands that toys still exist under a blanket.</li>
-    <li><strong>Functional use:</strong> Begins using objects correctly — drinking from a cup, trying to brush their hair.</li>
-    <li><strong>Cause and effect:</strong> Bangs two things together to hear the sound. Drops items to watch them fall.</li>
-    <li><strong>Pincer focus:</strong> Pokes with their index finger and uses the pincer grasp to pick up small items.</li>
-    <li><strong>Following directions:</strong> Follows simple one-step directions like "Please give me the ball."</li>
+    <li><strong>Object permanence:</strong> Babies this age usually know a hidden toy still exists and will search for it.</li>
+    <li><strong>Problem-solving:</strong> They may experiment with how to open, dump, shake, or fit objects together.</li>
+    <li><strong>Functional play:</strong> Using objects in a more realistic way, such as trying to brush hair or drink from a cup, often begins near the end of the first year.</li>
+    <li><strong>Following directions:</strong> Simple requests like “give me the ball” may start making sense, especially when supported by gesture and routine.</li>
   </ul>
 
-  <h2>What gross motor milestones should my 9–12 month old be reaching?</h2>
-
-  <p class="answer-first">By 12 months, most babies pull to stand using furniture, cruise along furniture while holding on, and many can briefly stand alone or take a few independent steps (CDC, 2022). Some babies are not walking independently until 13–15 months — this is within the typical range. The most important sign of healthy gross motor development is progression: each week, your baby should be doing a bit more.</p>
+  <h2>What fine motor milestones matter between 9 and 12 months?</h2>
+  <p class="answer-first">One of the biggest fine motor milestones from 9 to 12 months is the pincer grasp, which lets babies pick up small pieces of food or tiny objects using the thumb and index finger rather than the whole hand (CDC, 2022). Fine motor growth in this period makes self-feeding, pointing, poking, and more precise play possible.</p>
 
   <ul>
-    <li><strong>Pulling to stand:</strong> Pulls themselves up to stand using furniture.</li>
-    <li><strong>Cruising:</strong> Walks while holding onto furniture.</li>
-    <li><strong>Standing alone:</strong> May stand for a few seconds without holding on.</li>
-    <li><strong>First steps:</strong> May take a few steps without holding on, though many babies do not walk until closer to 15 months and this is typical.</li>
-    <li><strong>Getting to sitting:</strong> Gets into a sitting position without help from an adult.</li>
+    <li><strong>Pincer grasp:</strong> This often becomes more refined around 9–10 months and is easier to spot during snack time.</li>
+    <li><strong>Index finger use:</strong> Babies may poke, point, or explore holes and buttons with one finger.</li>
+    <li><strong>Hand coordination:</strong> Passing objects between hands, banging them together, and dropping them repeatedly are all part of learning.</li>
+    <li><strong>Self-feeding:</strong> Small soft finger foods become more manageable as grasp control improves.</li>
+  </ul>
+
+  <h2>What social and emotional milestones are typical at 9–12 months?</h2>
+  <p class="answer-first">Between 9 and 12 months, babies usually show stronger separation anxiety, clear preference for familiar people, social games like peek-a-boo, and more deliberate efforts to get attention or share interest with a caregiver (CDC, 2022). This social development often feels intense because babies are emotionally attached but still have no patience whatsoever.</p>
+
+  <ul>
+    <li><strong>Separation anxiety:</strong> Crying when a parent leaves or at childcare drop-off often intensifies during this period.</li>
+    <li><strong>Stranger wariness:</strong> A baby may cling, stare, or cry around unfamiliar adults, which is common at this age.</li>
+    <li><strong>Shared attention:</strong> Looking back and forth between you and an interesting object, especially while pointing, is a key social milestone.</li>
+    <li><strong>Interactive play:</strong> Repeating games, silly sounds, and social routines become more rewarding and more intentional.</li>
   </ul>
 
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 9–12 Month Milestones</h2>
-    {faqs.map(faq => (
+    <h2>Is This Normal? Frequently Asked Questions About 9–12 Month Milestones</h2>
+    {faqs.map((faq) => (
       <div class="faq-item">
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
@@ -116,17 +121,19 @@ const mSchema = medicalWebPageSchema({
   </div>
 
   <div class="callout">
-    <h2>When should I talk to my pediatrician about my 12-month-old's milestones?</h2>
-    <p>The CDC and AAP recommend developmental screening at the 9-month and 12-month well-child visits. Talk to your pediatrician if your 12-month-old:</p>
+    <h2>When should I talk to my pediatrician about my 9–12 month old?</h2>
+    <p class="answer-first">Talk to your pediatrician if your baby is not bearing weight through the legs, is not using gestures like pointing or waving by 12 months, does not search for hidden objects, does not respond to their name or sounds, or has lost skills they previously had (CDC, 2022). These concerns are worth addressing promptly because communication and motor milestones accelerate quickly during the end of the first year.</p>
     <ul>
-      <li>Does not crawl or seems to drag one side of their body while crawling</li>
-      <li>Cannot stand when supported</li>
-      <li>Does not search for things that they see you hide</li>
-      <li>Does not say single words like "mama" or "dada"</li>
-      <li>Does not learn gestures like waving or shaking their head</li>
-      <li>Does not point to things</li>
+      <li>Cannot stand with support</li>
+      <li>Does not crawl, scoot, or otherwise move purposefully</li>
+      <li>Does not use gestures such as waving, reaching, or pointing</li>
+      <li>Does not respond to their name or familiar voices</li>
+      <li>Does not look for things you hide</li>
+      <li>Does not use both hands well during play</li>
       <li>Has lost skills they once had</li>
     </ul>
-    <p>Developmental regression — losing skills a child once had — is always a reason to call your pediatrician promptly. Early intervention services (available in every U.S. state for children under 3) are most effective when started early.</p>
+    <p>Early intervention services are available in every U.S. state for children under age 3, and you do not need to wait around hoping the concern solves itself out of politeness.</p>
   </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
 </BaseLayout>

@@ -3,102 +3,106 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '3–6 Month Milestones: What to Expect and Signs of Progress';
-const description = 'A complete guide to 3–6 month milestones including rolling, reaching, laughing, babbling, bearing weight on legs, and sitting with support — based on CDC and AAP milestone checklists.';
+const description = 'Most babies 3–6 months old laugh, roll, reach for toys, push up during tummy time, and begin babbling with consonant-like sounds. Use this CDC- and AAP-referenced guide to track 3–6 month developmental milestones.';
 
 const faqs = [
   {
-    question: 'Is it normal for my 3-month-old to not laugh yet?',
-    answer: 'Yes. While some babies let out their first laugh around 3 months, many do not begin laughing until 4 or even 5 months (CDC, 2022). The CDC milestone checklist places laughing as an expected skill by 4 months. If your baby is smiling, making eye contact, and cooing, those are all positive signs.'
+    question: 'Is it normal if my 3-month-old is not laughing yet?',
+    answer: 'Yes. Some babies laugh around 3 months, while others do not laugh clearly until 4 or 5 months, and the CDC places laughing as a typical milestone by 4 months rather than right at the start of this stage (CDC, 2022). Smiling, cooing, and good eye contact are also reassuring signs.',
   },
   {
-    question: 'What should I do if my baby skips rolling and goes straight to sitting?',
-    answer: 'Some babies do exactly this, and it is not generally a concern. Rolling and sitting use overlapping but different muscle groups. As long as your baby is gaining new motor skills and showing progress, the exact order can vary. Mention it to your pediatrician so they can confirm overall motor development is on track.'
+    question: 'What if my baby skips rolling and focuses on sitting instead?',
+    answer: 'Milestone order can vary a little. Many babies roll before sitting, but some put more energy into pushing up, tripod sitting, or supported sitting first as long as they are still making steady motor progress (CDC, 2022). It is worth asking your pediatrician if movement seems very one-sided or unusually delayed overall.',
   },
   {
-    question: 'Is it normal for my 5-month-old to not bear weight on their legs?',
-    answer: 'Many babies enjoy "standing" on your lap by 5 months, but not all do. Some babies prefer sitting or floor play and show less interest in weight-bearing activities. If your baby has good muscle tone and is meeting other milestones like reaching and rolling, there is usually no cause for concern. Discuss it with your pediatrician if you are worried.'
+    question: 'Should my 5-month-old bear weight on their legs?',
+    answer: 'Many babies 4–6 months old enjoy pushing down through their legs when held upright, but interest and enthusiasm vary (CDC, 2022). If your baby never bears weight, feels very floppy, or seems stiff and uncomfortable, mention it to your pediatrician.',
   },
   {
-    question: 'Should my baby be responding to their name by 6 months?',
-    answer: 'The CDC includes responding to their own name as a milestone by 6 months, though it may be inconsistent at first (CDC, 2022). Your baby might look up sometimes but not every time. If your baby rarely or never responds to sound, including their name, by 6 months, bring it up with your pediatrician to rule out hearing concerns.'
+    question: 'Should my baby respond to their name by 6 months?',
+    answer: 'Many babies begin responding to their name around 6 months, although it may not happen every single time because attention is still immature (CDC, 2022). If your baby rarely responds to sound, not just their name, hearing should be discussed with your pediatrician.',
   },
   {
-    question: 'Is it normal for my baby to only use one hand to reach for things?',
-    answer: 'At this age, some hand preference during specific activities is common, but babies should be using both hands. True hand dominance does not develop until around 18 months to 2 years. If your baby consistently ignores one hand or one side of the body, let your pediatrician know — it could indicate a need for further evaluation.'
-  }
+    question: 'Is it normal for my baby to reach more with one hand?',
+    answer: 'Some temporary preference in a moment is common, but babies this age should still use both hands regularly. Strong early one-sided preference can sometimes signal a motor issue because true hand dominance usually does not emerge until much later in toddlerhood.',
+  },
+  {
+    question: 'When do babies start babbling instead of just cooing?',
+    answer: 'Many babies begin adding consonant-like sounds between 4 and 6 months, moving from mostly vowel coos toward babbling patterns like “ba,” “ga,” and “da” (CDC, 2022). That shift is an important speech milestone because it shows more control of the lips and tongue.',
+  },
 ];
 
 const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/3-6-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/3-6-months/milestones/',
 });
 const faqData = faqSchema(faqs);
-const mSchema = medicalWebPageSchema({
+const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/3-6-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/3-6-months/milestones/',
 });
 ---
-
-<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={mSchema} breadcrumbs={[{ label: '3–6 Months', href: '/ages/3-6-months/' }, { label: 'Milestones' }]}>
-
+<BaseLayout
+  title={title}
+  description={description}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
+  breadcrumbs={[
+    { label: '3–6 Months', href: '/ages/3-6-months/' },
+    { label: 'Milestones' },
+  ]}
+>
   <h1>3–6 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p class="answer-first">Between 3 and 6 months, most babies learn to roll over in both directions, begin reaching and grasping objects deliberately, produce their first laugh around 3–4 months, and transition from cooing to consonant-vowel babbling like "ba" and "da" (CDC, 2022). This period also brings supported sitting, weight-bearing on legs when held upright, and growing emotional responsiveness including recognizing familiar faces and mirroring expressions.</p>
+  <p class="answer-first">Most babies 3–6 months old begin laughing, rolling, reaching for toys on purpose, pushing up during tummy time, and making more varied sounds including early babbling-like consonants by the end of the stage (CDC, 2022). This is the stretch when babies shift from mostly observing the world to actively grabbing it, kicking it, and loudly announcing their opinions about it.</p>
 
-  <h2>What gross motor milestones should my 3–6 month old reach?</h2>
-
-  <h3>When do babies start rolling over?</h3>
-
-  <p class="answer-first">Most babies begin rolling from tummy to back around 4 months, since gravity helps with this direction. Rolling from back to tummy typically follows between 5 and 6 months and requires more core strength and coordination (CDC, 2022). The CDC's milestone checklist identifies rolling over in both directions as an expected skill by 6 months.</p>
-
-  <p>Keep in mind that some babies roll early and often while others take a more cautious approach. Both patterns fall within the range of typical development. Continue offering daily supervised tummy time to build the core and shoulder strength rolling requires.</p>
-
-  <h3>When do babies start reaching and grasping?</h3>
-
-  <p class="answer-first">Around 3–4 months, batting at dangling toys transitions into deliberate reaching. By 4–5 months, most babies close their fingers around an object and bring it to their mouth — the palmar grasp (CDC, 2022). By 5–6 months, you will see your baby transferring objects from one hand to the other, a sign that the two brain hemispheres are communicating effectively.</p>
-
-  <p>Offer a variety of safe, differently textured objects to encourage exploration. Everything will go directly into your baby's mouth, which is exactly how they are meant to explore at this age.</p>
-
-  <h3>When do babies start bearing weight on their legs?</h3>
-
-  <p class="answer-first">When you hold your baby upright on your lap or on a firm surface, most babies 4–5 months old push down with their feet and "bounce" (CDC, 2022). This weight-bearing practice strengthens the leg muscles and hip joints that will eventually support standing and walking. Not all babies enjoy this activity equally — some love it, while others prefer sitting or lying down. Both responses are typical.</p>
-
-  <h3>When do babies start sitting with support?</h3>
-
-  <p class="answer-first">By 5–6 months, most babies can sit in a supported position — propped on their hands in a "tripod" stance or held steady by a caregiver. Independent sitting without any support typically emerges closer to 6–7 months (CDC, 2022). The AAP recommends supervised floor time on a flat surface to help your baby practice this emerging skill.</p>
-
-  <h2>What communication milestones should my 3–6 month old reach?</h2>
-
-  <h3>When do babies start laughing?</h3>
-
-  <p class="answer-first">A baby's first real laugh usually appears between 3 and 4 months and is one of the most celebrated milestones of infancy (CDC, 2022). Alongside laughing, you will hear squeals of excitement, raspberry blowing, and growling sounds as your baby experiments with what their voice can do. These playful vocalizations are the foundation of conversational turn-taking.</p>
-
-  <h3>When do babies start babbling?</h3>
-
-  <p class="answer-first">The shift from cooing (vowel-only sounds) to babbling (consonant-vowel combinations) is a landmark in speech development. By 4–6 months, most babies produce sounds like "ba," "da," "ga," and "ma" (CDC, 2022). These repetitive syllable strings — "ba-ba-ba" or "da-da-da" — are not words yet, but they represent your baby's growing control over the lips, tongue, and palate.</p>
-
-  <h3>Should my baby be responding to their name by 6 months?</h3>
-
-  <p class="answer-first">By 6 months, many babies will turn or look up when they hear their name, though this skill may be inconsistent at first (CDC, 2022). Name recognition reflects growing auditory discrimination — your baby is learning to pick their name out of the stream of language they hear all day. If your baby rarely or never responds to sound by 6 months, bring it up with your pediatrician.</p>
-
-  <h2>What cognitive and social-emotional milestones should I expect at 3–6 months?</h2>
-
-  <p class="answer-first">Key cognitive milestones between 3 and 6 months include early cause-and-effect learning (kicking a mobile to make it move), recognizing familiar faces, and beginning emotional mirroring — smiling back when you smile (CDC, 2022). These behaviors reflect rapid development in the prefrontal cortex and the limbic system during this period.</p>
+  <h2>What physical milestones should my 3–6 month old be reaching?</h2>
+  <p class="answer-first">Between 3 and 6 months, most babies push up on their forearms or hands during tummy time, roll in at least one direction, reach deliberately for toys, and begin sitting with support or in a tripod position by the later part of the range (CDC, 2022). Motor progress during 3–6 months should look increasingly purposeful rather than purely reflexive.</p>
 
   <ul>
-    <li><strong>Recognizes familiar faces:</strong> By 4–5 months, babies clearly distinguish between familiar caregivers and strangers, often showing preference for known faces.</li>
-    <li><strong>Explores cause and effect:</strong> Shaking a rattle to hear the noise, kicking a mobile to make it move — these intentional actions show early problem-solving.</li>
-    <li><strong>Shows curiosity:</strong> Babies at this age stare at new objects, track movement across a room, and reach for items that interest them.</li>
-    <li><strong>Mirrors emotions:</strong> If you smile, your baby smiles. If you look concerned, they may furrow their brow. This emotional mirroring is an important building block for empathy.</li>
-    <li><strong>Enjoys interactive play:</strong> Peek-a-boo, pat-a-cake, and simple songs with hand motions become favorites because they combine social interaction with predictable patterns.</li>
+    <li><strong>Rolling:</strong> Many babies roll tummy-to-back first around 4 months, with back-to-tummy rolling often following closer to 5–6 months (CDC, 2022).</li>
+    <li><strong>Pushing up:</strong> Stronger shoulder and chest muscles let babies lift their head high and push up during tummy time, which is a key precursor to later sitting and crawling.</li>
+    <li><strong>Reaching and grasping:</strong> By 4–5 months, babies often reach intentionally and close their fingers around toys rather than only batting at them.</li>
+    <li><strong>Weight-bearing:</strong> When held upright, many babies begin pushing through their legs and bouncing slightly, especially around 4–6 months.</li>
+    <li><strong>Supported sitting:</strong> By the end of this stage, many babies can sit with support or briefly prop themselves with their hands in a tripod sit.</li>
+  </ul>
+
+  <h2>What communication milestones should my 3–6 month old reach?</h2>
+  <p class="answer-first">By 4–6 months, most babies laugh, squeal, and begin using more varied sounds, including consonant-like noises such as “ba,” “ga,” or “ma,” instead of only cooing (CDC, 2022). These communication milestones matter because they show your baby is experimenting with voice, rhythm, and back-and-forth interaction.</p>
+
+  <ul>
+    <li><strong>Laughing:</strong> Many babies laugh for the first time around 3–4 months, though some do so later in the stage (CDC, 2022).</li>
+    <li><strong>Sound variety:</strong> Squeals, growls, raspberries, and excited shrieks often show up during this window and can be surprisingly theatrical.</li>
+    <li><strong>Early babbling:</strong> The move from vowel-only coos toward consonant-like sounds is a major speech-language step.</li>
+    <li><strong>Name and voice response:</strong> By around 6 months, many babies turn or pause when they hear their name or a familiar voice (CDC, 2022).</li>
+  </ul>
+
+  <h2>What social and emotional milestones are typical at 3–6 months?</h2>
+  <p class="answer-first">Most babies 3–6 months old smile readily, enjoy interactive play, recognize familiar caregivers, and show more obvious excitement, anticipation, and frustration than they did earlier in infancy (CDC, 2022). Social development in this period is easy to spot because babies become dramatically more expressive and much harder to mistake for sleepy potatoes.</p>
+
+  <ul>
+    <li><strong>Interactive joy:</strong> Babies often grin, kick, and vocalize when they see a familiar caregiver lean in to play.</li>
+    <li><strong>Mirroring:</strong> Many babies smile when you smile and become more animated when you talk with expressive tone and facial movement.</li>
+    <li><strong>Recognizing people:</strong> Familiar adults usually get bigger smiles and calmer reactions than strangers by the middle of this range.</li>
+    <li><strong>Playfulness:</strong> Peek-a-boo, songs, and repeated games become much more rewarding because babies can now anticipate parts of the routine.</li>
+  </ul>
+
+  <h2>What cognitive milestones should I expect at 3–6 months?</h2>
+  <p class="answer-first">Between 3 and 6 months, babies begin learning cause and effect by kicking, grabbing, shaking, and dropping objects to see what happens, while also spending longer periods visually tracking people and toys (CDC, 2022). These 3–6 month cognitive milestones reflect growing attention, memory, and sensory curiosity.</p>
+
+  <ul>
+    <li><strong>Cause and effect:</strong> A baby who kicks a play gym repeatedly to make it move is doing science with less grant funding.</li>
+    <li><strong>Visual attention:</strong> Tracking across the room becomes smoother, and babies can stay interested in an object or face for longer stretches.</li>
+    <li><strong>Exploration:</strong> Toys are grabbed, shaken, mouthed, and stared at with growing purpose.</li>
+    <li><strong>Anticipation:</strong> Babies often show excitement when a familiar game, song, or feeding routine starts because they remember what usually comes next.</li>
   </ul>
 
   <div class="faq-section">
     <h2>Is This Normal? Frequently Asked Questions About 3–6 Month Milestones</h2>
-
-    {faqs.map(faq => (
+    {faqs.map((faq) => (
       <div class="faq-item">
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
@@ -107,18 +111,19 @@ const mSchema = medicalWebPageSchema({
   </div>
 
   <div class="callout">
-    <h2>When should I talk to my pediatrician about my baby's milestones?</h2>
-    <p>Milestones have a wide range of typical, but some signs suggest your baby may benefit from early evaluation. Talk to your pediatrician if your baby:</p>
+    <h2>When should I talk to my pediatrician about my 3–6 month old?</h2>
+    <p class="answer-first">Talk to your pediatrician if your baby does not reach for toys, does not smile or laugh socially, does not respond to sound, does not roll by the end of the 6-month window, or seems very stiff or very floppy (CDC, 2022). Concerns matter more when several skills are missing together or when your baby loses abilities they previously had.</p>
     <ul>
-      <li>Does not try to reach for or grasp objects by 5 months</li>
-      <li>Does not respond to sounds or turn toward your voice</li>
-      <li>Does not roll in either direction by 6 months</li>
-      <li>Seems very stiff with tight muscles or very floppy</li>
-      <li>Does not show affection for caregivers or smile socially by 4 months</li>
-      <li>Has difficulty getting objects to their mouth</li>
-      <li>Has lost previously acquired skills</li>
+      <li>Does not try to reach for or grasp objects</li>
+      <li>Does not smile, laugh, or engage socially</li>
+      <li>Does not respond to voices or other sounds</li>
+      <li>Does not roll in either direction by around 6 months</li>
+      <li>Does not push up during tummy time</li>
+      <li>Seems very stiff, very floppy, or uses one side much less than the other</li>
+      <li>Has lost skills they once had</li>
     </ul>
-    <p>The AAP recommends developmental screening at every well-child visit, with standardized screening tools used at the 9-, 18-, and 30-month visits. Do not wait for a scheduled screening if you have concerns — early intervention services are available in every state and can begin before a formal diagnosis is made.</p>
+    <p>You do not need to wait for the next scheduled visit if you are worried. Early evaluation is easier than retroactive regret.</p>
   </div>
 
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
 </BaseLayout>

@@ -3,106 +3,105 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '1–3 Month Milestones: What to Expect and Signs of Progress';
-const description = 'Between 1 and 3 months, babies reach major developmental milestones including social smiles, improved head control, cooing, and reacting to their environment — based on current CDC and AAP milestone checklists.';
+const description = 'Most babies 1–3 months old smile socially, coo, track faces and objects, and improve head control during tummy time. Use this CDC- and AAP-referenced guide to understand 1–3 month developmental milestones.';
 
 const faqs = [
   {
-    question: 'When should I expect my baby\'s first real smile?',
-    answer: 'The first "social smile" — a smile in response to your voice or face — typically appears between 6 and 8 weeks of age, according to the CDC milestone checklist (2022). This is a major milestone in social and emotional development. If your baby is not smiling socially by 3 months, discuss it with your pediatrician.',
+    question: 'When should my baby give their first real smile?',
+    answer: 'Most babies show a social smile by about 2 months, which means they smile back at a familiar face or voice rather than only reflexively in sleep (CDC, 2022). If your baby is not smiling at people by 3 months, mention it to your pediatrician.',
   },
   {
-    question: 'Should my baby be holding their head up by 3 months?',
-    answer: 'By 2 months, most babies can hold their head up when pushing up on their tummy. By 3–4 months, head control becomes much steadier. The CDC lists holding the head up during tummy time as a milestone by 4 months. Tummy time is the most effective way to build the neck and shoulder muscles needed for this skill (CDC, 2022).',
+    question: 'Should my baby hold their head up by 3 months?',
+    answer: 'Head control improves steadily during the 1–3 month period, and by about 2 months many babies can lift their head during tummy time for short periods (CDC, 2022). By 3 months, head control is usually stronger, though it is still developing and not fully steady all the time.',
   },
   {
-    question: 'What sounds should a 2-month-old make?',
-    answer: 'By 2 months, babies begin making sounds other than crying. You will hear cooing — vowel sounds like "ooh" and "ah" — and gurgling. They also react to loud sounds by startling or becoming quiet (CDC, 2022). These sounds are your baby\'s first intentional social communication.',
+    question: 'What sounds should my 2-month-old be making?',
+    answer: 'By 2 months, many babies coo, make vowel-like sounds, and react to voices or loud noises in ways other than crying (CDC, 2022). These early sounds are the beginning of social communication, not random noise.',
   },
   {
-    question: 'How much should my 1 to 3 month old be sleeping?',
-    answer: 'Babies between 1 and 3 months typically sleep 14–17 hours per 24 hours, though patterns are highly irregular (American Academy of Sleep Medicine, 2022). Most babies this age sleep in stretches of 2–4 hours, gradually lengthening nighttime stretches to 4–6 hours by 3 months. The AAP recommends placing babies on their backs for every sleep, on a firm flat surface with no soft bedding.',
+    question: 'How much should a 1–3 month old sleep?',
+    answer: 'Young infants often sleep about 14–17 hours in 24 hours, although sleep happens in short, irregular stretches and patterns vary a lot from baby to baby (American Academy of Sleep Medicine, 2022). Safe sleep still matters more than schedule perfection at this stage.',
   },
   {
-    question: 'Is it normal for my 2-month-old to not track objects with their eyes?',
-    answer: 'By 2 months, most babies can follow a slowly moving object across their field of vision, though tracking may be jerky or inconsistent at first (CDC, 2022). If your baby does not watch things as they move or does not seem to focus on your face by 2 months, discuss it with your pediatrician. Vision develops rapidly in the first months, and early screening can catch issues while they are most treatable.',
+    question: 'Is it normal if my baby does not track objects smoothly yet?',
+    answer: 'Yes, especially early in this range. By about 2 months, most babies begin watching faces and following a moving object with their eyes, but tracking can still look jerky at first (CDC, 2022). If your baby rarely watches faces or moving objects by 2 months, discuss it with your pediatrician.',
   },
   {
     question: 'Why does my baby startle so easily?',
-    answer: 'The Moro (startle) reflex is present from birth and typically fades between 3 and 6 months (AAP, 2022). Sudden noises, position changes, or their own arm movements can trigger it. This reflex is a sign of a healthy nervous system. Swaddling during sleep can reduce startles and improve sleep quality. If the reflex persists beyond 6 months or appears only on one side, mention it to your pediatrician.',
+    answer: 'The Moro, or startle, reflex is present from birth and commonly remains strong during the first months of life before fading later in infancy (AAP, 2022). Sudden noises, movement, or even your baby’s own arm motions can trigger it, and that is usually typical at this age.',
   },
 ];
 
-const aSchema = articleSchema({
+const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/1-3-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/1-3-months/milestones/',
 });
-const fSchema = faqSchema(faqs);
-const mSchema = medicalWebPageSchema({
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/1-3-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/1-3-months/milestones/',
 });
 ---
 <BaseLayout
   title={title}
   description={description}
-  articleSchema={aSchema}
-  faqSchema={fSchema}
-  medicalSchema={mSchema}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
   breadcrumbs={[
     { label: '1–3 Months', href: '/ages/1-3-months/' },
     { label: 'Milestones' },
   ]}
 >
-  <h1>1–3 Month Milestones: What to Expect</h1>
+  <h1>1–3 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p class="answer-first">Between 1 and 3 months, most babies develop their first social smile, begin cooing with vowel sounds like "ooh" and "ah," improve head control during tummy time, and visually track moving objects across their field of vision (CDC, 2022). This period marks the transition from reflexive newborn behavior to intentional social interaction, with your baby becoming increasingly alert and responsive to the world around them.</p>
+  <p class="answer-first">Most babies 1–3 months old begin smiling socially, cooing, watching faces, and lifting their head during tummy time, while also becoming more alert to voices, light, and movement around them (CDC, 2022). This is the stage when newborn reflexes start sharing space with more intentional social interaction and early motor control.</p>
 
   <h2>What social and emotional milestones should I look for at 1–3 months?</h2>
-
-  <p class="answer-first">By 2 months, most babies smile in response to your face or voice (the social smile), watch your face attentively, and begin to show signs of brief self-soothing by bringing their hands to their mouth (CDC, 2022). These social behaviors indicate your baby is beginning to form the attachment relationship that underpins all future emotional development.</p>
+  <p class="answer-first">By about 2 months, most babies smile at people, watch familiar faces closely, and begin calming briefly by bringing their hands toward their mouth (CDC, 2022). These 1–3 month social milestones matter because they show your baby is becoming more engaged with the people caring for them, not just reacting reflexively to hunger or discomfort.</p>
 
   <ul>
-    <li><strong>Social smile:</strong> They smile at you when you talk to or smile at them — the most celebrated milestone of this stage.</li>
-    <li><strong>Alertness:</strong> They look at your face and watch you as you move around the room.</li>
-    <li><strong>Self-soothing:</strong> They may briefly calm themselves by bringing their hands to their mouth and sucking on them.</li>
-    <li><strong>Recognition:</strong> They seem happy to see familiar faces, especially parents and regular caregivers.</li>
+    <li><strong>Social smile:</strong> Smiling at your face or voice is one of the biggest 2-month milestones and usually appears between 6 and 8 weeks (CDC, 2022).</li>
+    <li><strong>Face watching:</strong> Babies in this stage often stare at familiar faces longer than they did as newborns and may quiet when a parent leans in close.</li>
+    <li><strong>Early self-soothing:</strong> Some babies briefly suck on a hand or fist, which is an early attempt at regulation, not a bad habit.</li>
+    <li><strong>Recognition:</strong> Familiar voices and routines start to matter more, and babies may visibly perk up with regular caregivers.</li>
   </ul>
 
   <h2>What communication milestones should my 1–3 month old reach?</h2>
-
-  <p class="answer-first">By 2 months, most babies produce cooing sounds — vowel-heavy vocalizations like "ooh" and "ah" — and begin turning their head toward the sound of a familiar voice (CDC, 2022). These sounds are your baby's first intentional social communication. They are practicing the back-and-forth turn-taking that forms the foundation of all language development.</p>
+  <p class="answer-first">Most babies 1–3 months old make sounds other than crying, including coos and vowel-like noises, and many turn toward familiar voices or react to loud sounds by 2 months (CDC, 2022). These early communication milestones are the first steps toward back-and-forth conversation, even though words are still far away.</p>
 
   <ul>
-    <li><strong>Cooing:</strong> They make gurgling or vowel sounds in addition to crying.</li>
-    <li><strong>Turning toward sounds:</strong> They may turn their head toward the sound of your voice.</li>
-    <li><strong>Reacting to environment:</strong> They react to loud sounds by startling or looking toward the source.</li>
+    <li><strong>Cooing:</strong> Soft “ooh,” “ah,” and gurgly sounds often appear by about 2 months (CDC, 2022).</li>
+    <li><strong>Voice recognition:</strong> Babies may turn, pause, or brighten when they hear a parent’s voice.</li>
+    <li><strong>Sound response:</strong> Startling, quieting, or shifting attention when there is a noise shows the auditory system is responding.</li>
+    <li><strong>Turn-taking foundation:</strong> When you talk and your baby vocalizes back, even briefly, that is the earliest form of conversational rhythm.</li>
   </ul>
 
-  <h2>What cognitive milestones should I expect at 1–3 months?</h2>
-
-  <p class="answer-first">By 2 months, most babies can visually follow a slowly moving object across their field of vision, look at a toy for several seconds when held nearby, and begin to recognize familiar faces from a distance (CDC, 2022). These cognitive gains reflect the rapid development of visual cortex function and early memory formation during this period.</p>
+  <h2>What visual and cognitive milestones are typical at 1–3 months?</h2>
+  <p class="answer-first">By 2 months, most babies watch faces, briefly focus on toys held nearby, and begin following moving objects with their eyes across part of their visual field (CDC, 2022). These early 1–3 month cognitive milestones reflect rapid changes in vision, attention, and memory during the first trimester of life.</p>
 
   <ul>
-    <li><strong>Visual tracking:</strong> They follow moving objects with their eyes — a toy, your face, a brightly colored mobile.</li>
-    <li><strong>Sustained focus:</strong> They look at a toy for several seconds when held in front of them.</li>
-    <li><strong>Face recognition:</strong> They begin to distinguish familiar people from strangers.</li>
+    <li><strong>Tracking:</strong> A baby this age may follow your face or a contrasting toy from side to side, though tracking can still be jerky or incomplete at first.</li>
+    <li><strong>Attention:</strong> Many babies can stare at a nearby face or object for several seconds, much longer than they did as newborns.</li>
+    <li><strong>Recognition:</strong> Familiar faces begin to stand out from the blur of everything else in the room.</li>
+    <li><strong>Interest in contrast:</strong> High-contrast patterns, windows, and overhead lights often become especially interesting during this stage.</li>
   </ul>
 
-  <h2>What physical and motor milestones should my baby hit at 1–3 months?</h2>
-
-  <p class="answer-first">By 2 months, most babies can hold their head up briefly while on their tummy and move both arms and both legs symmetrically (CDC, 2022). By 3 months, head control improves significantly, and many babies begin pushing up onto their forearms during tummy time. Daily supervised tummy time is the most effective way to build these muscles.</p>
+  <h2>What physical and motor milestones should my baby hit between 1 and 3 months?</h2>
+  <p class="answer-first">Most babies 1–3 months old lift their head briefly during tummy time, move both arms and legs, and gradually show better neck control by the end of this period (CDC, 2022). These physical milestones are still early and effortful, which is why short, frequent tummy time sessions work better than expecting long heroic stretches.</p>
 
   <ul>
-    <li><strong>Head control:</strong> They can hold their head up and begin to push up when lying on their tummy.</li>
-    <li><strong>Hand movements:</strong> They open their hands briefly and may bring them to their mouth.</li>
-    <li><strong>Symmetry:</strong> They move both arms and both legs. If you notice one side moving significantly less than the other, mention it to your pediatrician.</li>
+    <li><strong>Head lifting:</strong> By about 2 months, many babies can lift their head while on their tummy for short periods (CDC, 2022).</li>
+    <li><strong>Symmetrical movement:</strong> Babies should move both arms and both legs; strong one-sided preference this early is worth mentioning to your pediatrician.</li>
+    <li><strong>Hands to mouth:</strong> Bringing hands up toward the face or mouth becomes more common during this stage and supports both regulation and body awareness.</li>
+    <li><strong>Tummy time tolerance:</strong> Some babies protest, but daily supervised tummy time still matters because it builds the shoulder, neck, and trunk strength needed for later rolling and sitting.</li>
   </ul>
 
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 1–3 Month Milestones</h2>
-    {faqs.map(faq => (
+    <h2>Is This Normal? Frequently Asked Questions About 1–3 Month Milestones</h2>
+    {faqs.map((faq) => (
       <div class="faq-item">
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
@@ -111,16 +110,19 @@ const mSchema = medicalWebPageSchema({
   </div>
 
   <div class="callout">
-    <h2>When should I talk to my pediatrician about my baby's milestones?</h2>
-    <p>The CDC and AAP recommend discussing your baby's development at every well-child visit. Talk to your pediatrician if your 2-month-old:</p>
+    <h2>When should I talk to my pediatrician about my 1–3 month old?</h2>
+    <p class="answer-first">Talk to your pediatrician if your baby does not respond to loud sounds, does not watch faces or moving objects, does not smile at people by 2–3 months, cannot lift their head during tummy time, or has lost skills they previously showed (CDC, 2022). Early concerns are worth discussing promptly because young infants change quickly, and small differences are easier to evaluate when noticed early.</p>
     <ul>
-      <li>Does not respond to loud sounds</li>
-      <li>Does not watch things as they move</li>
-      <li>Does not smile at people</li>
-      <li>Does not bring hands to mouth</li>
-      <li>Cannot hold their head up when pushing up on their tummy</li>
+      <li>Does not respond to sound</li>
+      <li>Does not watch faces or track moving objects</li>
+      <li>Does not smile at people by 2–3 months</li>
+      <li>Does not bring hands toward mouth</li>
+      <li>Cannot lift head at all during tummy time</li>
+      <li>Seems very stiff, very floppy, or clearly moves one side much less than the other</li>
       <li>Has lost skills they once had</li>
     </ul>
-    <p>Early identification leads to earlier support, and outcomes are consistently better when concerns are addressed promptly. If something feels off, call your pediatrician — don't wait for the next scheduled visit.</p>
+    <p>You do not need to wait for the next visit if something feels off. Calling your pediatrician early is better than sitting on the worry.</p>
   </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
 </BaseLayout>
