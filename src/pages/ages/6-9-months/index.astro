@@ -101,8 +101,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 6–9 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

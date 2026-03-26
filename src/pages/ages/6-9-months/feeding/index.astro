@@ -89,14 +89,14 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 6–9 Month Feeding</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
   <div class="callout">
-    <h2>Foods to avoid before 12 months</h2>
+    <h2>What foods should I avoid giving my baby before 12 months?</h2>
     <p>While your baby's menu is expanding, certain foods must stay off the plate until at least 12 months:</p>
     <ul>
       <li><strong>Honey:</strong> Can cause botulism in infants under 1 year — no exceptions.</li>

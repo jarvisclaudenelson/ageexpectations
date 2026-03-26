@@ -49,9 +49,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>3–6 Month Old Development: What to Expect</h1>
 
-  <p>The period between 3 and 6 months is often a parent favorite. Your baby is likely waking up to the world — offering frequent social smiles, laughing, and beginning to interact with their environment in deliberate ways. This is a season of rapid physical and cognitive growth as your baby moves away from involuntary newborn reflexes and begins to master voluntary movements.</p>
-
-  <p>This guide covers key developmental areas for babies aged 3 to 6 months, following guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
+  <p class="answer-first">Between 3 and 6 months, most babies learn to roll over, begin reaching and grasping objects deliberately, laugh for the first time (typically around 3–4 months), and start babbling with consonant-vowel sounds like "ba" and "da" (CDC, 2022). Sleep consolidates to 12–16 hours per day with 2–3 naps, and the AAP recommends introducing solid foods around 6 months. This period brings the first signs of intentional social communication and the physical strength that drives the motor milestones ahead.</p>
 
   <h2>Explore 3–6 Month Topics</h2>
   <div class="topic-grid">
@@ -98,8 +96,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 3–6 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

@@ -30,8 +30,8 @@ const fSchema = faqSchema(faqs);
 
   <p>Every article on this site covers the key topics parents ask about most: <strong>developmental milestones, sleep, feeding and nutrition, behavior and emotions, language and communication, play and learning, health and safety, and red flags</strong> that may warrant a conversation with your pediatrician.</p>
 
-  <h2>How to Use This Site</h2>
-  <p>Find your child's age range below and explore the topics that matter most to you right now. Each article includes practical guidance, typical ranges, a "Is This Normal?" FAQ, and clear guidance on when to seek professional input. Our information references current AAP (American Academy of Pediatrics) guidelines and CDC developmental milestone checklists.</p>
+  <h2>How do I find information for my child's age?</h2>
+  <p class="answer-first">Find your child's age range below and explore the topics that matter most to you right now. Each article includes practical guidance, typical ranges, a "Is This Normal?" FAQ, and clear guidance on when to seek professional input. Our information references current AAP (American Academy of Pediatrics) guidelines and CDC developmental milestone checklists.</p>
 
   <h2>Browse by Age</h2>
   {groupOrder.map(group => (
@@ -55,8 +55,8 @@ const fSchema = faqSchema(faqs);
   </ul>
   <p>Milestones are guideposts, not deadlines. Children develop at their own pace, and there is a wide range of "normal." However, consistent delays across multiple areas — or loss of previously acquired skills — should always be discussed with your pediatrician.</p>
 
-  <h2>Signs of Healthy Development vs. Red Flags</h2>
-  <p>It's natural to compare your child to others or to worry when they don't hit a milestone "on time." Most variations are perfectly normal. Red flags are patterns that suggest a child may benefit from evaluation or early intervention. These include:</p>
+  <h2>When should I be concerned about my child's development?</h2>
+  <p class="answer-first">Most variations in milestone timing are perfectly typical — children develop at their own pace, and a range of 2–6 months is common for most skills (AAP, 2022). Red flags are patterns that suggest a child may benefit from evaluation or early intervention. These include:</p>
   <ul>
     <li>Not meeting several milestones for their age group</li>
     <li>Losing skills they previously had (developmental regression)</li>
@@ -73,8 +73,8 @@ const fSchema = faqSchema(faqs);
     <h2>Frequently Asked Questions</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </section>

@@ -47,9 +47,7 @@ const fSchema = faqSchema(faqs);
 >
   <h1>18–24 Month Old Development: What to Expect</h1>
 
-  <p>The period between 18 and 24 months is a time of incredible transformation. Your child is transitioning from a "baby" into a "toddler," with a rapidly expanding vocabulary, a fierce drive for independence, and new physical skills like running and kicking. It’s a rewarding—and often challenging—age as they begin to assert their own will.</p>
-
-  <p>This overview covers the key areas of development for 18–24 month olds, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC. Explore the topic pages below for deeper dives into specific areas like sleep, feeding, and milestones.</p>
+  <p class="answer-first">Between 18 and 24 months, most toddlers run, kick a ball, say 50 or more words, combine 2-word phrases like "more milk" or "daddy go," follow 2-step instructions, and engage in simple pretend play (CDC, 2022). Sleep needs are 11–14 hours per day including one afternoon nap. The AAP recommends a formal developmental screening at the 18-month well-child visit, including specific autism screening. This period brings a fierce drive for independence and the emotional intensity that defines the "toddler years."</p>
 
   <h2>Explore 18–24 Month Topics</h2>
   <div class="topic-grid">
@@ -58,9 +56,9 @@ const fSchema = faqSchema(faqs);
     ))}
   </div>
 
-  <h2>Physical Milestones: Moving with Purpose</h2>
+  <h2>What physical milestones should my 18 to 24 month old reach?</h2>
 
-  <p>Your toddler is becoming more coordinated and confident in their movements. By 24 months, most children have reached several key physical milestones:</p>
+  <p class="answer-first">By 24 months, most toddlers run smoothly, kick a ball without losing balance, climb on and off furniture independently, and show improving fine motor skills including stacking blocks and using a spoon (CDC, 2022). Key physical milestones include:</p>
 
   <ul>
     <li><strong>Walking and Running:</strong> By 18 months, most children walk well. By 24 months, they are running more smoothly and can often kick a ball without losing their balance.</li>
@@ -69,9 +67,9 @@ const fSchema = faqSchema(faqs);
     <li><strong>Helping Out:</strong> You might notice your toddler trying to "help" with daily tasks, like putting clothes in the hamper or trying to help get themselves dressed.</li>
   </ul>
 
-  <h2>Language Explosion: From Words to Phrases</h2>
+  <h2>What language milestones should my 18 to 24 month old reach?</h2>
 
-  <p>One of the most exciting changes at this age is the "language explosion." While every child develops at their own pace, here is the general progression:</p>
+  <p class="answer-first">Between 18 and 24 months, most toddlers experience a "language explosion" — vocabulary grows from roughly 10–20 words to 50 or more, and two-word phrases like "more milk" and "daddy go" emerge around the second birthday (CDC, 2022). Here is the general progression:</p>
 
   <ul>
     <li><strong>Vocabulary:</strong> Between 18 and 24 months, many children go from saying a few words to having a vocabulary of 50 words or more. They also begin to name familiar objects, people, and body parts.</li>
@@ -80,9 +78,9 @@ const fSchema = faqSchema(faqs);
     <li><strong>Pointing:</strong> They use pointing not just to ask for things, but to show you things they find interesting in books or in the world around them.</li>
   </ul>
 
-  <h2>Social-Emotional Development: The Drive for Autonomy</h2>
+  <h2>What social-emotional changes should I expect between 18 and 24 months?</h2>
 
-  <p>This age is often called the "terrible twos," but it is more accurately the "terrific transition to independence." Your child is learning that they are a separate person from you.</p>
+  <p class="answer-first">Between 18 and 24 months, most toddlers assert independence by saying "no" frequently, experience tantrums as they process frustration with limited language, engage in parallel play alongside other children, and show early signs of empathy (CDC, 2022). Your child is learning that they are a separate person from you — a critical developmental shift.</p>
 
   <ul>
     <li><strong>The Power of "No":</strong> Asserting their own will is a major milestone. Expect frequent use of the word "no" and a strong desire to do things "by myself."</li>
@@ -91,9 +89,9 @@ const fSchema = faqSchema(faqs);
     <li><strong>Empathy:</strong> You might see early signs of empathy, such as your child trying to comfort you if you seem sad or bringing a toy to a crying friend.</li>
   </ul>
 
-  <h2>Cognitive Growth: Problem Solving and Pretend Play</h2>
+  <h2>What cognitive milestones should my 18 to 24 month old reach?</h2>
 
-  <p>Your toddler’s brain is working hard to figure out how the world works:</p>
+  <p class="answer-first">By 24 months, most toddlers demonstrate full object permanence, engage in pretend play with dolls and objects, sort shapes and colors, and follow simple two-step instructions like "pick up the toy and put it in the box" (CDC, 2022). Key cognitive milestones include:</p>
 
   <ul>
     <li><strong>Object Permanence:</strong> They now fully understand that objects exist even when they can't see them. They will search for hidden toys and remember where things belong.</li>
@@ -105,15 +103,15 @@ const fSchema = faqSchema(faqs);
     <h2>Is This Normal? Common Questions About 18–24 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The AAP recommends regular well-child visits at 18 months and 24 months. These visits are especially important for developmental and autism screenings. Contact your pediatrician if you notice your child:</p>
+    <h2>When should I talk to my pediatrician about my toddler's development?</h2>
+    <p class="answer-first">The AAP recommends regular well-child visits at 18 months and 24 months. These visits are especially important for developmental and autism screenings. Contact your pediatrician if you notice your child:</p>
     <ul>
       <li>Does not walk by 18 months</li>
       <li>Does not speak at least 6 words by 18 months or 50 words by 24 months</li>

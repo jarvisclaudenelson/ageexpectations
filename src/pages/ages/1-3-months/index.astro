@@ -49,9 +49,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>1–3 Month Old Development: What to Expect</h1>
 
-  <p>The period between 1 and 3 months is often called the "awakening." Your baby is moving past the sleepy newborn phase and becoming alert, responsive, and interested in the world around them. This is the stage where you start to glimpse your baby's personality — especially as they begin to smile and coo back at you.</p>
-
-  <p>This guide covers key developmental areas for babies 1–3 months old, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC.</p>
+  <p class="answer-first">Between 1 and 3 months, most babies develop their first social smile (typically by 6–8 weeks), begin cooing with vowel sounds, improve head control during tummy time, and visually track objects across their field of vision (CDC, 2022). Total sleep is 14–17 hours per day, and most babies begin sleeping in longer nighttime stretches of 4–6 hours by 3 months. The AAP recommends well-child visits at 1 month and 2 months for developmental screening and immunizations.</p>
 
   <h2>Explore 1–3 Month Topics</h2>
   <div class="topic-grid">
@@ -91,8 +89,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 1–3 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

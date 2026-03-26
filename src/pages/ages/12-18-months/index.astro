@@ -49,9 +49,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>12–18 Month Old Development: What to Expect</h1>
 
-  <p>The transition from "infant" to "toddler" happens somewhere between 12 and 18 months. This is a period of rapid physical growth and even faster cognitive development. Your child is moving from being a passive observer to an active, often vocal participant in the family.</p>
-
-  <p>This overview covers the major developmental shifts for toddlers in this exciting transition period, based on the latest AAP and CDC guidelines.</p>
+  <p class="answer-first">Between 12 and 18 months, most toddlers walk independently, say 5–10 words, use pointing and gestures to communicate, stack 2–4 blocks, begin simple pretend play, and transition from bottles to cups (CDC, 2022). Sleep needs are 11–14 hours per day including 1–2 naps, and the AAP recommends formal developmental screening at both the 12-month and 18-month well-child visits. This period bridges infancy and toddlerhood with rapid gains in mobility, language, and cognitive development.</p>
 
   <h2>Explore 12–18 Month Topics</h2>
   <div class="topic-grid">
@@ -94,8 +92,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 12–18 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

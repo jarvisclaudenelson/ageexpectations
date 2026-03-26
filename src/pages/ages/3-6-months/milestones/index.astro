@@ -45,7 +45,7 @@ const mSchema = medicalWebPageSchema({
 
   <h1>3–6 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p>Between 3 and 6 months, your baby transforms from a mostly reflexive newborn into an active, curious explorer. They are rolling, reaching, laughing, and babbling — sometimes all in the same five-minute window. Knowing what milestones to look for helps you celebrate progress and catch potential concerns early. Here is what the CDC and AAP milestone checklists highlight for this age range.</p>
+  <p class="answer-first">Between 3 and 6 months, most babies learn to roll over in both directions, begin reaching and grasping objects deliberately, produce their first laugh around 3–4 months, and transition from cooing to consonant-vowel babbling like "ba" and "da" (CDC, 2022). This period also brings supported sitting, weight-bearing on legs when held upright, and growing emotional responsiveness including recognizing familiar faces and mirroring expressions.</p>
 
   <h2>What gross motor milestones should my 3–6 month old reach?</h2>
 
@@ -100,8 +100,8 @@ const mSchema = medicalWebPageSchema({
 
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

@@ -53,9 +53,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>9–12 Month Old Development: What to Expect</h1>
 
-  <p>The final quarter of the first year is a whirlwind of activity. Your baby is likely no longer content to stay where you put them — they are on the move, exploring every corner of their environment, and starting to understand the world in more complex ways. This is the stage where "infant" starts to feel a lot more like "toddler."</p>
-
-  <p>This overview covers key areas of development for 9–12 month olds, based on guidelines from the AAP and the CDC. Explore the topic pages below for deeper dives into sleep, feeding, and milestones.</p>
+  <p class="answer-first">Between 9 and 12 months, most babies pull to stand, cruise along furniture, say "mama" and "dada" with meaning, point to communicate, and develop the pincer grasp for self-feeding (CDC, 2022). Many babies take their first independent steps, though the typical range for walking is 9–15 months. Sleep needs are 12–16 hours per day including 2 naps, and most babies are eating a variety of table foods alongside breast milk or formula by this stage.</p>
 
   <h2>Explore 9–12 Month Topics</h2>
   <div class="topic-grid">
@@ -112,8 +110,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 9–12 Month Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

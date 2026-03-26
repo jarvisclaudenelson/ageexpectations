@@ -3,45 +3,57 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '6–9 Month Milestones: What to Expect and Signs of Progress';
-const description = 'Between 6 and 9 months, babies reach major developmental milestones including sitting without support, early babbling like "mama" and "dada," object permanence, and the beginning of solid foods.';
+const description = 'Most babies 6–9 months old can sit without support, babble repetitive sounds, respond to their name, and begin moving to get what they want. Use this CDC- and AAP-referenced guide to track 6–9 month developmental milestones.';
 
 const faqs = [
   {
-    question: 'When do babies usually start sitting up without support?',
-    answer: 'Most babies begin to sit without support between 6 and 8 months. Initially, they may use their arms for balance (the "tripod sit"), but by 9 months, many can sit steadily while playing with toys (CDC, 2022). If your baby is not sitting with help by 9 months, mention it to your pediatrician.',
+    question: 'When do babies usually sit without support?',
+    answer: 'Most babies sit without support by 9 months, and sitting independently often starts between 6 and 8 months as trunk strength and balance improve (CDC, 2022). If your baby still cannot sit with help by 9 months, bring it up with your pediatrician.',
   },
   {
     question: 'Should my baby be crawling by 9 months?',
-    answer: 'While many babies begin to crawl between 7 and 10 months, some skip crawling entirely and move straight to pulling up and cruising (CDC, 2022). The AAP focuses more on the ability to move and explore the environment rather than the specific method. As long as your baby is finding ways to get around, this is not a concern.',
+    answer: 'Not necessarily. Many babies crawl, scoot, roll, or army-crawl between 6 and 9 months, but some move differently before they ever crawl on hands and knees (CDC, 2022). The bigger milestone is purposeful movement toward people or objects, not one exact crawling style.',
   },
   {
-    question: 'What sounds should my 9-month-old be making?',
-    answer: 'By 9 months, most babies are babbling with repetitive strings of sounds like "bababa," "dadada," or "mamama" and may understand the word "no" (CDC, 2022). They respond to their name and may look when you call them. These repetitive syllable strings are the foundation of their first real words.',
+    question: 'What sounds should my 6–9 month old be making?',
+    answer: 'By 9 months, most babies babble with repeated consonant-vowel sounds like "mamama," "bababa," or "dadada" and respond to their own name (CDC, 2022). These sound strings are not usually true words yet, but they are an important speech-language milestone.',
   },
   {
-    question: 'Is separation anxiety normal at this age?',
-    answer: 'Yes, separation anxiety often peaks between 8 and 12 months. Your baby now understands object permanence — that people exist even when they cannot see them — but lacks a mature sense of time, so your absence feels alarming (CDC, 2022). Consistent goodbye routines help them learn that you will return. This is a sign of healthy attachment.',
+    question: 'Is separation anxiety normal at 8 or 9 months?',
+    answer: 'Yes. Stranger wariness and separation anxiety commonly increase between 8 and 12 months as babies develop object permanence and stronger attachment to familiar caregivers (CDC, 2022). Crying when you leave is usually a developmental sign, not a setback.',
+  },
+  {
+    question: 'When should my baby start solid foods?',
+    answer: 'The AAP recommends introducing solid foods around 6 months while continuing breast milk or formula, with iron-rich foods especially important at this age (AAP, 2022). Signs of readiness include good head control, sitting with support, and interest in food.',
+  },
+  {
+    question: 'Is it normal for my baby to put everything in their mouth?',
+    answer: 'Yes. Babies 6–9 months old explore objects with both their hands and mouth, and mouthing is a typical sensory-motor behavior during this stage (CDC, 2022). Keep choking hazards out of reach, but do not assume mouthing itself is a problem.',
+  },
+  {
+    question: 'How many naps should a 6–9 month old take?',
+    answer: 'Most babies this age sleep 12–16 hours in 24 hours and often settle into 2 or 3 naps totaling about 2–4 daytime hours (American Academy of Sleep Medicine, 2022). By the end of this stage, many babies transition to 2 more predictable naps.',
   },
 ];
 
-const aSchema = articleSchema({
+const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/6-9-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/6-9-months/milestones/',
 });
-const fSchema = faqSchema(faqs);
-const mSchema = medicalWebPageSchema({
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/6-9-months/milestones/',
+  url: 'https://www.ageexpectations.com/ages/6-9-months/milestones/',
 });
 ---
 <BaseLayout
   title={title}
   description={description}
-  articleSchema={aSchema}
-  faqSchema={fSchema}
-  medicalSchema={mSchema}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
   breadcrumbs={[
     { label: '6–9 Months', href: '/ages/6-9-months/' },
     { label: 'Milestones' },
@@ -49,77 +61,82 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>6–9 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p>The window between 6 and 9 months is a period of incredible physical and social expansion. Your baby is transitioning from a stationary observer to a mobile explorer, becoming more purposeful in their movements, more expressive in their communication, and more curious about the world around them.</p>
+  <p class="answer-first">Most babies 6–9 months old can sit without support, transfer objects between hands, respond to their name, and babble repeated sounds like "ba-ba" or "da-da" by 9 months (CDC, 2022). This is also the age when many babies begin moving with purpose — rolling, scooting, crawling, or pulling to stand — and show much stronger social attachment.</p>
 
-  <p>Developmental milestones are behaviors and physical skills seen in infants as they grow. While every child develops at their own pace, the CDC and AAP provide general timeframes for when most children reach certain milestones.</p>
-
-  <h2>What social and emotional milestones should I expect at 6–9 months?</h2>
-
-  <p class="answer-first">By 9 months, most babies show clear separation anxiety when a familiar caregiver leaves, recognize familiar faces and prefer them over strangers, and express a range of emotions including joy, frustration, and curiosity (CDC, 2022). These behaviors reflect rapid development of the social brain and the formation of specific attachment relationships.</p>
+  <h2>What physical milestones should my 6–9 month old be reaching?</h2>
+  <p class="answer-first">By 9 months, most babies can sit without support, roll both ways, bear weight on their legs, and use their hands to move toys from one hand to the other (CDC, 2022). Many babies also begin scooting, crawling, or pulling up on furniture during the 6–9 month range, although the exact style and timing vary.</p>
 
   <ul>
-    <li><strong>Separation anxiety:</strong> They may act shy, clingy, or fearful around strangers. They may cry when you leave the room or when a relative tries to hold them. This is a sign of healthy attachment, not a regression.</li>
-    <li><strong>Showing preferences:</strong> They have favorite toys and favorite people.</li>
-    <li><strong>Emotional expression:</strong> They show a range of emotions, from pure joy and laughter to frustration and anger.</li>
-    <li><strong>Mirror recognition:</strong> They enjoy looking at themselves (and you) in the mirror.</li>
+    <li><strong>Sitting:</strong> Independent sitting often emerges between 6 and 8 months, and by 9 months most babies can sit steadily enough to play with toys without using both hands for balance (CDC, 2022).</li>
+    <li><strong>Rolling and moving:</strong> Some babies roll to get where they want to go, while others scoot, army-crawl, or crawl on hands and knees. Purposeful movement matters more than one exact method (CDC, 2022).</li>
+    <li><strong>Pulling to stand:</strong> Many babies begin pulling to stand on a couch, crib rail, or coffee table by around 9 months, especially if they have already been rocking on hands and knees or cruising along furniture.</li>
+    <li><strong>Hand use:</strong> Transferring objects from one hand to the other is a key 9-month milestone, and many babies also begin raking small pieces of food toward themselves as self-feeding skills develop (CDC, 2022).</li>
   </ul>
 
   <h2>What communication milestones should my 6–9 month old reach?</h2>
-
-  <p class="answer-first">By 9 months, most babies babble with repetitive consonant-vowel strings like "ba-ba-ba," "da-da-da," and "ma-ma-ma," respond to their own name, and understand the word "no" (CDC, 2022). Pointing at objects of interest — declarative pointing — also begins to emerge around this age and is an important social communication milestone.</p>
+  <p class="answer-first">By 9 months, most babies respond to their own name, make repeated consonant-vowel sounds like "mamama" or "bababa," and use sounds, facial expressions, and body movements to get attention (CDC, 2022). Communication at 6–9 months is more intentional than earlier in infancy, even before true words appear.</p>
 
   <ul>
-    <li><strong>Babbling:</strong> Long repetitive strings of consonant sounds like "pa-pa-pa" and "ba-ba-ba." By 9 months, they often string these together in extended "sentences."</li>
-    <li><strong>Name recognition:</strong> They respond to their name and may look when you call them.</li>
-    <li><strong>Gestures:</strong> They may start using their fingers to point at things they want or find interesting.</li>
-    <li><strong>Copying:</strong> They try to copy the sounds and gestures you make.</li>
+    <li><strong>Babbling:</strong> Repetitive sound strings such as "da-da-da" and "ba-ba-ba" usually become more frequent and varied during this stage (CDC, 2022).</li>
+    <li><strong>Name recognition:</strong> Babies this age should usually turn, pause, or look toward a familiar caregiver when they hear their name (CDC, 2022).</li>
+    <li><strong>Back-and-forth interaction:</strong> Many babies pause to listen when you speak, then vocalize again, which is an early form of conversation.</li>
+    <li><strong>Gestures:</strong> Reaching to be picked up, lifting arms, and beginning to point or show objects may start in the later part of the 6–9 month window.</li>
+  </ul>
+
+  <h2>What social and emotional milestones are typical at 6–9 months?</h2>
+  <p class="answer-first">Between 6 and 9 months, most babies show stronger attachment to familiar caregivers, recognize familiar people, and may act shy or upset with strangers or when separated from a parent (CDC, 2022). These changes usually intensify around 8–9 months because babies better understand who belongs to their daily world.</p>
+
+  <ul>
+    <li><strong>Stranger wariness:</strong> A baby who was previously relaxed with everyone may suddenly cling to you or cry when approached by unfamiliar adults. This is common between 8 and 12 months (CDC, 2022).</li>
+    <li><strong>Separation anxiety:</strong> Leaving the room may trigger crying because object permanence is developing, but time still makes little sense to a baby this age.</li>
+    <li><strong>Preference for familiar people:</strong> Babies often light up for favorite caregivers, siblings, and familiar routines, which reflects healthy attachment rather than being "spoiled."</li>
+    <li><strong>Emotional range:</strong> Joy, frustration, anticipation, and protest all become more visible and more specific during this stage.</li>
   </ul>
 
   <h2>What cognitive milestones should I look for at 6–9 months?</h2>
-
-  <p class="answer-first">By 9 months, most babies understand object permanence — they look for objects they see you hide under a blanket and understand that a toy still exists even when out of sight (CDC, 2022). They also actively explore cause and effect: banging objects together to hear the sound, dropping things to watch them fall, and pressing buttons that make noise.</p>
+  <p class="answer-first">By 9 months, most babies look for objects they see you hide, repeat actions to make something happen, and explore toys by shaking, banging, dropping, and mouthing them (CDC, 2022). These behaviors show early problem-solving, memory, and cause-and-effect learning during the 6–9 month period.</p>
 
   <ul>
-    <li><strong>Object permanence:</strong> They look for objects they saw you hide. This is why peek-a-boo becomes genuinely exciting at this age.</li>
-    <li><strong>Exploration:</strong> They use hands and mouth to explore everything. They bang objects together to see what sound they make.</li>
-    <li><strong>Cause and effect:</strong> They may drop a toy repeatedly to watch you pick it up — learning that their actions have results.</li>
-    <li><strong>Pincer grasp emerging:</strong> Around 9 months, they begin using their thumb and index finger to pick up small things. This fine motor milestone opens the door to self-feeding.</li>
+    <li><strong>Object permanence:</strong> Peek-a-boo becomes exciting because babies start understanding that a person or toy still exists even when temporarily hidden (CDC, 2022).</li>
+    <li><strong>Cause and effect:</strong> Dropping a spoon from the high chair over and over is not misbehavior; it is an experiment in sound, gravity, and your response.</li>
+    <li><strong>Exploration:</strong> Babies learn about texture, size, and sound by banging toys, turning them, mouthing them, and moving them from one hand to the other.</li>
+    <li><strong>Attention:</strong> Many babies can stay focused on a toy or simple interaction a bit longer than earlier in infancy, especially when it is new or socially engaging.</li>
   </ul>
 
-  <h2>What gross motor milestones should my 6–9 month old be reaching?</h2>
-
-  <p class="answer-first">By 9 months, most babies can sit without support, roll easily in both directions, bear weight on their legs when held standing, and are beginning to crawl, scoot, or army-crawl (CDC, 2022). Some babies pull themselves to a standing position using furniture by 9 months. The progression varies widely — the method of movement matters less than the fact that movement is happening.</p>
+  <h2>What feeding milestones matter between 6 and 9 months?</h2>
+  <p class="answer-first">At about 6 months, the AAP recommends starting solid foods while continuing breast milk or formula, and most babies 6–9 months old gradually move from smooth purees to thicker textures and soft finger foods (AAP, 2022). Iron-rich foods matter especially at this stage because birth iron stores begin to fall around 6 months.</p>
 
   <ul>
-    <li><strong>Sitting:</strong> They sit without support and can reach for toys while sitting.</li>
-    <li><strong>Rolling:</strong> They roll easily in both directions.</li>
-    <li><strong>Weight bearing:</strong> When held in a standing position, they support weight on their legs and may bounce.</li>
-    <li><strong>Movement:</strong> Many babies begin to crawl, scoot, or army-crawl. Some skip crawling and go directly to pulling up. Both are within the range of typical development.</li>
-    <li><strong>Pulling up:</strong> By 9 months, many babies can pull themselves up to a standing position using furniture.</li>
+    <li><strong>Readiness signs:</strong> Good head control, sitting with support, reduced tongue-thrust reflex, and obvious interest in watching or reaching for food all suggest readiness for solids.</li>
+    <li><strong>Texture progression:</strong> Many babies start with purees and move toward mashed foods and small soft pieces by 8–9 months, depending on oral-motor skill and interest.</li>
+    <li><strong>Self-feeding:</strong> Raking food with the whole hand is common before the pincer grasp becomes more refined later in infancy.</li>
+    <li><strong>Milk still matters:</strong> Breast milk or formula remains the main source of nutrition through the first year, even as solids become more practiced and enjoyable (AAP, 2022).</li>
   </ul>
 
   <div class="faq-section">
-    <h2>Is This Normal? Common Questions About 6–9 Month Milestones</h2>
-    {faqs.map(faq => (
+    <h2>Is This Normal? Frequently Asked Questions About 6–9 Month Milestones</h2>
+    {faqs.map((faq) => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
   <div class="callout">
-    <h2>When should I talk to my pediatrician about my 9-month-old's milestones?</h2>
-    <p>The CDC and AAP suggest talking to your pediatrician if your 9-month-old:</p>
+    <h2>When should I talk to my pediatrician about my 6–9 month old?</h2>
+    <p class="answer-first">Talk to your pediatrician if your baby is not sitting with help by 9 months, does not babble repetitive sounds, does not respond to their name, does not transfer toys hand to hand, or has lost skills they previously used (CDC, 2022). Concerns are worth discussing promptly because early intervention services are available in every U.S. state for children under 3.</p>
     <ul>
-      <li>Does not sit with help</li>
-      <li>Does not babble ("mamama," "bababa," "dadada")</li>
-      <li>Does not respond to their own name</li>
-      <li>Does not seem to recognize familiar people</li>
-      <li>Does not look where you point</li>
-      <li>Does not transfer toys from one hand to the other</li>
+      <li>Does not sit with help or seems unusually stiff or floppy by 9 months</li>
+      <li>Does not babble with sounds like "ba," "ma," or "da"</li>
+      <li>Does not look toward familiar voices or respond to their own name</li>
+      <li>Does not bear weight through the legs when supported</li>
+      <li>Does not move toys from one hand to the other</li>
+      <li>Does not seem to recognize familiar caregivers</li>
       <li>Has lost skills they once had</li>
     </ul>
-    <p>If you have any concerns about your baby's development, do not wait — speak with your pediatrician. Early intervention services are available in every U.S. state for children under age 3 and can begin before a formal diagnosis.</p>
+    <p>You do not need to wait for the next well-child visit if you are worried. Early intervention can evaluate babies under age 3 even before a formal diagnosis is made.</p>
   </div>
+
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
 </BaseLayout>

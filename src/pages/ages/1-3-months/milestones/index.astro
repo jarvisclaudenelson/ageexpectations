@@ -18,6 +18,18 @@ const faqs = [
     question: 'What sounds should a 2-month-old make?',
     answer: 'By 2 months, babies begin making sounds other than crying. You will hear cooing — vowel sounds like "ooh" and "ah" — and gurgling. They also react to loud sounds by startling or becoming quiet (CDC, 2022). These sounds are your baby\'s first intentional social communication.',
   },
+  {
+    question: 'How much should my 1 to 3 month old be sleeping?',
+    answer: 'Babies between 1 and 3 months typically sleep 14–17 hours per 24 hours, though patterns are highly irregular (American Academy of Sleep Medicine, 2022). Most babies this age sleep in stretches of 2–4 hours, gradually lengthening nighttime stretches to 4–6 hours by 3 months. The AAP recommends placing babies on their backs for every sleep, on a firm flat surface with no soft bedding.',
+  },
+  {
+    question: 'Is it normal for my 2-month-old to not track objects with their eyes?',
+    answer: 'By 2 months, most babies can follow a slowly moving object across their field of vision, though tracking may be jerky or inconsistent at first (CDC, 2022). If your baby does not watch things as they move or does not seem to focus on your face by 2 months, discuss it with your pediatrician. Vision develops rapidly in the first months, and early screening can catch issues while they are most treatable.',
+  },
+  {
+    question: 'Why does my baby startle so easily?',
+    answer: 'The Moro (startle) reflex is present from birth and typically fades between 3 and 6 months (AAP, 2022). Sudden noises, position changes, or their own arm movements can trigger it. This reflex is a sign of a healthy nervous system. Swaddling during sleep can reduce startles and improve sleep quality. If the reflex persists beyond 6 months or appears only on one side, mention it to your pediatrician.',
+  },
 ];
 
 const aSchema = articleSchema({
@@ -45,9 +57,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>1–3 Month Milestones: What to Expect</h1>
 
-  <p>The transition from the newborn phase into early infancy (1–3 months) brings a dramatic increase in alertness. Your baby is beginning to wake up to the world — recognizing familiar faces, communicating with more than just tears, and building the physical strength that will drive the motor milestones to come.</p>
-
-  <p>Developmental milestones are behaviors and physical skills seen in infants as they grow. While every child develops at their own pace, the CDC and AAP provide general timeframes for when most children reach certain milestones.</p>
+  <p class="answer-first">Between 1 and 3 months, most babies develop their first social smile, begin cooing with vowel sounds like "ooh" and "ah," improve head control during tummy time, and visually track moving objects across their field of vision (CDC, 2022). This period marks the transition from reflexive newborn behavior to intentional social interaction, with your baby becoming increasingly alert and responsive to the world around them.</p>
 
   <h2>What social and emotional milestones should I look for at 1–3 months?</h2>
 
@@ -94,8 +104,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 1–3 Month Milestones</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

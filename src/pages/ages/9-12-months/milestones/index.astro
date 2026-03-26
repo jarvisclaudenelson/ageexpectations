@@ -22,6 +22,10 @@ const faqs = [
     question: 'What is the pincer grasp and why is it important?',
     answer: 'The pincer grasp is the ability to pick up small objects using the thumb and index finger. This milestone typically develops around 9–10 months (CDC, 2022). It is a major fine motor milestone — it allows babies to self-feed small pieces of food and eventually leads to skills like holding a pencil and using tools.',
   },
+  {
+    question: 'How many words should my 12-month-old say?',
+    answer: 'Most 12-month-olds say 1–3 recognizable words, typically "mama," "dada," and one other word like "ball" or "dog" (CDC, 2022). However, gestures are equally important at this age — pointing, waving, and shaking the head are all meaningful communication milestones. If your baby has no words and no gestures by 12 months, discuss it with your pediatrician.',
+  },
 ];
 
 const aSchema = articleSchema({
@@ -49,7 +53,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>9–12 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p>The window between 9 and 12 months is a period of remarkable transformation. Your baby is transitioning from infant to toddler — moving from relative stillness to exploring their environment with new mobility and communication skills. This is the age of firsts: first steps, first words, and the first birthday.</p>
+  <p class="answer-first">Between 9 and 12 months, most babies pull to stand using furniture, begin cruising, say "mama" and "dada" with meaning, use pointing to communicate, and develop the pincer grasp for picking up small objects (CDC, 2022). Many babies take their first independent steps during this period, though the typical range for walking is 9–15 months. This stage also brings stronger separation anxiety and the emergence of simple pretend play.</p>
 
   <h2>What social and emotional milestones should I expect at 9–12 months?</h2>
 
@@ -105,8 +109,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About 9–12 Month Milestones</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

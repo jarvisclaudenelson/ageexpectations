@@ -45,7 +45,7 @@ const fSchema = faqSchema(faqs);
 
   <p>Somewhere around your child's first birthday, a switch flips. The baby who was content to sit in your lap and explore a rattle is now a determined little person with opinions, preferences, and a growing vocabulary of "no." Welcome to toddlerhood. The emotional and behavioral changes between 12 and 18 months can feel intense &mdash; but nearly all of them are signs that your child's brain is developing exactly as it should.</p>
 
-  <h2>What to Expect: Separation Anxiety Peaks</h2>
+  <h2>Why is my toddler so clingy between 12 and 18 months?</h2>
 
   <p><strong>Separation anxiety</strong> is one of the defining emotional experiences of this age. While it can appear as early as 6&ndash;8 months, it typically reaches its peak intensity between <strong>10 and 18 months</strong>, according to the CDC's developmental milestone guidelines.</p>
 
@@ -63,7 +63,7 @@ const fSchema = faqSchema(faqs);
 
   <p>The intensity of separation anxiety typically decreases after 18&ndash;24 months as language skills improve and children develop a better understanding of routines and time.</p>
 
-  <h2>Emerging Independence and the Power of "No"</h2>
+  <h2>Why does my toddler say "no" to everything?</h2>
 
   <p>Between 12 and 18 months, toddlers begin to understand that they are a <strong>separate person</strong> from their caregivers. This is a profound cognitive leap, and it comes with a fierce drive to do things independently. Your toddler may insist on feeding themselves (even inefficiently), resist being put into a car seat, or push your hands away when you try to help.</p>
 
@@ -88,7 +88,7 @@ const fSchema = faqSchema(faqs);
 
   <p>The AAP recommends responding to tantrums with calm consistency. Stay nearby, ensure your child is safe, and avoid giving in to the demand that triggered the tantrum (which teaches that tantrums are an effective strategy). Once the storm passes, offer comfort and move on. At this age, there is no need for consequences, time-outs, or lengthy explanations &mdash; your child cannot yet process them.</p>
 
-  <h2>Testing Boundaries: Why Your Toddler Does the Thing You Just Said Not to Do</h2>
+  <h2>Why does my toddler do the exact thing I just told them not to do?</h2>
 
   <p>You tell your toddler not to touch the dog's water bowl. They look right at you, smile, and splash their hand in it. This is not disobedience &mdash; it is <strong>cause-and-effect learning</strong>. Your toddler is running experiments: "What happens when I do this? What happens when I do it again? Does the same thing happen every time?"</p>
 
@@ -96,7 +96,7 @@ const fSchema = faqSchema(faqs);
 
   <p>The most effective approach is to set a few clear, consistent limits and enforce them calmly every time. Use simple, direct language: "The water bowl is for the dog. Let's play with your water table." Then physically redirect your child. Expect to repeat this many, many times. That repetition is not failure &mdash; it's how toddler brains learn.</p>
 
-  <h2>Stranger Wariness and Social Development</h2>
+  <h2>Is it normal for my toddler to be afraid of strangers?</h2>
 
   <p><strong>Stranger wariness</strong> (sometimes called stranger anxiety) often intensifies between 12 and 18 months. Your toddler may hide behind your legs when a neighbor says hello, cry when a relative they haven't seen recently tries to hold them, or refuse to engage with new adults. This is a sign of healthy attachment and normal social-emotional development &mdash; not a sign of shyness or a social problem.</p>
 
@@ -110,14 +110,14 @@ const fSchema = faqSchema(faqs);
     <li>Narrating social situations: "That boy is playing with the ball. He looks happy."</li>
   </ul>
 
-  <h2>What "Social Referencing" Tells You About Your Child's Emotional Development</h2>
+  <h2>Why does my toddler look at me before reacting to something new?</h2>
 
   <p>By 12 months, most toddlers are actively engaged in <strong>social referencing</strong> &mdash; looking to a trusted caregiver's face for cues about how to react to an unfamiliar situation. When your child encounters something new (a loud noise, an unfamiliar animal, a strange toy), they will often glance at you before responding. If you look calm and relaxed, they're more likely to approach. If you look worried, they're more likely to retreat.</p>
 
   <p>Social referencing is a milestone tracked by the CDC and is an important indicator of healthy social-emotional development. Children who consistently do not engage in social referencing &mdash; who do not look to caregivers for emotional cues or who seem unaware of others' emotions &mdash; should be evaluated by their pediatrician, as this can be an early sign of autism spectrum disorder.</p>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
+    <h2>When should I talk to my pediatrician about my toddler&#39;s behavior?</h2>
     <p>The behaviors described in this article &mdash; tantrums, clinginess, boundary testing, and stranger wariness &mdash; are all part of normal toddler development. However, talk to your pediatrician if you notice:</p>
     <ul>
       <li>Your child does not respond to their name consistently by 12 months</li>
@@ -135,8 +135,8 @@ const fSchema = faqSchema(faqs);
     <h2>Is This Normal? Frequently Asked Questions</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </section>

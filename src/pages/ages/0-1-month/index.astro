@@ -53,9 +53,7 @@ const mSchema = medicalWebPageSchema({
 >
   <h1>Newborn Development (0–1 Month): What to Expect</h1>
 
-  <p>Bringing a newborn home is one of life's most disorienting transitions. Your baby sleeps in short bursts, feeds around the clock, and communicates almost entirely through crying. It can be hard to know what is typical when everything feels new. The good news: your newborn is already developing in remarkable ways, even in these earliest days.</p>
-
-  <p>This overview covers key areas of newborn development during the first month of life, based on guidelines from the American Academy of Pediatrics (AAP) and the CDC. Explore the topic pages below for deeper dives into sleep, feeding, and milestones.</p>
+  <p class="answer-first">During the first month of life, newborns develop primitive reflexes (rooting, sucking, grasping, Moro), sleep 14–17 hours per day in 2–4 hour stretches, feed 8–12 times daily, and begin to recognize familiar voices and faces (CDC, 2022). Most newborns lose 5–10% of birth weight in the first few days and regain it by 10–14 days. The AAP recommends well-child visits at 3–5 days and again at 1 month to monitor weight gain and screen for jaundice, heart defects, and hearing.</p>
 
   <h2>Explore Newborn Topics</h2>
   <div class="topic-grid">
@@ -110,8 +108,8 @@ const mSchema = medicalWebPageSchema({
     <h2>Is This Normal? Common Questions About Newborn Development</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

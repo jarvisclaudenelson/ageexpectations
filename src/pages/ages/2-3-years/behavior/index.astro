@@ -23,7 +23,7 @@ const fSchema = faqSchema(faqs);
 
   <p>This guide covers the behavioral and emotional patterns that are typical at this age, the developmental science behind them, evidence-based strategies from the AAP, and the specific signs that do warrant a conversation with your pediatrician.</p>
 
-  <h2>Why Toddler Behavior Is So Intense: What to Expect Developmentally</h2>
+  <h2>Why is my toddler&#39;s behavior so intense between ages 2 and 3?</h2>
 
   <p>The core tension of the 2–3 year old stage is a mismatch between desire and ability. Your child's drive for independence, their understanding of what they want, and their emotional intensity are all developing faster than their ability to communicate clearly, wait, problem-solve, or manage frustration. This gap is the engine behind virtually every behavioral challenge of this age.</p>
 
@@ -36,7 +36,7 @@ const fSchema = faqSchema(faqs);
     <li><strong>Cause and effect is still being learned.</strong> Toddlers experiment with behavior in the same way they experiment with blocks. They push, test, and repeat to learn how the world — and you — respond.</li>
   </ul>
 
-  <h2>Tantrums: What Is Normal and What to Watch For</h2>
+  <h2>How many tantrums per day are normal for a 2 to 3 year old?</h2>
 
   <p>Tantrums are the single most discussed behavioral topic for this age range, and for good reason — they are universal, unpredictable, and exhausting. The AAP considers tantrums a normal part of development between ages 1 and 4, with peak frequency and intensity between ages 2 and 3.</p>
 
@@ -57,7 +57,7 @@ const fSchema = faqSchema(faqs);
     <li><strong>Reconnect after.</strong> Once the tantrum passes, a brief hug or calm acknowledgment ("That was a big feeling. You're okay now.") helps your child feel secure.</li>
   </ul>
 
-  <h2>Hitting, Biting, and Pushing: Signs of Normal Frustration</h2>
+  <h2>Is it normal for my 2-year-old to hit, bite, or push?</h2>
 
   <p>Physical aggression in toddlers is extremely common and, in most cases, developmentally typical. The CDC and AAP acknowledge that hitting, biting, pushing, and throwing objects are behaviors that peak between ages 2 and 3. This does not mean you should ignore them — it means you should respond with firm, calm limits rather than alarm.</p>
 
@@ -72,7 +72,7 @@ const fSchema = faqSchema(faqs);
     <li>Avoid biting or hitting back "to show them how it feels." Research consistently shows this increases aggression rather than reducing it.</li>
   </ul>
 
-  <h2>The Drive for Autonomy: "I Do It!" and What It Means</h2>
+  <h2>Why does my toddler insist on doing everything by themselves?</h2>
 
   <p>Perhaps nothing defines the 2–3 year old stage more than the fierce desire to do things independently. Your child may insist on pouring their own milk (spilling most of it), putting on their own shoes (on the wrong feet), or opening the car door themselves (adding ten minutes to every departure). This is not manipulation or misbehavior — it is one of the most important developmental tasks of this age.</p>
 
@@ -84,7 +84,7 @@ const fSchema = faqSchema(faqs);
     <li>Accepting imperfection. Mismatched clothes and messily poured cereal are signs of healthy development.</li>
   </ul>
 
-  <h2>Difficulty Sharing and the Shift from Parallel to Associative Play</h2>
+  <h2>When will my toddler learn to share?</h2>
 
   <p>Parents often worry when their 2-year-old refuses to share, but this is entirely developmentally appropriate. True sharing requires perspective-taking — the ability to understand that another person wants something and to voluntarily give up your own possession. This cognitive skill does not emerge reliably until closer to age 3.5–4.</p>
 
@@ -98,14 +98,14 @@ const fSchema = faqSchema(faqs);
     <li>Praise cooperative moments when they happen naturally rather than forcing sharing.</li>
   </ul>
 
-  <h2>Emotional Regulation: A Skill in Progress</h2>
+  <h2>Can my 2 to 3 year old control their emotions?</h2>
 
   <p>It is easy to forget that emotional regulation — the ability to manage intense feelings without falling apart — is a skill that takes years to develop. At age 2, your child has almost none of this skill. By age 3, you will start to see the earliest signs: occasionally using words instead of screaming, sometimes accepting a compromise, and more frequently recovering from upsets without complete meltdowns.</p>
 
   <p>According to the AAP, the most effective way to support emotional regulation in toddlers is through <strong>co-regulation</strong> — staying calm yourself, validating your child's feelings, and helping them name their emotions ("You're frustrated because the block keeps falling"). Over time, this scaffolding helps children internalize the ability to manage their own emotions.</p>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
+    <h2>When should I talk to my pediatrician about my toddler&#39;s behavior?</h2>
     <p>Most behavioral challenges at ages 2–3 are normal, but certain patterns should be evaluated. Talk to your pediatrician if your child's tantrums consistently last longer than 25 minutes, occur more than 5 times per day, or involve self-injury (head banging, biting themselves, scratching). Also seek guidance if your child shows aggression that does not improve with consistent limit-setting over several weeks, has extreme difficulty with any change in routine (beyond typical toddler preference for predictability), shows no interest in other children at all, shows regression in behavior or skills, or has prolonged periods of flat or withdrawn affect. Your pediatrician can help determine whether your child's behavior falls within the expected range or whether an evaluation — such as a developmental or behavioral assessment — would be helpful.</p>
   </div>
 
@@ -113,8 +113,8 @@ const fSchema = faqSchema(faqs);
     <h2>Is This Normal? Frequently Asked Questions About 2–3 Year Old Behavior</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>

@@ -4,123 +4,121 @@ import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/sc
 import { topics } from '../../../data/ages.js';
 
 const title = '10–12 Year Old Development: What to Expect';
-const description = 'A guide to the pre-teen years (10–12) — puberty onset, developing independence, abstract thinking, peer influence, and emotional changes — with AAP guidelines.';
+const description = 'Most 10–12 year olds need 9–12 hours of sleep, 60 minutes of daily physical activity, and steady parent support as puberty, abstract thinking, and peer influence intensify. Use this AAP- and CDC-informed guide to understand tween development.';
 
 const faqs = [
   {
-    question: 'How much sleep do 10 to 12 year olds need?',
-    answer: 'The AAP recommends 9 to 12 hours of sleep per 24 hours for children ages 6 to 12 (AAP, 2016). Pre-teens in this range often resist going to bed because their social and school demands are expanding — but sleep deprivation at this age measurably impairs mood, attention, and academic performance. Consistent bedtimes and limiting screens after 9 PM make the biggest difference.',
+    question: 'How much sleep does my 10–12 year old need?',
+    answer: 'Most 10–12 year olds need 9–12 hours of sleep every 24 hours, which is the recommended range for school-age children 6–12 years old (American Academy of Sleep Medicine, 2022). If your tween is regularly getting less than 9 hours, irritability, inattention, and difficulty waking up are common signs that sleep is falling short.',
   },
   {
-    question: 'When should I be concerned about puberty in my 10 to 12 year old?',
-    answer: 'Puberty typically begins between ages 8 and 13 for girls and ages 9 and 14 for boys (AAP, 2022). Children in the 10-to-12 range are squarely in the typical window. Talk to your pediatrician if your daughter shows no breast development by age 13, or if your son shows no testicular growth by age 14. Unusually rapid progression or signs appearing before age 8 in girls or age 9 in boys also warrant evaluation.',
-  },
-  {
-    question: 'How can I support my child\'s growing need for privacy?',
-    answer: 'Between ages 10 and 12, children need more physical and emotional privacy as their sense of self develops. Knock before entering their room, do not read their journal or texts without a specific safety reason, and allow them to have conversations with friends without parental monitoring. Maintaining open communication while respecting privacy builds the trust needed for them to come to you with bigger issues in adolescence.',
+    question: 'When should I be concerned about puberty in my 10–12 year old?',
+    answer: 'Puberty typically begins between ages 8 and 13 in girls and 9 and 14 in boys, so many 10–12 year olds are in the early or middle part of normal pubertal development (AAP, 2022). Talk with your pediatrician if puberty seems to start before age 8 in girls or age 9 in boys, or if no pubertal signs are present by age 13 in girls or age 14 in boys.',
   },
   {
     question: 'Is it normal for my 11-year-old to have mood swings?',
-    answer: 'Yes. Hormonal shifts from puberty directly affect mood regulation in pre-teens. Children ages 10 to 12 may swing from cheerful to irritable quickly, and the intensity of their emotional responses often surprises parents and children alike. The AAP distinguishes typical mood fluctuations from clinical depression or anxiety — if mood changes persist for two or more weeks, significantly interfere with daily life, or include persistent sadness or hopelessness, consult your pediatrician.',
+    answer: 'Yes, mood variability is common between ages 10 and 12 because puberty, social stress, and growing self-awareness all affect emotional regulation (AAP, 2022). Mood swings become more concerning when sadness, irritability, or anxiety last 2 weeks or more, cause school refusal, or lead to major withdrawal from friends and activities.',
   },
   {
-    question: 'Should I be worried that my 10-year-old still believes in Santa?',
-    answer: 'No. Children vary widely in when they transition away from magical thinking. Some 10-year-olds hold onto belief in Santa or the Tooth Fairy as a source of wonder, even while understanding intellectually that these are childhood traditions. This is within the range of typical development. Most children make this transition between ages 6 and 10, but there is nothing developmentally concerning about a 10-year-old who is slow to let go.',
+    question: 'Why does my preteen care so much about friends right now?',
+    answer: 'Peer approval becomes much more important during the 10–12 year range because tweens are building identity and social belonging at the same time (AAP, 2022). That intense focus on fitting in is developmentally typical, even when it feels dramatic from the outside.',
   },
   {
-    question: 'When can my child start wearing deodorant?',
-    answer: 'Deodorant use is appropriate whenever your child begins to develop body odor — often between ages 8 and 12, coinciding with the start of puberty. Body odor results from bacteria interacting with sweat from apocrine glands, which activate at puberty. You do not need to wait for a specific age. If your child is self-conscious about odor, starting deodorant is a practical and supportive response.',
+    question: 'How much physical activity should my 10–12 year old get?',
+    answer: 'Children and adolescents should get at least 60 minutes of moderate-to-vigorous physical activity daily, and that recommendation includes 10–12 year olds (CDC, 2022). Sports count, but active play, biking, walking, dancing, and outdoor time all help meet the goal.',
+  },
+  {
+    question: 'How much screen time is okay for a 10–12 year old?',
+    answer: 'The AAP does not set one universal hourly cap for older children. Instead, the goal is to make sure media use does not crowd out sleep, physical activity, homework, family time, or in-person friendships (AAP, 2022). For many tweens, the clearest red flag is not the number of hours alone but whether screens regularly disrupt the basics they still need to develop well.',
+  },
+  {
+    question: 'Is it normal for my 10-year-old to want more privacy?',
+    answer: 'Yes. Wanting more privacy around their body, room, friendships, and emotions is typical during ages 10–12 as identity and autonomy grow (AAP, 2022). Respecting reasonable privacy while staying actively involved usually strengthens trust rather than weakening parental influence.',
+  },
+  {
+    question: 'Should I let my 10–12 year old use deodorant?',
+    answer: 'Yes, if body odor has started. Apocrine sweat glands become more active with puberty, and body odor often appears between ages 8 and 12, especially during sports or warm weather (AAP, 2022). Deodorant is a practical hygiene tool, not something that needs to wait for a specific birthday.',
   },
 ];
 
-const aSchema = articleSchema({
+const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/10-12-years/',
+  url: 'https://www.ageexpectations.com/ages/10-12-years/',
 });
-const fSchema = faqSchema(faqs);
-const mSchema = medicalWebPageSchema({
+const faqData = faqSchema(faqs);
+const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/10-12-years/',
+  url: 'https://www.ageexpectations.com/ages/10-12-years/',
 });
 ---
 <BaseLayout
   title={title}
   description={description}
-  articleSchema={aSchema}
-  faqSchema={fSchema}
-  medicalSchema={mSchema}
+  articleSchema={articleData}
+  faqSchema={faqData}
+  medicalSchema={medicalData}
   breadcrumbs={[
     { label: 'Pre-Teen (10–12 Years)' },
   ]}
 >
   <h1>10–12 Year Old Development: What to Expect</h1>
 
-  <p class="answer-first">The ages 10 to 12 — the "tween" years — bridge childhood and adolescence. Puberty is underway or beginning for most children in this range, with girls typically starting 1 to 2 years earlier than boys. The AAP identifies three major shifts: beginning abstract thinking, intensifying peer influence on identity and behavior, and a growing need for privacy and autonomy (AAP, 2022). Parents often notice these children simultaneously want more independence and need more parental connection.</p>
+  <p class="answer-first">Most 10–12 year olds are entering or moving through puberty, need 9–12 hours of sleep each night, and are becoming much more influenced by friends, privacy, and social comparison than they were a few years earlier (American Academy of Sleep Medicine, 2022; AAP, 2022). This age is still childhood, but it is childhood with far more intensity, self-awareness, and independence.</p>
 
-  <h2>What are the key developmental milestones for 10 to 12 year olds?</h2>
-
-  <p class="answer-first">Between ages 10 and 12, children begin moving from concrete to abstract thinking — they can reason about hypothetical situations, consider multiple perspectives, and think about consequences beyond the immediate moment. Peer relationships become the primary social context. Puberty is active for most girls and beginning for most boys. Academic demands increase sharply with the transition to middle school (AAP, 2022).</p>
-
-  <p>Key milestones by domain:</p>
+  <h2>What developmental milestones are typical for 10–12 year olds?</h2>
+  <p class="answer-first">Between ages 10 and 12, typically developing children show bigger gains in abstract thinking, self-awareness, peer orientation, and independence, while puberty begins or progresses for most of them during this same window (AAP, 2022). This means your tween may look more grown up physically while still needing a lot of structure, reassurance, and repetition from you.</p>
 
   <ul>
-    <li><strong>Cognitive:</strong> Abstract reasoning, beginning algebra and literary analysis, metacognition (thinking about their own thoughts), planning and organizing more complex tasks.</li>
-    <li><strong>Language:</strong> Sophisticated vocabulary, humor and sarcasm, persuasive writing, complex reading comprehension.</li>
-    <li><strong>Physical:</strong> Active puberty — growth spurts, body hair, skin changes, breast development in girls, voice changes in boys.</li>
-    <li><strong>Social-emotional:</strong> Strong peer group identity, desire for privacy, mood fluctuations from hormonal changes, emerging interest in social justice and ethics.</li>
+    <li><strong>Cognitive development:</strong> Many 10–12 year olds can think beyond the obvious, compare perspectives, understand more complex cause and effect, and start reasoning about fairness, rules, and hypothetical situations.</li>
+    <li><strong>Emotional development:</strong> Feelings become more intense, self-consciousness rises, and social embarrassment can hit hard because tweens become much more aware of how they are seen by peers.</li>
+    <li><strong>Social development:</strong> Friend groups, fitting in, privacy, and belonging matter more than they did in earlier elementary years, even when family remains the core source of safety and stability.</li>
+    <li><strong>Physical development:</strong> Growth spurts, body odor, acne, breast development, testicular growth, pubic hair, and changing body shape often begin or accelerate during this age range (AAP, 2022).</li>
   </ul>
 
-  <h2>What physical changes happen during the tween years?</h2>
-
-  <p class="answer-first">For most children, ages 10 to 12 bring the most significant physical transformation since infancy. Girls typically begin breast development, pubic hair growth, and increased height between ages 8 and 13; their growth spurt often peaks around age 11 to 12. Boys typically start testicular growth and pubic hair between ages 9 and 14, with their growth spurt peaking around age 13 to 14 (AAP, 2022). Body odor appears early in puberty for both sexes.</p>
+  <h2>What physical changes should I expect during puberty at 10–12 years?</h2>
+  <p class="answer-first">Puberty commonly begins between ages 8 and 13 for girls and 9 and 14 for boys, which means many children ages 10–12 are in the expected pubertal window even if timing differs by a year or two from peers (AAP, 2022). Early pubertal changes often include body odor, oilier skin, pubic hair, breast budding in girls, and testicular enlargement in boys.</p>
 
   <ul>
-    <li><strong>Growth spurts:</strong> Height and weight increases can be rapid and uneven. Some children gain several inches in a single year. Temporary clumsiness is common as the brain adjusts to new proportions.</li>
-    <li><strong>Skin changes:</strong> Acne begins for many children in this range. Daily face washing and, if needed, over-the-counter salicylic acid products are appropriate first steps. Talk to your pediatrician if acne is moderate or severe.</li>
-    <li><strong>Body odor:</strong> Apocrine glands activate at puberty, producing sweat that bacteria convert to odor. Daily bathing and deodorant are practical responses.</li>
-    <li><strong>Coordination:</strong> Despite growth spurts, most tweens continue to improve in sports and fine motor activities — their brain adapts to physical changes within months.</li>
+    <li><strong>Growth spurts:</strong> Many tweens gain height quickly, and rapid growth can temporarily make them look awkward or feel less coordinated.</li>
+    <li><strong>Skin and hygiene:</strong> Oil production often rises during puberty, so acne and stronger body odor become more common. Daily bathing, deodorant, and consistent skin care routines can help.</li>
+    <li><strong>Puberty timing:</strong> Girls often begin visible puberty changes about 1–2 years earlier than boys, which can create big differences in appearance within the same grade (AAP, 2022).</li>
+    <li><strong>Body awareness:</strong> Many 10–12 year olds become much more self-conscious about hair, weight, sweating, bras, deodorant, shaving, or locker-room differences than parents expect.</li>
   </ul>
 
-  <h2>How does thinking change between ages 10 and 12?</h2>
-
-  <p class="answer-first">Children ages 10 to 12 begin to leave "concrete" thinking behind and enter formal operational thought — they can reason about hypothetical situations, understand multiple perspectives, and think about abstract concepts like justice, fairness, and the future (Piaget). This shift enables more complex academic work but also drives increased questioning of authority and parental rules. Executive function — planning, organizing, and inhibiting impulses — is still developing and benefits from structure.</p>
+  <h2>Can my 10–12 year old understand abstract ideas and consequences?</h2>
+  <p class="answer-first">Yes, many 10–12 year olds start moving from mostly concrete thinking toward more abstract reasoning, which helps them understand hypothetical situations, fairness, long-term consequences, and multiple points of view better than younger children can (AAP, 2022). The catch is that insight develops faster than impulse control, so knowing better and doing better do not always happen at the same speed.</p>
 
   <ul>
-    <li><strong>Complex logic:</strong> Ability to handle algebra, literary analysis, and science experiments requiring hypothesis and inference.</li>
-    <li><strong>Self-reflection:</strong> Tweens think about their own thoughts and feelings (metacognition). This supports emotional growth but also fuels the "imaginary audience" — the feeling that everyone is watching them.</li>
-    <li><strong>Ethics and justice:</strong> Strong interest in fairness, social issues, and the "why" behind rules. Tweens who challenge rules are often developing healthy moral reasoning, not just defying authority.</li>
+    <li><strong>Academic change:</strong> Middle-grade work often asks children to infer, compare themes, explain why, and solve multi-step problems, not just memorize facts.</li>
+    <li><strong>Argument skills:</strong> Your tween may question rules more often because they can now think about exceptions, fairness, and logic. Annoying, yes. Also developmentally appropriate.</li>
+    <li><strong>Planning and organization:</strong> Executive function is improving, but 10–12 year olds still often need visual reminders, routines, and adult help breaking big tasks into smaller steps.</li>
   </ul>
 
-  <h2>How do emotions and social relationships shift in the tween years?</h2>
-
-  <p class="answer-first">Between ages 10 and 12, peer relationships become the most influential social context in a child's life. Children this age prioritize fitting in with their peer group, are highly sensitive to social exclusion, and begin forming a sense of identity through peer group membership (AAP, 2022). Hormonal changes produce mood fluctuations — children may swing from cheerful to irritable quickly and with intensity that surprises everyone involved.</p>
+  <h2>Why is my preteen so focused on friends, fitting in, and privacy?</h2>
+  <p class="answer-first">Peer relationships become one of the most powerful forces in 10–12 year old development because tweens are actively building identity and social status while becoming more aware of comparison, exclusion, and belonging (AAP, 2022). At the same time, most children this age want noticeably more privacy around their body, bedroom, conversations, and emotions.</p>
 
   <ul>
-    <li><strong>Peer influence:</strong> A strong drive to fit in shapes clothing, music, language, and behavior. This is healthy developmental pressure — it will evolve as identity strengthens.</li>
-    <li><strong>Mood fluctuations:</strong> Hormonal shifts make emotional regulation harder. Teach emotional vocabulary and model calm problem-solving rather than dismissing their intensity.</li>
-    <li><strong>Privacy:</strong> The desire for personal space and private time increases significantly. Respecting reasonable privacy builds the trust that makes them more likely to come to you with serious concerns.</li>
+    <li><strong>Peer influence:</strong> Clothes, slang, music, activities, and online behavior may all become more shaped by what friends think.</li>
+    <li><strong>Privacy:</strong> Knocking before entering, giving them space to change clothes, and letting them have some low-stakes privacy helps communicate respect.</li>
+    <li><strong>Belonging:</strong> Minor social slights can feel enormous at this age because brain and emotional systems are primed to track group acceptance very closely.</li>
+    <li><strong>Parental role:</strong> Tweens still need involved parents, but they often respond better to calm coaching, routines, and side-by-side conversation than lectures.</li>
   </ul>
 
-  <h2>When should I talk to my pediatrician about my 10 to 12 year old?</h2>
+  <h2>What health habits matter most for 10–12 year olds?</h2>
+  <p class="answer-first">The biggest health foundations for 10–12 year olds are 9–12 hours of sleep, at least 60 minutes of daily physical activity, balanced nutrition, consistent hygiene, and predictable digital boundaries that protect school, sleep, and mental health (American Academy of Sleep Medicine, 2022; CDC, 2022; AAP, 2022). Tweens look older, but their routines still shape almost everything.</p>
 
-  <div class="callout">
-    <p class="answer-first">Continue annual well-child checkups through the tween years — these visits are critical for monitoring puberty progression, growth, and screening for depression and anxiety. Consult your pediatrician if you see signs of persistent sadness, significant sudden drops in academic performance, extreme preoccupation with body image or weight, persistent sleep problems, or signs of bullying as target or perpetrator (AAP, 2022).</p>
-    <p>Additional concerns to raise:</p>
-    <ul>
-      <li>Puberty signs before age 8 in girls or age 9 in boys</li>
-      <li>No puberty signs by age 13 in girls or age 14 in boys</li>
-      <li>Extreme changes in eating habits or weight</li>
-      <li>Withdrawal from previously enjoyed activities and friends</li>
-      <li>Signs of anxiety that interfere with school attendance or social participation</li>
-      <li>Any talk of self-harm — take this seriously and contact your pediatrician or crisis line immediately</li>
-    </ul>
-  </div>
+  <ul>
+    <li><strong>Sleep:</strong> Most school-age children 6–12 need 9–12 hours of sleep every 24 hours, and falling short often shows up as irritability, trouble focusing, and hard mornings rather than obvious sleepiness (American Academy of Sleep Medicine, 2022).</li>
+    <li><strong>Physical activity:</strong> The CDC recommends at least 60 minutes of activity daily for children and adolescents, including play, sports, walking, biking, and active free time (CDC, 2022).</li>
+    <li><strong>Nutrition:</strong> Tweens need regular meals, protein, fiber, calcium-rich foods, and enough overall calories to support growth spurts. Appetite may rise quickly during puberty.</li>
+    <li><strong>Media habits:</strong> Screens should not regularly replace sleep, exercise, homework, or in-person relationships. Bedrooms and bedtime are often the first places where firmer boundaries help most (AAP, 2022).</li>
+  </ul>
 
   <div class="faq-section">
-    <h2>Frequently Asked Questions: 10 to 12 Year Old Development</h2>
-    {faqs.map(faq => (
+    <h2>Is This Normal? Frequently Asked Questions About 10–12 Year Old Development</h2>
+    {faqs.map((faq) => (
       <div class="faq-item">
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
@@ -128,13 +126,27 @@ const mSchema = medicalWebPageSchema({
     ))}
   </div>
 
+  <div class="callout">
+    <h2>When should I talk to my pediatrician about my 10–12 year old?</h2>
+    <p class="answer-first">Talk with your pediatrician if your 10–12 year old has persistent mood changes lasting 2 weeks or more, major school decline, severe sleep problems, extreme body-image distress, signs of bullying, or puberty changes far earlier or later than expected for their sex (AAP, 2022). This age group benefits from early help because social, emotional, and physical changes tend to stack on each other quickly.</p>
+    <ul>
+      <li>Puberty signs before age 8 in girls or before age 9 in boys</li>
+      <li>No pubertal signs by age 13 in girls or age 14 in boys</li>
+      <li>Persistent sadness, irritability, anxiety, or withdrawal lasting 2 weeks or more</li>
+      <li>Sharp drop in grades, refusal to go to school, or sudden loss of interest in friends or activities</li>
+      <li>Severe body-image concerns, restrictive eating, binge eating, or rapid weight change</li>
+      <li>Frequent headaches, stomachaches, or sleep problems that seem tied to stress or school pressure</li>
+      <li>Any talk of self-harm, hopelessness, or wishing to disappear</li>
+    </ul>
+    <p>If your tween talks about self-harm or suicide, treat it as urgent and seek immediate professional help or crisis support.</p>
+  </div>
+
   <h2>Explore 10–12 Year Old Topics</h2>
   <div class="topic-grid">
-    {topics.map(topic => (
+    {topics.map((topic) => (
       <a href={`/ages/10-12-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>
 
-  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
-
+  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
 </BaseLayout>

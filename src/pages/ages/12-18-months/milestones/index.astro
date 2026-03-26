@@ -20,13 +20,11 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
 <BaseLayout title={title} description={description} articleSchema={aSchema} faqSchema={fSchema} medicalSchema={mSchema} breadcrumbs={[{ label: '12–18 Months', href: '/ages/12-18-months/' }, { label: 'Milestones' }]}>
   <h1>12–18 Month Milestones: What to Expect and Signs of Progress</h1>
 
-  <p>Somewhere between their first birthday and eighteen months, your child crosses one of the great thresholds of early life: they stop being a baby and become a toddler. The transformation is breathtaking. In just six months, most children go from taking tentative steps while gripping your fingers to walking — and sometimes running — on their own. They begin to say real words, follow simple instructions, and show you that they have a mind full of ideas they are desperate to communicate.</p>
-
-  <p>If you are wondering whether your child is hitting their milestones "on time," you are in good company. This guide covers every major milestone between 12 and 18 months, explains the normal range for each, and tells you exactly when the AAP and CDC recommend seeking guidance from your pediatrician.</p>
+  <p class="answer-first">Between 12 and 18 months, most toddlers walk independently, say 5–10 recognizable words, use pointing and gestures to communicate, stack 2–4 blocks, begin simple pretend play, and drink from an open cup (CDC, 2022). This period bridges infancy and toddlerhood, with rapid gains in mobility, language, and early problem-solving. The AAP recommends formal developmental screening at both the 12-month and 18-month well-child visits.</p>
 
   <h2>What gross motor milestones should I expect between 12 and 18 months?</h2>
 
-  <p><strong>Walking</strong> is the headline milestone of this age range, and it has one of the widest normal windows of any developmental skill. According to the CDC's updated milestone checklist, most children walk independently between 12 and 15 months, and nearly all children are walking by 18 months. Here is what the typical progression looks like:</p>
+  <p class="answer-first">Most children walk independently between 12 and 15 months, and nearly all children are walking by 18 months (CDC, 2022). Walking has one of the widest typical windows of any developmental skill. Here is what the typical progression looks like:</p>
 
   <ul>
     <li><strong>12 months:</strong> Most babies are pulling to stand and cruising along furniture. Some are taking their first independent steps.</li>
@@ -39,7 +37,7 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
 
   <h2>What language milestones should my 12–18 month old reach?</h2>
 
-  <p>Language development between 12 and 18 months is a mix of spoken words and nonverbal communication — and the nonverbal piece is just as important as the words themselves.</p>
+  <p class="answer-first">Most 12-month-olds say 1–3 recognizable words, and by 18 months the average toddler says 5–10 words, though some say 50 or more while others are closer to 5 — both can be within the typical range (CDC, 2022). Nonverbal communication — pointing, waving, and gestures — is equally important at this stage.</p>
 
   <p><strong>Spoken language:</strong> Most 12-month-olds say 1–3 recognizable words, often "mama," "dada," and one other word like "ball" or "dog." By 18 months, the average toddler says about 5–10 words, though there is significant variability. The AAP notes that some 18-month-olds say 50 or more words, while others are closer to 5. Both can be within the normal range.</p>
 
@@ -49,7 +47,7 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
 
   <h2>What fine motor milestones should my 12–18 month old be reaching?</h2>
 
-  <p>Your toddler's hand skills are becoming increasingly precise between 12 and 18 months. Key milestones include:</p>
+  <p class="answer-first">Between 12 and 18 months, most toddlers develop the hand precision to stack 2–4 blocks, scribble with a thick crayon, drink from an open cup with help, and begin using a spoon (CDC, 2022). Key milestones include:</p>
 
   <ul>
     <li><strong>Stacking blocks:</strong> Most toddlers can stack two blocks by 12–14 months and three to four blocks by 18 months. This requires hand-eye coordination, spatial awareness, and the patience to balance one object on top of another.</li>
@@ -61,7 +59,7 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
 
   <h2>What cognitive milestones should I look for at 12–18 months?</h2>
 
-  <p>Between 12 and 18 months, your child's thinking becomes visibly more sophisticated. You will see evidence of this in their play and daily interactions:</p>
+  <p class="answer-first">Between 12 and 18 months, most toddlers demonstrate fully established object permanence, begin simple pretend play like feeding a doll or holding a toy phone to their ear, and engage in deliberate cause-and-effect experimentation (CDC, 2022). You will see evidence of this in their play and daily interactions:</p>
 
   <ul>
     <li><strong>Object permanence is well established:</strong> Your child knows that a toy hidden under a blanket is still there and will look for it. They may also begin to figure out where you have hidden an object even if you move it between two hiding spots.</li>
@@ -72,7 +70,7 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
 
   <h2>What social-emotional milestones should my 12–18 month old show?</h2>
 
-  <p>Your toddler's social and emotional world is becoming richer and more complex. According to both the AAP and CDC, typical social-emotional milestones at this age include:</p>
+  <p class="answer-first">Between 12 and 18 months, most toddlers show affection toward familiar people through hugging and cuddling, display peak separation anxiety, imitate adult actions during play, and begin showing early empathy by looking concerned when another child cries (CDC, 2022). Typical social-emotional milestones at this age include:</p>
 
   <ul>
     <li>Showing affection toward familiar people (hugging, cuddling, kissing)</li>
@@ -133,15 +131,15 @@ const mSchema = medicalWebPageSchema({ name: title, description, url: 'https://a
     <h2>Is This Normal? Frequently Asked Questions About 12–18 Month Milestones</h2>
     {faqs.map(faq => (
       <div class="faq-item">
-        <p class="faq-question">{faq.question}</p>
-        <p class="faq-answer">{faq.answer}</p>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
       </div>
     ))}
   </div>
 
   <div class="callout">
-    <h2>When to Talk to Your Pediatrician</h2>
-    <p>The AAP recommends formal developmental screening at the 12-month and 18-month well-child visits. Between those visits, contact your pediatrician if your child:</p>
+    <h2>When should I talk to my pediatrician about my toddler's milestones?</h2>
+    <p class="answer-first">The AAP recommends formal developmental screening at the 12-month and 18-month well-child visits. Between those visits, contact your pediatrician if your child:</p>
     <ul>
       <li>Is not standing with support by 12 months</li>
       <li>Is not walking independently by 18 months</li>
