@@ -419,4 +419,10 @@ export const articles = [
     pubDate: "2026-03-23",
     image: "/images/pins/2026-03-23-10-14-years-staying-home-alone-pin.png",
   },
+  {
+    title: "How Much Screen Time Is Appropriate for an 8 to 10 Year Old?",
+    description: "The AAP no longer sets a fixed daily screen time limit for children ages 6 and older. Current 2023 guidance focuses on content quality, context, and protecting sleep and physical activity. Learn what the research actually says about screen time for 8 to 10 year olds, social media readiness, cyberbullying prevention, and when to talk to your pediatrician.",
+    path: "/ages/8-10-years/screen-time/",
+    pubDate: "2026-03-27",
+  },
 ];
