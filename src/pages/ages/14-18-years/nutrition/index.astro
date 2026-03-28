@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'What Should a 14 to 18 Year Old Be Eating? Nutrition Guide for Teenagers';
+const description = 'A complete nutrition guide for teenagers ages 14 to 18 — daily calorie needs during peak puberty, calcium and iron requirements, teen athlete nutrition, eating disorder warning signs, and when to talk to your pediatrician, based on AAP and USDA guidelines.';
+
+const faqs = [
+  {
+    question: 'How many calories does my teenager actually need?',
+    answer: 'Calorie needs for teenagers are higher than at any other point in childhood. According to USDA Dietary Guidelines 2020–2025, a moderately active teen boy ages 14–18 needs approximately 2,400–3,000 calories per day, and a moderately active teen girl needs approximately 2,000–2,400 calories per day. Very active teen athletes may need significantly more. If your teenager is consistently tired, losing weight unintentionally, or not growing as expected, talk to your pediatrician about whether their calorie intake is adequate.',
+  },
+  {
+    question: "Is my teenager getting enough calcium? I'm worried about their bones.",
+    answer: 'Calcium needs peak during adolescence. The AAP and NIH recommend 1,300 mg of calcium per day for teens ages 9–18 — more than at any other stage of life, including adulthood, because approximately 90% of peak bone mass is built before age 18 (AAP, 2014). Three servings of dairy or fortified alternatives per day typically meets this need. Teens who avoid dairy, follow vegan diets, or have lactose intolerance are at higher risk for calcium deficiency and should discuss supplementation with their pediatrician.',
+  },
+  {
+    question: "My teenage daughter started her period — does she need more iron now?",
+    answer: "Yes. Iron needs increase sharply for teen girls after the onset of menstruation. The recommended daily intake of iron jumps from 8 mg/day for children to 15 mg/day for girls ages 14–18, compared to just 11 mg/day for boys of the same age (NIH, 2023). Monthly blood loss makes teen girls one of the highest-risk groups for iron-deficiency anemia. Symptoms include fatigue, difficulty concentrating, and pale skin. The AAP recommends screening for iron deficiency at well-child visits for adolescent girls, particularly those with heavy periods or restricted diets.",
+  },
+  {
+    question: 'Are protein powders safe for my teenage athlete?',
+    answer: "The AAP advises against protein powders and sports supplements for teenagers. Most teen athletes get adequate protein from whole foods, and the safety of concentrated protein supplements has not been established in adolescents (AAP, 2011). More importantly, the supplement industry is poorly regulated — products marketed to teens may contain undisclosed stimulants, hormones, or contaminants. The AAP recommends that teen athletes meet their increased protein needs (approximately 1.2–1.7 g/kg body weight for athletes) through food sources such as eggs, chicken, fish, legumes, and dairy rather than supplements.",
+  },
+  {
+    question: 'How do I know if my teenager has disordered eating?',
+    answer: "Early warning signs of disordered eating in teenagers include skipping meals consistently, strict food rules or refusal of entire food groups, anxiety around eating in social situations, excessive exercise combined with food restriction, and preoccupation with body size that interferes with daily life. According to the National Eating Disorders Association (NEDA, 2022), eating disorders have the highest mortality rate of any psychiatric condition, and early intervention dramatically improves outcomes. If you notice these signs, contact your pediatrician promptly — don't wait to see if it resolves on its own.",
+  },
+  {
+    question: 'Should my teenager take a daily multivitamin?',
+    answer: "The AAP does not recommend routine multivitamin supplementation for typically developing teenagers who eat a varied diet — most teens can meet their nutritional needs through food (AAP, 2021). However, specific supplementation may be warranted in certain situations: teen girls with heavy menstrual periods may benefit from iron supplementation, vegetarian and vegan teens may need vitamin B12 and vitamin D, teens with limited sun exposure often need vitamin D, and teen athletes training intensively may have increased micronutrient needs. Talk to your pediatrician before starting any supplement regimen.",
+  },
+  {
+    question: "My teenager skips breakfast every day. Is that a problem?",
+    answer: 'Skipping breakfast is common in teenagers but is associated with lower academic performance, difficulty concentrating in the morning, and compensatory overeating later in the day (AAP, 2010). Research consistently shows that teens who eat breakfast have better attention and memory during morning school hours. The problem is usually the timing of the teen sleep phase shift — teens are genuinely not hungry at early school start times. A portable, protein-containing option (a handful of nuts, string cheese and fruit, or a hard-boiled egg) eaten on the way to school is more practical and effective than a full sit-down breakfast for most teenagers.',
+  },
+  {
+    question: "My teenager is vegetarian or vegan. What should I watch for nutritionally?",
+    answer: "Vegetarian and vegan diets can be nutritionally adequate for teenagers with proper planning, but specific nutrients require attention. The AAP (2021) identifies vitamin B12, iron, calcium, zinc, vitamin D, and omega-3 fatty acids as nutrients at highest risk of deficiency in teen vegans. Vitamin B12 is found almost exclusively in animal products and must be supplemented in vegan diets. Plant-based iron (non-heme iron) is less bioavailable than animal-based iron — pairing iron-rich plant foods with vitamin C increases absorption. A registered dietitian with pediatric experience can help create a nutritionally complete meal plan tailored to your teenager.",
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/nutrition/',
+  datePublished: '2026-03-28',
+  dateModified: '2026-03-28',
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/14-18-years/nutrition/',
+  lastReviewed: '2026-03-28',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={[articleData, faqData, medicalData]}
+>
+  <article>
+    <h1>What Should a 14 to 18 Year Old Be Eating? Nutrition Guide for Teenagers</h1>
+
+    <p class="answer-first">
+      Teenagers ages 14–18 are in the most nutritionally demanding period of their lives. Peak puberty drives calorie needs higher than childhood or adulthood: moderately active teen boys need 2,400–3,000 calories per day and moderately active teen girls need 2,000–2,400 calories per day, according to USDA Dietary Guidelines 2020–2025. At the same time, calcium needs are at their lifetime high (1,300 mg/day), iron needs increase sharply — especially for teen girls after menstruation begins — and eating disorder risk peaks between ages 15 and 19.
+    </p>
+
+    <h2>What are the daily calorie and nutrient needs for a 14 to 18 year old?</h2>
+
+    <p class="answer-first">
+      Teenagers ages 14–18 have higher calorie needs than at any other point in childhood. According to USDA Dietary Guidelines 2020–2025, a moderately active teen boy needs approximately 2,400–3,000 calories per day and a moderately active teen girl needs approximately 2,000–2,400 calories per day. Sedentary teens need somewhat less; highly active teen athletes may need significantly more — in some cases 3,500 calories or more per day during periods of intensive training and growth.
+    </p>
+    <p>
+      Those calories should come from a varied, nutrient-dense diet. The USDA recommends that teens ages 14–18 eat approximately:
+    </p>
+    <ul>
+      <li><strong>Vegetables:</strong> 2.5–3 cups per day, with variety across color groups</li>
+      <li><strong>Fruits:</strong> 1.5–2 cups per day</li>
+      <li><strong>Grains:</strong> 6–8 oz equivalents per day, with at least half being whole grains</li>
+      <li><strong>Protein foods:</strong> 5–6.5 oz equivalents per day, including a variety of lean meats, seafood, eggs, beans, and nuts</li>
+      <li><strong>Dairy or fortified alternatives:</strong> 3 cups per day to meet calcium needs</li>
+    </ul>
+    <p>
+      The teen years are a critical window for establishing eating patterns that persist into adulthood. Research shows that dietary habits formed during adolescence — including breakfast frequency, vegetable intake, and processed food consumption — track into adult health outcomes (AAP, 2022). This makes supporting healthy eating during the 14–18 window both practical and long-term protective.
+    </p>
+
+    <h2>How much calcium does a teenager need, and why does it matter so much?</h2>
+
+    <p class="answer-first">
+      Teenagers ages 14–18 need 1,300 mg of calcium per day — more than at any other stage of life, including pregnancy and older adulthood (NIH, 2023). This is because approximately 90% of an individual's peak bone mass is built before age 18. Bone density established during adolescence determines fracture risk and osteoporosis risk decades later.
+    </p>
+    <p>
+      Three servings of dairy per day typically provides enough calcium to meet this target: one cup of milk, one cup of yogurt, or 1.5 oz of cheese each count as one serving. For teens who avoid dairy, calcium-fortified plant milks (soy, oat, almond) and calcium-set tofu provide comparable amounts per serving. Leafy greens like kale and bok choy provide smaller amounts of calcium that add up over the course of a day.
+    </p>
+    <p>
+      Calcium absorption depends on vitamin D. The AAP recommends 600 IU of vitamin D daily for teenagers, and notes that many teens — particularly those with limited outdoor time, darker skin tones, or northern geographic locations — are deficient (AAP, 2014). If your teenager avoids dairy and/or gets limited sun exposure, ask your pediatrician about vitamin D testing and supplementation. A calcium supplement without adequate vitamin D provides limited benefit.
+    </p>
+
+    <h2>What are the iron needs for teenage boys and girls — and why are they different?</h2>
+
+    <p class="answer-first">
+      Iron needs increase significantly during adolescence, and the requirements diverge substantially by sex after puberty. Teen girls ages 14–18 need 15 mg of iron per day — nearly double the 8 mg per day recommended for teen boys — because menstrual blood loss creates a recurring iron demand that boys do not have (NIH, 2023). Teen girls are one of the highest-risk demographic groups for iron-deficiency anemia in the United States.
+    </p>
+    <p>
+      For teen boys, iron needs increase during the growth spurt because rapid muscle development requires iron for myoglobin (the protein that stores oxygen in muscle tissue). Boys ages 14–18 need 11 mg per day, up from 8 mg in middle childhood.
+    </p>
+    <p>
+      Dietary sources of iron fall into two categories with different bioavailability. Heme iron, found in red meat, poultry, and fish, is absorbed at approximately 15–35%. Non-heme iron, found in beans, lentils, fortified cereals, and spinach, is absorbed at only 2–20% — but absorption improves significantly when consumed with vitamin C. Serving iron-rich plant foods alongside vitamin C sources (citrus juice, bell pepper, tomatoes) is a practical strategy for vegetarian or vegan teens.
+    </p>
+    <p>
+      Symptoms of iron-deficiency anemia include persistent fatigue, difficulty concentrating, pale skin, rapid heartbeat, and cold hands and feet. The AAP recommends routine iron screening for adolescent girls at well-child visits, particularly those with heavy menstrual periods, restricted diets, or athletic training demands.
+    </p>
+
+    <h2>What should a teenage athlete eat differently?</h2>
+
+    <p class="answer-first">
+      Teen athletes have substantially higher calorie and protein needs than their non-athletic peers. The AAP recommends that young athletes consume approximately 1.2–1.7 grams of protein per kilogram of body weight per day — compared to the standard 0.85 g/kg for non-athletes — and that they increase calorie intake to match training demands (AAP, 2011). Inadequate calorie intake in teen athletes, even unintentional, leads to the "Relative Energy Deficiency in Sport" (RED-S) syndrome, which impairs performance, disrupts hormones, and causes bone stress injuries.
+    </p>
+    <p>
+      Timing matters for athletic performance. Research supports consuming a carbohydrate-rich meal or snack 2–3 hours before activity and a carbohydrate-and-protein combination within 30–60 minutes after training to support muscle repair and glycogen replenishment. For teen athletes training twice daily or competing in multi-day tournaments, this recovery nutrition is particularly important.
+    </p>
+    <p>
+      The AAP advises against protein powders, sports supplements, and ergogenic aids for teenagers. Most teen athletes can meet increased protein needs through whole foods — eggs, Greek yogurt, chicken, fish, beans, and dairy provide abundant protein without the safety risks associated with poorly regulated supplements. The supplement industry is not FDA-regulated in the same way as food and pharmaceuticals; products marketed to teen athletes may contain undisclosed stimulants, hormones, or contaminants (AAP, 2011).
+    </p>
+    <p>
+      Hydration is an under-appreciated performance factor for teen athletes. Teens should drink water consistently throughout the day and before, during, and after exercise. Sports drinks are appropriate during prolonged exercise (over 60 minutes of continuous activity) but unnecessary for routine activity and add significant sugar intake when consumed habitually outside of exercise contexts.
+    </p>
+
+    <h2>Are protein powders and sports supplements safe for teenagers?</h2>
+
+    <p class="answer-first">
+      The AAP advises against protein powders and sports supplements for teenagers, stating that the safety of concentrated protein supplements has not been established in adolescents and that most teen athletes get sufficient protein through a balanced diet (AAP, 2011). This recommendation extends to creatine, pre-workout products, fat burners, and other performance supplements marketed to young athletes.
+    </p>
+    <p>
+      Beyond the safety question, the premise that teens need supplemental protein is usually false. A teen boy who weighs 150 lbs (68 kg) and plays competitive sports needs approximately 82–116 grams of protein per day. That is easily achievable through normal food: three eggs (18g), a chicken breast at lunch (35g), Greek yogurt (17g), and a glass of milk (8g) at dinner already provides 78 grams of protein — before counting dinner itself.
+    </p>
+    <p>
+      The supplement industry is poorly regulated compared to food and pharmaceuticals. A 2018 study published in JAMA Internal Medicine found that 776 dietary supplements sold in the U.S. contained undisclosed pharmaceutical ingredients. Products marketed specifically to young athletes have been found to contain stimulants, anabolic steroids, and hormones not listed on the label. The AAP recommends that any teen asking about performance supplements be redirected to a sports dietitian who can assess their actual nutritional needs through food first.
+    </p>
+
+    <h2>What are the warning signs of disordered eating in a teenager?</h2>
+
+    <p class="answer-first">
+      Eating disorders have the highest mortality rate of any psychiatric condition, and onset peaks between ages 15 and 19 (National Eating Disorders Association, 2022). Early warning signs in teenagers include avoiding meals or eating in social situations, strict self-imposed food rules (no carbs, no fat, specific "safe foods"), excessive exercise combined with food restriction, dramatic weight changes in either direction, preoccupation with body size or food that interferes with daily functioning, and physical signs like hair loss, fatigue, dizziness, or dental erosion.
+    </p>
+    <p>
+      Disordered eating exists on a spectrum. Many teenagers engage in restrictive or disordered eating behaviors that do not meet the clinical threshold for a diagnosed eating disorder but still cause harm to physical health, bone density, hormonal function, and mental well-being. The AAP advises that physicians screen for disordered eating at annual well-child visits, particularly for teen girls, teen athletes (especially in weight-sensitive sports like gymnastics, wrestling, or dance), and teens with a family history of eating disorders (AAP, 2021).
+    </p>
+    <p>
+      Binge eating disorder is the most common eating disorder in adolescents and is characterized by recurrent episodes of eating large amounts of food rapidly, often in secret, with a sense of loss of control and subsequent shame. It is equally common in boys as girls and is frequently missed because teens are not underweight. If your teenager seems to disappear after meals, hoards food, or expresses significant shame or distress around eating, talk to your pediatrician.
+    </p>
+
+    <h2>How should I talk to my teenager about food and body image?</h2>
+
+    <p class="answer-first">
+      Research consistently shows that how parents discuss food and bodies has a direct influence on whether teenagers develop healthy or disordered eating patterns. The AAP recommends focusing conversations on how food makes the body feel and perform — energy, strength, focus — rather than on weight, calories, or appearance (AAP, 2021). Labeling foods as "bad" or commenting on a teen's body, even with positive intent, is associated with higher rates of disordered eating.
+    </p>
+    <p>
+      Family meals are a protective factor. Research published in JAMA Pediatrics found that adolescents who ate family meals together 5 or more times per week had significantly lower rates of disordered eating, substance use, and depression compared to peers who rarely ate with family — an association that held across income levels and family structures (Neumark-Sztainer et al., 2004). The content of the conversation matters more than the nutritional content of the meal.
+    </p>
+    <p>
+      Avoid putting your teenager on a diet unless specifically directed by their pediatrician. Calorie restriction during the teen years can impair growth, disrupt hormonal development, compromise bone density, and significantly increase the risk of disordered eating. If your teenager's weight is a health concern, the appropriate first step is a conversation with their pediatrician, who can evaluate whether the concern is medically warranted and refer to a registered dietitian if indicated.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my teenager's nutrition?</h2>
+
+    <p>
+      Contact your teenager's pediatrician if you observe any of the following:
+    </p>
+    <ul>
+      <li>Unintended weight loss, or weight gain that is rapid and unexplained</li>
+      <li>Signs of iron-deficiency anemia: persistent fatigue, pale skin, rapid heartbeat, or difficulty concentrating — particularly in teen girls with heavy periods</li>
+      <li>A teenager who has stopped or significantly reduced dairy without adding calcium-rich alternatives or a supplement</li>
+      <li>Any of the warning signs of disordered eating described above: food restriction, binge eating, excessive exercise combined with food avoidance, or expressed distress about food or body</li>
+      <li>A teen athlete who is losing weight during a season of intensive training, or who reports feeling significantly fatigued despite adequate sleep</li>
+      <li>A teenager following a vegan or heavily restricted diet without professional nutritional guidance</li>
+      <li>A teenager using protein powders, pre-workout supplements, fat burners, or other sports supplements</li>
+      <li>A growth curve that has flattened or deviated significantly from the expected trajectory at well-child visits</li>
+    </ul>
+    <p>
+      The AAP recommends annual well-child visits through age 18. These visits include measurement of height, weight, and BMI, as well as screening questions about diet, physical activity, and eating behaviors. If you have concerns between visits, do not wait for the annual appointment — contact your pediatrician's office directly.
+    </p>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <h3 class="faq-question">{faq.question}</h3>
+          <p class="answer-first faq-answer">{faq.answer}</p>
+        </div>
+      ))}
+    </section>
+
+    <hr />
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, USDA, and NIH guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>

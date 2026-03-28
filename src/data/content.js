@@ -431,4 +431,10 @@ export const articles = [
     path: "/ages/12-14-years/nutrition/",
     pubDate: "2026-03-28",
   },
+  {
+    title: "What Should a 14 to 18 Year Old Be Eating? Nutrition Guide for Teenagers",
+    description: "A complete nutrition guide for teenagers ages 14 to 18 — daily calorie needs during peak puberty, calcium and iron requirements, teen athlete nutrition, eating disorder warning signs, and when to talk to your pediatrician, based on AAP and USDA guidelines.",
+    path: "/ages/14-18-years/nutrition/",
+    pubDate: "2026-03-28",
+  },
 ];
