@@ -437,4 +437,10 @@ export const articles = [
     path: "/ages/14-18-years/nutrition/",
     pubDate: "2026-03-28",
   },
+  {
+    title: "What Are the Warning Signs of Depression or Anxiety in a 12 to 14 Year Old?",
+    description: "Depression in early teens often shows up as irritability, not sadness. Anxiety often looks like stomachaches, withdrawal, or school avoidance. Learn the specific warning signs in 12–14 year olds, what is typically developing, and when to talk to your pediatrician.",
+    path: "/ages/12-14-years/red-flags/",
+    pubDate: "2026-03-28",
+  },
 ];
