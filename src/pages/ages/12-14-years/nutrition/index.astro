@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+
+const title = 'What Should a 12 to 14 Year Old Be Eating? Nutrition Guide for Early Teens';
+const description = 'A complete nutrition guide for children ages 12 to 14 — daily calorie needs during the puberty growth spurt, calcium and iron requirements, sports nutrition, eating disorder warning signs, and when to talk to your pediatrician, based on AAP and USDA guidelines.';
+
+const faqs = [
+  {
+    question: "How many calories should my 12 to 14 year old eat per day?",
+    answer: "Calorie needs at this age vary significantly by sex, activity level, and stage of puberty. According to USDA Dietary Guidelines 2020–2025, a moderately active 12 to 14 year old girl typically needs 1,800–2,200 calories per day, while a moderately active boy the same age needs 2,000–2,600 calories per day. Teens in active sports may need 500–1,000 additional calories above these baselines. These are estimates — hunger and fullness cues in a growing teen are usually reliable guides, provided there are no concerning eating patterns. Talk to your pediatrician if you're unsure whether your teen's intake is appropriate for their growth trajectory."
+  },
+  {
+    question: "Should my 12 year old be taking a calcium supplement?",
+    answer: "Most 12 year olds do not need a calcium supplement if they eat dairy or other calcium-rich foods regularly. The AAP recommends 1,300 mg of calcium per day for ages 9–18 — roughly the equivalent of 4–5 servings of dairy (or calcium-fortified alternatives) daily. If your child is lactose intolerant, vegan, or consistently avoids dairy, a supplement may be warranted. Talk to your pediatrician before starting a supplement to confirm the dose and rule out absorption issues."
+  },
+  {
+    question: "Is it normal for my teen to be constantly hungry?",
+    answer: "Yes — increased hunger is a hallmark of the puberty growth spurt and is typically developing behavior for ages 12–14. The human body adds more height and muscle mass during early adolescence than at any time since infancy. Teens in peak growth phases may need an additional 500–800 calories above their baseline needs on high-activity days. The key is to have nutrient-dense options available — protein foods, whole grains, fruit, and vegetables — rather than primarily ultra-processed snacks, which provide calories without the micronutrients that a growing body specifically needs."
+  },
+  {
+    question: "My daughter just got her period. Does she need more iron now?",
+    answer: "Yes — girls who have begun menstruating need significantly more iron than before. The AAP and National Institutes of Health recommend 15 mg of iron per day for adolescent girls ages 14–18; the requirement rises from 8 mg/day before menstruation begins. Iron loss through monthly periods combined with growth demands puts teenage girls at elevated risk for iron deficiency anemia, the most common nutritional deficiency in adolescent girls. Good iron sources include lean meats, beans, lentils, fortified cereals, and leafy greens eaten alongside vitamin C to improve absorption. If your daughter is fatigued, pale, or experiencing frequent headaches, ask her pediatrician to check her iron levels."
+  },
+  {
+    question: "My 13 year old is obsessed with eating 'clean' and won't eat anything processed. Should I be worried?",
+    answer: "Some food awareness at this age is typically developing, but rigid, rule-based eating — particularly when it causes anxiety, social avoidance (refusing to eat at restaurants or friends' houses), or noticeable weight loss — can be an early warning sign of an eating disorder. Eating disorders have the highest mortality rate of any psychiatric condition and often begin with food rules that seem 'healthy' on the surface (NEDA, 2022). If your teen's food rules are expanding, causing distress, or affecting their social life or energy levels, contact your pediatrician promptly. Early intervention dramatically improves outcomes."
+  },
+  {
+    question: "My teen is playing on a travel sports team. How much should they eat on game days?",
+    answer: "Athletic teens ages 12–14 may need 2,500–3,500 or more calories on heavy training or game days, depending on the sport and intensity. The most important timing strategies are: a carbohydrate-rich meal 2–3 hours before activity (pasta, rice, bread), a small carbohydrate-protein snack 30–60 minutes before if needed, hydration throughout (water is sufficient for activities under 60 minutes; sports drinks add electrolytes for longer bouts), and a protein-and-carb recovery snack within 30–60 minutes after competition. Young athletes should never fast or skip meals before competition — energy availability directly affects both performance and injury risk."
+  },
+  {
+    question: "How do I get my picky 12 year old to eat more vegetables?",
+    answer: "Picky eating in early adolescence is common and is often tied to sensory preferences (textures, temperatures) rather than defiance. Research shows that repeated, low-pressure exposure — putting vegetables on the plate without requiring them to be eaten — gradually increases acceptance over time (AAP, 2011). Teens are also more likely to eat foods they help choose, prepare, or have some control over. Offering raw versus cooked versions of vegetables, or incorporating vegetables into preferred dishes (sauces, soups, stir-fries), can also reduce resistance. Avoid power struggles over vegetables, as these reliably backfire. If your teen's diet is extremely limited and affecting their growth or energy, ask their pediatrician for a referral to a registered dietitian."
+  },
+  {
+    question: "At what age should my teen stop drinking so much milk?",
+    answer: "There is no age at which teens should reduce milk or dairy — the AAP recommends 3 cups of low-fat or fat-free dairy per day for all children ages 2 and older, through adolescence and into adulthood (AAP, 2019). Calcium and vitamin D needs are highest during the 9–18 age window because this is the peak window for bone density accumulation. Approximately 90% of adult peak bone mass is established by age 18, meaning calcium intake during the teen years has lifelong consequences for bone health. If your teen is lactose intolerant, plant-based fortified milks (soy, oat, almond) can substitute, but check labels — calcium and vitamin D levels vary significantly by brand."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/nutrition/',
+  datePublished: '2026-03-28',
+  dateModified: '2026-03-28',
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: 'https://ageexpectations.com/ages/12-14-years/nutrition/',
+  lastReviewed: '2026-03-28',
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={[articleData, faqData, medicalData]}
+>
+  <article>
+    <h1>What Should a 12 to 14 Year Old Be Eating? Nutrition Guide for Early Teens</h1>
+
+    <p class="answer-first">
+      Children ages 12–14 are in one of the most nutritionally demanding periods of their lives. The puberty growth spurt requires significantly more calories, calcium, iron, and protein than the school-age years that came before. According to USDA Dietary Guidelines 2020–2025, a moderately active 12 to 14 year old girl needs approximately 1,800–2,200 calories per day, and a moderately active boy the same age needs 2,000–2,600 calories per day — with active athletes needing considerably more. Getting this nutrition right during early adolescence has measurable consequences for bone density, brain development, and long-term health.
+    </p>
+
+    <h2>What are the daily calorie and nutrient needs for a 12 to 14 year old?</h2>
+
+    <p class="answer-first">
+      Early adolescence is second only to infancy in the speed of physical growth, and calorie needs reflect that intensity. The USDA Dietary Guidelines 2020–2025 recommend 1,800–2,200 calories per day for moderately active girls ages 12–14 and 2,000–2,600 calories per day for moderately active boys. Sedentary teens need slightly less; teens in competitive sports may need 500–1,000 or more calories above these estimates on training days.
+    </p>
+
+    <p>
+      Beyond calories, the specific nutrients that matter most during early adolescence include:
+    </p>
+
+    <ul>
+      <li><strong>Protein:</strong> The AAP and USDA recommend approximately 0.85–1.0 g of protein per kilogram of body weight per day, with higher needs for teens in strength or endurance sports. For a 50 kg (110 lb) teen, that equals roughly 43–50 g of protein daily at minimum.</li>
+      <li><strong>Calcium:</strong> 1,300 mg per day for ages 9–18 — the highest recommended intake across the entire lifespan (AAP, 2014). This is roughly 4 cups of milk or fortified equivalent per day.</li>
+      <li><strong>Iron:</strong> 8 mg/day for boys ages 9–13, rising to 11 mg/day for boys ages 14–18. Girls need 8 mg/day before menstruation begins, rising to 15 mg/day once menstrual cycles start (NIH Office of Dietary Supplements, 2023).</li>
+      <li><strong>Vitamin D:</strong> 600 IU per day (AAP, 2022). Most teens do not meet this target through food alone; the AAP recommends supplementation for teens who do not drink 1 liter of fortified milk daily.</li>
+    </ul>
+
+    <h3>What does a good daily eating pattern look like for a 12 to 14 year old?</h3>
+
+    <p class="answer-first">
+      According to USDA MyPlate guidelines for adolescents, a typical day's eating for a 12 to 14 year old should include approximately 1.5–2 cups of fruit, 2.5–3 cups of vegetables, 6–8 oz of grains (at least half from whole grains), 5–6.5 oz of protein foods, and 3 cups of dairy or calcium-fortified equivalent. Distributing intake across 3 meals and 1–2 snacks is more effective for sustained energy than skipping meals and compensating later.
+    </p>
+
+    <p>
+      The single most important meal for academic and emotional functioning is breakfast. Research consistently shows that teens who eat breakfast have better attention, memory, and emotional regulation at school compared to peers who skip it — and the AAP specifically highlights breakfast consumption as a correlate of healthier overall diet quality in adolescents (AAP, 2011).
+    </p>
+
+    <h2>How much calcium does my 12 to 14 year old really need, and why does it matter so much?</h2>
+
+    <p class="answer-first">
+      The 9–18 age window is the single most critical period for bone density accumulation in a person's life. Approximately 90% of peak adult bone mass is built by age 18, and the calcium deposited during this window is largely irreversible — teens who are calcium-deficient during early adolescence cannot fully compensate for that deficit later in life (AAP, 2014; NIH, 2022). The AAP recommends 1,300 mg of calcium per day for ages 9–18, the highest recommended intake across the entire human lifespan.
+    </p>
+
+    <p>
+      Practical ways to reach 1,300 mg of calcium daily include:
+    </p>
+
+    <ul>
+      <li>3–4 cups of milk or fortified plant-based milk (approximately 300–350 mg per cup)</li>
+      <li>Yogurt (plain, low-fat): approximately 300–400 mg per cup</li>
+      <li>Cheese: approximately 200–300 mg per 1.5 oz serving</li>
+      <li>Fortified orange juice: approximately 350 mg per cup</li>
+      <li>Canned salmon or sardines with bones: approximately 200–300 mg per serving</li>
+      <li>Tofu made with calcium sulfate: approximately 250–300 mg per half cup</li>
+    </ul>
+
+    <h3>Does my teen need a vitamin D supplement along with calcium?</h3>
+
+    <p class="answer-first">
+      Vitamin D deficiency is common in adolescents — studies estimate that 40–60% of teens in the United States have insufficient vitamin D levels, particularly those with limited sun exposure or darker skin tones (Mansbach et al., 2009). The AAP recommends 600 IU of vitamin D per day for all children and teens, and advises supplementation for any teen who does not drink at least 1 liter (approximately 4 cups) of vitamin D-fortified milk daily.
+    </p>
+
+    <p>
+      Vitamin D is necessary for calcium absorption — even adequate calcium intake does not fully benefit bone development if vitamin D is insufficient. If your 12 to 14 year old avoids dairy, spends little time outdoors, or has a diet low in fatty fish, eggs, or fortified foods, ask their pediatrician to check their vitamin D level at the next well-child visit.
+    </p>
+
+    <h2>How much protein does my 12 to 14 year old need, and what are the best sources?</h2>
+
+    <p class="answer-first">
+      Protein is critical during early adolescence because the body is actively building muscle mass, supporting rapid bone growth, and producing the hormones that drive puberty. The USDA Dietary Guidelines recommend approximately 5–6.5 oz equivalents of protein foods per day for 12 to 14 year olds (USDA, 2020), which translates to roughly 45–60 g of protein per day for most early teens. Athletes or teens in high-intensity sports may need 1.2–1.7 g of protein per kilogram of body weight per day during training periods.
+    </p>
+
+    <p>
+      High-quality protein sources for this age group include:
+    </p>
+
+    <ul>
+      <li>Chicken, turkey, lean beef, or pork: 21–28 g of protein per 3 oz cooked</li>
+      <li>Fish and seafood: 20–25 g per 3 oz cooked, with the additional benefit of omega-3 fatty acids</li>
+      <li>Eggs: approximately 6 g each</li>
+      <li>Greek yogurt: 15–20 g per cup</li>
+      <li>Beans and lentils: 15–18 g per cup cooked (also rich in iron)</li>
+      <li>Tofu: 10–20 g per half cup, depending on firmness</li>
+      <li>Edamame: approximately 17 g per cup</li>
+    </ul>
+
+    <p>
+      Teens who follow vegetarian or vegan diets can meet protein needs through plant sources, but should pay particular attention to complementary proteins and vitamin B12 supplementation, which is not reliably available in plant foods (AAP, 2019).
+    </p>
+
+    <h2>How do iron needs change in early adolescence, and how do I know if my teen is deficient?</h2>
+
+    <p class="answer-first">
+      Iron deficiency is the most common nutritional deficiency in adolescent girls and is significantly underdiagnosed. Girls who have begun menstruating need 15 mg of iron per day — nearly double the requirement before menstruation begins — because monthly blood loss substantially increases iron demand (NIH Office of Dietary Supplements, 2023). Boys' iron needs also increase during early adolescence due to expanding blood volume and muscle mass, rising from 8 mg/day at ages 9–13 to 11 mg/day at ages 14–18.
+    </p>
+
+    <p>
+      Warning signs of iron deficiency in a 12 to 14 year old include:
+    </p>
+
+    <ul>
+      <li>Persistent fatigue or low energy that is not explained by sleep patterns</li>
+      <li>Pale skin, pale inner eyelids, or pale nail beds</li>
+      <li>Frequent headaches</li>
+      <li>Difficulty concentrating in school</li>
+      <li>Cold hands and feet</li>
+      <li>Unusual cravings for ice, dirt, or chalk (a condition called pica, which can indicate iron deficiency)</li>
+    </ul>
+
+    <p>
+      The AAP recommends screening adolescent girls for iron deficiency at their annual well-child visit, particularly after menstruation begins. A simple blood test can confirm whether deficiency or anemia is present. Do not start iron supplements without first confirming deficiency with a blood test, as excessive iron supplementation carries its own risks.
+    </p>
+
+    <h3>What foods are highest in iron for teens?</h3>
+
+    <p class="answer-first">
+      The most bioavailable iron (heme iron) comes from animal sources: beef, lamb, dark turkey meat, and organ meats. Plant-based iron (non-heme iron) is absorbed less efficiently but is still valuable when eaten alongside vitamin C, which significantly improves absorption. Pairing beans with tomato sauce, or lentils with bell peppers, takes advantage of this mechanism.
+    </p>
+
+    <p>
+      High-iron foods for teens include lean red meat (3–4 mg per 3 oz serving), fortified breakfast cereals (up to 18 mg per serving, check the label), lentils (7 mg per cup cooked), kidney beans (5 mg per cup cooked), dark chocolate (3 mg per oz), and pumpkin seeds (5 mg per oz). Cooking in cast iron cookware also modestly increases the iron content of acidic foods like tomato sauce.
+    </p>
+
+    <h2>How does puberty affect my 12 to 14 year old's appetite and weight?</h2>
+
+    <p class="answer-first">
+      Significant appetite increases during early adolescence are typically developing and reflect the genuine metabolic demands of puberty. The puberty growth spurt — which peaks around ages 11–13 in girls and 13–15 in boys — is the fastest period of height gain since infancy, with girls gaining 2–3 inches and boys gaining 3–4 inches per year at peak velocity (AAP, 2022). Weight gain of 15–55 lbs over the course of puberty is within the typical range for both sexes.
+    </p>
+
+    <p>
+      What matters more than the number on the scale is that growth is consistent with the child's individual growth curve. A teen who is gaining weight without gaining height, or who has suddenly dropped a significant amount of weight without explanation, warrants attention. The AAP recommends that weight concerns in adolescents always be evaluated in the context of their full growth chart history, not compared to population averages in isolation.
+    </p>
+
+    <h3>Is it okay for my 12 to 14 year old to diet or count calories?</h3>
+
+    <p class="answer-first">
+      Calorie restriction and formal dieting during early adolescence are strongly associated with disordered eating patterns and have not been shown to produce healthy long-term weight outcomes in teens (AAP, 2016). The AAP explicitly discourages weight-loss dieting in adolescents, recommending instead a focus on nutrient-dense foods, regular physical activity, and family eating patterns — rather than restriction or counting.
+    </p>
+
+    <p>
+      Teens who are calorie-counting, skipping meals to "save calories," or expressing significant distress about food or their body should be evaluated by their pediatrician. These behaviors — even when they appear motivated by "health" — can be early signs of an eating disorder. Eating disorders have the highest mortality rate of any psychiatric condition and most commonly begin during the 12–18 age window (National Eating Disorders Association, 2022).
+    </p>
+
+    <h2>How does being on a sports team change what my 12 to 14 year old needs to eat?</h2>
+
+    <p class="answer-first">
+      Young athletes ages 12–14 may need 500–1,500 additional calories above their baseline needs on heavy training or competition days, depending on the sport, duration, and intensity (American College of Sports Medicine, 2016). The critical nutritional priorities for teen athletes are carbohydrate availability (the primary fuel for performance), adequate protein for muscle recovery, iron and calcium for a growing body under physical stress, and hydration throughout training.
+    </p>
+
+    <p>
+      Practical sports nutrition guidelines for 12 to 14 year olds:
+    </p>
+
+    <ul>
+      <li><strong>Pre-game meal:</strong> A carbohydrate-rich meal 2–3 hours before activity (pasta, rice, potatoes, bread) with moderate protein and low fat, which slows digestion.</li>
+      <li><strong>Pre-game snack:</strong> A small carbohydrate snack 30–60 minutes before if needed (banana, crackers, toast with nut butter).</li>
+      <li><strong>Hydration:</strong> Water is the best hydration for activities under 60 minutes. Sports drinks containing electrolytes are appropriate for sustained activity over 60–90 minutes but should not be the primary daily beverage.</li>
+      <li><strong>Recovery:</strong> A carbohydrate-and-protein snack within 30–60 minutes after training (chocolate milk, Greek yogurt with fruit, turkey on whole grain bread) maximizes muscle recovery.</li>
+    </ul>
+
+    <p>
+      Teen athletes who skip meals, restrict food groups, or feel pressure to maintain a specific weight for their sport are at elevated risk for Relative Energy Deficiency in Sport (RED-S), formerly known as the "female athlete triad." This condition — characterized by low energy availability, menstrual disruption, and bone density loss — is serious and requires medical evaluation.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my 12 to 14 year old's eating?</h2>
+
+    <p>
+      Most nutrition concerns at this age can be addressed with small adjustments to family eating patterns, but some warrant prompt professional evaluation. Contact your pediatrician if your 12 to 14 year old:
+    </p>
+
+    <ul>
+      <li>Has lost weight noticeably without explanation or intentional medical intervention</li>
+      <li>Is skipping meals consistently, restricting entire food groups, or counting calories obsessively</li>
+      <li>Shows signs of binge eating — consuming large quantities of food rapidly, often in secret, and reporting shame or distress afterward</li>
+      <li>Is purging (vomiting, using laxatives, or exercising excessively) after eating</li>
+      <li>Expresses intense fear of weight gain or a distorted view of their body size</li>
+      <li>Has stopped growing in height or has dropped significantly on their growth curve percentile</li>
+      <li>Shows symptoms of iron deficiency: persistent fatigue, pallor, frequent headaches, or difficulty concentrating</li>
+      <li>Has been menstruating and experiences consistently irregular or absent periods, which can indicate nutritional insufficiency</li>
+      <li>Is a vegetarian or vegan and you are uncertain whether their diet is nutritionally complete for this growth stage</li>
+    </ul>
+
+    <p>
+      The AAP recommends annual well-child visits for adolescents, which include a review of nutrition and growth patterns. These visits are also the right time to ask about vitamin D testing, iron screening, and sports nutrition if your teen is athletic.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <h3 class="faq-question">{faq.question}</h3>
+          <p class="answer-first faq-answer">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and USDA guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>

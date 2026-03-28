@@ -425,4 +425,10 @@ export const articles = [
     path: "/ages/8-10-years/screen-time/",
     pubDate: "2026-03-27",
   },
+  {
+    title: "What Should a 12 to 14 Year Old Be Eating? Nutrition Guide for Early Teens",
+    description: "A complete nutrition guide for children ages 12 to 14 — daily calorie needs during the puberty growth spurt, calcium and iron requirements, sports nutrition, eating disorder warning signs, and when to talk to your pediatrician, based on AAP and USDA guidelines.",
+    path: "/ages/12-14-years/nutrition/",
+    pubDate: "2026-03-28",
+  },
 ];
