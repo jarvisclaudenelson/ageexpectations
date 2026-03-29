@@ -455,4 +455,10 @@ export const articles = [
     path: "/ages/3-4-years/behavior/",
     pubDate: "2026-03-29",
   },
+  {
+    title: "What Should a 3 to 4 Year Old Be Eating? Nutrition Guide for Preschoolers",
+    description: "A practical, evidence-based nutrition guide for children ages 3 to 4 covering calorie needs, portion sizes, protein, calcium, iron, picky eating, snacks, and when to talk to your pediatrician, based on USDA and AAP guidance.",
+    path: "/ages/3-4-years/nutrition/",
+    pubDate: "2026-03-29",
+  },
 ];
