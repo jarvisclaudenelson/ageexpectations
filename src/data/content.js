@@ -449,4 +449,10 @@ export const articles = [
     path: "/ages/5-6-years/nutrition/",
     pubDate: "2026-03-29",
   },
+  {
+    title: "What Causes Tantrums in a 3 to 4 Year Old? What’s Typical and When to Worry",
+    description: "A practical, evidence-based guide to tantrums in 3–4 year olds — how often they happen, what causes them, how to respond, and when tantrums are a reason to call your pediatrician.",
+    path: "/ages/3-4-years/behavior/",
+    pubDate: "2026-03-29",
+  },
 ];
