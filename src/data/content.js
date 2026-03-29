@@ -443,4 +443,10 @@ export const articles = [
     path: "/ages/12-14-years/red-flags/",
     pubDate: "2026-03-28",
   },
+  {
+    title: "What Should a 5 to 6 Year Old Be Eating? Nutrition Guide for Kindergartners",
+    description: "A practical, evidence-based nutrition guide for children ages 5 to 6 covering calorie needs, portion sizes, protein, calcium, iron, picky eating, lunch ideas, and when to talk to your pediatrician, based on USDA and AAP guidance.",
+    path: "/ages/5-6-years/nutrition/",
+    pubDate: "2026-03-29",
+  },
 ];

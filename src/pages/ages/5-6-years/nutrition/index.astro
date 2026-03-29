@@ -1,0 +1,208 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Should a 5 to 6 Year Old Be Eating? Nutrition Guide for Kindergartners";
+const description = "A practical, evidence-based nutrition guide for children ages 5 to 6 covering calorie needs, portion sizes, protein, calcium, iron, picky eating, lunch ideas, and when to talk to your pediatrician, based on USDA and AAP guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my 5-year-old barely eats dinner?",
+    answer: "Yes — many typically developing 5-year-olds eat unevenly across the day and may eat less at dinner if they had enough calories earlier (AAP, 2020). Look at intake over a full week rather than one meal, but talk to your pediatrician if poor intake is persistent, causes weight loss, or comes with fatigue, pain, or swallowing trouble."
+  },
+  {
+    question: "Should I worry if my 6-year-old only wants the same few foods?",
+    answer: "Mild food repetition is common at ages 5–6, especially with familiar starches, dairy foods, or specific textures, but children this age should usually accept foods from multiple food groups over time (AAP, 2020). Talk to your pediatrician if the diet is extremely limited, causes anxiety, or excludes entire food groups for weeks to months."
+  },
+  {
+    question: "How much milk should my 5 or 6 year old drink?",
+    answer: "Most children ages 4–8 need about 2.5 cups of dairy per day, which can come from milk, yogurt, or cheese, not just milk alone (USDA, 2020–2025). Too much milk can crowd out iron-rich foods, so talk to your pediatrician if your child drinks large amounts of milk and eats little else."
+  },
+  {
+    question: "Does my kindergartner need a vitamin?",
+    answer: "Most typically developing 5–6-year-olds do not need a routine multivitamin if they eat a reasonably varied diet, but some children may need supplements such as vitamin D or iron based on diet, lab findings, or medical history (AAP, 2020). Ask your pediatrician before starting supplements, especially gummies that can be overused."
+  },
+  {
+    question: "Is juice okay for a 5 or 6 year old?",
+    answer: "Yes, but it should be limited. The AAP recommends no more than 4–6 ounces of 100% fruit juice per day for children ages 4–6 because juice is less filling than whole fruit and can contribute to excess sugar intake and dental cavities (AAP, 2017)."
+  },
+  {
+    question: "How much protein does my 6-year-old need?",
+    answer: "Children ages 5–6 usually meet protein needs with ordinary meals that include foods like beans, eggs, yogurt, chicken, fish, tofu, or nut butters, and USDA patterns for ages 4–8 include about 4 ounce-equivalents of protein foods daily (USDA, 2020–2025). Talk to your pediatrician if your child avoids nearly all protein-containing foods."
+  },
+  {
+    question: "Should I make my child clean their plate?",
+    answer: "No — forcing a child to clean their plate can interfere with their ability to notice hunger and fullness cues, which the AAP recommends protecting (AAP, 2020). Parents decide what, when, and where food is offered; children decide whether and how much to eat from what is served."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/5-6-years/nutrition/",
+  datePublished: "2026-03-29",
+  dateModified: "2026-03-29"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/5-6-years/nutrition/",
+  lastReviewed: "2026-03-29"
+});
+---
+
+<BaseLayout title={title} description={description} jsonLd={[articleData, faqData, medicalData]}>
+  <article class="age-guide">
+    <h1>{title}</h1>
+
+    <p class="answer-first">Most children ages 5–6 need a balanced pattern of fruits, vegetables, grains, protein foods, and dairy spread across meals and snacks, with daily energy needs often falling around 1,200–1,800 calories depending on size, growth, and activity level (USDA, 2020–2025; AAP, 2020). Appetite can vary a lot from day to day, and that variation is often part of typical development.</p>
+
+    <p>
+      Ages 5–6 are a transition into school-age eating: children become more independent, more influenced by peers, and often more opinionated about food. This is also an age when consistent routines matter. Most kindergartners do best with predictable meals, 1–2 scheduled snacks, repeated exposure to a wide variety of foods, and calm parental expectations rather than pressure.
+    </p>
+
+    <p>
+      <a href="/ages/5-6-years/">5–6 year old development</a>,
+      <a href="/ages/5-6-years/sleep/">5–6 year old sleep</a>,
+      <a href="/ages/5-6-years/behavior/">5–6 year old behavior</a>, and
+      <a href="/ages/6-8-years/nutrition/">nutrition for 6–8 year olds</a>
+      can help you see how eating fits into the bigger picture of school-age development.
+    </p>
+
+    <h2>What should a 5 to 6 year old be eating each day?</h2>
+    <p class="answer-first">Most children ages 5–6 do best with three meals and one to two snacks built from all five food groups, and USDA food patterns for children ages 4–8 generally include about 1–1.5 cups of fruit, 1.5 cups of vegetables, 4–5 ounce-equivalents of grains, 3–5 ounce-equivalents of protein foods, and 2.5 cups of dairy daily (USDA, 2020–2025).</p>
+    <p>
+      These amounts are guides, not rigid targets for every single day. A typically developing 5-year-old may eat less than a 6-year-old going through a growth spurt, and an active child may need noticeably more food than a less active peer. What matters most is the overall pattern across a week.
+    </p>
+    <p>
+      In real life, that might look like oatmeal and milk at breakfast, fruit and crackers for snack, a turkey sandwich with cucumbers at lunch, yogurt after school, and chicken, rice, and peas at dinner. A child does not need a perfectly balanced plate at every meal if the full week is reasonably varied.
+    </p>
+
+    <h2>How many calories does a 5 or 6 year old need?</h2>
+    <p class="answer-first">Many children ages 5–6 need roughly 1,200–1,800 calories per day, but calorie needs vary with growth rate, body size, and physical activity, so there is no single “right” number for every kindergartner (USDA, 2020–2025). Parents should focus more on growth, energy, and food variety than on counting calories.</p>
+    <p>
+      For many families, calorie counting is neither necessary nor helpful at this age unless a pediatrician has recommended it. A better approach is to ask whether the child is growing steadily, has energy to play and learn, and eats foods from multiple food groups most days.
+    </p>
+    <p>
+      Children ages 5–6 often have appetite swings. They may eat very little one day and a great deal the next. That pattern can be typical, especially if growth and energy remain steady. If intake is consistently low, meals are stressful, or growth is slowing, it is worth discussing with a pediatrician.
+    </p>
+
+    <h2>What nutrients matter most for a 5 to 6 year old?</h2>
+    <p class="answer-first">For children ages 5–6, the nutrients parents most commonly need to think about are protein, calcium, vitamin D, iron, and fiber because they support growth, bone development, energy, blood health, and digestion during the early school years (AAP, 2020; USDA, 2020–2025). Most typically developing children can get these from food with a varied diet.</p>
+
+    <h3>How much protein does a 5 to 6 year old need?</h3>
+    <p class="answer-first">Children ages 5–6 usually meet protein needs through ordinary meals, and USDA patterns for ages 4–8 generally include about 3–5 ounce-equivalents of protein foods daily depending on total calorie needs (USDA, 2020–2025). Good sources include beans, eggs, yogurt, tofu, chicken, fish, lean meat, nuts, and nut butters.</p>
+    <p>
+      Protein powders and “kid protein” products are usually unnecessary for typically developing children unless a pediatrician recommends them. A peanut butter sandwich, yogurt, eggs, hummus, or beans often provides more than enough protein in a child-friendly form.
+    </p>
+
+    <h3>How much calcium and vitamin D does a 5 to 6 year old need?</h3>
+    <p class="answer-first">Children ages 4–8 need about 1,000 mg of calcium and 600 IU of vitamin D daily to support bone growth, and dairy foods or fortified alternatives are common sources at this age (NIH Office of Dietary Supplements, 2022; USDA, 2020–2025). Many children fall short on vitamin D without fortified foods or supplements.</p>
+    <p>
+      Milk is one option, but yogurt, cheese, and fortified soy beverages can also contribute. If a child does not eat dairy or drinks very little fortified milk, ask the pediatrician whether vitamin D supplementation makes sense.
+    </p>
+
+    <h3>Why is iron still important for kindergartners?</h3>
+    <p class="answer-first">Iron remains important at ages 5–6 because iron deficiency can contribute to fatigue, poor attention, and learning difficulties, and the AAP notes that iron deficiency is still one of the most common nutritional deficiencies in childhood (AAP, 2020). Iron-rich foods include meat, beans, lentils, fortified cereals, and spinach.</p>
+    <p>
+      Children who drink large amounts of milk, eat very little meat or beans, or have a highly limited diet may be at higher risk. Pairing plant-based iron foods with vitamin C sources like strawberries, oranges, or bell peppers can improve absorption.
+    </p>
+
+    <h2>How big should portions be for a 5 or 6 year old?</h2>
+    <p class="answer-first">Portions for children ages 5–6 should usually be smaller than adult portions, with the option for seconds if the child is still hungry, because school-age children vary widely in appetite and the AAP recommends respecting internal hunger and fullness cues (AAP, 2020). Starting with small servings often reduces pressure and food waste.</p>
+    <p>
+      A practical rule is to serve modest amounts of each food and let the child ask for more. For example, one half sandwich may be enough at lunch for one 5-year-old, while another child wants a full sandwich plus fruit and yogurt. Both can be appropriate.
+    </p>
+    <p>
+      Parents often worry that “small eater” means poor nutrition, but many children simply prefer frequent moderate intake. What matters more than plate size is whether the child is growing steadily, staying active, and tolerating a reasonable variety of foods over time.
+    </p>
+
+    <h2>Is it typical for a 5 or 6 year old to be picky about food?</h2>
+    <p class="answer-first">Yes — picky eating is still common at ages 5–6, even though most children this age can gradually broaden their diet with repeated low-pressure exposure to foods they initially reject (AAP, 2020). A child may need to see a new food 10 or more times before accepting it, and refusal at one meal does not mean permanent dislike.</p>
+    <p>
+      Picky eating at this age often centers on texture, predictability, and control. A child may accept apples but not applesauce, or carrots raw but not cooked. That pattern is frustrating, but it is not automatically a red flag.
+    </p>
+    <p>
+      Helpful strategies include serving one familiar “safe” food with less familiar foods, letting children help wash produce or pack lunch, and avoiding power struggles. Pressure, bribing, and forcing bites often make picky eating worse instead of better.
+    </p>
+
+    <h2>What should I do if my 5 or 6 year old only wants snacks?</h2>
+    <p class="answer-first">If a child ages 5–6 only seems to want snacks, the most effective fix is usually a predictable meal-and-snack schedule rather than offering food constantly, because children regulate appetite better when they know another eating opportunity is coming (AAP, 2020). Grazing all day can reduce hunger for meals and narrow food choices.</p>
+    <p>
+      Try offering meals every 3–4 hours with water in between. When snacks are served, make them substantial enough to count nutritionally: for example, cheese and fruit, yogurt and cereal, or crackers with hummus rather than chips alone.
+    </p>
+    <p>
+      Some children prefer snacks because snack foods feel easy and familiar. Structuring snacks like mini-meals can help meet nutrition needs while still honoring the child’s appetite pattern.
+    </p>
+
+    <h2>What are healthy drinks for a 5 to 6 year old?</h2>
+    <p class="answer-first">Water and plain milk are the main recommended drinks for children ages 5–6, while the AAP recommends limiting 100% fruit juice to no more than 4–6 ounces per day for children ages 4–6 and avoiding sugary drinks as routine beverages (AAP, 2017). Sweet drinks add sugar without much lasting fullness.</p>
+    <p>
+      Flavored milks, sports drinks, energy drinks, and soda are not routine needs for kindergartners. Sports drinks are usually unnecessary unless a pediatrician or sports medicine clinician recommends them for very specific prolonged athletic activity, which is uncommon at this age.
+    </p>
+    <p>
+      If your child resists water, offering a fun cup, serving water cold, or placing water on the table at every meal often helps more than making a big issue of it.
+    </p>
+
+    <h2>What does a healthy lunch look like for a kindergartner?</h2>
+    <p class="answer-first">A healthy lunch for a 5–6-year-old usually includes a protein food, a grain, a fruit or vegetable, and water or milk, with foods cut and packed in an easy-to-eat form because younger school-age children often have limited time and attention for lunch (USDA, 2020–2025; AAP, 2020). Familiarity often matters as much as nutrition on school days.</p>
+    <p>
+      Examples include a sunflower seed butter sandwich with strawberries and cucumbers, cheese and whole-grain crackers with grapes, or leftover pasta with peas and chicken. Lunches work best when children can open the containers independently and recognize the foods.
+    </p>
+    <p>
+      If lunch comes home uneaten, the issue may be time, distractions, or packaging rather than dislike of the food itself. Practicing lunchbox opening at home can genuinely help.
+    </p>
+
+    <h2>Should I worry if my child eats very little one day and a lot the next?</h2>
+    <p class="answer-first">Usually no — children ages 5–6 commonly have variable appetites from day to day, and the AAP encourages parents to look at food intake over several days to a week rather than judging nutrition by one meal or one day (AAP, 2020). Growth patterns matter more than short-term fluctuations.</p>
+    <p>
+      A child may eat more after a physically active day, less when tired, and differently during growth spurts. Temporary appetite changes can also happen with minor illness, new school routines, or excitement.
+    </p>
+    <p>
+      More concerning patterns include persistent meal refusal, ongoing weight loss, choking, painful swallowing, extreme fatigue, constipation severe enough to limit eating, or a very narrow diet that keeps shrinking instead of expanding.
+    </p>
+
+    <h2>How can I help my 5 or 6 year old have a healthier relationship with food?</h2>
+    <p class="answer-first">The most evidence-based approach for children ages 5–6 is the parent-child division of responsibility: parents decide what, when, and where food is offered, and the child decides whether and how much to eat from what is served (AAP, 2020; Satter Institute framework widely used in pediatrics). This approach reduces pressure and supports self-regulation.</p>
+    <p>
+      In practical terms, that means avoiding bargaining, labeling foods as “good” or “bad,” or requiring a clean plate. It also means serving dessert neutrally when you choose to have it rather than using it as a reward for eating other foods.
+    </p>
+    <p>
+      Children this age are learning habits that can last for years. Calm structure, repeated exposure, family meals when possible, and nonjudgmental language around food and bodies are more effective than pressure.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my 5 or 6 year old's eating?</h2>
+    <p class="answer-first">Talk to your pediatrician if a 5–6-year-old is losing weight, not growing as expected, eats fewer and fewer foods over time, chokes or gags often, has painful eating, seems unusually tired, or avoids entire food groups for long periods, because these are concrete nutrition red flags rather than routine picky eating (AAP, 2020).</p>
+    <ul>
+      <li>Your child has weight loss, poor weight gain, or a noticeable drop on their growth curve.</li>
+      <li>Your child eats an extremely limited diet, such as fewer than about 10–15 accepted foods, or the list keeps shrinking.</li>
+      <li>Your child regularly coughs, gags, chokes, or vomits with eating.</li>
+      <li>Your child complains of pain with chewing, swallowing, or stomach pain after meals.</li>
+      <li>Your child seems pale, unusually tired, dizzy, or short of breath, which can be signs of nutritional deficiency.</li>
+      <li>Your child drinks so much milk or other beverages that they eat very little solid food.</li>
+      <li>Your child has severe constipation that affects appetite or causes stool withholding.</li>
+      <li>Your child shows intense anxiety, panic, or distress around foods, textures, or eating situations.</li>
+      <li>Your child has signs of dehydration, such as very dark urine, dry mouth, or urinating much less often.</li>
+      <li>Your child has lost skills they previously had around chewing or feeding.</li>
+    </ul>
+    <p>
+      If eating difficulties are interfering with growth, school, family life, or your child’s comfort, it is appropriate to ask for further evaluation. Depending on the pattern, a pediatrician may consider iron testing, feeding therapy, a swallowing evaluation, or referral to a dietitian or developmental specialist.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <p class="disclaimer">
+      <em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, USDA, and related evidence-based guidance. Always consult your child's pediatrician for personalized guidance.</em>
+    </p>
+  </article>
+</BaseLayout>
