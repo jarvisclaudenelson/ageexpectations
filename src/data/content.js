@@ -467,4 +467,10 @@ export const articles = [
     path: "/ages/6-8-years/feeding/",
     pubDate: "2026-03-30",
   },
+  {
+    title: "What Are the Early Warning Signs of Learning Disabilities in a 5 or 6 Year Old?",
+    description: "A practical, evidence-based guide to the early warning signs of learning disabilities in children ages 5 to 6. Covers dyslexia red flags, what is typically developing in kindergarten, when to request a school evaluation, and when to talk to your pediatrician.",
+    path: "/ages/5-6-years/learning-disabilities/",
+    pubDate: "2026-03-30",
+  },
 ];
