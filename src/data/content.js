@@ -461,4 +461,10 @@ export const articles = [
     path: "/ages/3-4-years/nutrition/",
     pubDate: "2026-03-29",
   },
+  {
+    title: "What Should a 6 to 8 Year Old Be Eating? Nutrition Guide for School-Age Kids",
+    description: "A practical, evidence-based nutrition guide for children ages 6 to 8 covering calorie needs, balanced meals, lunch ideas, picky eating, snacks, iron and calcium, and when to talk to your pediatrician, based on USDA and AAP guidance.",
+    path: "/ages/6-8-years/feeding/",
+    pubDate: "2026-03-30",
+  },
 ];
