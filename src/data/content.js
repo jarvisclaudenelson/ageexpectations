@@ -473,4 +473,10 @@ export const articles = [
     path: "/ages/5-6-years/learning-disabilities/",
     pubDate: "2026-03-30",
   },
+  {
+    title: "Does My 10 to 12 Year Old Have Anxiety? Signs, Causes, and When to Get Help",
+    description: "A practical, evidence-based guide to anxiety in children ages 10 to 12. Covers what anxiety looks like in tweens, common physical and school signs, what causes it, when to talk to your pediatrician, and what treatments help, based on CDC, AAP, NIMH, and AACAP guidance.",
+    path: "/ages/10-12-years/anxiety/",
+    pubDate: "2026-03-30",
+  },
 ];

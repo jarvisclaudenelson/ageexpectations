@@ -1,0 +1,190 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "Does My 10 to 12 Year Old Have Anxiety? Signs, Causes, and When to Get Help";
+const description = "A practical, evidence-based guide to anxiety in children ages 10 to 12. Covers what anxiety looks like in tweens, common physical and school signs, what causes it, when to talk to your pediatrician, and what treatments help, based on CDC, AAP, NIMH, and AACAP guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my 10-year-old has stomachaches before school?",
+    answer: "Frequent stomachaches before school can be a sign of anxiety, especially if they happen on school mornings and improve when your child stays home (AAP, 2020). Occasional nerves are common, but repeated physical complaints, school avoidance, or distress that interferes with daily life should be discussed with your pediatrician."
+  },
+  {
+    question: "Should I worry if my 11-year-old is suddenly refusing sleepovers or social events?",
+    answer: "Avoiding sleepovers or social events can reflect social anxiety, separation anxiety, or a recent stressful experience rather than simple preference (CDC, 2022; NIMH, 2023). If your 10–12-year-old repeatedly avoids age-appropriate activities they previously enjoyed, or fear is limiting friendships and daily functioning, talk with your pediatrician."
+  },
+  {
+    question: "Is it typical that my tween worries constantly about grades?",
+    answer: "Some concern about grades is typical in 10–12-year-olds, but constant worry, perfectionism, meltdowns over minor mistakes, or inability to relax can suggest an anxiety disorder rather than healthy motivation (AAP, 2020). If worry is affecting sleep, appetite, school attendance, or mood, ask your pediatrician about an evaluation."
+  },
+  {
+    question: "Can anxiety in a 10 to 12 year old look like anger instead of fear?",
+    answer: "Yes, anxiety in 10–12-year-olds often looks like irritability, anger, shutdowns, or refusal rather than a child saying, 'I feel anxious' (AAP, 2020). Tweens may not recognize their feelings as anxiety, so repeated outbursts around school, performance, or social situations deserve a conversation with your pediatrician."
+  },
+  {
+    question: "Should I push my child to face fears or let them avoid stressful situations?",
+    answer: "Gentle, supported practice facing fears usually helps more than allowing repeated avoidance, because avoidance tends to strengthen anxiety over time (AAP, 2020; AACAP, 2020). Your 10–12-year-old should not be forced into overwhelming situations, but gradual exposure with support is often part of effective treatment. Talk with your pediatrician if fear is limiting daily life."
+  },
+  {
+    question: "What treatment usually helps anxiety in 10 to 12 year olds?",
+    answer: "Cognitive Behavioral Therapy, or CBT, is the first-line treatment for mild-to-moderate anxiety in children and adolescents, with about 60–70% showing significant improvement (AACAP, 2020; AAP, 2020). Treatment may also include parent coaching, school supports, and sometimes medication for more severe symptoms through your pediatrician or a mental health specialist."
+  },
+  {
+    question: "When is anxiety an emergency in a 10 to 12 year old?",
+    answer: "Anxiety becomes urgent if your 10–12-year-old talks about wanting to die, harming themselves, cannot function at school, has panic so severe they cannot calm, or stops eating, sleeping, or leaving the house (AAP, 2022). In an immediate safety concern, call or text 988 or seek emergency care right away."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/10-12-years/anxiety/",
+  datePublished: "2026-03-30",
+  dateModified: "2026-03-30"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/10-12-years/anxiety/",
+  lastReviewed: "2026-03-30"
+});
+---
+
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">Anxiety disorders affect about 7% of U.S. children ages 3–17 and often become more visible in the 10–12-year range, when school demands, peer pressure, and puberty-related changes increase stress (CDC, 2022; NIMH, 2023). In tweens, anxiety often looks more like stomachaches, irritability, perfectionism, or school avoidance than obvious fear.</p>
+
+    <p>The 10–12-year period is a common time for parents to wonder whether worry is simply part of growing up or something more. Many tweens become more self-aware, more socially sensitive, and more focused on school performance during these years. That can make anxiety easier to notice — but it can also make it harder to tell what is typical variation and what deserves support.</p>
+
+    <p>This guide explains what anxiety usually looks like in 10–12-year-olds, what can trigger it, what treatments help, and when it is time to talk with your pediatrician. Children develop along a wide range, but persistent fear, avoidance, or physical symptoms that interfere with daily life are worth taking seriously.</p>
+
+    <h2>What does anxiety look like in a 10 to 12 year old?</h2>
+    <p class="answer-first">In 10–12-year-olds, anxiety often shows up as physical complaints, irritability, perfectionism, reassurance-seeking, sleep problems, or avoidance of school and social situations rather than a child directly saying they feel anxious (AAP, 2020; NIMH, 2023). The key feature is that fear or worry starts interfering with everyday functioning.</p>
+
+    <p>A typically developing tween may worry before a test, feel nervous about a new team, or need reassurance during a stressful week. Anxiety becomes more concerning when the pattern is frequent, intense, and hard for the child to control. Parents often first notice that the child seems “on edge” all the time, melts down over small mistakes, or spends a lot of energy trying to avoid situations that feel uncomfortable.</p>
+
+    <h3>What physical signs of anxiety are common in 10–12-year-olds?</h3>
+    <p class="answer-first">Physical symptoms are one of the most common ways anxiety appears in 10–12-year-olds, especially repeated stomachaches, headaches, nausea, racing heart, shakiness, or trouble sleeping without another clear medical cause (AAP, 2020). These symptoms often cluster around school mornings, performances, tests, or social events.</p>
+
+    <p>Tweens do not always have the words to say, “I am anxious.” Instead, their body may communicate distress first. A child who repeatedly feels sick before school but seems better on weekends may be experiencing anxiety, not pretending or exaggerating. Physical symptoms should still be taken seriously medically, but if they happen in a predictable stress pattern, anxiety should be part of the conversation with your pediatrician.</p>
+
+    <h3>What emotional or behavior signs of anxiety are common in 10–12-year-olds?</h3>
+    <p class="answer-first">Common emotional and behavior signs of anxiety in 10–12-year-olds include irritability, crying, clinginess, constant “what if” questions, needing repeated reassurance, refusing new situations, procrastinating from fear of failure, and becoming unusually upset by small mistakes (AAP, 2020; AACAP, 2020).</p>
+
+    <p>Some tweens look fearful. Others look oppositional, angry, or shut down. A child may insist they “hate school” when the underlying problem is anxiety about being called on, separating from a parent, keeping up academically, or handling peer dynamics. Repeated avoidance is one of the most useful clues, because anxiety often pushes children to escape the thing that triggers worry.</p>
+
+    <h2>Is this anxiety or just typical tween worry?</h2>
+    <p class="answer-first">Typical worry in 10–12-year-olds comes and goes and does not stop a child from participating in daily life, while anxiety disorders involve fear, avoidance, or physical symptoms that are persistent, hard to control, and interfere with school, sleep, friendships, or family life (AAP, 2020; NIMH, 2023).</p>
+
+    <p>Many tweens worry about tests, sports, fitting in, puberty, or disappointing adults. Those concerns are common in this age group. What makes clinicians more concerned is intensity and impact. If a child still goes to school, sleeps reasonably well, enjoys friendships, and recovers after reassurance, the pattern may fall within the broad range of typical development.</p>
+
+    <p>If a 10–12-year-old starts refusing school, cannot sleep because of worry, cries regularly before activities, checks homework repeatedly for hours, or avoids social situations they want to enjoy, the concern is less about ordinary stress and more about anxiety affecting functioning.</p>
+
+    <h3>How can I tell if worry is interfering with daily life?</h3>
+    <p class="answer-first">Worry is interfering with daily life when a 10–12-year-old regularly misses school, avoids friends, cannot fall asleep, needs excessive reassurance, has frequent physical complaints, or spends so much time managing fear that schoolwork, family routines, or activities suffer (AAP, 2020).</p>
+
+    <p>A useful parent question is: “Is my child still able to do the things they need and want to do?” If the answer is often no, anxiety may be clinically significant. Another clue is whether adults are rearranging family life around the child’s fear — for example, repeatedly allowing absences, speaking for the child in all settings, or avoiding routine activities because the distress is so intense.</p>
+
+    <h2>What kinds of anxiety are most common in 10 to 12 year olds?</h2>
+    <p class="answer-first">In children ages 10–12, the most common anxiety patterns include generalized anxiety, social anxiety, separation anxiety, and school-related anxiety, and these conditions often overlap with each other and with ADHD or depression (CDC, 2022; NIMH, 2023).</p>
+
+    <p>Parents do not need to identify the exact diagnosis on their own, but recognizing the pattern can help them describe concerns clearly to a pediatrician. Anxiety in preteens does not always stay in one category, and many children show features of more than one type.</p>
+
+    <h3>What does generalized anxiety look like in a tween?</h3>
+    <p class="answer-first">Generalized anxiety in 10–12-year-olds usually looks like excessive worry about multiple everyday topics such as grades, health, safety, mistakes, friendships, or family problems, often paired with perfectionism, tension, and trouble relaxing (NIMH, 2023).</p>
+
+    <p>These children may ask repeated reassurance questions, struggle to stop thinking about worst-case scenarios, or become very distressed by uncertainty. A tween with generalized anxiety might seem mature because they think so much — but the thinking often feels exhausting rather than productive.</p>
+
+    <h3>What does social anxiety look like in a 10 to 12 year old?</h3>
+    <p class="answer-first">Social anxiety in 10–12-year-olds often appears as intense fear of embarrassment, being judged, reading aloud, speaking in class, joining groups, attending parties, or even eating in front of peers (AACAP, 2020). The child may want friends but avoid situations where social attention feels risky.</p>
+
+    <p>This can be mistaken for shyness, but social anxiety usually causes stronger distress and more impairment. A tween may rehearse conversations, panic before presentations, or refuse activities they genuinely care about because the possibility of embarrassment feels overwhelming.</p>
+
+    <h3>What does separation or school anxiety look like at this age?</h3>
+    <p class="answer-first">Separation and school anxiety in 10–12-year-olds often show up as difficulty leaving home, repeated calls or texts to parents, crying before school, complaints of illness on school mornings, or distress about being away from caregivers even though the child is older (AAP, 2020).</p>
+
+    <p>Older children can still have significant separation-related anxiety. At this age, it may center less on kindergarten-style drop-off tears and more on persistent checking, school refusal, or fear that something bad will happen to a parent while they are apart.</p>
+
+    <h2>What causes anxiety in a 10 to 12 year old?</h2>
+    <p class="answer-first">Anxiety in 10–12-year-olds usually develops from a mix of temperament, family history, stressful experiences, school pressure, peer dynamics, and sometimes puberty-related changes rather than one single cause (AAP, 2020; NIMH, 2023). Anxiety is not caused by weak character or poor parenting.</p>
+
+    <p>Some children are born with a more cautious, sensitive temperament. Others have a strong family history of anxiety or mood disorders. Stressful events such as bullying, academic struggles, family conflict, divorce, illness, social exclusion, or a major transition can all contribute. Puberty can also increase emotional intensity and self-consciousness, which may amplify anxiety in vulnerable tweens.</p>
+
+    <h3>Can puberty make anxiety worse in 10 to 12 year olds?</h3>
+    <p class="answer-first">Yes, puberty can make anxiety more noticeable in 10–12-year-olds because hormonal changes, body changes, sleep shifts, and increased social self-consciousness often raise emotional reactivity during the tween years (AAP, 2020).</p>
+
+    <p>Puberty does not directly cause every anxiety disorder, but it can magnify worries about appearance, fitting in, privacy, academic performance, and independence. A child who was already somewhat anxious may appear more distressed once puberty and middle-school pressures begin to overlap.</p>
+
+    <h3>Can school stress trigger anxiety in a tween?</h3>
+    <p class="answer-first">School stress is one of the most common anxiety triggers in 10–12-year-olds because this age brings higher academic demands, more homework, testing pressure, changing peer groups, and greater awareness of comparison with classmates (AAP, 2020; CDC, 2022).</p>
+
+    <p>For some children, anxiety centers on performance and perfectionism. For others, it is more social or sensory — noisy classrooms, presentations, changing classes, or unstructured lunch and recess time can all feel overwhelming. If school mornings are a daily battle, anxiety should be considered alongside learning differences, ADHD, bullying, sleep problems, and medical causes.</p>
+
+    <h2>How is anxiety treated in a 10 to 12 year old?</h2>
+    <p class="answer-first">The first-line treatment for mild-to-moderate anxiety in 10–12-year-olds is Cognitive Behavioral Therapy, or CBT, and about 60–70% of children improve significantly with evidence-based treatment (AAP, 2020; AACAP, 2020). More severe anxiety may also involve school supports, parent coaching, and sometimes medication.</p>
+
+    <p>CBT teaches children to notice anxious thoughts, understand body signals, and gradually face feared situations instead of avoiding them. Parents are often involved because family responses can either reduce or unintentionally reinforce anxiety. Treatment plans may also include sleep support, school accommodations, and coordination with a pediatrician if anxiety is affecting health, appetite, or attendance.</p>
+
+    <h3>What is CBT and why does it help?</h3>
+    <p class="answer-first">CBT helps 10–12-year-olds by teaching practical skills for managing anxious thoughts, body sensations, and avoidance behaviors, and it is considered the gold-standard first-line treatment for childhood anxiety by major pediatric and child psychiatry groups (AAP, 2020; AACAP, 2020).</p>
+
+    <p>In plain language, CBT helps a child learn that anxiety feels intense but can be tolerated and reduced over time. It also teaches that avoiding feared situations gives short-term relief but usually makes anxiety stronger later. Many children benefit from gradual exposure work, such as practicing school drop-off, class participation, or social situations step by step.</p>
+
+    <h3>Does anxiety always need medication?</h3>
+    <p class="answer-first">No, anxiety in 10–12-year-olds does not always require medication, because many children with mild-to-moderate symptoms improve with CBT and family-based support alone (AAP, 2020; AACAP, 2020). Medication is more often considered when symptoms are severe, persistent, or not improving with therapy.</p>
+
+    <p>Medication decisions should be individualized and made with a pediatrician or qualified mental health clinician. Parents should not feel they have failed if medication becomes part of treatment, but therapy is usually the first step when symptoms are not an emergency and the child can engage in outpatient care.</p>
+
+    <h2>What can I do at home if my 10 to 12 year old seems anxious?</h2>
+    <p class="answer-first">Parents can help an anxious 10–12-year-old by keeping routines predictable, validating feelings without reinforcing avoidance, supporting sleep, reducing reassurance cycles, and encouraging gradual practice with feared situations rather than repeated escape (AAP, 2020; AACAP, 2020).</p>
+
+    <p>Helpful support sounds like: “I can see this feels hard, and I know you can handle it.” Less helpful support usually involves repeatedly rescuing the child from every trigger. Children do best when adults are calm, consistent, and confident without being dismissive.</p>
+
+    <ul>
+      <li>Keep wake times, bedtimes, meals, and school routines as consistent as possible.</li>
+      <li>Name the feeling in simple language: worried, tense, embarrassed, scared.</li>
+      <li>Avoid long reassurance loops that temporarily soothe but quickly restart.</li>
+      <li>Break hard tasks into small steps and praise effort, not perfection.</li>
+      <li>Watch for caffeine, sleep loss, and overscheduling, which can worsen anxiety symptoms.</li>
+      <li>Communicate with school if anxiety is affecting attendance, tests, or peer functioning.</li>
+    </ul>
+
+    <h2>When should I talk to my pediatrician about my 10 to 12 year old's anxiety?</h2>
+    <p class="answer-first">Talk to your pediatrician if your 10–12-year-old has repeated school refusal, frequent unexplained stomachaches or headaches, panic symptoms, sleep disruption, extreme perfectionism, social withdrawal, or fear that is interfering with school, friendships, eating, or family life (AAP, 2020). Anxiety is especially urgent if your child talks about self-harm or hopelessness.</p>
+
+    <p>Specific red flags in 10–12-year-olds include:</p>
+    <ul>
+      <li>Missing school or repeatedly begging to stay home because of fear</li>
+      <li>Frequent stomachaches, headaches, nausea, or vomiting tied to stress or school mornings</li>
+      <li>Refusing social events, activities, or presentations because of intense distress</li>
+      <li>Sleeping very poorly because of worry, racing thoughts, or nighttime panic</li>
+      <li>Needing constant reassurance and becoming highly distressed when reassurance is not given</li>
+      <li>Meltdowns over mistakes, perfectionism so intense that work cannot be completed, or avoidance of assignments out of fear of failure</li>
+      <li>Sudden withdrawal from friends, extracurriculars, or previously enjoyed activities</li>
+      <li>Panic attacks with chest tightness, shaking, shortness of breath, or feeling out of control</li>
+      <li>Eating less, losing weight, or avoiding school bathrooms, cafeterias, or other settings because of fear</li>
+      <li>Any statement about wanting to die, disappear, or hurt themselves</li>
+    </ul>
+
+    <p>If there is an immediate safety concern, or if your child talks about suicide or self-harm, call or text <strong>988</strong> right away or seek emergency care.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, NIMH, and AACAP guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>
