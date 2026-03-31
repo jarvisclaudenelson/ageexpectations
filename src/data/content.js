@@ -485,4 +485,10 @@ export const articles = [
     path: "/ages/8-10-years/screen-time/",
     pubDate: "2026-03-31",
   },
+  {
+    title: "When Can a Teen Stay Home Alone Overnight? A Parent's Guide (Ages 14–18)",
+    description: "A practical, evidence-based guide to deciding when a teenager can stay home alone overnight. Covers maturity signs, safety skills, legal considerations, emergency planning, sibling supervision, and when to wait longer, with AAP-informed guidance.",
+    path: "/ages/14-18-years/staying-home-alone-overnight/",
+    pubDate: "2026-03-31",
+  },
 ];
