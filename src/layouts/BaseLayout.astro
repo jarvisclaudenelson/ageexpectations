@@ -30,6 +30,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:type" content="article" />
   <meta property="og:url" content={canonicalURL} />
   <link rel="alternate" type="application/rss+xml" title="AgeExpectations.com" href="/rss.xml" />
+  {/* Google Analytics 4 */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZB1XR2Z6B"></script>
+  <script set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JZB1XR2Z6B');`} />
   {articleSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   )}
