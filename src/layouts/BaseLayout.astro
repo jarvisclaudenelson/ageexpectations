@@ -34,6 +34,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   {/* Google Analytics 4 */}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZB1XR2Z6B"></script>
   <script set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JZB1XR2Z6B');`} />
+  {/* Google AdSense */}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5110743510234367" crossorigin="anonymous"></script>
   {articleSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   )}
