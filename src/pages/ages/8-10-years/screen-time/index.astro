@@ -1,180 +1,247 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
-const title = 'How Much Screen Time Is Appropriate for an 8 to 10 Year Old?';
-const description = "The AAP no longer sets a fixed daily screen time limit for children ages 6 and older. Current 2023 guidance focuses on content quality, context, and protecting sleep and physical activity. Learn what the research actually says about screen time for 8 to 10 year olds, social media readiness, cyberbullying prevention, and when to talk to your pediatrician.";
-
+const title = "How Much Screen Time Is Appropriate for an 8 to 10 Year Old?";
+const description = "A practical, evidence-based guide to screen time for children ages 8 to 10. Covers what the AAP actually recommends, how to set limits, social media readiness, cyberbullying, sleep effects, and when to talk to your pediatrician.";
 const faqs = [
   {
-    question: "Is the 2-hour screen time rule still the recommendation for my 8 to 10 year old?",
-    answer: "No — the AAP officially moved away from a rigid two-hour daily limit for children ages 6 and older in 2016, and refined this further in its 2023 Family Media Plan guidance. The current recommendation focuses on content quality, who your child is watching or playing with (social vs. solo), and whether screens are displacing sleep, physical activity, homework, or face-to-face time — not on counting hours. The two most evidence-supported rules remain: no screens for at least 60 minutes before bed, and no screens during family meals (AAP, 2023).",
+    question: "Is it bad if my 8 year old uses screens every day?",
+    answer: "Daily screen use is not automatically a problem for an 8-year-old if it does not crowd out sleep, physical activity, homework, in-person relationships, and family routines (AAP, 2023). The bigger concern is how screens are used, what content your child is seeing, and whether media use causes conflict, irritability, or lost sleep. Talk with your pediatrician if screen use is interfering with school, mood, friendships, or family life.",
   },
   {
-    question: "Should my 9-year-old be on Instagram, TikTok, or Snapchat?",
-    answer: "All major social media platforms — Instagram, TikTok, Snapchat, and the standard version of YouTube — require users to be at least 13 years old under COPPA (Children's Online Privacy Protection Act, 1998). Both the AAP and the American Psychological Association advise against social media access for children under 13, citing research linking heavy use to increased rates of depression, anxiety, and body image concerns — with the strongest effects seen in girls (AAP, 2023; APA, 2023). If your child is pressing for access, explain that the platforms are designed to be difficult to stop using, and that the age limit exists specifically to protect developing brains.",
+    question: "How many hours of screen time should I allow for my 9 year old?",
+    answer: "The AAP does not set one fixed daily hour limit for children age 6 and older; instead, it recommends creating consistent limits that protect sleep, exercise, reading, and face-to-face time (AAP, 2023). Many families do well with clear boundaries around school nights, meals, and bedtime. Talk with your pediatrician if your 9-year-old becomes distressed when screens are removed or cannot function well without them.",
   },
   {
-    question: "How do I know if my child's screen time has become a problem?",
-    answer: "Screen use becomes a clinical concern when it consistently displaces sleep, physical activity, homework, or real-world friendships — not based on hours alone. Specific warning signs include: your child is sleeping fewer than 9 hours on school nights and screens are a contributing factor; they become extremely agitated or inconsolable when screens are removed (beyond typical disappointment); they are secretive about what they are watching or who they are communicating with online; or school performance has declined and screen use appears to be a factor. If several of these apply despite your attempts to set limits, talk to your pediatrician (AAP, 2023).",
+    question: "Should my 10 year old have social media?",
+    answer: "Most 10-year-olds are not ready for social media, and major platforms generally set 13 as the minimum age under federal privacy rules and platform policies. The AAP and APA both advise caution because social media use is linked with higher risks of bullying, sleep disruption, and body image concerns in older children and teens (AAP, 2023; APA, 2023). Talk with your pediatrician if online activity seems to affect your child's mood, self-esteem, or safety.",
   },
   {
-    question: "What time should screens be turned off at night for my 8 to 10 year old?",
-    answer: "The American Academy of Sleep Medicine recommends turning off all screens at least 30 to 60 minutes before bedtime for school-age children (AASM, 2020). For an 8 to 10 year old who should be asleep between 8:30 and 9:30 PM, this means screens off by 7:30 to 8:30 PM. Blue light from phones, tablets, gaming consoles, and televisions suppresses melatonin production and delays sleep onset. The rule applies to all screens — including TV in a common room. Consider charging all devices outside your child's bedroom as the simplest single habit change for protecting sleep.",
+    question: "Why does my child get so angry when screen time ends?",
+    answer: "Many 8–10-year-olds become upset when screen time ends because games, videos, and apps are designed to be highly engaging and to reward staying on longer. Strong reactions can still be typical, but intense meltdowns, aggression, or inability to transition may mean limits need to be clearer and media use needs closer supervision (AAP, 2023). Talk with your pediatrician if transitions are consistently extreme or affect daily functioning.",
   },
   {
-    question: "My child is being bullied online. What should I do?",
-    answer: "Cyberbullying affects approximately 15 to 20% of school-age children and peaks between ages 10 and 14 (Stopbullying.gov, 2022). First, tell your child you are glad they told you, and that this is not their fault. Instruct them to screenshot and save evidence before reporting or blocking — this creates documentation for the school or platform. Report the behavior to the platform using its official reporting tools. If the bully is a classmate, notify the school. Avoid taking away your child's devices as a response to being victimized, as this discourages future disclosure. If the bullying is persistent or your child shows changes in mood, school avoidance, or sleep disruption, contact your pediatrician.",
+    question: "Does screen time really affect sleep in 8 to 10 year olds?",
+    answer: "Yes, screen time can affect sleep in 8–10-year-olds, especially if screens are used in the hour before bed or kept in the bedroom overnight. Blue light can delay melatonin release, and exciting content can make it harder for children to settle and fall asleep (AASM, 2020). Talk with your pediatrician if your child snores, cannot fall asleep, or is tired during the day despite a regular bedtime.",
   },
   {
-    question: "Is gaming bad for my 8 to 10 year old?",
-    answer: "Video gaming is not inherently harmful for 8 to 10 year olds. Age-appropriate games can support problem-solving, spatial reasoning, persistence, and social connection when gaming is done in moderation (AAP, 2023). The relevant considerations are: whether gaming displaces sleep, homework, or physical activity; whether the content is age-appropriate (the ESRB ratings E for Everyone and E10+ are designed for this bracket); whether online multiplayer exposes your child to unmoderated contact with unknown adults; and whether your child can stop gaming without significant emotional dysregulation. If stopping games consistently triggers extreme anger or distress that lasts beyond 15 to 20 minutes, discuss with your pediatrician.",
+    question: "Should I let my child play video games with online chat?",
+    answer: "Online chat is usually best introduced slowly and with close supervision in the 8–10 age range because children this age are still learning judgment, privacy, and how to respond to peer pressure. If chat is allowed, it should be limited to known friends, with privacy settings turned on and a clear rule to tell an adult about anything upsetting (AAP, 2023; StopBullying.gov, 2022). Talk with your pediatrician if online interactions are causing anxiety, withdrawal, or behavior changes.",
   },
   {
-    question: "How do I set up a Family Media Plan without constant conflict?",
-    answer: "The AAP recommends building a Family Media Plan as a collaborative agreement that children help create, rather than rules handed down from above — an approach shown to be significantly more effective for school-age children who are developing their own sense of autonomy (AAP, 2023). Involve your 8 to 10 year old in setting the plan: discuss why sleep and physical activity come first, agree on screen-free zones (bedrooms, dinner table), establish a clear screen-off time on school nights, and build in a process for requesting exceptions. Children this age are developmentally ready to understand the reasoning behind rules, and participation increases compliance. The AAP's Family Media Plan tool is available free at HealthyChildren.org.",
+    question: "What are signs that screen time is becoming a real problem?",
+    answer: "Screen time becomes more concerning when an 8–10-year-old regularly loses sleep, stops enjoying offline activities, hides devices, lies about use, or becomes unusually irritable without screens. Those patterns suggest media use may be affecting self-regulation, mood, or daily functioning rather than just being a preferred hobby (AAP, 2023). Talk with your pediatrician if these changes persist or worsen.",
   },
 ];
 
 const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/8-10-years/screen-time/',
-  datePublished: '2026-03-27',
-  dateModified: '2026-03-27',
+  url: "https://ageexpectations.com/ages/8-10-years/screen-time/",
+  datePublished: "2026-03-31",
+  dateModified: "2026-03-31",
 });
+
 const faqData = faqSchema(faqs);
+
 const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/8-10-years/screen-time/',
-  lastReviewed: '2026-03-27',
+  url: "https://ageexpectations.com/ages/8-10-years/screen-time/",
+  lastReviewed: "2026-03-31",
 });
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  articleSchema={articleData}
-  faqSchema={faqData}
-  medicalSchema={medicalData}
-  breadcrumbs={[
-    { label: '8–10 Years', href: '/ages/8-10-years/' },
-    { label: 'Screen Time' },
-  ]}
->
-  <h1>How Much Screen Time Is Appropriate for an 8 to 10 Year Old?</h1>
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
+    <p class="answer-first">
+      For children ages 8–10, the American Academy of Pediatrics no longer recommends one universal daily screen-time limit; instead, it recommends consistent family rules that protect sleep, physical activity, schoolwork, and face-to-face relationships, with extra caution around social media and nighttime screen use (AAP, 2023). Most typically developing children in this age range still need active supervision online.
+    </p>
 
-  <p class="answer-first">The AAP no longer recommends a fixed daily screen time limit for children ages 6 and older. As of its 2023 Family Media Plan guidance, the AAP focuses on <strong>content quality, who your child is engaging with, and whether screens are protecting or crowding out sleep, physical activity, and face-to-face time</strong> — not hours. The two most evidence-supported screen rules for 8 to 10 year olds: screens off at least 60 minutes before bed, and no screens during family meals (AAP, 2023).</p>
+    <p>
+      Screen time is one of the most common parenting stress points in the 8–10 age range because children are more independent than younger kids but still far from having mature judgment. Many children this age can handle some digital media well, but they still need adults to shape routines, monitor content, and teach online safety.
+    </p>
 
-  <h2>What does the AAP actually recommend for screen time at ages 8 to 10?</h2>
+    <h2>How much screen time is appropriate for an 8 to 10 year old?</h2>
+    <p class="answer-first">
+      For children ages 8–10, appropriate screen time is whatever amount does not displace the foundations of healthy development: 9–12 hours of sleep, daily physical activity, school responsibilities, reading, family connection, and offline play (AAP, 2023; AAP, 2016). In other words, quality, timing, and impact matter more than one exact number.
+    </p>
+    <p>
+      This is a major shift from older advice that focused mostly on counting hours. The AAP's newer guidance for children age 6 and older emphasizes whether media use supports or undermines a child's daily functioning. An 8-year-old who watches one hour of a calm, age-appropriate show after homework may be doing very well. A 10-year-old who spends the same amount of time on highly stimulating content right before bed may struggle much more.
+    </p>
+    <p>
+      In practical terms, many families set limits around predictable parts of the day rather than trying to negotiate constantly. Common approaches include no screens before school, no personal devices during meals, and no entertainment screens during homework unless they are needed for school. The best screen-time plan is one you can apply consistently.
+    </p>
 
-  <p class="answer-first">The AAP's current framework, updated in 2023, moves away from counting screen hours for children ages 6 and older. The Family Media Plan approach asks parents to evaluate <strong>what</strong> their child is watching or doing, <strong>with whom</strong> (co-viewing with a parent versus unsupervised solo consumption), and whether screen use is displacing the protective behaviors most closely linked to healthy development: adequate sleep, daily physical activity, homework, and in-person social connection (AAP, 2023). The earlier "2-hour rule" was officially revised in 2016 and further refined as research on media type and context became more nuanced.</p>
+    <h2>What does the AAP actually recommend for screen time at ages 8–10?</h2>
+    <p class="answer-first">
+      The AAP recommends making a family media plan for children age 6 and older instead of following a single hourly cap. Its 2023 guidance focuses on content quality, co-viewing when possible, and protecting sleep, exercise, meals, and in-person interaction from being crowded out by screens (AAP, 2023).
+    </p>
+    <p>
+      Parents often want a simple number, but the current evidence shows that not all screen time affects children in the same way. Educational use, creative use, passive scrolling, solo gaming, and video chatting with grandparents are not equivalent experiences. The AAP recommends asking three practical questions: what is your child watching or doing, when are they using it, and what is screen time replacing?
+    </p>
+    <p>
+      For children ages 8–10, the AAP also recommends that adults stay involved. That includes previewing apps, checking privacy settings, talking about online behavior, and keeping device use out of bedrooms overnight. An age-appropriate media plan usually works best when it is written down and reviewed as a child's school demands and maturity change.
+    </p>
 
-  <p>Screen activities associated with positive outcomes in 8 to 10 year olds include:</p>
-  <ul>
-    <li><strong>Co-viewing or co-playing with a parent</strong> — which creates conversation opportunities and gives parents visibility into content</li>
-    <li><strong>Educational and creative tools</strong> — coding platforms, digital art programs, curriculum-linked educational games</li>
-    <li><strong>Video calling with family and friends</strong> — the AAP considers this high-quality social screen time, distinct from passive consumption</li>
-  </ul>
+    <h2>Why does screen time feel harder to manage at ages 8–10?</h2>
+    <p class="answer-first">
+      Screen time often feels harder to manage in 8–10-year-olds because children this age are developmentally able to use devices more independently, but they still have immature impulse control, emotional regulation, and risk judgment. That mismatch makes them more likely to resist limits, get absorbed in media, and need adult help with transitions (AAP, 2023).
+    </p>
+    <p>
+      Children in this age range are also becoming much more socially aware. They care about what friends are watching, what games classmates are playing, and whether they feel left out. That social pressure can make device requests feel urgent and emotionally loaded even when the actual activity is not necessary.
+    </p>
+    <p>
+      At the same time, many platforms and games are designed to keep users engaged with rewards, streaks, autoplay, and cliffhangers. An 8–10-year-old is especially vulnerable to those design features because the brain systems involved in self-control are still developing. Strong reactions at the end of screen time do not always mean a child is "addicted," but they do mean the routine may need more structure.
+    </p>
 
-  <p>Screen activities associated with negative outcomes at this age include unsupervised access to unmoderated comment sections and chat, fast-paced short-form video that discourages sustained attention, and any screen use that routinely displaces sleep (AAP, 2023).</p>
+    <h2>What kinds of screen time are better or worse for an 8 to 10 year old?</h2>
+    <p class="answer-first">
+      For children ages 8–10, higher-quality screen use tends to be educational, creative, social with trusted people, or intentionally limited entertainment, while lower-quality screen use is more likely to be endless scrolling, unsupervised video platforms, age-inappropriate content, or media that regularly disrupts sleep, mood, or behavior (AAP, 2023).
+    </p>
 
-  <h3>Has the AAP changed its screen time guidance recently?</h3>
+    <h3>What screen activities are usually lower risk for 8–10-year-olds?</h3>
+    <p class="answer-first">
+      Lower-risk digital activities for 8–10-year-olds usually include school-based learning, drawing apps, coding games, video calls with family, and age-appropriate shows or games used for a defined amount of time. These activities are easiest to manage when adults know the content and the child can stop without major distress (AAP, 2023).
+    </p>
+    <p>
+      Co-viewing or co-playing adds another layer of protection because it lets parents explain content, notice problems early, and turn screen time into conversation rather than isolation. Children this age often benefit from having media in shared family spaces instead of behind closed doors.
+    </p>
 
-  <p>Yes — the shift began in 2016 when the AAP revised its 2011 guidance and eliminated the blanket two-hour limit for children ages 6 and older, replacing it with the Family Media Plan framework. The 2023 guidance further emphasized content quality and context over raw time. This means a child spending 90 focused minutes on a coding project is in a very different developmental situation than a child spending 90 minutes scrolling short-form videos — and the AAP guidance is designed to distinguish between those experiences (AAP, 2023).</p>
+    <h3>What screen activities are more concerning for 8–10-year-olds?</h3>
+    <p class="answer-first">
+      More concerning digital activities for children ages 8–10 include unsupervised social media, open online chat with strangers, algorithm-driven short videos, mature games, and any content that exposes a child to bullying, sexual material, violence, or pressure to stay online longer. These uses carry higher emotional and safety risks (AAP, 2023; APA, 2023).
+    </p>
+    <p>
+      The biggest issue is not just the device itself but the environment it creates. A child who uses a tablet in the kitchen for 30 minutes while a parent is nearby is in a very different situation from a child using a personal device alone in bed late at night. Supervision, privacy settings, and timing matter.
+    </p>
 
-  <h2>Should my 8 to 10 year old be on social media?</h2>
+    <h2>Should my 8 to 10 year old have social media?</h2>
+    <p class="answer-first">
+      Most children ages 8–10 are not ready for social media because this age group is still developing judgment about privacy, peer influence, and online permanence. The AAP and APA both advise caution, and most major social media platforms require users to be at least 13 years old (AAP, 2023; APA, 2023).
+    </p>
+    <p>
+      Even if a child seems technologically skilled, social media requires emotional skills that are still developing at this age. Children ages 8–10 often think concretely, have trouble reading social nuance online, and are more likely to be rattled by exclusion, teasing, or comparison. They may also share personal information without fully understanding long-term consequences.
+    </p>
+    <p>
+      Some families use child-focused messaging platforms or parent-managed communication tools instead of full social media. If you allow any online social interaction, keep accounts private, review contacts together, and make "tell me right away if anything feels weird or upsetting" a standard rule rather than a one-time talk.
+    </p>
 
-  <p class="answer-first">The AAP and the American Psychological Association both advise against social media access for children under 13, citing research linking heavy social media use to increased rates of depression, anxiety, and body image dissatisfaction — with the strongest effects documented in girls (AAP, 2023; APA, 2023). All major platforms — Instagram, TikTok, Snapchat, and the standard version of YouTube — require users to be at least 13 under COPPA (Children's Online Privacy Protection Act, 1998), a federal law that restricts data collection from children under that age.</p>
+    <h2>How does screen time affect sleep in 8 to 10 year olds?</h2>
+    <p class="answer-first">
+      Screen time can reduce sleep quality in 8–10-year-olds by delaying bedtime, stimulating the brain before sleep, and exposing children to blue light that can suppress melatonin. School-age children need 9–12 hours of sleep per night, so regular evening screen use can have meaningful effects on attention, mood, and behavior (AAP, 2016; AASM, 2020).
+    </p>
+    <p>
+      Screens affect sleep in two main ways. First, they take up time, so children go to bed later than planned. Second, they can make it harder to fall asleep once the screen is off, especially if the content is exciting, competitive, or emotionally activating. This is why many sleep specialists recommend ending screens 30–60 minutes before bedtime (AASM, 2020).
+    </p>
+    <p>
+      For children ages 8–10, the most effective sleep rule is often simple: charge devices outside the bedroom and keep bedtime device-free. If a child says they need a device for music or an alarm, families can usually meet that need with a non-internet option.
+    </p>
 
-  <p>Children ages 8–10 may encounter social media features through adjacent platforms even without a formal account. Gaming platforms like Roblox and Discord include chat and social feed features. YouTube's standard version has comment sections and recommendation algorithms that function similarly to social media. The AAP recommends that parents actively review the communication settings and contacts on any platform their child uses and enable privacy controls proactively, before a problem occurs (AAP, 2023).</p>
+    <h2>Can screen time affect my 8 to 10 year old's behavior or attention?</h2>
+    <p class="answer-first">
+      Yes, screen time can affect behavior and attention in children ages 8–10, especially when it is excessive, poorly timed, unsupervised, or replaces sleep and physical activity. Children who do not get enough sleep are more likely to show irritability, trouble focusing, and emotional reactivity, so media effects often show up indirectly through disrupted routines (AAP, 2016; AAP, 2023).
+    </p>
+    <p>
+      This does not mean every child who likes video games will have behavior problems. Many typically developing children can use digital media without major issues. The more useful question is whether your child can transition away from screens, stay regulated afterward, and continue participating in school, chores, friendships, and family life.
+    </p>
+    <p>
+      Warning signs include daily fights over devices, hiding use, dramatic mood shifts after gaming or video watching, difficulty stopping even with clear limits, and loss of interest in non-screen activities. Those signs suggest the family media plan needs adjustment and may also be worth discussing with a pediatrician.
+    </p>
 
-  <h3>How do I respond when my child says all their friends are on social media?</h3>
+    <h2>What rules actually work for screen time in the 8 to 10 age range?</h2>
+    <p class="answer-first">
+      The most effective screen-time rules for 8–10-year-olds are clear, predictable, and linked to routines rather than bargaining. Families usually do best with rules like no screens during meals, no devices in bedrooms overnight, screen use only after homework and basic responsibilities, and pre-set stopping points (AAP, 2023).
+    </p>
 
-  <p>Peer pressure around social media access typically intensifies in the 9–11 age range as older siblings or classmates have accounts. Research consistently shows that parental conversations about the reasons behind media limits are more effective than unilateral restriction alone (AAP, 2023). Effective framing for this age: explain that the platforms are engineered specifically to be difficult to stop using, because their business models depend on maximizing attention — this is a factual statement children this age can understand. The age limit exists not as an arbitrary rule but because research showed the platforms have measurable negative effects on younger users' mental health.</p>
+    <h3>How can I make screen limits easier to enforce?</h3>
+    <p class="answer-first">
+      Screen limits are easier to enforce when children ages 8–10 know the rule before screen time starts, get a warning before it ends, and have a specific next activity ready. Predictability reduces conflict more effectively than repeated negotiation in the moment (AAP, 2023).
+    </p>
+    <p>
+      Many parents find that timers, written family rules, and "when-then" language help. For example: "When homework is finished and your backpack is packed, then you may play for 30 minutes." This keeps screens from becoming the default center of the afternoon.
+    </p>
 
-  <h2>What are the real risks of too much screen time for 8 to 10 year olds?</h2>
+    <h3>What should I do if my 8–10-year-old melts down when screens are turned off?</h3>
+    <p class="answer-first">
+      If an 8–10-year-old melts down when screen time ends, the best response is usually to stay calm, hold the limit, and adjust the routine for next time rather than arguing during the meltdown. Frequent explosive reactions are a sign that screen sessions may be too long, too stimulating, or too unpredictable (AAP, 2023).
+    </p>
+    <p>
+      It often helps to end at natural stopping points, avoid abruptly interrupting multiplayer or reward-based games, and build a decompression transition such as snack time, outdoor play, or a shower. If reactions are consistently extreme, reduce the intensity of the content and shorten sessions.
+    </p>
 
-  <p class="answer-first">The primary documented risks of excessive screen use in children ages 8–10 center on displacement of sleep and physical activity — both of which are strongly tied to academic performance, mood regulation, and long-term health. Children ages 6–12 who consistently sleep fewer than 9 hours show measurable increases in behavioral problems, attention difficulties, and obesity risk compared to adequately-sleeping peers (AAP, 2016). Screen use before bed is one of the most consistent drivers of short sleep in this age group.</p>
+    <h2>How can I keep my 8 to 10 year old safer online?</h2>
+    <p class="answer-first">
+      Children ages 8–10 are safest online when parents use private accounts, parental controls, shared passwords, restricted chat features, and active supervision. Cyberbullying affects about 15–20% of school-age children and rises in the 10–14 age range, so safety teaching should begin before problems happen (StopBullying.gov, 2022).
+    </p>
+    <p>
+      Online safety at this age should be concrete, not vague. Children need direct rules such as: do not share your full name, school, address, passwords, or photos without checking first. Do not accept messages from people you do not know in real life. If anything online feels scary, confusing, sexual, or mean, stop and tell an adult right away.
+    </p>
+    <p>
+      Children this age also need to know what to do if something goes wrong. A simple script helps: pause, do not reply, take a screenshot, and show a trusted adult. That approach is especially important for teasing, threats, dares, and attempts to move a conversation to a private app.
+    </p>
 
-  <p>Additional documented risks for 8 to 10 year olds:</p>
-  <ul>
-    <li><strong>Cyberbullying exposure:</strong> Approximately 15–20% of school-age children experience cyberbullying, with incidence peaking in the 10–14 range (Stopbullying.gov, 2022). Children ages 8–10 who are beginning online social interaction are entering this risk window.</li>
-    <li><strong>Inappropriate content:</strong> Even with parental controls active, children this age regularly encounter violent, sexual, or disturbing content through peer sharing, gaming communities, and recommendation algorithms. A 2021 study found that YouTube's recommendation algorithm frequently surfaced age-inappropriate content to child accounts within a few clicks of age-appropriate starting content.</li>
-    <li><strong>Attention fragmentation:</strong> Research suggests heavy consumption of fast-paced short-form video may reduce sustained attention capacity over time — a meaningful concern during the school years, when academic demands on sustained focus are escalating (APA, 2023).</li>
-    <li><strong>Contact with unknown adults:</strong> Online multiplayer gaming and social chat platforms create exposure to unmoderated adult contact. Children ages 8–10 are developmentally vulnerable to manipulation by adults online because they have not yet developed full social perspective-taking or skepticism about online relationships.</li>
-  </ul>
-
-  <h2>How does screen time affect sleep in 8 to 10 year olds?</h2>
-
-  <p class="answer-first">Children ages 8–10 need <strong>9–12 hours of sleep per night</strong>, and screen use within one hour of bedtime is among the most well-documented causes of shortened sleep in this age group (AAP, 2016). Blue light from phones, tablets, TVs, and gaming consoles suppresses melatonin production for 60–90 minutes after exposure, shifting when the brain is ready to sleep. Research shows children with devices in their bedrooms sleep an average of 20–30 fewer minutes per night than peers without — even when devices are nominally off (AAP, 2023).</p>
-
-  <p>Screen-sleep interaction at this age is compounded by early puberty in some children. Girls may begin the pubertal circadian phase delay as early as age 8–9, and boys as early as 9–10 — meaning the biological sleep clock is already shifting slightly later. Screen use before bed amplifies this shift further. The combination of biological phase delay plus blue light exposure is why some 10-year-olds genuinely cannot fall asleep until 10:00 PM despite apparent effort.</p>
-
-  <p>Evidence-based screen rules specifically for sleep protection:</p>
-  <ul>
-    <li><strong>All screens off 60 minutes before target sleep time</strong> — not just "put down," but off or in night mode with blue light filtering</li>
-    <li><strong>All devices charge outside the bedroom overnight</strong> — the single most effective sleep hygiene rule for school-age children; easier to establish at age 8 or 9 than at 12 or 13</li>
-    <li><strong>Gaming ends 60–90 minutes before bed</strong> — video games generate both blue light and emotional arousal from competitive play, both of which delay sleep onset</li>
-  </ul>
-
-  <h2>What is cyberbullying, and how do I protect my 8 to 10 year old?</h2>
-
-  <p class="answer-first">Cyberbullying is defined as repeated, intentional harm directed at someone through digital devices — including text messages, gaming chats, social media, and online comment sections. It affects approximately <strong>15–20% of school-age children</strong> in the United States and is most common between ages 10 and 14 (Stopbullying.gov, 2022). Children ages 8–10 who are beginning online interaction are entering this risk window and should be taught protective behaviors before an incident occurs, not after.</p>
-
-  <p>Teach your 8 to 10 year old these specific protective behaviors:</p>
-  <ul>
-    <li><strong>Screenshot first, then report:</strong> Capture evidence before blocking or deleting — this is critical for school or platform reports.</li>
-    <li><strong>Do not engage or retaliate:</strong> Responding to a bully online reliably escalates the situation. The goal is to document and exit, not to argue.</li>
-    <li><strong>Tell a trusted adult right away:</strong> Reduce shame by making clear that being targeted is never the child's fault. Make explicit that you will not punish or shame them for what they share with you, and that you will not "take away the internet" as a first response — which is the most common reason children don't report.</li>
-    <li><strong>Use platform reporting tools:</strong> Show your child where the report button is on every platform they use before they need it.</li>
-    <li><strong>Privacy settings are the first line of defense:</strong> Restrict who can contact your child, who can see their content, and who can friend or follow them on every platform, before a problem occurs.</li>
-  </ul>
-
-  <p>If your child reports being cyberbullied by a classmate, document the evidence, notify the school, and report the behavior to the platform. If the bullying is severe, persistent, or is affecting your child's sleep, school attendance, or emotional wellbeing, consult your pediatrician. If you suspect an adult is targeting your child online, contact both your pediatrician and local law enforcement.</p>
-
-  <h2>How do I manage screen time without daily conflict?</h2>
-
-  <p class="answer-first">The AAP recommends building a <strong>Family Media Plan</strong> as a collaborative agreement — not a set of rules imposed from above — particularly for children ages 8–10, who are in a developmental stage characterized by growing autonomy and rule-testing (AAP, 2023). When children help create the plan, compliance is significantly higher than when limits are handed down without input. The AAP's free Family Media Plan tool at HealthyChildren.org walks families through the key decisions.</p>
-
-  <p>The most effective structural changes for this age range:</p>
-  <ul>
-    <li><strong>Device charging outside the bedroom:</strong> This single rule is the highest-impact change for protecting sleep and reducing late-night use. Establish it before age 10, when it is far easier to implement than in the tween years.</li>
-    <li><strong>Screens after obligations:</strong> Homework, physical activity (at least 60 minutes of moderate activity is recommended for this age by the CDC), and outdoor or in-person time before screen time — framed as the natural daily sequence, not as punishment.</li>
-    <li><strong>Consistent "off" times, not just limits:</strong> A set end-time (e.g., 7:30 PM on school nights) is far easier for children to accept than unpredictable mid-activity removal. Stopping a video or game mid-session is reliably harder emotionally than stopping at a predictable point.</li>
-    <li><strong>Regular co-use:</strong> Watching, playing, or creating together at least occasionally keeps parents informed about what their child is consuming and experiencing online, and maintains the relationship as the primary channel for concerns.</li>
-    <li><strong>No screens during meals:</strong> This is among the most consistently evidence-supported specific rules for school-age children — meals without screens are associated with better communication, stronger family relationships, and healthier dietary patterns (AAP, 2011).</li>
-  </ul>
-
-  <h2>When should I talk to my pediatrician about my child's screen time?</h2>
-
-  <div class="callout">
-    <p class="answer-first">Talk to your child's pediatrician if screen use is significantly affecting your child's functioning despite your best efforts to set limits. Specific observable red flags for children ages 8–10 that warrant a conversation include:</p>
+    <h2>When should I talk to my pediatrician about my 8 to 10 year old's screen time?</h2>
+    <p class="answer-first">
+      Talk to your pediatrician if your 8–10-year-old's screen use is regularly interfering with sleep, school, mood, physical activity, friendships, or family functioning. Specific red flags include loss of interest in offline activities, major distress when devices are removed, secretive use, and online experiences that seem to trigger anxiety or sadness (AAP, 2023).
+    </p>
     <ul>
-      <li>Your child <strong>consistently gets fewer than 9 hours of sleep on school nights</strong>, and screen use — especially late-night device use — is a contributing factor</li>
-      <li>Your child <strong>becomes extremely distressed, aggressive, or inconsolable when screens are removed</strong> — well beyond what seems proportionate to the situation, or lasting more than 15 to 20 minutes after removal</li>
-      <li>Screen time is <strong>consistently displacing physical activity, homework, or real-world friendships</strong> over a period of weeks despite your attempts to create structure</li>
-      <li>Your child <strong>has become secretive about their online activity</strong> — hiding devices, deleting messages, using devices only when you are not nearby, or refusing to let you see what they are doing</li>
-      <li>You suspect your child has been <strong>exposed to disturbing or inappropriate content</strong> and they seem changed in behavior, mood, or sleep after that exposure</li>
-      <li>You have reason to believe an <strong>unknown adult has been communicating with your child online in an inappropriate or grooming way</strong> — this is a safety emergency; contact local law enforcement as well as your pediatrician</li>
-      <li><strong>School performance has declined</strong> and the timeline correlates with increased screen use, late nights, or morning exhaustion</li>
-      <li>Your child <strong>expresses distress about their appearance, body, or social comparison</strong> in ways that seem connected to content they are viewing online</li>
+      <li>Your child regularly sleeps less because of screens, sneaks devices at night, or seems tired during the day.</li>
+      <li>Your child becomes consistently aggressive, panicked, or inconsolable when screen time ends.</li>
+      <li>Your child stops wanting to do previously enjoyed offline activities like sports, reading, imaginative play, or seeing friends in person.</li>
+      <li>Your child hides devices, lies about use, deletes messages, or becomes unusually secretive about online activity.</li>
+      <li>Your child has been contacted by strangers online or has seen sexual, violent, or deeply upsetting content.</li>
+      <li>Your child shows signs of cyberbullying, such as sudden withdrawal, school avoidance, anxiety about messages, or fear of checking devices.</li>
+      <li>Your child develops headaches, stomachaches, irritability, or attention problems that seem tied to poor sleep or heavy screen use.</li>
+      <li>Your child shows sadness, low self-esteem, body image concerns, or social comparison that worsens after online activity.</li>
     </ul>
-    <p>Your pediatrician can help assess whether the pattern reflects a screen habit issue, an underlying anxiety or mood concern, or a need for family-level behavioral support. Many pediatric practices now use the AAP Family Media Plan as a structured tool during well-child visits for children ages 6 and older.</p>
-  </div>
+    <p>
+      If your child talks about self-harm, suicide, or not wanting to be alive after an online conflict or at any other time, seek urgent help immediately. In the United States, call or text 988 for the Suicide &amp; Crisis Lifeline.
+    </p>
 
-  <section class="faq-section">
-    <h2>Frequently Asked Questions: Screen Time for 8 to 10 Year Olds</h2>
+    <h2>Frequently Asked Questions</h2>
 
-    {faqs.map(faq => (
-      <div class="faq-item">
-        <h3 class="faq-question">{faq.question}</h3>
-        <p class="answer-first faq-answer">{faq.answer}</p>
-      </div>
-    ))}
-  </section>
+    <h3 class="faq-question">Is it bad if my 8 year old uses screens every day?</h3>
+    <p class="answer-first faq-answer">
+      Daily screen use is not automatically a problem for an 8-year-old if it does not crowd out sleep, physical activity, homework, in-person relationships, and family routines (AAP, 2023). The bigger concern is how screens are used, what content your child is seeing, and whether media use causes conflict, irritability, or lost sleep. Talk with your pediatrician if screen use is interfering with school, mood, friendships, or family life.
+    </p>
 
-  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+    <h3 class="faq-question">How many hours of screen time should I allow for my 9 year old?</h3>
+    <p class="answer-first faq-answer">
+      The AAP does not set one fixed daily hour limit for children age 6 and older; instead, it recommends creating consistent limits that protect sleep, exercise, reading, and face-to-face time (AAP, 2023). Many families do well with clear boundaries around school nights, meals, and bedtime. Talk with your pediatrician if your 9-year-old becomes distressed when screens are removed or cannot function well without them.
+    </p>
 
+    <h3 class="faq-question">Should my 10 year old have social media?</h3>
+    <p class="answer-first faq-answer">
+      Most 10-year-olds are not ready for social media, and major platforms generally set 13 as the minimum age under federal privacy rules and platform policies. The AAP and APA both advise caution because social media use is linked with higher risks of bullying, sleep disruption, and body image concerns in older children and teens (AAP, 2023; APA, 2023). Talk with your pediatrician if online activity seems to affect your child's mood, self-esteem, or safety.
+    </p>
+
+    <h3 class="faq-question">Why does my child get so angry when screen time ends?</h3>
+    <p class="answer-first faq-answer">
+      Many 8–10-year-olds become upset when screen time ends because games, videos, and apps are designed to be highly engaging and to reward staying on longer. Strong reactions can still be typical, but intense meltdowns, aggression, or inability to transition may mean limits need to be clearer and media use needs closer supervision (AAP, 2023). Talk with your pediatrician if transitions are consistently extreme or affect daily functioning.
+    </p>
+
+    <h3 class="faq-question">Does screen time really affect sleep in 8 to 10 year olds?</h3>
+    <p class="answer-first faq-answer">
+      Yes, screen time can affect sleep in 8–10-year-olds, especially if screens are used in the hour before bed or kept in the bedroom overnight. Blue light can delay melatonin release, and exciting content can make it harder for children to settle and fall asleep (AASM, 2020). Talk with your pediatrician if your child snores, cannot fall asleep, or is tired during the day despite a regular bedtime.
+    </p>
+
+    <h3 class="faq-question">Should I let my child play video games with online chat?</h3>
+    <p class="answer-first faq-answer">
+      Online chat is usually best introduced slowly and with close supervision in the 8–10 age range because children this age are still learning judgment, privacy, and how to respond to peer pressure. If chat is allowed, it should be limited to known friends, with privacy settings turned on and a clear rule to tell an adult about anything upsetting (AAP, 2023; StopBullying.gov, 2022). Talk with your pediatrician if online interactions are causing anxiety, withdrawal, or behavior changes.
+    </p>
+
+    <h3 class="faq-question">What are signs that screen time is becoming a real problem?</h3>
+    <p class="answer-first faq-answer">
+      Screen time becomes more concerning when an 8–10-year-old regularly loses sleep, stops enjoying offline activities, hides devices, lies about use, or becomes unusually irritable without screens. Those patterns suggest media use may be affecting self-regulation, mood, or daily functioning rather than just being a preferred hobby (AAP, 2023). Talk with your pediatrician if these changes persist or worsen.
+    </p>
+
+    <hr />
+
+    <p>
+      <em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, APA, AASM, and public health guidance. Always consult your child's pediatrician for personalized guidance.</em>
+    </p>
+  </article>
 </BaseLayout>

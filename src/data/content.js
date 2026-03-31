@@ -479,4 +479,10 @@ export const articles = [
     path: "/ages/10-12-years/anxiety/",
     pubDate: "2026-03-30",
   },
+  {
+    title: "How Much Screen Time Is Appropriate for an 8 to 10 Year Old?",
+    description: "A practical, evidence-based guide to screen time for children ages 8 to 10. Covers what the AAP actually recommends, how to set limits, social media readiness, cyberbullying, sleep effects, and when to talk to your pediatrician.",
+    path: "/ages/8-10-years/screen-time/",
+    pubDate: "2026-03-31",
+  },
 ];
