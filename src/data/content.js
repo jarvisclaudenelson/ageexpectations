@@ -491,4 +491,10 @@ export const articles = [
     path: "/ages/14-18-years/staying-home-alone-overnight/",
     pubDate: "2026-03-31",
   },
+  {
+    title: "When Should Kids Start Wearing Deodorant? A Guide for Ages 8–10",
+    description: "A practical, evidence-based guide to body odor and deodorant for children ages 8 to 10. Covers when body odor starts, the difference between adrenarche and puberty, safe deodorant use, hygiene basics, and when to talk to your pediatrician.",
+    path: "/ages/8-10-years/deodorant/",
+    pubDate: "2026-03-31",
+  },
 ];
