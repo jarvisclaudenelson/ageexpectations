@@ -1,8 +1,8 @@
 # AgeExpectations Tasks
 
 ## Now
-- [ ] Deduplicate `src/data/content.js` (remove duplicate paths/titles, canonicalize entries)
-- [ ] Add lightweight analytics slot to layout for future GA4 / Cloudflare injection
+- [x] ~~Deduplicate `src/data/content.js`~~ (73→66, 7 dupes removed, sorted by age+topic)
+- [x] ~~Add lightweight analytics slot to layout for future GA4 / Cloudflare injection~~
 - [ ] Create email capture plan and placeholder CTA block
 - [ ] Identify top 10 monetizable/high-intent pages to strengthen first
 - [ ] Add internal links from age overviews to high-intent long-tail pages
