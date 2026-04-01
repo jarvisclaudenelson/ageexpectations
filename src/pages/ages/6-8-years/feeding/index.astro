@@ -2,38 +2,38 @@
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
-const title = "What Should My 6 to 8 Year Old Be Eating? Nutrition Guide for School-Age Kids";
+const title = "What Should a 6 to 8 Year Old Be Eating? Nutrition Guide for School-Age Kids";
 const description = "A practical, evidence-based nutrition guide for children ages 6 to 8 covering calorie needs, balanced meals, lunch ideas, picky eating, snacks, iron and calcium, and when to talk to your pediatrician, based on USDA and AAP guidance.";
 
 const faqs = [
   {
-    question: "Is it typical that my 7-year-old barely eats dinner but seems hungry after school?",
-    answer: "Yes — many 6–8-year-olds eat more earlier in the day and arrive home very hungry after school. Appetite often shifts based on activity, lunch timing, and growth patterns. If your child is growing steadily, eating from several food groups over the week, and has energy for school and play, this pattern is often typical. Talk to your pediatrician if poor intake is persistent, causes weight loss, or comes with fatigue, pain, or vomiting.",
+    question: "Is it typical that my 6 to 8 year old is hungry all the time?",
+    answer: "Yes — many typically developing 6–8 year olds seem hungry often, especially during growth spurts, sports seasons, or long school days. Appetite can vary noticeably from week to week, but regular meals with protein, fiber, and fat usually help more than constant grazing (AAP, 2020; USDA, 2020–2025). If your child has extreme hunger with weight loss, fatigue, excessive thirst, or sudden appetite changes, talk to your pediatrician."
   },
   {
-    question: "Should I worry if my 6-year-old still only wants a few familiar foods?",
-    answer: "Mild picky eating is still common at ages 6–8, but children this age should gradually tolerate a wider range of foods with repeated, pressure-free exposure (AAP, 2021). Concern is higher if your child avoids entire food groups, gags on textures, loses weight, or family meals become extremely stressful. Talk to your pediatrician if selective eating is affecting growth, nutrition, or daily life.",
+    question: "Should I worry if my 7 year old is still a picky eater?",
+    answer: "Mild picky eating is still common at 6–8 years, and many school-age children prefer familiar foods while slowly expanding their diet. The goal is steady variety over time, not perfect eating at every meal, and repeated low-pressure exposure helps more than forcing bites (AAP, 2020). If your child avoids entire food groups, has poor growth, gags frequently, or mealtimes are extremely distressing, talk to your pediatrician."
   },
   {
-    question: "How much protein does my 8-year-old actually need?",
-    answer: "Children ages 4–8 need about 19 grams of protein per day, which most school-age children can meet through regular meals and snacks rather than special high-protein products (Recommended Dietary Allowances, National Academies). In practice, milk, yogurt, eggs, beans, chicken, nut butters, tofu, and cheese usually cover this easily. Talk to your pediatrician before using protein powders, shakes, or supplements.",
+    question: "How much protein does my 6 to 8 year old need?",
+    answer: "Most children ages 6–8 need about 19 grams of protein per day, which is usually easy to meet through regular meals and snacks that include dairy, eggs, beans, meat, fish, tofu, or nut butters if safe for your child (Dietary Guidelines for Americans, 2020–2025). Most school-age children do not need protein powders. If you think your child is eating very little protein or has restrictive eating, talk to your pediatrician."
   },
   {
-    question: "Is juice okay for a 6 to 8 year old?",
-    answer: "Yes, but only in small amounts. The AAP recommends limiting 100% fruit juice to no more than 4–6 ounces per day for children ages 4–6 and no more than 8 ounces per day after age 7 (AAP, 2017). Whole fruit is preferred because it provides fiber and is more filling. Talk to your pediatrician if juice is replacing meals or causing constipation, diarrhea, or dental concerns.",
+    question: "Does my child need vitamins if they are a picky eater?",
+    answer: "Maybe, but not automatically. Most typically developing 6–8 year olds can meet nutritional needs through food, though some children with very limited diets may need supplements such as vitamin D or iron depending on intake and risk factors (AAP, 2020). Supplements should not replace evaluation of the underlying diet. If your child eats very few foods or you are considering daily supplements, talk to your pediatrician."
   },
   {
-    question: "Does my child need a vitamin every day?",
-    answer: "Most typically developing 6–8-year-olds who eat a reasonably varied diet do not need a daily multivitamin, according to the AAP. Some children may need specific supplementation, such as vitamin D or iron, depending on diet, growth, or lab results. Talk to your pediatrician before starting supplements, especially gummies with added sugar or high-dose products.",
+    question: "How many snacks should my 6 to 8 year old have each day?",
+    answer: "Most 6–8 year olds do well with three meals and one to three planned snacks, depending on school schedule, activity level, and appetite. Planned snacks are usually more helpful than continuous grazing because children this age still benefit from a predictable eating rhythm (AAP, 2020; USDA, 2020–2025). If your child seems unable to make it between meals or is skipping meals because of snacks, talk to your pediatrician."
   },
   {
-    question: "What if my 7-year-old refuses vegetables almost completely?",
-    answer: "Vegetable refusal is common, and repeated exposure works better than pressure, bribing, or forcing bites. Children often need to see and taste a food many times before accepting it. Keep serving small portions alongside familiar foods and let your child see adults eating vegetables regularly. Talk to your pediatrician if refusal extends to most produce and grains or is linked to poor growth, constipation, or strong texture aversion.",
+    question: "Is chocolate milk or juice okay for my 6 to 8 year old?",
+    answer: "Small amounts can fit into a balanced diet, but water and plain milk are usually the best everyday drinks for children ages 6–8. The AAP recommends limiting juice because it is easy to overconsume and adds sugar without the fiber of whole fruit (AAP, 2017). Sweet drinks should not replace meals or snacks. If your child drinks sweet beverages daily and has dental, weight, or appetite concerns, talk to your pediatrician."
   },
   {
-    question: "Are snacks okay, or should my child only eat at meals?",
-    answer: "Snacks are appropriate for most 6–8-year-olds because school-age children often need fuel between meals for attention, physical activity, and growth. The goal is planned snacks with protein, fiber, or healthy fat — like yogurt, fruit, cheese, nuts if age-appropriate, or whole-grain crackers — rather than constant grazing. Talk to your pediatrician if snacking seems to replace meals entirely.",
-  },
+    question: "What if my 6 to 8 year old barely eats dinner but seems healthy?",
+    answer: "That can be typical if your 6–8 year old ate well earlier in the day or is simply not very hungry at dinner. Children do not need to eat the same amount at every meal, and intake often balances out across several days rather than one plate (AAP, 2020). Keep dinner structured and low-pressure. If dinner refusal is persistent, causes conflict, or comes with weight loss or fatigue, talk to your pediatrician."
+  }
 ];
 
 const articleData = articleSchema({
@@ -41,7 +41,7 @@ const articleData = articleSchema({
   description,
   url: "https://ageexpectations.com/ages/6-8-years/feeding/",
   datePublished: "2026-04-01",
-  dateModified: "2026-04-01",
+  dateModified: "2026-04-01"
 });
 
 const faqData = faqSchema(faqs);
@@ -50,161 +50,239 @@ const medicalData = medicalWebPageSchema({
   name: title,
   description,
   url: "https://ageexpectations.com/ages/6-8-years/feeding/",
-  lastReviewed: "2026-04-01",
+  lastReviewed: "2026-04-01"
 });
 ---
 
 <BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
-  <article>
+  <article class="article">
     <h1>{title}</h1>
 
     <p class="answer-first">
-      Most children ages 6–8 need a balanced pattern of fruits, vegetables, grains, protein foods, and dairy across the day, with total energy needs commonly falling around 1,200–1,800 calories depending on age, sex, and activity level (USDA/HHS, 2020–2025). At this age, steady growth matters more than finishing every meal, and appetite can vary meaningfully from day to day.
+      Most typically developing children ages 6–8 need regular meals and 1–3 planned snacks built around fruits, vegetables, whole grains, protein foods, and dairy, with total daily energy needs often falling around 1,200–1,800 calories depending on age, sex, and activity level (USDA/HHS, 2020–2025). Appetite can vary from day to day, so patterns over a week matter more than one meal.
     </p>
 
     <p>
-      Ages 6–8 are a bridge between the preschool years and later school-age eating. Children this age usually can sit through meals, use utensils well, and handle a wider range of textures, but many still have strong preferences and uneven appetites. That is typically developing. The goal is not perfect eating every day — it is a consistent pattern of nutritious foods over time.
+      The early school-age years are a big transition in eating. Children ages 6–8 spend more time away from home, encounter school lunches, birthday treats, sports snacks, and peer influence, and often become more opinionated about food. That can make eating feel less predictable even when development is going exactly as expected.
     </p>
 
-    <h2>What should my 6 to 8 year old be eating each day?</h2>
+    <p>
+      The good news is that most nutrition concerns at this age improve with structure, variety, and repetition rather than pressure. A balanced routine matters more than perfect eating, and many children need to see a new food 10 or more times before they willingly try it (AAP, 2020).
+    </p>
+
+    <h2>What should a 6 to 8 year old be eating each day?</h2>
     <p class="answer-first">
-      A typically developing 6–8-year-old should eat regular meals and 1–2 planned snacks built from all five food groups: fruits, vegetables, grains, protein foods, and dairy or fortified alternatives (USDA/HHS, 2020–2025). Most children this age do best with simple, familiar foods offered repeatedly, not adult-sized portions or restrictive food rules.
+      A balanced diet for children ages 6–8 includes vegetables, fruit, grains, protein foods, and dairy every day, with typical calorie needs ranging from about 1,200–1,800 calories depending on growth and activity level (USDA/HHS, 2020–2025). Most school-age children do best with three meals and one to three planned snacks rather than grazing all day.
     </p>
     <p>
-      According to the USDA Dietary Guidelines 2020–2025, a moderately active child in the 6–8 range often needs about 1,400–1,600 calories per day, though some children need less and very active children may need more. A practical daily pattern often looks like:
+      According to the Dietary Guidelines for Americans 2020–2025, many children in this age range need roughly:
     </p>
     <ul>
-      <li>1–1.5 cups of fruit</li>
-      <li>1.5–2.5 cups of vegetables</li>
-      <li>4–6 ounce-equivalents of grains, with at least half whole grains</li>
-      <li>3–5 ounce-equivalents of protein foods</li>
-      <li>2.5 cups of dairy or fortified soy equivalent</li>
+      <li>1–2 cups of fruit per day</li>
+      <li>1.5–2.5 cups of vegetables per day</li>
+      <li>4–6 ounce-equivalents of grains per day, with at least half as whole grains</li>
+      <li>3–5 ounce-equivalents of protein foods per day</li>
+      <li>2.5 cups of dairy per day</li>
     </ul>
     <p>
-      In real life, that may mean oatmeal and milk at breakfast, a sandwich and fruit at lunch, yogurt after school, and chicken, rice, and cucumbers at dinner. Children do not need every meal to be perfectly balanced. Looking at the whole week is more useful than focusing on one difficult dinner.
+      Portions do not need to look identical every day. A 6-year-old who is smaller or less active may need less than an 8-year-old in sports. What matters most is offering a predictable pattern: breakfast, lunch, dinner, and planned snacks with at least one filling food such as yogurt, eggs, beans, cheese, chicken, hummus, peanut butter if safe, or whole grains.
     </p>
 
-    <h2>How much food does a 6 to 8 year old need?</h2>
+    <h2>How many calories does a 6 to 8 year old need?</h2>
     <p class="answer-first">
-      Most 6–8-year-olds need child-sized portions, not mini adult meals, and hunger can vary widely with growth spurts, school schedules, and physical activity (AAP, 2021; USDA/HHS, 2020–2025). A better guide than forcing portion sizes is to offer regular meals and snacks and let your child decide how much to eat from what is served.
+      Most children ages 6–8 need about 1,200–1,800 calories per day, with lower needs for less active children and higher needs for very active children (USDA/HHS, 2020–2025). Calorie needs are broad ranges, not exact daily targets, so parents usually do not need to count calories unless a pediatrician recommends it.
     </p>
     <p>
-      Portion size depends on age, body size, and activity. A 6-year-old who spends the afternoon at recess and soccer may eat more than an 8-year-old on a quiet day, and both can be healthy. Parents are responsible for what, when, and where food is offered; children are responsible for whether and how much they eat. This division of responsibility is widely supported in pediatric feeding guidance because it reduces mealtime pressure and helps children preserve internal hunger and fullness cues.
+      As a general guide, USDA estimates place many children in these ranges:
+    </p>
+    <ul>
+      <li>Age 6: often about 1,200–1,800 calories per day</li>
+      <li>Age 7: often about 1,200–2,000 calories per day</li>
+      <li>Age 8: often about 1,400–2,000 calories per day</li>
+    </ul>
+    <p>
+      The wide range exists because activity level matters. A child who sits most of the day has different needs than a child who plays soccer three afternoons a week and runs around at recess. Growth also happens unevenly. It is common for appetite to increase during a growth spurt and drop again the next week.
     </p>
     <p>
-      Practical portion examples for this age include one slice of toast, half to one cup of milk, one egg, half a sandwich, one small apple, a few tablespoons of vegetables, or a palm-sized portion of chicken. If your child asks for seconds of a balanced meal, that is usually fine. If your child eats very little at one meal and more at the next, that can also be typical.
+      Instead of calorie counting, parents can usually focus on growth, energy, mood, and eating variety. A child who is growing steadily, has energy for school and play, and eats from several food groups is usually doing well.
     </p>
 
-    <h2>What nutrients matter most for 6 to 8 year olds?</h2>
+    <h2>How much protein does my 6 to 8 year old need?</h2>
     <p class="answer-first">
-      Iron, calcium, vitamin D, fiber, and protein are especially important in the 6–8 age range because they support growth, bone health, energy, blood health, and attention (AAP, 2020; USDA/HHS, 2020–2025). Most children can get these nutrients from food, but restrictive eating patterns can make shortfalls more likely.
+      Children ages 4–8 generally need about 19 grams of protein per day, and most 6–8 year olds can meet that need easily through ordinary foods without protein shakes or special supplements (Dietary Guidelines for Americans, 2020–2025). Protein should be spread across meals and snacks rather than loaded into one meal.
+    </p>
+    <p>
+      Helpful protein foods for this age include:
+    </p>
+    <ul>
+      <li>Eggs</li>
+      <li>Milk, yogurt, and cheese</li>
+      <li>Chicken, turkey, beef, and fish</li>
+      <li>Beans and lentils</li>
+      <li>Tofu</li>
+      <li>Nut butters or seed butters, if appropriate and safe for your child</li>
+    </ul>
+    <p>
+      For perspective, one egg has about 6 grams of protein, 1 cup of milk has about 8 grams, and 2 tablespoons of peanut butter have about 7 grams. That means many children reach daily protein needs without much difficulty. Parents are often more worried about protein than they need to be; for many school-age children, fiber, iron, and vegetable intake are more common gaps.
     </p>
 
-    <h3>Why is iron important for school-age kids?</h3>
+    <h2>Does my 6 to 8 year old need milk or dairy every day?</h2>
     <p class="answer-first">
-      Iron deficiency remains the most common nutritional deficiency in children, and low iron can contribute to fatigue, poor concentration, and learning difficulties (AAP, 2020). Children ages 6–8 need reliable iron sources, especially if they eat very little meat or have a highly selective diet.
+      Most children ages 6–8 need about 2.5 cups of dairy per day or an equivalent source of calcium and vitamin D to support bone growth and tooth health (USDA/HHS, 2020–2025). Milk is one option, but yogurt, cheese, and fortified alternatives can also help meet these needs.
     </p>
     <p>
-      Good iron sources include lean red meat, chicken, beans, lentils, tofu, fortified cereal, and spinach. Pairing iron-rich foods with vitamin C foods like strawberries, oranges, or bell peppers helps the body absorb iron better. If a child seems unusually tired, pale, short of breath with routine play, or has a very limited diet, a pediatrician may consider screening.
+      School-age years are an important time for building bone mass. Calcium and vitamin D matter because the body is actively laying down bone that supports later growth. Good sources include milk, yogurt, cheese, calcium-fortified soy milk, and fortified plant products when appropriate.
+    </p>
+    <p>
+      If a child does not drink cow's milk, parents should pay attention to whether the substitute is fortified and whether it contains enough protein. Many plant beverages are lower in protein than cow's milk. Unsweetened fortified soy milk is usually the closest nutritional alternative, though children with allergies or other dietary restrictions may need individualized guidance from their pediatrician.
     </p>
 
-    <h3>Why do calcium and vitamin D matter at ages 6–8?</h3>
+    <h2>What are the most important nutrients for a 6 to 8 year old?</h2>
     <p class="answer-first">
-      Calcium and vitamin D are essential during ages 6–8 because bone-building is active long before the teen growth spurt, and children in this range generally need about 2.5 cups of dairy or fortified equivalent daily plus adequate vitamin D intake (USDA/HHS, 2020–2025; AAP guidance on bone health).
-    </p>
-    <p>
-      Milk, yogurt, cheese, fortified soy milk, and fortified plant products can all help. Children who avoid dairy completely may need more careful planning. Because food sources of vitamin D are limited, some children need supplementation, but the right dose depends on the child. Your pediatrician can help if intake is low or your child has other risk factors for deficiency.
+      Iron, calcium, vitamin D, fiber, and healthy fats are especially important for children ages 6–8 because they support growth, attention, bone health, digestion, and steady energy (AAP, 2020; USDA/HHS, 2020–2025). School-age children often get enough calories but still fall short on vegetables, fiber, and iron-rich foods.
     </p>
 
-    <h3>How much fiber should a 6 to 8 year old get?</h3>
+    <h3>Why is iron important for 6 to 8 year olds?</h3>
     <p class="answer-first">
-      Fiber matters because it supports digestive health and helps prevent constipation, which is common in school-age children. Fruits, vegetables, beans, and whole grains are the easiest ways to raise fiber intake without making food feel medicalized or restrictive (USDA/HHS, 2020–2025).
+      Iron helps carry oxygen in the blood and supports attention, learning, and energy, and iron deficiency remains one of the most common nutritional deficiencies in childhood (AAP, 2020). Children ages 6–8 who eat very little meat, beans, fortified cereal, or leafy greens may be at higher risk.
     </p>
     <p>
-      A child who mainly eats refined crackers, white bread, cheese, and very few fruits or vegetables is more likely to struggle with hard stools or belly pain. If constipation is frequent, food and fluid patterns are worth reviewing with your pediatrician.
+      Iron-rich foods include lean meats, beans, lentils, fortified cereals, spinach, and tofu. Pairing iron foods with vitamin C sources such as strawberries, oranges, or bell peppers can improve absorption.
     </p>
 
-    <h2>What does a healthy breakfast, lunch, and snack look like for a 6 to 8 year old?</h2>
+    <h3>Why do calcium and vitamin D matter at this age?</h3>
     <p class="answer-first">
-      A healthy meal for a 6–8-year-old usually combines a carbohydrate for energy, a protein or fat for staying power, and at least one fruit or vegetable (USDA/HHS, 2020–2025). Children this age generally do better with predictable, simple meals than with large, complicated plates that feel overwhelming.
+      Calcium and vitamin D are critical during ages 6–8 because bone growth is ongoing and daily intake supports long-term skeletal health (USDA/HHS, 2020–2025). Children who avoid dairy or fortified alternatives may not get enough without careful planning.
     </p>
     <p>
-      Breakfast ideas include oatmeal with fruit, eggs with toast, yogurt with berries, or cereal with milk and banana. Lunch ideas include a turkey sandwich and apple slices, pasta with peas and cheese, bean quesadillas, or leftovers packed in a thermos. Snacks can be more helpful when they include protein or fiber: cheese and crackers, yogurt, fruit with peanut butter if safe for your child, hummus with pita, or a boiled egg with fruit.
-    </p>
-    <p>
-      School lunch acceptance varies a lot in this age group. Some children are distracted at lunch and come home ravenous. That does not automatically mean something is wrong. A filling after-school snack can be a useful bridge to dinner.
+      Vitamin D can be harder to get from food alone, so some children need supplementation depending on diet, geography, sun exposure, and pediatrician guidance.
     </p>
 
-    <h2>Is picky eating still typical at 6 to 8?</h2>
+    <h3>Why does fiber matter for school-age kids?</h3>
     <p class="answer-first">
-      Yes — picky eating can still be typical at ages 6–8, although most children this age slowly expand their accepted foods with repeated, low-pressure exposure (AAP, 2021). Selective eating becomes more concerning when it affects growth, excludes whole food groups, or causes major family stress, gagging, or distress around meals.
+      Fiber helps regulate digestion, supports fullness, and may reduce constipation, which is common in school-age children who eat a lot of refined snack foods and too few fruits, vegetables, beans, and whole grains (AAP, 2020). Fiber intake usually improves when meals include plant foods regularly.
     </p>
     <p>
-      Many school-age children eat only a few vegetables, reject mixed dishes, or insist foods be prepared a specific way. That can still fit within typical development. What helps most is structure: offer meals on a schedule, include one or two familiar foods, keep portions small, and avoid pressure such as “just three more bites.” Research and pediatric feeding guidance consistently show that pressure can backfire and increase resistance.
-    </p>
-    <p>
-      It is also useful to remember that exposure counts even if your child does not eat the food. Seeing broccoli on the plate, smelling soup, helping wash peppers, or taking one tiny lick can all be part of progress.
+      Fiber-rich foods include fruit with skin, vegetables, oatmeal, beans, lentils, popcorn for children who can safely handle it, and whole grain breads and cereals.
     </p>
 
-    <h2>How can I help my 6 to 8 year old try more foods without power struggles?</h2>
+    <h2>What does a healthy meal look like for a 6 to 8 year old?</h2>
     <p class="answer-first">
-      The most effective way to help a 6–8-year-old broaden food acceptance is to use repeated exposure, shared family meals, and calm limits instead of pressure, bribing, or making separate meals on demand (AAP, 2021). Children are more likely to try foods when eating stays predictable and emotionally neutral.
+      A healthy meal for children ages 6–8 usually includes a protein food, a fruit or vegetable, a grain or starch, and water or milk, which creates a more filling and nutritionally balanced plate than offering mostly refined snack foods (USDA MyPlate, 2020–2025). The exact portion can vary widely by appetite and activity level.
+    </p>
+    <p>
+      Practical examples include:
+    </p>
+    <ul>
+      <li>Turkey sandwich on whole grain bread, cucumber slices, apple, and milk</li>
+      <li>Bean and cheese quesadilla, berries, and avocado</li>
+      <li>Chicken, rice, peas, and orange slices</li>
+      <li>Yogurt, granola, banana, and scrambled egg</li>
+    </ul>
+    <p>
+      Parents do not need to make every meal look perfect. A useful rule is to offer at least one food your child usually eats, plus one or two foods they are still learning to accept. That keeps meals familiar enough to reduce battles while still creating repeated exposure to variety.
+    </p>
+
+    <h2>What are good snack ideas for a 6 to 8 year old?</h2>
+    <p class="answer-first">
+      The best snacks for children ages 6–8 combine protein, fiber, or healthy fat so they actually hold a child until the next meal, rather than causing a quick energy spike and crash (AAP, 2020; USDA/HHS, 2020–2025). Snacks work best when they are planned, not constantly available all afternoon.
+    </p>
+    <p>
+      Good examples include:
+    </p>
+    <ul>
+      <li>Apple slices with peanut butter or sunflower seed butter</li>
+      <li>Yogurt with berries</li>
+      <li>Cheese and whole grain crackers</li>
+      <li>Hummus with carrots or pita</li>
+      <li>Boiled egg and fruit</li>
+      <li>Trail mix for children who can safely manage nuts and seeds</li>
+      <li>Whole grain toast with avocado</li>
+    </ul>
+    <p>
+      Snacks do not need to be elaborate. The goal is to bridge hunger between meals, especially after school when many children are tired and ravenous. A planned after-school snack often improves, rather than ruins, dinner because it prevents extreme hunger and irritability.
+    </p>
+
+    <h2>Is picky eating still typical at 6 to 8 years?</h2>
+    <p class="answer-first">
+      Yes — picky eating can still be typical in children ages 6–8, especially around vegetables, mixed dishes, and unfamiliar textures, and many school-age children need repeated exposure before accepting new foods (AAP, 2020). Picky eating is usually managed best with routine and low pressure, not bribing or forcing.
     </p>
     <p>
       Helpful strategies include:
     </p>
     <ul>
-      <li>Serve at least one familiar food at each meal</li>
-      <li>Offer new foods in very small amounts</li>
-      <li>Let your child help shop, wash, stir, or plate food</li>
-      <li>Keep meal and snack times predictable</li>
-      <li>Model eating a range of foods yourself</li>
-      <li>Skip battles, lectures, and “clean your plate” rules</li>
+      <li>Serve new foods alongside familiar foods</li>
+      <li>Keep offering without pressuring your child to taste</li>
+      <li>Use consistent meal and snack times</li>
+      <li>Let children help choose produce or pack lunch</li>
+      <li>Avoid making separate "backup meals" every night</li>
     </ul>
     <p>
-      Family meals matter for more than nutrition. The AAP has noted that eating together several times per week is linked with healthier dietary patterns and better emotional and academic outcomes in children and adolescents (AAP, 2011). The benefit comes partly from routine and connection, not just the menu.
+      Many children become more selective when school starts because schedules are tiring, school cafeterias are stimulating, and independence increases. That does not automatically mean there is a problem. It becomes more concerning if a child is dropping weight, avoiding entire food groups, gagging frequently, or having severe mealtime anxiety.
     </p>
 
     <h2>What should my 6 to 8 year old drink?</h2>
     <p class="answer-first">
-      Water and milk should be the main drinks for most children ages 6–8, while sugary drinks should be limited and juice kept modest according to AAP guidance (AAP, 2017). Children this age do not need soda, sports drinks, energy drinks, or sweetened coffee beverages as part of a typical diet.
+      Water should be the main drink for children ages 6–8, with milk or fortified alternatives as another regular option, while juice and sugary drinks should be limited because they add sugar without the fiber and fullness of whole foods (AAP, 2017; USDA/HHS, 2020–2025). Most school-age children do not need sports drinks.
     </p>
     <p>
-      Water should be available throughout the day, especially after school and during sports. Milk can support calcium and vitamin D intake, though fortified alternatives may work for some families. Juice is not necessary but can fit in small amounts. Sports drinks are usually unnecessary unless a child is doing prolonged, intense exercise in hot conditions. Energy drinks are not appropriate for children because of caffeine and other stimulants.
+      The AAP recommends limiting juice intake in school-age children to no more than 8 ounces per day, though less is often better (AAP, 2017). Whole fruit is preferred because it provides fiber and is more filling.
     </p>
     <p>
-      If your child frequently drinks sweet beverages, one realistic step is to change just one routine first, such as replacing a daily juice box or sports drink with water at dinner.
+      Sports drinks are usually unnecessary unless a child is doing prolonged vigorous exercise in heat. For most children, water is enough for routine play and school sports. Sweet drinks can also crowd out appetite for real meals, contribute to dental cavities, and train children to expect sweet flavors all day.
     </p>
 
-    <h2>Are desserts, treats, and school snacks okay for a 6 to 8 year old?</h2>
+    <h2>How can I help my 6 to 8 year old eat well at school?</h2>
     <p class="answer-first">
-      Yes — desserts and treats can fit into a healthy diet for a 6–8-year-old when they are part of a balanced pattern rather than heavily restricted or constantly available (AAP-aligned feeding guidance). Overly rigid food rules can make sweets more emotionally charged and may increase preoccupation with them.
+      Children ages 6–8 eat better at school when lunches are familiar, easy to open, quick to finish, and include one protein source, one fruit or vegetable, and one preferred item (AAP, 2020). Many school-age children have limited time to eat, so practicality matters as much as nutrition.
     </p>
     <p>
-      School-age children notice what peers eat, which can make parents worry about cupcakes, classroom treats, and packaged snacks. One cookie, a birthday cupcake, or chips in a lunchbox does not define a child's diet. What matters is the broader pattern over days and weeks. Children generally do best when parents avoid labeling foods as “good” or “bad” and instead talk about foods as everyday foods and sometimes foods.
+      Useful school lunch ideas include:
+    </p>
+    <ul>
+      <li>Turkey and cheese roll-ups, crackers, grapes</li>
+      <li>Sunflower butter sandwich, strawberries, yogurt</li>
+      <li>Pasta salad with beans or chicken, cucumber, fruit</li>
+      <li>Cheese cubes, pretzels, sliced peppers, apple</li>
+    </ul>
+    <p>
+      It also helps to check whether your child can independently open containers, peel fruit, and manage wrappers. Some children come home hungry not because they disliked lunch, but because they ran out of time or could not open it. A reliable breakfast and after-school snack can also support children whose school lunch intake is inconsistent.
+    </p>
+
+    <h2>How can I support a healthy relationship with food at 6 to 8 years?</h2>
+    <p class="answer-first">
+      Children ages 6–8 build the healthiest relationship with food when adults provide structure without shame, avoid labeling foods as morally "good" or "bad," and keep body talk neutral and respectful (AAP, 2016; AAP, 2020). This age is early enough that parent language still strongly shapes how children think about eating and bodies.
     </p>
     <p>
-      If treats lead to nonstop bargaining, keep them parent-portioned and offered at predictable times rather than as a reward for eating other foods.
+      Helpful habits include:
+    </p>
+    <ul>
+      <li>Offer regular meals and snacks without pressure</li>
+      <li>Let children decide how much to eat from what is offered</li>
+      <li>Avoid commenting on weight, body shape, or needing to "earn" dessert</li>
+      <li>Model eating a variety of foods</li>
+      <li>Use food for nourishment and enjoyment, not punishment or reward</li>
+    </ul>
+    <p>
+      Family meals can help here too. The AAP has noted that regular family meals are associated with healthier dietary patterns and lower rates of disordered eating behaviors in children and adolescents (AAP, 2011). The goal is not a perfect homemade dinner every night; the benefit comes largely from shared routine and conversation.
     </p>
 
     <h2>When should I talk to my pediatrician about my 6 to 8 year old's eating?</h2>
     <p class="answer-first">
-      Talk to your pediatrician if your 6–8-year-old is losing weight, crossing downward on growth curves, avoiding whole food groups, choking or gagging with textures, or showing fatigue, constipation, or other symptoms that suggest nutrition is being affected (AAP, 2020; USDA/HHS, 2020–2025). Specific observable patterns matter more than a single phase of picky eating.
+      Talk to your pediatrician if your 6–8 year old has weight loss, poor growth, extreme food restriction, frequent choking or gagging, ongoing constipation, fatigue, or a diet so limited that whole food groups are missing (AAP, 2020). These are concrete red flags that deserve more than a wait-and-see approach.
     </p>
     <ul>
-      <li>Your child has weight loss or poor weight gain</li>
-      <li>Your child eats fewer and fewer foods over time instead of slowly expanding</li>
-      <li>Your child avoids an entire category such as all proteins or all fruits and vegetables</li>
-      <li>Your child gags, coughs, pockets food, or seems afraid to chew or swallow</li>
-      <li>Your child has frequent constipation, belly pain, vomiting, or diarrhea</li>
-      <li>Your child seems unusually tired, pale, or short of breath with normal activity</li>
-      <li>Your child has strong sensory reactions to textures that make meals very difficult</li>
-      <li>Your child shows intense fear of weight gain, body image distress, or restrictive eating rules</li>
-      <li>Your child drinks so much milk or sweet beverages that meals are regularly skipped</li>
-      <li>Your family feels every meal has become a daily battle</li>
+      <li>Your child is losing weight or falling off their usual growth curve</li>
+      <li>Your child seems unusually tired, pale, or short of breath, which can be signs of iron deficiency</li>
+      <li>Your child avoids entire categories of food such as all proteins or all dairy</li>
+      <li>Your child gags, coughs, or chokes frequently with age-appropriate foods</li>
+      <li>Your child has severe constipation, painful stools, or chronic stomachaches related to eating</li>
+      <li>Your child drinks large amounts of milk or sweet drinks and eats very little solid food</li>
+      <li>Your child shows intense anxiety, fear, or distress around meals</li>
+      <li>Your child is fixated on weight, calories, or body size in a way that interferes with eating</li>
     </ul>
     <p>
-      A pediatrician can assess growth, review diet patterns, and decide whether screening for iron deficiency, constipation, feeding disorder, anxiety, or other concerns makes sense.
+      If a parent is worried, that concern itself is a good reason to bring the issue up. Eating problems are often easier to address early, before they become a bigger feeding or growth issue.
     </p>
 
     <h2>Frequently Asked Questions</h2>
@@ -218,13 +296,9 @@ const medicalData = medicalWebPageSchema({
 
     <hr />
 
-    <p>
-      <strong>Sources:</strong> American Academy of Pediatrics (AAP); USDA/HHS Dietary Guidelines for Americans, 2020–2025; AAP Policy Statement on Fruit Juice, 2017; AAP family meal and nutrition guidance; National Academies Recommended Dietary Allowances.
-    </p>
-
-    <p>
+    <p class="disclaimer">
       <em>
-        AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines where applicable. Always consult your child's pediatrician for personalized guidance.
+        AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, USDA, and related pediatric guidance. Always consult your child's pediatrician for personalized guidance.
       </em>
     </p>
   </article>
