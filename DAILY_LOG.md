@@ -11,3 +11,18 @@
 - ✅ Added GA4 analytics slot to BaseLayout.astro — activates via `PUBLIC_GA4_ID` env var, zero-impact until Erik creates the GA4 property
 - Next: top-10 monetizable page identification, then email capture CTA block
 - ✅ GA4 analytics wired in (G-JZB1XR2Z6B) — hardcoded in BaseLayout.astro, pushed to prod
+
+## 2026-04-01
+- ✅ Instagram backfill: posted 3 images (12-14y overview, 12-18m overview, 14-18y overview). 18 total posted, 21 remaining.
+- ✅ Top-10 monetizable page mapping completed. Highest-value pages ranked by commercial intent:
+  1. 6-9m feeding (baby gear affiliates: high chairs, food makers, spoon sets)
+  2. 14-18y nutrition (sports nutrition, protein, supplements)
+  3. 12-14y nutrition (puberty nutrition, period products, sports drinks)
+  4. 8-10y deodorant (personal care product affiliates)
+  5. 14-18y sleep (premium mattresses, sleep tech, blue light glasses)
+  6. 3-4y nutrition (lunch boxes, picky eating books, snack brands)
+  7. 12-14y red-flags (therapy services: BetterHelp, Talkspace; CBT workbooks)
+  8. 10-12y anxiety (weighted blankets, mindfulness apps, therapy directories)
+  9. 5-6y learning-disabilities (tutoring platforms, reading programs, assessment services)
+  10. 0-1m sleep (bassinets, swaddles, monitors: Nanit, Owlet)
+- Next: email capture CTA component (reusable block for milestone checklist lead magnet)
