@@ -468,4 +468,10 @@ export const articles = [
     path: "/ages/6-8-years/feeding/",
     pubDate: "2026-04-01",
   },
+  {
+    title: "What Time Should a 14 Year Old Go to Bed?",
+    description: "A practical, evidence-based guide to bedtime for 14-year-olds. Covers how much sleep teens need, why early bedtimes become biologically harder during puberty, realistic school-night bedtimes, weekend sleep, and when to talk to your pediatrician.",
+    path: "/ages/14-18-years/bedtime/",
+    pubDate: "2026-04-02",
+  },
 ];

@@ -1,0 +1,259 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Time Should a 14 Year Old Go to Bed?";
+const description = "A practical, evidence-based guide to bedtime for 14-year-olds. Covers how much sleep teens need, why early bedtimes become biologically harder during puberty, realistic school-night bedtimes, weekend sleep, and when to talk to your pediatrician.";
+const faqs = [
+  {
+    question: "Is 9 PM too early for my 14-year-old to go to bed?",
+    answer: "For many 14-year-olds, 9 PM is earlier than their biology naturally supports, but it is not harmful if your teen can actually fall asleep then. Puberty delays melatonin release by about 2 hours compared with childhood, so many teens are not sleepy enough for a 9 PM sleep onset even when they need more rest overall (AAP, 2014). If your teen lies awake for long periods, a slightly later bedtime with a stable wake time is usually more realistic."
+  },
+  {
+    question: "What is a realistic bedtime for a 14-year-old on school nights?",
+    answer: "A realistic school-night bedtime for many 14-year-olds is between about 9:30 PM and 10:30 PM, depending on the required wake time. Teenagers ages 13–18 need 8–10 hours of sleep per night (AAP, 2014; AASM, 2016). If your 14-year-old must wake at 6:30 AM, a bedtime that allows sleep by roughly 8:30–10:30 PM is the target range, though many teens naturally fall toward the later end."
+  },
+  {
+    question: "Should I let my 14-year-old sleep in on weekends?",
+    answer: "A 14-year-old can usually sleep somewhat later on weekends, but sleeping in more than 1–2 hours past the usual wake time can worsen Monday-morning fatigue. Sleep specialists recommend keeping weekend schedules fairly close to school-day schedules to reduce social jet lag, which is the mismatch between biological sleep timing and weekday obligations (AASM, 2020)."
+  },
+  {
+    question: "Why is my 14-year-old tired even when they go to bed early?",
+    answer: "A 14-year-old may still feel tired with an early bedtime if they are not actually falling asleep, are getting poor-quality sleep, are carrying sleep debt, or have a sleep disorder. More than 70% of high school students report getting less than 8 hours of sleep on school nights, and chronic sleep restriction builds up over time (CDC, 2015; AAP, 2014). Snoring, frequent waking, anxiety, depression, and heavy evening screen use can all contribute."
+  },
+  {
+    question: "Should I take my 14-year-old's phone at night?",
+    answer: "Keeping phones out of the bedroom at night is one of the most evidence-supported ways to improve teen sleep. The AAP and sleep experts recommend device-free time before bed because notifications, emotional stimulation, and blue light can delay sleep onset and shorten total sleep time (AAP, 2016; AASM, 2020). A family charging station outside the bedroom is often more effective than repeated reminders."
+  },
+  {
+    question: "Is it typical that my 14-year-old can't fall asleep before 11 PM?",
+    answer: "Yes, it can be typical for a 14-year-old to have trouble falling asleep before 11 PM because puberty shifts the circadian rhythm later. The teen brain starts releasing melatonin later than it did in childhood, making earlier sleep feel biologically difficult rather than simply oppositional behavior (AAP, 2014). If your teen also has to wake early for school, the main concern is whether they are getting enough total sleep."
+  },
+  {
+    question: "When should I worry that my 14-year-old is sleeping too much?",
+    answer: "You should talk to your pediatrician if your 14-year-old regularly sleeps far beyond the expected 8–10 hours but is still exhausted, is hard to wake, or has mood changes, school decline, snoring, or sudden sleep attacks. Excessive sleepiness can reflect sleep deprivation, depression, iron deficiency, medication effects, or a sleep disorder rather than simply a growing teen (AAP, 2014)."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/bedtime/",
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-02"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/bedtime/",
+  lastReviewed: "2026-04-02"
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(medicalData)} />
+  </Fragment>
+
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">
+      Most 14-year-olds need a bedtime that allows 8–10 hours of sleep before their required wake time, because teenagers ages 13–18 are recommended to get 8–10 hours per night (AAP, 2014; AASM, 2016). In real life, that often means falling asleep around 9:30–10:30 PM on school nights, though puberty makes earlier sleep biologically harder.
+    </p>
+
+    <p>
+      Bedtime becomes surprisingly complicated in early and middle adolescence. Parents often see a teenager who looks tired, acts wired at night, and still resists an earlier bedtime. That pattern is common, and it is not just about willpower. During puberty, the body clock shifts later, so many 14-year-olds genuinely do not feel sleepy as early as they did in elementary school.
+    </p>
+
+    <p>
+      At the same time, school start times, sports, homework, jobs, and phones make it easy for teenagers to fall short on sleep. The goal is not an arbitrary "perfect" bedtime. The goal is enough total sleep, a consistent routine, and watching for red flags that suggest your teen needs extra support or a pediatric evaluation.
+    </p>
+
+    <h2>What time should a 14-year-old go to bed on school nights?</h2>
+    <p class="answer-first">
+      A 14-year-old should usually go to bed early enough to get 8–10 hours of sleep before school, which often means a target sleep time around 9:30–10:30 PM for teens waking between 6:00 and 7:00 AM (AAP, 2014; AASM, 2016). The exact bedtime depends more on wake time than on age alone.
+    </p>
+    <p>
+      A simple way to set bedtime is to work backward from the morning alarm. If a 14-year-old must wake at 6:30 AM, the ideal sleep window is roughly 8:30 PM to 10:30 PM. Because many teens do not actually fall asleep the moment they get into bed, a practical "lights out" time may need to be 15–30 minutes earlier than the desired sleep onset.
+    </p>
+    <p>
+      For many families, a realistic school-night plan looks like screens off by 9:00 PM, wind-down by 9:15 PM, and in bed by 9:30 or 10:00 PM. A teen who does homework or sports late may need a later bedtime, but then the family should check whether the total sleep time is still landing in the recommended range.
+    </p>
+
+    <h2>Why does my 14-year-old suddenly want to stay up later?</h2>
+    <p class="answer-first">
+      Most 14-year-olds want to stay up later because puberty causes a circadian phase delay, meaning the brain starts releasing melatonin later than it did in childhood and natural sleepiness shifts later into the evening (AAP, 2014). This is a biological change, not simply defiance or poor motivation.
+    </p>
+    <p>
+      Before puberty, many children get sleepy relatively early in the evening. During adolescence, that pattern changes. Sleep researchers describe this as a shift in the internal body clock. A teenager may feel fully awake at 9 PM even if they still need a full night of sleep.
+    </p>
+    <p>
+      This biological shift collides with early school schedules. A teen may not be ready to fall asleep until 10:30 or 11:00 PM but still has to wake at 6:00 AM. That mismatch is one reason the AAP has supported later school start times for middle and high school students (AAP, 2014).
+    </p>
+    <p>
+      Understanding the biology can help families move away from power struggles and toward practical solutions: consistent routines, reduced evening light exposure, and realistic expectations about what time sleep will actually happen.
+    </p>
+
+    <h2>How much sleep does a 14-year-old actually need?</h2>
+    <p class="answer-first">
+      A 14-year-old typically needs 8–10 hours of sleep per night, which is the recommended range for all teenagers ages 13–18 from the American Academy of Pediatrics and the American Academy of Sleep Medicine (AAP, 2014; AASM, 2016). Regularly getting less than 8 hours is associated with worse mood, attention, and health outcomes.
+    </p>
+    <p>
+      Sleep is not just downtime for a teenager. It supports learning, memory consolidation, emotional regulation, athletic recovery, immune function, and mental health. When teens consistently miss sleep, the effects often show up as irritability, trouble waking up, falling grades, emotional reactivity, and dependence on caffeine.
+    </p>
+    <p>
+      National survey data show that most adolescents do not get enough sleep. The CDC reported that more than 70% of high school students were sleeping fewer than 8 hours on school nights in prior national analyses (CDC, 2015). That means chronic sleep restriction is common, but common does not mean harmless.
+    </p>
+    <p>
+      A teen who says they function fine on 6 or 7 hours is usually adapting to sleep loss, not thriving on it. Most 14-year-olds do better academically and emotionally when their schedule consistently allows the full recommended range.
+    </p>
+
+    <h2>What is a realistic bedtime routine for a 14-year-old?</h2>
+    <p class="answer-first">
+      A realistic bedtime routine for a 14-year-old starts 30–60 minutes before bed and includes dimming lights, stopping screens, finishing homework, and doing the same sequence most nights, because consistent pre-sleep routines help cue the brain for sleep (AASM, 2020; AAP, 2016). The routine matters almost as much as the clock time.
+    </p>
+    <p>
+      A useful teen routine does not need to be elaborate. It just needs to be repeatable. Many families do best with a sequence like shower, backpack packed, phone charging outside the bedroom, brief check-in, then reading or listening to calm music.
+    </p>
+    <p>
+      Bright light and stimulating activity close to bedtime make it harder for the adolescent brain to shift into sleep mode. That is why sleep experts recommend reducing screen exposure for at least 30–60 minutes before bed (AASM, 2020). Texting, gaming, and scrolling can also increase emotional arousal even when the teen feels "relaxed."
+    </p>
+    <p>
+      A bedtime routine is most effective when it is steady across school nights. A teen does not need a babyish ritual, but they do need a predictable transition from busy evening to sleep.
+    </p>
+
+    <h2>Should my 14-year-old have the same bedtime every night?</h2>
+    <p class="answer-first">
+      A 14-year-old does not need the exact same bedtime every night, but sleep and wake times should usually stay within about 1 hour on weekdays and weekends to protect the body clock and reduce Monday fatigue (AASM, 2020). Large schedule swings act like mini jet lag.
+    </p>
+    <p>
+      Many teens try to catch up on sleep by staying up very late on Friday and Saturday, then sleeping until noon. While extra rest may feel helpful in the moment, it can delay the body clock even further and make Sunday night especially difficult.
+    </p>
+    <p>
+      Sleep specialists often call this pattern "social jet lag." The teen is basically moving between two time zones each week: one for school days and another for weekends. Keeping wake times relatively stable is often more important than forcing an unrealistic bedtime.
+    </p>
+    <p>
+      A reasonable approach is to allow some flexibility on weekends while keeping bedtime and wake time within 1–2 hours of the school-week schedule. That gives teens a little breathing room without completely resetting their internal clock.
+    </p>
+
+    <h2>How do phones, homework, and sports affect a 14-year-old's bedtime?</h2>
+    <p class="answer-first">
+      Phones, homework, and late activities commonly push a 14-year-old's bedtime later by delaying melatonin release, increasing mental stimulation, and shrinking the time available for sleep; screen light alone can suppress the body's natural sleep signals, especially when used close to bedtime (AASM, 2020; AAP, 2016).
+    </p>
+    <p>
+      Homework is often a genuine scheduling problem, not poor planning. A teen who finishes sports at 8 PM, eats dinner at 8:30 PM, and starts homework at 9 PM may have very little room for an early bedtime. Families sometimes need to look at the whole schedule, not just the final bedtime rule.
+    </p>
+    <p>
+      Phones add a second problem. Even when homework is done, messaging, social media, gaming, and endless scrolling can push bedtime later than intended. Notifications also fragment sleep after a teen finally falls asleep.
+    </p>
+    <p>
+      The most practical fix is usually environmental rather than verbal: charging devices outside the bedroom, setting a household screen cutoff, and building enough after-school time for homework before the last hour of the night.
+    </p>
+
+    <h2>How can I tell if my 14-year-old is not getting enough sleep?</h2>
+    <p class="answer-first">
+      A 14-year-old may not be getting enough sleep if they are very hard to wake in the morning, fall asleep in class or the car, need excessive caffeine, become more irritable, or show a drop in grades or motivation. In teenagers, chronic sleep deprivation often looks like moodiness and poor concentration rather than obvious sleepiness (AAP, 2014).
+    </p>
+    <p>
+      Parents often expect sleep deprivation to look like yawning all day. In adolescents, it may instead look like arguing, procrastination, emotional volatility, or "laziness." That misreading is common because the overtired teen can look activated at night and miserable in the morning.
+    </p>
+    <p>
+      Other clues include sleeping much longer on weekends, taking long after-school naps, missing the bus repeatedly, or saying they cannot function without caffeine or energy drinks. Those patterns suggest the current schedule is not meeting the teen's biological sleep needs.
+    </p>
+    <p>
+      If the pattern is persistent, it is worth reviewing not just bedtime but actual sleep onset, wake time, screen use, stress, sports load, and whether symptoms suggest a medical or mental health issue.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my 14-year-old's bedtime or sleep?</h2>
+    <p class="answer-first">
+      You should talk to your pediatrician if your 14-year-old regularly gets fewer than 8 hours of sleep, cannot fall asleep for long periods despite good sleep habits, snores loudly, seems excessively sleepy in the daytime, or has mood or school changes linked to poor sleep. These are specific red flags that may need evaluation (AAP, 2014).
+    </p>
+    <ul>
+      <li>Your 14-year-old snores loudly, gasps, pauses breathing, or breathes through the mouth most nights.</li>
+      <li>Your 14-year-old is extremely hard to wake, falls asleep in class, or dozes off during short car rides.</li>
+      <li>Your 14-year-old regularly lies awake for more than 30–60 minutes despite a consistent bedtime routine and reduced evening screens.</li>
+      <li>Your 14-year-old's grades, attention, or memory have noticeably declined along with poor sleep.</li>
+      <li>Your 14-year-old has major mood changes, persistent irritability, anxiety, sadness, or loss of interest along with sleep problems.</li>
+      <li>Your 14-year-old needs large amounts of caffeine to stay awake or uses energy drinks regularly.</li>
+      <li>Your 14-year-old has restless legs, frequent nighttime waking, or unusual movements during sleep.</li>
+      <li>Your 14-year-old is sleeping far more than expected and still seems exhausted.</li>
+      <li>Your 14-year-old has lost previously stable sleep patterns after starting a new medication.</li>
+      <li>Your 14-year-old talks about self-harm, hopelessness, or not wanting to be here. That needs urgent evaluation, and 988 is available in the United States for immediate crisis support.</li>
+    </ul>
+    <p>
+      Sleep problems in adolescence can reflect schedule mismatch, but they can also be linked to depression, anxiety, sleep apnea, iron deficiency, medication effects, or other medical concerns. If the sleep issue is persistent or affecting daily functioning, it is reasonable to bring it to your pediatrician rather than assuming your teen will outgrow it.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3 class="faq-question">Is 9 PM too early for my 14-year-old to go to bed?</h3>
+    <p class="answer-first faq-answer">
+      For many 14-year-olds, 9 PM is earlier than their biology naturally supports, but it is not harmful if your teen can actually fall asleep then. Puberty delays melatonin release by about 2 hours compared with childhood, so many teens are not sleepy enough for a 9 PM sleep onset even when they need more rest overall (AAP, 2014).
+    </p>
+    <p>
+      If your teen gets into bed at 9 PM but lies awake frustrated until 10:30 PM, the schedule may be too early to be practical. In that situation, it usually works better to set a realistic bedtime, improve the wind-down routine, and make sure the total sleep opportunity still reaches 8–10 hours. If your teen consistently cannot fall asleep until very late or is very distressed about sleep, talk to your pediatrician.
+    </p>
+
+    <h3 class="faq-question">What is a realistic bedtime for a 14-year-old on school nights?</h3>
+    <p class="answer-first faq-answer">
+      A realistic school-night bedtime for many 14-year-olds is between about 9:30 PM and 10:30 PM, depending on the required wake time. Teenagers ages 13–18 need 8–10 hours of sleep per night (AAP, 2014; AASM, 2016). If your 14-year-old must wake at 6:30 AM, a bedtime that allows sleep by roughly 8:30–10:30 PM is the target range.
+    </p>
+    <p>
+      Many families do best by calculating backward from wake time rather than choosing a bedtime based on what "sounds right." If sports, homework, or commuting make enough sleep impossible, that is useful information to bring to a family schedule discussion. If your teen cannot get adequate sleep despite your best routine, talk to your pediatrician.
+    </p>
+
+    <h3 class="faq-question">Should I let my 14-year-old sleep in on weekends?</h3>
+    <p class="answer-first faq-answer">
+      A 14-year-old can usually sleep somewhat later on weekends, but sleeping in more than 1–2 hours past the usual wake time can worsen Monday-morning fatigue. Sleep specialists recommend keeping weekend schedules fairly close to school-day schedules to reduce social jet lag, which is the mismatch between biological sleep timing and weekday obligations (AASM, 2020).
+    </p>
+    <p>
+      Some weekend catch-up sleep is common in adolescents, especially if they are under-sleeping during the week. Still, a huge weekend swing often leads to a later Sunday bedtime and a rough Monday reset. If your teen is sleeping excessively every weekend, that may be a sign they are not getting enough sleep during the week or have another underlying issue worth discussing with your pediatrician.
+    </p>
+
+    <h3 class="faq-question">Why is my 14-year-old tired even when they go to bed early?</h3>
+    <p class="answer-first faq-answer">
+      A 14-year-old may still feel tired with an early bedtime if they are not actually falling asleep, are getting poor-quality sleep, are carrying sleep debt, or have a sleep disorder. More than 70% of high school students report getting less than 8 hours of sleep on school nights, and chronic sleep restriction builds up over time (CDC, 2015; AAP, 2014).
+    </p>
+    <p>
+      Loud snoring, mouth breathing, restless sleep, anxiety, depression, and heavy evening screen use can all interfere with restful sleep. Some teens also spend an hour in bed awake, which means the "bedtime" is not the same as actual sleep time. If your teen is consistently exhausted, difficult to wake, or showing school or mood changes, talk to your pediatrician.
+    </p>
+
+    <h3 class="faq-question">Should I take my 14-year-old's phone at night?</h3>
+    <p class="answer-first faq-answer">
+      Keeping phones out of the bedroom at night is one of the most evidence-supported ways to improve teen sleep. The AAP and sleep experts recommend device-free time before bed because notifications, emotional stimulation, and blue light can delay sleep onset and shorten total sleep time (AAP, 2016; AASM, 2020).
+    </p>
+    <p>
+      Many families find that a shared charging station outside bedrooms reduces conflict and works better than repeated warnings. The goal is not punishment. The goal is protecting sleep. If your teen becomes highly distressed when separated from their phone at night or stays up compulsively despite limits, talk to your pediatrician about whether anxiety, mood issues, or problematic media use may be contributing.
+    </p>
+
+    <h3 class="faq-question">Is it typical that my 14-year-old can't fall asleep before 11 PM?</h3>
+    <p class="answer-first faq-answer">
+      Yes, it can be typical for a 14-year-old to have trouble falling asleep before 11 PM because puberty shifts the circadian rhythm later. The teen brain starts releasing melatonin later than it did in childhood, making earlier sleep feel biologically difficult rather than simply oppositional behavior (AAP, 2014).
+    </p>
+    <p>
+      The main question is whether your teen is still getting enough total sleep before morning wake time. If a late sleep onset is leading to chronic sleep deprivation, the family may need to adjust evening habits and protect wake-time consistency. If your teen cannot fall asleep until very late even with good sleep habits, or has severe daytime sleepiness, talk to your pediatrician.
+    </p>
+
+    <h3 class="faq-question">When should I worry that my 14-year-old is sleeping too much?</h3>
+    <p class="answer-first faq-answer">
+      You should talk to your pediatrician if your 14-year-old regularly sleeps far beyond the expected 8–10 hours but is still exhausted, is hard to wake, or has mood changes, school decline, snoring, or sudden sleep attacks. Excessive sleepiness can reflect sleep deprivation, depression, iron deficiency, medication effects, or a sleep disorder rather than simply a growing teen (AAP, 2014).
+    </p>
+    <p>
+      Teenagers do sometimes sleep long hours after a very busy week, especially if they are carrying sleep debt. The concern is persistence, not one recovery morning. If your teen's sleep pattern changes suddenly or interferes with school, sports, or mood, a pediatric evaluation is appropriate.
+    </p>
+
+    <hr />
+
+    <p>
+      <em>
+        AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, AASM, and CDC guidance. Always consult your child's pediatrician for personalized guidance.
+      </em>
+    </p>
+  </article>
+</BaseLayout>
