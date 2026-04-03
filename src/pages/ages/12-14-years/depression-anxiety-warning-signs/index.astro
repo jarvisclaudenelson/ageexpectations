@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Are the Warning Signs of Depression or Anxiety in a 12 to 14 Year Old?";
+const description = "A practical, evidence-based guide to warning signs of depression and anxiety in children ages 12 to 14. Covers irritability, withdrawal, school avoidance, physical complaints, suicidal statements, what is typically developing in early adolescence, and when to talk to your pediatrician.";
+const faqs = [
+  {
+    question: "Is it typical that my 12-year-old is suddenly irritable all the time?",
+    answer: "Frequent irritability can be part of early adolescence, but irritability that lasts most of the day for 2 weeks or more, disrupts school or friendships, or comes with withdrawal, sleep changes, or loss of interest can be a depression red flag in 12–14 year olds (AAP, 2022). Talk with your pediatrician if the pattern is persistent or worsening.",
+  },
+  {
+    question: "Should I worry if my 13-year-old keeps saying they are sick before school?",
+    answer: "Repeated stomachaches, headaches, or nausea before school can be a common sign of anxiety in 12–14 year olds, especially when symptoms improve at home or on weekends (AAP, 2020; NIMH, 2023). If school avoidance is developing or physical complaints are frequent, talk with your pediatrician promptly.",
+  },
+  {
+    question: "Is it typical that my early teen wants to spend more time alone?",
+    answer: "Wanting more privacy is typically developing in 12–14 year olds, but persistent isolation from family and friends, quitting previously enjoyed activities, or refusing social contact can be a mental health red flag rather than ordinary independence (AAP, 2022). Contact your pediatrician if withdrawal lasts more than 2 weeks or is getting worse.",
+  },
+  {
+    question: "What if my 14-year-old says 'I was just joking' after saying they want to die?",
+    answer: "Any statement about wanting to die, disappear, or hurt oneself should be taken seriously, even if a 12–14 year old later says it was a joke (AAP, 2022). Contact your pediatrician the same day, and use 988 immediately if there is current suicidal thinking, a plan, or concern for immediate safety.",
+  },
+  {
+    question: "How do I know if this is puberty moodiness or something more?",
+    answer: "Puberty can bring bigger emotions, but mood changes that are intense, last at least 2 weeks, interfere with school or relationships, or come with sleep changes, hopelessness, panic, or loss of interest suggest more than typical puberty adjustment (AAP, 2022; USPSTF, 2016). A pediatrician can help sort out what needs further evaluation.",
+  },
+  {
+    question: "Should I let my 12 to 14 year old stay home from school for anxiety?",
+    answer: "Occasional short-term support may be needed, but repeated avoidance usually strengthens anxiety over time in 12–14 year olds rather than helping it resolve (AAP, 2020). If your child is regularly missing school because of fear, panic, or physical complaints, talk with your pediatrician as soon as possible.",
+  },
+  {
+    question: "Does my child need depression screening at this age?",
+    answer: "Yes. The USPSTF recommends screening adolescents ages 12 and older for major depressive disorder when systems are in place for diagnosis and follow-up care (USPSTF, 2016). If your 12–14 year old has not been screened recently, ask your pediatrician about it at the next visit.",
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/12-14-years/depression-anxiety-warning-signs/",
+  datePublished: "2026-04-03",
+  dateModified: "2026-04-03"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/12-14-years/depression-anxiety-warning-signs/",
+  lastReviewed: "2026-04-03"
+});
+---
+
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <main class="article">
+    <article>
+      <h1>{title}</h1>
+
+      <p class="answer-first">In 12–14 year olds, the most important warning signs of depression or anxiety are persistent irritability, withdrawal from friends or activities, school avoidance, major sleep changes, falling grades, unexplained stomachaches or headaches, and any statement about self-harm or suicide; depression screening is recommended for all adolescents age 12 and older (AAP, 2022; USPSTF, 2016).</p>
+
+      <p>Early adolescence is a stage of real emotional change, so it can be hard to tell what is typically developing and what deserves closer attention. The key question is not whether a 12–14 year old has big feelings, but whether those feelings are persistent, worsening, and interfering with daily life at home, school, or with peers.</p>
+
+      <h2>What warning signs of depression or anxiety should I watch for in my 12 to 14 year old?</h2>
+      <p class="answer-first">The clearest warning signs in 12–14 year olds are changes that last at least 2 weeks or meaningfully disrupt life: constant irritability, loss of interest in favorite activities, withdrawal, school refusal, panic, hopeless statements, appetite or sleep changes, and physical complaints without a clear medical cause (AAP, 2022; NIMH, 2023).</p>
+      <p>Depression in early adolescents does not always look like obvious sadness. The American Academy of Pediatrics notes that irritability can be the main mood symptom in this age group (AAP, 2022). Anxiety also often shows up indirectly. A 12–14 year old may not say, “I feel anxious,” but may repeatedly complain of nausea before school, burst into tears over routine demands, or avoid activities they previously handled comfortably.</p>
+      <p>Look for patterns rather than isolated bad days. A single rough week after a friendship conflict is different from a steady decline in mood, motivation, sleep, and functioning. Concern increases when symptoms show up in more than one setting, such as both home and school.</p>
+
+      <h2>Is it puberty moodiness, or could it be depression?</h2>
+      <p class="answer-first">Puberty-related moodiness is usually brief, situation-based, and mixed with plenty of typical enjoyment, while depression in 12–14 year olds is more persistent and includes loss of interest, hopelessness, social withdrawal, sleep or appetite changes, and reduced functioning for 2 weeks or longer (AAP, 2022).</p>
+      <p>Many 12–14 year olds become more sensitive, private, and emotionally intense during puberty. That can be typically developing. What is less typical is a child who no longer seems able to feel pleasure, stops participating in sports or hobbies they used to love, or seems angry, numb, or tearful most days.</p>
+
+      <h3>How does depression often look different in early teens than in adults?</h3>
+      <p class="answer-first">In 12–14 year olds, depression often shows up as irritability, anger, boredom, school problems, or repeated physical complaints rather than obvious sadness, which is why parents sometimes miss it at first (AAP, 2022).</p>
+      <p>A child in this age range may seem “difficult” rather than depressed. They may snap at siblings, stop turning in homework, sleep much more than usual, or insist that nothing matters. Those shifts deserve attention when they are sustained and out of character.</p>
+
+      <h2>What does anxiety look like in a 12 to 14 year old?</h2>
+      <p class="answer-first">Anxiety in 12–14 year olds commonly looks like excessive worry, perfectionism, school avoidance, panic symptoms, reassurance-seeking, trouble sleeping, and repeated stomachaches or headaches, especially on school mornings or before social events (AAP, 2020; NIMH, 2023).</p>
+      <p>Early teens may worry about grades, friendships, sports performance, appearance, family safety, or embarrassment. The concern becomes a red flag when the worry is hard to control and changes behavior. A 13-year-old who studies carefully is not necessarily anxious; a 13-year-old who cannot sleep, cries over minor mistakes, and refuses to attend school because of fear may need evaluation.</p>
+
+      <h3>Why do anxiety symptoms often look physical at this age?</h3>
+      <p class="answer-first">In 12–14 year olds, anxiety often activates the body before a child has words for the emotion, so nausea, headaches, dizziness, fast heartbeat, or trembling may be the first signs parents notice (AAP, 2020).</p>
+      <p>That does not mean physical complaints should be dismissed. A pediatrician should help rule out medical causes and also consider anxiety when symptoms cluster around stress, school, tests, sleepovers, or social situations.</p>
+
+      <h2>Should I worry if my 12 to 14 year old is avoiding school?</h2>
+      <p class="answer-first">Yes, school avoidance is one of the most clinically important warning signs in 12–14 year olds because it is strongly associated with anxiety, depression, bullying, learning differences, and worsening symptoms over time if untreated (AAP, 2020; NIMH, 2023).</p>
+      <p>School avoidance may look like crying before school, begging to stay home, frequent nurse visits, repeated Monday-morning stomachaches, panic during drop-off, or escalating conflict about attendance. Some early teens will attend school but avoid specific classes, presentations, lunch, or gym because those settings trigger anxiety.</p>
+      <p>Avoidance can bring short-term relief, but that relief teaches the brain that escape is the solution, which usually makes anxiety stronger. If a 12–14 year old is missing school, leaving early often, or showing escalating distress around attendance, it is time to involve a pediatrician and often the school as well.</p>
+
+      <h2>When are sleep changes a mental health red flag in a 12 to 14 year old?</h2>
+      <p class="answer-first">Sleep becomes a mental health red flag in 12–14 year olds when a child has persistent insomnia, sleeps far more than usual, cannot fall asleep because of worry, wakes very early with low mood, or becomes significantly harder to wake and more impaired during the day (AAP, 2014; AAP, 2022).</p>
+      <p>Puberty naturally shifts the body clock later, so many early teens prefer a later bedtime. That alone is not a red flag. More concerning patterns include lying awake because of rumination, staying up due to dread about the next day, sleeping immediately after school every day, or spending most weekends asleep and still feeling exhausted.</p>
+      <p>Because sleep and mood affect each other in both directions, major sleep changes deserve attention even if your child does not openly describe depression or anxiety.</p>
+
+      <h2>What behavior changes are red flags instead of typical early teen behavior?</h2>
+      <p class="answer-first">Behavior changes in 12–14 year olds become red flags when they are persistent, out of character, and impairing, such as sudden withdrawal, explosive anger, frequent crying, declining grades, giving up activities, self-criticism, reckless behavior, or intense conflict that is far beyond the child’s usual baseline (AAP, 2022).</p>
+      <p>Early adolescence often brings more privacy, stronger opinions, and occasional pushback. Those are typically developing shifts. Red flags are different because they represent a meaningful change in functioning. A child who once managed school and friendships but now avoids peers, misses assignments, and says they are “bad at everything” may be struggling with more than developmental transition.</p>
+
+      <h3>Should I pay attention to a sudden drop in grades or motivation?</h3>
+      <p class="answer-first">Yes, a noticeable drop in grades, missing assignments, or loss of motivation in a 12–14 year old can be an early sign of depression, anxiety, bullying, sleep deprivation, ADHD, or a learning problem and should not be brushed off as laziness (AAP, 2022).</p>
+      <p>School performance is often one of the first places emotional distress shows up. When the change is sudden or paired with physical complaints, avoidance, or emotional shutdown, a pediatrician visit is appropriate.</p>
+
+      <h2>When should I worry about social withdrawal in my 12 to 14 year old?</h2>
+      <p class="answer-first">Social withdrawal is concerning in 12–14 year olds when a child consistently isolates, stops texting or seeing friends, avoids group activities, eats alone by choice because of fear or sadness, or loses interest in relationships that previously mattered (AAP, 2022).</p>
+      <p>Early teens often want more downtime alone, and that can be healthy. The concern is not solitude itself but a pattern of disconnection. Parents should pay attention when the child seems lonely but unable to re-engage, or when withdrawal is paired with irritability, hopelessness, body image concerns, panic, or a decline in personal hygiene.</p>
+      <p>Social withdrawal can also reflect bullying, social anxiety, depression, or emerging trauma-related symptoms. It is especially important to ask gentle, concrete questions about peers, lunch, group chats, and online interactions.</p>
+
+      <h2>What statements mean I should take suicide risk seriously?</h2>
+      <p class="answer-first">Any statement from a 12–14 year old about wanting to die, disappear, not wake up, hurt themselves, or believing others would be better off without them should be treated as urgent and taken seriously, even if the child later says they did not mean it (AAP, 2022).</p>
+      <p>Parents sometimes expect suicidal thinking to sound dramatic or explicit, but it can be indirect. Concerning examples include “I can’t do this anymore,” “You wouldn’t have to worry about me if I was gone,” or “I wish I could just sleep forever.” Giving away possessions, searching for ways to die, writing goodbye messages, or recent self-harm also require immediate action.</p>
+      <p>If there is current suicidal thinking, a plan, access to means, intoxication, or you do not feel your child is safe, call or text 988 right away or go to the nearest emergency department.</p>
+
+      <h2>Does my 12 to 14 year old need depression screening even if I am not sure something is wrong?</h2>
+      <p class="answer-first">Yes, the USPSTF recommends screening adolescents ages 12 and older for major depressive disorder because many early teens do not clearly report symptoms unless they are asked directly with a validated tool (USPSTF, 2016).</p>
+      <p>Screening does not diagnose a child by itself, but it helps identify who needs closer follow-up. Pediatricians often use brief questionnaires and then ask more detailed questions if concerns appear. This is especially useful in 12–14 year olds because symptoms may look like attitude, puberty, or school stress at first.</p>
+      <p>If your child has mood changes, school refusal, persistent irritability, or physical complaints without a clear explanation, you do not need to wait for the next annual visit. You can request an appointment specifically to discuss mental health concerns.</p>
+
+      <h2>When should I talk to my pediatrician about my 12 to 14 year old?</h2>
+      <p class="answer-first">Talk to your pediatrician promptly if a 12–14 year old has mood or anxiety symptoms lasting 2 weeks or more, repeated school avoidance, major sleep or appetite changes, frequent unexplained stomachaches or headaches, self-harm, hopeless statements, or any suicidal comment; immediate help is needed for suicide risk (AAP, 2022; USPSTF, 2016).</p>
+      <ul>
+        <li>If your 12–14 year old says they want to die, not wake up, or hurt themselves, seek urgent help immediately and contact 988.</li>
+        <li>If your 12–14 year old has cut, burned, or otherwise harmed themselves, call your pediatrician the same day.</li>
+        <li>If your 12–14 year old refuses school repeatedly, has panic symptoms before school, or is missing classes because of fear, schedule a prompt evaluation.</li>
+        <li>If your 12–14 year old has stopped seeing friends, quit activities they used to enjoy, or spends most of the day isolated in their room for more than 2 weeks, contact your pediatrician.</li>
+        <li>If your 12–14 year old has unexplained stomachaches, headaches, nausea, or dizziness that cluster around stress or school, bring this up with your pediatrician.</li>
+        <li>If your 12–14 year old shows a sudden drop in grades, major concentration problems, or a clear decline in motivation, ask for evaluation rather than waiting it out.</li>
+        <li>If your 12–14 year old has major sleep changes, such as persistent insomnia, sleeping excessively, or daytime exhaustion with mood changes, talk with your pediatrician.</li>
+        <li>If your 12–14 year old has lost weight, developed rigid food rules, or seems intensely preoccupied with body size, eating, or exercise, seek care promptly.</li>
+        <li>If your 12–14 year old has lost any previously established emotional or daily functioning skills, or symptoms are escalating quickly, contact your pediatrician.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      {faqs.map((faq) => (
+        <section class="faq-item">
+          <h3 class="faq-question">{faq.question}</h3>
+          <p class="answer-first faq-answer">{faq.answer}</p>
+        </section>
+      ))}
+
+      <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, USPSTF, and other evidence-based guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+    </article>
+  </main>
+</BaseLayout>

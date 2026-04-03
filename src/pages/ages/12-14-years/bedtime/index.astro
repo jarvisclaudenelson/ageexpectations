@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Time Should a 12 Year Old Go to Bed?";
+const description = "A practical, evidence-based guide to bedtime for 12-year-olds. Covers how much sleep early teens need, realistic school-night bedtimes, puberty-driven sleep shifts, weekends, screens, and when to talk to your pediatrician.";
+const url = "https://ageexpectations.com/ages/12-14-years/bedtime/";
+
+const faqs = [
+  {
+    question: "Is 9 PM too early for a 12-year-old to go to bed?",
+    answer: "Not always. Some 12-year-olds still fall asleep well around 9 PM, especially if they wake early for school, while others are already dealing with the puberty-related sleep shift that makes earlier sleep harder. The main question is whether your child is actually falling asleep and getting enough total sleep."
+  },
+  {
+    question: "What is a realistic bedtime for a 12-year-old on school nights?",
+    answer: "A realistic school-night bedtime for many 12-year-olds is around 9:00 to 10:00 PM, depending on wake time. Most children this age still need roughly 9 to 11 hours of sleep, even as puberty begins pushing sleep later."
+  },
+  {
+    question: "Why is my 12-year-old not sleepy until 10 PM?",
+    answer: "Puberty shifts the internal body clock later, so many 12-year-olds start feeling sleepy later in the evening than they did in childhood. Screens, sports, homework, and weekend sleep-ins can push bedtime even later."
+  },
+  {
+    question: "Should a 12-year-old sleep in on weekends?",
+    answer: "A little extra weekend sleep is reasonable, but sleeping in more than 1 to 2 hours past the usual wake time can make Sunday night and Monday morning harder. Keeping schedules fairly close helps protect the body clock."
+  },
+  {
+    question: "Should my 12-year-old have a phone in the bedroom at night?",
+    answer: "Usually no. Phones in bedrooms tend to delay sleep, fragment sleep with notifications, and expose the brain to light that suppresses melatonin. Charging devices outside the room is usually a much better setup for tween sleep."
+  },
+  {
+    question: "Why is my 12-year-old tired all the time?",
+    answer: "Many 12-year-olds are chronically short on sleep because puberty makes earlier sleep harder while school still starts early. But persistent tiredness can also reflect anxiety, depression, snoring, iron deficiency, or other medical concerns, so talk to your pediatrician if the pattern is ongoing or affecting school and mood."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url,
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-02"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url,
+  lastReviewed: "2026-04-02"
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">Most 12-year-olds need roughly 9 to 11 hours of sleep, so bedtime should be based on wake time and total sleep rather than guesswork. For a child waking around 6:30 AM for school, that often means falling asleep around 8:30 to 9:30 PM, though puberty can make the earlier end of that range harder than it used to be.</p>
+
+    <p>Age 12 sits right at the hinge between childhood sleep and adolescent sleep. Some kids are still naturally sleepy early. Others are already feeling the puberty-driven shift toward later bedtimes. That is why bedtime arguments suddenly get more annoying: biology has joined the chat.</p>
+
+    <p>This page focuses on the specific question parents actually ask: what time should a 12-year-old go to bed? It also covers why bedtime changes at this age, what is realistic on school nights, and when tiredness deserves a pediatric evaluation.</p>
+
+    <h2>What time should a 12-year-old go to bed on school nights?</h2>
+    <p class="answer-first">A 12-year-old should usually go to bed early enough to get about 9 to 11 hours of sleep before the morning alarm, which often means a sleep time around 8:30 to 9:30 PM for children waking between 6:00 and 7:00 AM. The exact bedtime depends on wake time, school schedule, and whether your child is actually falling asleep at that hour.</p>
+
+    <p>Working backward is the cleanest way to set bedtime. If your child must wake at 6:30 AM, a sleep target of 8:30 to 9:30 PM makes sense. If they wake at 7:00 AM, sleep by 9:00 to 10:00 PM may still be adequate. Remember that “in bed” and “asleep” are not the same thing, so the wind-down routine needs to begin before the target sleep time.</p>
+
+    <h2>Why is bedtime getting harder at age 12?</h2>
+    <p class="answer-first">Bedtime often gets harder at age 12 because puberty starts shifting the circadian rhythm later, meaning melatonin release and natural sleepiness move later into the evening. This is a real biological change, not just stalling or attitude.</p>
+
+    <p>That shift does not make sleep optional. It just makes the old bedtime less automatic. A child who used to be sleepy at 8:30 PM may now be fully awake at 9:15 PM, especially if screens, sports, homework, or weekend sleep-ins are also pushing the schedule later.</p>
+
+    <p>The practical answer is to protect routines, reduce evening stimulation, and watch the total sleep time. Families get into trouble when they respond to a later body clock by giving up on bedtime entirely.</p>
+
+    <h2>How much sleep does a 12-year-old need?</h2>
+    <p class="answer-first">Most 12-year-olds still need about 9 to 11 hours of sleep, even if they no longer seem like little kids at bedtime. Sleep at this age supports memory, attention, emotional regulation, immune function, and mental health.</p>
+
+    <p>A child who is not getting enough sleep may look moody, silly, impulsive, irritable, or checked out rather than simply drowsy. If your 12-year-old is hard to wake, cranky every morning, or sleeps much later on weekends, sleep debt is a likely culprit.</p>
+
+    <h2>What is a realistic bedtime routine for a 12-year-old?</h2>
+    <p class="answer-first">A realistic bedtime routine for a 12-year-old begins 30 to 60 minutes before bed and includes dim lights, no screens, and a repeatable wind-down sequence. The routine does not need to be elaborate; it needs to happen consistently.</p>
+
+    <ul>
+      <li>Homework finished before the final stretch of the night when possible</li>
+      <li>Phone and tablet charging outside the bedroom</li>
+      <li>Shower or simple hygiene routine</li>
+      <li>Quiet reading, music, or calm conversation</li>
+      <li>Lights out at roughly the same time each school night</li>
+    </ul>
+
+    <p>Tweens often want independence while still benefiting from structure. Fair enough. The trick is giving them some ownership without letting bedtime dissolve into late-night chaos with LED lighting.</p>
+
+    <h2>Should my 12-year-old sleep in on weekends?</h2>
+    <p class="answer-first">A 12-year-old can sleep somewhat later on weekends, but sleeping in more than 1 to 2 hours past the normal wake time often makes Sunday night worse by shifting the body clock later. This pattern is often called social jet lag.</p>
+
+    <p>Weekend catch-up sleep may mean your child is under-sleeping during the week. Some extra sleep is fine. Massive swings between school days and weekends are where the trouble starts.</p>
+
+    <h2>How do phones and screens affect bedtime at age 12?</h2>
+    <p class="answer-first">Phones and screens commonly delay bedtime by keeping the brain stimulated and exposing it to light that suppresses melatonin. Charging devices outside the bedroom is one of the simplest ways to improve sleep in 12-year-olds.</p>
+
+    <p>Even “just checking something” can turn into twenty minutes of messages, videos, or scrolling. More importantly, the brain stays alert. That is a lousy setup for a child who already has a shifting body clock and an early alarm.</p>
+
+    <h2>How can I tell if my 12-year-old is not getting enough sleep?</h2>
+    <p class="answer-first">A 12-year-old may not be getting enough sleep if they are very hard to wake, regularly moody in the morning, falling asleep in the car, struggling with attention at school, or sleeping much longer on weekends than weekdays. In tweens, poor sleep often shows up as irritability and school friction.</p>
+
+    <h2>When should I talk to my pediatrician?</h2>
+    <p class="answer-first">Talk to your pediatrician if your 12-year-old regularly cannot fall asleep, snores loudly, seems excessively sleepy during the day, or has ongoing mood, anxiety, or school problems linked to poor sleep. Bedtime battles are common; persistent impairment is not something to shrug off.</p>
+
+    <ul>
+      <li>Your child snores, gasps, or seems to stop breathing at night.</li>
+      <li>Your child lies awake for long periods most nights despite a stable routine.</li>
+      <li>Your child is extremely hard to wake or falls asleep during normal daytime activities.</li>
+      <li>Your child has major mood changes, anxiety, sadness, or school decline with poor sleep.</li>
+      <li>Your child seems exhausted despite long sleep hours.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>

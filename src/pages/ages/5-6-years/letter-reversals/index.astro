@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "Is It Normal for a 6 Year Old to Reverse Letters?";
+const description = "A practical, evidence-based guide to letter reversals at age 6. Covers what is typical in kindergarten, when reversals may be concerning, the truth about dyslexia myths, and when to request evaluation.";
+const url = "https://ageexpectations.com/ages/5-6-years/letter-reversals/";
+
+const faqs = [
+  {
+    question: "Is it normal for a 6-year-old to mix up b and d?",
+    answer: "Yes. Mixing up letters like b and d is very common at age 6 and is usually part of normal reading and writing development. Letter reversals by themselves are not considered a reliable sign of dyslexia in kindergarten-age children."
+  },
+  {
+    question: "Do letter reversals mean my 6-year-old has dyslexia?",
+    answer: "Usually no. Dyslexia is mainly about difficulty processing the sounds in language, not about seeing letters backward. Persistent phonological problems, trouble rhyming, weak letter-sound learning, and slow reading progress are more useful warning signs than reversals alone."
+  },
+  {
+    question: "At what age do letter reversals become more concerning?",
+    answer: "Letter reversals become more concerning if they persist beyond age 7 or 8 after a child has had consistent reading and writing instruction, especially if they occur alongside broader reading difficulties."
+  },
+  {
+    question: "Should I correct my child's reversed letters every time?",
+    answer: "Gentle correction and practice are fine, but constant correction often creates frustration without improving learning. Short, calm practice with letter formation, sound work, and reading is usually more helpful than turning every writing attempt into a critique session."
+  },
+  {
+    question: "When should I request an evaluation for reading concerns?",
+    answer: "You should request an evaluation if your 6-year-old has multiple concerns such as difficulty rhyming, trouble learning letter sounds, slow progress with early reading, strong frustration around print, or a family history of dyslexia. Early support is more useful than waiting for bigger failure."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url,
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-02"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url,
+  lastReviewed: "2026-04-02"
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">Yes. It is very normal for a 6-year-old to reverse letters such as b and d, p and q, or write some numbers backward while learning to read and write. At this age, letter reversals alone are usually part of typical development and are not considered a reliable sign of dyslexia.</p>
+
+    <p>This is one of those parenting worries that sounds dramatic but is usually gloriously ordinary. Kindergarten and first-grade brains are still learning how symbols map to sounds, directions, and motor patterns. Some messiness is built into the process.</p>
+
+    <p>What matters is the bigger reading picture. A child who occasionally reverses letters but is learning sounds, making progress, and engaging with books is very different from a child who has broad struggles with early literacy.</p>
+
+    <h2>Why do 6-year-olds reverse letters?</h2>
+    <p class="answer-first">Six-year-olds reverse letters because early readers are still learning symbol orientation, handwriting patterns, and sound-symbol mapping all at once. Reversals are a common part of beginner writing, not evidence that a child sees the world backward.</p>
+
+    <p>Letters like b and d are especially tricky because they use the same basic shape with a different orientation. That is genuinely hard for many new readers and writers. The child is not being careless. Their brain is still automating the pattern.</p>
+
+    <h2>Do letter reversals mean dyslexia?</h2>
+    <p class="answer-first">Usually no. Dyslexia is more strongly linked to difficulty with phonological processing, such as trouble rhyming, identifying beginning sounds, blending sounds, and learning letter-sound relationships, rather than simple reversals by themselves.</p>
+
+    <p>This myth refuses to die because reversed letters are easy for adults to notice. But they are not the most useful early signal. A better question is whether your child is learning sounds, remembering letters, and making gradual reading progress with instruction.</p>
+
+    <h2>What is typical at age 6?</h2>
+    <p class="answer-first">At age 6, it is typical to see occasional reversals of letters and numbers, uneven handwriting, and inconsistent spacing while a child is learning to read and write. Many children still need plenty of guided practice in kindergarten and first grade.</p>
+
+    <p>It is also typical for performance to vary. A child may write a letter correctly one day and backward the next. Annoying, yes. Still normal.</p>
+
+    <h2>When should I be more concerned?</h2>
+    <p class="answer-first">Letter reversals become more concerning when they persist beyond age 7 or 8 and happen alongside broader reading problems such as poor letter-sound learning, weak phonological awareness, slow word reading, strong avoidance of literacy tasks, or a family history of dyslexia.</p>
+
+    <ul>
+      <li>Difficulty rhyming or hearing beginning sounds</li>
+      <li>Trouble remembering letter names and sounds despite practice</li>
+      <li>Very slow progress learning simple words</li>
+      <li>Strong frustration or avoidance around books and writing</li>
+      <li>Family history of dyslexia or reading difficulties</li>
+    </ul>
+
+    <p>If several of those are present, the concern is not really “my child writes b backward.” The concern is that literacy development overall may need closer support.</p>
+
+    <h2>What can I do at home?</h2>
+    <p class="answer-first">The best support at home is calm, short practice with letter formation, sound awareness, and reading exposure, rather than constant correction. Children usually improve faster with repetition and confidence than with feeling policed every time they pick up a pencil.</p>
+
+    <ul>
+      <li>Practice letter formation briefly and consistently</li>
+      <li>Read aloud daily</li>
+      <li>Play sound games with rhyming and first sounds</li>
+      <li>Use multisensory practice like tracing in sand or shaving cream</li>
+      <li>Keep correction light and matter-of-fact</li>
+    </ul>
+
+    <h2>When should I request an evaluation?</h2>
+    <p class="answer-first">Request an evaluation if your 6-year-old has multiple early reading concerns, especially trouble with sounds, slow progress despite instruction, strong frustration, or a family history of dyslexia. Early support is usually far more useful than waiting another year just to confirm that the problem is still there.</p>
+
+    <p>If you are worried, talk with the teacher and pediatrician and consider a school evaluation request. Better an early conversation than a later, entirely predictable panic.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice or educational evaluation. Always consult your child's pediatrician or school team for personalized guidance.</em></p>
+  </article>
+</BaseLayout>

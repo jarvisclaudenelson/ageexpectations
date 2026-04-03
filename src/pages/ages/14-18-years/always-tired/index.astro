@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "Why Is My Teen Always Tired?";
+const description = "A practical, evidence-based guide to persistent tiredness in teens ages 14 to 18. Covers sleep debt, puberty, mental health, anemia, sleep disorders, and when to talk to your pediatrician.";
+const url = "https://ageexpectations.com/ages/14-18-years/always-tired/";
+
+const faqs = [
+  {
+    question: "Is it normal for a teenager to be tired all the time?",
+    answer: "Some tiredness is common in teens because puberty shifts the body clock later while school still starts early, but being exhausted all the time is not something to ignore. Persistent fatigue deserves a closer look at sleep, mood, workload, and medical causes."
+  },
+  {
+    question: "Why is my teen tired even when they sleep in on weekends?",
+    answer: "Weekend sleep-ins often help a little, but they do not fully fix chronic sleep debt and can also worsen the body-clock mismatch known as social jet lag. If your teen is still exhausted despite extra sleep, consider sleep quality, anxiety, depression, anemia, or sleep disorders."
+  },
+  {
+    question: "Can depression or anxiety make my teen seem tired?",
+    answer: "Yes. Depression and anxiety commonly affect sleep quality, energy, motivation, and concentration in teens. A teenager may look lazy or drained when the real problem is mental health strain."
+  },
+  {
+    question: "Could anemia make my teen tired?",
+    answer: "Yes. Iron deficiency and anemia can cause fatigue, weakness, dizziness, headaches, and poor exercise tolerance. This is especially important to consider in teens with heavy periods, restrictive eating, or endurance sports."
+  },
+  {
+    question: "When should I call the pediatrician about teen fatigue?",
+    answer: "Call your pediatrician if fatigue is persistent, worsening, or affecting school, mood, sports, safety, or daily function, especially if it comes with snoring, weight loss, low mood, dizziness, heavy periods, or falling asleep unexpectedly."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url,
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-02"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url,
+  lastReviewed: "2026-04-02"
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">Teenagers are often tired because puberty shifts the body clock later while school, activities, and screens keep wake times early and bedtimes late. But a teen who seems tired all the time may also be dealing with sleep debt, depression, anxiety, anemia, iron deficiency, sleep apnea, or another medical issue, so persistent fatigue should not be written off as “just being a teenager.”</p>
+
+    <p>Yes, teens are famously tired. No, that does not mean every exhausted teen is fine. “Always tired” is one of those parental phrases that can mean anything from ordinary sleep debt to something worth a proper medical workup.</p>
+
+    <h2>Is it normal for teens to be tired?</h2>
+    <p class="answer-first">Some tiredness is common in teens because they need about 8 to 10 hours of sleep but often do not get it. The problem is that “common” and “healthy” are not the same thing. A teen who is persistently exhausted, hard to wake, emotionally flat, or struggling at school needs a closer look.</p>
+
+    <p>Many teens are running a permanent sleep deficit from late bedtimes, early school starts, homework, sports, jobs, and phones. That alone can explain a lot. But if fatigue is intense or does not improve with better sleep opportunity, parents should think beyond schedule.</p>
+
+    <h2>What are the most common reasons a teen is always tired?</h2>
+    <p class="answer-first">The most common reasons include chronic sleep deprivation, delayed sleep phase from puberty, anxiety, depression, overscheduling, anemia, iron deficiency, poor sleep quality, and sleep disorders such as sleep apnea. Often more than one factor is involved.</p>
+
+    <ul>
+      <li>Not enough total sleep</li>
+      <li>Puberty-driven later sleep timing</li>
+      <li>Phone and screen use at night</li>
+      <li>Anxiety or depression</li>
+      <li>Heavy school, sports, or work load</li>
+      <li>Iron deficiency or anemia</li>
+      <li>Snoring or poor-quality sleep</li>
+      <li>Restrictive eating or not enough calories</li>
+    </ul>
+
+    <h2>Could this just be sleep debt?</h2>
+    <p class="answer-first">Very often, yes. A teen who regularly gets less than 8 hours of sleep can look exhausted, foggy, irritable, and unmotivated even without any other illness. Weekend sleep-ins can help a little, but they do not fully erase chronic weekday sleep debt.</p>
+
+    <p>If your teen is staying up late but still has to wake early, the simplest explanation is often the right one. Still, if better sleep opportunity does not improve energy, it is time to widen the lens.</p>
+
+    <h2>Can depression or anxiety make my teen tired?</h2>
+    <p class="answer-first">Yes. Depression and anxiety can both make teens feel tired by disrupting sleep, draining mental energy, and reducing motivation and concentration. Sometimes the “tired teen” is actually a depressed or anxious teen who does not know how to say that directly.</p>
+
+    <p>Warning signs include irritability, withdrawal, loss of interest, changes in appetite, falling grades, panic symptoms, school avoidance, or sleeping a lot but still feeling awful. If that pattern is present, it deserves medical attention, not a lecture about going to bed earlier.</p>
+
+    <h2>Could anemia or iron deficiency be the problem?</h2>
+    <p class="answer-first">Yes. Iron deficiency and anemia can cause fatigue, weakness, headaches, dizziness, pale skin, shortness of breath, and poor exercise tolerance. This is especially relevant in teens with heavy menstrual bleeding, restrictive diets, endurance sports, or rapid growth.</p>
+
+    <p>A pediatrician can help decide whether bloodwork is appropriate. Fatigue with dizziness, headaches, pallor, or heavy periods is worth bringing up directly.</p>
+
+    <h2>When should I worry about a sleep disorder?</h2>
+    <p class="answer-first">Think about a sleep disorder if your teen snores loudly, gasps in sleep, seems excessively sleepy despite enough time in bed, has restless legs, falls asleep unexpectedly, or has a very delayed sleep schedule that will not shift. Those are clues that the issue may be more than ordinary teen habits.</p>
+
+    <h2>When should I call the pediatrician?</h2>
+    <p class="answer-first">Call your pediatrician if fatigue is persistent, worsening, or affecting school, mood, sports, driving safety, or daily function, especially if it comes with snoring, low mood, dizziness, weight change, heavy periods, or falling asleep unexpectedly.</p>
+
+    <ul>
+      <li>Your teen is hard to wake and exhausted most days</li>
+      <li>Your teen has low mood, anxiety, withdrawal, or school decline</li>
+      <li>Your teen snores, gasps, or seems to sleep poorly</li>
+      <li>Your teen has dizziness, headaches, pallor, or heavy periods</li>
+      <li>Your teen is losing weight or eating very restrictively</li>
+      <li>Your teen falls asleep in class, while sitting quietly, or in unsafe situations</li>
+    </ul>
+
+    <p>If there is any talk of self-harm, hopelessness, or not wanting to be alive, seek urgent help right away. Fatigue plus major mood change is not something to brush off.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Always consult your teen's pediatrician for persistent fatigue or concerning symptoms.</em></p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+// EmailCaptureBlock.astro
+// Reusable email capture CTA for Age Expectations
+// Action URL: update BUTTONDOWN_USERNAME once Erik signs up at buttondown.com
+
+const { ageLabel = "your child's age" } = Astro.props;
+const BUTTONDOWN_USERNAME = "ageexpectations"; // TODO: verify once Erik creates account
+---
+
+<section class="email-capture">
+  <div class="email-capture-inner">
+    <div class="email-capture-icon">📋</div>
+    <h3>Free Milestone Checklist for {ageLabel}</h3>
+    <p>Get a printable checklist of what to expect — and when to talk to your pediatrician. Join 1,000+ parents tracking their child's development.</p>
+    <form
+      action={`https://buttondown.com/api/emails/embed-subscribe/${BUTTONDOWN_USERNAME}`}
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/ageexpectations', 'popupwindow')"
+      class="email-form"
+    >
+      <input type="hidden" value="1" name="embed" />
+      <div class="email-form-row">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+          class="email-input"
+        />
+        <button type="submit" class="email-submit">Get Free Checklist</button>
+      </div>
+      <p class="email-privacy">No spam. Unsubscribe anytime.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .email-capture {
+    margin: 2.5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+  }
+  .email-capture-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .email-capture h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+  }
+  .email-capture p {
+    margin: 0 0 1.25rem;
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+  .email-form-row {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 420px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .email-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  .email-submit {
+    padding: 0.75rem 1.25rem;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .email-submit:hover {
+    background: #e67e22;
+  }
+  .email-privacy {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+</style>

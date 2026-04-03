@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "Why Does My Child Have Stomachaches Before School?";
+const description = "A practical, evidence-based guide to school-morning stomachaches in children ages 10 to 12. Covers anxiety, school avoidance, constipation, illness, red flags, and when to talk to your pediatrician.";
+const url = "https://ageexpectations.com/ages/10-12-years/stomachaches-before-school/";
+
+const faqs = [
+  {
+    question: "Can anxiety really cause stomachaches before school?",
+    answer: "Yes. Anxiety commonly shows up as physical symptoms in tweens, and repeated stomachaches on school mornings are one of the classic patterns. The pain is real even if emotional stress is contributing."
+  },
+  {
+    question: "How can I tell if this is anxiety or a medical problem?",
+    answer: "Patterns matter. Stomachaches that happen mainly before school and improve on weekends or after staying home often suggest anxiety or school-related stress, while red-flag symptoms like weight loss, blood in stool, fever, vomiting, or nighttime pain deserve medical evaluation."
+  },
+  {
+    question: "Does school refusal often start with stomachaches?",
+    answer: "Yes. Many children with school avoidance first complain of stomach pain, nausea, or headaches because distress is easier to feel in the body than to explain emotionally."
+  },
+  {
+    question: "Could constipation cause morning stomach pain?",
+    answer: "Absolutely. Constipation is common in school-age children and can cause recurring abdominal pain, especially if a child avoids using school bathrooms or has irregular bowel habits."
+  },
+  {
+    question: "When should I call the pediatrician about school-morning stomachaches?",
+    answer: "Call your pediatrician if stomachaches are frequent, affect school attendance, or come with vomiting, blood, weight loss, diarrhea, fever, waking from sleep, or significant anxiety, mood change, or withdrawal."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url,
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-02"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url,
+  lastReviewed: "2026-04-02"
+});
+---
+
+<BaseLayout title={title} description={description} articleSchema={articleData} faqSchema={faqData} medicalSchema={medicalData}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">Repeated stomachaches before school are often linked to anxiety, school stress, or school avoidance in children ages 10 to 12, especially when the pain is worse on school mornings and better on weekends or after staying home. That said, medical causes like constipation, viral illness, reflux, or other gastrointestinal problems still need to be considered.</p>
+
+    <p>This is a very tween problem: the body announces distress before the child can explain it clearly. A 10- to 12-year-old may honestly say, “My stomach hurts,” without recognizing that worry about school, peers, or performance is part of the picture.</p>
+
+    <h2>Can anxiety cause stomachaches before school?</h2>
+    <p class="answer-first">Yes. Anxiety commonly causes stomachaches, nausea, and other physical symptoms in children ages 10 to 12 because stress affects the gut directly. School-morning stomach pain that repeats in a pattern is one of the most common ways anxiety shows up in tweens.</p>
+
+    <p>The pain is real. This matters. Telling a child “it’s just nerves” usually helps no one. The better question is why school is triggering that level of distress and whether the pattern is temporary stress or something more persistent like anxiety or school avoidance.</p>
+
+    <h2>How can I tell if it is anxiety or a medical problem?</h2>
+    <p class="answer-first">Look for timing and associated symptoms. Stomachaches that cluster around school mornings, tests, presentations, peer conflict, or Sunday nights and improve during breaks often point toward anxiety or school stress. Stomachaches with fever, vomiting, diarrhea, blood, weight loss, or nighttime waking need medical evaluation.</p>
+
+    <p>Constipation is another common culprit that families miss. A child who is avoiding school bathrooms, stooling infrequently, or straining may end up with chronic abdominal pain that is worse during the school week. The overlap is maddeningly efficient: anxiety can worsen constipation, and constipation can worsen school stress.</p>
+
+    <h2>What school-related issues can trigger stomachaches?</h2>
+    <p class="answer-first">Common triggers include generalized anxiety, social anxiety, bullying, academic pressure, school refusal, fear of tests or presentations, peer conflict, and avoiding school bathrooms. In this age group, several of those can be happening at once.</p>
+
+    <ul>
+      <li>Worry about tests, grades, or making mistakes</li>
+      <li>Fear of embarrassment in class or with peers</li>
+      <li>Bullying, exclusion, or social drama</li>
+      <li>School refusal or panic around separation and attendance</li>
+      <li>Avoiding bowel movements at school</li>
+    </ul>
+
+    <h2>When are school-morning stomachaches a red flag?</h2>
+    <p class="answer-first">School-morning stomachaches are more concerning when they are frequent, cause missed school, or come with vomiting, blood in stool, weight loss, persistent diarrhea, nighttime pain, fever, or significant anxiety, mood changes, or withdrawal. Those patterns deserve a pediatric evaluation.</p>
+
+    <ul>
+      <li>Stomach pain wakes your child from sleep</li>
+      <li>Your child is losing weight or eating much less</li>
+      <li>There is blood in stool, ongoing vomiting, or persistent diarrhea</li>
+      <li>The stomachaches are causing repeated missed school</li>
+      <li>Your child seems panicked, withdrawn, depressed, or increasingly avoidant</li>
+    </ul>
+
+    <h2>What can I do at home?</h2>
+    <p class="answer-first">Start by taking the symptom seriously while watching the pattern. Keep mornings calm and predictable, ask gentle questions about school stress, support regular bathroom habits, and avoid turning staying home into the automatic solution unless your child is clearly ill.</p>
+
+    <p>It also helps to talk with the school if the pattern is recurring. School counselors, teachers, and nurses sometimes see pieces of the story parents do not. If this looks anxiety-related, your pediatrician can help decide whether your child needs therapy, school supports, constipation treatment, or a medical workup.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Always consult your child's pediatrician for persistent or concerning abdominal pain.</em></p>
+  </article>
+</BaseLayout>
