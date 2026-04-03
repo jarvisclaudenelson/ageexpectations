@@ -480,4 +480,10 @@ export const articles = [
     path: "/ages/12-14-years/depression-anxiety-warning-signs/",
     pubDate: "2026-04-03",
   },
+  {
+    title: "What Time Should a 6 Year Old Go to Bed?",
+    description: "A practical, evidence-based guide to bedtime for 6-year-olds. Covers how much sleep 6-year-olds need, realistic school-night bedtimes, bedtime routines, screen limits, night waking, and when to talk to your pediatrician, based on AAP and AASM guidance.",
+    path: "/ages/6-8-years/bedtime/",
+    pubDate: "2026-04-03",
+  },
 ];
