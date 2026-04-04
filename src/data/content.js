@@ -486,4 +486,10 @@ export const articles = [
     path: "/ages/6-8-years/bedtime/",
     pubDate: "2026-04-03",
   },
+  {
+    title: "What Time Should an 8 Year Old Go to Bed?",
+    description: "A practical, evidence-based guide to bedtime for 8-year-olds. Covers how much sleep 8-year-olds need, realistic school-night bedtimes, screen limits, bedtime resistance, night waking, and when to talk to your pediatrician, based on AAP and AASM guidance.",
+    path: "/ages/6-8-years/bedtime/",
+    pubDate: "2026-04-04",
+  },
 ];
