@@ -663,4 +663,11 @@ export const articles = [
     pubDate: "2026-04-05",
     image: "/images/pins/2026-04-05-8-10-years-anxiety-pin.png",
   },
+  {
+    title: "When Can a 6 to 8 Year Old Tie Their Shoes?",
+    description: "A practical, evidence-based guide to shoe-tying readiness in children ages 6 to 8. Learn the typical age range for tying shoes, what skills come first, how to help without pressure, and when difficulty may be worth discussing with your pediatrician.",
+    path: "/ages/6-8-years/tie-shoes/",
+    pubDate: "2026-04-05",
+    image: "/images/pins/2026-04-05-6-8-years-tie-shoes-pin.png",
+  },
 ];
