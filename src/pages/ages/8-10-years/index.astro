@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
-import { topics } from '../../../data/ages.js';
+import { topics, extraTopics } from '../../../data/ages.js';
+const extras = extraTopics['8-10-years'] || [];
 
 const title = '8–10 Year Old Development: What to Expect';
 const description = 'A guide to development for 8–10 year olds — growing independence, logical thinking, puberty onset, social changes, and physical growth — with AAP guidelines and specific milestones.';
@@ -127,6 +128,9 @@ const mSchema = medicalWebPageSchema({
   <h2>Explore 8–10 Year Old Topics</h2>
   <div class="topic-grid">
     {topics.map(topic => (
+      <a href={`/ages/8-10-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+    {extras.map(topic => (
       <a href={`/ages/8-10-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>

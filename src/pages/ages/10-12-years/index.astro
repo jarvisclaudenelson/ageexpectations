@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
-import { topics } from '../../../data/ages.js';
+import { topics, extraTopics } from '../../../data/ages.js';
+const extras = extraTopics['10-12-years'] || [];
 
 const title = '10–12 Year Old Development: What to Expect';
 const description = 'Most 10–12 year olds need 9–12 hours of sleep, 60 minutes of daily physical activity, and steady parent support as puberty, abstract thinking, and peer influence intensify. Use this AAP- and CDC-informed guide to understand tween development.';
@@ -144,6 +145,9 @@ const medicalData = medicalWebPageSchema({
   <h2>Explore 10–12 Year Old Topics</h2>
   <div class="topic-grid">
     {topics.map((topic) => (
+      <a href={`/ages/10-12-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+    {extras.map((topic) => (
       <a href={`/ages/10-12-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>

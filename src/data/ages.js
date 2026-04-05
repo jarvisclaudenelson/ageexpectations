@@ -29,6 +29,58 @@ export const topics = [
   { slug: 'red-flags', label: 'Red Flags' },
 ];
 
+// Extra topic pages per age group (beyond the 9 standard topics)
+export const extraTopics = {
+  '5-6-years': [
+    { slug: 'letter-reversals', label: 'Letter Reversals' },
+    { slug: 'learning-disabilities', label: 'Learning Disabilities' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+  '6-8-years': [
+    { slug: 'adhd', label: 'ADHD Signs' },
+    { slug: 'bedtime', label: 'Bedtime Guide' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+  '8-10-years': [
+    { slug: 'anxiety', label: 'Anxiety Signs' },
+    { slug: 'deodorant', label: 'Deodorant & Hygiene' },
+    { slug: 'puberty', label: 'Puberty & Development' },
+    { slug: 'santa', label: 'Santa & Magical Thinking' },
+    { slug: 'screen-time', label: 'Screen Time' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+  '10-12-years': [
+    { slug: 'anxiety', label: 'Anxiety Signs' },
+    { slug: 'bedtime', label: 'Bedtime Guide' },
+    { slug: 'deodorant', label: 'Deodorant & Hygiene' },
+    { slug: 'stomachaches-before-school', label: 'Stomachaches Before School' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+  '12-14-years': [
+    { slug: 'bedtime', label: 'Bedtime Guide' },
+    { slug: 'depression-anxiety-warning-signs', label: 'Depression & Anxiety Warning Signs' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+  '14-18-years': [
+    { slug: 'always-tired', label: 'Always Tired' },
+    { slug: 'bedtime', label: 'Bedtime Guide' },
+    { slug: 'staying-home-alone-overnight', label: 'Staying Home Alone Overnight' },
+    { slug: 'nutrition', label: 'Nutrition Guide' },
+    { slug: 'safety', label: 'Safety' },
+    { slug: 'school-learning', label: 'School & Learning' },
+  ],
+};
+
 export const groupLabels = {
   infant: 'Infant (0–12 Months)',
   toddler: 'Toddler (12 Mo–3 Years)',

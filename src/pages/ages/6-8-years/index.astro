@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
-import { topics } from '../../../data/ages.js';
+import { topics, extraTopics } from '../../../data/ages.js';
+const extras = extraTopics['6-8-years'] || [];
 
 const title = '6–8 Year Old Development: What to Expect';
 const description = 'What to expect from your 6–8 year old — growing independence, developing friendships, advanced reading and math skills, and refined motor skills — with AAP and CDC guidance.';
@@ -149,6 +150,9 @@ const mSchema = medicalWebPageSchema({
   <h2>Explore 6–8 Year Old Topics</h2>
   <div class="topic-grid">
     {topics.map(topic => (
+      <a href={`/ages/6-8-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+    {extras.map(topic => (
       <a href={`/ages/6-8-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>

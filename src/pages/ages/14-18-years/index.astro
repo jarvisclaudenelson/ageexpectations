@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../data/schema.js';
-import { topics } from '../../../data/ages.js';
+import { topics, extraTopics } from '../../../data/ages.js';
+const extras = extraTopics['14-18-years'] || [];
 
 const title = 'Adolescent Development (14–18 Years): What to Expect';
 const description = 'A guide to the high school years (14–18) — completing physical maturation, developing identity, navigating independence, managing sleep, and preparing for adulthood — with AAP guidelines.';
@@ -141,6 +142,9 @@ const mSchema = medicalWebPageSchema({
   <h2>Explore 14–18 Year Old Topics</h2>
   <div class="topic-grid">
     {topics.map(topic => (
+      <a href={`/ages/14-18-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
+    ))}
+    {extras.map(topic => (
       <a href={`/ages/14-18-years/${topic.slug}/`} class="topic-card">{topic.label}</a>
     ))}
   </div>

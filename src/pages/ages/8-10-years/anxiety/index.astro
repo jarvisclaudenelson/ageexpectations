@@ -7,37 +7,37 @@ const description = "A practical, evidence-based guide to anxiety in children ag
 
 const faqs = [
   {
-    question: "Is it typical that my 8-year-old gets stomachaches before school?",
-    answer: "Sometimes, yes — repeated stomachaches before school can be a common way anxiety shows up in 8–10-year-olds, especially when no clear medical cause is found (AAP, 2020; NIMH, 2023). If the pattern is happening often, causes school avoidance, or interferes with sleep, friendships, or daily functioning, talk to your pediatrician."
+    question: "Is it typical that my 8 to 10 year old has stomachaches before school?",
+    answer: "Occasional school-morning stomachaches are common in children ages 8–10, especially during stressful periods, but repeated stomachaches without a clear medical cause can be a sign of anxiety (AAP, 2020; NIMH, 2023). If symptoms happen often, lead to missed school, or come with panic, sleep problems, or school avoidance, talk to your pediatrician.",
   },
   {
-    question: "Should I worry if my 9-year-old is suddenly afraid to sleep alone?",
-    answer: "A new fear of sleeping alone can happen in typically developing 8–10-year-olds, especially during stressful transitions, but persistent bedtime fear, panic, or repeated night wakings may point to anxiety rather than a passing phase (AACAP, 2020). Talk to your pediatrician if it lasts more than a few weeks or affects daytime functioning."
+    question: "Should I worry if my 9 year old cries a lot about school?",
+    answer: "Frequent crying about school in a 9-year-old may reflect anxiety, bullying, academic stress, or social struggles rather than simple dislike of school. When crying is persistent, intense, or paired with school refusal, headaches, stomachaches, or sleep disruption, it is worth discussing with your pediatrician and the school team.",
   },
   {
-    question: "Is it typical that my child worries constantly about school mistakes?",
-    answer: "Frequent worry about getting things wrong can be common in 8–10-year-olds, but anxiety becomes more concerning when the worry is excessive, hard to stop, and causes tears, avoidance, perfectionism, or meltdowns over ordinary schoolwork (NIMH, 2023). Talk to your pediatrician if the worry is interfering with learning or family life."
+    question: "Is it typical that my child worries constantly about bad things happening?",
+    answer: "Some worry is expected in children ages 8–10, but constant, hard-to-control worry that affects sleep, school, play, or family life may indicate an anxiety disorder (CDC, 2022; NIMH, 2023). If your child seeks repeated reassurance, cannot relax, or avoids activities because of worry, talk to your pediatrician.",
   },
   {
     question: "Can anxiety look like anger in an 8 to 10 year old?",
-    answer: "Yes — anxiety in 8–10-year-olds often looks like irritability, shutdowns, refusal, or anger rather than a child saying, 'I feel anxious' (AAP, 2020). If emotional outbursts happen mostly around school, social events, bedtime, or separation, anxiety may be part of the picture, and it is reasonable to discuss this with your pediatrician."
+    answer: "Yes. Anxiety in children ages 8–10 often shows up as irritability, anger, clinginess, meltdowns, or refusal rather than calm statements of fear. Children this age may not have the words to explain anxious feelings, so behavior changes can be the first clue. If the pattern is persistent or impairing, talk to your pediatrician.",
   },
   {
-    question: "Should I make my child go to school if they are anxious?",
-    answer: "In most cases, yes — school avoidance usually makes childhood anxiety stronger over time because avoidance teaches the brain that the feared situation is dangerous (AAP, 2020; AACAP, 2020). If school refusal is escalating, involve your pediatrician promptly so your child can get support before the pattern becomes entrenched."
+    question: "Should I make my child go to school if they seem anxious?",
+    answer: "In most cases, maintaining school attendance is important because avoiding feared situations tends to strengthen anxiety over time (AAP, 2020; AACAP, 2020). If your child is highly distressed, has repeated physical symptoms, or is refusing school, contact your pediatrician and the school promptly for support rather than handling it alone.",
   },
   {
-    question: "Does anxiety in children usually need medication?",
-    answer: "Not usually at first — for mild-to-moderate anxiety in 8–10-year-olds, cognitive behavioral therapy, or CBT, is considered first-line treatment and helps many children improve significantly (AACAP, 2020). Medication may be considered for more severe symptoms, but that decision should be made with your pediatrician and a qualified mental health clinician."
-  }
+    question: "What treatment helps anxiety in 8 to 10 year olds?",
+    answer: "Cognitive Behavioral Therapy, or CBT, is the first-line treatment for mild-to-moderate anxiety in school-age children, and about 60–70% of children improve significantly with appropriate treatment (AACAP, 2020). Parent support, school accommodations, and consistent routines also help. A pediatrician can guide next steps and referrals.",
+  },
 ];
 
 const articleData = articleSchema({
   title,
   description,
   url: "https://ageexpectations.com/ages/8-10-years/anxiety/",
-  datePublished: "2026-04-04",
-  dateModified: "2026-04-04"
+  datePublished: "2026-04-05",
+  dateModified: "2026-04-05",
 });
 
 const faqData = faqSchema(faqs);
@@ -46,187 +46,180 @@ const medicalData = medicalWebPageSchema({
   name: title,
   description,
   url: "https://ageexpectations.com/ages/8-10-years/anxiety/",
-  lastReviewed: "2026-04-04"
+  lastReviewed: "2026-04-05",
 });
 ---
 
-<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+<BaseLayout title={title} description={description} structuredData={[articleData, faqData, medicalData]}>
   <article>
     <h1>{title}</h1>
     <p class="answer-first">
-      Anxiety in children ages 8–10 often shows up as stomachaches, headaches, school avoidance, bedtime fears, irritability, perfectionism, or frequent reassurance-seeking rather than a child clearly saying they feel anxious (AAP, 2020; NIMH, 2023). Anxiety disorders affect about 7% of children ages 3–17 in the United States, making them the most common childhood mental health condition (CDC, 2022).
+      Anxiety in children ages 8–10 often looks like stomachaches, school avoidance, irritability, sleep trouble, repeated reassurance-seeking, or refusing activities rather than simply saying "I feel anxious" (CDC, 2022; NIMH, 2023). Anxiety disorders affect about 7% of U.S. children ages 3–17, and physical complaints are a common early sign in school-age children.
     </p>
+
     <p>
-      The 8–10 age range is a common time for anxiety to become more visible because school demands, peer awareness, and self-consciousness all increase. Many worries are part of typical development, but persistent fear that disrupts school, sleep, friendships, or family life deserves attention.
+      Children ages 8–10 are old enough to anticipate problems, compare themselves to peers, and worry about school, friendships, safety, and performance. That means anxiety can become more visible in daily life during this stage. Many worries are part of typical development, but persistent fear, avoidance, and physical symptoms deserve closer attention.
     </p>
 
     <h2>What does anxiety look like in an 8 to 10 year old?</h2>
     <p class="answer-first">
-      In 8–10-year-olds, anxiety often looks behavioral and physical rather than verbal: frequent stomachaches, headaches, crying before school, clinginess, irritability, trouble sleeping, avoiding new situations, or needing repeated reassurance are all common presentations (AAP, 2020; AACAP, 2020). Children this age often cannot fully explain their worries, so the pattern matters more than any single symptom.
+      In children ages 8–10, anxiety commonly shows up as physical complaints, irritability, sleep problems, clinginess, perfectionism, or avoiding school and social situations rather than clearly described fear (AAP, 2020; AACAP, 2020). A typically developing child may worry sometimes, but anxiety becomes concerning when it is frequent, intense, and starts interfering with school, friendships, or family life.
     </p>
     <p>
-      A typically developing 8–10-year-old may still worry about tests, friendships, the dark, or making mistakes. The difference is intensity and impact. Anxiety becomes more concerning when the fear is out of proportion to the situation, happens repeatedly, and starts to limit daily life. A child may ask the same question over and over, melt down over small schedule changes, refuse activities they used to enjoy, or become unusually rigid and perfectionistic.
+      School-age children often lack the language to say, "I am anxious about uncertainty" or "I am having catastrophic thoughts." Instead, parents may notice patterns such as repeated requests for reassurance, crying before school, refusing sleepovers, sudden anger before sports or tests, or asking the same safety questions over and over.
     </p>
     <p>
-      Many children in this age group describe anxiety indirectly. Instead of saying, "I am worried," they may say, "My stomach hurts," "I can't go," or "What if something bad happens?" Parents often first notice anxiety at transitions: school drop-off, bedtime, tests, sports, sleepovers, or social events.
+      Anxiety at ages 8–10 may also look different in different settings. A child may seem cheerful at home but fall apart before school, or appear oppositional in the morning when the underlying issue is fear. The key pattern is not one bad day. It is a repeated cycle of worry, distress, and avoidance.
     </p>
 
-    <h2>Is my 8 to 10 year old just a worrier, or could it be anxiety?</h2>
+    <h2>What worries are typical for children ages 8 to 10, and what worries are red flags?</h2>
     <p class="answer-first">
-      Worry is part of typical development, but anxiety is more likely when fear is persistent, difficult to control, and interferes with school, sleep, friendships, or family routines (NIMH, 2023; AACAP, 2020). A child who worries occasionally is different from a child whose worry drives avoidance, distress, or daily physical complaints.
+      Children ages 8–10 commonly worry about school performance, friendships, being left out, making mistakes, storms, illness, or family safety, but those worries are usually brief and do not stop them from participating in daily life (NIMH, 2023). Red flags include worries that are hard to control, happen most days, and lead to avoidance, missed school, sleep disruption, or repeated physical symptoms.
     </p>
     <p>
-      Children ages 8–10 commonly worry about being liked, getting in trouble, being wrong in class, or something happening to parents. Those worries are usually manageable and do not stop the child from functioning. Anxiety becomes more concerning when a child spends a large amount of time anticipating bad outcomes, needs constant reassurance, or avoids ordinary experiences such as school, birthday parties, sports, riding the bus, or sleeping alone.
+      A typically developing 8–10-year-old may feel nervous before a spelling test, want extra reassurance before a sleepover, or worry after hearing upsetting news. Those worries usually improve with comfort and routine. In contrast, anxiety is more concerning when the fear is out of proportion to the situation or lasts long after the trigger has passed.
     </p>
     <p>
-      One useful question is: <em>Is the worry running my child's day?</em> If the answer is yes, that is a reason to look more closely. Another useful sign is whether reassurance actually helps. In anxiety, reassurance may calm a child briefly, but the same fear returns quickly and repeatedly.
+      Examples of red flags in this age group include refusing to go to school for days at a time, panicking before routine activities, needing constant reassurance to get through ordinary tasks, or avoiding friends, sports, or class presentations because of fear. When worry starts organizing a child's life, it is time to involve a pediatrician.
     </p>
 
     <h2>Can anxiety cause stomachaches, headaches, or other physical symptoms in an 8 to 10 year old?</h2>
     <p class="answer-first">
-      Yes — anxiety in 8–10-year-olds commonly presents as physical symptoms such as stomachaches, headaches, nausea, dizziness, or feeling shaky, especially before school or stressful events (AAP, 2020; NIMH, 2023). Recurrent physical complaints without a clear medical cause are one of the most common ways childhood anxiety first comes to a parent's attention.
+      Yes. Anxiety in children ages 8–10 often presents as stomachaches, headaches, nausea, dizziness, or feeling sick on school mornings, and these symptoms may occur even when no medical illness is found (AAP, 2020; NIMH, 2023). Recurrent physical complaints linked to school, separation, or performance situations are one of the most common ways anxiety first appears in this age group.
     </p>
     <p>
-      The mind and body are tightly connected. When a child feels anxious, the body's stress system activates, which can affect digestion, muscle tension, heart rate, and sleep. That does not mean the symptoms are fake. The pain feels real to the child even when anxiety is playing a major role.
+      This does not mean physical symptoms should be dismissed. Children can have both anxiety and a medical problem, so persistent or severe symptoms still deserve medical evaluation. But when a pattern appears mainly before school, tests, sports, social events, or bedtime, anxiety becomes more likely.
     </p>
     <p>
-      Patterns matter. If symptoms happen mostly on school mornings, before tests, at bedtime, or ahead of social events, anxiety becomes more likely. If symptoms also include weight loss, vomiting, blood in stool, fever, persistent nighttime pain, or pain unrelated to stressful situations, medical evaluation is especially important to rule out other causes. A pediatrician can help sort out whether symptoms are medical, emotional, or both.
+      Parents often notice that the child feels better on weekends, holidays, or after being allowed to stay home. That pattern can be especially informative. If a child frequently complains of stomach pain, asks to stay home, or seems physically ill mainly around stressful events, talk to your pediatrician about whether anxiety may be contributing.
     </p>
 
-    <h2>Why does my 8 to 10 year old seem anxious about school?</h2>
+    <h2>Can anxiety in an 8 to 10 year old look like anger, defiance, or meltdowns?</h2>
     <p class="answer-first">
-      School anxiety in 8–10-year-olds often centers on academic pressure, fear of mistakes, separation concerns, peer problems, bullying, sensory stress, or learning differences such as ADHD or dyslexia that make school feel unpredictable or overwhelming (AAP, 2020; CDC, 2022). School avoidance is one of the most clinically important signs because avoidance tends to strengthen anxiety over time.
+      Yes. In children ages 8–10, anxiety often looks like irritability, anger, shutdowns, arguing, crying, or refusing demands because anxious children try to escape situations that feel threatening (AACAP, 2020). A child who seems oppositional before school, social events, or bedtime may be expressing fear rather than deliberate defiance.
     </p>
     <p>
-      At this age, children are much more aware of comparison. They notice who reads faster, answers quickly, has close friends, or seems "good" at school. A child with anxiety may freeze on tests, cry over homework, repeatedly check assignments, or become very distressed by small errors. Some children appear oppositional in the morning when they are actually overwhelmed.
+      This is one reason anxiety can be missed. Adults may focus on the behavior they can see instead of the fear driving it. A child who melts down before a class presentation may look dramatic, but the underlying issue may be social anxiety. A child who argues every morning may be trying to avoid separation or academic stress.
     </p>
     <p>
-      School-related anxiety can also be the first clue to another underlying issue. A child who dreads reading aloud may have a learning difference. A child who fears recess may be struggling socially. A child who complains of stomachaches every Monday may be dealing with bullying. When anxiety is linked to school, parents should think broadly rather than assuming the child simply needs to be tougher.
+      Looking for patterns helps. If the outbursts cluster around transitions, performance, social situations, sleep, or leaving home, anxiety is more likely. Understanding that link does not mean there should be no limits. It means the child may need support for fear, not just discipline for behavior.
     </p>
 
-    <h2>What kinds of anxiety are common in 8 to 10 year olds?</h2>
+    <h2>How does anxiety affect school, friendships, and daily life in children ages 8 to 10?</h2>
     <p class="answer-first">
-      In children ages 8–10, common anxiety patterns include separation anxiety, generalized anxiety, social anxiety, and specific fears such as vomiting, storms, sleeping alone, or being away from home (CDC, 2022; NIMH, 2023). Different types of anxiety often overlap, and children may move between them depending on stress, temperament, and life events.
+      Anxiety in children ages 8–10 can reduce concentration, increase school refusal, interfere with class participation, and make friendships harder because anxious children often avoid uncertain or socially demanding situations (AAP, 2020; CDC, 2022). When fear begins to limit attendance, learning, sleep, sports, or peer relationships, it has moved beyond everyday worry.
     </p>
     <p>
-      <strong>Separation anxiety</strong> in this age range may look like panic at school drop-off, worry that a parent will get hurt, refusal to sleep alone, or repeated checking on a parent. <strong>Generalized anxiety</strong> often looks like broad, ongoing worry about many topics: school, health, weather, family safety, or the future. <strong>Social anxiety</strong> may involve fear of speaking in class, embarrassment, sleepover refusal, or avoiding group activities.
+      In school, anxiety may look like perfectionism, taking unusually long to start work, freezing during tests, repeatedly asking if assignments are correct, or visiting the nurse often. In friendships, it may look like avoiding group activities, fear of embarrassment, or intense distress after minor peer conflict.
     </p>
     <p>
-      Some children also develop very specific fears. They may become preoccupied with throwing up, choking, contamination, dogs, storms, or fires. A specific fear becomes more concerning when it starts to organize family life around avoiding the feared situation.
+      Children this age may still want connection but become trapped by fear of mistakes, criticism, or separation. Parents sometimes hear "I hate school" when the deeper message is "school makes me feel overwhelmed." If anxiety is changing how your child functions across settings, it is worth addressing early rather than hoping they simply outgrow it.
     </p>
 
-    <h2>What is typically developing fear in an 8 to 10 year old, and what is a red flag?</h2>
+    <h2>What causes anxiety in an 8 to 10 year old?</h2>
     <p class="answer-first">
-      It is typical for 8–10-year-olds to have temporary worries about school performance, friendships, safety, or sleeping alone, especially during transitions or stressful periods. Red flags include fear that lasts for weeks, causes avoidance, triggers repeated physical complaints, or interferes with sleep, school attendance, friendships, or family activities (AAP, 2020; AACAP, 2020).
+      Anxiety in children ages 8–10 is usually caused by a mix of temperament, family history, stress, learning or attention challenges, and life experiences rather than one single event (NIMH, 2023; AAP, 2020). Children who are naturally cautious, highly sensitive, or struggling in school may be especially vulnerable when demands increase during the elementary years.
     </p>
     <p>
-      A typically developing child may feel nervous before a spelling test, a recital, or the first day of school but still participate with support. A red flag is a child who cannot enter the classroom, misses activities, cries regularly before ordinary routines, or becomes consumed by reassurance-seeking. Another red flag is a child whose life gets smaller over time: fewer activities, fewer social events, more refusal, more distress.
+      Some children seem anxious from an early age. Others become anxious when academic expectations rise, friendships become more complicated, or family stress increases. Bullying, social exclusion, medical problems, sleep deprivation, and traumatic experiences can also contribute.
     </p>
     <p>
-      Regression can also matter. If a child who previously slept independently now cannot separate at bedtime, or a child who once enjoyed soccer now refuses every practice because of fear, that change is worth noticing. Anxiety is especially important to evaluate if symptoms appear alongside bullying, a major life change, ADHD, autism, a learning difference, or family history of anxiety.
+      Anxiety can also overlap with ADHD, learning differences, autism, depression, or obsessive-compulsive symptoms. That overlap matters because a child who looks anxious may actually be anxious because reading is unexpectedly hard, because attention demands feel overwhelming, or because they are being bullied. A pediatrician can help sort out what may be contributing.
     </p>
 
-    <h2>How can I help my 8 to 10 year old with anxiety at home?</h2>
+    <h2>What helps an 8 to 10 year old with anxiety?</h2>
     <p class="answer-first">
-      The most helpful home strategies for anxiety in 8–10-year-olds are predictable routines, calm validation, gradual exposure to feared situations, consistent school attendance, and reducing excessive reassurance rather than eliminating every trigger (AACAP, 2020; AAP, 2020). Support works best when it builds confidence instead of helping a child avoid every uncomfortable feeling.
+      The most effective first-line treatment for mild-to-moderate anxiety in children ages 8–10 is Cognitive Behavioral Therapy, or CBT, and studies show about 60–70% of children improve significantly with appropriate treatment (AACAP, 2020). Supportive parenting, steady routines, good sleep, and working with the school also help reduce anxiety symptoms.
     </p>
     <p>
-      Start by naming what you see: "Your body seems worried right now." That validates the feeling without confirming the fear as fact. Keep routines steady around sleep, school, meals, and transitions, because predictability lowers stress. Break feared tasks into smaller steps. For example, a child anxious about school may first walk into the building with support, then go to class, then work toward an independent drop-off.
+      CBT helps children identify anxious thoughts, face fears gradually, and learn coping skills instead of avoiding what scares them. Parents are often part of treatment because family responses can either reduce or unintentionally reinforce anxiety. For example, too much reassurance or allowing repeated avoidance can keep the cycle going.
     </p>
     <p>
-      Try to avoid long reassurance loops. Reassurance can help briefly, but repeating "Nothing bad will happen" ten times often feeds anxiety. Instead, use confident statements such as, "This feels hard, and you can do hard things." Relaxation skills, movement, sleep protection, and limiting exposure to frightening media can also help. If home strategies are not enough, a pediatrician can guide next steps.
+      At home, helpful strategies include predictable routines, calm validation, gradual exposure to feared situations, limiting excessive reassurance, and protecting sleep. At school, some children benefit from check-ins, reduced nurse visits, temporary presentation support, or a plan for re-entry after school refusal. Medication may be considered in some cases, but therapy is generally the starting point for this age group.
     </p>
 
-    <h2>How is anxiety treated in children ages 8 to 10?</h2>
+    <h2>When should I talk to my pediatrician about anxiety in my 8 to 10 year old?</h2>
     <p class="answer-first">
-      For most 8–10-year-olds with mild-to-moderate anxiety, cognitive behavioral therapy, or CBT, is the first-line treatment and has the strongest evidence base for improvement (AACAP, 2020; AAP, 2020). Medication may be considered for more severe anxiety or when therapy alone is not enough, but treatment decisions should be individualized with a pediatrician and mental health clinician.
-    </p>
-    <p>
-      CBT teaches children to recognize anxious thoughts, understand body signals, and practice coping skills while gradually facing feared situations. Parents are usually involved because family responses can either reduce or accidentally reinforce anxiety. For example, therapy may help parents step back from reassurance patterns or avoidance accommodations that keep anxiety going.
-    </p>
-    <p>
-      Treatment also works best when contributing factors are addressed. A child with school-related anxiety may need support for bullying, learning evaluation, or classroom accommodations. A child with sleep-related anxiety may need a more consistent bedtime routine. If symptoms are severe — such as persistent school refusal, panic, depression, or safety concerns — earlier referral is especially important.
-    </p>
-
-    <h2>When should I talk to my pediatrician about my 8 to 10 year old's anxiety?</h2>
-    <p class="answer-first">
-      Talk to your pediatrician if anxiety in an 8–10-year-old lasts more than a few weeks, causes school refusal, frequent physical complaints, sleep disruption, social withdrawal, panic symptoms, or repeated reassurance-seeking that interferes with daily life (AAP, 2020; AACAP, 2020). Childhood anxiety is treatable, and early support usually works better than a long wait-and-see approach.
+      Talk to your pediatrician if your 8–10-year-old has repeated school-morning stomachaches, refuses school, avoids friends or activities, has frequent panic-like episodes, needs constant reassurance, or shows anxiety that lasts for weeks and disrupts daily life (AAP, 2020; AACAP, 2020). Early evaluation matters because avoidance tends to make anxiety stronger over time.
     </p>
     <ul>
-      <li>Your 8–10-year-old regularly complains of stomachaches, headaches, or nausea before school, social events, or bedtime.</li>
-      <li>Your 8–10-year-old refuses school, misses class repeatedly, or has escalating distress at drop-off.</li>
-      <li>Your 8–10-year-old suddenly avoids activities they previously enjoyed, such as sports, sleepovers, clubs, or friends' houses.</li>
-      <li>Your 8–10-year-old cannot sleep alone, wakes repeatedly from fear, or has persistent bedtime panic that is not improving.</li>
-      <li>Your 8–10-year-old asks for reassurance over and over and becomes very distressed if not reassured.</li>
-      <li>Your 8–10-year-old has meltdowns, shutdowns, or anger outbursts mainly around feared situations like homework, tests, or social events.</li>
-      <li>Your 8–10-year-old seems unusually perfectionistic and falls apart over small mistakes or unfinished work.</li>
-      <li>Your 8–10-year-old is withdrawing from friends, losing interest in usual activities, or showing signs of depression along with anxiety.</li>
-      <li>Your 8–10-year-old talks about wanting to disappear, not wanting to be here, self-harm, or hopelessness. If there is any immediate safety concern, seek urgent help or call/text 988 right away.</li>
+      <li>If your child regularly complains of stomachaches, headaches, or nausea before school or social events</li>
+      <li>If your child misses school, begs to stay home, or has escalating school refusal</li>
+      <li>If your child stops participating in sports, clubs, sleepovers, or activities they previously enjoyed</li>
+      <li>If your child has panic symptoms such as shaking, shortness of breath, chest tightness, or sudden intense fear</li>
+      <li>If your child cannot sleep because of worry, nightmares, or repeated reassurance-seeking</li>
+      <li>If your child asks the same safety questions over and over and cannot be comforted for long</li>
+      <li>If anxiety is affecting grades, friendships, eating, or family routines</li>
+      <li>If your child has signs of bullying, depression, or obsessive behaviors along with anxiety</li>
+      <li>If your child has lost skills or there has been a sudden major behavior change</li>
+      <li>If your child talks about self-harm, says they do not want to be here, or expresses suicidal thoughts, seek urgent help immediately by contacting 988, emergency services, or your local crisis resource</li>
     </ul>
     <p>
-      A pediatrician can screen for anxiety, rule out medical causes of physical symptoms, and help connect families with therapy, school supports, or additional evaluation when needed.
+      A pediatrician can look for medical causes, screen for anxiety and related conditions, and help connect your family with therapy, school supports, or child mental health care if needed.
     </p>
 
     <h2>Frequently Asked Questions</h2>
 
-    <h3 class="faq-question">Is it typical that my 8-year-old gets stomachaches before school?</h3>
+    <h3 class="faq-question">Is it typical that my 8 to 10 year old has stomachaches before school?</h3>
     <p class="answer-first faq-answer">
-      Sometimes, yes — repeated stomachaches before school can be a common way anxiety shows up in 8–10-year-olds, especially when no clear medical cause is found (AAP, 2020; NIMH, 2023). If the pattern is happening often, causes school avoidance, or interferes with sleep, friendships, or daily functioning, talk to your pediatrician.
+      Occasional school-morning stomachaches are common in children ages 8–10, especially during stressful periods, but repeated stomachaches without a clear medical cause can be a sign of anxiety (AAP, 2020; NIMH, 2023). If symptoms happen often, lead to missed school, or come with panic, sleep problems, or school avoidance, talk to your pediatrician.
     </p>
     <p>
-      Many children in this age group experience stress physically. School-morning stomachaches deserve more attention when they improve on weekends or holidays, happen alongside tears or refusal, or show up with perfectionism, bullying concerns, or learning struggles.
+      Many children this age express stress physically rather than verbally. If symptoms mostly happen on school days and improve on weekends or holidays, that pattern makes anxiety more likely. Your pediatrician can help decide whether the main issue is medical, emotional, or both.
     </p>
 
-    <h3 class="faq-question">Should I worry if my 9-year-old is suddenly afraid to sleep alone?</h3>
+    <h3 class="faq-question">Should I worry if my 9 year old cries a lot about school?</h3>
     <p class="answer-first faq-answer">
-      A new fear of sleeping alone can happen in typically developing 8–10-year-olds, especially during stressful transitions, but persistent bedtime fear, panic, or repeated night wakings may point to anxiety rather than a passing phase (AACAP, 2020). Talk to your pediatrician if it lasts more than a few weeks or affects daytime functioning.
+      Frequent crying about school in a 9-year-old may reflect anxiety, bullying, academic stress, or social struggles rather than simple dislike of school. When crying is persistent, intense, or paired with school refusal, headaches, stomachaches, or sleep disruption, it is worth discussing with your pediatrician and the school team.
     </p>
     <p>
-      Bedtime anxiety is more concerning when it comes with repeated reassurance, physical complaints, refusal to separate, or growing dependence on a parent to fall asleep every night after previously sleeping independently.
+      A one-time rough week is different from a repeating pattern. If school distress is showing up most mornings, before homework, or around peers, it deserves attention early because ongoing avoidance tends to make anxiety worse.
     </p>
 
-    <h3 class="faq-question">Is it typical that my child worries constantly about school mistakes?</h3>
+    <h3 class="faq-question">Is it typical that my child worries constantly about bad things happening?</h3>
     <p class="answer-first faq-answer">
-      Frequent worry about getting things wrong can be common in 8–10-year-olds, but anxiety becomes more concerning when the worry is excessive, hard to stop, and causes tears, avoidance, perfectionism, or meltdowns over ordinary schoolwork (NIMH, 2023). Talk to your pediatrician if the worry is interfering with learning or family life.
+      Some worry is expected in children ages 8–10, but constant, hard-to-control worry that affects sleep, school, play, or family life may indicate an anxiety disorder (CDC, 2022; NIMH, 2023). If your child seeks repeated reassurance, cannot relax, or avoids activities because of worry, talk to your pediatrician.
     </p>
     <p>
-      Some children become so focused on avoiding mistakes that homework takes much longer than expected, they erase repeatedly, or they refuse to try unless they know they will succeed. That pattern is worth discussing.
+      Children with significant anxiety may ask the same questions over and over: "Will you be safe?" "What if something bad happens?" "Are you sure?" That repeated reassurance cycle is a useful clue that the worry is not resolving on its own.
     </p>
 
     <h3 class="faq-question">Can anxiety look like anger in an 8 to 10 year old?</h3>
     <p class="answer-first faq-answer">
-      Yes — anxiety in 8–10-year-olds often looks like irritability, shutdowns, refusal, or anger rather than a child saying, "I feel anxious" (AAP, 2020). If emotional outbursts happen mostly around school, social events, bedtime, or separation, anxiety may be part of the picture, and it is reasonable to discuss this with your pediatrician.
+      Yes. Anxiety in children ages 8–10 often shows up as irritability, anger, clinginess, meltdowns, or refusal rather than calm statements of fear. Children this age may not have the words to explain anxious feelings, so behavior changes can be the first clue. If the pattern is persistent or impairing, talk to your pediatrician.
     </p>
     <p>
-      Children this age often experience anxiety as overwhelm. When demands rise, anger can be the outward expression of fear, embarrassment, or loss of control rather than deliberate defiance.
+      Look for timing. If the anger appears before school, bedtime, performances, social events, or separations, anxiety may be driving the behavior. A pediatrician can help you decide whether the pattern fits anxiety, ADHD, mood symptoms, or another issue.
     </p>
 
-    <h3 class="faq-question">Should I make my child go to school if they are anxious?</h3>
+    <h3 class="faq-question">Should I make my child go to school if they seem anxious?</h3>
     <p class="answer-first faq-answer">
-      In most cases, yes — school avoidance usually makes childhood anxiety stronger over time because avoidance teaches the brain that the feared situation is dangerous (AAP, 2020; AACAP, 2020). If school refusal is escalating, involve your pediatrician promptly so your child can get support before the pattern becomes entrenched.
+      In most cases, maintaining school attendance is important because avoiding feared situations tends to strengthen anxiety over time (AAP, 2020; AACAP, 2020). If your child is highly distressed, has repeated physical symptoms, or is refusing school, contact your pediatrician and the school promptly for support rather than handling it alone.
     </p>
     <p>
-      The goal is not to force without support. The goal is supported attendance with problem-solving, communication with school staff, and treatment if needed.
+      The goal is not to force a struggling child without support. The goal is to avoid letting anxiety quietly shrink your child's world. School plans, therapy, and graduated return strategies often help.
     </p>
 
-    <h3 class="faq-question">Does anxiety in children usually need medication?</h3>
+    <h3 class="faq-question">What treatment helps anxiety in 8 to 10 year olds?</h3>
     <p class="answer-first faq-answer">
-      Not usually at first — for mild-to-moderate anxiety in 8–10-year-olds, cognitive behavioral therapy, or CBT, is considered first-line treatment and helps many children improve significantly (AACAP, 2020). Medication may be considered for more severe symptoms, but that decision should be made with your pediatrician and a qualified mental health clinician.
+      Cognitive Behavioral Therapy, or CBT, is the first-line treatment for mild-to-moderate anxiety in school-age children, and about 60–70% of children improve significantly with appropriate treatment (AACAP, 2020). Parent support, school accommodations, and consistent routines also help. A pediatrician can guide next steps and referrals.
     </p>
     <p>
-      If anxiety is causing school refusal, panic, severe sleep disruption, depression, or major functional impairment, a pediatrician may recommend a more urgent mental health evaluation and discuss whether combined treatment makes sense.
+      Treatment works best when anxiety is identified early. Waiting for a child to simply become more mature can allow avoidance and fear patterns to become more entrenched, so it is reasonable to ask for help sooner rather than later.
     </p>
 
-    <h3 class="faq-question">Should I reassure my child every time they seem anxious?</h3>
+    <h3 class="faq-question">Should I worry if my child suddenly does not want to go to sleepovers or activities anymore?</h3>
     <p class="answer-first faq-answer">
-      Brief reassurance can help, but repeated reassurance usually does not solve anxiety and can accidentally strengthen it by teaching a child to seek certainty over and over (AACAP, 2020). If reassurance loops are happening daily, talk to your pediatrician about strategies or a therapy referral.
+      A child ages 8–10 who suddenly avoids sleepovers, sports, birthday parties, or other previously enjoyed activities may be showing anxiety, social stress, bullying, or another emotional concern rather than simple preference. If the change persists or spreads to multiple settings, talk to your pediatrician.
     </p>
     <p>
-      A better long-term approach is validation plus confidence: "I can see this feels hard, and I know you can handle it." That supports coping without feeding the cycle.
+      Withdrawal matters because anxiety often grows through avoidance. A pattern of backing away from more and more activities is a stronger red flag than disliking one specific event.
     </p>
+
+    <section class="disclaimer">
+      <p>
+        <em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, NIMH, and AACAP guidance. Always consult your child's pediatrician for personalized guidance.</em>
+      </p>
+    </section>
   </article>
-
-  <p class="disclaimer">
-    <em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, NIMH, and AACAP guidance. Always consult your child's pediatrician for personalized guidance.</em>
-  </p>
 </BaseLayout>
