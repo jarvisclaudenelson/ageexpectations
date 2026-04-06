@@ -677,4 +677,11 @@ export const articles = [
     pubDate: "2026-04-06",
     image: "/images/pins/2026-04-06-8-10-years-social-anxiety-pin.png",
   },
+  {
+    title: "What Are the Signs of Depression in a 14 to 18 Year Old?",
+    description: "A practical, evidence-based guide to depression warning signs in teenagers ages 14 to 18. Covers irritability, withdrawal, sleep changes, falling grades, suicidal statements, what is typically developing versus a red flag, and when to talk to your pediatrician or call 988, based on AAP, CDC, and USPSTF guidance.",
+    path: "/ages/14-18-years/depression/",
+    pubDate: "2026-04-06",
+    image: "/images/pins/2026-04-06-14-18-years-depression-pin.png",
+  },
 ];

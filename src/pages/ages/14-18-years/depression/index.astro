@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Are the Signs of Depression in a 14 to 18 Year Old?";
+const description = "A practical, evidence-based guide to depression warning signs in teenagers ages 14 to 18. Covers irritability, withdrawal, sleep changes, falling grades, suicidal statements, what is typically developing versus a red flag, and when to talk to your pediatrician or call 988, based on AAP, CDC, and USPSTF guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my teenager seems irritable all the time instead of sad?",
+    answer: "Yes, irritability can be a common presenting symptom of depression in teenagers ages 14–18, and it may show up more clearly than sadness itself (AAP, 2022). If irritability lasts more than 2 weeks, affects school or relationships, or comes with withdrawal, sleep changes, or hopeless comments, talk to your pediatrician."
+  },
+  {
+    question: "Should I worry if my 16-year-old sleeps all the time?",
+    answer: "Maybe. Teenagers ages 14–18 need 8–10 hours of sleep per night, but sleeping far more than usual, struggling to get up, or sleeping to escape daily life can be a depression red flag rather than ordinary teen tiredness (AAP, 2014; AAP, 2022). Talk to your pediatrician if the pattern is persistent or impairing."
+  },
+  {
+    question: "Is it typical that my teen stopped hanging out with friends?",
+    answer: "Pulling back from friends once in a while can happen in teenagers ages 14–18, but persistent social withdrawal is a well-recognized warning sign of depression (AAP, 2022). If your teen no longer enjoys activities, avoids close friends, or isolates in their room for weeks, talk to your pediatrician."
+  },
+  {
+    question: "Should I take comments like 'I wish I could disappear' seriously?",
+    answer: "Yes. Any statement about wanting to disappear, not wake up, die, or hurt oneself should be treated seriously in teenagers ages 14–18 and should not be dismissed as drama or a joke (AAP, 2022). Contact your pediatrician urgently, and call or text 988 immediately if there is any current safety concern."
+  },
+  {
+    question: "Can depression in teens look like falling grades or missing school?",
+    answer: "Yes. Depression in teenagers ages 14–18 often affects concentration, motivation, attendance, and school performance, not just mood (AAP, 2022). If grades drop, assignments stop getting done, or your teen suddenly avoids school, talk to your pediatrician and the school counselor."
+  },
+  {
+    question: "Should I wait and see if my teen grows out of it?",
+    answer: "No. Depression symptoms that last 2 weeks or more in teenagers ages 14–18 should be evaluated rather than watched indefinitely, because early treatment is linked to better outcomes (USPSTF, 2016; AAP, 2022). Start with your pediatrician, especially if there is withdrawal, hopelessness, or any safety concern."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/depression/",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/depression/",
+  lastReviewed: "2026-04-06"
+});
+---
+
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
+    <p class="answer-first">Depression in teenagers ages 14–18 often looks like irritability, withdrawal, falling grades, sleep changes, loss of interest, or hopeless comments — not just obvious sadness — and symptoms lasting more than 2 weeks should be evaluated by a pediatrician (AAP, 2022; USPSTF, 2016). Any suicidal statement requires immediate attention.</p>
+
+    <p>Teen years can include moodiness, stress, and a strong need for privacy, so it is not always easy to tell what is typically developing and what may be depression. This guide explains what depression can look like in daily life, which signs deserve prompt attention, and when to involve your pediatrician or call 988.</p>
+
+    <h2>What are the signs of depression in a 14 to 18 year old?</h2>
+    <p class="answer-first">The clearest signs of depression in teenagers ages 14–18 are persistent irritability or sadness, loss of interest in usual activities, social withdrawal, changes in sleep or appetite, low energy, hopelessness, and trouble functioning at school or home for at least 2 weeks (AAP, 2022; USPSTF, 2016).</p>
+    <p>Depression in teenagers does not always look like crying or openly saying, "I feel depressed." Many teens show it through anger, shutting down, quitting activities they used to care about, avoiding friends, or seeming constantly exhausted. Parents may also notice a drop in grades, increased conflict, more time alone in a bedroom, or comments suggesting guilt, worthlessness, or feeling like a burden.</p>
+    <p>The key issue is not whether a teen has a bad day or rough week. The concern is a noticeable change from their usual baseline that lasts, spreads across settings, and interferes with daily life. A teen who is still enjoying friends, laughing, keeping up with school, and recovering after stress is different from a teen who seems flat, disconnected, and unable to function.</p>
+
+    <h2>Is my teenager depressed or just moody?</h2>
+    <p class="answer-first">Typical teen moodiness is brief, situation-based, and mixed with plenty of ordinary enjoyment, while depression in teenagers ages 14–18 is more persistent, lasts at least 2 weeks, and affects sleep, motivation, relationships, or school functioning across multiple parts of life (AAP, 2022).</p>
+    <p>Most teenagers have emotional ups and downs. Puberty, academic pressure, social stress, and growing independence can all make emotions look intense. What makes depression different is duration, consistency, and impairment. A teen who slams a door after an argument but later jokes with friends and finishes homework is showing something very different from a teen who seems disconnected day after day.</p>
+    <p>Parents should pay attention to patterns such as losing interest in sports, clubs, music, or friendships; declining hygiene; frequent hopeless or self-critical comments; and a sustained shift in appetite or sleep. When several of these changes cluster together and last more than 2 weeks, it is reasonable to move from watching to scheduling an evaluation with a pediatrician.</p>
+
+    <h2>Why does depression in teens often look like irritability instead of sadness?</h2>
+    <p class="answer-first">Depression in teenagers ages 14–18 commonly shows up as irritability, anger, or a short fuse rather than obvious sadness, and pediatric mental health guidance specifically recognizes irritability as a major adolescent depression symptom (AAP, 2022).</p>
+    <p>This matters because many parents expect depression to look quiet and tearful. In real life, a depressed teen may seem rude, reactive, or impossible to please. They may snap at siblings, overreact to small frustrations, or interpret neutral comments as criticism. That presentation can be mistaken for attitude or defiance when it is actually emotional distress.</p>
+    <p>Irritability becomes more concerning when it is new, persistent, and paired with other changes such as low motivation, withdrawal, frequent headaches or stomachaches, falling grades, or a major change in sleep. A teen does not need to look visibly sad to be struggling significantly. If the pattern feels different from your teen’s usual temperament and is not fading, a pediatric evaluation is appropriate.</p>
+
+    <h2>What changes at school can be signs of depression in a teenager?</h2>
+    <p class="answer-first">Depression in teenagers ages 14–18 often affects school before a teen talks openly about mood, and warning signs include falling grades, incomplete work, frequent absences, loss of concentration, skipping classes, and giving up on activities they previously cared about (AAP, 2022).</p>
+    <p>School is where depression often becomes visible because teens are expected to sustain attention, manage deadlines, tolerate stress, and interact socially for hours each day. A teen who used to manage school reasonably well may suddenly stop turning in assignments, seem mentally checked out, or avoid going altogether. Teachers may report that the teen seems tired, disengaged, or unusually irritable.</p>
+    <p>These changes can overlap with anxiety, ADHD, substance use, sleep deprivation, or a learning problem, which is one reason evaluation matters. Parents do not need to sort out the diagnosis alone. If school performance drops sharply or attendance becomes a struggle, contact your pediatrician and consider looping in the school counselor at the same time.</p>
+
+    <h2>Can sleeping too much or too little be a sign of depression in a 14 to 18 year old?</h2>
+    <p class="answer-first">Yes. Depression in teenagers ages 14–18 can cause both insomnia and oversleeping, and a clear shift in sleep pattern — especially combined with withdrawal, low energy, or school problems — is a common red flag rather than just ordinary teen sleepiness (AAP, 2014; AAP, 2022).</p>
+    <p>Teenagers already have a biologic tendency toward later sleep timing during puberty, so many are genuinely tired on school mornings. But depression-related sleep change usually looks bigger than that baseline shift. A teen may stay awake for hours because of hopeless rumination, sleep much longer than usual, nap excessively, or use sleep as a way to avoid daily life.</p>
+    <p>Look for the full pattern. If a teen is sleeping irregularly but still enjoying friends, activities, and school, the problem may be sleep debt or schedule drift. If sleep changes come with apathy, isolation, tearfulness, irritability, or comments like "Nothing matters," depression moves higher on the list and a pediatric evaluation is warranted.</p>
+
+    <h2>How can I tell if my teen's social withdrawal is a red flag?</h2>
+    <p class="answer-first">Social withdrawal becomes a red flag in teenagers ages 14–18 when a teen persistently avoids friends, family, activities, or conversation they previously enjoyed, especially if the withdrawal lasts more than 2 weeks and comes with low mood, irritability, or loss of motivation (AAP, 2022).</p>
+    <p>Teenagers naturally want more privacy than younger children, so some time alone is expected. The concern is a meaningful change in engagement. A teen who still talks with a few close friends, participates in routines, and reconnects after downtime is different from a teen who isolates almost completely, eats alone, refuses invitations, and seems emotionally flat.</p>
+    <p>Parents sometimes describe this as "living in their room" or "not seeming like themselves anymore." Social withdrawal can also show up digitally, with a teen suddenly ignoring messages, quitting team chats, or dropping online friendships along with in-person ones. If withdrawal is persistent and paired with other symptoms, contact your pediatrician rather than assuming it is a phase.</p>
+
+    <h2>When should I talk to my pediatrician about possible depression in my 14 to 18 year old?</h2>
+    <p class="answer-first">Talk to your pediatrician promptly if your teenager ages 14–18 has depression symptoms lasting more than 2 weeks, major changes in sleep, appetite, mood, school performance, or social connection, or says anything suggesting self-harm, hopelessness, or not wanting to be alive (AAP, 2022; USPSTF, 2016).</p>
+    <p>Specific red flags include:</p>
+    <ul>
+      <li>Persistent irritability, sadness, or emotional flatness lasting more than 2 weeks</li>
+      <li>Stopping activities, sports, clubs, or hobbies they usually enjoy</li>
+      <li>Withdrawing from friends or isolating in a bedroom most of the time</li>
+      <li>Sudden decline in grades, missed assignments, or school refusal</li>
+      <li>Sleeping far more or less than usual</li>
+      <li>Major change in appetite, weight, or personal hygiene</li>
+      <li>Frequent statements such as "I am a burden," "Nobody would care," or "What is the point?"</li>
+      <li>Use of alcohol, cannabis, or other substances to cope</li>
+      <li>Self-harm behaviors such as cutting, burning, or unexplained injuries</li>
+      <li>Any statement about wanting to die, disappear, or not wake up</li>
+    </ul>
+    <p>The USPSTF recommends universal depression screening for adolescents age 12 and older, which means your pediatrician should take these concerns seriously and help guide next steps (USPSTF, 2016). If there is immediate concern for self-harm or suicide, call or text 988 right away, go to the nearest emergency department, or call emergency services.</p>
+
+    <h2>What happens if my pediatrician thinks my teen may be depressed?</h2>
+    <p class="answer-first">If a pediatrician suspects depression in a teenager ages 14–18, the usual next steps are a structured mental health history, a validated screening tool, safety assessment, and referral for therapy or psychiatry when needed; suicidal thinking requires urgent same-day evaluation (AAP, 2022; USPSTF, 2016).</p>
+    <p>Pediatricians often use screening tools such as the PHQ-A, ask about mood, sleep, school functioning, substance use, and safety, and look for conditions that can overlap with depression, including anxiety, ADHD, trauma, and sleep disorders. They may also consider medical contributors such as anemia, thyroid problems, or medication effects, depending on the teen’s symptoms.</p>
+    <p>Treatment commonly includes therapy, especially evidence-based approaches such as cognitive behavioral therapy, and sometimes medication for moderate to severe depression under medical supervision. Parents do not need to have the perfect words before making the appointment. A simple statement like, "My teen has not seemed like themselves for 3 weeks and I am worried about depression," is enough to get the conversation started.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3 class="faq-question">Is it typical that my teenager seems irritable all the time instead of sad?</h3>
+    <p class="answer-first faq-answer">Yes, irritability can be a common presenting symptom of depression in teenagers ages 14–18, and it may show up more clearly than sadness itself (AAP, 2022). If irritability lasts more than 2 weeks, affects school or relationships, or comes with withdrawal, sleep changes, or hopeless comments, talk to your pediatrician.</p>
+    <p>Irritability by itself does not prove depression, because teens can also be irritable from sleep deprivation, anxiety, stress, or substance use. What raises concern is persistence and a clear change from your teen’s usual baseline. If the irritability is constant, feels out of character, or is paired with loss of interest in usual life, it is worth evaluating.</p>
+
+    <h3 class="faq-question">Should I worry if my 16-year-old sleeps all the time?</h3>
+    <p class="answer-first faq-answer">Maybe. Teenagers ages 14–18 need 8–10 hours of sleep per night, but sleeping far more than usual, struggling to get up, or sleeping to escape daily life can be a depression red flag rather than ordinary teen tiredness (AAP, 2014; AAP, 2022). Talk to your pediatrician if the pattern is persistent or impairing.</p>
+    <p>Look at the bigger picture. A teen who is tired because of a late schedule may still enjoy friends, activities, and school once awake. A teen with depression may seem heavy, withdrawn, unmotivated, and disconnected even after extra sleep. If school attendance or daily functioning is slipping, schedule an evaluation.</p>
+
+    <h3 class="faq-question">Is it typical that my teen stopped hanging out with friends?</h3>
+    <p class="answer-first faq-answer">Pulling back from friends once in a while can happen in teenagers ages 14–18, but persistent social withdrawal is a well-recognized warning sign of depression (AAP, 2022). If your teen no longer enjoys activities, avoids close friends, or isolates in their room for weeks, talk to your pediatrician.</p>
+    <p>Privacy and downtime are typical in adolescence, but complete withdrawal is different. If your teen is not just resting but actively disconnecting from people and experiences they used to enjoy, that change deserves attention. Social withdrawal is especially concerning when paired with irritability, low mood, or falling grades.</p>
+
+    <h3 class="faq-question">Should I take comments like "I wish I could disappear" seriously?</h3>
+    <p class="answer-first faq-answer">Yes. Any statement about wanting to disappear, not wake up, die, or hurt oneself should be treated seriously in teenagers ages 14–18 and should not be dismissed as drama or a joke (AAP, 2022). Contact your pediatrician urgently, and call or text 988 immediately if there is any current safety concern.</p>
+    <p>You do not need to decide whether the statement was "serious enough" before acting. Ask directly and calmly if your teen is thinking about hurting themselves, stay with them, reduce access to lethal means if possible, and get urgent professional help. Safety always comes before embarrassment or fear of overreacting.</p>
+
+    <h3 class="faq-question">Can depression in teens look like falling grades or missing school?</h3>
+    <p class="answer-first faq-answer">Yes. Depression in teenagers ages 14–18 often affects concentration, motivation, attendance, and school performance, not just mood (AAP, 2022). If grades drop, assignments stop getting done, or your teen suddenly avoids school, talk to your pediatrician and the school counselor.</p>
+    <p>Academic decline can also happen with anxiety, ADHD, sleep problems, substance use, or a learning issue, so the right response is evaluation rather than guessing. A pediatrician can help sort out what may be driving the change and guide you toward mental health support when needed.</p>
+
+    <h3 class="faq-question">Should I wait and see if my teen grows out of it?</h3>
+    <p class="answer-first faq-answer">No. Depression symptoms that last 2 weeks or more in teenagers ages 14–18 should be evaluated rather than watched indefinitely, because early treatment is linked to better outcomes (USPSTF, 2016; AAP, 2022). Start with your pediatrician, especially if there is withdrawal, hopelessness, or any safety concern.</p>
+    <p>Parents often hesitate because they do not want to overpathologize adolescence. That instinct is understandable, but waiting too long can allow symptoms to deepen and school, sleep, and relationships to deteriorate. If your teen seems unlike themselves and the pattern is not lifting, it is appropriate to act.</p>
+
+    <h3 class="faq-question">Can a teen be depressed even if they still laugh sometimes?</h3>
+    <p class="answer-first faq-answer">Yes. Teenagers ages 14–18 with depression may still laugh, use humor, or have occasional good moments, because depression is identified by an overall pattern of persistent symptoms and impaired functioning, not by being unhappy every second of the day (AAP, 2022).</p>
+    <p>This is one reason depression can be easy to miss. A parent may see brief glimpses of the teen’s old self and hope the problem is over. If the larger pattern is still withdrawal, irritability, exhaustion, hopelessness, or loss of interest, those brief brighter moments do not rule depression out. Talk to your pediatrician if concerns continue.</p>
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and USPSTF guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>
