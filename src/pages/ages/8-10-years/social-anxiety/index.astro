@@ -1,0 +1,192 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Are the Signs of Social Anxiety in an 8 to 10 Year Old?";
+const description = "A practical, evidence-based guide to social anxiety in children ages 8 to 10. Covers what social anxiety looks like at school and with friends, what is typically developing versus a red flag, when to talk to your pediatrician, and what treatments help, based on AAP, AACAP, NIMH, and CDC guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my 8-year-old is shy around new people?",
+    answer: "Yes, many typically developing 8-year-olds are shy around new people, and shyness by itself is not the same as social anxiety. Social anxiety becomes more concerning when fear is intense, lasts for months, causes avoidance of school or peers, or interferes with daily functioning (AACAP, 2020; NIMH, 2023). If your child regularly avoids class participation, parties, sports, or speaking to adults because of distress, talk with your pediatrician."
+  },
+  {
+    question: "Should I worry if my 9-year-old refuses birthday parties?",
+    answer: "It can be worth paying attention if your 9-year-old repeatedly refuses birthday parties because they fear embarrassment, being watched, or talking to peers. Occasional reluctance is common, but consistent avoidance that limits friendships or causes major distress may suggest social anxiety rather than simple temperament (AACAP, 2020). Talk with your pediatrician if this pattern lasts several months or affects school and social life."
+  },
+  {
+    question: "Can social anxiety look like stomachaches before school?",
+    answer: "Yes, social anxiety in 8–10-year-olds often shows up as physical complaints like stomachaches, headaches, nausea, or tears before school or social events. Children this age may describe their bodies rather than their worries, especially if they fear presentations, lunchroom interactions, or being called on in class (AAP, 2020; NIMH, 2023). Talk with your pediatrician if physical complaints happen repeatedly around social situations."
+  },
+  {
+    question: "Is my child just introverted, or could this be social anxiety?",
+    answer: "Introversion means a child may prefer quieter settings or smaller groups, while social anxiety involves fear, distress, and avoidance driven by worries about embarrassment or judgment. An introverted child can still participate when needed; a child with social anxiety may panic, freeze, cry, or refuse even wanted activities (AACAP, 2020). Talk with your pediatrician if fear is limiting your child’s functioning."
+  },
+  {
+    question: "What helps social anxiety in 8 to 10 year olds?",
+    answer: "The first-line treatment for social anxiety in school-age children is cognitive behavioral therapy, or CBT, which teaches children to notice anxious thoughts and gradually face feared situations with support (AACAP, 2020; AAP, 2020). Parent coaching and school accommodations may also help. Talk with your pediatrician if anxiety is affecting school, friendships, sleep, or physical complaints."
+  },
+  {
+    question: "Should I make my child do the scary social thing anyway?",
+    answer: "Usually, gentle support and gradual practice help more than either forcing or fully avoiding the situation. Research on childhood anxiety shows that repeated avoidance tends to maintain anxiety over time, while step-by-step exposure with coping skills helps children build confidence (AACAP, 2020). Talk with your pediatrician if social fears are intense enough that your child cannot participate in age-expected activities."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/8-10-years/social-anxiety/",
+  datePublished: "2026-04-06",
+  dateModified: "2026-04-06"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/8-10-years/social-anxiety/",
+  lastReviewed: "2026-04-06"
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(medicalData)} />
+  </Fragment>
+
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">
+      Social anxiety in children ages 8–10 usually looks like intense fear of being judged, embarrassed, or watched in everyday situations such as speaking in class, joining peers, ordering food, or attending parties; when that fear causes persistent avoidance or distress for months and interferes with school or friendships, it may warrant evaluation (AACAP, 2020; NIMH, 2023).
+    </p>
+
+    <p>
+      Many children this age are cautious in new situations, and a wide range of temperament is typically developing. The harder question for parents is whether a child is simply reserved or whether worry has become strong enough to interfere with daily life. This guide explains what social anxiety can look like in real-world settings, what patterns are more concerning, and when to talk with your pediatrician.
+    </p>
+
+    <h2>What does social anxiety look like in an 8 to 10 year old?</h2>
+    <p class="answer-first">
+      In 8–10-year-olds, social anxiety often looks less like a child saying "I am anxious" and more like school refusal, tears before group activities, freezing when spoken to, avoiding eye contact, or repeated complaints of stomachaches before social situations; children this age often show anxiety through behavior and body symptoms rather than clear verbal insight (AAP, 2020; NIMH, 2023).
+    </p>
+    <p>
+      A child with social anxiety may want friends and want to participate, but feel overwhelmed by the possibility of doing something embarrassing. Common examples include refusing to raise a hand in class, avoiding birthday parties, whispering instead of speaking, asking a parent to order for them, or becoming distressed if they have to perform, read aloud, or meet unfamiliar adults.
+    </p>
+    <p>
+      Social anxiety can also show up in subtle ways. Some children appear oppositional when they are actually frightened. Others seem "fine" at home but fall apart before school, sports, religious classes, sleepovers, or team activities. The key question is not whether a child is outgoing. The key question is whether fear of judgment is consistently limiting participation in age-expected experiences.
+    </p>
+
+    <h2>Is my child just shy, or could it be social anxiety?</h2>
+    <p class="answer-first">
+      Shyness is a temperament trait, while social anxiety is a distressing pattern of fear and avoidance; a shy child may warm up slowly and still participate, but a child with social anxiety often experiences persistent physical distress, panic, or refusal when faced with social or performance situations (AACAP, 2020; NIMH, 2023).
+    </p>
+    <p>
+      Many typically developing children prefer smaller groups, need time to adjust, or dislike being the center of attention. That alone does not mean something is wrong. Social anxiety becomes more likely when a child is preoccupied with embarrassment, asks for repeated reassurance, avoids activities they actually want to do, or has distress out of proportion to the situation.
+    </p>
+    <p>
+      A useful parent question is: can my child participate after a warm-up period, or does fear keep blocking participation altogether? A shy child may cling for a few minutes and then join. A child with social anxiety may cry, freeze, refuse, or endure the situation with obvious suffering every time. If fear is shrinking your child’s world, it deserves attention.
+    </p>
+
+    <h2>What situations usually trigger social anxiety in children ages 8 to 10?</h2>
+    <p class="answer-first">
+      The most common social anxiety triggers in 8–10-year-olds are speaking in class, reading aloud, eating in front of others, joining peer groups, attending parties, talking to unfamiliar adults, and being observed during sports or performances; these are situations where children may fear embarrassment or negative judgment (AACAP, 2020; NIMH, 2023).
+    </p>
+    <p>
+      At this age, children become more socially aware and more sensitive to peer opinion. That developmental shift is typical, but it can amplify anxiety in vulnerable children. Lunchroom seating, recess group dynamics, oral presentations, music recitals, team sports, and sleepovers are common flashpoints because they involve visibility and social comparison.
+    </p>
+    <p>
+      Some children are especially distressed by "spotlight" situations, such as answering a question with the whole class listening. Others are more affected by unstructured settings like recess, where they have to enter a group without clear rules. Parents often notice that the child functions better one-on-one than in groups. That pattern can be a clue that the issue is social evaluation rather than general separation or behavior problems.
+    </p>
+
+    <h2>Can social anxiety cause stomachaches, headaches, or school avoidance?</h2>
+    <p class="answer-first">
+      Yes, anxiety in school-age children commonly presents as physical complaints, especially stomachaches, headaches, nausea, trembling, or needing frequent bathroom trips before school or social events; unexplained physical symptoms tied to feared situations are a well-recognized way anxiety shows up in children (AAP, 2020; NIMH, 2023).
+    </p>
+    <p>
+      Children ages 8–10 often do not yet have the language to say, "I am afraid people will judge me." Instead, they may report that their stomach hurts every Monday morning, cry before presentations, or beg to stay home on days involving group work, performances, or parties. The symptoms are real, even when the cause is emotional.
+    </p>
+    <p>
+      School avoidance is especially important to take seriously. Avoidance may bring short-term relief, but over time it tends to strengthen anxiety because the child never gets the chance to learn that they can cope. If physical complaints happen repeatedly in connection with social demands, it is reasonable to discuss the pattern with your pediatrician rather than assuming the child will simply outgrow it.
+    </p>
+
+    <h2>How common is anxiety in children this age?</h2>
+    <p class="answer-first">
+      Anxiety disorders affect about 7% of U.S. children ages 3–17, making anxiety one of the most common mental health conditions in childhood; symptoms often begin before adolescence, and school-age years are a common time for social fears to become more obvious in structured settings (CDC, 2022; NIMH, 2023).
+    </p>
+    <p>
+      That does not mean every worried or hesitant child has an anxiety disorder. Children are expected to have fears, need reassurance, and feel self-conscious at times. The reason prevalence matters is that anxiety is common enough to be worth recognizing early, especially because untreated anxiety can affect academics, friendships, sleep, and family routines.
+    </p>
+    <p>
+      The elementary school years often reveal patterns that were less visible earlier. A child who managed well in a familiar home or preschool setting may struggle more once there are presentations, larger peer groups, lunchroom dynamics, extracurricular performance demands, and growing awareness of peer judgment. Early recognition matters because effective treatment exists and outcomes are better when anxiety is addressed before avoidance becomes deeply entrenched.
+    </p>
+
+    <h2>How can I tell if social anxiety is affecting school and friendships?</h2>
+    <p class="answer-first">
+      Social anxiety is affecting functioning when an 8–10-year-old regularly avoids class participation, cannot join peers without major distress, skips activities they want to do, has few or no reciprocal friendships because of fear, or shows worsening academic or emotional strain related to social situations (AACAP, 2020; AAP, 2020).
+    </p>
+    <p>
+      In school, this may look like never volunteering, refusing presentations, speaking so quietly teachers cannot hear, avoiding the cafeteria, or asking to see the nurse during socially stressful times. Academically capable children may underperform if they cannot ask questions, participate, or demonstrate what they know out loud.
+    </p>
+    <p>
+      In friendships, watch for children who say they are lonely but repeatedly avoid invitations, cannot initiate play, or rely on one "safe" peer and panic when that child is absent. Some children look socially uninterested when they are actually socially afraid. When fear consistently limits connection, independence, or participation, it is worth discussing with both the school and your pediatrician.
+    </p>
+
+    <h2>What can parents do at home to help an 8 to 10 year old with social anxiety?</h2>
+    <p class="answer-first">
+      Parents can help by responding calmly, validating the child’s feelings without reinforcing avoidance, and practicing social situations in small, manageable steps; childhood anxiety improves best when adults support coping and gradual participation rather than rescuing the child from every feared situation (AACAP, 2020; AAP, 2020).
+    </p>
+    <p>
+      Helpful strategies include previewing upcoming events, role-playing what to say, arriving early so the setting feels less overwhelming, and praising effort rather than outcome. For example, saying "You said hello even though it felt hard" is more useful than focusing on whether the interaction looked smooth.
+    </p>
+    <p>
+      It also helps to avoid accidentally feeding anxiety. Repeated reassurance, speaking for the child every time, or letting them opt out of every stressful situation can bring temporary peace but may keep the fear strong. Instead, aim for small exposures: greeting one classmate, ordering one item, or staying at a party for 15 minutes. If these strategies are not enough, professional support can make a big difference.
+    </p>
+
+    <h2>What treatments actually help social anxiety in school-age children?</h2>
+    <p class="answer-first">
+      Cognitive behavioral therapy, or CBT, is the first-line treatment for anxiety disorders in children because it helps children identify anxious thoughts, learn coping skills, and gradually face feared situations; parent involvement is often part of treatment, and school supports may also be useful (AACAP, 2020; AAP, 2020).
+    </p>
+    <p>
+      CBT for children is practical and skill-based. It often includes learning how anxiety works in the body, noticing "what if" thoughts, using realistic coping statements, and practicing exposures step by step. For social anxiety, exposures might include answering one question in class, ordering food, or joining a small peer activity.
+    </p>
+    <p>
+      Some children with moderate to severe anxiety may also need referral to a child mental health specialist, and in some cases medication is considered as part of treatment planning. That decision should be individualized and guided by a qualified clinician. Many families also benefit from involving the school so teachers can support participation without enabling avoidance.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my 8 to 10 year old’s social anxiety?</h2>
+    <p class="answer-first">
+      Talk to your pediatrician if your 8–10-year-old has fear of social situations that persists for months, causes school refusal, repeated physical complaints before social demands, inability to speak in expected settings, loss of friendships due to avoidance, or distress severe enough to limit daily life (AAP, 2020; AACAP, 2020).
+    </p>
+    <ul>
+      <li>Your child regularly refuses school, parties, sports, clubs, or playdates because of fear of being watched or judged.</li>
+      <li>Your child has repeated stomachaches, headaches, nausea, or crying episodes before school, presentations, or peer activities.</li>
+      <li>Your child freezes, whispers, or cannot speak in settings where speaking is expected for their age.</li>
+      <li>Your child wants friends or activities but avoids them because of embarrassment fears.</li>
+      <li>Your child’s grades are affected because they cannot participate, ask questions, or present work.</li>
+      <li>Your child has increasing isolation, sadness, irritability, sleep problems, or low self-esteem alongside social fears.</li>
+      <li>Your child’s anxiety is getting worse rather than gradually improving with support.</li>
+      <li>Your child says they feel hopeless, worthless, or expresses any wish to hurt themselves; urgent mental health evaluation is needed in that situation.</li>
+    </ul>
+    <p>
+      If a child expresses self-harm thoughts or suicidal thinking, contact 988 immediately in the United States or seek emergency care. Social anxiety can be very treatable, and early support can prevent it from becoming more impairing over time.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p>
+      AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, AACAP, and NIMH guidance. Always consult your child’s pediatrician for personalized guidance.
+    </p>
+  </article>
+</BaseLayout>

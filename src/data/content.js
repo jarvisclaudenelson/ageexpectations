@@ -670,4 +670,11 @@ export const articles = [
     pubDate: "2026-04-05",
     image: "/images/pins/2026-04-05-6-8-years-tie-shoes-pin.png",
   },
+  {
+    title: "What Are the Signs of Social Anxiety in an 8 to 10 Year Old?",
+    description: "A practical, evidence-based guide to social anxiety in children ages 8 to 10. Covers what social anxiety looks like at school and with friends, what is typically developing versus a red flag, when to talk to your pediatrician, and what treatments help, based on AAP, AACAP, NIMH, and CDC guidance.",
+    path: "/ages/8-10-years/social-anxiety/",
+    pubDate: "2026-04-06",
+    image: "/images/pins/2026-04-06-8-10-years-social-anxiety-pin.png",
+  },
 ];
