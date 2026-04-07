@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "What Are the Signs of ADHD in a 5 to 6 Year Old?";
+const description = "A practical, evidence-based guide to signs of ADHD in children ages 5 to 6. Covers what ADHD can look like in kindergarten, what is typically developing versus a red flag, how ADHD is evaluated, and when to talk to your pediatrician, based on AAP and CDC guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my 5-year-old cannot sit still at all?",
+    answer: "Some activity and fidgeting are typical at ages 5–6, but constant movement across settings can be a concern if it regularly disrupts school, meals, play, or safety. The AAP recommends ADHD evaluation when inattention, hyperactivity, or impulsivity causes impairment in more than one setting, including home and school (AAP, 2019). Talk with your pediatrician if your child seems unable to stay seated even briefly for age-appropriate routines."
+  },
+  {
+    question: "Should I worry if my kindergartner gets in trouble every day for talking or blurting out answers?",
+    answer: "Frequent blurting, interrupting, and trouble waiting turns can be signs of ADHD in children ages 5–6 when they are persistent, more severe than peers, and happening both at school and at home (AAP, 2019). One isolated classroom issue is less concerning than a consistent pattern. Talk with your pediatrician if these behaviors are affecting learning, friendships, or classroom participation."
+  },
+  {
+    question: "Can a 5-year-old really be diagnosed with ADHD?",
+    answer: "Yes. The AAP states that children as young as 4 years can be evaluated for ADHD when they have ongoing academic or behavioral problems and symptoms of inattention, hyperactivity, or impulsivity (AAP, 2019). Diagnosis at ages 5–6 should be based on a careful evaluation using parent and teacher reports, not one short office visit. Talk with your pediatrician if concerns have been persistent for months."
+  },
+  {
+    question: "How do I know if this is ADHD or just immaturity?",
+    answer: "ADHD is more likely when behaviors are frequent, impairing, and clearly outside what is expected for a typically developing 5–6-year-old in more than one setting (AAP, 2019). Immaturity often improves with structure and time, while ADHD symptoms tend to stay persistent and interfere with learning, safety, or relationships. Talk with your pediatrician if concerns continue despite routines and support."
+  },
+  {
+    question: "Will my child grow out of ADHD behaviors?",
+    answer: "Some children become less physically hyperactive as they get older, but ADHD is a neurodevelopmental condition and is not simply something a child outgrows with discipline or maturity alone (AAP, 2019). Early support improves school and behavior outcomes. Talk with your pediatrician if symptoms are already affecting kindergarten, friendships, or daily life."
+  },
+  {
+    question: "What happens during an ADHD evaluation for a 5- or 6-year-old?",
+    answer: "A proper ADHD evaluation for children ages 5–6 usually includes parent and teacher rating scales, developmental and medical history, hearing and vision review, and screening for learning, sleep, anxiety, trauma, and language issues that can look similar to ADHD (AAP, 2019; CDC, 2022). There is no single blood test or brain scan for ADHD. Talk with your pediatrician if you want a formal evaluation started."
+  }
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/5-6-years/adhd/",
+  datePublished: "2026-04-07",
+  dateModified: "2026-04-07"
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/5-6-years/adhd/",
+  lastReviewed: "2026-04-07"
+});
+---
+
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">ADHD can be identified in some children ages 5–6 when symptoms of inattention, hyperactivity, or impulsivity are persistent, happen in more than one setting, and clearly interfere with learning, behavior, or relationships; the AAP recommends evaluating children as young as 4 years when these problems are present (AAP, 2019).</p>
+
+    <p>Kindergarten is often the first time ADHD becomes easier to spot because children are expected to sit, listen, follow routines, and manage impulses in a structured group setting for longer periods. Many 5–6-year-olds are active, distractible, or emotionally intense at times, so the key question is not whether a child is energetic. The key question is whether the behavior is frequent, significant, and impairing compared with other typically developing children of the same age.</p>
+
+    <h2>What does ADHD look like in a 5- to 6-year-old?</h2>
+    <p class="answer-first">In children ages 5–6, ADHD often looks like extreme difficulty staying seated, frequent blurting or interrupting, trouble following multi-step directions, constant motion, and distractibility that affects kindergarten routines and friendships, not just occasional high energy or silliness (AAP, 2019; CDC, 2022).</p>
+
+    <p>At this age, ADHD usually shows up in everyday moments rather than dramatic single incidents. A 5–6-year-old with ADHD may leave their seat repeatedly during class, forget the second and third parts of simple directions, interrupt every conversation, or move from activity to activity without finishing. Some children seem “driven by a motor,” while others are less hyperactive but seem unable to focus long enough to complete age-appropriate tasks.</p>
+
+    <p>Teachers may notice that the child needs far more redirection than classmates, has trouble waiting in line, loses materials, or struggles to stay with a group activity. At home, parents may see the same pattern during meals, bedtime, playdates, or basic routines like getting shoes on and brushing teeth. ADHD becomes more likely when these behaviors are not limited to one stressful setting and have been happening for at least several months.</p>
+
+    <h3>What inattentive signs might show up in kindergarten?</h3>
+    <p class="answer-first">Inattentive ADHD signs in children ages 5–6 can include seeming not to listen, missing parts of directions, losing track of simple tasks, being unusually easy to distract, and struggling to finish age-appropriate work even with reminders (AAP, 2019).</p>
+
+    <p>A kindergartner with inattentive symptoms may start a worksheet but not complete it, drift off during circle time, forget what they were supposed to do next, or need repeated one-step prompts for tasks other children can manage with less support. This is more concerning when the child is capable of understanding the task but cannot stay engaged long enough to carry it out consistently.</p>
+
+    <h3>What hyperactive or impulsive signs might show up at this age?</h3>
+    <p class="answer-first">Hyperactive and impulsive ADHD signs in children ages 5–6 often include constant climbing or movement, excessive talking, blurting, interrupting, grabbing, unsafe impulsive actions, and marked difficulty waiting turns compared with same-age peers (AAP, 2019; CDC, 2022).</p>
+
+    <p>Many children this age are active, but a child with hyperactive-impulsive symptoms may seem unable to slow their body even in situations that clearly require it. The concern rises when movement and impulsivity routinely interfere with school participation, peer relationships, or safety, such as darting away, touching everything, or acting before thinking despite repeated teaching.</p>
+
+    <h2>How can I tell the difference between ADHD and typical 5–6-year-old behavior?</h2>
+    <p class="answer-first">The difference is severity, consistency, and impairment: typical 5–6-year-old behavior is variable and improves with structure, while ADHD symptoms are more frequent, happen across settings, and significantly disrupt school, routines, safety, or friendships (AAP, 2019).</p>
+
+    <p>Most children ages 5–6 interrupt sometimes, forget directions occasionally, and have trouble sitting still when tired or excited. Those behaviors alone do not mean ADHD. ADHD becomes more concerning when the child is struggling far more than classmates in the same environment and when adults across settings describe similar patterns.</p>
+
+    <p>For example, a typically developing 5-year-old may wiggle during a long dinner but can usually participate in a short story, game, or classroom task with support. A child with ADHD may have trouble sustaining attention or regulating movement in nearly every setting, even when the activity matters to them. Another clue is impact: if the child is regularly missing learning, being excluded by peers, getting daily behavior notes, or creating safety concerns, it is worth discussing with a pediatrician.</p>
+
+    <h3>Is frequent movement by itself a red flag?</h3>
+    <p class="answer-first">No. Frequent movement alone is not enough to suggest ADHD in a 5–6-year-old because many typically developing children are active; concern rises when the movement is extreme, persistent, and clearly interferes with participation or safety (AAP, 2019).</p>
+
+    <p>A child who runs and climbs a lot during play may still be developing typically. A child who cannot remain seated for a few minutes during school tasks, leaves groups constantly, or takes repeated physical risks despite close supervision is more likely to need evaluation.</p>
+
+    <h2>What causes ADHD in children ages 5–6?</h2>
+    <p class="answer-first">ADHD is a neurodevelopmental condition with strong genetic influences, and it is not caused by bad parenting, too much sugar, or lack of discipline; environmental stressors can affect behavior, but they do not fully explain persistent ADHD symptoms (AAP, 2019; CDC, 2022).</p>
+
+    <p>Research shows that ADHD tends to run in families, and brain development differences affecting attention, impulse control, and activity regulation play a major role. This matters because many parents worry they somehow caused the problem. They did not. Parenting style may influence how symptoms show up or how manageable routines feel, but parenting does not create ADHD on its own.</p>
+
+    <p>Children can also have other conditions at the same time, including anxiety, learning differences, language delays, sleep problems, trauma-related stress, or sensory challenges. That is one reason a full evaluation matters. The goal is not just to ask whether a child has ADHD, but to understand the whole picture.</p>
+
+    <h2>How is ADHD evaluated in a 5- or 6-year-old?</h2>
+    <p class="answer-first">ADHD evaluation in children ages 5–6 should include reports from both parents and teachers, review of symptoms across settings, developmental and medical history, and screening for conditions that can mimic ADHD; the AAP recommends evaluating children ages 4–18 with academic or behavior concerns and ADHD symptoms (AAP, 2019).</p>
+
+    <p>There is no single test that confirms ADHD. Instead, pediatricians gather information from the adults who know the child best. That usually includes standardized behavior rating scales from parents and teachers, discussion of when the symptoms started, and review of whether the child is struggling at school, at home, or both.</p>
+
+    <p>A careful evaluation also considers other explanations. Hearing and vision problems, sleep deprivation, anxiety, trauma, developmental delays, autism, and learning differences can all affect attention and behavior. In some children, more than one issue is present at the same time. A strong evaluation helps avoid both overdiagnosis and missed diagnosis.</p>
+
+    <h3>What information will my pediatrician usually ask for?</h3>
+    <p class="answer-first">Your pediatrician will usually ask about behavior at home and school, pregnancy and developmental history, sleep, family history of ADHD or learning differences, discipline patterns, emotional symptoms, and whether the behavior is affecting daily functioning (AAP, 2019).</p>
+
+    <p>If possible, bring school feedback, behavior notes, report cards, and teacher observations. For a 5–6-year-old, teacher input is especially useful because kindergarten expectations make attention and self-regulation differences easier to compare with same-age peers.</p>
+
+    <h2>What other issues can look like ADHD in a 5- to 6-year-old?</h2>
+    <p class="answer-first">Sleep problems, anxiety, language delays, hearing or vision problems, learning differences, trauma, and autism can all cause behaviors that resemble ADHD in children ages 5–6, which is why the AAP recommends screening for coexisting and alternative conditions during evaluation (AAP, 2019).</p>
+
+    <p>A child who is exhausted from poor sleep may look inattentive and impulsive. A child with anxiety may seem restless, avoidant, or unable to focus because they are worried. A child with an undiagnosed language delay may appear not to listen when they actually do not fully understand what is being asked. A child with an early learning difference may seem distractible because classroom tasks are unusually hard.</p>
+
+    <p>This does not mean parents should wait and hope it becomes clearer. It means getting a thoughtful evaluation is the best way to understand what the behavior is communicating. Sometimes the answer is ADHD. Sometimes it is something else. Sometimes it is both.</p>
+
+    <h2>What helps a 5- or 6-year-old with ADHD symptoms?</h2>
+    <p class="answer-first">For children ages 4–6, the AAP recommends parent training in behavior management and behavioral classroom supports as first-line treatment; medication may be considered in some cases when significant impairment continues despite these interventions (AAP, 2019).</p>
+
+    <p>At ages 5–6, support usually works best when home and school use similar strategies. Helpful approaches include consistent routines, short clear directions, visual schedules, breaking tasks into small steps, frequent positive feedback, and predictable consequences. Many children do better when adults notice and praise specific behaviors they want repeated, such as “You put your shoes on after one reminder.”</p>
+
+    <p>School accommodations may also help. A child may benefit from seating with fewer distractions, movement breaks, simplified instructions, extra support for transitions, or behavior plans that reward staying on task. If symptoms are severe, a pediatrician may discuss whether medication is appropriate, but behavioral treatment remains the recommended starting point for this age group.</p>
+
+    <h3>What can I do at home while I wait for an evaluation?</h3>
+    <p class="answer-first">While waiting for evaluation, families can help a 5–6-year-old by using predictable routines, one-step directions, visual charts, regular sleep schedules, active play breaks, and immediate specific praise for desired behavior (AAP, 2019).</p>
+
+    <p>These strategies do not diagnose or rule out ADHD, but they can reduce chaos and give adults clearer information about what the child can do with support. They are also useful whether the final diagnosis is ADHD, anxiety, a learning difference, or another developmental issue.</p>
+
+    <h2>When should I talk to my pediatrician about possible ADHD in my 5- or 6-year-old?</h2>
+    <p class="answer-first">Talk to your pediatrician if a 5–6-year-old has persistent inattention, hyperactivity, or impulsivity in more than one setting and those symptoms are causing school, behavior, social, or safety problems; the AAP recommends evaluation rather than a long “wait and see” approach when impairment is present (AAP, 2019).</p>
+
+    <ul>
+      <li>Your 5–6-year-old is getting frequent school reports for not staying seated, not following directions, interrupting constantly, or leaving the group repeatedly.</li>
+      <li>Your child cannot complete basic daily routines like getting dressed, brushing teeth, or sitting for a short meal without far more support than other children the same age.</li>
+      <li>Your child acts impulsively in unsafe ways, such as running into parking lots, bolting, climbing dangerously, or grabbing without regard for consequences.</li>
+      <li>Your child is struggling to make or keep friends because of interrupting, aggression, impulsivity, or inability to follow play rules.</li>
+      <li>Your child seems unable to focus even on enjoyable, age-appropriate activities for more than very brief periods.</li>
+      <li>Symptoms have been present for months, not just during one stressful transition or difficult school week.</li>
+      <li>You notice sleep problems, anxiety, language concerns, or learning struggles along with the attention or behavior issues.</li>
+      <li>Your child has lost skills they previously had, which is not a typical ADHD pattern and deserves prompt evaluation.</li>
+    </ul>
+
+    <p>If a teacher has raised concerns, it is reasonable to take that seriously even if home looks different. Structured classrooms often reveal attention and impulse-control problems earlier than home does. If your child has severe aggression, major emotional outbursts, developmental regression, or any safety risk, contact your pediatrician promptly.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section class="faq-item">
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
+</BaseLayout>

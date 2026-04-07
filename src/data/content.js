@@ -691,4 +691,11 @@ export const articles = [
     pubDate: "2026-04-06",
     image: "/images/pins/2026-04-06-12-14-years-depression-pin.png",
   },
+  {
+    title: "What Are the Signs of ADHD in a 5 to 6 Year Old?",
+    description: "A practical, evidence-based guide to signs of ADHD in children ages 5 to 6. Covers what ADHD can look like in kindergarten, what is typically developing versus a red flag, how ADHD is evaluated, and when to talk to your pediatrician, based on AAP and CDC guidance.",
+    path: "/ages/5-6-years/adhd/",
+    pubDate: "2026-04-07",
+    image: "/images/pins/2026-04-07-5-6-years-adhd-pin.png",
+  },
 ];
