@@ -697,6 +697,7 @@ export const articles = [
     path: "/ages/5-6-years/adhd/",
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-5-6-years-adhd-pin.png",
+    image: "/images/pins/2026-04-07-5-6-years-adhd-pin.png",
   },
   {
     title: "What Is Separation Anxiety in a 12 to 18 Month Old? What’s Typical and When to Worry",
@@ -704,5 +705,11 @@ export const articles = [
     path: "/ages/12-18-months/separation-anxiety/",
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-12-18-months-separation-anxiety-pin.png",
+  },
+  {
+    title: "What Are the Signs of ADHD in a 5 to 6 Year Old?",
+    description: "A practical, evidence-based guide to signs of ADHD in children ages 5 to 6. Covers what ADHD can look like in kindergarten, what is typically developing versus a red flag, how ADHD is evaluated, and when to talk to your pediatrician, based on AAP and CDC guidance.",
+    path: "/ages/5-6-years/adhd/",
+    pubDate: "2026-04-07",
   },
 ];

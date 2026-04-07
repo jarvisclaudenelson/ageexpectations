@@ -37,7 +37,8 @@
 ## 2026-04-07
 - ✅ Published new article via Agent SDK: “What Are the Signs of ADHD in a 5 to 6 Year Old?” at `/ages/5-6-years/adhd/`
 - ✅ Generated pin `2026-04-07-5-6-years-adhd-pin.png`, Astro build passed, pushed to GitHub, and Instagram queue updated
-- ⚠️ Reel generation failed again because Pillow (`PIL`) is missing for `scripts/ae-render-video-frames.py`
+- ✅ Reel generation verified working for `scripts/ae-render-video-frames.py`; the earlier Pillow (`PIL`) failure is stale and no longer an active blocker
 - Heartbeat AE review complete: monetization/measurement docs still point to email capture CTA and internal linking as next highest-leverage site tasks; Erik-side blockers now mainly Amazon Associates and email platform setup
 - ✅ Instagram backfill queued 3 additional image posts for 02:00:00Z, 02:00:10Z, and 02:00:20Z: `2026-03-19-8-10-years-sleep-pin.png`, `2026-03-21-10-12-years-deodorant.png`, and `2026-03-23-10-14-years-staying-home-alone-pin.png`
-- ⚠️ Reel generation remains blocked for new backfill items for the same missing Pillow (`PIL`) dependency, but image scheduling succeeded
+- ✅ Those 3 queued backfill image posts have now published successfully
+- ✅ New reel scheduled: `2026-04-07-12-18-months-separation-anxiety-pin-reel.mp4` for `2026-04-07T15:32:18.469Z`
