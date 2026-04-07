@@ -719,4 +719,11 @@ export const articles = [
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-5-6-years-sleep-pin.png",
   },
+  {
+    title: "What Are the Signs of Anxiety in an 8 to 10 Year Old?",
+    description: "A practical, evidence-based guide to anxiety in children ages 8 to 10. Covers what anxiety looks like at this age, common physical and school signs, what is typically developing versus a red flag, when to talk to your pediatrician, and what treatments help, based on CDC, AAP, NIMH, and AACAP guidance.",
+    path: "/ages/8-10-years/anxiety/",
+    pubDate: "2026-04-07",
+    image: "/images/pins/2026-04-07-8-10-years-anxiety-pin.png",
+  },
 ];
