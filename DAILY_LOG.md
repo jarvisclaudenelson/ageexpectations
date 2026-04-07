@@ -33,3 +33,11 @@
 - ⚠️ Reel generation failed because Pillow (`PIL`) is missing in the Python environment for `ae-render-video-frames.py`
 - ✅ Instagram backfill: posted 3 additional AE pins (10-12y overview, 18-24m overview, 3-6m feeding). Backfill state file updated.
 - ✅ Instagram batch scheduler posted `12-14 Years Depression` successfully to @ageexpectations (media ID `18122020945537936`).
+
+## 2026-04-07
+- ✅ Published new article via Agent SDK: “What Are the Signs of ADHD in a 5 to 6 Year Old?” at `/ages/5-6-years/adhd/`
+- ✅ Generated pin `2026-04-07-5-6-years-adhd-pin.png`, Astro build passed, pushed to GitHub, and Instagram queue updated
+- ⚠️ Reel generation failed again because Pillow (`PIL`) is missing for `scripts/ae-render-video-frames.py`
+- Heartbeat AE review complete: monetization/measurement docs still point to email capture CTA and internal linking as next highest-leverage site tasks; Erik-side blockers now mainly Amazon Associates and email platform setup
+- ✅ Instagram backfill queued 3 additional image posts for 02:00:00Z, 02:00:10Z, and 02:00:20Z: `2026-03-19-8-10-years-sleep-pin.png`, `2026-03-21-10-12-years-deodorant.png`, and `2026-03-23-10-14-years-staying-home-alone-pin.png`
+- ⚠️ Reel generation remains blocked for new backfill items for the same missing Pillow (`PIL`) dependency, but image scheduling succeeded

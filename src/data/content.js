@@ -698,4 +698,11 @@ export const articles = [
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-5-6-years-adhd-pin.png",
   },
+  {
+    title: "What Is Separation Anxiety in a 12 to 18 Month Old? What’s Typical and When to Worry",
+    description: "A practical, evidence-based guide to separation anxiety in toddlers ages 12 to 18 months. Learn when separation anxiety usually peaks, what it looks like in daily life, how to make daycare and drop-offs easier, and when to talk to your pediatrician.",
+    path: "/ages/12-18-months/separation-anxiety/",
+    pubDate: "2026-04-07",
+    image: "/images/pins/2026-04-07-12-18-months-separation-anxiety-pin.png",
+  },
 ];
