@@ -726,4 +726,11 @@ export const articles = [
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-8-10-years-anxiety-pin.png",
   },
+  {
+    title: "What Are the Signs of ADHD in a 6 to 8 Year Old?",
+    description: "A practical, evidence-based guide to signs of ADHD in children ages 6 to 8. Covers what ADHD can look like at school and at home, what is typically developing versus a red flag, how ADHD is evaluated, and when to talk to your pediatrician, based on AAP and CDC guidance.",
+    path: "/ages/6-8-years/adhd/",
+    pubDate: "2026-04-07",
+    image: "/images/pins/2026-04-07-6-8-years-adhd-pin.png",
+  },
 ];

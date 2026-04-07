@@ -7,32 +7,28 @@ const description = "A practical, evidence-based guide to signs of ADHD in child
 
 const faqs = [
   {
-    question: "Is it typical that my 6-year-old cannot sit still during homework?",
-    answer: "Some movement and distractibility are typical at age 6, but ADHD becomes more concerning when inattention, impulsivity, or hyperactivity happen across more than one setting and clearly interfere with school, home routines, or friendships (AAP, 2019). If homework struggles are constant, intense, and matched by similar concerns from teachers, talk to your pediatrician."
+    question: "Is it typical that my 6-year-old cannot sit still in class?",
+    answer: "Some movement and restlessness are typical in 6-year-olds, but difficulty staying seated, listening, or completing simple tasks across both school and home settings may warrant ADHD evaluation if the pattern is persistent and impairing (AAP, 2019; CDC, 2024). Talk with your pediatrician if teachers and caregivers are seeing the same concerns consistently."
   },
   {
-    question: "Should I worry if my 7-year-old's teacher says they are always distracted?",
-    answer: "A single report of distractibility does not confirm ADHD, but repeated teacher concerns are important because ADHD symptoms must be present in more than one setting for diagnosis (AAP, 2019). If your 7-year-old is consistently missing instructions, losing materials, and falling behind at school, talk to your pediatrician about evaluation."
+    question: "Should I worry if my 7-year-old is always forgetting things?",
+    answer: "Frequent forgetfulness can be typical occasionally, but regularly losing homework, forgetting multi-step directions, and seeming unable to hold basic routines in mind may be a red flag for inattention in a 6–8-year-old (AAP, 2019). Talk with your pediatrician if the pattern affects school, home, or friendships."
   },
   {
-    question: "Can a child have ADHD if they focus well on video games?",
-    answer: "Yes. Many children with ADHD can focus intensely on highly stimulating activities like video games, while still struggling with tasks that require sustained effort, waiting, organization, or boring repetition (AAP, 2019). If focus is strong only for preferred screens but weak for school and daily tasks, discuss it with your pediatrician."
+    question: "Can a child have ADHD if they do well in school?",
+    answer: "Yes, a child can have ADHD and still earn good grades, especially if they are bright, highly supported, or working very hard to compensate. ADHD is diagnosed based on symptoms and impairment, not grades alone (AAP, 2019). Talk with your pediatrician if effort, stress, or behavior suggest underlying attention difficulties."
   },
   {
-    question: "Is my 8-year-old just energetic, or could it be ADHD?",
-    answer: "High energy alone is not ADHD. ADHD is more likely when a child ages 6–8 shows persistent hyperactivity, impulsive behavior, and inattention that are greater than expected for age and that disrupt learning, safety, or relationships (CDC, 2022; AAP, 2019). If the behavior is causing real impairment, talk to your pediatrician."
+    question: "Is my 8-year-old too young to be evaluated for ADHD?",
+    answer: "No, age 8 is not too young for an ADHD evaluation. The AAP recommends evaluating children ages 4–18 who have academic or behavioral concerns and symptoms of inattention, hyperactivity, or impulsivity (AAP, 2019). Talk with your pediatrician if concerns are affecting daily functioning."
   },
   {
-    question: "Can sleep problems look like ADHD in a 6 to 8 year old?",
-    answer: "Yes. Inadequate sleep, sleep apnea, anxiety, trauma, learning differences, and hearing or vision problems can all look like inattention or hyperactivity in children ages 6–8 (AAP, 2019). If symptoms appeared suddenly, worsen with poor sleep, or come with snoring or daytime sleepiness, your pediatrician should help sort out the cause."
+    question: "What is the difference between ADHD and typical high energy?",
+    answer: "Typical high energy comes and goes and usually improves with structure, while ADHD symptoms are persistent, developmentally out of proportion, present in more than one setting, and interfere with learning, relationships, or daily routines (AAP, 2019; CDC, 2024). Talk with your pediatrician if the behavior is ongoing and disruptive."
   },
   {
-    question: "How is ADHD diagnosed in a 6 to 8 year old?",
-    answer: "ADHD is diagnosed using a clinical evaluation, not a single blood test or brain scan. The AAP recommends gathering information from parents and teachers, using DSM-based rating scales, and checking for other conditions that can mimic or coexist with ADHD in children ages 4–18 (AAP, 2019). Start by talking to your pediatrician."
-  },
-  {
-    question: "What helps a 6 to 8 year old with ADHD most?",
-    answer: "For children ages 6–8 with ADHD, the AAP recommends FDA-approved medication plus parent training in behavior management and school supports when appropriate; treatment is usually most effective when home and school strategies are combined (AAP, 2019). If you suspect ADHD, your pediatrician can guide evaluation and next steps."
+    question: "Will my child grow out of ADHD behaviors?",
+    answer: "Some children become less physically hyperactive with age, but ADHD symptoms often continue into later childhood, adolescence, and adulthood if present. Early identification helps children function better at school and at home (AAP, 2019). Talk with your pediatrician rather than using a wait-and-see approach when concerns are persistent."
   }
 ];
 
@@ -40,8 +36,8 @@ const articleData = articleSchema({
   title,
   description,
   url: "https://ageexpectations.com/ages/6-8-years/adhd/",
-  datePublished: "2026-04-04",
-  dateModified: "2026-04-04"
+  datePublished: "2026-04-07",
+  dateModified: "2026-04-07"
 });
 
 const faqData = faqSchema(faqs);
@@ -50,107 +46,125 @@ const medicalData = medicalWebPageSchema({
   name: title,
   description,
   url: "https://ageexpectations.com/ages/6-8-years/adhd/",
-  lastReviewed: "2026-04-04"
+  lastReviewed: "2026-04-07"
 });
 ---
 
 <BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
-  <article>
+  <main class="article">
     <h1>{title}</h1>
 
-    <p class="answer-first">ADHD often becomes clearly visible between ages 6–8, when school demands increase and children are expected to sit still, follow multi-step directions, and stay organized. The American Academy of Pediatrics recommends evaluating children ages 4–18 for ADHD when they have academic or behavioral problems plus symptoms of inattention, hyperactivity, or impulsivity (AAP, 2019).</p>
+    <p class="answer-first">ADHD in children ages 6–8 typically shows up as persistent inattention, impulsivity, and/or hyperactivity that causes problems at school, at home, or with peers across more than one setting. The American Academy of Pediatrics recommends evaluating children ages 4–18 with academic or behavioral concerns plus ADHD symptoms rather than waiting to see if they outgrow them (AAP, 2019).</p>
 
-    <p>For many families, this is the age when a child stops seeming simply "busy" or "spirited" and starts struggling in ways that affect learning, routines, and friendships. There is a wide range of typical development at ages 6–8, but persistent patterns across home and school deserve attention.</p>
+    <p>Early elementary school is often the age when ADHD becomes easier to spot. A 6–8-year-old is expected to sit for longer periods, follow multi-step directions, manage classroom routines, and handle more independent work. That means attention and impulse-control difficulties often become more visible in first and second grade than they were in preschool.</p>
 
-    <h2>What are the signs of ADHD in a 6 to 8 year old?</h2>
-    <p class="answer-first">In children ages 6–8, ADHD usually shows up as ongoing inattention, hyperactivity, and impulsivity that are stronger than expected for age and that interfere with school, home life, or friendships in more than one setting (AAP, 2019; CDC, 2022). ADHD is not defined by one behavior alone, but by a consistent pattern that causes real impairment.</p>
-    <p>At this age, inattention may look like not finishing classwork, forgetting instructions, losing jackets and folders, or seeming not to listen even when spoken to directly. Hyperactivity may look like constant fidgeting, leaving a seat when expected to stay seated, climbing or running at inappropriate times, or talking excessively. Impulsivity may look like blurting out answers, interrupting conversations, grabbing materials, or struggling to wait for a turn.</p>
-    <p>What matters most is pattern and impact. A typically developing 6-year-old may wiggle during dinner or forget a direction sometimes. A child with possible ADHD does these things frequently, across settings, and often enough that teachers, caregivers, or coaches all notice the same concerns.</p>
+    <h2>What does ADHD look like in a 6 to 8 year old?</h2>
+    <p class="answer-first">In a 6–8-year-old, ADHD often looks like a child who cannot sustain attention, blurts out answers, forgets directions, loses materials, interrupts constantly, or seems driven by a motor in ways that are more intense and more impairing than peers of the same age (AAP, 2019; CDC, 2024).</p>
 
-    <h2>Is my 6 to 8 year old just active, or could it be ADHD?</h2>
-    <p class="answer-first">Many children ages 6–8 are energetic, distractible, and emotionally intense, so high activity alone does not mean ADHD. ADHD becomes more likely when these behaviors are persistent for at least 6 months, occur in more than one setting, and clearly interfere with learning, routines, safety, or peer relationships (AAP, 2019; DSM-5-TR).</p>
-    <p>A typically developing 6-year-old may need reminders to stay on task, especially after a long school day. A child with possible ADHD may need repeated redirection for nearly every step of a basic routine such as getting dressed, packing a backpack, or brushing teeth. A typically developing 8-year-old may be chatty and restless when excited. A child with possible ADHD may be unable to stay seated in class, regularly interrupt others, and miss key instructions despite wanting to do well.</p>
-    <p>Parents often notice that the gap becomes clearer when expectations rise. Kindergarten, first grade, and second grade demand longer attention, more independence, and better self-control. That is why ADHD concerns often surface during the early elementary years rather than in preschool alone.</p>
+    <p>ADHD does not look the same in every child. Some children mainly struggle with inattention. They may stare out the window, miss instructions, leave work unfinished, or seem disorganized and forgetful. Other children mainly show hyperactivity and impulsivity. They may fidget, get out of their seat, talk excessively, interrupt, or act before thinking. Many children show both patterns.</p>
 
-    <h2>What does ADHD look like at school in a 6 to 8 year old?</h2>
-    <p class="answer-first">At school, ADHD in children ages 6–8 often looks like trouble following directions, incomplete work, frequent careless mistakes, excessive talking, blurting out answers, leaving a seat, and difficulty waiting or taking turns (AAP, 2019). Teacher observations matter because ADHD symptoms must be present in more than one setting for diagnosis.</p>
-    <p>Inattention at school may appear as staring off, missing the first instruction in a sequence, forgetting what to do after walking to a desk, or rushing through assignments with skipped items. Hyperactivity may appear as constant chair tipping, tapping, touching nearby objects, or finding reasons to get up repeatedly. Impulsivity may appear as shouting out, cutting in line, grabbing supplies, or reacting before thinking.</p>
-    <p>Children with ADHD are not usually choosing to be difficult. Many want badly to do well but cannot consistently regulate attention and behavior. Teachers may describe these children as bright but inconsistent, capable but disorganized, or sweet but always "in motion." Those descriptions can be an important clue that the issue is developmental rather than motivational.</p>
+    <p>At ages 6–8, ADHD symptoms usually become noticeable because school demands increase. A child may have trouble waiting their turn, completing worksheets without repeated reminders, keeping track of jackets and folders, or staying focused long enough to follow through on basic routines. The key question is not whether a child is energetic or distractible sometimes. The key question is whether the pattern is persistent, happens in more than one setting, and causes real difficulty.</p>
+
+    <h2>What signs of inattention are red flags in a 6 to 8 year old?</h2>
+    <p class="answer-first">Inattention red flags in children ages 6–8 include often failing to follow directions, making careless mistakes, losing school materials, forgetting daily routines, avoiding tasks that require sustained focus, and seeming not to listen even when spoken to directly (AAP, 2019; CDC, 2024).</p>
+
+    <p>In daily life, inattention may look like a child who starts homework but never finishes, forgets what they were asked to do halfway through, repeatedly leaves belongings at school, or needs far more reminders than same-age peers to complete simple tasks. Teachers may report that the child drifts off during lessons, misses parts of instructions, or turns in incomplete work even when they understand the material.</p>
+
+    <p>A child with inattentive symptoms is not necessarily lazy or oppositional. Many children with ADHD want to do well but have trouble sustaining mental effort, organizing information, and holding instructions in working memory. If the same pattern shows up at home and school for at least several months and interferes with learning or daily functioning, it is worth discussing with a pediatrician (AAP, 2019).</p>
+
+    <h2>What signs of hyperactivity or impulsivity are red flags in a 6 to 8 year old?</h2>
+    <p class="answer-first">Hyperactivity and impulsivity red flags in children ages 6–8 include constant fidgeting, difficulty staying seated, excessive talking, interrupting others, blurting out answers, running or climbing when it is not appropriate, and acting without considering consequences (AAP, 2019; CDC, 2024).</p>
+
+    <p>Many school-age children are active, especially after sitting for long periods. What raises concern is behavior that is stronger, more frequent, and harder to redirect than expected for the child’s age. A 7-year-old with ADHD may get up repeatedly during meals, intrude on games, interrupt conversations nonstop, or struggle to wait even brief turns during classroom activities.</p>
+
+    <p>Impulsivity can also affect safety and social relationships. A child may dart ahead in parking lots, grab from peers, say hurtful things without thinking, or melt down when asked to pause. These behaviors are not just “big personality.” If they repeatedly interfere with learning, friendships, family routines, or safety, they deserve evaluation.</p>
+
+    <h2>How is ADHD different from typical behavior at ages 6 to 8?</h2>
+    <p class="answer-first">The difference between ADHD and typical behavior in children ages 6–8 is persistence, severity, and impairment. Typically developing children may be active, distractible, or forgetful at times, but ADHD symptoms are more frequent, occur across settings, and clearly interfere with school, home life, or peer relationships (AAP, 2019).</p>
+
+    <p>A 6-year-old who wiggles during dinner or forgets instructions once in a while is not unusual. A child who cannot complete even short tasks without repeated redirection, disrupts class daily, and struggles socially because of impulsive behavior may need further assessment. ADHD is not diagnosed from one behavior alone. Pediatricians look for a pattern of symptoms over time.</p>
+
+    <p>Development matters too. Younger children are expected to be more active than older children. That is why clinicians compare a child’s behavior to what is expected for that age group, not to an ideal of perfect self-control. The question is whether the child’s regulation skills are substantially behind peers and whether that gap causes real problems.</p>
+
+    <h2>What does ADHD look like at school in first and second grade?</h2>
+    <p class="answer-first">At school, ADHD in a 6–8-year-old often appears as trouble following classroom routines, incomplete work, frequent reminders needed, calling out, leaving the seat, rushing through assignments, and difficulty managing materials like folders, pencils, and homework sheets (AAP, 2019).</p>
+
+    <p>Teachers are often the first to notice the pattern because classrooms require sustained attention, self-control, and organization. A child may understand lessons but still perform inconsistently because they miss directions, skip steps, or cannot stay with the task long enough to show what they know. Some children appear disengaged rather than disruptive, which can delay recognition of inattentive ADHD.</p>
+
+    <p>Social problems can also show up at school. A child with impulsivity may interrupt games, struggle with turn-taking, or react too quickly during conflict. A child with inattention may seem dreamy, miss social cues, or fail to keep up with group expectations. If both teachers and caregivers are reporting similar concerns, that strengthens the case for an ADHD evaluation.</p>
 
     <h2>What does ADHD look like at home in a 6 to 8 year old?</h2>
-    <p class="answer-first">At home, ADHD in children ages 6–8 often looks like extreme difficulty with routines, constant reminders for simple tasks, interrupting, unsafe impulsive behavior, and strong frustration when asked to do boring or multi-step activities (AAP, 2019). Home symptoms matter just as much as school symptoms when deciding whether evaluation is needed.</p>
-    <p>Parents may notice that mornings feel unusually chaotic even with a consistent routine. A child may get distracted halfway through getting dressed, forget what they were doing between steps, or melt down over transitions that siblings manage more easily. Homework may take far longer than expected because the child leaves the table repeatedly, loses pencils, or forgets the assignment directions. Mealtimes may involve nonstop movement or talking over others.</p>
-    <p>Impulsivity at home can also create safety concerns. Some children dart into parking lots, climb furniture despite repeated warnings, or grab hot or sharp objects without pausing. These are not just frustrating behaviors. In the right pattern, they are meaningful red flags that a pediatrician should hear about.</p>
+    <p class="answer-first">At home, ADHD in children ages 6–8 often looks like constant reminders for basic routines, unfinished chores, emotional blowups during transitions, difficulty sitting through meals or homework, frequent losing of belongings, and impulsive behavior that disrupts family life (AAP, 2019; CDC, 2024).</p>
 
-    <h2>Can inattentive ADHD look different from hyperactive ADHD in a 6 to 8 year old?</h2>
-    <p class="answer-first">Yes. Some children ages 6–8 mainly show inattentive symptoms such as distractibility, forgetfulness, and disorganization, while others mainly show hyperactive-impulsive symptoms such as constant movement, blurting, and acting before thinking; some show both patterns (AAP, 2019). Inattentive ADHD is often missed because it can look less disruptive.</p>
-    <p>A child with predominantly inattentive symptoms may not be the one running around the room. Instead, that child may seem dreamy, slow to start tasks, easily overwhelmed by directions, or chronically forgetful. Work may be incomplete not because the child does not understand it, but because attention drifts repeatedly. These children are sometimes described as lazy or unmotivated when the real issue is attention regulation.</p>
-    <p>A child with more hyperactive-impulsive symptoms is often easier for adults to notice because the behavior is louder and more visible. That child may be the one who cannot stay seated, interrupts constantly, or acts before considering consequences. Both presentations can significantly affect self-esteem, school success, and peer relationships.</p>
+    <p>Parents may notice that mornings are especially hard. A child may get dressed halfway, forget what comes next, become distracted by toys, and need repeated prompts for every step. Homework may take much longer than expected because the child gets up often, forgets directions, or becomes overwhelmed by starting. Even fun activities can be affected if the child has trouble waiting, sharing, or shifting gears.</p>
 
-    <h2>Could something else be causing ADHD-like behavior in my 6 to 8 year old?</h2>
-    <p class="answer-first">Yes. Sleep deprivation, anxiety, learning disabilities, trauma, hearing or vision problems, autism, and some medical conditions can all cause behaviors that look like ADHD in children ages 6–8, which is why the AAP recommends a full evaluation rather than assuming the cause from behavior alone (AAP, 2019).</p>
-    <p>A child who snores, sleeps poorly, or gets too little sleep may look inattentive, irritable, or hyperactive during the day. A child with dyslexia may seem distracted during reading because the task is unusually hard. A child with anxiety may appear not to listen because they are preoccupied with worries. Hearing or vision problems can also make a child miss directions and fall behind.</p>
-    <p>This does not mean ADHD is rare or overdiagnosed. It means good care requires asking the right questions. Your pediatrician may want input from teachers, developmental history, sleep history, and screening for learning, emotional, sensory, or medical concerns before confirming what is going on.</p>
+    <p>Many families describe the child as bright, funny, and creative but exhausting to manage. That combination is common. ADHD does not mean a child lacks intelligence or motivation. It means the brain systems involved in attention, inhibition, and regulation are developing differently, and support may be needed.</p>
 
-    <h2>How is ADHD evaluated in a 6 to 8 year old?</h2>
-    <p class="answer-first">For children ages 6–8, ADHD evaluation should include parent and teacher reports, DSM-based rating scales, review of symptoms across settings, and screening for coexisting or look-alike conditions; the AAP advises primary care clinicians to evaluate any child ages 4–18 with concerning academic or behavior symptoms (AAP, 2019).</p>
-    <p>There is no single test that diagnoses ADHD. Instead, diagnosis comes from a careful clinical assessment. Pediatricians often ask when symptoms started, how often they occur, where they occur, and how much they affect schoolwork, routines, behavior, and friendships. Teachers are especially helpful because they see how a child functions in a highly structured setting compared with same-age peers.</p>
-    <p>Rating scales such as the Vanderbilt forms are commonly used because they organize observations and help identify patterns. A pediatrician may also ask about sleep, hearing, vision, mood, trauma, reading difficulties, and family history. If concerns are complex, referral to developmental-behavioral pediatrics, psychology, psychiatry, or neuropsychology may be appropriate.</p>
+    <h2>How do pediatricians evaluate ADHD in a 6 to 8 year old?</h2>
+    <p class="answer-first">Pediatricians evaluate ADHD in children ages 6–8 by gathering reports from parents and teachers, reviewing symptoms and impairment across settings, screening for learning, sleep, anxiety, trauma, and other conditions, and using DSM-based rating scales rather than a single test or quick office observation (AAP, 2019).</p>
 
-    <h2>What helps a 6 to 8 year old with ADHD?</h2>
-    <p class="answer-first">For elementary-age children with ADHD, the AAP recommends FDA-approved medication together with parent training in behavior management and school supports when needed, because combined treatment often improves functioning more than using a single strategy alone (AAP, 2019). Treatment should target impairment, not just reduce movement.</p>
-    <p>Support at this age often works best when adults make the environment more structured rather than expecting the child to suddenly become more self-controlled. Helpful strategies can include consistent routines, short one-step directions, visual checklists, positive reinforcement, movement breaks, predictable consequences, and communication between home and school.</p>
-    <p>School supports may include preferential seating, task chunking, extra reminders, behavior plans, or formal accommodations if the child qualifies. Medication can be very effective for many children, but it is only one part of care. Parents often see the best results when medication, behavior supports, and school partnership all work together.</p>
+    <p>There is no blood test, brain scan, or one-time office test that diagnoses ADHD. A careful evaluation includes history, behavior patterns over time, developmental context, and input from school. Pediatricians often use validated rating scales such as the Vanderbilt forms. These help compare reported behaviors to DSM criteria.</p>
+
+    <p>An evaluation should also consider other explanations or coexisting concerns. Sleep deprivation, anxiety, learning disabilities, hearing problems, vision problems, trauma, and depression can all affect attention and behavior. Some children have both ADHD and another condition, which is one reason a thorough evaluation matters. The AAP recommends that pediatricians assess for emotional, behavioral, developmental, and physical conditions that may coexist with ADHD (AAP, 2019).</p>
+
+    <h2>Could it be something other than ADHD?</h2>
+    <p class="answer-first">Yes, ADHD-like symptoms in a 6–8-year-old can also be caused or worsened by anxiety, learning disabilities, sleep problems, trauma, hearing or vision issues, depression, or classroom mismatch, which is why the AAP recommends a full evaluation instead of assuming one explanation (AAP, 2019).</p>
+
+    <p>A child who cannot focus during reading may actually have an undiagnosed reading disorder. A child who seems restless may be overtired from poor sleep. A child who looks distracted may be anxious, especially if worries are consuming mental energy. A child who acts out in class may be trying to hide academic struggles they cannot explain.</p>
+
+    <p>This does not mean ADHD is rare or overdiagnosed. It means careful diagnosis is important. A strong evaluation asks not only whether ADHD symptoms are present, but also what else might be contributing. That process helps children get the right support rather than a label that misses the larger picture.</p>
+
+    <h2>What helps a 6 to 8 year old with ADHD symptoms?</h2>
+    <p class="answer-first">For children ages 6–8 with ADHD, the most effective support often includes school accommodations, parent training in behavior management, structured routines, and in some cases medication; for elementary-age children, the AAP recommends FDA-approved medications plus behavioral interventions when ADHD is diagnosed (AAP, 2019).</p>
+
+    <p>Support usually works best when home and school use similar strategies. Helpful approaches include short, clear directions; visual schedules; consistent routines; breaking tasks into smaller steps; positive reinforcement; movement breaks; and seating or classroom supports that reduce distraction. Many children also benefit from formal school accommodations or special education evaluation depending on how much ADHD affects learning.</p>
+
+    <p>Medication is sometimes part of treatment for school-age children and can be very effective, but the decision is individualized and should be made with a pediatrician. Behavioral strategies still matter even when medication helps. The goal is not to make a child quiet or compliant. The goal is to help the child function, learn, and feel more successful.</p>
 
     <h2>When should I talk to my pediatrician about my 6 to 8 year old?</h2>
-    <p class="answer-first">Talk to your pediatrician if a 6–8-year-old has persistent inattention, hyperactivity, or impulsivity in more than one setting and those symptoms are interfering with school, routines, safety, or friendships. The AAP recommends evaluation rather than a prolonged "wait and see" approach when symptoms are causing impairment (AAP, 2019).</p>
+    <p class="answer-first">Talk to your pediatrician if your 6–8-year-old has ongoing inattention, hyperactivity, or impulsivity in more than one setting and those symptoms are affecting school performance, family routines, friendships, or safety. The AAP specifically recommends ADHD evaluation for children ages 4–18 with academic or behavioral problems plus ADHD symptoms (AAP, 2019).</p>
+
     <ul>
-      <li>Your 6–8-year-old cannot follow simple one- or two-step directions consistently, even with repetition and support.</li>
-      <li>Your child regularly leaves their seat, runs, climbs, or touches unsafe things in situations where safety depends on stopping and listening.</li>
-      <li>Your child interrupts constantly, cannot wait a turn, or acts before thinking in ways that disrupt school, sports, or friendships.</li>
-      <li>Your child loses homework, jackets, folders, or school materials almost daily despite routine systems.</li>
-      <li>Your child takes dramatically longer than peers to complete basic routines such as dressing, brushing teeth, or packing for school because of distractibility.</li>
-      <li>Your child is getting frequent reports from teachers about incomplete work, careless mistakes, blurting out, or inability to stay on task.</li>
-      <li>Your child seems increasingly frustrated, ashamed, or defeated about school because they are always being corrected.</li>
-      <li>Your child has ADHD-like symptoms plus snoring, poor sleep, severe anxiety, reading struggles, or sudden behavior change, which may point to another or additional cause.</li>
-      <li>Your child has lost skills they previously had, which is not typical and warrants prompt evaluation.</li>
+      <li>Your child’s teacher reports daily trouble focusing, staying seated, following directions, or finishing work.</li>
+      <li>Your child regularly loses homework, jackets, lunch boxes, or other essential school items far more than same-age peers.</li>
+      <li>Your child needs repeated prompts for every step of simple routines like getting dressed, brushing teeth, or packing a backpack.</li>
+      <li>Your child frequently interrupts, blurts out, grabs, or acts so impulsively that friendships are being affected.</li>
+      <li>Your child’s behavior creates safety concerns, such as running into parking lots, climbing unsafely, or acting without stopping to think.</li>
+      <li>Your child seems bright but is falling behind academically because they cannot stay with tasks long enough to show what they know.</li>
+      <li>Your child has severe frustration, low self-esteem, or emotional outbursts related to school or behavior struggles.</li>
+      <li>Your child has symptoms of anxiety, sleep problems, learning difficulties, or skill loss along with attention concerns.</li>
     </ul>
-    <p>If there are urgent safety concerns, severe aggression, self-harm statements, or a dramatic mental health change, seek immediate care rather than waiting for a routine visit.</p>
+
+    <p>If your child has made any statement about self-harm, hopelessness, or wanting to die, seek urgent mental health evaluation right away. If there is immediate danger, call 988 or emergency services.</p>
 
     <h2>Frequently Asked Questions</h2>
 
-    <h3 class="faq-question">Is it typical that my 6-year-old cannot sit still during homework?</h3>
-    <p class="answer-first faq-answer">Some movement and distractibility are typical at age 6, but ADHD becomes more concerning when inattention, impulsivity, or hyperactivity happen across more than one setting and clearly interfere with school, home routines, or friendships (AAP, 2019). If homework struggles are constant, intense, and matched by similar concerns from teachers, talk to your pediatrician.</p>
-    <p>Many 6-year-olds need homework broken into short chunks, especially after a full school day. What raises concern is not occasional restlessness but a repeated pattern of being unable to begin, continue, or finish even brief tasks without heavy adult support. A pediatrician can help decide whether the issue is developmental variation, sleep, stress, a learning difference, or ADHD.</p>
+    <h3 class="faq-question">Is it typical that my 6-year-old cannot sit still in class?</h3>
+    <p class="answer-first faq-answer">Some movement and restlessness are typical in 6-year-olds, but difficulty staying seated, listening, or completing simple tasks across both school and home settings may warrant ADHD evaluation if the pattern is persistent and impairing (AAP, 2019; CDC, 2024).</p>
+    <p>Many children entering elementary school are still learning self-control. The concern increases when the behavior is more intense than expected for age, happens most days, and interferes with learning or classroom participation. If teachers and caregivers are noticing the same pattern, talk with your pediatrician.</p>
 
-    <h3 class="faq-question">Should I worry if my 7-year-old's teacher says they are always distracted?</h3>
-    <p class="answer-first faq-answer">A single report of distractibility does not confirm ADHD, but repeated teacher concerns are important because ADHD symptoms must be present in more than one setting for diagnosis (AAP, 2019). If your 7-year-old is consistently missing instructions, losing materials, and falling behind at school, talk to your pediatrician about evaluation.</p>
-    <p>Teachers compare your child with many same-age peers, so their observations can be very useful. Ask for specific examples: Does your child forget directions, rush through work, stare off, or need repeated prompts? Concrete examples help your pediatrician determine whether the pattern fits ADHD or suggests another concern such as anxiety, sleep problems, or a learning disability.</p>
+    <h3 class="faq-question">Should I worry if my 7-year-old is always forgetting things?</h3>
+    <p class="answer-first faq-answer">Frequent forgetfulness can be typical occasionally, but regularly losing homework, forgetting multi-step directions, and seeming unable to hold basic routines in mind may be a red flag for inattention in a 6–8-year-old (AAP, 2019).</p>
+    <p>Forgetfulness becomes more concerning when it affects school work, home routines, or independence. A pediatrician can help sort out whether the issue fits ADHD, a learning problem, sleep deprivation, anxiety, or another cause. Talk with your pediatrician if the pattern is ongoing and disruptive.</p>
 
-    <h3 class="faq-question">Can a child have ADHD if they focus well on video games?</h3>
-    <p class="answer-first faq-answer">Yes. Many children with ADHD can focus intensely on highly stimulating activities like video games, while still struggling with tasks that require sustained effort, waiting, organization, or boring repetition (AAP, 2019). If focus is strong only for preferred screens but weak for school and daily tasks, discuss it with your pediatrician.</p>
-    <p>This pattern can be confusing for parents because it looks like selective effort. ADHD is not an inability to pay attention at all times. It is often an inability to regulate attention consistently across different demands. Highly rewarding activities can hold attention much more effectively than reading directions, organizing materials, or sitting through a lesson.</p>
+    <h3 class="faq-question">Can a child have ADHD if they do well in school?</h3>
+    <p class="answer-first faq-answer">Yes, a child can have ADHD and still earn good grades, especially if they are bright, highly supported, or working very hard to compensate. ADHD is diagnosed based on symptoms and impairment, not grades alone (AAP, 2019).</p>
+    <p>Some children keep grades up but do so with extreme effort, conflict at home, anxiety, or exhausted teachers and parents. If your child seems overwhelmed, disorganized, or behaviorally dysregulated despite acceptable grades, talk with your pediatrician about whether an evaluation makes sense.</p>
 
-    <h3 class="faq-question">Is my 8-year-old just energetic, or could it be ADHD?</h3>
-    <p class="answer-first faq-answer">High energy alone is not ADHD. ADHD is more likely when a child ages 6–8 shows persistent hyperactivity, impulsive behavior, and inattention that are greater than expected for age and that disrupt learning, safety, or relationships (CDC, 2022; AAP, 2019). If the behavior is causing real impairment, talk to your pediatrician.</p>
-    <p>Energetic children can usually settle with structure, reminders, and maturity. Children with possible ADHD often struggle even in well-supported environments. If your child is repeatedly in trouble, falling behind, having friendship problems, or creating safety concerns, the question is not whether the behavior is intentional. The question is whether they need evaluation and support.</p>
+    <h3 class="faq-question">Is my 8-year-old too young to be evaluated for ADHD?</h3>
+    <p class="answer-first faq-answer">No, age 8 is not too young for an ADHD evaluation. The AAP recommends evaluating children ages 4–18 who have academic or behavioral concerns and symptoms of inattention, hyperactivity, or impulsivity (AAP, 2019).</p>
+    <p>In fact, early elementary school is a very common time for ADHD to be identified because expectations increase. Early evaluation can reduce academic frustration, behavior struggles, and low self-esteem. Talk with your pediatrician if concerns are affecting daily life.</p>
 
-    <h3 class="faq-question">Can sleep problems look like ADHD in a 6 to 8 year old?</h3>
-    <p class="answer-first faq-answer">Yes. Inadequate sleep, sleep apnea, anxiety, trauma, learning differences, and hearing or vision problems can all look like inattention or hyperactivity in children ages 6–8 (AAP, 2019). If symptoms appeared suddenly, worsen with poor sleep, or come with snoring or daytime sleepiness, your pediatrician should help sort out the cause.</p>
-    <p>Children who are overtired do not always look sleepy. They may look wired, impulsive, moody, and unable to focus. If your child snores, mouth-breathes, struggles to wake up, or falls asleep in the car after school, mention that clearly. Sleep problems are treatable, and identifying them can change the whole picture.</p>
+    <h3 class="faq-question">What is the difference between ADHD and typical high energy?</h3>
+    <p class="answer-first faq-answer">Typical high energy comes and goes and usually improves with structure, while ADHD symptoms are persistent, developmentally out of proportion, present in more than one setting, and interfere with learning, relationships, or daily routines (AAP, 2019; CDC, 2024).</p>
+    <p>A child can be energetic, talkative, and active without having ADHD. The key differences are consistency, severity, and impairment. If behavior is causing repeated school problems, social conflict, or major family stress, talk with your pediatrician.</p>
 
-    <h3 class="faq-question">How is ADHD diagnosed in a 6 to 8 year old?</h3>
-    <p class="answer-first faq-answer">ADHD is diagnosed using a clinical evaluation, not a single blood test or brain scan. The AAP recommends gathering information from parents and teachers, using DSM-based rating scales, and checking for other conditions that can mimic or coexist with ADHD in children ages 4–18 (AAP, 2019). Start by talking to your pediatrician.</p>
-    <p>Your pediatrician may ask for teacher forms, developmental history, and examples of what happens during routines, homework, and school tasks. Diagnosis depends on pattern, setting, duration, and impairment. A careful evaluation is important because many children with ADHD also have anxiety, learning differences, sleep problems, or mood concerns that need attention too.</p>
-
-    <h3 class="faq-question">What helps a 6 to 8 year old with ADHD most?</h3>
-    <p class="answer-first faq-answer">For children ages 6–8 with ADHD, the AAP recommends FDA-approved medication plus parent training in behavior management and school supports when appropriate; treatment is usually most effective when home and school strategies are combined (AAP, 2019). If you suspect ADHD, your pediatrician can guide evaluation and next steps.</p>
-    <p>Practical supports matter. Children with ADHD often do better with short directions, visual charts, predictable routines, movement breaks, and immediate positive feedback. Many families feel relieved when they stop viewing the problem as laziness and start treating it as a developmental difference that responds to support. A pediatrician can help tailor the plan to your child.</p>
+    <h3 class="faq-question">Will my child grow out of ADHD behaviors?</h3>
+    <p class="answer-first faq-answer">Some children become less physically hyperactive with age, but ADHD symptoms often continue into later childhood, adolescence, and adulthood if present. Early identification helps children function better at school and at home (AAP, 2019).</p>
+    <p>Waiting can sometimes allow school difficulties, low confidence, and behavior patterns to worsen. A pediatrician can help determine whether support is needed now, even if symptoms may change over time. Talk with your pediatrician rather than relying only on a wait-and-see approach.</p>
 
     <hr />
 
-    <p><strong>Sources:</strong> American Academy of Pediatrics, 2019 clinical practice guideline for the diagnosis, evaluation, and treatment of ADHD in children and adolescents; Centers for Disease Control and Prevention, 2022 ADHD information for parents; DSM-5-TR diagnostic framework.</p>
-
-    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
-  </article>
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidance. Always consult your child’s pediatrician for personalized guidance.</em></p>
+  </main>
 </BaseLayout>
