@@ -1,188 +1,132 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
-const title = '5–6 Year Old Sleep: How Much, Bedtime, and What\'s Normal';
-const description = 'Children ages 5 to 6 need 10 to 13 hours of sleep per night. Learn about recommended bedtimes for kindergartners, how to handle bedtime resistance, nighttime fears, and when to talk to your pediatrician — based on AAP guidelines.';
+const title = "How Much Sleep Does a 5 or 6 Year Old Need?";
+const description = "A practical, evidence-based guide to sleep in children ages 5 to 6. Covers how many hours kindergartners need, realistic bedtimes, naps, bedtime resistance, nightmares, and when to talk to your pediatrician, based on AAP, CDC, and AASM guidance.";
 
 const faqs = [
   {
-    question: 'What time should my 5-year-old go to bed?',
-    answer: 'A 5-year-old who wakes at 6:30 AM for school should be asleep — not just in bed — by 7:30 to 8:30 PM to meet the AAP\'s recommended 10 to 13 hours of sleep (AAP, 2016). Most families with kindergartners find that a lights-out time of 7:30 to 8:00 PM works well, with a 20 to 30 minute wind-down routine starting around 7:00 to 7:30 PM. Consistent timing matters more than the exact hour — bedtimes that shift by more than 30 minutes from night to night make it harder to fall asleep and harder to wake.',
+    question: "Is it typical that my 5-year-old still needs a nap?",
+    answer: "Most 5-year-olds no longer need a daily nap, and frequent daytime sleep at this age often suggests they are not getting enough overnight sleep rather than needing a developmentally expected nap (CDC, 2022; AAP, 2016). If your 5-year-old regularly falls asleep during the day, snores, or seems hard to wake in the morning, talk with your pediatrician."
   },
   {
-    question: 'What time should my 6-year-old go to bed?',
-    answer: 'A 6-year-old who wakes at 6:30 to 7:00 AM needs to be asleep by 8:00 to 9:00 PM to get the recommended 10 to 13 hours (AAP, 2016). First grade brings longer school days and more cognitive demand, making adequate sleep particularly important for learning and emotional regulation. If your 6-year-old regularly struggles to wake for school or is irritable by mid-afternoon, try moving bedtime 30 minutes earlier for 2 weeks and observe whether behavior and waking ease improve.',
+    question: "Should I worry if my 6-year-old fights bedtime every night?",
+    answer: "Bedtime resistance is common in 5–6-year-olds, but nightly battles usually improve with a predictable routine, a consistent bedtime, and screens turned off 30–60 minutes before bed (AASM, 2020). If bedtime struggles come with severe anxiety, frequent night waking, or daytime behavior problems, talk with your pediatrician."
   },
   {
-    question: 'How much sleep does a kindergartner need?',
-    answer: 'The AAP and the American Academy of Sleep Medicine recommend 10 to 13 hours of total sleep per 24-hour period for children ages 3 to 5, and 9 to 12 hours for children ages 6 to 12 (AAP, 2016). For most 5 to 6 year olds, 10 to 11.5 hours is the practical sweet spot — enough for sustained attention, emotional regulation, memory consolidation, and physical growth. Research shows children in this age range who average fewer than 9 hours have measurably worse learning outcomes, more behavioral difficulties, and higher rates of obesity than peers who sleep 10 or more hours (AAP, 2022).',
+    question: "What time should my 5-year-old go to bed?",
+    answer: "A 5-year-old usually needs a bedtime that allows 10–13 total hours of sleep in 24 hours, so many kindergartners need lights out around 7:00–8:30 PM depending on wake time and whether they still nap (AAP, 2016). If your child cannot get enough sleep because of the schedule, talk with your pediatrician about adjusting routines."
   },
   {
-    question: 'Is it normal for my 5-year-old to still need a nap?',
-    answer: 'Most children stop napping between ages 3 and 5, though nap timing varies widely (NSF, 2020). By age 5, approximately 50% of children have stopped napping regularly; by age 6, the great majority no longer nap under typical circumstances. A 5-year-old who still naps daily and sleeps well at night is within the typical range. However, if your 5 or 6 year old naps regularly and then struggles to fall asleep at a reasonable bedtime, the nap may be delaying nighttime sleep. Try gradually reducing or eliminating the nap while moving bedtime earlier.',
+    question: "What time should my 6-year-old go to bed?",
+    answer: "A 6-year-old usually needs a bedtime that allows 9–12 hours of nightly sleep, so many children this age do well with lights out around 7:30–9:00 PM depending on school wake time (AAP, 2016). If your 6-year-old regularly gets under 9 hours and is tired, irritable, or struggling at school, talk with your pediatrician."
   },
   {
-    question: 'Why is my 5-year-old suddenly afraid of the dark?',
-    answer: 'Fear of the dark is extremely common at ages 5 to 6 and reflects normal cognitive development, not a problem. This is the age when imaginative thinking becomes robust — children\'s brains can now vividly imagine what might be in the dark, which makes darkness genuinely frightening in a way it wasn\'t earlier (AAP, 2020). A nightlight is a reasonable and effective accommodation at this age. Validate the fear without dismissing it, offer the nightlight, and maintain a calm, consistent bedtime routine. Most children naturally outgrow darkness fears by ages 7 to 9. Fear that is severe, intensifying, or leading to significant bedtime distress most nights warrants discussion with your pediatrician.',
+    question: "Is it typical that my child wakes up scared from nightmares?",
+    answer: "Nightmares are common in 5–6-year-olds because imagination grows rapidly during this stage, and they often increase after stress, overtiredness, or scary media exposure (AAP, 2022). If nightmares are frequent, cause major sleep disruption, or your child seems unable to distinguish dreams from reality during the day, talk with your pediatrician."
   },
   {
-    question: 'My 6-year-old keeps getting out of bed after lights-out. How do I handle this?',
-    answer: 'Post-lights-out curtain calls are among the most common sleep challenges for 5 to 6 year olds. The most effective strategy is a firm, consistent rule with low-stimulation enforcement: walk the child back to bed with minimal interaction, eye contact, or conversation. The AAP recommends avoiding long explanations or negotiations at this stage, as attention — even corrective attention — reinforces the behavior (AAP, 2022). Some families use a "bedtime pass" system: the child receives one physical pass per night that they can use for one post-bedtime request (water, hug, bathroom); when it is used, they must stay in bed. Research shows this approach reduces curtain calls significantly within 1 to 2 weeks.',
+    question: "Should I let my 5- or 6-year-old sleep in on weekends?",
+    answer: "A modest weekend catch-up of less than 1 hour is usually manageable, but large swings in bedtime and wake time can make Sunday night sleep harder and worsen Monday morning fatigue (AAP, 2016). If your child sleeps much later every weekend, it often means the school-week schedule is not allowing enough sleep, and it is worth discussing with your pediatrician."
   },
   {
-    question: 'Should my 5 or 6 year old have a phone or tablet in their bedroom?',
-    answer: 'No. The AAP recommends that all screens be removed from children\'s bedrooms at night regardless of age (AAP, 2016). Blue light from screens suppresses melatonin production for 60 to 90 minutes after use, delaying the biological signal to sleep. For 5 to 6 year olds specifically, this is also the ideal age to establish the household rule that devices charge in a common area overnight — it is significantly easier to establish this norm at age 5 than to walk it back at age 10 or 12. Even passive exposure to a TV in the bedroom affects sleep architecture and is not recommended.',
-  },
-  {
-    question: 'My 5-year-old wakes up at 5 AM every day. Is there anything I can do?',
-    answer: 'Early rising in 5 to 6 year olds is common and often biological — circadian rhythms in young children naturally favor early wake times. A few strategies can help. First, ensure the room is sufficiently dark at dawn; light exposure as early as 4:30 to 5:00 AM can trigger waking. Blackout curtains are often the single most effective intervention for early risers. Second, try moving bedtime 20 to 30 minutes later and see if wake time shifts accordingly — though for true early risers, bedtime changes have limited effect. A toddler clock or OK-to-wake light (that turns green at 6:00 AM, for example) can teach children to stay quietly in bed without disturbing the family, even if they wake earlier.',
-  },
+    question: "Is snoring typical in a 5- or 6-year-old?",
+    answer: "Habitual snoring is not considered a typical sleep finding in a 5–6-year-old because it can be a sign of obstructive sleep apnea, which the AAP recommends evaluating if snoring is regular or paired with pauses, gasping, or daytime problems (AAP, 2012). If your child snores most nights, talk with your pediatrician."
+  }
 ];
 
 const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/5-6-years/sleep/',
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  url: "https://ageexpectations.com/ages/5-6-years/sleep/",
+  datePublished: "2026-04-07",
+  dateModified: "2026-04-07"
 });
+
 const faqData = faqSchema(faqs);
+
 const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/5-6-years/sleep/',
-  lastReviewed: '2026-03-20',
+  url: "https://ageexpectations.com/ages/5-6-years/sleep/",
+  lastReviewed: "2026-04-07"
 });
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  articleSchema={articleData}
-  faqSchema={faqData}
-  medicalSchema={medicalData}
-  breadcrumbs={[
-    { label: '5–6 Years', href: '/ages/5-6-years/' },
-    { label: 'Sleep' },
-  ]}
->
-  <h1>5–6 Year Old Sleep: How Much, Bedtime, and What's Normal</h1>
+<BaseLayout title={title} description={description} schemas={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
+    <p class="answer-first">Most children ages 5–6 need a lot of sleep: 5-year-olds typically need 10–13 hours per 24 hours, including naps if they still occur, and children ages 6–12 need 9–12 hours per night (AAP, 2016). Most 5–6-year-olds no longer need regular naps, and consistent sleep matters for mood, attention, behavior, and learning.</p>
 
-  <p class="answer-first">Children ages 5 to 6 need 10 to 13 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). Kindergarten and first grade bring significant new cognitive and social demands, and sleep is when the brain consolidates what children learn each day. At this age, most children have dropped naps, making nighttime sleep the only opportunity to bank the hours their growing brains and bodies require.</p>
+    <p>Sleep at 5–6 years often looks more mature than toddler sleep, but this is still a young age. Many kindergartners and first graders seem energetic right up until bedtime, then fall apart when they are overtired. A wide range of sleep habits can still be typical, but regular schedules usually help this age group the most.</p>
 
-  <h2>How much sleep do 5 to 6 year olds need?</h2>
+    <h2>How much sleep does a 5- or 6-year-old actually need?</h2>
+    <p class="answer-first">A 5-year-old typically needs 10–13 hours of sleep in 24 hours, while a 6-year-old usually needs 9–12 hours per night, according to joint guidance cited by the American Academy of Pediatrics and the American Academy of Sleep Medicine (AAP, 2016). Children who consistently sleep less than recommended have higher risks of behavior, attention, and health problems.</p>
+    <p>For many families, the biggest surprise is that school entry does not mean children suddenly need less sleep. A 5-year-old in kindergarten still has very high sleep needs, even if they have dropped naps. A 6-year-old may look more independent, but their brain and body still rely on substantial overnight sleep for memory, emotional regulation, growth, and immune function.</p>
+    <p>Children in this age range often do not look sleepy in obvious ways. Instead of yawning and slowing down, an overtired 5–6-year-old may become silly, hyperactive, irritable, tearful, or more oppositional. Those behaviors can be mistaken for “not tired” when they are actually common signs of inadequate sleep.</p>
 
-  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 10 to 13 hours of total sleep per 24-hour period for children ages 3 to 5, and 9 to 12 hours for children ages 6 to 12 (AAP, 2016). For most children in the 5 to 6 year range, a practical target is 10 to 11.5 hours of consolidated nighttime sleep. Children who consistently sleep fewer than 9 hours in this age range show measurably worse learning outcomes, more emotional outbursts, and slower reaction times than peers who sleep 10 or more hours (AAP, 2022).</p>
+    <h2>Does a 5- or 6-year-old still need naps?</h2>
+    <p class="answer-first">Most typically developing children ages 5–6 no longer need a regular daytime nap, and daytime sleep at this age more often suggests insufficient nighttime sleep than a developmental requirement for napping (CDC, 2022; AAP, 2016). An occasional nap after illness, travel, or a poor night is different from needing one every day.</p>
+    <p>Some 5-year-olds still nap sometimes, especially early in the kindergarten year or on weekends after a busy week. That can still fall within a typical range. But by age 6, a daily nap is less common. If a child this age consistently falls asleep in the car, during quiet time, or while watching a movie, it is worth looking first at bedtime and wake time.</p>
+    <p>Frequent daytime sleep can also be a clue that nighttime sleep quality is poor. A child who snores, breathes through their mouth, wakes often, or seems restless all night may spend enough hours in bed but still not be getting restorative sleep. In that situation, the concern is not the nap itself but why the child is so tired.</p>
 
-  <p>Sleep targets by age and typical school wake time:</p>
-  <ul>
-    <li><strong>Age 5, wake at 6:30 AM:</strong> Asleep by 7:30 to 8:00 PM (target 10.5–11 hours)</li>
-    <li><strong>Age 5, wake at 7:00 AM:</strong> Asleep by 8:00 to 8:30 PM (target 10.5–11 hours)</li>
-    <li><strong>Age 6, wake at 6:30 AM:</strong> Asleep by 8:00 to 8:30 PM (target 10–11 hours)</li>
-    <li><strong>Age 6, wake at 7:00 AM:</strong> Asleep by 8:30 to 9:00 PM (target 10–11 hours)</li>
-  </ul>
+    <h2>What time should my 5- or 6-year-old go to bed?</h2>
+    <p class="answer-first">The right bedtime for a 5–6-year-old is the one that reliably allows the child to get the recommended total sleep before their required wake time, which for many families means a bedtime between about 7:00 and 9:00 PM (AAP, 2016). The exact time depends on age, wake time, and whether naps still happen.</p>
+    <p>If a 5-year-old needs to wake at 6:30 AM for school and no longer naps, a bedtime around 7:30–8:00 PM may be more realistic than 9:00 PM. A 6-year-old with the same wake time may do well closer to 8:00–8:30 PM, though some still need earlier sleep. The schedule matters more than whether a bedtime sounds “babyish” to adults.</p>
+    <p>A useful test is morning behavior. A child who wakes on their own in a reasonable mood is often getting enough sleep. A child who is extremely hard to wake, falls asleep in the car, melts down after school, or seems constantly dysregulated may need an earlier bedtime even if they insist they are not tired.</p>
 
-  <p>A reliable check: if your child needs significant effort to wake on school days but wakes spontaneously 30 to 60 minutes earlier on weekends, nighttime sleep is likely adequate. If the gap is 2 or more hours, they are likely chronically under-slept on school nights.</p>
+    <h2>What does healthy sleep usually look like in a 5- or 6-year-old?</h2>
+    <p class="answer-first">Healthy sleep in a 5–6-year-old usually means falling asleep within about 15–30 minutes, sleeping through most nights, waking at a fairly consistent time, and showing good daytime energy, attention, and emotional regulation (AAP, 2016). Some night waking, bedtime stalling, and occasional nightmares still happen at this age.</p>
+    <p>Many children in this age range sleep in their own bed all night most of the time, but fears, dreams, illness, and developmental changes can temporarily disrupt that pattern. A typically developing 5–6-year-old may ask for extra reassurance, one more story, another drink of water, or a parent check-in. Those requests are common and do not automatically mean something is wrong.</p>
+    <p>What matters most is the pattern over time. If a child occasionally has a rough night but usually functions well during the day, that is very different from a child who is sleeping poorly several nights each week and showing daytime consequences such as inattention, aggression, or school struggles.</p>
 
-  <h2>What is a good bedtime for a 5 or 6 year old?</h2>
+    <h2>Why does my 5- or 6-year-old fight bedtime?</h2>
+    <p class="answer-first">Bedtime resistance is common at ages 5–6 because children this age are practicing independence, testing limits, and often have trouble shifting from active play to rest, especially if they are overtired or using screens close to bedtime (AAP, 2016; AASM, 2020). A consistent routine usually helps more than repeated negotiation.</p>
+    <p>At this age, bedtime battles often look like stalling rather than direct refusal. A child may suddenly need to tell you something important, ask for multiple hugs, get up to use the bathroom again, or insist they are not sleepy. These behaviors are developmentally common, but they can become entrenched if the routine changes every night in response.</p>
+    <p>The most helpful approach is usually predictable and calm: the same sequence, the same expectations, and the same response. A short routine with bath, pajamas, brushing teeth, one or two books, and lights out is often easier than a long routine that keeps stretching. If screens are part of the evening, stopping them 30–60 minutes before bed is recommended because light exposure and stimulating content can delay sleep onset (AASM, 2020).</p>
 
-  <p class="answer-first">Most 5-year-olds do best with a bedtime between 7:00 and 8:30 PM, targeting asleep (not just in bed) by 7:30 to 8:30 PM depending on wake time (AAP, 2016). Most 6-year-olds can shift slightly later — asleep by 8:00 to 9:00 PM. The single most important factor is consistency: a bedtime that varies by more than 30 minutes from night to night disrupts the circadian rhythm and makes falling asleep harder, particularly on school nights after a more relaxed weekend. "Consistent and early" beats "perfect but variable" every time.</p>
+    <h2>Is it typical for a 5- or 6-year-old to have nightmares or night fears?</h2>
+    <p class="answer-first">Nightmares are common in 5–6-year-olds because imagination expands quickly during this stage, and bad dreams often increase with stress, overtiredness, illness, or scary media exposure (AAP, 2022). Night terrors are less common and look different: the child may seem awake and upset but is usually not fully conscious and often remembers nothing the next morning.</p>
+    <p>A nightmare usually happens in the second half of the night, and the child can often describe the dream afterward. A child may want comfort, a light left on, or reassurance that the dream was not real. That pattern is common in this age range. Limiting scary content, keeping bedtime consistent, and talking through daytime worries can help reduce nightmare frequency.</p>
+    <p>Night terrors, by contrast, are more abrupt and dramatic. A child may scream, sit up, sweat, or seem panicked while still partly asleep. They are usually difficult to console in the moment because they are not fully awake. Frequent, severe, or unusual nighttime events should be discussed with a pediatrician, especially if there is concern for seizures, sleepwalking danger, or significant family distress.</p>
 
-  <p>A practical bedtime calculation:</p>
-  <ul>
-    <li>Start with the school wake time (e.g., 6:45 AM)</li>
-    <li>Subtract 10 to 11 hours to get the target asleep time (e.g., 7:45 to 8:45 PM)</li>
-    <li>Add a 20 to 30 minute wind-down routine before that (e.g., routine starts at 7:15 to 8:15 PM)</li>
-    <li>Hold this schedule 7 days a week — weekend drift is the most common cause of Sunday-night and Monday-morning sleep trouble</li>
-  </ul>
+    <h2>How do screens affect sleep in 5- and 6-year-olds?</h2>
+    <p class="answer-first">Screens can make it harder for 5–6-year-olds to fall asleep because stimulating content and blue light exposure close to bedtime can delay melatonin release and increase bedtime resistance, which is why sleep experts recommend turning screens off at least 30–60 minutes before bed (AASM, 2020). Bedroom screens are especially disruptive.</p>
+    <p>At this age, the issue is not only light. Fast-paced shows, games, and emotionally intense content can also make it harder for a child’s body and brain to settle. Even content that seems child-friendly can become activating if it is exciting, funny, or emotionally loaded right before bed.</p>
+    <p>Many families notice that a child “zones out” on a screen and then seems calmer, but that does not necessarily translate into easier sleep. A better wind-down period usually includes lower-stimulation routines such as books, drawing, cuddling, music, or quiet play. Keeping devices out of the bedroom also reduces middle-of-the-night access and supports more predictable sleep habits.</p>
 
-  <h2>Why does my 5-year-old resist bedtime every night?</h2>
+    <h2>How can I help my 5- or 6-year-old sleep better?</h2>
+    <p class="answer-first">The most effective sleep supports for 5–6-year-olds are a consistent bedtime and wake time, a short predictable routine, no screens in the 30–60 minutes before bed, and a sleep environment that is dark, quiet, and comfortable (AAP, 2016; AASM, 2020). Small routine changes are usually more effective than elaborate sleep hacks.</p>
+    <p>Children in this age range do best when bedtime is boring in the most loving possible way. Repeating the same steps nightly reduces negotiation because the routine becomes expected rather than debated. It also helps to keep wake time fairly steady on weekends. Sleeping in far later can make Sunday bedtime harder and shift the whole week off track.</p>
+    <p>Physical activity during the day, regular meals, and emotional check-ins also matter. Some children fight sleep because bedtime is the first quiet moment when worries show up. A brief check-in earlier in the evening about school, friendships, or fears can reduce bedtime anxiety. If your child depends on a parent’s presence to fall asleep every night and cannot return to sleep without it, gradual fading strategies may help.</p>
 
-  <p class="answer-first">Bedtime resistance is one of the most common concerns among parents of 5 to 6 year olds — studies suggest it affects up to 20 to 30% of children this age at clinically significant levels (AAP, 2022). At this developmental stage, children are increasingly aware of what they may be missing while asleep (a parent watching TV, a sibling staying up later, tomorrow's exciting event), and their verbal and cognitive skills are strong enough to generate an endless stream of delay tactics. This is normal developmental behavior, not defiance.</p>
-
-  <p>The most effective approach combines structure and predictability:</p>
-  <ul>
-    <li><strong>A consistent wind-down routine (20–30 minutes):</strong> The same sequence every night — bath or wash, pajamas, teeth, 1 to 2 books, lights out. Predictable routines reduce negotiation because the sequence is known, not arbitrary.</li>
-    <li><strong>Screens off 30 to 60 minutes before bed:</strong> Both for the blue-light effect and to provide a clear transition out of stimulating activity.</li>
-    <li><strong>Dim the lights during the routine:</strong> Bright overhead lights maintain alertness; switching to a lamp during the wind-down supports the melatonin rise that precedes sleep.</li>
-    <li><strong>Avoid lengthy negotiations:</strong> Each "one more thing" request that gets a long parental response teaches the child that requests extend the evening. A calm, consistent "it's sleep time" with minimal engagement is more effective over time than thoughtful persuasion.</li>
-    <li><strong>Use a bedtime pass:</strong> Research from the University of Colorado found that giving children one physical "bedtime pass" per night — redeemable for one post-bedtime visit or request — significantly reduced curtain calls within 1 to 2 weeks without increasing distress (Friman, 2009).</li>
-  </ul>
-
-  <h2>Is my 5 or 6 year old's fear of the dark normal?</h2>
-
-  <p class="answer-first">Yes — fear of the dark is developmentally typical and extremely common at ages 5 to 6. It reflects a cognitive milestone, not a problem: children this age have developed the imaginative capacity to vividly picture potential threats in dark environments. A nightlight is a reasonable, effective accommodation that does not reinforce the fear. Most children outgrow darkness fears naturally between ages 7 and 9 (AAP, 2020). Fear that is severe, worsening, or generalizing to other situations may warrant a conversation with your pediatrician about anxiety.</p>
-
-  <p>Supporting a 5 to 6 year old with nighttime fears:</p>
-  <ul>
-    <li><strong>Validate without amplifying:</strong> "It makes sense that the dark feels scary — lots of kids feel that way" is more helpful than dismissal ("There's nothing there") or reinforcing elaboration ("Tell me what you're imagining").</li>
-    <li><strong>Use a nightlight freely:</strong> There is no evidence that nightlights impair sleep in children. Use one. A soft warm-toned light is preferable to bright white or blue LED light.</li>
-    <li><strong>Maintain the bedtime routine:</strong> Consistent, predictable bedtime sequences reduce anxiety by making the environment feel safe and controlled.</li>
-    <li><strong>Avoid extended co-sleeping as a primary solution:</strong> Sleeping with the child regularly may reduce short-term distress but can make independent sleep harder to establish. A brief comfort check followed by return to their own bed is generally more effective long-term.</li>
-  </ul>
-
-  <h2>How do screens and devices affect sleep in 5 to 6 year olds?</h2>
-
-  <p class="answer-first">Screen use in the hour before bedtime is one of the most well-documented causes of delayed sleep onset in young children. Blue light emitted by phones, tablets, computers, and televisions suppresses melatonin production for 60 to 90 minutes after exposure (AAP, 2016). For a 5-year-old with a target asleep time of 7:45 PM, a tablet used until 7:00 PM may push the biological sleep signal back to 8:30 to 9:00 PM — shortchanging the child by an hour or more. The AAP recommends ending all screen use at least 60 minutes before bedtime and removing all devices from children's bedrooms at night.</p>
-
-  <p>Screen rules that support good sleep at this age:</p>
-  <ul>
-    <li><strong>Screens off 60 minutes before target bedtime:</strong> For a 7:30 PM asleep target, screens should end by 6:30 PM.</li>
-    <li><strong>No devices in bedrooms overnight:</strong> All phones, tablets, and computers charge in a common family area. Age 5 to 6 is the easiest time to establish this rule; it becomes significantly harder to walk back later.</li>
-    <li><strong>Bedroom TV:</strong> The AAP recommends against bedroom TVs for children at any age. If present, it should be off during wind-down and sleep.</li>
-    <li><strong>Stimulating content matters too:</strong> The emotional arousal from action-heavy games and videos also delays sleep, independent of blue light. Transitioning to calm content (audiobooks, quiet music) 30 minutes before the screen-off time helps with the transition.</li>
-  </ul>
-
-  <h2>What does healthy sleep look like in a 5 to 6 year old?</h2>
-
-  <p class="answer-first">A well-rested 5 to 6 year old falls asleep within 20 to 30 minutes of lights-out, wakes without extreme difficulty on school mornings, maintains stable energy and mood through the school day, and does not show significant "weekend rebound" sleeping (AAP, 2022). At this age, most children no longer nap during the day — regular napping by age 5 or 6 in a child who sleeps well at night is uncommon and may suggest insufficient nighttime sleep if combined with daytime tiredness.</p>
-
-  <p>Signs of adequate sleep in a 5 to 6 year old:</p>
-  <ul>
-    <li>Falls asleep within 20 to 30 minutes of a consistent lights-out time</li>
-    <li>Wakes without extreme resistance or multiple parental attempts on most school mornings</li>
-    <li>Maintains focus and emotional regulation through the school day, including late afternoon</li>
-    <li>Weekend sleep is not significantly longer than school night sleep (a 30 to 60 minute difference is normal; 2 or more hours suggests weekday deficit)</li>
-    <li>No persistent midday fatigue or falling asleep in the car during short trips</li>
-  </ul>
-
-  <p>Signs of insufficient sleep in a 5 to 6 year old:</p>
-  <ul>
-    <li>Extreme difficulty waking on school mornings, requiring multiple attempts</li>
-    <li>Emotional dysregulation — frequent meltdowns, low frustration tolerance — in the afternoon or evening</li>
-    <li>Difficulty concentrating in class, noted by the teacher or visible in homework</li>
-    <li>Sleeping 2 or more extra hours on weekend mornings compared to school mornings</li>
-    <li>Hyperactivity in the evening — counterintuitively, overtired children often appear wired rather than tired, as the stress hormone cortisol rises to compensate for low energy</li>
-  </ul>
-
-  <h2>When should I talk to my pediatrician about my child's sleep?</h2>
-
-  <div class="callout">
-    <p class="answer-first">Contact your pediatrician if your 5 to 6 year old consistently takes more than 45 minutes to fall asleep, snores loudly or has pauses in breathing during sleep, wakes regularly in the night and cannot return to sleep independently, or shows persistent daytime tiredness, behavioral problems, or academic struggles that may be related to sleep quality (AAP, 2022).</p>
-
-    <p>Specific red flags for 5 to 6 year old sleep:</p>
+    <h2>When should I talk to my pediatrician about my 5- or 6-year-old's sleep?</h2>
+    <p class="answer-first">Talk with your pediatrician if your 5–6-year-old snores most nights, has pauses in breathing, regularly sleeps too little for age, falls asleep during the day, has frequent severe nightmares, sleepwalks unsafely, or shows daytime problems such as persistent irritability, inattention, or poor school functioning related to sleep (AAP, 2012; AAP, 2016).</p>
     <ul>
-      <li><strong>Loud, frequent snoring or mouth-breathing during sleep:</strong> These are the primary signs of obstructive sleep apnea (OSA), which affects approximately 1 to 5% of children. OSA causes fragmented, non-restorative sleep and is significantly under-diagnosed. Children with OSA often receive ADHD evaluations because their attention and behavior problems at school can closely mimic an attention disorder — but the root cause is disrupted sleep architecture.</li>
-      <li><strong>Night terrors that are frequent or escalating:</strong> Occasional night terrors (the child appears awake and distressed but is unresponsive and has no memory of the episode the next morning) are common in this age range. Night terrors that occur more than once or twice a week, last more than 5 to 10 minutes, involve dangerous behaviors (running, thrashing), or are increasing in frequency warrant evaluation.</li>
-      <li><strong>Severe, persistent bedtime anxiety:</strong> If bedtime consistently produces extreme fear, panic, or prolonged distress — not manageable with a nightlight and routine — this may indicate an anxiety disorder that is more effectively addressed therapeutically than with sleep hygiene adjustments alone.</li>
-      <li><strong>Persistent bedwetting in combination with sleep disruption:</strong> Bedwetting (nocturnal enuresis) is common and typically resolves on its own by age 7. However, if it is accompanied by significant sleep disruption, snoring, or a return after a period of dryness, mention it to your pediatrician.</li>
-      <li><strong>Sleepwalking that involves leaving the home or stairs:</strong> Sleepwalking is common in this age range. Most episodes are brief and non-dangerous. However, sleepwalking that involves navigating stairs, leaving the building, or complex behaviors warrants evaluation and safety modifications.</li>
-      <li><strong>Daytime behavior or academic problems that appear linked to sleep:</strong> If your child's teacher is noting attention or behavior concerns and you suspect insufficient sleep is a contributing factor, mention this connection to your pediatrician before pursuing further evaluation for attention or learning disorders.</li>
+      <li>If your 5–6-year-old snores loudly or regularly more than a few nights per week</li>
+      <li>If your child has gasping, pauses in breathing, restless sleep, or unusual sleeping positions</li>
+      <li>If your child regularly gets less than the recommended sleep for age despite a reasonable bedtime opportunity</li>
+      <li>If your child falls asleep unintentionally during the day, in class, in the car on short rides, or during quiet activities</li>
+      <li>If bedtime anxiety is intense enough that your child cannot fall asleep without prolonged distress</li>
+      <li>If nightmares or night terrors happen frequently or create major family disruption</li>
+      <li>If your child sleepwalks, leaves the bedroom, or behaves unsafely at night</li>
+      <li>If sleep problems are affecting attention, mood, aggression, growth, or school performance</li>
+      <li>If your child has lost previously established sleep skills or sleep suddenly worsens without a clear reason</li>
     </ul>
-  </div>
+    <p>Sleep problems are common in this age group, but persistent sleep issues deserve attention because they can affect learning, behavior, and family functioning. Your pediatrician can help decide whether the issue is mostly behavioral, stress-related, schedule-related, or worth evaluating for a sleep disorder.</p>
 
-  <section class="faq-section">
-    <h2>Frequently Asked Questions: 5 to 6 Year Old Sleep</h2>
+    <h2>Frequently Asked Questions</h2>
 
-    {faqs.map(faq => (
-      <div class="faq-item">
+    {faqs.map((faq) => (
+      <section>
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
-      </div>
+      </section>
     ))}
-  </section>
 
-  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
+    <hr />
 
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
 </BaseLayout>

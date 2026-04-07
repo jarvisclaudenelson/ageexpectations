@@ -712,4 +712,11 @@ export const articles = [
     path: "/ages/5-6-years/adhd/",
     pubDate: "2026-04-07",
   },
+  {
+    title: "How Much Sleep Does a 5 or 6 Year Old Need?",
+    description: "A practical, evidence-based guide to sleep in children ages 5 to 6. Covers how many hours kindergartners need, realistic bedtimes, naps, bedtime resistance, nightmares, and when to talk to your pediatrician, based on AAP, CDC, and AASM guidance.",
+    path: "/ages/5-6-years/sleep/",
+    pubDate: "2026-04-07",
+    image: "/images/pins/2026-04-07-5-6-years-sleep-pin.png",
+  },
 ];
