@@ -35,6 +35,7 @@
 - ✅ Instagram batch scheduler posted `12-14 Years Depression` successfully to @ageexpectations (media ID `18122020945537936`).
 
 ## 2026-04-07
+- ✅ Heartbeat run posted scheduled Instagram reel `5 6 Years Sleep` successfully (media ID `17977872695841054`) via `ae-schedule-instagram-batch.js run-due`
 - ✅ Published new article via Agent SDK: “What Are the Signs of ADHD in a 5 to 6 Year Old?” at `/ages/5-6-years/adhd/`
 - ✅ Generated pin `2026-04-07-5-6-years-adhd-pin.png`, Astro build passed, pushed to GitHub, and Instagram queue updated
 - ✅ Reel generation verified working for `scripts/ae-render-video-frames.py`; the earlier Pillow (`PIL`) failure is stale and no longer an active blocker
@@ -42,3 +43,11 @@
 - ✅ Instagram backfill queued 3 additional image posts for 02:00:00Z, 02:00:10Z, and 02:00:20Z: `2026-03-19-8-10-years-sleep-pin.png`, `2026-03-21-10-12-years-deodorant.png`, and `2026-03-23-10-14-years-staying-home-alone-pin.png`
 - ✅ Those 3 queued backfill image posts have now published successfully
 - ✅ New reel scheduled: `2026-04-07-12-18-months-separation-anxiety-pin-reel.mp4` for `2026-04-07T15:32:18.469Z`
+- ✅ Added the reusable email capture CTA to `/ages/6-8-years/behavior/`, turning an existing high-intent page into the first live lead-capture placement
+- Note: email triage heartbeat check is currently blocked because `gog` needs an explicit account selection (`--account` / `GOG_ACCOUNT`)
+
+## 2026-04-08
+- ✅ Heartbeat AE review completed another concrete daily action: added the reusable email capture CTA to `/ages/10-12-years/anxiety/`, extending lead capture onto another high-intent monetizable page.
+- ⚠️ Email triage remains blocked by local `gog` credential decryption failure (`aes.KeyUnwrap(): integrity check failed`) for `jarvisclaudenelson@gmail.com`.
+- ℹ️ Bot state hygiene looks healthy: current `data/*/state.json` files are valid JSON and small, with no unbounded growth signal.
+- ℹ️ Flash usage file is stale (`2026-04-02`) and below alert threshold at last check, so no warning sent.

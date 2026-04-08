@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import EmailCaptureBlock from "../../../../components/EmailCaptureBlock.astro";
 import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
 const title = "Does My 10 to 12 Year Old Have Anxiety? Signs, Causes, and When to Get Help";
@@ -173,6 +174,8 @@ const medicalData = medicalWebPageSchema({
     </ul>
 
     <p>If there is an immediate safety concern, or if your child talks about suicide or self-harm, call or text <strong>988</strong> right away or seek emergency care.</p>
+
+    <EmailCaptureBlock ageLabel="ages 10 to 12" />
 
     <h2>Frequently Asked Questions</h2>
 

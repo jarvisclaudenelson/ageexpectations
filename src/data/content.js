@@ -733,4 +733,11 @@ export const articles = [
     pubDate: "2026-04-07",
     image: "/images/pins/2026-04-07-6-8-years-adhd-pin.png",
   },
+  {
+    title: "What Are the Signs of Depression or Anxiety in a 12 to 14 Year Old?",
+    description: "A practical, evidence-based guide to warning signs of depression and anxiety in children ages 12 to 14. Covers irritability, withdrawal, school avoidance, physical complaints, suicidal statements, what is typically developing in early adolescence, and when to talk to your pediatrician.",
+    path: "/ages/12-14-years/depression-anxiety-warning-signs/",
+    pubDate: "2026-04-08",
+    image: "/images/pins/2026-04-08-12-14-years-depression-anxiety-warning-signs-pin.png",
+  },
 ];

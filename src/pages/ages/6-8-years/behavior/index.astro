@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import EmailCaptureBlock from '../../../../components/EmailCaptureBlock.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '6–8 Year Old Behavior: Emotions, Rules, and Growing Independence';
@@ -101,6 +102,8 @@ const medicalData = medicalWebPageSchema({
       <li>Rapid escalation to extreme emotional reactions with very little provocation</li>
     </ul>
   </div>
+
+  <EmailCaptureBlock ageLabel="ages 6 to 8" />
 
   <div class="faq-section">
     <h2>Frequently Asked Questions: 6 to 8 Year Old Behavior</h2>
