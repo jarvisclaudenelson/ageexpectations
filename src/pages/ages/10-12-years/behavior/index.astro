@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import EmailCaptureBlock from '../../../../components/EmailCaptureBlock.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = '10–12 Year Old Behavior: Mood Swings, Independence, and the Tween Years';
@@ -112,6 +113,8 @@ const medicalData = medicalWebPageSchema({
       </div>
     ))}
   </div>
+
+  <EmailCaptureBlock ageLabel="ages 10 to 12" />
 
   <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
 

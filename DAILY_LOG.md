@@ -48,6 +48,15 @@
 
 ## 2026-04-08
 - ✅ Heartbeat AE review completed another concrete daily action: added the reusable email capture CTA to `/ages/10-12-years/anxiety/`, extending lead capture onto another high-intent monetizable page.
+- ✅ Added the reusable email capture CTA to `/ages/10-12-years/red-flags/`, extending lead capture onto a second high-intent tween mental-health page.
+- ✅ Added the reusable email capture CTA to `/ages/10-12-years/behavior/`, extending lead capture onto a broad, high-traffic tween behavior page with strong parent-intent potential.
+- ✅ Instagram backfill queued 3 additional AE image posts for `2026-04-08T02:00:00Z`, `2026-04-08T02:00:10Z`, and `2026-04-08T02:00:20Z`: `2026-03-23-8-10-years-social-skills-pin.png`, `2026-04-04-6-8-years-adhd-pin.png`, and `2026-04-04-8-10-years-anxiety-pin.png`.
+- ✅ Follow-up heartbeat repaired the interrupted backfill enqueue by re-running `ae-schedule-instagram-batch.js add` with the correct positional arguments; all 3 image posts and their reels are now persisted in the AE queue.
+- ✅ Those 3 queued backfill image posts have now published successfully.
+- ⚠️ Duplicate AE queue entries were created after those 3 image posts had already published, leaving repeat image and reel posts scheduled for ~02:01Z and ~08:01Z; no user ping sent at 02:07 UTC, but this needs cleanup on the next AE maintenance pass.
+- ⚠️ Two AE reels have recently failed with Instagram media-container errors: `12-18 Months Separation Anxiety` (`status=ERROR` after 5s) and `6-8 Years Adhd` (`error code 2207076` after 180s). This looks intermittent rather than a total outage.
 - ⚠️ Email triage remains blocked by local `gog` credential decryption failure (`aes.KeyUnwrap(): integrity check failed`) for `jarvisclaudenelson@gmail.com`.
 - ℹ️ Bot state hygiene looks healthy: current `data/*/state.json` files are valid JSON and small, with no unbounded growth signal.
 - ℹ️ Flash usage file is stale (`2026-04-02`) and below alert threshold at last check, so no warning sent.
+- ✅ Follow-up heartbeat removed the 3 duplicate scheduled AE reels that would have re-posted the same content around `2026-04-08T08:01Z`; the original `08:00Z` reel batch remains queued.
+- ⚠️ Reel publishing remains intermittently unreliable: `12-14 Years Depression Anxiety Warning Signs` failed again at `07:48Z` with Instagram error `2207076`, so the current issue looks like reel-specific upload instability rather than duplicate scheduling alone.

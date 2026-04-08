@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import EmailCaptureBlock from '../../../../components/EmailCaptureBlock.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
 
 const title = 'Warning Signs in a 10 to 12 Year Old: When to Talk to Your Pediatrician';
@@ -167,6 +168,8 @@ const medicalData = medicalWebPageSchema({
   </ul>
 
   <p>Your observations as a parent are clinically important data. You know your child's baseline. Pediatricians and psychologists rely on parent report in combination with child self-report to build an accurate picture. You are not overreacting — you are doing exactly what you should do.</p>
+
+  <EmailCaptureBlock ageLabel="ages 10 to 12" />
 
   <section class="faq-section">
     <h2>Frequently Asked Questions: Warning Signs in 10 to 12 Year Olds</h2>
