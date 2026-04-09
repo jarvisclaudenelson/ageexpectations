@@ -1,0 +1,204 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+
+const title = "Warning Signs of Teen Mental Health Crisis: What Parents of 14 to 18 Year Olds Need to Know";
+const description = "A practical, evidence-based guide to teen mental health crisis warning signs in ages 14 to 18. Covers depression, anxiety, self-harm, eating disorders, substance use, suicidal statements, when to call 988, and when to contact your pediatrician, based on AAP, CDC, USPSTF, and NIMH guidance.";
+
+const faqs = [
+  {
+    question: "Is it typical that my teenager seems moody all the time?",
+    answer: "Some mood variability is typical in ages 14–18, but persistent irritability, withdrawal, hopelessness, sleep disruption, loss of interest, or falling grades lasting 2 weeks or more is not something to dismiss and should be discussed with a pediatrician (AAP, 2022; NIMH, 2023).",
+  },
+  {
+    question: "Should I worry if my teen says \"I want to disappear\" or \"everyone would be better off without me\"?",
+    answer: "Yes. Any statement suggesting hopelessness, wanting to die, or feeling like a burden should be taken seriously right away, even if your teen later says it was a joke. Contact your pediatrician promptly, and call or text 988 immediately if there is any concern about imminent self-harm (AAP, 2022).",
+  },
+  {
+    question: "Is self-harm the same as a suicide attempt?",
+    answer: "Not always, but self-harm in a 14–18 year old is never something to ignore because it increases the risk of later suicidal behavior and signals significant distress. Any cutting, burning, or other intentional self-injury warrants prompt evaluation by a pediatrician or mental health professional (AAP, 2022).",
+  },
+  {
+    question: "Should I take my teen to the emergency room for suicidal thoughts?",
+    answer: "If your 14–18 year old has suicidal thoughts with a plan, access to means, recent self-harm, intoxication, psychosis, or cannot agree to stay safe, emergency evaluation is appropriate immediately. Call 988, go to the nearest emergency department, or call emergency services if safety is urgent (AAP, 2022).",
+  },
+  {
+    question: "Can anxiety in teens look like stomachaches or headaches instead of worry?",
+    answer: "Yes. Anxiety in ages 14–18 often shows up as physical symptoms such as stomachaches, headaches, nausea, racing heart, or school avoidance rather than clear verbalized worry, and these recurring patterns should be discussed with a pediatrician (AAP, 2020; NIMH, 2023).",
+  },
+  {
+    question: "Should I worry if my teen suddenly stops eating certain foods or starts exercising excessively?",
+    answer: "Yes. New rigid food rules, skipped meals, dramatic weight change, secretive eating, compulsive exercise, or intense body dissatisfaction can be early signs of an eating disorder, which carries the highest mortality rate of psychiatric illnesses and needs prompt medical evaluation (AAP, 2021; NEDA, 2022).",
+  },
+  {
+    question: "When should I call 988 instead of waiting for a therapy appointment?",
+    answer: "Call or text 988 right away if your 14–18 year old talks about suicide, has made a threat, has a plan, has recently self-harmed, seems severely agitated, psychotic, or intoxicated, or you feel you cannot keep them safe at home. Do not wait for a routine appointment in those situations (AAP, 2022).",
+  },
+];
+
+const articleData = articleSchema({
+  title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/mental-health-crisis-warning-signs/",
+  datePublished: "2026-04-09",
+  dateModified: "2026-04-09",
+});
+
+const faqData = faqSchema(faqs);
+
+const medicalData = medicalWebPageSchema({
+  name: title,
+  description,
+  url: "https://ageexpectations.com/ages/14-18-years/mental-health-crisis-warning-signs/",
+  lastReviewed: "2026-04-09",
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(medicalData)} />
+  </Fragment>
+
+  <article>
+    <h1>{title}</h1>
+
+    <p class="answer-first">
+      Mental health crisis warning signs in teenagers ages 14–18 include suicidal statements, self-harm, severe withdrawal, dramatic mood or behavior change, substance use, refusal to eat, rapid weight change, and loss of functioning at school or home; any suicidal concern should be treated urgently, and the AAP advises taking these signs seriously rather than waiting to see if they pass (AAP, 2022; CDC, 2021).
+    </p>
+
+    <p>
+      Adolescence brings real emotional intensity, but not every change is a typical part of growing up. For 14–18 year olds, the key question is whether a teen is still functioning in daily life or whether distress is starting to interfere with sleep, school, friendships, eating, safety, or basic routines.
+    </p>
+
+    <p>
+      Parents often worry about overreacting. In practice, it is safer to ask directly, stay calm, and involve a pediatrician early than to miss signs that a teen is struggling with depression, anxiety, substance use, an eating disorder, or suicidal thoughts.
+    </p>
+
+    <h2>What mental health warning signs in a 14–18 year old are more than typical teen moodiness?</h2>
+    <p class="answer-first">
+      In ages 14–18, warning signs are less about one bad day and more about persistent change: irritability or sadness lasting 2 weeks or more, withdrawal from friends, loss of interest, major sleep or appetite change, falling grades, or statements about hopelessness should prompt concern and a pediatrician visit (AAP, 2022; NIMH, 2023).
+    </p>
+    <p>
+      Typical adolescent development can include wanting more privacy, caring intensely about peers, and having occasional emotional ups and downs. What is less typical is a clear shift from a teen’s usual baseline. Examples include a previously engaged teen who now stays in their room constantly, stops texting friends, quits activities they used to care about, or begins missing school.
+    </p>
+    <p>
+      Functional change matters. If a 14–18 year old is no longer keeping up with hygiene, homework, sleep, meals, or social relationships, that is more concerning than moodiness alone. Parents should also pay attention to new anger, frequent crying, emotional numbness, or comments like “nothing matters” or “I can’t do this anymore.”
+    </p>
+
+    <h2>What are the signs of depression in a 14–18 year old?</h2>
+    <p class="answer-first">
+      Depression in teenagers ages 14–18 often appears as irritability, anger, withdrawal, hopelessness, fatigue, sleep change, poor concentration, and loss of interest rather than obvious sadness alone, and the USPSTF recommends universal depression screening for adolescents age 12 and older because depression can be missed without direct assessment (USPSTF, 2016; AAP, 2022).
+    </p>
+    <p>
+      In daily life, depression may look like a teen who is sleeping far more or far less, falling behind academically, becoming unusually negative, or seeming emotionally flat. Some teens report feeling empty rather than sad. Others become more argumentative or restless, which can make depression easy to misread as “attitude.”
+    </p>
+    <p>
+      Watch for guilt, worthlessness, frequent self-criticism, social withdrawal, slowed movement, or loss of interest in food, sports, gaming, music, or friends. Depression can also show up physically through headaches, stomachaches, and low energy. If symptoms persist for 2 weeks or more, or they are severe at any point, contact your pediatrician.
+    </p>
+
+    <h2>What are the signs of anxiety in a 14–18 year old?</h2>
+    <p class="answer-first">
+      Anxiety in ages 14–18 often shows up as excessive worry, panic symptoms, avoidance, perfectionism, irritability, reassurance-seeking, and physical complaints like stomachaches or headaches, and school avoidance is a particularly important red flag because avoidance tends to reinforce and worsen anxiety over time (AAP, 2020; NIMH, 2023).
+    </p>
+    <p>
+      Teens do not always say “I feel anxious.” Instead, they may ask the same questions repeatedly, melt down before school, avoid presentations, refuse social events, or spend hours trying to make assignments “perfect.” Some develop sleep problems because their thoughts race at night.
+    </p>
+    <p>
+      Anxiety can also look like frequent trips to the nurse, requests to stay home, nausea before tests, or fear that something bad will happen to a parent. Panic symptoms may include chest tightness, dizziness, sweating, shaking, or feeling unable to breathe. These symptoms deserve evaluation, especially if they are interfering with school attendance, friendships, or family life.
+    </p>
+
+    <h2>What signs of self-harm or suicidal thinking need urgent attention in a 14–18 year old?</h2>
+    <p class="answer-first">
+      In a 14–18 year old, any suicidal statement, self-harm behavior, giving away belongings, searching for methods, writing goodbye messages, or saying others would be better off without them requires immediate attention, and the 988 Suicide & Crisis Lifeline is available 24/7 for urgent support (AAP, 2022; CDC, 2021).
+    </p>
+    <p>
+      Direct statements include “I want to die,” “I wish I were not here,” or “I’m going to kill myself.” Indirect statements can sound less alarming but still matter: “No one would care if I disappeared,” “I can’t do this anymore,” or “Soon this won’t matter.” Parents should take both direct and indirect comments seriously.
+    </p>
+    <p>
+      Self-harm may include cutting, burning, scratching, hitting, or other intentional injury. Some teens hide it under long sleeves or bracelets. A teen does not need to have a suicide plan for the situation to be serious. If there is a plan, access to pills, firearms, sharp objects, cords, or recent intoxication, seek emergency help immediately.
+    </p>
+
+    <h2>What are the signs of an eating disorder in a 14–18 year old?</h2>
+    <p class="answer-first">
+      Eating disorder warning signs in teenagers ages 14–18 include rapid weight change, skipped meals, rigid food rules, obsessive calorie counting, compulsive exercise, binge eating, vomiting, fainting, or intense distress about body shape, and early treatment matters because eating disorders have the highest mortality rate of psychiatric illnesses (AAP, 2021; NEDA, 2022).
+    </p>
+    <p>
+      Parents sometimes expect an eating disorder to look only like dramatic thinness, but early signs are often behavioral. A teen may suddenly stop eating with the family, cut out entire food groups, insist they already ate, spend long periods in the bathroom after meals, or become unusually distressed about eating at restaurants or social events.
+    </p>
+    <p>
+      Athletes can be overlooked because excessive exercise may be praised at first. Warning signs include exercising despite injury, panic over missing workouts, dizziness, menstrual changes, feeling cold all the time, and increasing isolation around food. Binge eating may involve disappearing food, wrappers hidden in a room, or episodes of eating with shame and loss of control. These signs warrant prompt pediatric evaluation.
+    </p>
+
+    <h2>What are the signs of substance use problems in a 14–18 year old?</h2>
+    <p class="answer-first">
+      Substance use warning signs in ages 14–18 include sudden personality change, secrecy, red eyes, vaping devices, alcohol containers, falling grades, new risk-taking, missing money, smell of smoke, and friend-group changes, and the AAP recommends routine substance use screening in adolescents because early identification improves outcomes (AAP, 2019).
+    </p>
+    <p>
+      A one-time experiment and an emerging pattern are not the same, but both deserve calm follow-up. Concerning patterns include using substances to sleep, cope with stress, fit in socially, or manage difficult feelings. Teens may become defensive, disappear for long periods, or lie repeatedly about where they have been.
+    </p>
+    <p>
+      Cannabis, nicotine vaping, alcohol, prescription misuse, and other substances can all affect mood, attention, sleep, and judgment. Substance use can also increase suicide risk, especially when combined with depression or impulsivity. If your teen seems intoxicated, unusually sleepy, agitated, or confused, urgent evaluation may be needed.
+    </p>
+
+    <h2>How can I tell whether my 14–18 year old is in crisis right now?</h2>
+    <p class="answer-first">
+      A teenager ages 14–18 may be in immediate crisis if they have suicidal thoughts with a plan, recent self-harm, severe agitation, psychosis, intoxication, refusal of food or fluids, inability to stay safe, or a sudden collapse in functioning; in these cases, parents should call 988, contact emergency services, or go to the emergency department (AAP, 2022).
+    </p>
+    <p>
+      Immediate crisis is about safety, not diagnosis. A teen does not need to look dramatic or visibly out of control to need urgent help. Quiet hopelessness, a detailed suicide plan, access to a firearm or pills, or a teen who says they cannot trust themselves to stay safe are all emergency situations.
+    </p>
+    <p>
+      Psychosis can look like hearing voices, extreme paranoia, or bizarre thinking that is clearly out of touch with reality. Severe eating disorder crisis can include fainting, chest pain, dehydration, confusion, or a teen who is not eating enough to stay medically stable. If your gut says your teen is not safe, act on that concern.
+    </p>
+
+    <h2>What should I do if I am worried about my 14–18 year old’s mental health?</h2>
+    <p class="answer-first">
+      If you are worried about a 14–18 year old’s mental health, ask directly, stay calm, remove immediate means of self-harm, supervise closely if safety is uncertain, and contact your pediatrician the same day for guidance; direct questions about suicide do not increase suicidal thoughts and are recommended by pediatric mental health experts (AAP, 2022).
+    </p>
+    <p>
+      Start with clear, nonjudgmental language: “I’ve noticed you seem overwhelmed and more withdrawn lately. I want to understand. Are you feeling depressed, anxious, or like you might hurt yourself?” Listening without arguing is more helpful than trying to immediately fix the problem.
+    </p>
+    <p>
+      If your teen says yes to self-harm or suicidal thoughts, stay with them and reduce access to medications, firearms, alcohol, cords, and sharp objects. Call 988 if you need immediate coaching. If there is no immediate safety concern, schedule a prompt visit with your pediatrician, who can screen for depression, anxiety, substance use, and medical contributors such as anemia or sleep problems.
+    </p>
+
+    <h2>When should I talk to my pediatrician about my 14–18 year old?</h2>
+    <p class="answer-first">
+      Parents should contact a pediatrician for a 14–18 year old if there is persistent sadness or irritability, school refusal, self-harm, suicidal talk, major sleep or eating change, panic attacks, substance use, dramatic withdrawal, or any loss of previously stable functioning, because these are concrete red flags rather than just typical adolescent ups and downs (AAP, 2022).
+    </p>
+    <ul>
+      <li>If your 14–18 year old says they want to die, disappear, or that others would be better off without them</li>
+      <li>If your 14–18 year old cuts, burns, scratches, or otherwise intentionally hurts themselves</li>
+      <li>If your 14–18 year old suddenly stops seeing friends, quits usual activities, or isolates in their room most of the time</li>
+      <li>If your 14–18 year old has a major drop in grades, stops going to school, or cannot complete basic school tasks</li>
+      <li>If your 14–18 year old has panic attacks, repeated unexplained stomachaches or headaches, or refuses school because of distress</li>
+      <li>If your 14–18 year old has major sleep change, such as sleeping almost all day or barely sleeping for days</li>
+      <li>If your 14–18 year old skips meals, loses weight rapidly, faints, binge eats, vomits, or exercises compulsively</li>
+      <li>If your 14–18 year old is vaping, drinking, using cannabis, misusing pills, or showing intoxication or risky behavior</li>
+      <li>If your 14–18 year old hears voices, seems paranoid, appears confused, or is not making sense</li>
+      <li>If your 14–18 year old has lost any ability to function safely at home, school, or work</li>
+    </ul>
+    <p>
+      If there is immediate danger, do not wait for a routine office visit. Call or text 988, go to the nearest emergency department, or call emergency services.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section>
+        <h3 class="faq-question">{faq.question}</h3>
+        <p class="answer-first faq-answer">{faq.answer}</p>
+      </section>
+    ))}
+
+    <hr />
+
+    <p>
+      <em>
+        AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, USPSTF, NIMH, and related evidence-based guidance. Always consult your child's pediatrician for personalized guidance.
+      </em>
+    </p>
+  </article>
+</BaseLayout>

@@ -753,4 +753,10 @@ export const articles = [
     path: "/ages/12-14-years/depression-anxiety-warning-signs/",
     pubDate: "2026-04-08",
   },
+  {
+    title: "Warning Signs of Teen Mental Health Crisis: What Parents of 14 to 18 Year Olds Need to Know",
+    description: "A practical, evidence-based guide to teen mental health crisis warning signs in ages 14 to 18. Covers depression, anxiety, self-harm, eating disorders, substance use, suicidal statements, when to call 988, and when to contact your pediatrician, based on AAP, CDC, USPSTF, and NIMH guidance.",
+    path: "/ages/14-18-years/mental-health-crisis-warning-signs/",
+    pubDate: "2026-04-09",
+  },
 ];

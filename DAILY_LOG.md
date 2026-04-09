@@ -47,6 +47,8 @@
 - Note: email triage heartbeat check is currently blocked because `gog` needs an explicit account selection (`--account` / `GOG_ACCOUNT`)
 
 ## 2026-04-08
+- ✅ Added related-topic internal link sections to `/ages/10-12-years/anxiety/`, `/ages/10-12-years/red-flags/`, and `/ages/10-12-years/behavior/` so high-intent tween pages now cross-link back into the 10-12 cluster and nearby conversion/support pages.
+- ✅ AE site build passed after the internal-linking update (`npm run build`).
 - ✅ Heartbeat AE review completed another concrete daily action: added the reusable email capture CTA to `/ages/10-12-years/anxiety/`, extending lead capture onto another high-intent monetizable page.
 - ✅ Added the reusable email capture CTA to `/ages/10-12-years/red-flags/`, extending lead capture onto a second high-intent tween mental-health page.
 - ✅ Added the reusable email capture CTA to `/ages/10-12-years/behavior/`, extending lead capture onto a broad, high-traffic tween behavior page with strong parent-intent potential.
