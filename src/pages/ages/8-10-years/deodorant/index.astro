@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
+import AffiliateResource from "../../../../components/AffiliateResource.astro";
 
 const title = "When Should Kids Start Wearing Deodorant? A Guide for Ages 8–10";
 const description = "A practical, evidence-based guide to body odor and deodorant for children ages 8 to 10. Covers when body odor starts, the difference between adrenarche and puberty, safe deodorant use, hygiene basics, and when to talk to your pediatrician.";
@@ -140,6 +141,8 @@ const medicalData = medicalWebPageSchema({
       <hr />
 
       <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, Endocrine Society, and related pediatric guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+
+      <AffiliateResource pageKey="8-10-years/deodorant" />
     </article>
   </main>
 </BaseLayout>

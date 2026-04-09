@@ -62,3 +62,12 @@
 - ℹ️ Flash usage file is stale (`2026-04-02`) and below alert threshold at last check, so no warning sent.
 - ✅ Follow-up heartbeat removed the 3 duplicate scheduled AE reels that would have re-posted the same content around `2026-04-08T08:01Z`; the original `08:00Z` reel batch remains queued.
 - ⚠️ Reel publishing remains intermittently unreliable: `12-14 Years Depression Anxiety Warning Signs` failed again at `07:48Z` with Instagram error `2207076`, so the current issue looks like reel-specific upload instability rather than duplicate scheduling alone.
+
+## 2026-04-09
+- ✅ Wired AE spy research directly into `age-expectations/TASKS.md` so research findings now become tracked execution items instead of staying trapped in chat.
+- ✅ Updated the active AE board with research-driven priorities: tween mental-health cannibalization cleanup, overlapping keyword/title audit, and new exact-match/high-intent page opportunities (`school refusal`, `first period prep`, `melatonin for kids`, `nightmares in 5-8 year olds`, `low appetite in teens`, `iron deficiency in tween/teen girls`).
+- ✅ Heartbeat health scan: no critical cron failures in the last 2 hours, no active bot error signals in watchdog/bridge/restart logs, and bot state files remain valid JSON and small.
+- ℹ️ Flash usage file is still stale (`2026-04-02`) and well below the alert threshold at last recorded values (`RPD 2/250`, `RPM 2/15`), so no warning sent.
+- ✅ AE maintenance action completed: reconciled `data/instagram-posted.json` against the actual AE Instagram queue history so already-posted backfill images from Apr 7-8 will no longer be treated as unposted. `posted` count is now 37, which should stop repeat backfill attempts on those assets.
+- ⚠️ The local cron audit surfaced a separate issue in the inbound system logs: today’s `daily-brief` exec was SIGTERM’d mid-run around 11:02 UTC, so that job may need a timeout/runtime look if it keeps happening.
+- ⚠️ Email triage still appears blocked by the previously noted local `gog` credential issue; no new inbox signal was surfaced in this heartbeat.

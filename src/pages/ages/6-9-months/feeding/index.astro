@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+import AffiliateResource from '../../../../components/AffiliateResource.astro';
 
 const title = '6–9 Month Old Feeding: Starting Solids and What to Expect';
 const description = 'Introducing solid foods is a major milestone for your 6–9 month old. Learn about signs of readiness, best first foods, safe allergen introduction, and why milk remains the primary source of nutrition.';
@@ -110,4 +111,6 @@ const mSchema = medicalWebPageSchema({
     </ul>
     <p>Always supervise your baby during mealtime and ensure they are sitting upright. Never leave a baby unattended while eating.</p>
   </div>
+
+  <AffiliateResource pageKey="6-9-months/feeding" />
 </BaseLayout>
