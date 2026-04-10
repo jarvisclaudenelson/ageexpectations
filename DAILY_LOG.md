@@ -72,3 +72,10 @@
 - ⚠️ The local cron audit surfaced a separate issue in the inbound system logs: today's `daily-brief` exec was SIGTERM'd mid-run around 11:02 UTC, so that job may need a timeout/runtime look if it keeps happening.
 - ⚠️ Email triage still appears blocked by the previously noted local `gog` credential issue; no new inbox signal was surfaced in this heartbeat.
 - ✅ AE daily action (8 PM): Added `<AffiliateResource>` component to two high-intent monetizable pages — `6-9-months/feeding/` and `8-10-years/deodorant/` — so both pages now render affiliate product blocks. Build passed, pushed to GitHub.
+
+## 2026-04-10
+- ✅ Instagram backfill queued 3 additional AE image posts for `2026-04-10T02:00:00Z`, `2026-04-10T02:00:10Z`, and `2026-04-10T02:00:20Z`: `3-4-years-overview.png`, `4-5-years-overview.png`, and `5-6-years-milestones.png`.
+- ✅ Corresponding reels generated successfully for all 3 queued assets: `3-4-years-overview-reel.mp4`, `4-5-years-overview-reel.mp4`, and `5-6-years-milestones-reel.mp4`.
+- ✅ Those 3 queued backfill image posts have now published successfully around `02:03Z` to `02:04Z`.
+- ℹ️ Flash usage file remains stale (`2026-04-02`) and below threshold; cron audit showed no critical failures in the last 2 hours.
+- ⚠️ Email triage remains blocked by the existing local `gog` credential issue.

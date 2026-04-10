@@ -765,4 +765,10 @@ export const articles = [
     path: "/ages/6-8-years/naps/",
     pubDate: "2026-04-10",
   },
+  {
+    title: "How Much Sleep Does a 6 to 8 Year Old Need?",
+    description: "A practical, evidence-based guide to sleep in children ages 6 to 8. Covers how many hours school-age kids need, realistic bedtimes, naps, screen limits, sleep problems, and when to talk to your pediatrician, based on AAP, AASM, and CDC guidance.",
+    path: "/ages/6-8-years/sleep/",
+    pubDate: "2026-04-10",
+  },
 ];

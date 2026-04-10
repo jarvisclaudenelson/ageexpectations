@@ -1,200 +1,152 @@
 ---
-import BaseLayout from '../../../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema, medicalWebPageSchema } from '../../../../data/schema.js';
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { articleSchema, faqSchema, medicalWebPageSchema } from "../../../../data/schema.js";
 
-const title = '6–8 Year Old Sleep: How Much, Bedtime, and What\'s Normal';
-const description = 'Children ages 6 to 8 need 9 to 12 hours of sleep per night. Learn about recommended bedtimes, managing bedtime resistance, screen time rules, and when to talk to your pediatrician — based on AAP guidelines.';
+const title = "How Much Sleep Does a 6 to 8 Year Old Need?";
+const description = "A practical, evidence-based guide to sleep in children ages 6 to 8. Covers how many hours school-age kids need, realistic bedtimes, naps, screen limits, sleep problems, and when to talk to your pediatrician, based on AAP, AASM, and CDC guidance.";
 
 const faqs = [
   {
-    question: 'What time should my 6-year-old go to bed?',
-    answer: 'A 6-year-old who wakes at 6:30 AM for school should be asleep — not just starting the bedtime routine — by 7:30 to 8:00 PM to hit the AAP-recommended 9 to 12 hours of sleep (AAP, 2016). Most families find that starting the wind-down routine around 7:00 to 7:15 PM works well: a predictable sequence of bath, pajamas, teeth brushing, and 10 to 15 minutes of reading before lights-out. Consistency matters more than the exact hour — a bedtime that shifts by more than 30 to 60 minutes disrupts circadian regulation and makes falling asleep harder.',
+    question: "Is it typical that my 6 year old still needs a nap?",
+    answer: "Usually no. Most typically developing children ages 6–8 no longer need a regular nap, and new daytime sleepiness often points to insufficient overnight sleep rather than a developmental need for naps (CDC, 2022; AAP, 2016). If your 6-year-old regularly falls asleep in the car, after school, or during quiet time, look first at bedtime, total sleep hours, and sleep quality. If daytime sleepiness is persistent despite adequate nighttime sleep, talk with your pediatrician."
   },
   {
-    question: 'What time should my 7 or 8 year old go to bed?',
-    answer: 'A 7-year-old who wakes at 6:30 AM needs to be asleep by 8:00 to 8:30 PM to meet the AAP\'s recommended 9 to 12 hours of sleep (AAP, 2016). An 8-year-old with the same wake time should aim for lights-out by 8:00 to 8:30 PM, with some children comfortably targeting 8:30 to 9:00 PM as they approach the older end of this range. The key check: if your child is difficult to wake most school mornings and sleeps substantially more on weekends with no alarm, the current bedtime is probably too late.',
+    question: "What time should my 7 year old go to bed?",
+    answer: "A 7-year-old's bedtime depends on wake time, but many children this age need a bedtime between about 7:30 PM and 9:00 PM to get the recommended 9–12 hours of sleep (AAP, 2016). For example, a child who wakes at 6:30 AM usually needs to be asleep by about 8:30–9:00 PM. Count backward from the morning wake time rather than choosing a bedtime based only on age. Talk with your pediatrician if your child cannot fall asleep within a reasonable routine or seems chronically overtired."
   },
   {
-    question: 'How much sleep does a 7-year-old need?',
-    answer: 'The American Academy of Pediatrics and the American Academy of Sleep Medicine recommend 9 to 12 hours of sleep per night for all children ages 6 to 12, including 7-year-olds (AAP, 2016). Research consistently links adequate sleep in this age range to better attention, stronger academic performance, healthier weight, more stable moods, and fewer behavioral problems. Most 6 to 8 year olds function best at the higher end — 10 to 11 hours — but individual needs vary. A child who is alert, focused, and easy to wake on school days is getting enough sleep; a child who is groggy, irritable, or difficult to rouse most mornings is not.',
+    question: "Should I worry if my 8 year old fights bedtime every night?",
+    answer: "Bedtime resistance is common at ages 6–8, but nightly battles usually mean the routine, timing, or environment needs adjustment rather than that something is wrong (AAP, 2016; AASM, 2020). Common triggers include screens too close to bedtime, inconsistent schedules, anxiety, and a bedtime that is either too early or too late. A calm, predictable routine helps most children. Talk with your pediatrician if bedtime struggles come with snoring, panic, severe anxiety, or major daytime behavior changes."
   },
   {
-    question: 'Is it normal for my 6-year-old to fight bedtime every night?',
-    answer: 'Bedtime resistance is very common in 6 to 8 year olds and usually reflects a combination of FOMO (fear of missing out on family activity), difficulty transitioning from stimulating evening activities, and some boundary-testing. It is not typically a sign of a medical problem. The most effective approach is a consistent, predictable routine that starts at the same time every night — the routine itself becomes the signal that sleep is coming. Giving the child a small amount of control within the routine (which pajamas, which book, which stuffed animal) reduces power struggles. If bedtime resistance is severe, prolonged, and accompanied by significant anxiety, discuss with your pediatrician.',
+    question: "Is it typical that my child wakes up very early every morning?",
+    answer: "Early waking can be typical in 6–8-year-olds, especially if bedtime is early, but persistent waking before 5–6 AM may signal overtiredness, too much light, anxiety, or an inconsistent schedule (AAP, 2016). Children this age often sleep best with a consistent wake time, a dark room, and no screens before bed. If early waking leads to daytime sleepiness, irritability, or school problems, discuss it with your pediatrician."
   },
   {
-    question: 'Should my 7-year-old have a TV or phone in their bedroom at night?',
-    answer: 'No. The AAP recommends that all screens — phones, tablets, televisions, and computers — be removed from children\'s bedrooms at night, or kept off during sleep hours (AAP, 2016). Blue light from screens suppresses melatonin production for 60 to 90 minutes after use, pushing back the natural sleepy signal. Even with the TV "just on in the background," the light and audio input disrupts sleep architecture. The most effective rule: all devices charge in a common family area overnight. This boundary is significantly easier to establish before age 8 than at age 11 or 12 when social pressure around phones intensifies.',
+    question: "How do I know if my 6 to 8 year old is getting too little sleep?",
+    answer: "Children ages 6–8 who are not getting enough sleep often look irritable, unusually emotional, hyperactive, or unfocused rather than simply sleepy (AAP, 2016). Other signs include hard morning wake-ups, falling asleep in the car, frequent after-school meltdowns, and trouble concentrating in class. Because sleep loss in school-age children can affect behavior and learning, ongoing signs of insufficient sleep are worth discussing with your pediatrician."
   },
   {
-    question: 'My 8-year-old can\'t fall asleep until 9:30 or 10:00 PM. Is something wrong?',
-    answer: 'Sleep onset consistently after 9:30 to 10:00 PM in an 8-year-old despite good sleep hygiene can have several causes. First, check for screen use in the 60 to 90 minutes before bed — this is the most common cause of delayed sleep onset at this age. Second, early puberty (which can begin in girls as young as age 8) triggers a biological delay in the circadian rhythm that genuinely shifts when the body is ready to sleep. Third, anxiety at bedtime — worry about school, friendships, or nighttime fears — is common and can make falling asleep genuinely difficult. If the problem persists after good sleep hygiene and screen removal, talk to your pediatrician.',
+    question: "Should screens be off before bed for my 6 to 8 year old?",
+    answer: "Yes. Sleep experts recommend turning screens off at least 30–60 minutes before bedtime because evening light exposure and stimulating content can delay sleep onset and reduce sleep quality in school-age children (AASM, 2020; AAP, 2023). Phones, tablets, TVs, and gaming systems are all included. A screen-free bedtime routine usually helps children fall asleep faster. Talk with your pediatrician if your child still has significant sleep trouble even after screens are removed."
   },
   {
-    question: 'Is it normal for my 6 or 7 year old to still be afraid of the dark?',
-    answer: 'Yes — fear of the dark is developmentally common through at least age 8, and some children have it well beyond that. Between ages 6 and 8, children\'s imaginations are extremely active, and they may genuinely believe in monsters, intruders, or threatening figures in the dark. This is a typical stage of cognitive development, not a psychological problem. A night light is a simple and effective accommodation. If fear of the dark is severe — meaning the child cannot stay in their room at all, has significant anxiety about nighttime for hours before bed, or the fear is worsening rather than gradually improving — discuss with your pediatrician.',
-  },
-  {
-    question: 'My child sleeps enough hours but still seems exhausted. What could cause this?',
-    answer: 'Persistent daytime tiredness despite adequate sleep hours in a 6 to 8 year old has several possible causes. Obstructive sleep apnea (OSA) is the most important to rule out — it affects an estimated 1 to 5% of children, causes fragmented non-restorative sleep, and is significantly under-diagnosed. Key signs are loud snoring, mouth breathing at night, or pauses in breathing. Iron deficiency anemia is common in this age and causes fatigue. Anxiety disrupts sleep architecture even when total hours look normal. Thyroid problems can cause fatigue. All of these warrant a visit to your pediatrician for evaluation.',
-  },
+    question: "Is snoring typical in a 6 to 8 year old?",
+    answer: "Occasional light snoring during a cold can happen, but habitual snoring is not something to ignore in a 6–8-year-old because it can be a sign of sleep-disordered breathing or obstructive sleep apnea (AAP, 2012). Red flags include loud snoring most nights, gasping, pauses in breathing, restless sleep, and daytime behavior problems. If your child snores regularly, contact your pediatrician for evaluation."
+  }
 ];
 
 const articleData = articleSchema({
   title,
   description,
-  url: 'https://ageexpectations.com/ages/6-8-years/sleep/',
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  url: "https://ageexpectations.com/ages/6-8-years/sleep/",
+  datePublished: "2026-04-10",
+  dateModified: "2026-04-10"
 });
+
 const faqData = faqSchema(faqs);
+
 const medicalData = medicalWebPageSchema({
   name: title,
   description,
-  url: 'https://ageexpectations.com/ages/6-8-years/sleep/',
-  lastReviewed: '2026-03-20',
+  url: "https://ageexpectations.com/ages/6-8-years/sleep/",
+  lastReviewed: "2026-04-10"
 });
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  articleSchema={articleData}
-  faqSchema={faqData}
-  medicalSchema={medicalData}
-  breadcrumbs={[
-    { label: '6–8 Years', href: '/ages/6-8-years/' },
-    { label: 'Sleep' },
-  ]}
->
-  <h1>6–8 Year Old Sleep: How Much, Bedtime, and What's Normal</h1>
+<BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
+  <article>
+    <h1>{title}</h1>
 
-  <p class="answer-first">Children ages 6 to 8 need 9 to 12 hours of sleep per night, according to the American Academy of Pediatrics (AAP, 2016). Early school age is when sleep becomes a battleground in many homes — kids are old enough to resist bedtime but still need more sleep than most parents assume. Getting the foundations right during the 6 to 8 year window pays dividends through middle school, when sleep becomes biologically harder to get.</p>
+    <p class="answer-first">Children ages 6–8 should usually get 9–12 hours of sleep every 24 hours, and most no longer need naps after age 6 (AAP, 2016; CDC, 2022). For school-age children, enough sleep supports attention, behavior, learning, mood regulation, and physical health, while chronic sleep loss is linked to school difficulties and higher obesity risk.</p>
 
-  <h2>How much sleep do 6 to 8 year olds need?</h2>
+    <p>Ages 6–8 are a major sleep transition period. Children this age often look more independent during the day, but they still need a surprisingly early bedtime to meet their sleep needs. There is a wide range of typical sleep patterns, but school schedules, extracurriculars, and screens often push sleep later than children actually need.</p>
 
-  <p class="answer-first">The AAP and the American Academy of Sleep Medicine recommend 9 to 12 hours of sleep per night for all children ages 6 to 12, including 6 to 8 year olds (AAP, 2016). Most children in this age range function best with 10 to 11 hours — enough for sustained attention, emotional regulation, healthy growth, and immune function. Research shows that children ages 6 to 8 who consistently sleep fewer than 9 hours have measurably worse academic performance, more emotional outbursts, higher rates of obesity, and poorer immune function than well-rested peers (AAP, 2022).</p>
+    <h2>How much sleep does a 6 to 8 year old need?</h2>
+    <p class="answer-first">Most typically developing children ages 6–8 need 9–12 hours of sleep per night, according to the American Academy of Pediatrics and the American Academy of Sleep Medicine (AAP, 2016; Paruthi et al., AASM, 2016). In this age range, sleep is expected to happen mainly overnight rather than through regular naps.</p>
+    <p>That range is broad because children vary. A 6-year-old may function best with 11 hours, while an 8-year-old may do well with 9.5 or 10 hours. The more important question is not only how many hours your child spends in bed, but whether they wake reasonably easily, stay alert in school, and can regulate their emotions during the day.</p>
+    <p>Children in the 6–8 age range who consistently get too little sleep may seem cranky, impulsive, tearful, or hyperactive instead of obviously tired. That is one reason sleep problems at this age are sometimes mistaken for behavior or attention problems. When parents ask whether their child is getting enough sleep, daytime functioning is often the clearest clue.</p>
 
-  <p>Recommended hours and bedtimes by age and wake time:</p>
-  <ul>
-    <li><strong>Age 6, wake at 6:30 AM:</strong> Asleep by 7:30 to 8:00 PM (target 10–11 hours)</li>
-    <li><strong>Age 7, wake at 6:30 AM:</strong> Asleep by 7:45 to 8:30 PM (target 10–10.75 hours)</li>
-    <li><strong>Age 8, wake at 6:30 AM:</strong> Asleep by 8:00 to 8:30 PM (target 9.5–10.5 hours)</li>
-    <li><strong>Age 8, wake at 7:00 AM:</strong> Asleep by 8:30 to 9:00 PM (target 9.5–10.5 hours)</li>
-  </ul>
+    <h2>What time should my 6 to 8 year old go to bed?</h2>
+    <p class="answer-first">A good bedtime for a 6–8-year-old is the bedtime that allows 9–12 hours of sleep before the required wake time, which for many school-age children means falling asleep between about 7:30 PM and 9:00 PM on school nights (AAP, 2016). Wake time should drive bedtime, not the other way around.</p>
+    <p>If your child must wake at 6:30 AM for school, a bedtime that leads to sleep by about 8:30 PM often makes sense. If wake time is 7:00 AM, sleep by about 8:30–9:30 PM may be appropriate depending on the child. Many families accidentally choose bedtimes based on what feels socially typical rather than on actual sleep math.</p>
+    <p>At ages 6–8, a predictable schedule matters more than a perfect exact minute. A bedtime routine that starts 20–30 minutes before lights-out usually works better than abruptly sending a child to bed. Bath, pajamas, brushing teeth, one or two books, and lights out is often enough. Consistency across weekdays matters most, though weekends should still stay reasonably close to the school-night schedule.</p>
 
-  <p>The most reliable indicator of adequate sleep is not hours on a clock but how the child functions: a well-rested 6 to 8 year old wakes without major struggle most mornings, maintains focus and emotional stability through the school day, and does not sleep dramatically more on weekends than school nights. That weekend gap — when a child sleeps 1.5 to 2 or more extra hours with no alarm — is the clearest sign of chronic weekday under-sleep.</p>
+    <h2>Is it typical that my 6 to 8 year old does not nap anymore?</h2>
+    <p class="answer-first">Yes. Most typically developing children ages 6–8 no longer take regular naps, and persistent daytime napping at this age is more often a sign of insufficient nighttime sleep than a developmental expectation (CDC, 2022; AAP, 2016). A child who still needs frequent naps deserves a closer look at total sleep and sleep quality.</p>
+    <p>Some children occasionally fall asleep in the car after a long day, and that alone is not automatically concerning. The pattern matters. If a 6–8-year-old regularly falls asleep after school, during quiet reading time, or on short car rides, the first questions are whether bedtime is too late, whether sleep is disrupted, and whether the child is snoring or breathing noisily at night.</p>
+    <p>Late afternoon naps can also make bedtime harder by reducing sleep pressure. If your child seems tired enough to nap most days, it is usually better to move bedtime earlier rather than relying on a nap. Persistent daytime sleepiness despite adequate overnight sleep is worth discussing with your pediatrician.</p>
 
-  <h2>What is a good bedtime for a 6, 7, or 8 year old?</h2>
+    <h2>Why is my 6 to 8 year old so hard to get to bed?</h2>
+    <p class="answer-first">Bedtime resistance is common in children ages 6–8 and is usually related to inconsistent routines, screens before bed, anxiety, or a bedtime that does not match the child's sleep needs rather than to a serious problem (AAP, 2016; AASM, 2020). Most children this age fall asleep more easily with a calm, predictable routine.</p>
+    <p>Children in the 6–8 age range are old enough to delay, negotiate, and ask for one more snack, one more hug, or one more chapter. That does not mean the behavior is unusual. It usually means the boundaries around bedtime are not yet fully settled. Some children are also more aware of nighttime fears at this age, including fear of the dark, bad dreams, or separation from parents.</p>
+    <p>Helpful changes include keeping bedtime and wake time consistent, ending screens at least 30–60 minutes before bed, limiting exciting play late in the evening, and using the same short routine every night. A bedtime that is too late can paradoxically make children more wired and oppositional. If bedtime struggles are severe, prolonged, or linked with anxiety, snoring, or frequent waking, involve your pediatrician.</p>
 
-  <p class="answer-first">A 6-year-old who wakes at 6:30 AM for school should be asleep by 7:30 to 8:00 PM. A 7-year-old should aim for 8:00 to 8:30 PM. An 8-year-old with the same wake time can typically fall within 8:00 to 8:30 PM, occasionally pushing to 8:30 to 9:00 PM at the older end of this range (AAP, 2016). These are target asleep times — not bedtime routine start times. Build the wind-down routine so it ends at lights-out, meaning routine start should be 20 to 30 minutes earlier.</p>
+    <h2>How do screens affect sleep in 6 to 8 year olds?</h2>
+    <p class="answer-first">Screens can delay sleep onset and worsen sleep quality in children ages 6–8, especially when used in the 30–60 minutes before bed, because light exposure and stimulating content interfere with the brain's readiness for sleep (AASM, 2020; AAP, 2023). Bedtime routines work best when bedrooms and the hour before sleep are screen-free.</p>
+    <p>This includes televisions, tablets, phones, handheld gaming devices, and even “quiet” videos. For some children, the issue is blue light. For others, it is the emotional stimulation of a game, show, or scrolling. Children this age often have more trouble transitioning away from screens than adults expect, which can create a second layer of bedtime conflict.</p>
+    <p>The AAP's more recent media guidance emphasizes protecting sleep, physical activity, and face-to-face time rather than focusing only on a rigid number of screen hours (AAP, 2023). In daily life, the most practical sleep rule is simple: no devices in bed, no screens right before lights out, and no overnight access to tablets or TVs in the bedroom.</p>
 
-  <p>How to calculate the right bedtime:</p>
-  <ul>
-    <li>Start with the school wake time (e.g., 6:30 AM)</li>
-    <li>Subtract 10 to 10.5 hours to get the target asleep time (e.g., 8:00 to 8:30 PM)</li>
-    <li>Add a 20 to 30 minute wind-down before that time (e.g., routine starts at 7:30 to 8:00 PM)</li>
-    <li>Keep this schedule 7 days a week within a 30 to 60 minute buffer — weekend drift causes weekday sleep trouble</li>
-  </ul>
+    <h2>What does poor sleep look like in a 6 to 8 year old during the day?</h2>
+    <p class="answer-first">In children ages 6–8, poor sleep often shows up as irritability, emotional outbursts, hyperactivity, poor concentration, or school struggles rather than obvious drowsiness (AAP, 2016). School-age children who are sleep-deprived may look “wired” instead of sleepy, which can make the sleep problem easy to miss.</p>
+    <p>Parents may notice hard morning wake-ups, frequent after-school meltdowns, trouble staying on task, or a child who falls asleep on short car rides. Teachers may notice fidgeting, daydreaming, emotional reactivity, or declining classroom performance. Because these signs overlap with ADHD, anxiety, and learning differences, sleep should always be part of the conversation when behavior changes appear.</p>
+    <p>Sleep loss also affects the whole family. Children ages 6–8 who are overtired often have a harder time with routines, sibling conflicts, and frustration tolerance. If your child's behavior is consistently worse after late nights or schedule disruptions, that pattern is an important clue that sleep is playing a role.</p>
 
-  <p>A common mistake: treating the bedtime routine start as the sleep target. A 6-year-old whose parent says "bedtime is 8:00 PM" often means lights-out at 8:30 to 8:45 PM after the routine runs long — not enough for an adequate night's sleep before a 6:30 AM wake.</p>
+    <h2>What sleep problems are common in 6 to 8 year olds?</h2>
+    <p class="answer-first">Common sleep problems in children ages 6–8 include bedtime resistance, nightmares, early waking, anxiety at bedtime, and habitual snoring, with snoring being especially important because it can signal sleep-disordered breathing (AAP, 2012; AAP, 2016). Most routine sleep struggles improve with schedule and routine changes, but breathing problems need medical attention.</p>
 
-  <h2>Why does my 6 to 8 year old fight bedtime?</h2>
+    <h3>Is snoring a problem in a 6 to 8 year old?</h3>
+    <p class="answer-first">Habitual snoring in a child ages 6–8 is not something to dismiss, because regular snoring can be a sign of obstructive sleep apnea or other sleep-disordered breathing (AAP, 2012). Loud snoring, gasping, pauses in breathing, restless sleep, and daytime behavior changes should prompt a call to your pediatrician.</p>
+    <p>Parents are sometimes surprised that a sleep problem can look like behavior trouble. Children with sleep-disordered breathing may appear tired, inattentive, or hyperactive during the day. Enlarged tonsils and adenoids are a common cause in this age group, but only a pediatrician can evaluate what is going on.</p>
 
-  <p class="answer-first">Bedtime resistance in 6 to 8 year olds is extremely common and usually reflects developmental factors rather than medical problems. At this age, children are highly aware of what they are "missing" when they go to bed (family time, screens, activities), have enough cognitive and verbal ability to argue and stall, and are learning to test limits as part of healthy autonomy development. This is not defiance so much as a developmentally predictable mismatch between the child's drive for independence and their biological need for sleep (AAP, 2022).</p>
+    <h3>Are nightmares typical at 6 to 8 years?</h3>
+    <p class="answer-first">Yes. Nightmares are common in children ages 6–8 because imagination is strong at this age and children are more aware of fear, separation, and danger themes than they were in preschool (AAP, 2016). Occasional nightmares are typically developing, but frequent sleep disruption deserves closer attention.</p>
+    <p>Keeping the bedtime routine calm, limiting scary media, and offering brief reassurance usually helps. If nightmares become very frequent, cause major bedtime anxiety, or follow a stressful life event, discuss the pattern with your pediatrician.</p>
 
-  <p>Most effective strategies for bedtime resistance at this age:</p>
-  <ul>
-    <li><strong>Consistent routine, consistent timing:</strong> The routine itself becomes the signal that sleep is coming. A predictable sequence — same steps, same order, same time — reduces the nervous system's need to "fight" the transition. Variability, by contrast, signals uncertainty and keeps the child alert.</li>
-    <li><strong>Give limited control within the routine:</strong> Let the child choose which pajamas, which stuffed animal, or which book. Giving real choices within a non-negotiable framework (bed happens, the details are flexible) reduces power struggles significantly.</li>
-    <li><strong>Screens off 60 minutes before bed:</strong> This is the single most impactful change for most families. Blue light delays melatonin release; emotional arousal from screens (especially games and YouTube) takes 30 to 60 minutes to wind down regardless of screen removal.</li>
-    <li><strong>Brief connection before lights-out:</strong> Many children resist bedtime because they want 5 more minutes of parent attention. Building a deliberate 5 to 10 minute check-in about the day into the routine satisfies this need and removes the drive to stall for connection.</li>
-    <li><strong>Consistent lights-out time — no exceptions:</strong> The exception teaches the child that persistence works. A firm, calm, consistent lights-out time with no negotiation reduces the stalling cycle over 1 to 2 weeks.</li>
-  </ul>
+    <h3>Why does my 6 to 8 year old wake up too early?</h3>
+    <p class="answer-first">Early waking in children ages 6–8 can be caused by an early internal schedule, overtiredness, light exposure, noise, or anxiety, and it often improves with a consistent wake time and an appropriately early bedtime (AAP, 2016). A child who wakes too early is not always getting enough sleep.</p>
+    <p>Darkening the room, avoiding very late bedtimes, and keeping weekends close to the school schedule can help. If early waking comes with snoring, severe anxiety, or daytime sleepiness, a pediatric evaluation is reasonable.</p>
 
-  <h2>What time should a 6 to 8 year old wake up?</h2>
-
-  <p class="answer-first">The ideal wake time for a 6 to 8 year old is one that allows 10 to 11 hours of sleep from the actual sleep-onset time, not one dictated solely by school start. In practice, most school-age children must wake between 6:00 and 7:30 AM depending on school start times and commute. Because wake time is typically fixed by school, the only variable families can control is bedtime — which must shift earlier to compensate for the early wake (AAP, 2016).</p>
-
-  <p>On weekends, wake times should not drift more than 30 to 60 minutes later than school mornings. Sleeping in until 8:30 or 9:00 AM on weekends when school mornings require a 6:30 AM wake creates the equivalent of weekly transatlantic jet lag — the body's clock shifts later over the weekend, making Sunday night impossible and Monday morning brutal. The technical term is "social jet lag," and it is significantly correlated with worse academic performance, mood problems, and increased risk of obesity in children (Wittmann et al., 2006).</p>
-
-  <h2>How does screen time affect sleep in 6 to 8 year olds?</h2>
-
-  <p class="answer-first">Screen use in the 60 to 90 minutes before bed is one of the most well-documented causes of delayed sleep onset and reduced sleep quality in school-age children (AAP, 2016). Blue light from phones, tablets, computers, and televisions suppresses melatonin production — the hormone that signals the body to initiate sleep — for 60 to 90 minutes after exposure. A child who uses a tablet until 8:00 PM may not feel sleepy until 9:00 to 9:30 PM even though their body needs to be asleep by 8:00 to 8:30 PM for adequate rest.</p>
-
-  <p>The AAP's evidence-based screen recommendations for 6 to 8 year olds at night:</p>
-  <ul>
-    <li><strong>All screens off 60 minutes before target sleep time:</strong> Not "paused" or "resting nearby" — fully off. For a child targeting sleep at 8:00 PM, screens off by 7:00 PM.</li>
-    <li><strong>No devices in the bedroom at night:</strong> All phones, tablets, and laptops charge in a common family area after a specific hour. This eliminates midnight access and removes the distraction even when devices are "off."</li>
-    <li><strong>Television counts:</strong> A bedroom TV — even playing quiet content — emits blue light and audio that disrupt sleep architecture. The AAP recommends against bedroom TVs for children.</li>
-    <li><strong>Video games require extra buffer time:</strong> Competitive or action games produce emotional arousal (adrenaline, cortisol) that takes 30 to 60 minutes to subside even after the game is off. End video game sessions 60 to 90 minutes before bed, not just 30 minutes.</li>
-  </ul>
-
-  <h2>Is it normal for 6 to 8 year olds to be afraid of the dark or have nighttime fears?</h2>
-
-  <p class="answer-first">Yes — fear of the dark and nighttime fears are developmentally common and expected through at least age 8, and for many children beyond that. Between ages 6 and 8, children's capacity for imaginative thinking is at a peak, and they can construct vivid, frightening scenarios about what might be in the dark or lurking in their room. This is not a pathological fear — it is the predictable intersection of a developing imagination and the absence of visual information that disproves the threat (AAP, 2022).</p>
-
-  <p>What helps with nighttime fears in 6 to 8 year olds:</p>
-  <ul>
-    <li><strong>A night light:</strong> Simple, practical, and effective. Removing the darkness removes the perceptual ambiguity that the imagination fills with threats. There is no developmental downside to a child sleeping with a night light at this age.</li>
-    <li><strong>Avoiding scary media before bed:</strong> Even content that an adult considers mild (action movies, news) can feed nighttime fears in 6 to 8 year olds whose imagination is very active. Screen curfews help here as well.</li>
-    <li><strong>Brief pre-sleep check-in:</strong> Many children with nighttime fears sleep better if a parent does a brief, matter-of-fact "room check" as part of the routine — checking under the bed, in the closet, and declaring the room safe. This is not reinforcing fear; it is providing the reassurance that allows sleep.</li>
-    <li><strong>Avoid dismissing fears:</strong> "There's nothing to be afraid of" doesn't help because it denies what feels real to the child. "I understand the dark feels scary, and you are safe" acknowledges the feeling while providing reassurance.</li>
-  </ul>
-
-  <p>Talk to your pediatrician if nighttime fears are severe — if the child cannot stay in their bedroom at all, if the anxiety begins hours before bed, or if the fear is worsening substantially over time rather than gradually resolving.</p>
-
-  <h2>What does a healthy bedtime routine look like for a 6 to 8 year old?</h2>
-
-  <p class="answer-first">A healthy bedtime routine for 6 to 8 year olds is 20 to 30 minutes of calm, predictable, screen-free activity before lights-out (AAP, 2016). The exact activities matter less than their consistency — the same steps in the same order each night builds a powerful conditioned signal that the brain and body recognize as "sleep is coming," improving both the ease of falling asleep and overall sleep quality.</p>
-
-  <p>An effective 6 to 8 year old bedtime routine might include:</p>
-  <ul>
-    <li><strong>Screens off (starting point):</strong> Set a specific screen-off time — 30 to 60 minutes before target sleep. This is the anchor of the routine.</li>
-    <li><strong>Hygiene:</strong> Brush teeth, wash face, use the bathroom. These functional steps signal transition and typically take 5 to 10 minutes.</li>
-    <li><strong>Dim the lights:</strong> Switching to a lamp or low lighting 20 to 30 minutes before bed supports the body's natural melatonin rise. Avoid bright overhead lights until lights-out.</li>
-    <li><strong>10 to 15 minutes of independent reading:</strong> Reading in bed is one of the best pre-sleep activities for this age — it is calm, cognitively engaging at a low arousal level, and builds literacy. Physical books are preferred over backlit devices.</li>
-    <li><strong>Brief parent connection time:</strong> 5 minutes of conversation about the day, what tomorrow holds, and a consistent closing phrase (a special goodnight, a hug ritual) satisfies the social need that drives stalling and makes the ending feel complete.</li>
-    <li><strong>Lights-out:</strong> Consistent, calm, and non-negotiable. The same time every night.</li>
-  </ul>
-
-  <h2>When should I talk to my pediatrician about my 6 to 8 year old's sleep?</h2>
-
-  <div class="callout">
-    <p class="answer-first">Contact your pediatrician if your 6 to 8 year old snores loudly or has pauses in breathing during sleep, consistently takes more than 45 minutes to fall asleep despite good sleep hygiene, shows excessive daytime sleepiness despite 10 or more hours of sleep, wakes in the night regularly and cannot return to sleep, or has significant mood, behavior, or academic problems that correlate with sleep difficulty (AAP, 2022).</p>
-
-    <p>Specific red flags to discuss with your pediatrician:</p>
+    <h2>How can I help my 6 to 8 year old sleep better?</h2>
+    <p class="answer-first">The most effective sleep supports for children ages 6–8 are a consistent bedtime and wake time, a calm 20–30 minute routine, no screens in the 30–60 minutes before bed, and enough total overnight sleep to reach the 9–12 hour recommendation (AAP, 2016; AASM, 2020). Simple routines usually work better than complicated sleep strategies.</p>
+    <p>Most families do not need a perfect sleep program. They need a repeatable evening rhythm. A short routine, a dark cool room, and clear expectations are often enough. If your child uses a comfort object, night-light, or white noise, those are reasonable as long as they support sleep rather than extend negotiations.</p>
+    <p>Helpful strategies for ages 6–8 include:</p>
     <ul>
-      <li><strong>Loud, frequent snoring or mouth breathing at night:</strong> These are the hallmark signs of obstructive sleep apnea (OSA), which affects an estimated 1 to 5% of school-age children. OSA fragments sleep quality so severely that children get 10 hours of sleep but feel and act as if they got 6. Children with OSA often present with behavior problems, attention difficulties, and hyperactivity that can mimic ADHD — and are significantly under-diagnosed. Enlarged tonsils and adenoids are the most common cause in this age range.</li>
-      <li><strong>Regular night wakings with inability to return to sleep independently:</strong> Brief partial wakings are biologically normal at every age. Wakings where the child calls out, cannot self-soothe, or comes to the parents' room more than 2 to 3 nights per week are worth discussing.</li>
-      <li><strong>Persistent sleep onset insomnia:</strong> A child who genuinely cannot fall asleep within 45 minutes of lights-out most nights — even after removing screens and establishing a consistent routine — may have anxiety, restless leg syndrome, or a circadian rhythm issue that warrants evaluation.</li>
-      <li><strong>Sleepwalking or night terrors that are frequent or escalating:</strong> Occasional sleepwalking and night terrors are not unusual in 6 to 8 year olds, but episodes occurring more than once per week, involving potentially dangerous behaviors (going outside, attempting to use stairs rapidly), or intensifying over time should be evaluated.</li>
-      <li><strong>Severe and chronic bedtime anxiety:</strong> Bedtime resistance is typical; bedtime terror is different. If a child experiences extreme distress at bedtime — prolonged crying, panic, physical symptoms of anxiety — most nights, this warrants evaluation beyond routine sleep hygiene guidance.</li>
-      <li><strong>Significant behavioral or academic changes correlated with sleep problems:</strong> When sleep difficulties and daytime dysfunction appear together, addressing the sleep problem often resolves or significantly improves the daytime symptoms.</li>
+      <li>Keep wake time consistent, even on weekends.</li>
+      <li>Start winding down before your child looks exhausted.</li>
+      <li>Turn off tablets, TV, and games at least 30–60 minutes before bed.</li>
+      <li>Use a visual bedtime checklist if routines are a struggle.</li>
+      <li>Make sure after-school activities are not pushing bedtime too late.</li>
+      <li>Consider whether your child needs an earlier bedtime, not just firmer rules.</li>
     </ul>
-  </div>
 
-  <section class="faq-section">
-    <h2>Frequently Asked Questions: 6 to 8 Year Old Sleep</h2>
+    <h2>When should I talk to my pediatrician about my 6 to 8 year old's sleep?</h2>
+    <p class="answer-first">Talk with your pediatrician if a child ages 6–8 snores most nights, gasps in sleep, regularly falls asleep during the day, cannot fall asleep despite a consistent routine, or has sleep problems that affect mood, school, or behavior (AAP, 2012; AAP, 2016). These are concrete red flags, not just family inconvenience.</p>
+    <p>Specific observable red flags in children ages 6–8 include:</p>
+    <ul>
+      <li>Loud snoring more than a few nights per week</li>
+      <li>Pauses in breathing, choking, or gasping during sleep</li>
+      <li>Restless sleep with frequent sweating or unusual sleep positions</li>
+      <li>Regular daytime sleepiness, including falling asleep in the car or after school</li>
+      <li>Persistent trouble waking for school despite an age-appropriate bedtime</li>
+      <li>Frequent nightmares or bedtime fears that significantly disrupt sleep</li>
+      <li>Behavior, attention, or school problems that seem worse with poor sleep</li>
+      <li>Sleepwalking, night terrors, or unusual nighttime behaviors that are frequent or unsafe</li>
+      <li>Ongoing insomnia despite several weeks of consistent routines and screen limits</li>
+    </ul>
+    <p>Children ages 6–8 do best when sleep concerns are addressed early. If you are unsure whether a sleep issue is typical or concerning, your pediatrician can help sort out whether the problem is behavioral, medical, emotional, or schedule-related.</p>
 
-    {faqs.map(faq => (
-      <div class="faq-item">
+    <h2>Frequently Asked Questions</h2>
+
+    {faqs.map((faq) => (
+      <section>
         <h3 class="faq-question">{faq.question}</h3>
         <p class="answer-first faq-answer">{faq.answer}</p>
-      </div>
+      </section>
     ))}
-  </section>
 
-  <nav class="age-nav" aria-label="Related age guides">
-    <p>
-      <a href="/ages/5-6-years/">← 5–6 Year Old Development</a>
-      &nbsp;|&nbsp;
-      <a href="/ages/6-8-years/">6–8 Year Old Development Overview</a>
-      &nbsp;|&nbsp;
-      <a href="/ages/8-10-years/sleep/">8–10 Year Old Sleep →</a>
-    </p>
-  </nav>
+    <hr />
 
-  <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP and CDC guidelines. Always consult your child's pediatrician for personalized guidance.</em></p>
-
+    <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, AASM, and CDC guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+  </article>
 </BaseLayout>
