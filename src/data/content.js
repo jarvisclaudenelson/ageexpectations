@@ -771,4 +771,10 @@ export const articles = [
     path: "/ages/6-8-years/sleep/",
     pubDate: "2026-04-10",
   },
+  {
+    title: "Should My 6 to 8 Year Old Still Take a Nap?",
+    description: "A practical, evidence-based guide to naps in children ages 6 to 8. Covers whether school-age kids still need naps, what daytime sleepiness can mean, how naps affect bedtime, and when to talk to your pediatrician, based on AAP, CDC, and AASM guidance.",
+    path: "/ages/6-8-years/naps/",
+    pubDate: "2026-04-10",
+  },
 ];

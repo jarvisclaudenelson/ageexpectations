@@ -7,32 +7,28 @@ const description = "A practical, evidence-based guide to naps in children ages 
 
 const faqs = [
   {
-    question: "Is it typical that my 7-year-old still falls asleep in the car?",
-    answer: "Occasional car sleep in a 7-year-old can be typical, especially after a busy day, but frequent unplanned sleep suggests your child may not be getting enough nighttime sleep (AAP, 2016; CDC, 2022). If your 6–8 year old regularly falls asleep in the car, after school, or during quiet activities, review bedtime and talk to your pediatrician if the pattern continues.",
+    question: "Is it typical that my 6 year old still needs a nap?",
+    answer: "Sometimes. Most children ages 6–8 no longer need a daily nap, but an occasional nap after illness, poor sleep, or an unusually busy day can still happen (AAP, 2016; CDC, 2022). If a 6-year-old needs frequent naps, it is more likely a sign of insufficient nighttime sleep than a developmental milestone."
   },
   {
-    question: "Should I let my 6-year-old nap after school?",
-    answer: "An occasional short after-school nap may help a very tired 6-year-old, but regular daily naps in children ages 6–8 often point to insufficient overnight sleep rather than a true nap need (AAP, 2016). If naps are happening most days, aim to protect nighttime sleep first and talk to your pediatrician if your child still seems unusually sleepy.",
+    question: "Should I let my 7 year old nap after school?",
+    answer: "Usually only with limits. A short after-school nap of 20–30 minutes may help a tired 7-year-old recover, but longer or late-afternoon naps often delay bedtime and worsen the sleep cycle (AASM, 2020). If your child routinely falls asleep after school, review whether they are getting the recommended 9–12 hours at night."
   },
   {
-    question: "Is it typical that my 8-year-old gets cranky in the afternoon?",
-    answer: "Afternoon crankiness in an 8-year-old is common and is often related to hunger, school fatigue, or not getting the recommended 9–12 hours of sleep at night (AAP, 2016). A nap is not always the answer at this age. If irritability comes with frequent daytime sleepiness, snoring, or school problems, talk to your pediatrician.",
+    question: "Why does my child fall asleep in the car every afternoon?",
+    answer: "Car sleep in a 6–8-year-old usually means your child is tired enough to doze in passive situations, which often points to sleep debt rather than a true need for scheduled naps (AAP, 2016). Repeated car sleep, especially with irritability or hard mornings, is a reason to look closely at bedtime and nighttime sleep quality."
   },
   {
-    question: "Can naps make bedtime harder for my 6 to 8 year old?",
-    answer: "Yes, late or long naps can make bedtime harder for children ages 6–8 because daytime sleep reduces sleep pressure, the body's drive to fall asleep at night (AASM, 2020). If your child needs a nap, keeping it earlier and shorter is less likely to disrupt nighttime sleep. Ongoing bedtime problems are worth discussing with your pediatrician.",
+    question: "Can naps make bedtime harder for my 8 year old?",
+    answer: "Yes. In children ages 6–8, naps that are long or happen late in the day can reduce sleep pressure, making it harder to fall asleep at the usual bedtime (AASM, 2020). If bedtime is drifting later, cutting back or eliminating the nap is often more effective than forcing an earlier bedtime."
   },
   {
-    question: "Should I worry if my 7-year-old falls asleep in class?",
-    answer: "Yes, falling asleep in class is not typical for a typically developing 7-year-old and should be taken seriously (AAP, 2016). It may reflect chronic sleep deprivation, sleep apnea, medication effects, or another medical issue. If your child falls asleep at school, snores loudly, or is hard to wake in the morning, contact your pediatrician.",
+    question: "Should I worry if my 6 to 8 year old is tired every day?",
+    answer: "Yes, daily tiredness deserves attention. School-age children ages 6–8 should usually get enough rest overnight and not seem persistently sleepy during the day if they are getting 9–12 hours of sleep (AAP, 2016). If your child is tired every day, snores, struggles to wake, or falls asleep unexpectedly, talk to your pediatrician."
   },
   {
-    question: "Is it typical that my child stopped napping years ago?",
-    answer: "Yes, most children have stopped regular daytime naps before the 6–8 year range, so not napping is typical for school-age children (CDC, 2022; AAP, 2016). At this age, healthy sleep usually happens at night, with a consistent bedtime and wake time. If your child seems rested and functions well during the day, not napping is expected.",
-  },
-  {
-    question: "What if my 6 to 8 year old seems tired even with an early bedtime?",
-    answer: "If a child ages 6–8 still seems tired despite an age-appropriate bedtime, the issue may be sleep quality rather than sleep quantity (AAP, 2016). Loud snoring, restless sleep, frequent waking, iron deficiency, anxiety, or some medications can affect daytime energy. Persistent tiredness deserves a conversation with your pediatrician.",
+    question: "Is quiet time better than a nap for a 6 to 8 year old?",
+    answer: "Often, yes. For many children ages 6–8, quiet time with books, drawing, or calm play provides needed downtime without interfering with nighttime sleep (AAP, 2016). If your child no longer falls asleep easily but still gets overstimulated or cranky, quiet time is usually a better fit than a scheduled nap."
   }
 ];
 
@@ -55,79 +51,93 @@ const medicalData = medicalWebPageSchema({
 ---
 
 <BaseLayout title={title} description={description} schema={[articleData, faqData, medicalData]}>
-  <main>
+  <main class="article-container">
     <article>
       <h1>{title}</h1>
 
-      <p class="answer-first">Most children ages 6–8 no longer need regular daytime naps and should get their sleep at night instead, with the AAP and American Academy of Sleep Medicine recommending 9–12 hours of sleep per 24 hours for children ages 6–12 (AAP, 2016; AASM, 2016). When a school-age child still naps often, it more often suggests inadequate nighttime sleep, poor sleep quality, or occasionally an underlying medical issue.</p>
+      <p class="answer-first">Most children ages 6–8 no longer need a daily nap, and regular daytime sleep at this age more often reflects insufficient nighttime sleep than a developmental need (AAP, 2016; CDC, 2022). Typically developing school-age children usually do best with 9–12 hours of nighttime sleep, consistent bedtimes, and quiet downtime instead of a scheduled afternoon nap.</p>
 
-      <p>For many parents, the confusing part is that a 6 to 8 year old can still <em>look</em> exhausted some afternoons. That does not automatically mean a nap is developmentally expected. In this age range, daytime sleepiness is more often a clue to look at bedtime, wake time, sleep habits, stress, or sleep-disrupting conditions like snoring.</p>
+      <p>It can feel confusing when a child who seems "big kid" enough for school still crashes on the couch at 4 PM. In many cases, the question is not whether naps are allowed, but what the naps are telling you about your child's total sleep, schedule, and sleep quality.</p>
 
-      <h2>Do 6 to 8 year olds still need naps?</h2>
-      <p class="answer-first">Most typically developing children ages 6–8 do not need a regular daily nap, because sleep at this age is expected to consolidate at night rather than during the day (AAP, 2016; CDC, 2022). A child in this age range who still naps every day may be missing needed nighttime sleep or having sleep that is not restful.</p>
-      <p>By elementary school, the brain's sleep pattern has usually shifted away from a daytime nap. That means a child who is getting enough overnight sleep often does well with a full day of school, play, and family routines without sleeping in the afternoon. Some children still have an occasional nap after illness, a major schedule disruption, travel, or an unusually active day. That can be typical.</p>
-      <p>What matters most is the pattern. An occasional nap is different from a child who falls asleep most afternoons, regularly dozes off in the car, or seems unable to stay alert during quiet activities. In children ages 6–8, frequent daytime sleep can be a sign to review the full sleep picture rather than simply adding more naps.</p>
+      <h2>Do 6 to 8 year olds usually still need naps?</h2>
+      <p class="answer-first">Most children ages 6–8 do not need a daily nap because school-age sleep is typically consolidated overnight, with the AAP and American Academy of Sleep Medicine recommending 9–12 hours of sleep per 24 hours for ages 6–12 (AAP, 2016; Paruthi et al., AASM, 2016). A child in this age range who still naps regularly is often not getting enough sleep at night.</p>
+      <p>That said, variation still exists. A 6-year-old adjusting to full-day school may occasionally nap on weekends. A child recovering from illness, a growth spurt, travel, or several short nights may also sleep during the day. What matters is the pattern. An occasional catch-up nap is different from needing a nap most days just to function.</p>
+      <p>For typically developing 6–8-year-olds, the more common healthy rhythm is overnight sleep plus a period of rest, reading, or quiet play in the afternoon if needed. If your child consistently cannot make it through the day without sleeping, it is worth looking at bedtime, wake time, screen use before bed, and snoring or restless sleep.</p>
 
-      <h2>How much sleep should a 6 to 8 year old get in 24 hours?</h2>
-      <p class="answer-first">Children ages 6–8 should usually get 9–12 hours of sleep per 24 hours, with most of that sleep happening overnight and no routine daytime nap expected after age 6 (AAP, 2016; AASM, 2016). A child in this age range who gets less than 9 hours consistently is more likely to have attention, behavior, and mood difficulties.</p>
-      <p>For many school-age children, this works out to roughly 10–11 hours overnight on school nights. A child who wakes at 6:30 AM for school may need to be asleep by about 8:30���9:00 PM to stay in a healthy range. Families are sometimes surprised by how early that is, especially once homework, sports, baths, and screens fill the evening.</p>
-      <p>The goal is not a perfect number every single night. The bigger pattern matters more. If a 6–8 year old gets enough sleep most nights, wakes reasonably easily, stays alert in class, and is not relying on naps to get through the day, sleep quantity is probably appropriate.</p>
+      <h2>What does it mean if my 6 to 8 year old falls asleep after school?</h2>
+      <p class="answer-first">When a child ages 6–8 falls asleep after school, the most likely explanation is sleep debt rather than a true need for a developmental nap, especially if the child is getting less than the recommended 9–12 hours of sleep at night (AAP, 2016). After-school sleep can also signal poor sleep quality from snoring, fragmented sleep, or schedule mismatch.</p>
+      <p>School demands are tiring. A child this age spends hours sitting still, listening, regulating emotions, and managing peer interactions. Some children look fine at school but fall apart at home because they have used up their energy reserves. If your child repeatedly sleeps in the car, on the couch, or during homework time, think of that as useful information rather than bad behavior.</p>
+      <p>Look for clues such as difficulty waking in the morning, crankiness before dinner, heavy reliance on weekend sleep-ins, or bedtime drifting later because of afternoon naps. Those patterns often point to chronic under-sleeping. Less commonly, daytime sleepiness may be linked to sleep apnea, iron deficiency, medication effects, or another medical issue, especially if the tiredness seems excessive for the schedule.</p>
 
-      <h2>What does it mean if my 6 to 8 year old still seems tired during the day?</h2>
-      <p class="answer-first">Daytime sleepiness in a child ages 6–8 usually means either not enough nighttime sleep, poor-quality sleep, or a less common medical or emotional issue affecting rest (AAP, 2016). Frequent tiredness is worth paying attention to because children with inadequate sleep can show irritability, hyperactivity, poor focus, and lower school performance.</p>
-      <p>Children do not always look sleepy the way adults do. A tired 6 to 8 year old may become silly, emotional, impulsive, oppositional, tearful, or unusually hyperactive. Some children get headaches, seem "wired," or melt down over small frustrations. Others seem fine until they get in the car and immediately fall asleep.</p>
-      <p>Common reasons for daytime tiredness in this age range include late bedtimes, inconsistent schedules, screens too close to bedtime, anxiety, nightmares, restless sleep, loud snoring, or waking very early for school. Less often, iron deficiency, medication effects, depression, or sleep disorders can contribute. If the tiredness is frequent or is affecting school, behavior, or mood, it is reasonable to bring it up with your pediatrician.</p>
+      <h2>How much nighttime sleep should a 6 to 8 year old get if they are napping?</h2>
+      <p class="answer-first">Children ages 6–8 still need the same total sleep target whether or not they nap: the recommended range for ages 6–12 is 9–12 hours per 24 hours (AAP, 2016; AASM, 2016). In practice, a school-age child who needs a nap often does better when more of that sleep is shifted back to nighttime.</p>
+      <p>For example, if a 7-year-old sleeps 8.5 hours at night and then naps for an hour after school, the total may technically approach the lower end of the recommendation, but the schedule can still create problems. Late-day naps reduce sleep pressure, making bedtime harder and creating a cycle of too-little nighttime sleep followed by more daytime sleepiness.</p>
+      <p>Most 6–8-year-olds function best with a predictable bedtime and wake time that allow enough overnight sleep before school. If your child naps often, calculate the total sleep over 24 hours, but also ask whether the sleep is happening at the biologically useful time. For school-age children, nighttime sleep is usually more restorative and less disruptive than frequent afternoon naps.</p>
 
-      <h2>Should I let my 6 to 8 year old nap if they seem exhausted?</h2>
-      <p class="answer-first">An occasional nap for a clearly exhausted child ages 6–8 is reasonable, especially during illness, after travel, or after a major schedule disruption, but regular daily naps are usually not the long-term solution (AAP, 2016). In this age group, repeated naps can mask an underlying sleep problem and may make bedtime more difficult.</p>
-      <p>If your child truly needs a nap once in a while, try to keep it earlier in the afternoon and relatively brief so it does not push bedtime too late. Families often notice that a child who sleeps for a long time at 5 PM is then wide awake at 9 PM, which creates a cycle of bedtime resistance and next-day exhaustion.</p>
-      <p>If your 6–8 year old needs naps several times a week, the better question is usually, "Why is this child so tired?" Rather than assuming the child simply still needs a nap developmentally, look at whether nighttime sleep is long enough, calm enough, and consistent enough. Recurrent exhaustion is worth discussing with your pediatrician.</p>
+      <h2>Should I let my 6 to 8 year old nap after school?</h2>
+      <p class="answer-first">A short, early nap can be reasonable for a 6–8-year-old who is temporarily overtired, but routine after-school naps are usually not ideal because they can delay bedtime and reinforce chronic sleep debt (AASM, 2020). If a nap is needed, keeping it brief—about 20–30 minutes—and earlier in the afternoon is usually less disruptive.</p>
+      <p>The best choice depends on the pattern. If your child had a terrible night because of travel, illness, or a one-time disruption, a brief nap may help. If your child naps every weekday and then stays up late resisting bedtime, the nap is probably part of the problem rather than the solution.</p>
+      <p>Try to avoid naps close to dinner or in the early evening. At that point, many children wake groggy, irritable, and less ready for bedtime. A quiet snack, outdoor play, hydration, and an earlier bedtime often work better than letting a tired school-age child sleep for 90 minutes on the couch. If your child truly cannot stay awake without that nap, it is worth discussing with your pediatrician.</p>
 
-      <h2>Can naps make bedtime harder for a 6 to 8 year old?</h2>
-      <p class="answer-first">Yes, naps can make bedtime harder for children ages 6–8, especially if the nap is late in the day or lasts too long, because it reduces sleep pressure and makes it harder to fall asleep at the usual bedtime (AASM, 2020). This can create a cycle of late nights followed by more daytime tiredness.</p>
-      <p>Sleep pressure is the body's natural build-up of tiredness across the day. When a school-age child naps at 4 PM or 5 PM, they may not feel sleepy when bedtime comes. Parents may then see longer bedtime struggles, more requests to get up, or difficulty waking the child the next morning because sleep shifted later.</p>
-      <p>If naps are interfering with nighttime sleep, the priority should usually be restoring a consistent bedtime and wake time. For many 6–8 year olds, improving nighttime sleep reduces the urge to nap within a week or two. If bedtime remains very difficult despite a strong routine and age-appropriate schedule, talk to your pediatrician.</p>
+      <h2>How long should a nap be for a 6 to 8 year old?</h2>
+      <p class="answer-first">If a child ages 6–8 does nap, a brief nap of about 20–30 minutes is usually the least disruptive option because longer naps can reduce bedtime sleep pressure and make falling asleep at night harder (AASM, 2020). Naps that last an hour or more often behave more like a schedule problem than a sleep solution in school-age children.</p>
+      <p>Short naps can take the edge off severe tiredness without pushing the body into deeper sleep stages. Once children sleep longer, they are more likely to wake groggy and then stay awake too late that night. That can start a repeating loop of too little nighttime sleep, afternoon crash, late bedtime, and another short night.</p>
+      <p>If your child routinely takes long naps, ask whether the real fix is moving bedtime earlier by 30–60 minutes. For many 6–8-year-olds, especially during the school year, that adjustment is more helpful than preserving the nap. If the child falls asleep unintentionally and is hard to wake, the level of daytime sleepiness is more concerning than the nap itself.</p>
 
-      <h2>What causes a school-age child to suddenly start napping again?</h2>
-      <p class="answer-first">A child ages 6–8 who suddenly starts napping again may be recovering from illness, losing nighttime sleep, experiencing emotional stress, or developing a sleep or medical problem that affects daytime alertness (AAP, 2016). A new nap pattern is more important than an occasional nap because it signals a change from that child's usual baseline.</p>
-      <p>Start by asking what changed in the last few weeks. Did school start earlier? Did sports practice move later? Is your child reading under the covers after bedtime? Has anxiety increased? Did your child have a cold and begin snoring afterward? Sometimes the cause is straightforward, like several nights of too-late sleep.</p>
-      <p>A more abrupt shift deserves more attention if it comes with loud snoring, pauses in breathing, weight loss, frequent illness, pale skin, falling grades, headaches, or unusual sadness. Those clues make it more important to check in with your pediatrician rather than assuming the child just needs more rest.</p>
+      <h2>Is quiet time better than a nap for a 6 to 8 year old?</h2>
+      <p class="answer-first">Yes, for many children ages 6–8, quiet time is a better fit than a nap because school-age children still need downtime even when they no longer need daytime sleep (AAP, 2016). Calm activities like reading, coloring, audiobooks, puzzles, or independent play can reduce overstimulation without interfering with nighttime sleep.</p>
+      <p>This age group is busy. Children ages 6–8 are handling school routines, social demands, extracurriculars, and more cognitive work than preschoolers. Some children become weepy, clingy, or irritable in late afternoon not because they need sleep, but because they need a break. A structured 20–40 minutes of low-stimulation time can help significantly.</p>
+      <p>Quiet time also gives parents a practical alternative to the all-or-nothing choice between "force a nap" and "push through exhaustion." If your child falls asleep during quiet time once in a while, that is useful information. If your child reliably relaxes without sleeping and then makes it to bedtime more smoothly, quiet time is likely the better long-term approach.</p>
 
-      <h2>How can I tell whether my 6 to 8 year old is overtired or actually sick?</h2>
-      <p class="answer-first">A 6–8 year old who is overtired is often cranky, hyperactive, emotional, or hard to wake but improves after adequate sleep, while a child who is sick usually has additional symptoms like fever, pain, cough, vomiting, poor appetite, or low energy that does not resolve with one good night of sleep (AAP, 2016).</p>
-      <p>Overtired children often have a recognizable pattern: late bedtime, early wake time, crankiness after school, maybe falling asleep in the car, then improving with a catch-up night or a quieter weekend. Sick children tend to have broader symptoms, such as body aches, persistent fatigue, new sleepiness paired with fever, or exhaustion that continues even when they have had enough opportunity to sleep.</p>
-      <p>If your child seems unusually sleepy for more than a few days, cannot stay awake for regular daytime activities, or has other medical symptoms, it is best not to guess. Call your pediatrician for guidance, especially if the change is sudden or severe.</p>
-
-      <h2>What can I do if my 6 to 8 year old is always tired after school?</h2>
-      <p class="answer-first">If a child ages 6–8 is always tired after school, the most effective first step is usually improving nighttime sleep with an earlier bedtime, a predictable routine, and fewer evening screens rather than relying on naps (AAP, 2016; AASM, 2020). Persistent after-school exhaustion should prompt a closer look at sleep quality and daily demands.</p>
-      <p>Helpful steps include setting a consistent bedtime and wake time, aiming for enough total sleep every night, ending screens at least 30–60 minutes before bed, and watching for signs of restless or noisy sleep. It also helps to protect a calmer after-school window. Some children are depleted by the social, academic, and sensory demands of the school day and need quiet time, a snack, hydration, and a break before homework.</p>
-      <p>Quiet time is not the same as a nap. Many 6–8 year olds do better with 20–30 minutes of reading, drawing, listening to music, or simply resting on the couch without falling asleep. If your child still seems persistently sleepy despite a healthy sleep routine, talk to your pediatrician.</p>
-
-      <h2>When should I talk to my pediatrician about my 6 to 8 year old's naps or daytime sleepiness?</h2>
-      <p class="answer-first">Talk to your pediatrician if your child ages 6–8 needs frequent naps, falls asleep in class, snores loudly, has pauses in breathing during sleep, is very hard to wake, or has daytime sleepiness that affects school, mood, or safety (AAP, 2016). Regular daytime sleepiness is not something to ignore in a school-age child.</p>
+      <h2>When should I talk to my pediatrician about my 6 to 8 year old's naps?</h2>
+      <p class="answer-first">Talk to your pediatrician if a child ages 6–8 needs frequent naps, seems sleepy every day, snores regularly, struggles to wake in the morning, or falls asleep in situations where most school-age children stay awake, because persistent daytime sleepiness can signal inadequate sleep or a sleep disorder (AAP, 2016; AASM, 2016).</p>
       <ul>
-        <li>Your 6–8 year old is napping most days for more than 1–2 weeks without a clear reason like recent illness.</li>
-        <li>Your child falls asleep in class, during homework, or during short car rides regularly.</li>
-        <li>Your child snores loudly, gasps, pauses breathing, sweats heavily at night, or sleeps very restlessly.</li>
-        <li>Your child gets 9–12 hours of sleep but still seems unusually tired during the day.</li>
-        <li>Your child has headaches in the morning, worsening irritability, falling grades, or trouble concentrating.</li>
-        <li>Your child has pale skin, poor stamina, poor appetite, or other symptoms that raise concern for a medical issue such as anemia.</li>
-        <li>Your child has lost any developmental skills they previously had, or the sleepiness came on suddenly and dramatically.</li>
+        <li>Your 6–8-year-old needs a nap most days for more than 2–3 weeks</li>
+        <li>Your child falls asleep unintentionally in the car, at school, during homework, or while watching a short program</li>
+        <li>Your child gets the recommended 9–12 hours of sleep but still seems persistently tired</li>
+        <li>Your child snores loudly, gasps, pauses breathing, sleeps very restlessly, or sweats heavily at night</li>
+        <li>Your child is extremely difficult to wake in the morning or regularly misses school because of fatigue</li>
+        <li>Your child has worsening irritability, attention problems, headaches, or school struggles alongside daytime sleepiness</li>
+        <li>Your child has lost skills, has major behavior changes, or sleepiness began suddenly without an obvious reason</li>
       </ul>
-      <p>If your child has severe trouble waking, breathing concerns during sleep, confusion, chest pain, or any urgent symptom, seek immediate medical care.</p>
+      <p>These red flags do not automatically mean something serious is wrong, but they do mean the pattern deserves a closer look. Your pediatrician may review sleep habits, bedtime timing, breathing during sleep, stress, medications, nutrition, and whether formal sleep evaluation is needed.</p>
+
+      <h2>What can I do if my 6 to 8 year old seems tired but I do not want naps to ruin bedtime?</h2>
+      <p class="answer-first">If a child ages 6–8 seems tired but naps are disrupting bedtime, the most effective first step is usually an earlier bedtime rather than more daytime sleep, because school-age children need 9–12 hours of sleep and often recover better with additional overnight sleep (AAP, 2016). Short quiet time, outdoor light exposure, and a consistent wake time also help reset the schedule.</p>
+      <p>Start by moving bedtime 15–30 minutes earlier for several nights and watching what happens. Many children who seem to "need" an afternoon nap actually stop crashing when they get more sleep overnight. Keep wake time consistent even on weekends, since large weekend sleep-ins can shift the body clock and make school nights harder.</p>
+      <p>Try practical supports too: after-school snack, water, a little physical activity outside, and reduced evening screen exposure. If your child still melts down every afternoon, a brief early nap may be a temporary bridge, but the long-term goal is usually a stable nighttime sleep routine rather than preserving naps into the school-age years.</p>
 
       <h2>Frequently Asked Questions</h2>
 
-      {faqs.map((faq) => (
-        <section>
-          <h3 class="faq-question">{faq.question}</h3>
-          <p class="answer-first faq-answer">{faq.answer}</p>
-        </section>
-      ))}
+      <h3 class="faq-question">Is it typical that my 6 year old still needs a nap?</h3>
+      <p class="answer-first faq-answer">Sometimes. Most children ages 6–8 no longer need a daily nap, but an occasional nap after illness, poor sleep, or an unusually busy day can still happen (AAP, 2016; CDC, 2022). If a 6-year-old needs frequent naps, it is more likely a sign of insufficient nighttime sleep than a developmental milestone.</p>
+      <p>A child starting full-day school may be especially tired during the transition. If the nap need fades over a few weeks, that can be within the range of typical adjustment. If naps are still needed most days, review bedtime and talk to your pediatrician if the pattern continues.</p>
 
-      <hr />
+      <h3 class="faq-question">Should I let my 7 year old nap after school?</h3>
+      <p class="answer-first faq-answer">Usually only with limits. A short after-school nap of 20–30 minutes may help a tired 7-year-old recover, but longer or late-afternoon naps often delay bedtime and worsen the sleep cycle (AASM, 2020). If your child routinely falls asleep after school, review whether they are getting the recommended 9–12 hours at night.</p>
+      <p>For many 7-year-olds, a snack, outside time, and an earlier bedtime work better than a long couch nap. Talk to your pediatrician if after-school sleepiness is happening most days or seems excessive.</p>
 
-      <p><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and sleep medicine guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
+      <h3 class="faq-question">Why does my child fall asleep in the car every afternoon?</h3>
+      <p class="answer-first faq-answer">Car sleep in a 6–8-year-old usually means your child is tired enough to doze in passive situations, which often points to sleep debt rather than a true need for scheduled naps (AAP, 2016). Repeated car sleep, especially with irritability or hard mornings, is a reason to look closely at bedtime and nighttime sleep quality.</p>
+      <p>Many children this age should be able to stay awake for a routine afternoon car ride. If your child dozes off often, especially after getting what seems like enough sleep, discuss it with your pediatrician.</p>
+
+      <h3 class="faq-question">Can naps make bedtime harder for my 8 year old?</h3>
+      <p class="answer-first faq-answer">Yes. In children ages 6–8, naps that are long or happen late in the day can reduce sleep pressure, making it harder to fall asleep at the usual bedtime (AASM, 2020). If bedtime is drifting later, cutting back or eliminating the nap is often more effective than forcing an earlier bedtime.</p>
+      <p>Watch the timing carefully. A 20-minute nap at 3 PM is very different from a 90-minute nap at 5 PM. If bedtime battles are increasing, the nap schedule may be part of the issue. Talk to your pediatrician if your child cannot stay awake without napping.</p>
+
+      <h3 class="faq-question">Should I worry if my 6 to 8 year old is tired every day?</h3>
+      <p class="answer-first faq-answer">Yes, daily tiredness deserves attention. School-age children ages 6–8 should usually get enough rest overnight and not seem persistently sleepy during the day if they are getting 9–12 hours of sleep (AAP, 2016). If your child is tired every day, snores, struggles to wake, or falls asleep unexpectedly, talk to your pediatrician.</p>
+      <p>Daily fatigue can affect mood, attention, school performance, and behavior. Sometimes the fix is a schedule change, but persistent sleepiness can also point to sleep apnea or another medical concern.</p>
+
+      <h3 class="faq-question">Is quiet time better than a nap for a 6 to 8 year old?</h3>
+      <p class="answer-first faq-answer">Often, yes. For many children ages 6–8, quiet time with books, drawing, or calm play provides needed downtime without interfering with nighttime sleep (AAP, 2016). If your child no longer falls asleep easily but still gets overstimulated or cranky, quiet time is usually a better fit than a scheduled nap.</p>
+      <p>Quiet time is especially helpful for children who need a reset after school but then have trouble falling asleep at bedtime. Talk to your pediatrician if your child cannot get through the day without actually sleeping.</p>
+
+      <h3 class="faq-question">Could snoring be why my child still needs naps?</h3>
+      <p class="answer-first faq-answer">Yes. Regular snoring in a 6–8-year-old can be a sign of sleep-disordered breathing, which can fragment nighttime sleep and cause daytime tiredness even when your child spends enough hours in bed (AAP, 2012; AASM, 2016). Snoring plus frequent naps, hard mornings, or behavior changes should be discussed with your pediatrician.</p>
+      <p>Loud snoring, pauses in breathing, gasping, restless sleep, or mouth breathing make this concern more important. Your pediatrician can help decide whether further sleep evaluation is needed.</p>
+
+      <p class="disclaimer"><em>AgeExpectations.com is for informational purposes only and is not a substitute for professional medical advice. Content references current AAP, CDC, and AASM guidance. Always consult your child's pediatrician for personalized guidance.</em></p>
     </article>
   </main>
 </BaseLayout>
