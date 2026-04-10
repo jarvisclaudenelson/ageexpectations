@@ -8,9 +8,9 @@
 - Heartbeat review completed: current next AE execution step is content registry deduplication, followed by analytics slot and top-10 monetizable page mapping
 - Human unblockers remain unchanged: GA4, GSC, AdSense, Amazon Associates, and email platform setup
 - ✅ Deduplicated content.js: 73 → 66 entries, removed 7 duplicates (1-3mo, 3-6mo, 6-9mo, 9-12mo, 12-14y red-flags, 8-10y screen-time). Sorted by age range + topic.
-- ✅ Added GA4 analytics slot to BaseLayout.astro — activates via `PUBLIC_GA4_ID` env var, zero-impact until Erik creates the GA4 property
+- ✅ Added GA4 analytics slot to BaseLayout.astro - activates via `PUBLIC_GA4_ID` env var, zero-impact until Erik creates the GA4 property
 - Next: top-10 monetizable page identification, then email capture CTA block
-- ✅ GA4 analytics wired in (G-JZB1XR2Z6B) — hardcoded in BaseLayout.astro, pushed to prod
+- ✅ GA4 analytics wired in (G-JZB1XR2Z6B) - hardcoded in BaseLayout.astro, pushed to prod
 
 ## 2026-04-01
 - ✅ Instagram backfill: posted 3 images (12-14y overview, 12-18m overview, 14-18y overview). 18 total posted, 21 remaining.
@@ -28,7 +28,7 @@
 - Next: email capture CTA component (reusable block for milestone checklist lead magnet)
 
 ## 2026-04-06
-- ✅ Published new article via Agent SDK: “What Are the Signs of Depression in a 12 to 14 Year Old?” at `/ages/12-14-years/depression/`
+- ✅ Published new article via Agent SDK: "What Are the Signs of Depression in a 12 to 14 Year Old?" at `/ages/12-14-years/depression/`
 - ✅ Generated pin `2026-04-06-12-14-years-depression-pin.png`, build passed, pushed to GitHub, Instagram queue updated
 - ⚠️ Reel generation failed because Pillow (`PIL`) is missing in the Python environment for `ae-render-video-frames.py`
 - ✅ Instagram backfill: posted 3 additional AE pins (10-12y overview, 18-24m overview, 3-6m feeding). Backfill state file updated.
@@ -36,7 +36,7 @@
 
 ## 2026-04-07
 - ✅ Heartbeat run posted scheduled Instagram reel `5 6 Years Sleep` successfully (media ID `17977872695841054`) via `ae-schedule-instagram-batch.js run-due`
-- ✅ Published new article via Agent SDK: “What Are the Signs of ADHD in a 5 to 6 Year Old?” at `/ages/5-6-years/adhd/`
+- ✅ Published new article via Agent SDK: "What Are the Signs of ADHD in a 5 to 6 Year Old?" at `/ages/5-6-years/adhd/`
 - ✅ Generated pin `2026-04-07-5-6-years-adhd-pin.png`, Astro build passed, pushed to GitHub, and Instagram queue updated
 - ✅ Reel generation verified working for `scripts/ae-render-video-frames.py`; the earlier Pillow (`PIL`) failure is stale and no longer an active blocker
 - Heartbeat AE review complete: monetization/measurement docs still point to email capture CTA and internal linking as next highest-leverage site tasks; Erik-side blockers now mainly Amazon Associates and email platform setup
@@ -58,8 +58,8 @@
 - ⚠️ Duplicate AE queue entries were created after those 3 image posts had already published, leaving repeat image and reel posts scheduled for ~02:01Z and ~08:01Z; no user ping sent at 02:07 UTC, but this needs cleanup on the next AE maintenance pass.
 - ⚠️ Two AE reels have recently failed with Instagram media-container errors: `12-18 Months Separation Anxiety` (`status=ERROR` after 5s) and `6-8 Years Adhd` (`error code 2207076` after 180s). This looks intermittent rather than a total outage.
 - ⚠️ Email triage remains blocked by local `gog` credential decryption failure (`aes.KeyUnwrap(): integrity check failed`) for `jarvisclaudenelson@gmail.com`.
-- ℹ️ Bot state hygiene looks healthy: current `data/*/state.json` files are valid JSON and small, with no unbounded growth signal.
-- ℹ️ Flash usage file is stale (`2026-04-02`) and below alert threshold at last check, so no warning sent.
+- i️ Bot state hygiene looks healthy: current `data/*/state.json` files are valid JSON and small, with no unbounded growth signal.
+- i️ Flash usage file is stale (`2026-04-02`) and below alert threshold at last check, so no warning sent.
 - ✅ Follow-up heartbeat removed the 3 duplicate scheduled AE reels that would have re-posted the same content around `2026-04-08T08:01Z`; the original `08:00Z` reel batch remains queued.
 - ⚠️ Reel publishing remains intermittently unreliable: `12-14 Years Depression Anxiety Warning Signs` failed again at `07:48Z` with Instagram error `2207076`, so the current issue looks like reel-specific upload instability rather than duplicate scheduling alone.
 
@@ -69,5 +69,6 @@
 - ✅ Heartbeat health scan: no critical cron failures in the last 2 hours, no active bot error signals in watchdog/bridge/restart logs, and bot state files remain valid JSON and small.
 - ℹ️ Flash usage file is still stale (`2026-04-02`) and well below the alert threshold at last recorded values (`RPD 2/250`, `RPM 2/15`), so no warning sent.
 - ✅ AE maintenance action completed: reconciled `data/instagram-posted.json` against the actual AE Instagram queue history so already-posted backfill images from Apr 7-8 will no longer be treated as unposted. `posted` count is now 37, which should stop repeat backfill attempts on those assets.
-- ⚠️ The local cron audit surfaced a separate issue in the inbound system logs: today’s `daily-brief` exec was SIGTERM’d mid-run around 11:02 UTC, so that job may need a timeout/runtime look if it keeps happening.
+- ⚠️ The local cron audit surfaced a separate issue in the inbound system logs: today's `daily-brief` exec was SIGTERM'd mid-run around 11:02 UTC, so that job may need a timeout/runtime look if it keeps happening.
 - ⚠️ Email triage still appears blocked by the previously noted local `gog` credential issue; no new inbox signal was surfaced in this heartbeat.
+- ✅ AE daily action (8 PM): Added `<AffiliateResource>` component to two high-intent monetizable pages — `6-9-months/feeding/` and `8-10-years/deodorant/` — so both pages now render affiliate product blocks. Build passed, pushed to GitHub.
